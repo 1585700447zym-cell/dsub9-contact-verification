@@ -65,6 +65,8 @@ def section_loops(mesh: StlMesh, z_mm: float, tolerance_mm: float) -> tuple[np.n
         raise ValueError("tolerance_mm must be positive")
     raw_segments: list[np.ndarray] = []
     for triangle in np.asarray(mesh.triangles, dtype=np.float64):
+        if np.all(np.abs(triangle[:, 2] - z_mm) <= tolerance_mm):
+            raise ValueError("section plane is coplanar with a triangle; loop topology is ambiguous")
         segment = _triangle_plane_segment(triangle, z_mm, tolerance_mm)
         if segment is None:
             continue
@@ -110,6 +112,11 @@ def section_loops(mesh: StlMesh, z_mm: float, tolerance_mm: float) -> tuple[np.n
         adjacency[start].append(end)
         adjacency[end].append(start)
 
+    invalid_degrees = {vertex: len(neighbours) for vertex, neighbours in adjacency.items() if len(neighbours) != 2}
+    if invalid_degrees:
+        details = ", ".join(f"{vertex}:{degree}" for vertex, degree in sorted(invalid_degrees.items()))
+        raise ValueError(f"section graph is not 2-regular; vertex degrees {details}")
+
     unused = set(edge_keys)
     loops: list[np.ndarray] = []
     while unused:
@@ -124,16 +131,18 @@ def section_loops(mesh: StlMesh, z_mm: float, tolerance_mm: float) -> tuple[np.n
                 for neighbour in adjacency[current]
                 if tuple(sorted((current, neighbour))) in unused and neighbour != previous
             ]
-            if not candidates:
-                break
+            if len(candidates) != 1:
+                raise ValueError("section graph left an ambiguous or open chain after 2-regular validation")
             following = candidates[0]
             unused.remove(tuple(sorted((current, following))))
             chain.append(following)
             previous, current = current, following
-        if current == start and len(chain) >= 4:
-            profile = np.asarray([representatives[find(key)] for key in chain[:-1]], dtype=np.float64)
-            if abs(polygon_area(profile)) > tolerance_mm**2:
-                loops.append(profile)
+        if current != start or len(chain) < 4:
+            raise ValueError("section graph contains an incomplete closed loop")
+        profile = np.asarray([representatives[find(key)] for key in chain[:-1]], dtype=np.float64)
+        if abs(polygon_area(profile)) <= tolerance_mm**2:
+            raise ValueError("section graph contains a degenerate closed loop")
+        loops.append(profile)
     return tuple(loops)
 
 

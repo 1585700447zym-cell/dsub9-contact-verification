@@ -12,6 +12,7 @@ from tools.mesh.generate_collision_assets import (
     MAIN_DEPTH_MM,
     generated_collision_paths,
 )
+import tools.mesh.generate_collision_assets as collision_assets
 from tools.mesh.primitives import make_annular_sector, make_prism
 from tools.mesh.section import (
     polygon_area,
@@ -61,6 +62,99 @@ def _is_convex(mesh: StlMesh, tolerance_mm: float = 2e-5) -> bool:
     return True
 
 
+def _section_mesh(segments: tuple[tuple[tuple[float, float], tuple[float, float]], ...]) -> StlMesh:
+    triangles = np.asarray(
+        [[[a[0], a[1], 0.0], [b[0], b[1], 0.0], [a[0], a[1], 1.0]] for a, b in segments],
+        dtype=np.float32,
+    )
+    return StlMesh(normals=np.zeros((len(triangles), 3), dtype=np.float32), triangles=triangles)
+
+
+def _convex_hull(points_xy: np.ndarray) -> np.ndarray:
+    points = sorted(set(map(tuple, np.asarray(points_xy, dtype=np.float64))))
+    if len(points) < 3:
+        raise ValueError("expected at least three unique XY points")
+
+    def cross(origin, first, second):
+        return (first[0] - origin[0]) * (second[1] - origin[1]) - (first[1] - origin[1]) * (
+            second[0] - origin[0]
+        )
+
+    lower: list[tuple[float, float]] = []
+    for point in points:
+        while len(lower) >= 2 and cross(lower[-2], lower[-1], point) <= 1e-10:
+            lower.pop()
+        lower.append(point)
+    upper: list[tuple[float, float]] = []
+    for point in reversed(points):
+        while len(upper) >= 2 and cross(upper[-2], upper[-1], point) <= 1e-10:
+            upper.pop()
+        upper.append(point)
+    return np.asarray(lower[:-1] + upper[:-1])
+
+
+def _line_intersection(a: np.ndarray, b: np.ndarray, c: np.ndarray, d: np.ndarray) -> np.ndarray:
+    direction_ab = b - a
+    direction_cd = d - c
+    denominator = direction_ab[0] * direction_cd[1] - direction_ab[1] * direction_cd[0]
+    if abs(denominator) <= 1e-14:
+        return b
+    offset = c - a
+    fraction = (offset[0] * direction_cd[1] - offset[1] * direction_cd[0]) / denominator
+    return a + fraction * direction_ab
+
+
+def _convex_intersection(subject_xy: np.ndarray, clip_xy: np.ndarray) -> np.ndarray:
+    output = np.asarray(subject_xy, dtype=np.float64)
+    clip = np.asarray(clip_xy, dtype=np.float64)
+    if polygon_area(output) < 0:
+        output = output[::-1]
+    if polygon_area(clip) < 0:
+        clip = clip[::-1]
+    for clip_start, clip_end in zip(clip, np.roll(clip, -1, axis=0), strict=True):
+        if not len(output):
+            break
+        source = output
+        result: list[np.ndarray] = []
+        previous = source[-1]
+        clip_direction = clip_end - clip_start
+        previous_offset = previous - clip_start
+        previous_inside = (
+            clip_direction[0] * previous_offset[1] - clip_direction[1] * previous_offset[0] >= -1e-10
+        )
+        for current in source:
+            current_offset = current - clip_start
+            current_inside = (
+                clip_direction[0] * current_offset[1] - clip_direction[1] * current_offset[0] >= -1e-10
+            )
+            if current_inside != previous_inside:
+                result.append(_line_intersection(previous, current, clip_start, clip_end))
+            if current_inside:
+                result.append(current)
+            previous, previous_inside = current, current_inside
+        output = np.asarray(result)
+    return output
+
+
+def _point_in_polygon(point_xy: np.ndarray, polygon_xy: np.ndarray) -> bool:
+    direction = np.roll(polygon_xy, -1, axis=0) - polygon_xy
+    offsets = point_xy - polygon_xy
+    crosses = direction[:, 0] * offsets[:, 1] - direction[:, 1] * offsets[:, 0]
+    return bool(np.all(crosses >= -1e-5) or np.all(crosses <= 1e-5))
+
+
+def _d_asset_profiles(prefix: str) -> list[np.ndarray]:
+    profiles: list[np.ndarray] = []
+    for path in generated_collision_paths():
+        if not path.name.startswith(prefix):
+            continue
+        mesh = read_binary_stl(path)
+        z0 = mesh.bounds.minimum[2]
+        bottom_xy = mesh.triangles[np.isclose(mesh.triangles[:, :, 2], z0, atol=1e-6), :2]
+        profiles.append(_convex_hull(bottom_xy))
+    return profiles
+
+
 def test_prism_rejects_repeated_adjacent_profile_points():
     """Accepting a zero-length profile edge would create degenerate faces."""
     profile = np.array([[0, 0], [1, 0], [1, 0], [0, 1]], dtype=float)
@@ -68,9 +162,18 @@ def test_prism_rejects_repeated_adjacent_profile_points():
         make_prism(profile, 0.0, 1.0)
 
 
+def test_prism_rejects_self_intersecting_pentagram():
+    """A star can have consistent local turns while still crossing itself."""
+    angles = np.deg2rad([90, 234, 18, 162, 306])
+    pentagram = np.column_stack((np.cos(angles), np.sin(angles)))
+    with pytest.raises(ValueError, match="self-intersecting"):
+        make_prism(pentagram, 0.0, 1.0)
+
+
 def test_basic_primitives_are_closed_non_degenerate_and_convex():
     """Incorrect face winding or a concave annular mesh breaks collision parts."""
     meshes = (
+        make_prism(np.array([[0, 0], [1, 0], [0, 1]], dtype=float), 0.0, 0.5),
         make_prism(np.array([[0, 0], [2, 0], [2, 1], [0, 1]], dtype=float), 0.0, 0.5),
         make_annular_sector(0.575, 1.0, 0.0, np.pi / 16.0, 0.0, 0.25),
     )
@@ -82,20 +185,43 @@ def test_basic_primitives_are_closed_non_degenerate_and_convex():
         assert _is_convex(mesh)
 
 
-def test_section_extraction_finds_actual_centered_female_d_loops():
-    """Selecting a flange or replacing CAD arcs with a nominal box must fail."""
-    mesh = read_binary_stl(VISUAL / "dsub9_female_visual_centered.stl")
-    loops = section_loops(mesh, z_mm=0.50, tolerance_mm=1e-5)
-    outer, inner = select_centered_d_loops(loops)
-    for loop in (outer, inner):
-        extent = np.ptp(loop, axis=0)
-        bounds_centre = (loop.min(axis=0) + loop.max(axis=0)) / 2.0
-        assert abs(polygon_centroid(loop)[0]) < 0.05
-        assert np.all(np.abs(bounds_centre) < 0.05)
-        assert 10.0 <= extent[0] <= 20.0
-        assert 5.0 <= extent[1] <= 11.0
-    assert abs(polygon_area(outer)) > abs(polygon_area(inner))
-    assert len(outer) > 8 and len(inner) > 8
+@pytest.mark.parametrize(
+    "visual_name, expected_bbox, expected_area",
+    [
+        (
+            "dsub9_female_visual_centered.stl",
+            ([19.727337, 9.500000], [16.681988, 8.600000]),
+            (175.159678, 128.406098),
+        ),
+        (
+            "dsub9_male_visual_centered.stl",
+            ([16.456263, 8.300000], [15.099202, 6.900000]),
+            (121.656554, 91.623000),
+        ),
+    ],
+)
+def test_section_extraction_locks_actual_centered_d_loops(visual_name, expected_bbox, expected_area):
+    """A flange, nominal rectangle, or symmetric substitute must fail exact CAD metrics."""
+    mesh = read_binary_stl(VISUAL / visual_name)
+    outer, inner = select_centered_d_loops(section_loops(mesh, z_mm=0.50, tolerance_mm=1e-5))
+    for loop, bbox, area in zip((outer, inner), expected_bbox, expected_area, strict=True):
+        np.testing.assert_allclose(np.ptp(loop, axis=0), bbox, atol=5e-4, rtol=0.0)
+        np.testing.assert_allclose(abs(polygon_area(loop)), area, atol=2e-3, rtol=0.0)
+        centroid = polygon_centroid(loop)
+        assert abs(centroid[0]) < 1e-4
+        assert 0.10 < centroid[1] < 0.25
+        assert len(loop) > 8
+
+
+def test_male_outer_d_profile_is_entirely_inside_female_inner_profile():
+    """Bounds alone cannot prove the asymmetric mating contours have clearance."""
+    female = select_centered_d_loops(
+        section_loops(read_binary_stl(VISUAL / "dsub9_female_visual_centered.stl"), 0.50, 1e-5)
+    )
+    male = select_centered_d_loops(
+        section_loops(read_binary_stl(VISUAL / "dsub9_male_visual_centered.stl"), 0.50, 1e-5)
+    )
+    assert all(_point_in_polygon(point, female[1]) for point in male[0])
 
 
 def test_section_extraction_snaps_endpoints_by_distance_not_rounding_bin():
@@ -108,16 +234,43 @@ def test_section_extraction_snaps_endpoints_by_distance_not_rounding_bin():
         ((1.0, 1.0), (0.0, 1.0)),
         ((0.0, 1.0), (0.0, 0.0)),
     )
-    triangles = np.asarray(
-        [[[a[0], a[1], 0.0], [b[0], b[1], 0.0], [a[0], a[1], 1.0]] for a, b in segments],
-        dtype=np.float32,
-    )
-    mesh = StlMesh(normals=np.zeros((4, 3), dtype=np.float32), triangles=triangles)
+    mesh = _section_mesh(segments)
 
     loops = section_loops(mesh, z_mm=0.0, tolerance_mm=1e-5)
 
     assert len(loops) == 1
     np.testing.assert_allclose(abs(polygon_area(loops[0])), 1.0, atol=2e-5)
+
+
+def test_section_extraction_rejects_open_chain():
+    mesh = _section_mesh((((0.0, 0.0), (1.0, 0.0)), ((1.0, 0.0), (1.0, 1.0))))
+    with pytest.raises(ValueError, match="2-regular"):
+        section_loops(mesh, 0.0, 1e-5)
+
+
+def test_section_extraction_rejects_coplanar_triangle():
+    triangles = np.asarray([[[0, 0, 0], [1, 0, 0], [0, 1, 0]]], dtype=np.float32)
+    mesh = StlMesh(normals=np.zeros((1, 3), dtype=np.float32), triangles=triangles)
+    with pytest.raises(ValueError, match="coplanar"):
+        section_loops(mesh, 0.0, 1e-5)
+
+
+def test_section_extraction_rejects_loops_that_share_an_edge():
+    segments = (
+        ((0, 0), (1, 0)), ((1, 0), (1, 1)), ((1, 1), (0, 1)), ((0, 1), (0, 0)),
+        ((1, 0), (2, 0)), ((2, 0), (2, 1)), ((2, 1), (1, 1)), ((1, 1), (1, 0)),
+    )
+    with pytest.raises(ValueError, match="2-regular"):
+        section_loops(_section_mesh(segments), 0.0, 1e-5)
+
+
+def test_section_extraction_rejects_loops_that_only_share_a_vertex():
+    segments = (
+        ((0, 0), (1, 0)), ((1, 0), (1, 1)), ((1, 1), (0, 1)), ((0, 1), (0, 0)),
+        ((1, 1), (2, 1)), ((2, 1), (2, 2)), ((2, 2), (1, 2)), ((1, 2), (1, 1)),
+    )
+    with pytest.raises(ValueError, match="2-regular"):
+        section_loops(_section_mesh(segments), 0.0, 1e-5)
 
 
 def test_d_loop_selection_rejects_centred_intersecting_non_nested_profiles():
@@ -144,6 +297,43 @@ def test_generated_asset_inventory_represents_both_d_walls_and_all_hole_layers()
     assert MAIN_DEPTH_MM == 4.25
 
 
+def test_d_collision_parts_cover_each_cad_ring_without_overlap_or_tiny_features():
+    """Deleting strips or retaining tessellation slivers changes the projected wall."""
+    cases = (
+        ("d_guide_male_", "dsub9_male_visual_centered.stl", 80),
+        ("d_socket_female_", "dsub9_female_visual_centered.stl", 50),
+    )
+    for prefix, visual_name, maximum_parts in cases:
+        outer, inner = select_centered_d_loops(
+            section_loops(read_binary_stl(VISUAL / visual_name), 0.50, 1e-5)
+        )
+        profiles = _d_asset_profiles(prefix)
+        assert 1 < len(profiles) <= maximum_parts
+        areas = np.asarray([abs(polygon_area(profile)) for profile in profiles])
+        edges = np.concatenate(
+            [np.linalg.norm(np.roll(profile, -1, axis=0) - profile, axis=1) for profile in profiles]
+        )
+        assert areas.min() >= 0.01
+        assert edges.min() >= 0.01
+        expected_ring_area = abs(polygon_area(outer)) - abs(polygon_area(inner))
+        np.testing.assert_allclose(areas.sum(), expected_ring_area, atol=2e-4, rtol=0.0)
+        for index, first in enumerate(profiles):
+            for second in profiles[index + 1 :]:
+                overlap = _convex_intersection(first, second)
+                if len(overlap) >= 3:
+                    assert abs(polygon_area(overlap)) <= 2e-7
+
+        essential_vertices = np.vstack(
+            (
+                collision_assets.remove_collinear_points(outer, 1e-5),
+                collision_assets.remove_collinear_points(inner, 1e-5),
+            )
+        )
+        generated_vertices = np.vstack(profiles)
+        for vertex in essential_vertices:
+            assert np.min(np.linalg.norm(generated_vertices - vertex, axis=1)) <= 2e-5
+
+
 def test_each_generated_collision_part_is_closed_non_degenerate_and_convex():
     """Every STL is independently usable as one convex collision component."""
     paths = generated_collision_paths()
@@ -156,6 +346,10 @@ def test_each_generated_collision_part_is_closed_non_degenerate_and_convex():
         assert _every_undirected_edge_occurs_twice(mesh), path.name
         assert abs(_signed_tetrahedron_volumes(mesh).sum()) > 1e-8, path.name
         assert _is_convex(mesh), path.name
+        triangles = np.asarray(mesh.triangles, dtype=np.float64)
+        expected_normals = np.cross(triangles[:, 1] - triangles[:, 0], triangles[:, 2] - triangles[:, 0])
+        expected_normals /= np.linalg.norm(expected_normals, axis=1)[:, np.newaxis]
+        np.testing.assert_allclose(mesh.normals, expected_normals, atol=2e-6, rtol=0.0, err_msg=path.name)
 
 
 def test_fallback_assets_encode_documented_radii_and_total_depth():

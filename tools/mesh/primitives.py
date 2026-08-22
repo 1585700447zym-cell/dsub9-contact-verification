@@ -8,7 +8,8 @@ from tools.mesh.stl_binary import StlMesh
 
 
 def _face_normals(triangles: np.ndarray) -> np.ndarray:
-    normals = np.cross(triangles[:, 1] - triangles[:, 0], triangles[:, 2] - triangles[:, 0])
+    vertices = np.asarray(triangles, dtype=np.float64)
+    normals = np.cross(vertices[:, 1] - vertices[:, 0], vertices[:, 2] - vertices[:, 0])
     lengths = np.linalg.norm(normals, axis=1)
     if np.any(lengths <= 1e-12):
         raise ValueError("generated mesh contains a degenerate triangle")
@@ -29,6 +30,47 @@ def _validate_convex(profile_xy: np.ndarray) -> None:
         raise ValueError("profile must be convex")
 
 
+def _cross_2d(first: np.ndarray, second: np.ndarray) -> float:
+    return float(first[0] * second[1] - first[1] * second[0])
+
+
+def _point_on_segment(point: np.ndarray, start: np.ndarray, end: np.ndarray) -> bool:
+    if abs(_cross_2d(end - start, point - start)) > 1e-10:
+        return False
+    return bool(np.all(point >= np.minimum(start, end) - 1e-10) and np.all(point <= np.maximum(start, end) + 1e-10))
+
+
+def _segments_intersect(a: np.ndarray, b: np.ndarray, c: np.ndarray, d: np.ndarray) -> bool:
+    ab_c = _cross_2d(b - a, c - a)
+    ab_d = _cross_2d(b - a, d - a)
+    cd_a = _cross_2d(d - c, a - c)
+    cd_b = _cross_2d(d - c, b - c)
+    if ab_c * ab_d < -1e-20 and cd_a * cd_b < -1e-20:
+        return True
+    return any(
+        (
+            abs(ab_c) <= 1e-10 and _point_on_segment(c, a, b),
+            abs(ab_d) <= 1e-10 and _point_on_segment(d, a, b),
+            abs(cd_a) <= 1e-10 and _point_on_segment(a, c, d),
+            abs(cd_b) <= 1e-10 and _point_on_segment(b, c, d),
+        )
+    )
+
+
+def _validate_simple(profile_xy: np.ndarray) -> None:
+    count = len(profile_xy)
+    for first in range(count):
+        first_end = (first + 1) % count
+        for second in range(first + 1, count):
+            second_end = (second + 1) % count
+            if first == second or first_end == second or second_end == first:
+                continue
+            if _segments_intersect(
+                profile_xy[first], profile_xy[first_end], profile_xy[second], profile_xy[second_end]
+            ):
+                raise ValueError("profile must not be self-intersecting")
+
+
 def make_prism(profile_xy: np.ndarray, z0_mm: float, z1_mm: float) -> StlMesh:
     """Extrude one simple convex XY profile into a closed prism."""
     profile = np.asarray(profile_xy, dtype=np.float64)
@@ -41,6 +83,7 @@ def make_prism(profile_xy: np.ndarray, z0_mm: float, z1_mm: float) -> StlMesh:
     edge_lengths = np.linalg.norm(np.roll(profile, -1, axis=0) - profile, axis=1)
     if np.any(edge_lengths <= 1e-10):
         raise ValueError("profile contains repeated adjacent points")
+    _validate_simple(profile)
     area = _signed_area(profile)
     if abs(area) <= 1e-10:
         raise ValueError("profile area must be non-zero")
@@ -52,9 +95,17 @@ def make_prism(profile_xy: np.ndarray, z0_mm: float, z1_mm: float) -> StlMesh:
     bottom = np.column_stack((profile, np.full(count, z0_mm)))
     top = np.column_stack((profile, np.full(count, z1_mm)))
     triangles: list[np.ndarray] = []
-    for index in range(1, count - 1):
-        triangles.append(np.array([bottom[0], bottom[index + 1], bottom[index]]))
-        triangles.append(np.array([top[0], top[index], top[index + 1]]))
+    if count == 3:
+        bottom_centre = bottom.mean(axis=0)
+        top_centre = top.mean(axis=0)
+        for index in range(count):
+            following = (index + 1) % count
+            triangles.append(np.array([bottom_centre, bottom[following], bottom[index]]))
+            triangles.append(np.array([top_centre, top[index], top[following]]))
+    else:
+        for index in range(1, count - 1):
+            triangles.append(np.array([bottom[0], bottom[index + 1], bottom[index]]))
+            triangles.append(np.array([top[0], top[index], top[index + 1]]))
     for index in range(count):
         following = (index + 1) % count
         triangles.append(np.array([bottom[index], bottom[following], top[following]]))
