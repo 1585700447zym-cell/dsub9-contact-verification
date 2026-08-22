@@ -13,6 +13,8 @@ DONE
 - GREEN: `D:\KEYANRUJIAN\python.exe -m tools.mesh.normalize_visual_meshes --validate-male
   assets\visual\dsub9_male_visual_centered.stl` accepted the corrected export.
 - GREEN: `D:\KEYANRUJIAN\Scripts\pytest.exe tests\mesh\test_visual_assets.py -v` completed with `4 passed`.
+- Review fix round 1 GREEN: the focused visual-asset suite completed with `7 passed`; the complete
+  `tests\mesh -v` suite completed with `11 passed`.
 
 The test/runtime executable was `D:\KEYANRUJIAN\python.exe` (Python 3.13.5); pytest was 8.3.4.  No packages
 were installed.
@@ -27,6 +29,14 @@ were installed.
 The female normalisation applies exactly `[-15.4, -6.275, 0] mm` only after checking the raw source size, and
 recalculates each normal from the translated triangle vertices before writing the binary STL.  Male validation
 explicitly rejects both thousand-fold scale and wrong-origin meshes.
+
+## Review fix round 1
+
+The visual-asset tests now invoke `normalize_female` directly against the immutable source and a temporary
+target.  They assert the exact `[-15.4, -6.275, 0] mm` triangle translation and independently recompute the
+expected face normals from the target vertices.  They also exercise rejection of a source whose dimensions
+exceed the `0.001 mm` tolerance and rejection of a source containing a zero-area triangle.  The existing
+implementation passed these new behavioral tests, so no production-code change was needed.
 
 ## SolidWorks export
 
