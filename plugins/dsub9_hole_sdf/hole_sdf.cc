@@ -194,6 +194,7 @@ bool ReadInstanceParams(const mjModel* model, int instance, HoleParams* params) 
 
 void ParseStaticAttributes(mjtNum attributes[], const char* names[], const char* values[]) {
   auto parsed = ToArray(kDefaults);
+  bool valid = true;
   for (int item = 0; item < kAttributeCount; ++item) {
     int destination = -1;
     for (int index = 0; index < kAttributeCount; ++index) {
@@ -204,11 +205,14 @@ void ParseStaticAttributes(mjtNum attributes[], const char* names[], const char*
     }
     if (destination >= 0 && values[item] != nullptr && values[item][0] != '\0' &&
         !ParseNumber(values[item], &parsed[destination])) {
-      parsed[destination] = std::numeric_limits<mjtNum>::quiet_NaN();
+      valid = false;
     }
   }
-  if (!Validate(FromArray(parsed.data()))) {
-    parsed.fill(std::numeric_limits<mjtNum>::quiet_NaN());
+  // MuJoCo consumes these static values for AABB and marching cubes before init.
+  // Keep that path finite and safe; init rereads the untouched config strings and
+  // rejects invalid user parameters through ReadInstanceParams.
+  if (!valid || !Validate(FromArray(parsed.data()))) {
+    parsed = ToArray(kDefaults);
   }
   std::copy(parsed.begin(), parsed.end(), attributes);
 }

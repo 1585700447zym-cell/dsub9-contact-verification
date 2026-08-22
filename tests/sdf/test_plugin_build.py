@@ -206,6 +206,6 @@ def test_mujoco_instance_rejects_invalid_plugin_config(changes):
 
     mujoco.mj_loadPluginLibrary(str(plugin_library_path()))
     config = DEFAULT_CONFIG | changes
+    model = mujoco.MjModel.from_xml_string(minimal_mjcf(config))
     with pytest.raises((ValueError, mujoco.FatalError)):
-        model = mujoco.MjModel.from_xml_string(minimal_mjcf(config))
         mujoco.MjData(model)

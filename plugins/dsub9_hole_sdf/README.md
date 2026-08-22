@@ -16,6 +16,13 @@ All attributes are in metres and must satisfy
 - `bore_depth=0.00450`
 - `outer_radius=0.00100`
 
+MuJoCo requests static SDF attributes and an AABB before plugin instance
+initialization. Invalid configuration text therefore maps to the finite,
+legal defaults only for static compilation and marching-cubes generation.
+The original configuration strings are left unchanged; instance `init`
+rereads them with `mj_getPluginConfig` and returns failure unless every value
+parses, is finite, and satisfies the constraints above.
+
 Rotational symmetry reduces the solid to a counter-clockwise six-edge polygon
 in the `(r,z)` plane:
 
