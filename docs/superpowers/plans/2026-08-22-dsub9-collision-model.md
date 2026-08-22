@@ -20,7 +20,7 @@
 - Formal collision model retains all nine pin-hole pairs. It must not substitute a convex hull that fills a hole.
 - Visual meshes have `contype="0" conaffinity="0"`.
 - Absolute real insertion force is outside this plan; no simulated Newton value may be described as calibrated.
-- Subagent-driven execution uses a local Git repository, an isolated worktree, and task-scoped commits. Do not create a remote, push, publish, or merge outside the isolated worktree during this plan.
+- Subagent-driven execution uses a local Git feature branch and task-scoped commits. The desktop sandbox could not execute inside a linked worktree, so execution occurs in place on `feature/dsub9-collision-model`; Git metadata is stored outside the project at `D:\dsub9项目计划\first_stage_sim_gitdata`, and every Git command names it explicitly. Do not create a remote, push, publish, or merge during this plan.
 
 ---
 
