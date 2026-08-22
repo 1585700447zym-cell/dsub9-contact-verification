@@ -28,11 +28,40 @@ PARAM_ARRAY = (ctypes.c_double * 5)(
     PARAMS.bore_depth,
     PARAMS.outer_radius,
 )
+DEFAULT_CONFIG = {
+    "bore_radius": "0.000575",
+    "entry_radius": "0.000675",
+    "entry_depth": "0.00025",
+    "bore_depth": "0.00450",
+    "outer_radius": "0.00100",
+}
+
+
+def minimal_mjcf(config=DEFAULT_CONFIG):
+    config_xml = "\n".join(
+        f'<config key="{name}" value="{value}"/>' for name, value in config.items()
+    )
+    return f"""
+    <mujoco>
+      <extension>
+        <plugin plugin="mujoco.sdf.dsub9_hole">
+          <instance name="hole">{config_xml}</instance>
+        </plugin>
+      </extension>
+      <asset>
+        <mesh name="hole_mesh"><plugin instance="hole"/></mesh>
+      </asset>
+      <worldbody>
+        <geom name="hole" type="sdf" mesh="hole_mesh"><plugin instance="hole"/></geom>
+      </worldbody>
+    </mujoco>
+    """
 
 
 @functools.lru_cache(maxsize=1)
 def plugin_library_path() -> Path:
-    mujoco = pytest.importorskip("mujoco")
+    import mujoco
+
     mujoco_root = Path(mujoco.__file__).resolve().parent
     subprocess.run(
         [
@@ -112,28 +141,7 @@ def test_minimal_mjcf_plugin_instance_loads():
     import mujoco
 
     mujoco.mj_loadPluginLibrary(str(plugin_library_path()))
-    xml = """
-    <mujoco>
-      <extension>
-        <plugin plugin="mujoco.sdf.dsub9_hole">
-          <instance name="hole">
-            <config key="bore_radius" value="0.000575"/>
-            <config key="entry_radius" value="0.000675"/>
-            <config key="entry_depth" value="0.00025"/>
-            <config key="bore_depth" value="0.00450"/>
-            <config key="outer_radius" value="0.00100"/>
-          </instance>
-        </plugin>
-      </extension>
-      <asset>
-        <mesh name="hole_mesh"><plugin instance="hole"/></mesh>
-      </asset>
-      <worldbody>
-        <geom name="hole" type="sdf" mesh="hole_mesh"><plugin instance="hole"/></geom>
-      </worldbody>
-    </mujoco>
-    """
-    model = mujoco.MjModel.from_xml_string(xml)
+    model = mujoco.MjModel.from_xml_string(minimal_mjcf())
     data = mujoco.MjData(model)
     assert model.nplugin == 1
     assert data is not None
@@ -146,6 +154,9 @@ def test_minimal_mjcf_plugin_instance_loads():
         np.array([0.00059, 0.00002, 0.00200]),
         np.array([0.000625, 0.0, 0.00010]),
         np.array([0.000625, 0.0, 0.00050]),
+        np.array([0.000800, 0.0, PARAMS.entry_depth - 1e-9]),
+        np.array([0.000800, 0.0, PARAMS.entry_depth]),
+        np.array([0.000800, 0.0, PARAMS.entry_depth + 1e-9]),
         np.array([0.00120, 0.00010, 0.00480]),
     ],
 )
@@ -177,3 +188,24 @@ def test_cpp_distance_and_gradient_match_python_reference(point):
 def test_cpp_rejects_invalid_parameters(values):
     params = (ctypes.c_double * 5)(*values)
     assert loaded_plugin().dsub9_hole_validate(params) == 0
+
+
+@pytest.mark.parametrize(
+    "changes",
+    [
+        {"bore_radius": "0.000675"},
+        {"entry_radius": "0.00100"},
+        {"entry_depth": "0.0"},
+        {"entry_depth": "0.00450"},
+        {"bore_radius": "nan"},
+        {"bore_depth": "inf"},
+    ],
+)
+def test_mujoco_instance_rejects_invalid_plugin_config(changes):
+    import mujoco
+
+    mujoco.mj_loadPluginLibrary(str(plugin_library_path()))
+    config = DEFAULT_CONFIG | changes
+    with pytest.raises((ValueError, mujoco.FatalError)):
+        model = mujoco.MjModel.from_xml_string(minimal_mjcf(config))
+        mujoco.MjData(model)

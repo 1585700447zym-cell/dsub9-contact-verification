@@ -61,45 +61,90 @@ const MujocoApi& Api() {
   return api;
 }
 
-mjtNum Sign(mjtNum value) {
-  return value > 0 ? 1 : value < 0 ? -1 : 0;
+struct ProfilePoint {
+  mjtNum radius;
+  mjtNum z;
+};
+
+std::array<ProfilePoint, 6> ProfileVertices(const HoleParams& params) {
+  return {{{params.entry_radius, 0},
+           {params.outer_radius, 0},
+           {params.outer_radius, params.bore_depth},
+           {params.bore_radius, params.bore_depth},
+           {params.bore_radius, params.entry_depth},
+           {params.entry_radius, params.entry_depth}}};
 }
 
-DistanceGradient FiniteAnnulus(const mjtNum point[3], mjtNum inner_radius,
-                               mjtNum outer_radius, mjtNum z_min, mjtNum z_max) {
+bool InsideProfile(mjtNum radius, mjtNum z, const std::array<ProfilePoint, 6>& vertices) {
+  bool inside = false;
+  ProfilePoint previous = vertices.back();
+  for (const ProfilePoint& current : vertices) {
+    if ((current.z > z) != (previous.z > z)) {
+      const mjtNum crossing_radius =
+          current.radius +
+          (z - current.z) * (previous.radius - current.radius) / (previous.z - current.z);
+      if (radius < crossing_radius) {
+        inside = !inside;
+      }
+    }
+    previous = current;
+  }
+  return inside;
+}
+
+DistanceGradient StepProfile(const mjtNum point[3], const HoleParams& params) {
   const mjtNum radius = std::hypot(point[0], point[1]);
-  const mjtNum radial_midpoint = (inner_radius + outer_radius) / 2;
-  const mjtNum radial_half_width = (outer_radius - inner_radius) / 2;
-  const mjtNum axial_midpoint = (z_min + z_max) / 2;
-  const mjtNum axial_half_width = (z_max - z_min) / 2;
-  const mjtNum radial_delta = radius - radial_midpoint;
-  const mjtNum axial_delta = point[2] - axial_midpoint;
-  const mjtNum q_radial = std::abs(radial_delta) - radial_half_width;
-  const mjtNum q_axial = std::abs(axial_delta) - axial_half_width;
-  const mjtNum outside_radial = std::max(q_radial, mjtNum{0});
-  const mjtNum outside_axial = std::max(q_axial, mjtNum{0});
-  const mjtNum outside_distance = std::hypot(outside_radial, outside_axial);
+  const auto vertices = ProfileVertices(params);
+  mjtNum best_squared_distance = std::numeric_limits<mjtNum>::infinity();
+  mjtNum best_delta_radius = 0;
+  mjtNum best_delta_z = 0;
+  mjtNum best_outward_radius = 0;
+  mjtNum best_outward_z = 0;
 
-  DistanceGradient result{
-      outside_distance + std::min(std::max(q_radial, q_axial), mjtNum{0}),
-      {0, 0, 0}};
-  mjtNum derivative_q_radial = 0;
-  mjtNum derivative_q_axial = 0;
-  if (outside_distance > 0) {
-    derivative_q_radial = outside_radial / outside_distance;
-    derivative_q_axial = outside_axial / outside_distance;
-  } else if (q_radial >= q_axial) {
-    derivative_q_radial = 1;
+  for (std::size_t index = 0; index < vertices.size(); ++index) {
+    const ProfilePoint& start = vertices[index];
+    const ProfilePoint& end = vertices[(index + 1) % vertices.size()];
+    const mjtNum edge_radius = end.radius - start.radius;
+    const mjtNum edge_z = end.z - start.z;
+    const mjtNum edge_squared_length = edge_radius * edge_radius + edge_z * edge_z;
+    mjtNum projection = ((radius - start.radius) * edge_radius +
+                         (point[2] - start.z) * edge_z) /
+                        edge_squared_length;
+    projection = std::clamp(projection, mjtNum{0}, mjtNum{1});
+    const mjtNum closest_radius = start.radius + projection * edge_radius;
+    const mjtNum closest_z = start.z + projection * edge_z;
+    const mjtNum delta_radius = radius - closest_radius;
+    const mjtNum delta_z = point[2] - closest_z;
+    const mjtNum squared_distance = delta_radius * delta_radius + delta_z * delta_z;
+    // Strict comparison makes the first edge win exact ties in both implementations.
+    if (squared_distance < best_squared_distance) {
+      const mjtNum edge_length = std::sqrt(edge_squared_length);
+      best_squared_distance = squared_distance;
+      best_delta_radius = delta_radius;
+      best_delta_z = delta_z;
+      best_outward_radius = edge_z / edge_length;
+      best_outward_z = -edge_radius / edge_length;
+    }
+  }
+
+  const mjtNum unsigned_distance = std::sqrt(best_squared_distance);
+  const bool inside = InsideProfile(radius, point[2], vertices);
+  DistanceGradient result{inside ? -unsigned_distance : unsigned_distance, {0, 0, 0}};
+  mjtNum gradient_radius;
+  mjtNum gradient_z;
+  if (unsigned_distance > 0) {
+    const mjtNum sign = inside ? -1 : 1;
+    gradient_radius = sign * best_delta_radius / unsigned_distance;
+    gradient_z = sign * best_delta_z / unsigned_distance;
   } else {
-    derivative_q_axial = 1;
+    gradient_radius = best_outward_radius;
+    gradient_z = best_outward_z;
   }
-
-  const mjtNum derivative_radius = derivative_q_radial * Sign(radial_delta);
   if (radius > 0) {
-    result.gradient[0] = derivative_radius * point[0] / radius;
-    result.gradient[1] = derivative_radius * point[1] / radius;
+    result.gradient[0] = gradient_radius * point[0] / radius;
+    result.gradient[1] = gradient_radius * point[1] / radius;
   }
-  result.gradient[2] = derivative_q_axial * Sign(axial_delta);
+  result.gradient[2] = gradient_z;
   return result;
 }
 
@@ -162,6 +207,9 @@ void ParseStaticAttributes(mjtNum attributes[], const char* names[], const char*
       parsed[destination] = std::numeric_limits<mjtNum>::quiet_NaN();
     }
   }
+  if (!Validate(FromArray(parsed.data()))) {
+    parsed.fill(std::numeric_limits<mjtNum>::quiet_NaN());
+  }
   std::copy(parsed.begin(), parsed.end(), attributes);
 }
 
@@ -177,20 +225,12 @@ bool Validate(const HoleParams& params) {
 }
 
 mjtNum Distance(const mjtNum point[3], const HoleParams& params) {
-  const DistanceGradient entry =
-      FiniteAnnulus(point, params.entry_radius, params.outer_radius, 0, params.entry_depth);
-  const DistanceGradient main = FiniteAnnulus(point, params.bore_radius, params.outer_radius,
-                                              params.entry_depth, params.bore_depth);
-  return std::min(entry.distance, main.distance);
+  return StepProfile(point, params).distance;
 }
 
 void Gradient(mjtNum gradient[3], const mjtNum point[3], const HoleParams& params) {
-  const DistanceGradient entry =
-      FiniteAnnulus(point, params.entry_radius, params.outer_radius, 0, params.entry_depth);
-  const DistanceGradient main = FiniteAnnulus(point, params.bore_radius, params.outer_radius,
-                                              params.entry_depth, params.bore_depth);
-  const auto& selected = entry.distance <= main.distance ? entry.gradient : main.gradient;
-  std::copy(selected.begin(), selected.end(), gradient);
+  const DistanceGradient result = StepProfile(point, params);
+  std::copy(result.gradient.begin(), result.gradient.end(), gradient);
 }
 
 bool RegisterPlugin() {

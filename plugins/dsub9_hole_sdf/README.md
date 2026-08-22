@@ -1,8 +1,8 @@
 # D-sub9 analytic circular-hole SDF
 
-This MuJoCo 3.x plugin registers `mujoco.sdf.dsub9_hole`. It describes socket
-material as the continuous union of two finite annuli, not as the polygon32
-fallback collision mesh.
+This MuJoCo 3.x plugin registers `mujoco.sdf.dsub9_hole`. It describes the
+exact stepped socket-material profile, not the polygon32 fallback collision
+mesh.
 
 ## Geometry and sign
 
@@ -16,22 +16,26 @@ All attributes are in metres and must satisfy
 - `bore_depth=0.00450`
 - `outer_radius=0.00100`
 
-For an annulus with radial interval `[ri, ro]` and axial interval `[z0, z1]`,
-the code evaluates the exact rectangle SDF in the rotationally symmetric
-`(r,z)` plane:
+Rotational symmetry reduces the solid to a counter-clockwise six-edge polygon
+in the `(r,z)` plane:
 
 ```
-q = (abs(r - (ri+ro)/2) - (ro-ri)/2,
-     abs(z - (z0+z1)/2) - (z1-z0)/2)
-d = length(max(q, 0)) + min(max(q.x, q.y), 0)
+(entry_radius, 0)
+(outer_radius, 0)
+(outer_radius, bore_depth)
+(bore_radius, bore_depth)
+(bore_radius, entry_depth)
+(entry_radius, entry_depth)
 ```
 
-The entrance annulus uses `[entry_radius, outer_radius] x [0, entry_depth]`;
-the main annulus uses `[bore_radius, outer_radius] x
-[entry_depth, bore_depth]`. Their union is `min(d_entry, d_main)`. Thus free
-bore space is positive and solid socket material is negative, matching
-MuJoCo's SDF convention. The analytic gradient uses the same branches; CSG
-ties are non-differentiable and parity tests deliberately avoid them.
+The unsigned distance is the minimum Euclidean point-to-segment distance over
+the bottom, outer wall, top, main-bore wall, shoulder, and entry wall. An
+odd-even polygon test makes that distance negative inside material and
+positive in free space, matching MuJoCo's SDF convention. This avoids the
+internal false zero plane produced by taking `min` of two finite annulus SDFs
+whose coincident end faces are not boundaries of the union. The gradient
+comes from the unique nearest segment or endpoint. Exact ties deterministically
+select the first segment in the order above in both Python and C++.
 
 ## Windows build
 

@@ -41,56 +41,88 @@ def _query_point(point_m: np.ndarray) -> np.ndarray:
     return point
 
 
-def _finite_annulus_distance_gradient(
-    point: np.ndarray,
-    inner_radius: float,
-    outer_radius: float,
-    z_min: float,
-    z_max: float,
-) -> tuple[float, np.ndarray]:
-    """Exact SDF and gradient of a finite annulus, negative in material.
+def _step_profile_vertices(params: HoleParams) -> tuple[tuple[float, float], ...]:
+    """Return the counter-clockwise boundary of the material in the (r, z) plane."""
 
-    Rotational symmetry reduces the solid to the rectangle
-    ``[inner_radius, outer_radius] x [z_min, z_max]`` in the ``(r, z)``
-    half-plane.  The standard exact rectangle SDF is then revolved about Z.
-    At symmetry/tie points the returned gradient is a deterministic
-    subgradient; callers test derivatives away from CSG ties.
-    """
+    return (
+        (params.entry_radius, 0.0),
+        (params.outer_radius, 0.0),
+        (params.outer_radius, params.bore_depth),
+        (params.bore_radius, params.bore_depth),
+        (params.bore_radius, params.entry_depth),
+        (params.entry_radius, params.entry_depth),
+    )
+
+
+def _inside_polygon(radius: float, z: float, vertices: tuple[tuple[float, float], ...]) -> bool:
+    """Odd-even point-in-polygon test; boundary classification is immaterial at distance zero."""
+
+    inside = False
+    previous_radius, previous_z = vertices[-1]
+    for current_radius, current_z in vertices:
+        if (current_z > z) != (previous_z > z):
+            crossing_radius = current_radius + (z - current_z) * (
+                previous_radius - current_radius
+            ) / (previous_z - current_z)
+            if radius < crossing_radius:
+                inside = not inside
+        previous_radius, previous_z = current_radius, current_z
+    return inside
+
+
+def _step_profile_distance_gradient(
+    point: np.ndarray, params: HoleParams
+) -> tuple[float, np.ndarray]:
+    """Exact signed distance to the revolved six-edge stepped profile."""
 
     x, y, z = point
     radius = math.hypot(x, y)
-    radial_midpoint = 0.5 * (inner_radius + outer_radius)
-    radial_half_width = 0.5 * (outer_radius - inner_radius)
-    axial_midpoint = 0.5 * (z_min + z_max)
-    axial_half_width = 0.5 * (z_max - z_min)
+    vertices = _step_profile_vertices(params)
+    best_squared_distance = math.inf
+    best_delta_radius = 0.0
+    best_delta_z = 0.0
+    best_outward_radius = 0.0
+    best_outward_z = 0.0
 
-    radial_delta = radius - radial_midpoint
-    axial_delta = z - axial_midpoint
-    q_radial = abs(radial_delta) - radial_half_width
-    q_axial = abs(axial_delta) - axial_half_width
-    outside_radial = max(q_radial, 0.0)
-    outside_axial = max(q_axial, 0.0)
-    outside_distance = math.hypot(outside_radial, outside_axial)
-    distance = outside_distance + min(max(q_radial, q_axial), 0.0)
+    for index, start in enumerate(vertices):
+        end = vertices[(index + 1) % len(vertices)]
+        edge_radius = end[0] - start[0]
+        edge_z = end[1] - start[1]
+        edge_squared_length = edge_radius * edge_radius + edge_z * edge_z
+        projection = (
+            (radius - start[0]) * edge_radius + (z - start[1]) * edge_z
+        ) / edge_squared_length
+        projection = min(max(projection, 0.0), 1.0)
+        closest_radius = start[0] + projection * edge_radius
+        closest_z = start[1] + projection * edge_z
+        delta_radius = radius - closest_radius
+        delta_z = z - closest_z
+        squared_distance = delta_radius * delta_radius + delta_z * delta_z
+        # Strict comparison makes the first edge win exact ties in both implementations.
+        if squared_distance < best_squared_distance:
+            edge_length = math.sqrt(edge_squared_length)
+            best_squared_distance = squared_distance
+            best_delta_radius = delta_radius
+            best_delta_z = delta_z
+            best_outward_radius = edge_z / edge_length
+            best_outward_z = -edge_radius / edge_length
 
-    derivative_q_radial = 0.0
-    derivative_q_axial = 0.0
-    if outside_distance > 0.0:
-        derivative_q_radial = outside_radial / outside_distance
-        derivative_q_axial = outside_axial / outside_distance
-    elif q_radial >= q_axial:
-        derivative_q_radial = 1.0
+    unsigned_distance = math.sqrt(best_squared_distance)
+    inside = _inside_polygon(radius, z, vertices)
+    distance = -unsigned_distance if inside else unsigned_distance
+    if unsigned_distance > 0.0:
+        sign = -1.0 if inside else 1.0
+        gradient_radius = sign * best_delta_radius / unsigned_distance
+        gradient_z = sign * best_delta_z / unsigned_distance
     else:
-        derivative_q_axial = 1.0
+        gradient_radius = best_outward_radius
+        gradient_z = best_outward_z
 
-    radial_sign = 1.0 if radial_delta > 0.0 else -1.0 if radial_delta < 0.0 else 0.0
-    axial_sign = 1.0 if axial_delta > 0.0 else -1.0 if axial_delta < 0.0 else 0.0
-    derivative_radius = derivative_q_radial * radial_sign
     gradient = np.zeros(3, dtype=float)
     if radius > 0.0:
-        gradient[0] = derivative_radius * x / radius
-        gradient[1] = derivative_radius * y / radius
-    gradient[2] = derivative_q_axial * axial_sign
+        gradient[0] = gradient_radius * x / radius
+        gradient[1] = gradient_radius * y / radius
+    gradient[2] = gradient_z
     return distance, gradient
 
 
@@ -98,31 +130,13 @@ def hole_distance(point_m: np.ndarray, params: HoleParams) -> float:
     """Return positive distance in free space and negative in socket material."""
 
     point = _query_point(point_m)
-    entry_distance, _ = _finite_annulus_distance_gradient(
-        point, params.entry_radius, params.outer_radius, 0.0, params.entry_depth
-    )
-    main_distance, _ = _finite_annulus_distance_gradient(
-        point,
-        params.bore_radius,
-        params.outer_radius,
-        params.entry_depth,
-        params.bore_depth,
-    )
-    return min(entry_distance, main_distance)
+    distance, _ = _step_profile_distance_gradient(point, params)
+    return distance
 
 
 def hole_gradient(point_m: np.ndarray, params: HoleParams) -> np.ndarray:
     """Return the analytic gradient of :func:`hole_distance`."""
 
     point = _query_point(point_m)
-    entry_distance, entry_gradient = _finite_annulus_distance_gradient(
-        point, params.entry_radius, params.outer_radius, 0.0, params.entry_depth
-    )
-    main_distance, main_gradient = _finite_annulus_distance_gradient(
-        point,
-        params.bore_radius,
-        params.outer_radius,
-        params.entry_depth,
-        params.bore_depth,
-    )
-    return entry_gradient if entry_distance <= main_distance else main_gradient
+    _, gradient = _step_profile_distance_gradient(point, params)
+    return gradient
