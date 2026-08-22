@@ -47,7 +47,7 @@ transform.
 
 ## Commit
 
-Pending task-scoped commit; this field is updated before final handoff.
+Implementation and assets commit: `bd3a09465ca5f437e650f146d41aa291153ad55c` (task-scoped).
 
 ## Concerns
 
