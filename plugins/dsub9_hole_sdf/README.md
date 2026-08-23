@@ -58,12 +58,28 @@ cmake --build build/dsub9_hole_sdf --config Release
 ```
 
 The expected library is `build/dsub9_hole_sdf/Release/dsub9_hole_sdf.dll`.
-Load it after importing MuJoCo:
+Run the following example from the project root so the path passed to MuJoCo
+stays project-relative, then load it after importing MuJoCo:
 
 ```python
 import mujoco
 mujoco.mj_loadPluginLibrary(r"build\dsub9_hole_sdf\Release\dsub9_hole_sdf.dll")
 ```
+
+On the tested MuJoCo 3.9.0 Windows runtime, passing this workspace's
+non-ASCII absolute DLL path returned without registering the plugin. This is
+an observed 3.9.0 path limitation, not a claim about every MuJoCo version.
+Use an ASCII path or the project-relative path above. To prove registration
+came from `mj_loadPluginLibrary` rather than an earlier `ctypes.WinDLL`, run
+the fresh-process registration probe from any working directory:
+
+```powershell
+D:\KEYANRUJIAN\python.exe -m pytest D:\dsub9项目计划\first_stage_sim\tests\sdf\test_plugin_build.py::test_plugin_registers_exact_name_and_attributes -v
+```
+
+The probe starts with the target name absent, loads the relative DLL from an
+explicit project-root working directory, and then queries the exact registered
+name and all five attributes.
 
 The Python wheel does not include a `mujoco.lib` import library. The plugin
 therefore resolves `mjp_defaultPlugin`, `mjp_registerPlugin`, and
