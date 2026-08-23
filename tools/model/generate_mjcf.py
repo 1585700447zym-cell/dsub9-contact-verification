@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import argparse
+from dataclasses import dataclass
+import math
 from pathlib import Path
 from typing import Literal
 
@@ -42,6 +44,73 @@ FALLBACK_NAMES = tuple(
     for layer in ("entry", "main")
     for sector in range(32)
 )
+
+
+@dataclass(frozen=True)
+class ContactParameters:
+    """Uncalibrated diagnostic contact parameters for MuJoCo geoms.
+
+    ``friction`` has three MuJoCo coefficients (sliding, torsional, rolling),
+    ``solref`` is ``(time_constant_s, damping_ratio)``, ``solimp`` is
+    ``(d0, d_width, width_m, midpoint, power)``, and ``margin_m`` is metres.
+    The fixed tuple shapes match MJCF's geom attribute schema.
+    """
+
+    name: str
+    friction: tuple[float, float, float]
+    solref: tuple[float, float]
+    solimp: tuple[float, float, float, float, float]
+    margin_m: float
+
+    def __post_init__(self) -> None:
+        shaped_values = (
+            ("friction", self.friction, 3),
+            ("solref", self.solref, 2),
+            ("solimp", self.solimp, 5),
+        )
+        if not self.name:
+            raise ValueError("contact parameter name must be non-empty")
+        for field_name, values, expected_length in shaped_values:
+            if not isinstance(values, tuple) or len(values) != expected_length:
+                raise ValueError(f"{field_name} must be a {expected_length}-tuple")
+        numeric_values = (*self.friction, *self.solref, *self.solimp, self.margin_m)
+        if not all(math.isfinite(value) for value in numeric_values):
+            raise ValueError("contact parameters must be finite")
+        if any(value < 0.0 for value in self.friction) or self.margin_m < 0.0:
+            raise ValueError("friction and margin must be non-negative")
+        if any(value <= 0.0 for value in self.solref):
+            raise ValueError("solref values must be positive")
+
+
+_UNCALIBRATED_DIAGNOSTIC_V1 = ContactParameters(
+    name="uncalibrated_diagnostic_v1",
+    friction=(1.0, 0.005, 0.0001),
+    solref=(0.02, 1.0),
+    solimp=(0.9, 0.95, 0.001, 0.5, 2.0),
+    margin_m=0.0,
+)
+
+
+def baseline_contact_parameters() -> ContactParameters:
+    """Return the versioned, uncalibrated diagnostic contact baseline."""
+    return _UNCALIBRATED_DIAGNOSTIC_V1
+
+
+def _mjcf_number(value: float) -> str:
+    text = f"{value:.15f}".rstrip("0").rstrip(".")
+    return "0" if text in ("", "-0") else text
+
+
+def contact_parameters_mjcf(parameters: ContactParameters) -> dict[str, str]:
+    """Format one contact configuration as deterministic MJCF geom attributes."""
+    if not isinstance(parameters, ContactParameters):
+        raise TypeError("parameters must be ContactParameters")
+    return {
+        "friction": " ".join(_mjcf_number(value) for value in parameters.friction),
+        "solref": " ".join(_mjcf_number(value) for value in parameters.solref),
+        "solimp": " ".join(_mjcf_number(value) for value in parameters.solimp),
+        "margin": _mjcf_number(parameters.margin_m),
+    }
 
 
 def pin_centres_m() -> tuple[tuple[float, float], ...]:
@@ -92,26 +161,29 @@ def _collision_include_xml() -> str:
     return "\n".join(lines) + "\n"
 
 
-def _defaults_xml() -> list[str]:
+def _defaults_xml(contact_parameters: ContactParameters) -> list[str]:
+    contact_attributes = " ".join(
+        f'{name}="{value}"' for name, value in contact_parameters_mjcf(contact_parameters).items()
+    )
     return [
         "  <default>",
         "    <default class=\"visual\">",
         "      <geom contype=\"0\" conaffinity=\"0\" group=\"2\"/>",
         "    </default>",
         "    <default class=\"pin_collision\">",
-        "      <geom contype=\"1\" conaffinity=\"2\"/>",
+        f"      <geom contype=\"1\" conaffinity=\"2\" {contact_attributes}/>",
         "    </default>",
         "    <default class=\"hole_sdf_collision\">",
-        "      <geom contype=\"2\" conaffinity=\"1\"/>",
+        f"      <geom contype=\"2\" conaffinity=\"1\" {contact_attributes}/>",
         "    </default>",
         "    <default class=\"male_guide_collision\">",
-        "      <geom contype=\"4\" conaffinity=\"8\"/>",
+        f"      <geom contype=\"4\" conaffinity=\"8\" {contact_attributes}/>",
         "    </default>",
         "    <default class=\"female_socket_collision\">",
-        "      <geom contype=\"8\" conaffinity=\"4\"/>",
+        f"      <geom contype=\"8\" conaffinity=\"4\" {contact_attributes}/>",
         "    </default>",
         "    <default class=\"hole_polygon32_collision\">",
-        "      <geom contype=\"2\" conaffinity=\"1\"/>",
+        f"      <geom contype=\"2\" conaffinity=\"1\" {contact_attributes}/>",
         "    </default>",
         "  </default>",
     ]
@@ -206,16 +278,26 @@ def _male_body_xml() -> list[str]:
     return lines
 
 
-def build_pair_xml(collision_mode: CollisionMode) -> str:
+def build_pair_xml(
+    collision_mode: CollisionMode,
+    *,
+    contact_parameters: ContactParameters | None = None,
+) -> str:
     """Return deterministic MJCF for the formal SDF or polygon32 fallback model."""
     if collision_mode not in ("sdf", "polygon32"):
         raise ValueError("collision_mode must be 'sdf' or 'polygon32'")
+    if contact_parameters is None:
+        contact_parameters = baseline_contact_parameters()
     model_name = "dsub9_pair_sdf" if collision_mode == "sdf" else "dsub9_pair_polygon32_fallback"
     lines = [
         f'<mujoco model="{model_name}">',
         "  <compiler angle=\"radian\" meshdir=\"../assets\"/>",
         "  <option gravity=\"0 0 0\"/>",
-        *_defaults_xml(),
+        (
+            "  <!-- UNCALIBRATED diagnostic contact baseline: "
+            f"{contact_parameters.name}; not material-identified. -->"
+        ),
+        *_defaults_xml(contact_parameters),
     ]
     if collision_mode == "sdf":
         lines.extend(_sdf_extension_xml())

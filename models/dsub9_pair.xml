@@ -1,24 +1,25 @@
 <mujoco model="dsub9_pair_sdf">
   <compiler angle="radian" meshdir="../assets"/>
   <option gravity="0 0 0"/>
+  <!-- UNCALIBRATED diagnostic contact baseline: uncalibrated_diagnostic_v1; not material-identified. -->
   <default>
     <default class="visual">
       <geom contype="0" conaffinity="0" group="2"/>
     </default>
     <default class="pin_collision">
-      <geom contype="1" conaffinity="2"/>
+      <geom contype="1" conaffinity="2" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
     </default>
     <default class="hole_sdf_collision">
-      <geom contype="2" conaffinity="1"/>
+      <geom contype="2" conaffinity="1" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
     </default>
     <default class="male_guide_collision">
-      <geom contype="4" conaffinity="8"/>
+      <geom contype="4" conaffinity="8" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
     </default>
     <default class="female_socket_collision">
-      <geom contype="8" conaffinity="4"/>
+      <geom contype="8" conaffinity="4" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
     </default>
     <default class="hole_polygon32_collision">
-      <geom contype="2" conaffinity="1"/>
+      <geom contype="2" conaffinity="1" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
     </default>
   </default>
   <extension>

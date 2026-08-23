@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import FrozenInstanceError, replace
 import hashlib
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -141,6 +142,67 @@ def test_default_collision_masks_allow_only_required_mating_pairs():
         assert geom is not None
         assert geom.attrib["contype"] == contype
         assert geom.attrib["conaffinity"] == conaffinity
+
+
+def test_uncalibrated_contact_baseline_is_versioned_frozen_and_consumable():
+    """Task 6 sensitivity must import one typed baseline instead of copying constants."""
+    from tools.model.generate_mjcf import (
+        ContactParameters,
+        baseline_contact_parameters,
+        build_pair_xml,
+        contact_parameters_mjcf,
+    )
+
+    parameters = baseline_contact_parameters()
+    assert isinstance(parameters, ContactParameters)
+    assert parameters.name == "uncalibrated_diagnostic_v1"
+    assert parameters.friction == (1.0, 0.005, 0.0001)
+    assert parameters.solref == (0.02, 1.0)
+    assert parameters.solimp == (0.9, 0.95, 0.001, 0.5, 2.0)
+    assert parameters.margin_m == 0.0
+    assert contact_parameters_mjcf(parameters) == {
+        "friction": "1 0.005 0.0001",
+        "solref": "0.02 1",
+        "solimp": "0.9 0.95 0.001 0.5 2",
+        "margin": "0",
+    }
+    with pytest.raises(FrozenInstanceError):
+        parameters.margin_m = 1e-6
+
+    perturbed = replace(parameters, margin_m=1e-6)
+    root = ET.fromstring(build_pair_xml("sdf", contact_parameters=perturbed))
+    collision_defaults = [
+        item.find("geom")
+        for item in root.findall("./default/default")
+        if item.attrib["class"] != "visual"
+    ]
+    assert collision_defaults
+    assert {geom.attrib["margin"] for geom in collision_defaults} == {"0.000001"}
+
+
+@pytest.mark.parametrize("path", [MODEL, FALLBACK_MODEL])
+def test_every_collision_default_explicitly_freezes_contact_baseline(path: Path):
+    """Removing explicit physics would silently reintroduce engine-version defaults."""
+    defaults = _defaults(_root(path))
+    expected = {
+        "friction": "1 0.005 0.0001",
+        "solref": "0.02 1",
+        "solimp": "0.9 0.95 0.001 0.5 2",
+        "margin": "0",
+    }
+    collision_classes = set(defaults) - {"visual"}
+    assert collision_classes == {
+        "pin_collision",
+        "hole_sdf_collision",
+        "male_guide_collision",
+        "female_socket_collision",
+        "hole_polygon32_collision",
+    }
+    for class_name in collision_classes:
+        geom = defaults[class_name]
+        assert geom is not None
+        assert {name: geom.attrib[name] for name in expected} == expected
+    assert not (set(expected) & defaults["visual"].attrib.keys())
 
 
 def test_formal_model_contains_exact_pin_and_sdf_hole_geometry():

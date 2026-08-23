@@ -102,6 +102,11 @@ def geom_record(name):
     }
 
 
+def unique_rows(values, indices):
+    rows = {tuple(float(value) for value in values[index]) for index in indices}
+    return [list(row) for row in sorted(rows)]
+
+
 type_counts = {}
 for value in model.geom_type:
     key = str(int(value))
@@ -151,6 +156,26 @@ print(json.dumps({
         for index, name in enumerate(geom_names)
         if name.startswith("hole_fallback_32_")
     ],
+    "collision_physics": {
+        "count": len([name for name in geom_names if not name.endswith("_visual")]),
+        "friction": unique_rows(
+            model.geom_friction,
+            [index for index, name in enumerate(geom_names) if not name.endswith("_visual")],
+        ),
+        "solref": unique_rows(
+            model.geom_solref,
+            [index for index, name in enumerate(geom_names) if not name.endswith("_visual")],
+        ),
+        "solimp": unique_rows(
+            model.geom_solimp,
+            [index for index, name in enumerate(geom_names) if not name.endswith("_visual")],
+        ),
+        "margin": sorted({
+            float(model.geom_margin[index])
+            for index, name in enumerate(geom_names)
+            if not name.endswith("_visual")
+        }),
+    },
     "data_created": data is not None,
 }))
 """
@@ -231,6 +256,16 @@ def _assert_shared_pair_metadata(result: dict) -> None:
         }
 
 
+def _assert_collision_contact_baseline(result: dict, expected_count: int) -> None:
+    assert result["collision_physics"] == {
+        "count": expected_count,
+        "friction": [[1.0, 0.005, 0.0001]],
+        "solref": [[0.02, 1.0]],
+        "solimp": [[0.9, 0.95, 0.001, 0.5, 2.0]],
+        "margin": [0.0],
+    }
+
+
 def test_supported_mujoco_version_range_is_not_minor_locked():
     """Any supported MuJoCo 3.x minor must pass without a packaging dependency."""
     _assert_supported_mujoco_version(3_003_000)
@@ -269,6 +304,7 @@ def test_formal_sdf_pair_compiles_with_exact_plugin_slots_and_inventory():
     assert result["nmesh"] == 123
     assert result["nplugin"] == 1
     assert result["type_counts"] == {"5": 9, "7": 122, "8": 9}
+    _assert_collision_contact_baseline(result, 138)
     # mjp_getPlugin returns a process-global registration slot, while
     # mjModel.geom_plugin stores the model-local plugin instance id.
     assert result["sdf_plugins"] == [0] * 9
@@ -295,6 +331,7 @@ def test_polygon32_fallback_compiles_with_full_mesh_inventory_and_no_instances()
     assert result["nmesh"] == 698
     assert result["nplugin"] == 0
     assert result["type_counts"] == {"5": 9, "7": 698}
+    _assert_collision_contact_baseline(result, 705)
     assert result["sdf_plugins"] == []
     assert result["fallback_plugins"] == [-1] * 576
     for name in ("hole_fallback_32_h01_entry_s00", "hole_fallback_32_h09_main_s31"):
