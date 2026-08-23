@@ -5,9 +5,12 @@ from pathlib import Path
 import subprocess
 import sys
 
+import pytest
+
 
 ROOT = Path(__file__).resolve().parents[2]
-PLUGIN = ROOT / "build" / "dsub9_hole_sdf" / "Release" / "dsub9_hole_sdf.dll"
+PLUGIN_RELATIVE_PATH = Path("build/dsub9_hole_sdf/Release/dsub9_hole_sdf.dll")
+PLUGIN = ROOT / PLUGIN_RELATIVE_PATH
 
 MODEL_PROBE = r"""
 import ctypes
@@ -39,6 +42,8 @@ class PluginPrefix(ctypes.Structure):
 root = Path.cwd().resolve()
 if root != Path(sys.argv[1]).resolve():
     raise AssertionError(f"probe cwd {root} does not match project root {sys.argv[1]}")
+plugin_path = Path(sys.argv[4])
+plugin_path_exists = plugin_path.is_file()
 
 core = ctypes.WinDLL(str(Path(mujoco.__file__).resolve().parent / "mujoco.dll"))
 core.mjp_getPlugin.argtypes = [ctypes.c_char_p, ctypes.POINTER(ctypes.c_int)]
@@ -55,21 +60,30 @@ plugin, slot = find_plugin()
 if plugin:
     raise AssertionError(f"target plugin was already registered in fresh process at slot {slot}")
 
-# This relative ASCII path is intentionally the only target-DLL load in the child.
-mujoco.mj_loadPluginLibrary("build/dsub9_hole_sdf/Release/dsub9_hole_sdf.dll")
-plugin, slot = find_plugin()
-if not plugin:
-    raise AssertionError("target plugin did not register through mj_loadPluginLibrary")
-attributes = tuple(
-    plugin.contents.attributes[index] for index in range(plugin.contents.nattribute)
-)
-if plugin.contents.name != PLUGIN_NAME or attributes != ATTRIBUTE_NAMES:
-    raise AssertionError(
-        f"wrong plugin registration: name={plugin.contents.name!r}, attributes={attributes!r}"
+load_plugin = sys.argv[3] == "1"
+if load_plugin:
+    if not plugin_path_exists:
+        raise AssertionError(f"target plugin path does not exist: {plugin_path}")
+    # This relative ASCII path is intentionally the only target-DLL load in the child.
+    mujoco.mj_loadPluginLibrary(str(plugin_path))
+    plugin, slot = find_plugin()
+    if not plugin:
+        raise AssertionError("target plugin did not register through mj_loadPluginLibrary")
+    attributes = tuple(
+        plugin.contents.attributes[index] for index in range(plugin.contents.nattribute)
     )
+    if plugin.contents.name != PLUGIN_NAME or attributes != ATTRIBUTE_NAMES:
+        raise AssertionError(
+            f"wrong plugin registration: name={plugin.contents.name!r}, attributes={attributes!r}"
+        )
 
 model = mujoco.MjModel.from_xml_path(sys.argv[2])
 data = mujoco.MjData(model)
+plugin, slot = find_plugin()
+if load_plugin and not plugin:
+    raise AssertionError("target plugin disappeared after model compilation")
+if not load_plugin and plugin:
+    raise AssertionError(f"fallback model unexpectedly registered target plugin at slot {slot}")
 geom_names = [
     mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_GEOM, index)
     for index in range(model.ngeom)
@@ -95,6 +109,9 @@ for value in model.geom_type:
 
 print(json.dumps({
     "version": mujoco.mj_versionString(),
+    "version_int": mujoco.mj_version(),
+    "plugin_path_exists": plugin_path_exists,
+    "plugin_registered": bool(plugin),
     "registration_slot": slot,
     "nbody": model.nbody,
     "ngeom": model.ngeom,
@@ -139,10 +156,20 @@ print(json.dumps({
 """
 
 
-def _load_in_fresh_process(relative_model: str) -> dict:
-    assert PLUGIN.is_file(), f"build Task 4 plugin first: {PLUGIN}"
+def _load_in_fresh_process(relative_model: str, *, load_plugin: bool) -> dict:
+    if load_plugin:
+        assert PLUGIN.is_file(), f"build Task 4 plugin first: {PLUGIN}"
+    plugin_argument = str(PLUGIN_RELATIVE_PATH if load_plugin else PLUGIN)
     result = subprocess.run(
-        [sys.executable, "-c", MODEL_PROBE, str(ROOT), relative_model],
+        [
+            sys.executable,
+            "-c",
+            MODEL_PROBE,
+            str(ROOT),
+            relative_model,
+            "1" if load_plugin else "0",
+            plugin_argument,
+        ],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -155,9 +182,13 @@ def _load_in_fresh_process(relative_model: str) -> dict:
     return json.loads(result.stdout)
 
 
+def _assert_supported_mujoco_version(version_int: int) -> None:
+    # MuJoCo encodes M.m.p as M*1_000_000 + m*1_000 + p.
+    assert 3_003_000 <= version_int < 4_000_000
+
+
 def _assert_shared_pair_metadata(result: dict) -> None:
-    assert result["version"] == "3.9.0"
-    assert result["registration_slot"] >= 0
+    _assert_supported_mujoco_version(result["version_int"])
     assert result["nbody"] == 3
     assert result["njnt"] == 1
     assert result["nq"] == 7
@@ -200,10 +231,40 @@ def _assert_shared_pair_metadata(result: dict) -> None:
         }
 
 
+def test_supported_mujoco_version_range_is_not_minor_locked():
+    """Any supported MuJoCo 3.x minor must pass without a packaging dependency."""
+    _assert_supported_mujoco_version(3_003_000)
+    _assert_supported_mujoco_version(3_999_999)
+    with pytest.raises(AssertionError):
+        _assert_supported_mujoco_version(3_002_999)
+    with pytest.raises(AssertionError):
+        _assert_supported_mujoco_version(4_000_000)
+
+
+def test_fallback_load_does_not_require_or_register_sdf_plugin(monkeypatch):
+    """The mesh-only fallback must compile even when the target DLL is absent."""
+    missing = ROOT / "build" / "missing-for-fallback-test" / "dsub9_hole_sdf.dll"
+    assert not missing.exists()
+    monkeypatch.setattr(sys.modules[__name__], "PLUGIN", missing)
+    monkeypatch.chdir(Path(ROOT.anchor))
+    assert Path.cwd().resolve() != ROOT
+
+    result = _load_in_fresh_process(
+        "build/dsub9_pair_polygon32.xml", load_plugin=False
+    )
+
+    assert result["plugin_path_exists"] is False
+    assert result["plugin_registered"] is False
+    assert result["registration_slot"] == -1
+    assert result["nplugin"] == 0
+
+
 def test_formal_sdf_pair_compiles_with_exact_plugin_slots_and_inventory():
     """The formal model must compile as nine true SDF holes, not a loose smoke test."""
-    result = _load_in_fresh_process("models/dsub9_pair.xml")
+    result = _load_in_fresh_process("models/dsub9_pair.xml", load_plugin=True)
     _assert_shared_pair_metadata(result)
+    assert result["plugin_registered"] is True
+    assert result["registration_slot"] >= 0
     assert result["ngeom"] == 140
     assert result["nmesh"] == 123
     assert result["nplugin"] == 1
@@ -224,8 +285,12 @@ def test_formal_sdf_pair_compiles_with_exact_plugin_slots_and_inventory():
 
 def test_polygon32_fallback_compiles_with_full_mesh_inventory_and_no_instances():
     """The fallback must retain all 576 mesh pieces while remaining non-formal."""
-    result = _load_in_fresh_process("build/dsub9_pair_polygon32.xml")
+    result = _load_in_fresh_process(
+        "build/dsub9_pair_polygon32.xml", load_plugin=False
+    )
     _assert_shared_pair_metadata(result)
+    assert result["plugin_registered"] is False
+    assert result["registration_slot"] == -1
     assert result["ngeom"] == 707
     assert result["nmesh"] == 698
     assert result["nplugin"] == 0
