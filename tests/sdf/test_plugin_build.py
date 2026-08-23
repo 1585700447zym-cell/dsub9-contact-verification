@@ -108,6 +108,17 @@ def loaded_plugin():
     return library
 
 
+def load_plugin_with_mujoco():
+    import mujoco
+
+    library = plugin_library_path()
+    # MuJoCo 3.9's Windows loader accepts a narrow path.  Keep the path passed
+    # into that API ASCII-only; ROOT itself contains non-ASCII characters.
+    assert Path.cwd().resolve() == ROOT.resolve()
+    mujoco.mj_loadPluginLibrary(str(library.relative_to(ROOT)))
+    return library
+
+
 def test_plugin_library_exists_and_loads():
     ctypes.WinDLL(str(plugin_library_path()))
 
@@ -115,8 +126,7 @@ def test_plugin_library_exists_and_loads():
 def test_plugin_registers_exact_name_and_attributes():
     import mujoco
 
-    library = plugin_library_path()
-    mujoco.mj_loadPluginLibrary(str(library))
+    load_plugin_with_mujoco()
     core = ctypes.WinDLL(str(Path(mujoco.__file__).resolve().parent / "mujoco.dll"))
 
     class PluginPrefix(ctypes.Structure):
@@ -140,7 +150,7 @@ def test_plugin_registers_exact_name_and_attributes():
 def test_minimal_mjcf_plugin_instance_loads():
     import mujoco
 
-    mujoco.mj_loadPluginLibrary(str(plugin_library_path()))
+    load_plugin_with_mujoco()
     model = mujoco.MjModel.from_xml_string(minimal_mjcf())
     data = mujoco.MjData(model)
     assert model.nplugin == 1
@@ -204,8 +214,15 @@ def test_cpp_rejects_invalid_parameters(values):
 def test_mujoco_instance_rejects_invalid_plugin_config(changes):
     import mujoco
 
-    mujoco.mj_loadPluginLibrary(str(plugin_library_path()))
+    load_plugin_with_mujoco()
     config = DEFAULT_CONFIG | changes
-    model = mujoco.MjModel.from_xml_string(minimal_mjcf(config))
-    with pytest.raises((ValueError, mujoco.FatalError)):
-        mujoco.MjData(model)
+    # MuJoCo 3.9 creates temporary mjData while compiling a model, so plugin
+    # init is reached inside from_xml_string rather than at the later explicit
+    # MjData construction.  Matching the engine error proves static SDF/AABB
+    # processing completed with finite fallback values and init rejected the
+    # original invalid attributes through the real plugin lifecycle.
+    with pytest.raises(
+        ValueError,
+        match=r"mj_initPlugin: plugin->init failed for plugin id 0",
+    ):
+        mujoco.MjModel.from_xml_string(minimal_mjcf(config))
