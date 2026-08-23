@@ -39,9 +39,20 @@ system, and with “Do not translate STL output data to positive space” checke
 The male uses nine analytic cylinders, diameter 1.00 mm and length 4.00 mm, on the reviewed 5+4 array
 (2.77 mm column pitch and 2.84 mm row-centre separation).  The female holes share those exact centres.
 
-The D-shaped CAD walls are convex decompositions of actual z = 0.5 mm sections: 78 male guide pieces over
-z = 0–4.0 mm and 42 female socket pieces over z = 0–4.5 mm, exactly 120 D pieces.  Their projected union
-areas are 30.033554 mm² and 46.753580 mm² respectively.  Visual meshes have collision disabled.
+The D-shaped CAD walls are convex decompositions of actual z = 0.5 mm sections.  The selected male outer
+and inner loops contain 156 and 177 points, with bounding boxes 16.456263 x 8.300000 mm and
+15.099202 x 6.900000 mm.  The selected female outer and inner loops each contain 84 points, with bounding
+boxes 19.727337 x 9.500000 mm and 16.681988 x 8.600000 mm.  Arc-aware decomposition produces 78 male
+guide pieces over z = 0–4.0 mm and 42 female socket pieces over z = 0–4.5 mm, exactly 120 D pieces.  Their
+projected union areas are 30.033554 mm² and 46.753580 mm² respectively.  Visual meshes have collision
+disabled.
+
+The exact pin/hole centres in millimetres are the five-point upper row
+`(-5.540, 1.420), (-2.770, 1.420), (0, 1.420), (2.770, 1.420), (5.540, 1.420)` and the four-point lower
+row `(-4.155, -1.420), (-1.385, -1.420), (1.385, -1.420), (4.155, -1.420)`.  Every pin is a 1.00 mm
+diameter analytic cylinder spanning local z = 0–4.00 mm.  Every formal hole is active, uses the same centre,
+and has the dimensions below; collision bitmasks permit all nine pin↔hole pairs while filtering same-side
+and cross-feature contacts.
 
 The analytic hole is the revolution of the counter-clockwise stepped material polygon in `(r,z)`:
 
@@ -62,7 +73,7 @@ is 0.075 mm.
 
 The fallback contains 9 holes × 2 axial layers × 32 sectors = 576 closed convex meshes.  Its circumscribed
 main-hole boundary has 0.002782179 mm maximum radial error, about 3.71% of nominal radial clearance.  It is
-not labelled or used as the formal model.
+explicitly labelled `polygon32` fallback and is not used as the formal model.
 
 | Inventory | Formal SDF | polygon32 fallback |
 | --- | ---: | ---: |
@@ -128,20 +139,20 @@ are uncalibrated diagnostics, not correctness gates.
 | Case | Mode | Termination | Depth mm | Max contacts | Max penetration µm | Primary signed component | Steps | Runtime s |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | separated | SDF | SUCCESS | 0.000 | 0 | 0.000 | — | 1 | 0.0002 |
-| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5285 |
-| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8351 |
-| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.1505 |
-| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.2224 |
-| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.8922 |
-| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.6888 |
-| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.7995 |
-| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.7632 |
-| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.8275 |
-| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0291 |
-| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0436 |
-| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0564 |
-| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1125 |
-| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.7334 |
+| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5210 |
+| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8448 |
+| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.1425 |
+| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.2076 |
+| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.8749 |
+| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.6570 |
+| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.7584 |
+| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.7453 |
+| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.8227 |
+| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0280 |
+| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0417 |
+| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0539 |
+| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1099 |
+| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.6618 |
 | combined A | polygon32 | EXCESS_PENETRATION | 0.110 | 15 | 38.244 | Tx -6.878e-6 N·m | 12 | 0.0034 |
 
 Separated has zero contacts and aligned reaches the full 4.0 mm with finite state.  Both X and Y offset
@@ -152,24 +163,25 @@ sectors.  The early-terminating combined fallback runtime is not a full-depth pe
 
 ## Reproduction and observed limits
 
-Commands executed from the project root with `D:\KEYANRUJIAN\python.exe`:
+Commands executed from the project root with `D:\KEYANRUJIAN\python.exe` in the normal Windows environment:
 
 ```powershell
-& 'D:\KEYANRUJIAN\python.exe' -m pytest tests\contact -v -p no:cacheprovider
-# 24 passed in 16.51s
-
 & 'D:\KEYANRUJIAN\python.exe' -m tools.validation.run_contact_cases --all --output reports/contact_validation_results.json
-# 16 results; wall time 11.9s; schema 2; output SHA-256 035bd51ee4f8c70011f892eeebdd543dab9a3e4c5b24b799649272d72a3b8560
+# 16 results; schema 2; output SHA-256 4fb7ef6fb3fa6ec540df893b5289d1a56a94d9026c8344ad1f4d25dcd88cfcac
 
-& 'D:\KEYANRUJIAN\python.exe' -m pytest tests\mesh tests\sdf tests\model tests\contact -v -W error -p no:cacheprovider -p tmp.task6_use_built_plugin
-# 121 passed in 23.16s
+& 'D:\KEYANRUJIAN\python.exe' -m pytest -q -W error -p no:cacheprovider --basetemp 'tmp\pytest-task7-final'
+# 127 passed: the previous 121 tests plus 6 reporting/manifest tests; zero skips
+
+& 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest
+& 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest --verify
 ```
 
-The first unadapted full-suite attempt produced 88 passes and 23 SDF-plugin-test failures, all at the same
-known restricted-runner MSBuild `MSB4184` Windows SDK discovery boundary.  For the reported complete run, a
-temporary pytest plugin verified the existing Release DLL's SHA-256 and bound the Task4 tests to that DLL;
-no test was skipped and all registration, MJCF lifecycle, C++ parity, invalid-input, model, and contact tests
-still executed.  The temporary injection file was deleted after the run.
+The restricted Codex runner produced 98 passes and 23 SDF-plugin-test failures when MSBuild was denied access
+to user-local Windows SDK metadata (`MSB4184`).  The same source and test command in a normal Windows process
+built the Release DLL and ran the complete 127-test suite with zero skips and `-W error`.  The command above
+uses a project-local pytest temporary directory only to avoid unrelated ACLs left by isolated processes; it
+does not inject, replace, or skip tests.  Ordinary users should run the direct README commands in a normal
+Visual Studio/Windows SDK environment and should not copy any temporary pytest injector.
 
 The runner result cache was removed.  Two independent fresh processes each ran the complete 16-result matrix;
 all termination and physical fields matched exactly after removing `runtime_s`.  Wall-clock values are
@@ -187,3 +199,14 @@ The formal SDF remains the primary representation.  polygon32 contact multiplici
 not interchangeable with SDF values.  Rigid geometry plus uncalibrated MuJoCo contact parameters cannot
 represent socket spring contacts, material nonlinearity, friction calibration, wear, or real hardware safety
 limits.  In particular, **real insertion force is uncalibrated**.
+
+## Final reviewed-file manifest
+
+`reports/final_file_manifest.txt` is generated by `tools.reporting.generate_manifest`, not by shell
+redirection.  It covers every reviewed regular file under `assets/`, `models/`, `plugins/`, `tools/`,
+`tests/`, and `reports/`, plus `README.md`, `pyproject.toml`, and `.gitignore`.  Entries use lowercase
+SHA-256 and sorted POSIX project-relative paths.  Build outputs and ignored cache/temporary/SDD-ledger files
+are outside that reviewed set; the tested DLL hash is recorded above.  The manifest necessarily excludes
+`reports/final_file_manifest.txt` itself, because including its own digest would create an unsatisfiable
+self-reference.  `--verify` recomputes every other entry and fails if a reviewed file is missing, added, or
+changed.
