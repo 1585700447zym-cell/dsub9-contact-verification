@@ -124,6 +124,12 @@ The default sweep uses MuJoCo Newton solver with 100 iterations, timestep 0.0002
 Because pose is assigned directly before `mj_forward`, the sensitivity comparison changes both the solver
 timestep and spatial sampling; it is not a comparison of free-body dynamics integration.
 
+Collision geoms explicitly use the frozen `uncalibrated_diagnostic_v1` baseline: friction
+`(1, 0.005, 0.0001)`, `solref=(0.02, 1)`, `solimp=(0.9, 0.95, 0.001, 0.5, 2)`, and zero margin.
+The runner also defines `uncalibrated_low_response_v1` and `uncalibrated_high_response_v1` profiles that
+jointly perturb sliding/torsional/rolling friction, direct-format contact time constant (stiffness response),
+damping ratio, and impedance.  They are numerical brackets, not measured material properties.
+
 The only termination values are `SUCCESS`, `EXCESS_PENETRATION`, and `NUMERICAL_ERROR`.
 Maximum penetration is `max(0, -contact.dist)` over actual contacts.  The 30 µm limit is 40% of the 75 µm
 nominal radial clearance and terminates before gross overlap.  Any non-finite pose, constraint force, contact
@@ -139,21 +145,21 @@ are uncalibrated diagnostics, not correctness gates.
 | Case | Mode | Termination | Depth mm | Max contacts | Max penetration µm | Primary signed component | Steps | Runtime s |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | separated | SDF | SUCCESS | 0.000 | 0 | 0.000 | — | 1 | 0.0002 |
-| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5210 |
-| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8448 |
-| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.1425 |
-| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.2076 |
-| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.8749 |
-| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.6570 |
-| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.7584 |
-| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.7453 |
-| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.8227 |
-| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0280 |
-| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0417 |
-| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0539 |
-| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1099 |
-| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.6618 |
-| combined A | polygon32 | EXCESS_PENETRATION | 0.110 | 15 | 38.244 | Tx -6.878e-6 N·m | 12 | 0.0034 |
+| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5156 |
+| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8118 |
+| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.0930 |
+| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.2313 |
+| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.9356 |
+| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.7011 |
+| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.8230 |
+| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.8044 |
+| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.8363 |
+| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0293 |
+| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0447 |
+| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0564 |
+| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1115 |
+| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.8287 |
+| combined A | polygon32 | EXCESS_PENETRATION | 0.110 | 15 | 38.244 | Tx -6.878e-6 N·m | 12 | 0.0033 |
 
 Separated has zero contacts and aligned reaches the full 4.0 mm with finite state.  Both X and Y offset
 pairs oppose the commanded offset.  Both tilt pairs have opposite primary torque signs.  Coarse/fine
@@ -161,16 +167,37 @@ combined A share termination and Tx sign.  SDF/fallback +X share negative Fx; co
 Different contact counts, penetration and runtime are expected from analytic sampling versus 576 polygon
 sectors.  The early-terminating combined fallback runtime is not a full-depth performance comparison.
 
+## Contact-parameter sensitivity
+
+The baseline plus low/high numerical brackets were run on the +100 µm X-offset and combined-A cases.
+All values below are diagnostics of this rigid prescribed-pose model.  They must not be used as real insertion
+loads or safety limits.
+
+| Case | Profile | Termination | Peak force N | Peak torque N·m | Max penetration µm | Direction gate |
+| --- | --- | --- | ---: | ---: | ---: | --- |
+| X +100 µm | baseline | SUCCESS | 1.8784e-3 | 5.8826e-6 | 12.011 | Fx < 0 |
+| X +100 µm | low response | SUCCESS | 1.3813e-3 | 5.0499e-6 | 12.011 | Fx < 0 |
+| X +100 µm | high response | SUCCESS | 3.1124e-3 | 9.6003e-6 | 12.011 | Fx < 0 |
+| combined A | baseline | EXCESS_PENETRATION | 3.8743e-3 | 2.4928e-5 | 31.894 | Tx < 0 |
+| combined A | low response | EXCESS_PENETRATION | 3.7624e-3 | 2.3391e-5 | 31.894 | Tx < 0 |
+| combined A | high response | EXCESS_PENETRATION | 3.5475e-3 | 2.2549e-5 | 31.894 | Tx < 0 |
+
+Thus the reviewed qualitative conclusions are stable across both brackets: the offset force opposes +X,
+and combined A retains both its penetration-limit termination and negative Tx.  Identical penetrations within
+each case are expected because geometry and prescribed poses determine contact distance; forces vary with the
+contact parameters.  The runner caches immutable compiled models by `(collision mode, timestep, profile)` and
+creates a fresh `MjData` for every case, preventing profile cross-contamination.
+
 ## Reproduction and observed limits
 
 Commands executed from the project root with `D:\KEYANRUJIAN\python.exe` in the normal Windows environment:
 
 ```powershell
-& 'D:\KEYANRUJIAN\python.exe' -m tools.validation.run_contact_cases --all --output reports/contact_validation_results.json
-# 16 results; schema 2; tracked LF SHA-256 9108a3cf67322b3225b7ba07d2045c3e3cc76a53bfe49d92ac435829f8f823fe
+& 'D:\KEYANRUJIAN\python.exe' -m tools.validation.run_contact_cases --all --contact-profile baseline --output reports/contact_validation_results.json
+# 20 results; schema 3; tracked LF SHA-256 ac767ea63a7e8a6866a974728a1256e688832003076170e270cd181e5c9d65ff
 
 & 'D:\KEYANRUJIAN\python.exe' -m pytest -q -W error -p no:cacheprovider --basetemp 'tmp\pytest-task7-final'
-# 128 passed: the previous 121 tests plus 7 reporting/manifest tests; zero skips
+# Final whole-suite count and manifest are regenerated after the remaining cross-task fixes.
 
 & 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest
 & 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest --verify
@@ -183,7 +210,7 @@ uses a project-local pytest temporary directory only to avoid unrelated ACLs lef
 does not inject, replace, or skip tests.  Ordinary users should run the direct README commands in a normal
 Visual Studio/Windows SDK environment and should not copy any temporary pytest injector.
 
-The runner result cache was removed.  Two independent fresh processes each ran the complete 16-result matrix;
+The runner result cache was removed.  Two independent fresh processes each ran the prior 16-result matrix;
 all termination and physical fields matched exactly after removing `runtime_s`.  Wall-clock values are
 deliberately excluded from that comparison because natural timing differences are not a reliable freshness
 assertion.  Immutable compiled model resources remain cached, but every `run_case` creates new `MjData`,

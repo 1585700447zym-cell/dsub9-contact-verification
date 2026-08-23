@@ -109,6 +109,68 @@
       "y_offset_m": 4e-05
     }
   ],
+  "contact_parameter_profiles": {
+    "baseline": {
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "margin_m": 0.0,
+      "name": "uncalibrated_diagnostic_v1",
+      "solimp": [
+        0.9,
+        0.95,
+        0.001,
+        0.5,
+        2.0
+      ],
+      "solref": [
+        0.02,
+        1.0
+      ]
+    },
+    "high_response": {
+      "friction": [
+        1.5,
+        0.0075,
+        0.00015
+      ],
+      "margin_m": 0.0,
+      "name": "uncalibrated_high_response_v1",
+      "solimp": [
+        0.93,
+        0.97,
+        0.00075,
+        0.5,
+        2.0
+      ],
+      "solref": [
+        0.0125,
+        1.3
+      ]
+    },
+    "low_response": {
+      "friction": [
+        0.5,
+        0.0025,
+        5e-05
+      ],
+      "margin_m": 0.0,
+      "name": "uncalibrated_low_response_v1",
+      "solimp": [
+        0.85,
+        0.92,
+        0.00125,
+        0.5,
+        2.0
+      ],
+      "solref": [
+        0.03,
+        0.7
+      ]
+    }
+  },
   "coordinate_convention": {
     "depth_equation": "male_origin_world_z_m = start_origin_z_m + final_depth_m",
     "insertion_axis": "+world/task Z",
@@ -126,6 +188,7 @@
     {
       "case": "separated",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.0,
       "max_contacts": 0,
       "max_penetration_m": 0.0,
@@ -139,7 +202,7 @@
         "tz": 0.0
       },
       "peak_torque_nm": 0.0,
-      "runtime_s": 0.00023920000057842117,
+      "runtime_s": 0.00016739999773562886,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -151,6 +214,7 @@
     {
       "case": "aligned",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 0,
       "max_penetration_m": 0.0,
@@ -164,7 +228,7 @@
         "tz": 0.0
       },
       "peak_torque_nm": 0.0,
-      "runtime_s": 0.5210263000008126,
+      "runtime_s": 0.5155933999994886,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -176,6 +240,7 @@
     {
       "case": "x_offset_pos_100um",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 54,
       "max_penetration_m": 1.2010735880252908e-05,
@@ -189,7 +254,7 @@
         "tz": 5.538892507883808e-07
       },
       "peak_torque_nm": 5.882595482459438e-06,
-      "runtime_s": 0.8448208999998315,
+      "runtime_s": 0.8117618999967817,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -201,6 +266,7 @@
     {
       "case": "x_offset_neg_100um",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 81,
       "max_penetration_m": 1.2038566999562016e-05,
@@ -214,7 +280,7 @@
         "tz": 3.9581850473916757e-07
       },
       "peak_torque_nm": 6.327477069717896e-06,
-      "runtime_s": 1.1425077000003512,
+      "runtime_s": 1.0929586999991443,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -226,6 +292,7 @@
     {
       "case": "y_offset_pos_100um",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 72,
       "max_penetration_m": 1.24246717693574e-05,
@@ -239,7 +306,7 @@
         "tz": 1.1878956254082198e-07
       },
       "peak_torque_nm": 5.683311925838111e-06,
-      "runtime_s": 1.2076120000001538,
+      "runtime_s": 1.2313073000004806,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -251,6 +318,7 @@
     {
       "case": "y_offset_neg_100um",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 63,
       "max_penetration_m": 1.2351971531669476e-05,
@@ -264,7 +332,7 @@
         "tz": -7.541967677819316e-08
       },
       "peak_torque_nm": 6.687729607162671e-06,
-      "runtime_s": 0.8748751000002812,
+      "runtime_s": 0.9355667999989237,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -276,6 +344,7 @@
     {
       "case": "roll_pos_1.5deg",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 63,
       "max_penetration_m": 1.3528018485063479e-05,
@@ -289,7 +358,7 @@
         "tz": -5.033768113188781e-06
       },
       "peak_torque_nm": 8.261603574042057e-06,
-      "runtime_s": 0.6570479000001797,
+      "runtime_s": 0.7011070000007749,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -301,6 +370,7 @@
     {
       "case": "roll_neg_1.5deg",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 63,
       "max_penetration_m": 1.3667818320742687e-05,
@@ -314,7 +384,7 @@
         "tz": -2.5636221930941382e-06
       },
       "peak_torque_nm": 7.983130311066035e-06,
-      "runtime_s": 0.7583806000002369,
+      "runtime_s": 0.8229809999975259,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -326,6 +396,7 @@
     {
       "case": "pitch_pos_1.5deg",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 30,
       "max_penetration_m": 1.4230526014936311e-05,
@@ -339,7 +410,7 @@
         "tz": 4.5323624106624465e-06
       },
       "peak_torque_nm": 1.1586084310574742e-05,
-      "runtime_s": 0.7453258000005007,
+      "runtime_s": 0.8044190000000526,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -351,6 +422,7 @@
     {
       "case": "pitch_neg_1.5deg",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 51,
       "max_penetration_m": 1.4007224259490227e-05,
@@ -364,7 +436,7 @@
         "tz": 5.610116353097454e-06
       },
       "peak_torque_nm": 9.069554870641103e-06,
-      "runtime_s": 0.8226773999995203,
+      "runtime_s": 0.8362858000000415,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -376,6 +448,7 @@
     {
       "case": "combined_a",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.00018,
       "max_contacts": 7,
       "max_penetration_m": 3.189417233790987e-05,
@@ -389,7 +462,7 @@
         "tz": 1.7620413291885535e-05
       },
       "peak_torque_nm": 2.4927983415880573e-05,
-      "runtime_s": 0.02801259999978356,
+      "runtime_s": 0.029272100000525825,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -401,6 +474,7 @@
     {
       "case": "combined_b",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.00026000000000000003,
       "max_contacts": 15,
       "max_penetration_m": 3.080183623729903e-05,
@@ -414,7 +488,7 @@
         "tz": 3.943924557845211e-05
       },
       "peak_torque_nm": 4.874225013953198e-05,
-      "runtime_s": 0.041744399999515736,
+      "runtime_s": 0.04468089999863878,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -426,6 +500,7 @@
     {
       "case": "combined_a",
       "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.00018,
       "max_contacts": 7,
       "max_penetration_m": 3.189417233790987e-05,
@@ -439,7 +514,7 @@
         "tz": 1.7620413291885535e-05
       },
       "peak_torque_nm": 2.6549400077073988e-05,
-      "runtime_s": 0.053853800000069896,
+      "runtime_s": 0.05637209999986226,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 5e-06,
       "speed_m_s": 0.05,
@@ -451,6 +526,7 @@
     {
       "case": "aligned",
       "collision_mode": "polygon32",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 0,
       "max_penetration_m": 0.0,
@@ -464,7 +540,7 @@
         "tz": 0.0
       },
       "peak_torque_nm": 0.0,
-      "runtime_s": 0.10992959999930463,
+      "runtime_s": 0.11151439999957802,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -476,6 +552,7 @@
     {
       "case": "x_offset_pos_100um",
       "collision_mode": "polygon32",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.004,
       "max_contacts": 267,
       "max_penetration_m": 2.497588383883853e-05,
@@ -489,7 +566,7 @@
         "tz": -7.2475119382087694e-06
       },
       "peak_torque_nm": 2.5814593915876952e-05,
-      "runtime_s": 2.6618442999988474,
+      "runtime_s": 2.828744700000243,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -501,6 +578,7 @@
     {
       "case": "combined_a",
       "collision_mode": "polygon32",
+      "contact_profile": "uncalibrated_diagnostic_v1",
       "final_depth_m": 0.00011,
       "max_contacts": 15,
       "max_penetration_m": 3.8244388946472924e-05,
@@ -514,7 +592,7 @@
         "tz": 8.879148989507676e-06
       },
       "peak_torque_nm": 2.0472059144315317e-05,
-      "runtime_s": 0.0034250999997311737,
+      "runtime_s": 0.0033108999996329658,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -522,9 +600,125 @@
       "termination": "EXCESS_PENETRATION",
       "timestep_s": 0.0002,
       "total_contact_samples": 47
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_low_response_v1",
+      "final_depth_m": 0.004,
+      "max_contacts": 54,
+      "max_penetration_m": 1.2010735880252908e-05,
+      "peak_force_n": 0.0013813090247518668,
+      "peak_signed_wrench": {
+        "fx": -0.0013759747938024375,
+        "fy": -0.0003557515228618532,
+        "fz": -0.0006297222980656159,
+        "tx": -1.1956367359727352e-06,
+        "ty": -5.0400005891467564e-06,
+        "tz": -3.6217761005517095e-07
+      },
+      "peak_torque_nm": 5.049889262817209e-06,
+      "runtime_s": 0.8829579000012018,
+      "solver": "NEWTON(iterations=100)",
+      "spatial_step_m": 1e-05,
+      "speed_m_s": 0.05,
+      "steps": 401,
+      "termination": "SUCCESS",
+      "timestep_s": 0.0002,
+      "total_contact_samples": 7866
+    },
+    {
+      "case": "combined_a",
+      "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_low_response_v1",
+      "final_depth_m": 0.00018,
+      "max_contacts": 7,
+      "max_penetration_m": 3.189417233790987e-05,
+      "peak_force_n": 0.0037624383110759258,
+      "peak_signed_wrench": {
+        "fx": 0.0011150228671983858,
+        "fy": 0.0035920000807062214,
+        "fz": -0.001762678527058199,
+        "tx": -1.4641775013197032e-05,
+        "ty": 1.400911937878804e-05,
+        "tz": 1.779454395486908e-05
+      },
+      "peak_torque_nm": 2.3391372042715564e-05,
+      "runtime_s": 0.03020979999928386,
+      "solver": "NEWTON(iterations=100)",
+      "spatial_step_m": 1e-05,
+      "speed_m_s": 0.05,
+      "steps": 19,
+      "termination": "EXCESS_PENETRATION",
+      "timestep_s": 0.0002,
+      "total_contact_samples": 26
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_high_response_v1",
+      "final_depth_m": 0.004,
+      "max_contacts": 54,
+      "max_penetration_m": 1.2010735880252908e-05,
+      "peak_force_n": 0.0031124178219578457,
+      "peak_signed_wrench": {
+        "fx": -0.002950219246129323,
+        "fy": -0.0007071169494413568,
+        "fz": -0.001122786496608871,
+        "tx": -3.5995532013579834e-06,
+        "ty": -9.59792745171615e-06,
+        "tz": 9.75915981173692e-07
+      },
+      "peak_torque_nm": 9.600317427350048e-06,
+      "runtime_s": 0.8972620999993524,
+      "solver": "NEWTON(iterations=100)",
+      "spatial_step_m": 1e-05,
+      "speed_m_s": 0.05,
+      "steps": 401,
+      "termination": "SUCCESS",
+      "timestep_s": 0.0002,
+      "total_contact_samples": 7866
+    },
+    {
+      "case": "combined_a",
+      "collision_mode": "sdf",
+      "contact_profile": "uncalibrated_high_response_v1",
+      "final_depth_m": 0.00018,
+      "max_contacts": 7,
+      "max_penetration_m": 3.189417233790987e-05,
+      "peak_force_n": 0.003547465075321243,
+      "peak_signed_wrench": {
+        "fx": 0.0012467158307567193,
+        "fy": 0.003262996848048002,
+        "fz": -0.0022151371446311584,
+        "tx": -1.3450795231072241e-05,
+        "ty": 1.6135479274670722e-05,
+        "tz": 1.641329246993064e-05
+      },
+      "peak_torque_nm": 2.2549141951667736e-05,
+      "runtime_s": 0.03088230000139447,
+      "solver": "NEWTON(iterations=100)",
+      "spatial_step_m": 1e-05,
+      "speed_m_s": 0.05,
+      "steps": 19,
+      "termination": "EXCESS_PENETRATION",
+      "timestep_s": 0.0002,
+      "total_contact_samples": 26
     }
   ],
-  "schema_version": 2,
+  "schema_version": 3,
+  "sensitivity": {
+    "cases": [
+      "x_offset_pos_100um",
+      "combined_a"
+    ],
+    "interpretation": "Peak force, peak torque and maximum penetration are numerical-model diagnostics for qualitative sensitivity, not material calibration.",
+    "profiles": [
+      "baseline",
+      "low_response",
+      "high_response"
+    ]
+  },
   "terminations": [
     "SUCCESS",
     "EXCESS_PENETRATION",

@@ -205,6 +205,7 @@ def test_result_schema_is_serializable_and_every_number_is_finite():
     assert set(payload) == {
         "case",
         "collision_mode",
+        "contact_profile",
         "termination",
         "final_depth_m",
         "peak_force_n",

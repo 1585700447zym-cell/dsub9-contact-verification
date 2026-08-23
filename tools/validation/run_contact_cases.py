@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import argparse
 from contextlib import contextmanager
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 import functools
 import hashlib
 import json
@@ -22,6 +22,8 @@ from typing import Iterable, Literal
 
 import mujoco
 import numpy as np
+
+from tools.model.generate_mjcf import ContactParameters, baseline_contact_parameters
 
 
 CollisionMode = Literal["sdf", "polygon32"]
@@ -38,6 +40,40 @@ DEFAULT_SPEED_M_S = 0.05
 MAX_PENETRATION_M = 0.000030
 TERMINATIONS = frozenset({"SUCCESS", "EXCESS_PENETRATION", "NUMERICAL_ERROR"})
 _clock = time.perf_counter
+
+
+_BASELINE_CONTACT_PARAMETERS = baseline_contact_parameters()
+_CONTACT_PARAMETER_PROFILES = {
+    "baseline": _BASELINE_CONTACT_PARAMETERS,
+    "low_response": replace(
+        _BASELINE_CONTACT_PARAMETERS,
+        name="uncalibrated_low_response_v1",
+        friction=(0.5, 0.0025, 0.00005),
+        solref=(0.03, 0.7),
+        solimp=(0.85, 0.92, 0.00125, 0.5, 2.0),
+    ),
+    "high_response": replace(
+        _BASELINE_CONTACT_PARAMETERS,
+        name="uncalibrated_high_response_v1",
+        friction=(1.5, 0.0075, 0.00015),
+        solref=(0.0125, 1.3),
+        solimp=(0.93, 0.97, 0.00075, 0.5, 2.0),
+    ),
+}
+
+
+def contact_parameter_profiles() -> dict[str, ContactParameters]:
+    """Return named, versioned numerical profiles; none are material calibration."""
+
+    return dict(_CONTACT_PARAMETER_PROFILES)
+
+
+def _contact_parameters(profile: str) -> ContactParameters:
+    try:
+        return _CONTACT_PARAMETER_PROFILES[profile]
+    except KeyError as error:
+        choices = ", ".join(_CONTACT_PARAMETER_PROFILES)
+        raise ValueError(f"unknown contact profile {profile!r}; choose {choices}") from error
 
 
 @dataclass(frozen=True)
@@ -133,6 +169,7 @@ class ContactCase:
 class ContactResult:
     case: str
     collision_mode: str
+    contact_profile: str
     termination: Termination
     final_depth_m: float
     peak_force_n: float
@@ -197,8 +234,13 @@ def _register_sdf_plugin() -> None:
         mujoco.mj_loadPluginLibrary(PLUGIN_RELATIVE_PATH.as_posix())
 
 
-@functools.lru_cache(maxsize=4)
-def _load_model(collision_mode: CollisionMode, timestep_s: float) -> mujoco.MjModel:
+@functools.lru_cache(maxsize=12)
+def _load_model(
+    collision_mode: CollisionMode,
+    timestep_s: float,
+    profile: str = "baseline",
+) -> mujoco.MjModel:
+    parameters = _contact_parameters(profile)
     if collision_mode == "sdf":
         _register_sdf_plugin()
         model_path = FORMAL_MODEL
@@ -211,6 +253,14 @@ def _load_model(collision_mode: CollisionMode, timestep_s: float) -> mujoco.MjMo
     with _project_root_cwd():
         model = mujoco.MjModel.from_xml_path(model_path.relative_to(ROOT).as_posix())
     model.opt.timestep = timestep_s
+    collision_geoms = np.flatnonzero(
+        (np.asarray(model.geom_contype) != 0)
+        | (np.asarray(model.geom_conaffinity) != 0)
+    )
+    model.geom_friction[collision_geoms] = parameters.friction
+    model.geom_solref[collision_geoms] = parameters.solref
+    model.geom_solimp[collision_geoms] = parameters.solimp
+    model.geom_margin[collision_geoms] = parameters.margin_m
     return model
 
 
@@ -291,12 +341,15 @@ def run_case(
     case: ContactCase,
     timestep_s: float,
     collision_mode: CollisionMode,
+    *,
+    profile: str = "baseline",
 ) -> ContactResult:
     """Prescribe a deterministic +Z pose sweep and collect male contact wrench."""
 
     if not math.isfinite(timestep_s) or timestep_s <= 0.0:
         raise ValueError("timestep_s must be finite and positive")
-    model = _load_model(collision_mode, float(timestep_s))
+    parameters = _contact_parameters(profile)
+    model = _load_model(collision_mode, float(timestep_s), profile)
     data = mujoco.MjData(model)
     male_body = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "male")
     if male_body < 0:
@@ -373,6 +426,7 @@ def run_case(
     return ContactResult(
         case=case.name,
         collision_mode=collision_mode,
+        contact_profile=parameters.name,
         termination=termination,
         final_depth_m=float(final_depth),
         peak_force_n=float(peak_force),
@@ -399,6 +453,10 @@ def result_document(results: Iterable[ContactResult]) -> dict:
             "insertion_axis": "+world/task Z",
             "wrench": "on male body, world/task-aligned axes, moment about male task origin",
         },
+        "contact_parameter_profiles": {
+            key: asdict(parameters)
+            for key, parameters in contact_parameter_profiles().items()
+        },
         "limits": {
             "force_calibration": "diagnostic numerical model only; real insertion force uncalibrated",
             "max_penetration_m": MAX_PENETRATION_M,
@@ -408,7 +466,15 @@ def result_document(results: Iterable[ContactResult]) -> dict:
         },
         "mujoco_version": mujoco.mj_versionString(),
         "results": [asdict(result) for result in result_list],
-        "schema_version": 2,
+        "schema_version": 3,
+        "sensitivity": {
+            "cases": ["x_offset_pos_100um", "combined_a"],
+            "profiles": list(_CONTACT_PARAMETER_PROFILES),
+            "interpretation": (
+                "Peak force, peak torque and maximum penetration are numerical-model "
+                "diagnostics for qualitative sensitivity, not material calibration."
+            ),
+        },
         "terminations": ["SUCCESS", "EXCESS_PENETRATION", "NUMERICAL_ERROR"],
     }
 
@@ -421,22 +487,48 @@ def _write_document(path: Path, document: dict) -> None:
     )
 
 
-def _cli_results() -> list[ContactResult]:
-    results = [run_case(case, DEFAULT_TIMESTEP_S, "sdf") for case in all_cases()]
-    results.append(run_case(ContactCase.combined(), DEFAULT_TIMESTEP_S / 2.0, "sdf"))
+def _cli_results(primary_profile: str = "baseline") -> list[ContactResult]:
+    _contact_parameters(primary_profile)
+    results = [
+        run_case(case, DEFAULT_TIMESTEP_S, "sdf", profile=primary_profile)
+        for case in all_cases()
+    ]
+    results.append(
+        run_case(
+            ContactCase.combined(),
+            DEFAULT_TIMESTEP_S / 2.0,
+            "sdf",
+            profile=primary_profile,
+        )
+    )
     for case in (ContactCase.aligned(), ContactCase.x_offset(+0.00010), ContactCase.combined()):
-        results.append(run_case(case, DEFAULT_TIMESTEP_S, "polygon32"))
+        results.append(
+            run_case(case, DEFAULT_TIMESTEP_S, "polygon32", profile=primary_profile)
+        )
+    sensitivity_cases = (ContactCase.x_offset(+0.00010), ContactCase.combined())
+    for profile in _CONTACT_PARAMETER_PROFILES:
+        if profile != primary_profile:
+            results.extend(
+                run_case(case, DEFAULT_TIMESTEP_S, "sdf", profile=profile)
+                for case in sensitivity_cases
+            )
     return results
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--all", action="store_true", help="run the complete formal and comparison matrix")
+    parser.add_argument(
+        "--contact-profile",
+        choices=tuple(_CONTACT_PARAMETER_PROFILES),
+        default="baseline",
+        help="primary uncalibrated diagnostic profile (sensitivity still runs all profiles)",
+    )
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     if not args.all:
         parser.error("--all is required")
-    results = _cli_results()
+    results = _cli_results(args.contact_profile)
     target = args.output if args.output.is_absolute() else ROOT / args.output
     _write_document(target, result_document(results))
     digest = hashlib.sha256(target.read_bytes()).hexdigest()
