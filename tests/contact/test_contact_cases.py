@@ -158,6 +158,38 @@ def test_fixed_pose_male_world_wrench_matches_generalized_constraint_force(
     np.testing.assert_allclose(independent, expected, rtol=1e-10, atol=1e-12)
 
 
+@pytest.mark.parametrize("body_is_geom2, sign", [(True, +1.0), (False, -1.0)])
+def test_per_contact_transform_preserves_nonzero_local_torque_and_body_sign(
+    body_is_geom2, sign
+):
+    contact_frame = np.array(
+        (
+            (0.0, 1.0, 0.0),
+            (-1.0, 0.0, 0.0),
+            (0.0, 0.0, 1.0),
+        )
+    )
+    local_wrench = np.array((1.25, -2.5, 3.75, 0.4, -0.6, 0.8))
+    contact_position = np.array((0.30, -0.20, 0.50))
+    task_origin = np.array((-0.10, 0.10, 0.20))
+
+    actual = contact_runner._contact_wrench_on_body_world(
+        contact_frame,
+        local_wrench,
+        contact_position,
+        task_origin,
+        body_is_geom2=body_is_geom2,
+    )
+
+    force = sign * (contact_frame.T @ local_wrench[:3])
+    local_torque = sign * (contact_frame.T @ local_wrench[3:])
+    lever_moment = np.cross(contact_position - task_origin, force)
+    expected = np.concatenate((force, local_torque + lever_moment))
+    assert np.linalg.norm(local_torque) > 0.0
+    assert not np.allclose(expected[3:], lever_moment)
+    np.testing.assert_allclose(actual, expected, rtol=0.0, atol=1e-15)
+
+
 def test_sdf_and_polygon32_agree_on_primary_offset_direction():
     case = ContactCase.x_offset(+0.00010)
     sdf = run_case(case, 0.0002, "sdf")
@@ -229,8 +261,17 @@ def test_case_catalog_is_complete_unique_and_serializable():
     json.dumps([asdict(case) for case in cases], allow_nan=False)
 
 
-def test_repeated_runs_are_distinct_and_physically_reproducible():
-    case = ContactCase.x_offset(+0.00010)
+def test_repeated_runs_use_fresh_controlled_runtime_and_reproduce_physics(monkeypatch):
+    ticks = iter((10.0, 11.25, 20.0, 22.5))
+    clock_calls = []
+
+    def controlled_clock():
+        value = next(ticks)
+        clock_calls.append(value)
+        return value
+
+    monkeypatch.setattr(contact_runner, "_clock", controlled_clock)
+    case = ContactCase.separated()
     first_result = run_case(case, 0.0002, "sdf")
     second_result = run_case(case, 0.0002, "sdf")
     assert first_result is not second_result
@@ -238,8 +279,9 @@ def test_repeated_runs_are_distinct_and_physically_reproducible():
     second_payload = asdict(second_result)
     first_runtime = first_payload.pop("runtime_s")
     second_runtime = second_payload.pop("runtime_s")
-    assert first_runtime > 0.0
-    assert second_runtime > 0.0
+    assert clock_calls == [10.0, 11.25, 20.0, 22.5]
+    assert first_runtime == 1.25
+    assert second_runtime == 2.5
     assert first_payload == second_payload
 
     document = result_document([first_result])

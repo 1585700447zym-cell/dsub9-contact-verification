@@ -98,6 +98,11 @@ reported diagnostic torque.  The reviewed Task5 model uses the default three-dim
 torsional contact-force slots are zero in these static poses; the independently verified world torque includes
 the nonzero `(contact_position - male_task_origin) × force` term.
 
+A separate deterministic transform fixture supplies a nontrivial orthonormal contact frame, nonzero local
+force, nonzero local torque, and a nonzero lever arm.  It independently checks male-as-geom2 and male-as-geom1
+signs.  Removing the transformed local-torque term changes the expected world moment and fails this test,
+while the real Task5 fixed-pose tests continue to anchor the zero-local-torque, nonzero-`r × F` case.
+
 A controlled sphere-plane probe gave +259.3195 N along the contact normal on geom2 and exactly the same
 free-body `qfrc_constraint`; the real D-sub9 probe, where pins are geom1, matched `qfrc_constraint` only after
 using the corresponding negative sign.  This evidence, plus the symmetric offset and tilt cases below,
@@ -123,21 +128,21 @@ are uncalibrated diagnostics, not correctness gates.
 | Case | Mode | Termination | Depth mm | Max contacts | Max penetration µm | Primary signed component | Steps | Runtime s |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | separated | SDF | SUCCESS | 0.000 | 0 | 0.000 | — | 1 | 0.0002 |
-| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5237 |
-| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8365 |
-| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.1275 |
-| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.1757 |
-| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.8757 |
-| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.6726 |
-| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.7769 |
-| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.7477 |
-| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.8134 |
-| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0300 |
-| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0430 |
-| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0539 |
-| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1074 |
-| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.7263 |
-| combined A | polygon32 | EXCESS_PENETRATION | 0.110 | 15 | 38.244 | Tx -6.878e-6 N·m | 12 | 0.0033 |
+| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5285 |
+| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8351 |
+| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.1505 |
+| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.2224 |
+| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.8922 |
+| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.6888 |
+| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.7995 |
+| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.7632 |
+| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.8275 |
+| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0291 |
+| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0436 |
+| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0564 |
+| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1125 |
+| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.7334 |
+| combined A | polygon32 | EXCESS_PENETRATION | 0.110 | 15 | 38.244 | Tx -6.878e-6 N·m | 12 | 0.0034 |
 
 Separated has zero contacts and aligned reaches the full 4.0 mm with finite state.  Both X and Y offset
 pairs oppose the commanded offset.  Both tilt pairs have opposite primary torque signs.  Coarse/fine
@@ -151,13 +156,13 @@ Commands executed from the project root with `D:\KEYANRUJIAN\python.exe`:
 
 ```powershell
 & 'D:\KEYANRUJIAN\python.exe' -m pytest tests\contact -v -p no:cacheprovider
-# 22 passed in 18.16s
+# 24 passed in 16.51s
 
 & 'D:\KEYANRUJIAN\python.exe' -m tools.validation.run_contact_cases --all --output reports/contact_validation_results.json
-# 16 results; wall time 11.9s; schema 2; output SHA-256 f237596908133806c3e0d07561da10af9971ace363533d3e3b7f7c9932d6c841
+# 16 results; wall time 11.9s; schema 2; output SHA-256 035bd51ee4f8c70011f892eeebdd543dab9a3e4c5b24b799649272d72a3b8560
 
 & 'D:\KEYANRUJIAN\python.exe' -m pytest tests\mesh tests\sdf tests\model tests\contact -v -W error -p no:cacheprovider -p tmp.task6_use_built_plugin
-# 119 passed in 24.80s
+# 121 passed in 23.16s
 ```
 
 The first unadapted full-suite attempt produced 88 passes and 23 SDF-plugin-test failures, all at the same
@@ -167,9 +172,16 @@ no test was skipped and all registration, MJCF lifecycle, C++ parity, invalid-in
 still executed.  The temporary injection file was deleted after the run.
 
 The runner result cache was removed.  Two independent fresh processes each ran the complete 16-result matrix;
-all termination and physical fields matched exactly after removing `runtime_s`, and all 16 measured runtimes
-differed.  Immutable compiled model resources remain cached, but every `run_case` creates new `MjData`,
+all termination and physical fields matched exactly after removing `runtime_s`.  Wall-clock values are
+deliberately excluded from that comparison because natural timing differences are not a reliable freshness
+assertion.  Immutable compiled model resources remain cached, but every `run_case` creates new `MjData`,
 executes the complete sweep, and measures that execution.
+
+The runtime freshness regression uses a controlled internal clock with intervals `[10,11.25]` and
+`[20,22.5]`; two calls must return distinct objects with identical physical fields and runtimes 1.25 s and
+2.5 s after exactly four clock calls.  A temporary mutation restoring result caching makes this test fail on
+object identity and stale runtime, proving it detects the rejected implementation rather than relying on
+wall-clock jitter.
 
 The formal SDF remains the primary representation.  polygon32 contact multiplicity and force magnitude are
 not interchangeable with SDF values.  Rigid geometry plus uncalibrated MuJoCo contact parameters cannot

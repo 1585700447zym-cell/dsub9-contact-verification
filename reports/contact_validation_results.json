@@ -139,7 +139,7 @@
         "tz": 0.0
       },
       "peak_torque_nm": 0.0,
-      "runtime_s": 0.00022249999892665073,
+      "runtime_s": 0.00024709999888727907,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -164,7 +164,7 @@
         "tz": 0.0
       },
       "peak_torque_nm": 0.0,
-      "runtime_s": 0.5237433000002056,
+      "runtime_s": 0.5284584000000905,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -189,7 +189,7 @@
         "tz": 5.538892507883808e-07
       },
       "peak_torque_nm": 5.882595482459438e-06,
-      "runtime_s": 0.8365262000006624,
+      "runtime_s": 0.8351277000001573,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -214,7 +214,7 @@
         "tz": 3.9581850473916757e-07
       },
       "peak_torque_nm": 6.327477069717896e-06,
-      "runtime_s": 1.1275329000000056,
+      "runtime_s": 1.1504683000002842,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -239,7 +239,7 @@
         "tz": 1.1878956254082198e-07
       },
       "peak_torque_nm": 5.683311925838111e-06,
-      "runtime_s": 1.1756717000007484,
+      "runtime_s": 1.2224428999998054,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -264,7 +264,7 @@
         "tz": -7.541967677819316e-08
       },
       "peak_torque_nm": 6.687729607162671e-06,
-      "runtime_s": 0.8756819000009273,
+      "runtime_s": 0.8921841999999742,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -289,7 +289,7 @@
         "tz": -5.033768113188781e-06
       },
       "peak_torque_nm": 8.261603574042057e-06,
-      "runtime_s": 0.672576900000422,
+      "runtime_s": 0.6888459000001603,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -314,7 +314,7 @@
         "tz": -2.5636221930941382e-06
       },
       "peak_torque_nm": 7.983130311066035e-06,
-      "runtime_s": 0.7768747000009171,
+      "runtime_s": 0.7994708999995055,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -339,7 +339,7 @@
         "tz": 4.5323624106624465e-06
       },
       "peak_torque_nm": 1.1586084310574742e-05,
-      "runtime_s": 0.7477290999995603,
+      "runtime_s": 0.7631693000002997,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -364,7 +364,7 @@
         "tz": 5.610116353097454e-06
       },
       "peak_torque_nm": 9.069554870641103e-06,
-      "runtime_s": 0.8133527999998478,
+      "runtime_s": 0.8275422999995499,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -389,7 +389,7 @@
         "tz": 1.7620413291885535e-05
       },
       "peak_torque_nm": 2.4927983415880573e-05,
-      "runtime_s": 0.030041099998925347,
+      "runtime_s": 0.02911800000038056,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -414,7 +414,7 @@
         "tz": 3.943924557845211e-05
       },
       "peak_torque_nm": 4.874225013953198e-05,
-      "runtime_s": 0.04299379999974917,
+      "runtime_s": 0.04355740000028163,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -439,7 +439,7 @@
         "tz": 1.7620413291885535e-05
       },
       "peak_torque_nm": 2.6549400077073988e-05,
-      "runtime_s": 0.053863900000578724,
+      "runtime_s": 0.05643369999961578,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 5e-06,
       "speed_m_s": 0.05,
@@ -464,7 +464,7 @@
         "tz": 0.0
       },
       "peak_torque_nm": 0.0,
-      "runtime_s": 0.10740379999879224,
+      "runtime_s": 0.11249520000092161,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -489,7 +489,7 @@
         "tz": -7.2475119382087694e-06
       },
       "peak_torque_nm": 2.5814593915876952e-05,
-      "runtime_s": 2.7263272000000143,
+      "runtime_s": 2.7333907000011095,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,
@@ -514,7 +514,7 @@
         "tz": 8.879148989507676e-06
       },
       "peak_torque_nm": 2.0472059144315317e-05,
-      "runtime_s": 0.0033339000001433305,
+      "runtime_s": 0.0034046000000671484,
       "solver": "NEWTON(iterations=100)",
       "spatial_step_m": 1e-05,
       "speed_m_s": 0.05,

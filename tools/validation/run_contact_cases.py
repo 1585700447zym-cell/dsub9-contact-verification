@@ -37,6 +37,7 @@ DEFAULT_TIMESTEP_S = 0.0002
 DEFAULT_SPEED_M_S = 0.05
 MAX_PENETRATION_M = 0.000030
 TERMINATIONS = frozenset({"SUCCESS", "EXCESS_PENETRATION", "NUMERICAL_ERROR"})
+_clock = time.perf_counter
 
 
 @dataclass(frozen=True)
@@ -221,6 +222,30 @@ def _quaternion(case: ContactCase) -> np.ndarray:
     return np.array((cp * cr, cp * sr, sp * cr, -sp * sr), dtype=float)
 
 
+def _contact_wrench_on_body_world(
+    contact_frame: np.ndarray,
+    local_wrench: np.ndarray,
+    contact_position_world: np.ndarray,
+    task_origin_world: np.ndarray,
+    *,
+    body_is_geom2: bool,
+) -> np.ndarray:
+    """Transform one geom2 contact wrench, including its moment arm, onto a body."""
+
+    contact_to_world = np.asarray(contact_frame, dtype=float).reshape(3, 3).T
+    local = np.asarray(local_wrench, dtype=float)
+    sign = 1.0 if body_is_geom2 else -1.0
+    force_world = sign * (contact_to_world @ local[:3])
+    local_torque_world = sign * (contact_to_world @ local[3:])
+    lever_world = (
+        np.asarray(contact_position_world, dtype=float)
+        - np.asarray(task_origin_world, dtype=float)
+    )
+    return np.concatenate(
+        (force_world, local_torque_world + np.cross(lever_world, force_world))
+    )
+
+
 def _male_world_wrench(
     model: mujoco.MjModel, data: mujoco.MjData, male_body: int
 ) -> tuple[np.ndarray, float]:
@@ -233,22 +258,21 @@ def _male_world_wrench(
         contact = data.contact[index]
         local_wrench = np.zeros(6, dtype=float)
         mujoco.mj_contactForce(model, data, index, local_wrench)
-        rotation_contact_from_world = np.asarray(contact.frame, dtype=float).reshape(3, 3)
-        force_on_geom2_world = rotation_contact_from_world.T @ local_wrench[:3]
-        torque_on_geom2_world = rotation_contact_from_world.T @ local_wrench[3:]
         body1 = int(model.geom_bodyid[contact.geom1])
         body2 = int(model.geom_bodyid[contact.geom2])
         if body2 == male_body:
-            sign = 1.0
+            body_is_geom2 = True
         elif body1 == male_body:
-            sign = -1.0
+            body_is_geom2 = False
         else:
             continue
-        force_world = sign * force_on_geom2_world
-        torque_world = sign * torque_on_geom2_world
-        lever_world = np.asarray(contact.pos, dtype=float) - task_origin_world
-        total[:3] += force_world
-        total[3:] += torque_world + np.cross(lever_world, force_world)
+        total += _contact_wrench_on_body_world(
+            contact.frame,
+            local_wrench,
+            contact.pos,
+            task_origin_world,
+            body_is_geom2=body_is_geom2,
+        )
         max_penetration = max(max_penetration, max(0.0, -float(contact.dist)))
     return total, max_penetration
 
@@ -291,7 +315,7 @@ def run_case(
     termination: Termination = "NUMERICAL_ERROR"
     executed_steps = 0
     quaternion = _quaternion(case)
-    started = time.perf_counter()
+    started = _clock()
 
     for step_index in range(max_steps):
         depth = min(step_index * spatial_step_m, case.target_depth_m)
@@ -332,7 +356,7 @@ def run_case(
             termination = "SUCCESS"
             break
 
-    runtime_s = time.perf_counter() - started
+    runtime_s = _clock() - started
     result_values = np.concatenate(
         (peak_components, np.array((peak_force, peak_torque, max_penetration, final_depth, runtime_s)))
     )
