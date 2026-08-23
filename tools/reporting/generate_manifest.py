@@ -8,7 +8,12 @@ from typing import Iterable, Sequence
 
 
 REVIEW_DIRECTORIES = ("assets", "models", "plugins", "tools", "tests", "reports")
-REVIEW_ROOT_FILES = ("README.md", "pyproject.toml", ".gitignore")
+REVIEW_ROOT_FILES = (
+    "README.md",
+    "pyproject.toml",
+    ".gitattributes",
+    ".gitignore",
+)
 MANIFEST_RELATIVE_PATH = Path("reports/final_file_manifest.txt")
 EXCLUDED_DIRECTORY_NAMES = {"__pycache__", ".pytest_cache"}
 EXCLUDED_SUFFIXES = {".pyc"}

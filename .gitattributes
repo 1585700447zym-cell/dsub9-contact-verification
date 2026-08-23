@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.stl binary
+*.STL binary
+*.step text eol=crlf
+*.STEP text eol=crlf
+*.sldprt binary
+*.SLDPRT binary

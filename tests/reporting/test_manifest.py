@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
+import shutil
+import subprocess
+import sys
 
 from tools.reporting.generate_manifest import (
     build_manifest,
@@ -10,6 +14,7 @@ from tools.reporting.generate_manifest import (
 
 
 REVIEW_ROOTS = ("assets", "models", "plugins", "tools", "tests", "reports")
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
 def make_project(root: Path) -> None:
@@ -18,6 +23,7 @@ def make_project(root: Path) -> None:
     (root / "README.md").write_text("read me\n", encoding="utf-8")
     (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
     (root / ".gitignore").write_text("build/\n", encoding="utf-8")
+    (root / ".gitattributes").write_text("* text=auto eol=lf\n", encoding="utf-8")
 
 
 def manifest_paths(text: str) -> list[str]:
@@ -63,7 +69,7 @@ def test_manifest_excludes_itself(tmp_path: Path) -> None:
 
 def test_manifest_covers_all_reviewed_regular_files(tmp_path: Path) -> None:
     make_project(tmp_path)
-    expected = {".gitignore", "README.md", "pyproject.toml"}
+    expected = {".gitattributes", ".gitignore", "README.md", "pyproject.toml"}
     for directory in REVIEW_ROOTS:
         path = tmp_path / directory / f"reviewed {directory}.dat"
         path.write_bytes(directory.encode("ascii"))
@@ -92,3 +98,93 @@ def test_verify_accepts_git_crlf_checkout(tmp_path: Path) -> None:
     manifest.write_bytes(manifest.read_bytes().replace(b"\n", b"\r\n"))
 
     assert verify_manifest(tmp_path)
+
+
+def test_autocrlf_fresh_checkout_preserves_all_manifest_hashes(tmp_path: Path) -> None:
+    source = tmp_path / "source project"
+    for directory in REVIEW_ROOTS:
+        (source / directory).mkdir(parents=True)
+    (source / "README.md").write_bytes(b"project\nreadme\n")
+    (source / "pyproject.toml").write_bytes(b"[project]\nname='fixture'\n")
+    (source / ".gitignore").write_bytes(b"build/\n")
+    attributes = PROJECT_ROOT / ".gitattributes"
+    if attributes.is_file():
+        shutil.copy2(attributes, source / ".gitattributes")
+    (source / "tools" / "reporting").mkdir()
+    shutil.copy2(
+        PROJECT_ROOT / "tools" / "reporting" / "generate_manifest.py",
+        source / "tools" / "reporting" / "generate_manifest.py",
+    )
+    (source / "assets" / "reviewed.stl").write_bytes(
+        b"solid text_like_stl\nendsolid text_like_stl\n"
+    )
+    (source / "source_cad.step").write_bytes(
+        b"ISO-10303-21;\r\nHEADER;\r\nENDSEC;\r\nEND-ISO-10303-21;\r\n"
+    )
+    for directory in REVIEW_ROOTS:
+        (source / directory / "reviewed.dat").write_bytes(
+            f"reviewed {directory}\n".encode("ascii")
+        )
+    write_manifest(source)
+
+    git_dir = tmp_path / "external.git"
+    subprocess.run(
+        ["git", "init", "--separate-git-dir", str(git_dir), str(source)],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    subprocess.run(
+        [
+            "git",
+            "-c",
+            "core.autocrlf=false",
+            f"--git-dir={git_dir}",
+            f"--work-tree={source}",
+            "add",
+            "-A",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    fresh = tmp_path / "fresh checkout"
+    subprocess.run(
+        [
+            "git",
+            "-c",
+            "core.autocrlf=true",
+            f"--git-dir={git_dir}",
+            f"--work-tree={source}",
+            "checkout-index",
+            "-a",
+            f"--prefix={fresh.as_posix()}/",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    verification = subprocess.run(
+        [sys.executable, "-m", "tools.reporting.generate_manifest", "--verify"],
+        cwd=fresh,
+        capture_output=True,
+        text=True,
+    )
+    mismatches = []
+    for line in (fresh / "reports" / "final_file_manifest.txt").read_text(
+        encoding="utf-8"
+    ).splitlines():
+        expected, relative = line.split("  ", maxsplit=1)
+        actual = hashlib.sha256((fresh / relative).read_bytes()).hexdigest()
+        if actual != expected:
+            mismatches.append(relative)
+
+    assert verification.returncode == 0, verification.stdout + verification.stderr
+    assert mismatches == []
+    assert (fresh / "assets" / "reviewed.stl").read_bytes() == (
+        b"solid text_like_stl\nendsolid text_like_stl\n"
+    )
+    assert (fresh / "source_cad.step").read_bytes() == (
+        b"ISO-10303-21;\r\nHEADER;\r\nENDSEC;\r\nEND-ISO-10303-21;\r\n"
+    )

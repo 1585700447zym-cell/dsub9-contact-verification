@@ -99,10 +99,16 @@ cmake --build $pluginBuild --config Release
 `NUMERICAL_ERROR`。当前 30 µm 穿透阈值是 75 µm 名义径向间隙的 40%，而不是力阈值。
 
 `reports/final_file_manifest.txt` 覆盖 `assets/`、`models/`、`plugins/`、`tools/`、`tests/`、
-`reports/` 下的受审文件，以及根目录的 README、`pyproject.toml` 和 `.gitignore`。每行使用小写
+`reports/` 下的受审文件，以及根目录的 README、`pyproject.toml`、`.gitattributes` 和
+`.gitignore`。每行使用小写
 SHA-256 和按 POSIX 相对路径排序。为避免自引用哈希无限变化，清单必须且仅对
 `reports/final_file_manifest.txt` 自身例外；`--verify` 会重算全部其他条目并拒绝陈旧清单。`build/`不纳入清单，
 Release DLL 的已测试 SHA-256 记录在 `reports/collision_geometry_report.md`。
+
+根目录 `.gitattributes` 通过 `* text=auto eol=lf` 固定受审文本的 LF 字节，并用 `*.stl binary`
+明确禁止 Git 改写 STL。这是使 SHA-256 清单在 `core.autocrlf=true` 的 Windows fresh checkout 中仍可
+按原始字节复现的前提。原始 STEP 另以 `text eol=crlf` 锁定已审核的源哈希，SLDPRT 作为
+binary 保持原始字节；不要在不重生成并复验 manifest 的情况下删除或弱化这些规则。
 
 ## 执行环境限制
 
