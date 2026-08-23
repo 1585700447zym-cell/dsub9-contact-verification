@@ -89,6 +89,15 @@ For every contact, `mj_contactForce` returns a contact-frame wrench on geom2.  T
 the wrench acting on the male body, expressed in world/task-aligned axes, about the male task origin.
 Component peaks retain the sign at that component's maximum absolute value.
 
+Case orientation is `R = Ry(pitch) @ Rx(roll)`: for column vectors, roll acts first and pitch acts second.
+An independent basis-vector test locks this order.  At actual roll and combined contact poses, an independent
+per-contact accumulation matches runner output and MuJoCo generalized constraint force: translation compares
+directly with `qfrc_constraint[:3]`, while torque compares with
+`R_body @ qfrc_constraint[3:6]`.  The tolerance is 1e-12 absolute and 1e-10 relative, below the smallest
+reported diagnostic torque.  The reviewed Task5 model uses the default three-dimensional contact, so local
+torsional contact-force slots are zero in these static poses; the independently verified world torque includes
+the nonzero `(contact_position - male_task_origin) × force` term.
+
 A controlled sphere-plane probe gave +259.3195 N along the contact normal on geom2 and exactly the same
 free-body `qfrc_constraint`; the real D-sub9 probe, where pins are geom1, matched `qfrc_constraint` only after
 using the corresponding negative sign.  This evidence, plus the symmetric offset and tilt cases below,
@@ -99,10 +108,12 @@ The default sweep uses MuJoCo Newton solver with 100 iterations, timestep 0.0002
 Because pose is assigned directly before `mj_forward`, the sensitivity comparison changes both the solver
 timestep and spatial sampling; it is not a comparison of free-body dynamics integration.
 
-The only termination values are `SUCCESS`, `NO_PROGRESS`, `EXCESS_PENETRATION`, and `NUMERICAL_ERROR`.
+The only termination values are `SUCCESS`, `EXCESS_PENETRATION`, and `NUMERICAL_ERROR`.
 Maximum penetration is `max(0, -contact.dist)` over actual contacts.  The 30 µm limit is 40% of the 75 µm
 nominal radial clearance and terminates before gross overlap.  Any non-finite pose, constraint force, contact
-distance, wrench, penetration, or result produces `NUMERICAL_ERROR`.
+distance, wrench, penetration, or result produces `NUMERICAL_ERROR`.  A prescribed pose cannot be stopped by
+contact, so no stalled-progress outcome is exposed.  Such an outcome belongs in a future force-controlled or
+free-dynamics runner where commanded and achieved motion can diverge.
 
 ## Actual contact results
 
@@ -112,21 +123,21 @@ are uncalibrated diagnostics, not correctness gates.
 | Case | Mode | Termination | Depth mm | Max contacts | Max penetration µm | Primary signed component | Steps | Runtime s |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | separated | SDF | SUCCESS | 0.000 | 0 | 0.000 | — | 1 | 0.0002 |
-| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5113 |
-| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8207 |
-| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.1139 |
-| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.1457 |
-| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.8576 |
-| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.6593 |
-| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.7646 |
-| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.7449 |
-| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.7811 |
-| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0302 |
-| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0421 |
-| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0525 |
-| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1145 |
-| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.6480 |
-| combined A | polygon32 | EXCESS_PENETRATION | 0.110 | 15 | 38.244 | Tx -6.878e-6 N·m | 12 | 0.0041 |
+| aligned | SDF | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.5237 |
+| X +100 µm | SDF | SUCCESS | 4.000 | 54 | 12.011 | Fx -1.818e-3 N | 401 | 0.8365 |
+| X -100 µm | SDF | SUCCESS | 4.000 | 81 | 12.039 | Fx +2.036e-3 N | 401 | 1.1275 |
+| Y +100 µm | SDF | SUCCESS | 4.000 | 72 | 12.425 | Fy -1.985e-3 N | 401 | 1.1757 |
+| Y -100 µm | SDF | SUCCESS | 4.000 | 63 | 12.352 | Fy +1.736e-3 N | 401 | 0.8757 |
+| roll +1.5° | SDF | SUCCESS | 4.000 | 63 | 13.528 | Tx -6.624e-6 N·m | 401 | 0.6726 |
+| roll -1.5° | SDF | SUCCESS | 4.000 | 63 | 13.668 | Tx +7.978e-6 N·m | 401 | 0.7769 |
+| pitch +1.5° | SDF | SUCCESS | 4.000 | 30 | 14.231 | Ty -1.115e-5 N·m | 401 | 0.7477 |
+| pitch -1.5° | SDF | SUCCESS | 4.000 | 51 | 14.007 | Ty +7.678e-6 N·m | 401 | 0.8134 |
+| combined A | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 19 | 0.0300 |
+| combined B | SDF | EXCESS_PENETRATION | 0.260 | 15 | 30.802 | Tx +1.333e-5 N·m | 27 | 0.0430 |
+| combined A fine | SDF | EXCESS_PENETRATION | 0.180 | 7 | 31.894 | Tx -1.532e-5 N·m | 37 | 0.0539 |
+| aligned | polygon32 | SUCCESS | 4.000 | 0 | 0.000 | — | 401 | 0.1074 |
+| X +100 µm | polygon32 | SUCCESS | 4.000 | 267 | 24.976 | Fx -3.898e-3 N | 401 | 2.7263 |
+| combined A | polygon32 | EXCESS_PENETRATION | 0.110 | 15 | 38.244 | Tx -6.878e-6 N·m | 12 | 0.0033 |
 
 Separated has zero contacts and aligned reaches the full 4.0 mm with finite state.  Both X and Y offset
 pairs oppose the commanded offset.  Both tilt pairs have opposite primary torque signs.  Coarse/fine
@@ -140,13 +151,13 @@ Commands executed from the project root with `D:\KEYANRUJIAN\python.exe`:
 
 ```powershell
 & 'D:\KEYANRUJIAN\python.exe' -m pytest tests\contact -v -p no:cacheprovider
-# 14 passed in 10.99s
+# 22 passed in 18.16s
 
 & 'D:\KEYANRUJIAN\python.exe' -m tools.validation.run_contact_cases --all --output reports/contact_validation_results.json
-# 16 results; wall time 11.9s; output SHA-256 7ec1991ffe46d8b540fefcecbf35a0ff8b2cee4015cc32c5384442491ed86f79
+# 16 results; wall time 11.9s; schema 2; output SHA-256 f237596908133806c3e0d07561da10af9971ace363533d3e3b7f7c9932d6c841
 
 & 'D:\KEYANRUJIAN\python.exe' -m pytest tests\mesh tests\sdf tests\model tests\contact -v -W error -p no:cacheprovider -p tmp.task6_use_built_plugin
-# 111 passed in 17.64s
+# 119 passed in 24.80s
 ```
 
 The first unadapted full-suite attempt produced 88 passes and 23 SDF-plugin-test failures, all at the same
@@ -154,6 +165,11 @@ known restricted-runner MSBuild `MSB4184` Windows SDK discovery boundary.  For t
 temporary pytest plugin verified the existing Release DLL's SHA-256 and bound the Task4 tests to that DLL;
 no test was skipped and all registration, MJCF lifecycle, C++ parity, invalid-input, model, and contact tests
 still executed.  The temporary injection file was deleted after the run.
+
+The runner result cache was removed.  Two independent fresh processes each ran the complete 16-result matrix;
+all termination and physical fields matched exactly after removing `runtime_s`, and all 16 measured runtimes
+differed.  Immutable compiled model resources remain cached, but every `run_case` creates new `MjData`,
+executes the complete sweep, and measures that execution.
 
 The formal SDF remains the primary representation.  polygon32 contact multiplicity and force magnitude are
 not interchangeable with SDF values.  Rigid geometry plus uncalibrated MuJoCo contact parameters cannot

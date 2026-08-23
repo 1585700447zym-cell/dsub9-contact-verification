@@ -25,6 +25,7 @@ import numpy as np
 
 
 CollisionMode = Literal["sdf", "polygon32"]
+Termination = Literal["SUCCESS", "EXCESS_PENETRATION", "NUMERICAL_ERROR"]
 
 ROOT = Path(__file__).resolve().parents[2]
 FORMAL_MODEL = ROOT / "models" / "dsub9_pair.xml"
@@ -35,9 +36,7 @@ PLUGIN = ROOT / PLUGIN_RELATIVE_PATH
 DEFAULT_TIMESTEP_S = 0.0002
 DEFAULT_SPEED_M_S = 0.05
 MAX_PENETRATION_M = 0.000030
-TERMINATIONS = frozenset(
-    {"SUCCESS", "NO_PROGRESS", "EXCESS_PENETRATION", "NUMERICAL_ERROR"}
-)
+TERMINATIONS = frozenset({"SUCCESS", "EXCESS_PENETRATION", "NUMERICAL_ERROR"})
 
 
 @dataclass(frozen=True)
@@ -133,7 +132,7 @@ class ContactCase:
 class ContactResult:
     case: str
     collision_mode: str
-    termination: str
+    termination: Termination
     final_depth_m: float
     peak_force_n: float
     peak_torque_nm: float
@@ -215,7 +214,7 @@ def _load_model(collision_mode: CollisionMode, timestep_s: float) -> mujoco.MjMo
 
 
 def _quaternion(case: ContactCase) -> np.ndarray:
-    """Return wxyz for task-Y pitch followed by task-X roll (yaw is zero)."""
+    """Return wxyz for R=Ry(pitch)@Rx(roll): roll acts first on vectors."""
 
     cr, sr = math.cos(case.roll_rad / 2.0), math.sin(case.roll_rad / 2.0)
     cp, sp = math.cos(case.pitch_rad / 2.0), math.sin(case.pitch_rad / 2.0)
@@ -264,7 +263,6 @@ def _finite_state(data: mujoco.MjData, wrench: np.ndarray, penetration: float) -
     )
 
 
-@functools.lru_cache(maxsize=64)
 def run_case(
     case: ContactCase,
     timestep_s: float,
@@ -290,7 +288,7 @@ def run_case(
     total_contact_samples = 0
     max_penetration = 0.0
     final_depth = 0.0
-    termination = "NO_PROGRESS"
+    termination: Termination = "NUMERICAL_ERROR"
     executed_steps = 0
     quaternion = _quaternion(case)
     started = time.perf_counter()
@@ -386,7 +384,8 @@ def result_document(results: Iterable[ContactResult]) -> dict:
         },
         "mujoco_version": mujoco.mj_versionString(),
         "results": [asdict(result) for result in result_list],
-        "schema_version": 1,
+        "schema_version": 2,
+        "terminations": ["SUCCESS", "EXCESS_PENETRATION", "NUMERICAL_ERROR"],
     }
 
 

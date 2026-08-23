@@ -17,7 +17,6 @@ def test_both_combined_cases_have_finite_bounded_termination():
         result = run_case(case, 0.0002, "sdf")
         assert result.termination in {
             "SUCCESS",
-            "NO_PROGRESS",
             "EXCESS_PENETRATION",
             "NUMERICAL_ERROR",
         }

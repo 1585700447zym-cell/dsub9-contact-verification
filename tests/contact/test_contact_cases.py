@@ -3,10 +3,13 @@ from __future__ import annotations
 from dataclasses import asdict
 import json
 import math
+from typing import get_args, get_type_hints
 
+import mujoco
 import numpy as np
 import pytest
 
+import tools.validation.run_contact_cases as contact_runner
 from tools.validation.run_contact_cases import (
     ContactCase,
     TERMINATIONS,
@@ -62,6 +65,99 @@ def test_tilt_pairs_produce_opposite_repeatable_primary_torque(
     assert getattr(second_positive.peak_signed_wrench, torque_axis) == positive_torque
 
 
+@pytest.mark.parametrize(
+    "case, torque_axis, expected_sign",
+    [
+        (ContactCase.roll(+math.radians(1.5)), "tx", -1),
+        (ContactCase.roll(-math.radians(1.5)), "tx", +1),
+        (ContactCase.pitch(+math.radians(1.5)), "ty", -1),
+        (ContactCase.pitch(-math.radians(1.5)), "ty", +1),
+    ],
+)
+def test_tilt_torque_has_absolute_task_frame_direction(case, torque_axis, expected_sign):
+    result = run_case(case, 0.0002, "sdf")
+    assert np.sign(getattr(result.peak_signed_wrench, torque_axis)) == expected_sign
+
+
+def test_combined_rotation_is_pitch_matrix_times_roll_matrix():
+    case = ContactCase.combined()
+    quaternion = contact_runner._quaternion(case)
+    actual = np.empty(9)
+    mujoco.mju_quat2Mat(actual, quaternion)
+    actual = actual.reshape(3, 3)
+
+    cr, sr = math.cos(case.roll_rad), math.sin(case.roll_rad)
+    cp, sp = math.cos(case.pitch_rad), math.sin(case.pitch_rad)
+    roll = np.array(((1.0, 0.0, 0.0), (0.0, cr, -sr), (0.0, sr, cr)))
+    pitch = np.array(((cp, 0.0, sp), (0.0, 1.0, 0.0), (-sp, 0.0, cp)))
+    expected = pitch @ roll
+    np.testing.assert_allclose(actual, expected, rtol=0.0, atol=2e-16)
+    for basis in np.eye(3):
+        np.testing.assert_allclose(actual @ basis, expected @ basis, rtol=0.0, atol=2e-16)
+
+
+@pytest.mark.parametrize(
+    "case, depth_m",
+    [
+        (ContactCase.roll(+math.radians(1.5)), 0.00063),
+        (ContactCase.combined(), 0.00018),
+    ],
+)
+def test_fixed_pose_male_world_wrench_matches_generalized_constraint_force(
+    case, depth_m
+):
+    model = contact_runner._load_model("sdf", 0.0002)
+    data = mujoco.MjData(model)
+    male_body = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "male")
+    data.qpos[:7] = (
+        case.x_offset_m,
+        case.y_offset_m,
+        case.start_origin_z_m + depth_m,
+        *contact_runner._quaternion(case),
+    )
+    data.qvel[:] = 0.0
+    data.qacc_warmstart[:] = 0.0
+    mujoco.mj_forward(model, data)
+
+    actual, _ = contact_runner._male_world_wrench(model, data, male_body)
+    body_rotation = np.asarray(data.xmat[male_body]).reshape(3, 3)
+    expected = np.concatenate(
+        (data.qfrc_constraint[:3], body_rotation @ data.qfrc_constraint[3:6])
+    )
+
+    male_as_geom1 = 0
+    independent = np.zeros(6)
+    lever_moment_norm = 0.0
+    for index in range(data.ncon):
+        contact = data.contact[index]
+        local = np.zeros(6)
+        mujoco.mj_contactForce(model, data, index, local)
+        contact_to_world = np.asarray(contact.frame).reshape(3, 3).T
+        if int(model.geom_bodyid[contact.geom1]) == male_body:
+            male_as_geom1 += 1
+            sign = -1.0
+        elif int(model.geom_bodyid[contact.geom2]) == male_body:
+            sign = +1.0
+        else:
+            continue
+        force_world = sign * (contact_to_world @ local[:3])
+        contact_torque_world = sign * (contact_to_world @ local[3:])
+        lever_moment = np.cross(
+            np.asarray(contact.pos) - data.xpos[male_body], force_world
+        )
+        independent[:3] += force_world
+        independent[3:] += contact_torque_world + lever_moment
+        lever_moment_norm += np.linalg.norm(lever_moment)
+
+    assert data.ncon > 0
+    assert male_as_geom1 > 0
+    assert lever_moment_norm > 0.0
+    # Both values are assembled from the same solved double-precision constraints;
+    # 1e-12 absolute tolerance is well below the smallest reported diagnostic torque.
+    np.testing.assert_allclose(actual, independent, rtol=1e-10, atol=1e-12)
+    np.testing.assert_allclose(independent, expected, rtol=1e-10, atol=1e-12)
+
+
 def test_sdf_and_polygon32_agree_on_primary_offset_direction():
     case = ContactCase.x_offset(+0.00010)
     sdf = run_case(case, 0.0002, "sdf")
@@ -102,6 +198,18 @@ def test_result_schema_is_serializable_and_every_number_is_finite():
     json.dumps(payload, allow_nan=False)
 
 
+def test_public_termination_schema_has_only_reachable_pose_sweep_outcomes():
+    assert get_args(contact_runner.Termination) == (
+        "SUCCESS",
+        "EXCESS_PENETRATION",
+        "NUMERICAL_ERROR",
+    )
+    assert TERMINATIONS == frozenset(get_args(contact_runner.Termination))
+    assert get_type_hints(contact_runner.ContactResult)["termination"] is contact_runner.Termination
+    document = result_document([run_case(ContactCase.separated(), 0.0002, "sdf")])
+    assert document["terminations"] == list(get_args(contact_runner.Termination))
+
+
 def test_case_catalog_is_complete_unique_and_serializable():
     cases = all_cases()
     assert [case.name for case in cases] == [
@@ -121,9 +229,20 @@ def test_case_catalog_is_complete_unique_and_serializable():
     json.dumps([asdict(case) for case in cases], allow_nan=False)
 
 
-def test_result_document_has_deterministic_sorted_serialization():
-    result = run_case(ContactCase.aligned(), 0.0002, "sdf")
-    document = result_document([result])
+def test_repeated_runs_are_distinct_and_physically_reproducible():
+    case = ContactCase.x_offset(+0.00010)
+    first_result = run_case(case, 0.0002, "sdf")
+    second_result = run_case(case, 0.0002, "sdf")
+    assert first_result is not second_result
+    first_payload = asdict(first_result)
+    second_payload = asdict(second_result)
+    first_runtime = first_payload.pop("runtime_s")
+    second_runtime = second_payload.pop("runtime_s")
+    assert first_runtime > 0.0
+    assert second_runtime > 0.0
+    assert first_payload == second_payload
+
+    document = result_document([first_result])
     assert document["cases"][1] == {
         "name": "aligned",
         "x_offset_m": 0.0,
@@ -134,6 +253,6 @@ def test_result_document_has_deterministic_sorted_serialization():
         "target_depth_m": 0.004,
     }
     first = json.dumps(document, sort_keys=True, indent=2, allow_nan=False)
-    second = json.dumps(result_document([result]), sort_keys=True, indent=2, allow_nan=False)
+    second = json.dumps(result_document([first_result]), sort_keys=True, indent=2, allow_nan=False)
     assert first == second
     assert list(json.loads(first)) == sorted(json.loads(first))
