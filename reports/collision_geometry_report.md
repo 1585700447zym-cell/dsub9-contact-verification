@@ -75,6 +75,12 @@ The fallback contains 9 holes × 2 axial layers × 32 sectors = 576 closed conve
 main-hole boundary has 0.002782179 mm maximum radial error, about 3.71% of nominal radial clearance.  It is
 explicitly labelled `polygon32` fallback and is not used as the formal model.
 
+Collision regeneration is transactional: all 696 STL files are generated and inventory-validated in a staging
+directory, then the staging tree must pass Windows inherited-DACL normalization and postcondition checks before
+promotion.  A failed generation, inventory check, ACL normalization, or ACL postcondition leaves the previous
+`assets/collision/` tree untouched.  A real regeneration preserved every filename and SHA-256, and all 696/696
+ordinary reads succeeded.
+
 | Inventory | Formal SDF | polygon32 fallback |
 | --- | ---: | ---: |
 | Bodies / free joints | 3 / 1 | 3 / 1 |
@@ -84,7 +90,7 @@ explicitly labelled `polygon32` fallback and is not used as the formal model.
 | Pins / holes | 9 / 9 analytic SDF | 9 / 576 sector meshes |
 | Male / female D pieces | 78 / 42 | 78 / 42 |
 
-Formal model SHA-256 is `31e5ffb9e9e692c8e0f85354a9ff247b187c8bfc5a701b92b816936d09c03acd`.
+Formal model SHA-256 is `8022bf0d5902a66bfb7896a89089007ef2768a65d85dac26742fa5f954121447`.
 Fallback XML SHA-256 is `b17e52ccdeca16626fa267ac76d01d8e38b44e614822e277c0f1fba45037d2cd`.
 The tested Release plugin SHA-256 is `a3516dd4e488ec2be8db4a5082fa96c37e3f6ea1cebb7a74341b3edc0d325278`.
 
@@ -169,7 +175,11 @@ sectors.  The early-terminating combined fallback runtime is not a full-depth pe
 
 ## Contact-parameter sensitivity
 
-The baseline plus low/high numerical brackets were run on the +100 µm X-offset and combined-A cases.
+The schema-3 result document contains 20 results total: 16 `uncalibrated_diagnostic_v1` baseline results and
+two SDF sensitivity cases (X +100 µm and combined A) each for `uncalibrated_low_response_v1` and
+`uncalibrated_high_response_v1`.  The latter names are low/high response numerical brackets, not
+"conservative" or "compliant" material calibrations.  The baseline plus low/high numerical brackets were run
+on the +100 µm X-offset and combined-A cases.
 All values below are diagnostics of this rigid prescribed-pose model.  They must not be used as real insertion
 loads or safety limits.
 
@@ -197,20 +207,20 @@ Commands executed from the project root with `D:\KEYANRUJIAN\python.exe` in the 
 # 20 results; schema 3; tracked LF SHA-256 ac767ea63a7e8a6866a974728a1256e688832003076170e270cd181e5c9d65ff
 
 & 'D:\KEYANRUJIAN\python.exe' -m pytest -q -W error -p no:cacheprovider --basetemp 'tmp\pytest-task7-final'
-# Final whole-suite count and manifest are regenerated after the remaining cross-task fixes.
+# 161 passed in 51.18s in the normal Windows environment.
 
 & 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest
 & 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest --verify
 ```
 
-The restricted Codex runner produced 98 passes and 23 SDF-plugin-test failures when MSBuild was denied access
-to user-local Windows SDK metadata (`MSB4184`).  The same source and test command in a normal Windows process
-built the Release DLL and ran the complete 128-test suite with zero skips and `-W error`.  The command above
+The restricted Codex runner can fail when MSBuild is denied access to user-local Windows SDK metadata
+(`MSB4184`).  The same source and test command in a normal Windows process built the Release DLL and ran the
+complete 161-test suite with zero skips and `-W error` in 51.18 s.  The command above
 uses a project-local pytest temporary directory only to avoid unrelated ACLs left by isolated processes; it
 does not inject, replace, or skip tests.  Ordinary users should run the direct README commands in a normal
 Visual Studio/Windows SDK environment and should not copy any temporary pytest injector.
 
-The runner result cache was removed.  Two independent fresh processes each ran the prior 16-result matrix;
+The runner result cache was removed.  Two independent fresh processes each ran the 16-result baseline matrix;
 all termination and physical fields matched exactly after removing `runtime_s`.  Wall-clock values are
 deliberately excluded from that comparison because natural timing differences are not a reliable freshness
 assertion.  Immutable compiled model resources remain cached, but every `run_case` creates new `MjData`,

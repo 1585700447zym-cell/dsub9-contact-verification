@@ -352,18 +352,13 @@ Expected: import failure because `tools.sdf.hole_reference` does not exist.
 
 - [ ] **Step 3: Implement the Python reference SDF**
 
-Represent solid material as the union of two finite annuli: an entrance annulus with inner radius `entry_radius` over `z=[0,entry_depth]`, and a main-bore annulus with inner radius `bore_radius` over `z=[entry_depth,bore_depth]`. Construct each finite annulus with exact signed-distance CSG intersections and combine them with `min(entry_distance, main_distance)`. Return positive distance in free bore space and negative distance inside solid material consistently with the plugin implementation.
+Represent solid material as the exact six-edge stepped material cross-section revolved about the axis.  In `(r,z)`, use the counter-clockwise polygon `(entry_radius, 0)`, `(outer_radius, 0)`, `(outer_radius, bore_depth)`, `(bore_radius, bore_depth)`, `(bore_radius, entry_depth)`, and `(entry_radius, entry_depth)`.  The distance magnitude is the minimum Euclidean distance to those six edges; its sign is negative in material and positive in free bore space.  This single closed cross-section avoids the false internal zero plane at the entry/main transition that the two-finite-annuli `min` construction introduced.
 
 ```python
 def hole_distance(point: np.ndarray, params: HoleParams) -> float:
-    entry = finite_annulus_distance(
-        point, params.entry_radius, params.outer_radius, 0.0, params.entry_depth
-    )
-    main = finite_annulus_distance(
-        point, params.bore_radius, params.outer_radius,
-        params.entry_depth, params.bore_depth,
-    )
-    return min(entry, main)
+    point = _query_point(point)
+    distance, _ = _step_profile_distance_gradient(point, params)
+    return distance
 ```
 
 - [ ] **Step 4: Implement the C++ SDF plugin using the same equations**
@@ -426,7 +421,10 @@ def test_pin_centres_form_five_plus_four_pattern():
 
 def test_visual_meshes_are_collision_disabled():
     root = ET.parse(MODEL).getroot()
-    for geom in root.findall(".//geom[@group='visual']"):
+    visual_geoms = root.findall(".//geom[@class='visual']")
+    assert visual_geoms
+    for geom in visual_geoms:
+        assert geom.attrib["group"] == "2"
         assert geom.attrib["contype"] == "0"
         assert geom.attrib["conaffinity"] == "0"
 
@@ -519,7 +517,7 @@ Expected: import failure for the contact runner.
 
 - [ ] **Step 3: Implement deterministic quasi-static cases**
 
-Implement separated, aligned, positive/negative X offset, positive/negative Y offset, positive/negative roll/pitch, and two combined offset-plus-tilt cases. Drive the male pose with small bounded increments; collect contacts and six-axis wrench every simulation step; use a single termination reason from `SUCCESS`, `NO_PROGRESS`, `EXCESS_PENETRATION`, or `NUMERICAL_ERROR`.
+Implement separated, aligned, positive/negative X offset, positive/negative Y offset, positive/negative roll/pitch, and two combined offset-plus-tilt cases. Drive the male pose with small bounded increments; collect contacts and six-axis wrench every simulation step; use a single termination reason from `SUCCESS`, `EXCESS_PENETRATION`, or `NUMERICAL_ERROR`.  `NO_PROGRESS` is unreachable for this prescribed pose sweep and is not a public termination value.
 
 ```python
 @dataclass(frozen=True)

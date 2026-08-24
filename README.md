@@ -7,6 +7,11 @@ MuJoCo 3.x 解析 SDF 插件和准静态接触验证。正式模型是 `models/d
 这是几何与数值接触基线。它没有控制器、机器人或强化学习环境，也没有标定真实插入力；报告中的
 N/N·m 只是未标定的模型诊断值，不得用作实物安全阈值。
 
+碰撞 geom 显式冻结版本化基线 `uncalibrated_diagnostic_v1`：friction `(1, 0.005, 0.0001)`、
+`solref=(0.02, 1)`、`solimp=(0.9, 0.95, 0.001, 0.5, 2)` 与零 margin。低/高响应配置
+`uncalibrated_low_response_v1`、`uncalibrated_high_response_v1` 仅用于数值敏感性包络，不是材料或
+插入力标定。
+
 ## 环境
 
 - Windows x64，Python `>=3.11`。
@@ -64,6 +69,10 @@ $maleVisual = Join-Path $projectRoot 'assets\visual\dsub9_male_visual_centered.s
 & $projectPython -m tools.mesh.generate_collision_assets
 ```
 
+该命令在 staging 目录中完整生成并校验清单后才事务性替换 `assets/collision/`；若生成、库存校验或
+Windows DACL 归一化/后置读取权限校验失败，既有目录保持不变。已对 696 个 collision 文件验证实际
+重生成后名称和 SHA-256 不变，并完成 696/696 次普通读取。
+
 配置并构建 Release SDF 插件：
 
 ```powershell
@@ -94,9 +103,12 @@ cmake --build $pluginBuild --config Release
 & $projectPython -m tools.reporting.generate_manifest --verify
 ```
 
-接触 runner 运行 16 个真实场景，直接指定位姿并调用 `mj_forward`。它不是自由动力学积分，没有力控制器，
-也不会产生可观测的 stalled-progress 状态。判定只有 `SUCCESS`、`EXCESS_PENETRATION` 和
-`NUMERICAL_ERROR`。当前 30 µm 穿透阈值是 75 µm 名义径向间隙的 40%，而不是力阈值。
+接触 runner 直接指定位姿并调用 `mj_forward`，不是自由动力学积分，也没有力控制器。追踪的 schema-3
+结果共有 20 条：16 条 `uncalibrated_diagnostic_v1` 基线结果，加上 X +100 µm 与 combined A 两个
+SDF 场景各一条 `uncalibrated_low_response_v1` 和 `uncalibrated_high_response_v1` 结果。它不会产生
+可观测的 stalled-progress 状态；判定只有 `SUCCESS`、`EXCESS_PENETRATION` 和 `NUMERICAL_ERROR`。
+当前 30 µm 穿透阈值是 75 µm 名义径向间隙的 40%，而不是力阈值。正常 Windows 环境中的最新完整测试为
+`161 passed in 51.18s`。
 
 `reports/final_file_manifest.txt` 覆盖 `assets/`、`models/`、`plugins/`、`tools/`、`tests/`、
 `reports/` 下的受审文件，以及根目录的 README、`pyproject.toml`、`.gitattributes` 和
