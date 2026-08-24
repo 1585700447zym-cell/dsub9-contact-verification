@@ -78,7 +78,17 @@ def _make_windows_acl_fixture(tmp_path: Path, child_count: int) -> tuple[Path, P
     parent = tmp_path / "acl-parent"
     parent.mkdir()
     subprocess.run(
-        [str(icacls), str(parent), "/grant", "*S-1-1-0:(OI)(CI)R", "/Q"],
+        [
+            str(icacls),
+            str(parent),
+            "/grant",
+            "*S-1-1-0:(OI)(CI)R",
+            "*S-1-5-11:(OI)(CI)R",
+            "*S-1-5-4:(CI)R",
+            "*S-1-2-0:(OI)R",
+            "*S-1-5-2:R",
+            "/Q",
+        ],
         check=True,
         capture_output=True,
         text=True,
@@ -94,6 +104,84 @@ def _make_windows_acl_fixture(tmp_path: Path, child_count: int) -> tuple[Path, P
         text=True,
     )
     return parent, staging, children, icacls
+
+
+def _forge_unprotected_system_read_dacl(path: Path) -> None:
+    """Create a real malformed DACL that the old postcondition mistakes for inherited access."""
+    win32api = pytest.importorskip("win32api")
+    win32con = pytest.importorskip("win32con")
+    win32security = pytest.importorskip("win32security")
+    token = win32security.OpenProcessToken(win32api.GetCurrentProcess(), win32con.TOKEN_QUERY)
+    try:
+        owner_sid = win32security.GetTokenInformation(token, win32security.TokenUser)[0]
+    finally:
+        token.Close()
+    dacl = win32security.ACL()
+    dacl.AddAccessAllowedAceEx(win32security.ACL_REVISION, 0, 0x001F01FF, owner_sid)
+    dacl.AddAccessAllowedAceEx(
+        win32security.ACL_REVISION,
+        win32security.INHERITED_ACE,
+        0x00120089,
+        win32security.ConvertStringSidToSid("S-1-5-18"),
+    )
+    descriptor = win32security.SECURITY_DESCRIPTOR()
+    descriptor.SetSecurityDescriptorDacl(True, dacl, False)
+    descriptor.SetSecurityDescriptorControl(win32security.SE_DACL_PROTECTED, 0)
+    win32security.SetFileSecurity(
+        str(path), win32security.DACL_SECURITY_INFORMATION, descriptor
+    )
+
+
+def _add_inherited_everyone_read_deny(path: Path) -> None:
+    """Preserve every normalized ALLOW while inserting one effective inherited read DENY."""
+    win32api = pytest.importorskip("win32api")
+    win32con = pytest.importorskip("win32con")
+    win32security = pytest.importorskip("win32security")
+    descriptor = win32security.GetNamedSecurityInfo(
+        str(path),
+        win32security.SE_FILE_OBJECT,
+        win32security.DACL_SECURITY_INFORMATION,
+    )
+    original = descriptor.GetSecurityDescriptorDacl()
+    entries = tuple(original.GetAce(index) for index in range(original.GetAceCount()))
+    replacement = win32security.ACL()
+    token = win32security.OpenProcessToken(win32api.GetCurrentProcess(), win32con.TOKEN_QUERY)
+    try:
+        owner_sid = win32security.GetTokenInformation(token, win32security.TokenUser)[0]
+    finally:
+        token.Close()
+    replacement.AddAccessAllowedAceEx(
+        win32security.ACL_REVISION, 0, 0x001F01FF, owner_sid
+    )
+    for header, mask, sid in entries:
+        if not header[1] & win32security.INHERITED_ACE:
+            replacement.AddAccessAllowedAceEx(
+                win32security.ACL_REVISION, header[1], mask, sid
+            )
+    replacement.AddAccessDeniedAceEx(
+        win32security.ACL_REVISION,
+        win32security.INHERITED_ACE,
+        0x00120089,
+        win32security.ConvertStringSidToSid("S-1-1-0"),
+    )
+    for header, mask, sid in entries:
+        if header[1] & win32security.INHERITED_ACE:
+            replacement.AddAccessAllowedAceEx(
+                win32security.ACL_REVISION, header[1], mask, sid
+            )
+    replacement_descriptor = win32security.SECURITY_DESCRIPTOR()
+    replacement_descriptor.SetSecurityDescriptorDacl(True, replacement, False)
+    replacement_descriptor.SetSecurityDescriptorControl(win32security.SE_DACL_PROTECTED, 0)
+    win32security.SetFileSecurity(
+        str(path), win32security.DACL_SECURITY_INFORMATION, replacement_descriptor
+    )
+
+
+def _write_acl_probe_children(output_dir: Path, child_count: int = 696) -> tuple[Path, ...]:
+    children = tuple(output_dir / f"dummy_{index:03d}.stl" for index in range(child_count))
+    for child in children:
+        child.write_bytes(b"acl-probe")
+    return children
 
 
 def _is_convex(mesh: StlMesh, tolerance_mm: float = 2e-5) -> bool:
@@ -722,13 +810,127 @@ def test_recursive_normalizer_applies_known_parent_read_ace_to_all_696_children(
     for path in (staging, *children):
         protected, aces = _windows_acl_summary(path)
         assert not protected, path
-        assert any(
-            sid == "S-1-1-0"
-            and ace_type == win32security.ACCESS_ALLOWED_ACE_TYPE
-            and flags & win32security.INHERITED_ACE
-            and mask & 0x1
-            for sid, ace_type, flags, mask in aces
-        ), path
+        for expected_sid in ("S-1-1-0", "S-1-5-11"):
+            assert any(
+                sid == expected_sid
+                and ace_type == win32security.ACCESS_ALLOWED_ACE_TYPE
+                and flags & win32security.INHERITED_ACE
+                and mask & 0x1
+                for sid, ace_type, flags, mask in aces
+            ), (path, expected_sid)
+
+    _protected, staging_aces = _windows_acl_summary(staging)
+    assert any(
+        sid == "S-1-5-4"
+        and flags & win32security.CONTAINER_INHERIT_ACE
+        and not flags & win32security.INHERIT_ONLY_ACE
+        for sid, _ace_type, flags, _mask in staging_aces
+    )
+    assert any(
+        sid == "S-1-2-0"
+        and flags & win32security.OBJECT_INHERIT_ACE
+        and flags & win32security.INHERIT_ONLY_ACE
+        for sid, _ace_type, flags, _mask in staging_aces
+    )
+    assert not any(sid == "S-1-5-2" for sid, *_rest in staging_aces)
+    for child in children:
+        _protected, child_aces = _windows_acl_summary(child)
+        child_sids = {sid for sid, *_rest in child_aces}
+        assert "S-1-2-0" in child_sids
+        assert "S-1-5-4" not in child_sids
+        assert "S-1-5-2" not in child_sids
+
+
+@pytest.mark.skipif(os.name != "nt", reason="Windows parent-relative DACL behavior")
+def test_missing_parent_read_semantics_on_staging_root_is_rejected_before_promotion(
+    tmp_path, monkeypatch
+):
+    """SYSTEM-only inheritance must not stand in for both known parent read principals."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    trusted_icacls = shutil.which("icacls.exe")
+    assert trusted_icacls is not None
+    subprocess.run(
+        [
+            trusted_icacls,
+            str(collision_dir.parent),
+            "/grant",
+            "*S-1-1-0:(OI)(CI)R",
+            "*S-1-5-11:(OI)(CI)R",
+            "*S-1-5-18:(OI)(CI)R",
+            "/Q",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+    monkeypatch.setattr(collision_assets, "_generate_into", _write_acl_probe_children)
+    monkeypatch.setattr(collision_assets, "_validate_staging_inventory", lambda _directory: ())
+    real_run = subprocess.run
+
+    def report_success_but_leave_only_system_read(args, **kwargs):
+        completed = real_run(args, **kwargs)
+        _forge_unprotected_system_read_dacl(Path(args[1]))
+        return completed
+
+    monkeypatch.setattr(collision_assets.subprocess, "run", report_success_but_leave_only_system_read)
+
+    with pytest.raises(PermissionError, match="parent-inherited read DACL semantics"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+    assert not list(collision_dir.parent.glob(".collision-backup-*"))
+
+
+@pytest.mark.skipif(os.name != "nt", reason="Windows parent-relative DACL behavior")
+def test_inherited_read_deny_on_last_of_696_children_is_rejected_before_promotion(
+    tmp_path, monkeypatch
+):
+    """Checking only the root or a representative child would miss a late broad DENY."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    trusted_icacls = shutil.which("icacls.exe")
+    assert trusted_icacls is not None
+    subprocess.run(
+        [
+            trusted_icacls,
+            str(collision_dir.parent),
+            "/grant",
+            "*S-1-1-0:(OI)(CI)R",
+            "*S-1-5-11:(OI)(CI)R",
+            "*S-1-5-18:(OI)(CI)R",
+            "/Q",
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+    monkeypatch.setattr(collision_assets, "_generate_into", _write_acl_probe_children)
+    monkeypatch.setattr(collision_assets, "_validate_staging_inventory", lambda _directory: ())
+    real_run = subprocess.run
+
+    def report_success_but_add_late_read_deny(args, **kwargs):
+        completed = real_run(args, **kwargs)
+        _add_inherited_everyone_read_deny(Path(args[1]) / "dummy_695.stl")
+        return completed
+
+    monkeypatch.setattr(collision_assets.subprocess, "run", report_success_but_add_late_read_deny)
+
+    with pytest.raises(PermissionError, match="parent-inherited read DACL semantics"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+    assert not list(collision_dir.parent.glob(".collision-backup-*"))
 
 
 @pytest.mark.skipif(os.name != "nt", reason="Windows system-directory lookup behavior")
