@@ -91,7 +91,7 @@ ordinary reads succeeded.
 | Male / female D pieces | 78 / 42 | 78 / 42 |
 
 Formal model SHA-256 is `8022bf0d5902a66bfb7896a89089007ef2768a65d85dac26742fa5f954121447`.
-Fallback XML SHA-256 is `b17e52ccdeca16626fa267ac76d01d8e38b44e614822e277c0f1fba45037d2cd`.
+Fallback XML SHA-256 is `b9567cec94be8baaa4f8fc0903ae8316e07b7eef91c283dee04a08868a2722bd`.
 The tested Release plugin SHA-256 is `a3516dd4e488ec2be8db4a5082fa96c37e3f6ea1cebb7a74341b3edc0d325278`.
 
 ## Contact wrench and numerical settings
@@ -206,8 +206,8 @@ Commands executed from the project root with `D:\KEYANRUJIAN\python.exe` in the 
 & 'D:\KEYANRUJIAN\python.exe' -m tools.validation.run_contact_cases --all --contact-profile baseline --output reports/contact_validation_results.json
 # 20 results; schema 3; tracked LF SHA-256 ac767ea63a7e8a6866a974728a1256e688832003076170e270cd181e5c9d65ff
 
-& 'D:\KEYANRUJIAN\python.exe' -m pytest -q -W error -p no:cacheprovider --basetemp 'tmp\pytest-task7-final'
-# 161 passed in 51.18s in the normal Windows environment.
+& 'D:\KEYANRUJIAN\python.exe' -m pytest -q -W error -p no:cacheprovider --basetemp 'build\pytest-full-temp-final-d'
+# 164 passed in 47.04s in the normal Windows environment.
 
 & 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest
 & 'D:\KEYANRUJIAN\python.exe' -m tools.reporting.generate_manifest --verify
@@ -215,7 +215,7 @@ Commands executed from the project root with `D:\KEYANRUJIAN\python.exe` in the 
 
 The restricted Codex runner can fail when MSBuild is denied access to user-local Windows SDK metadata
 (`MSB4184`).  The same source and test command in a normal Windows process built the Release DLL and ran the
-complete 161-test suite with zero skips and `-W error` in 51.18 s.  The command above
+complete 164-test suite with zero skips and `-W error` in 47.04 s.  The command above
 uses a project-local pytest temporary directory only to avoid unrelated ACLs left by isolated processes; it
 does not inject, replace, or skip tests.  Ordinary users should run the direct README commands in a normal
 Visual Studio/Windows SDK environment and should not copy any temporary pytest injector.

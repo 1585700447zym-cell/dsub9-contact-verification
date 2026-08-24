@@ -499,10 +499,9 @@ def result_document(results: Iterable[ContactResult]) -> dict:
 
 def _write_document(path: Path, document: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(document, sort_keys=True, indent=2, allow_nan=False) + "\n",
-        encoding="utf-8",
-    )
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        payload = json.dumps(document, sort_keys=True, indent=2, allow_nan=False)
+        stream.write(payload + "\n")
 
 
 def _cli_results(primary_profile: str = "baseline") -> list[ContactResult]:

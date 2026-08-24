@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import asdict
 import json
 import math
+from pathlib import Path
 from typing import get_args, get_type_hints
 
 import mujoco
@@ -229,6 +230,18 @@ def test_result_schema_is_serializable_and_every_number_is_finite():
             numbers.extend(item for item in value.values() if isinstance(item, (float, int)))
     assert numbers and all(np.isfinite(numbers))
     json.dumps(payload, allow_nan=False)
+
+
+def test_contact_document_writer_uses_utf8_lf_bytes(tmp_path: Path):
+    """Text-mode newline translation must not make tracked JSON platform-dependent."""
+    target = tmp_path / "contact.json"
+
+    contact_runner._write_document(target, {"results": [], "schema_version": 3})
+
+    raw = target.read_bytes()
+    raw.decode("utf-8")
+    assert b"\n" in raw
+    assert b"\r\n" not in raw
 
 
 def test_public_termination_schema_has_only_reachable_pose_sweep_outcomes():

@@ -310,10 +310,13 @@ def build_pair_xml(
 
 def _write_includes() -> None:
     INCLUDE_DIR.mkdir(parents=True, exist_ok=True)
-    (INCLUDE_DIR / "dsub9_visual.xml").write_text(_visual_include_xml(), encoding="utf-8")
-    (INCLUDE_DIR / "dsub9_collision.xml").write_text(
-        _collision_include_xml(), encoding="utf-8"
-    )
+    _write_text_lf(INCLUDE_DIR / "dsub9_visual.xml", _visual_include_xml())
+    _write_text_lf(INCLUDE_DIR / "dsub9_collision.xml", _collision_include_xml())
+
+
+def _write_text_lf(path: Path, text: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(text)
 
 
 def generate_model(collision_mode: CollisionMode, output: Path) -> Path:
@@ -322,7 +325,7 @@ def generate_model(collision_mode: CollisionMode, output: Path) -> Path:
     _write_includes()
     target = output if output.is_absolute() else PROJECT_ROOT / output
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(build_pair_xml(collision_mode), encoding="utf-8")
+    _write_text_lf(target, build_pair_xml(collision_mode))
     return target
 
 

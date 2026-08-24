@@ -3,6 +3,7 @@ from __future__ import annotations
 from dataclasses import FrozenInstanceError, replace
 import hashlib
 from pathlib import Path
+import re
 import xml.etree.ElementTree as ET
 
 import pytest
@@ -79,6 +80,44 @@ def test_generated_pair_xml_matches_deterministic_builder(mode: str, path: Path)
     first = build_pair_xml(mode)
     assert build_pair_xml(mode) == first
     assert path.read_text(encoding="utf-8") == first
+
+
+def test_generated_model_and_includes_use_utf8_lf_bytes(tmp_path, monkeypatch):
+    """Platform-default newline translation must not create reviewed CRLF bytes."""
+    import tools.model.generate_mjcf as generator
+
+    include_dir = tmp_path / "models" / "includes"
+    monkeypatch.setattr(generator, "INCLUDE_DIR", include_dir)
+    monkeypatch.setattr(generator, "_require_assets", lambda: None)
+    target = generator.generate_model("sdf", tmp_path / "models" / "pair.xml")
+
+    for path in (
+        target,
+        include_dir / "dsub9_visual.xml",
+        include_dir / "dsub9_collision.xml",
+    ):
+        raw = path.read_bytes()
+        raw.decode("utf-8")
+        assert b"\n" in raw, path
+        assert b"\r\n" not in raw, path
+
+
+def test_reported_fallback_hash_matches_fresh_canonical_generation(tmp_path, monkeypatch):
+    """The reviewed report hash must identify the generator's canonical fallback bytes."""
+    import tools.model.generate_mjcf as generator
+
+    monkeypatch.setattr(generator, "INCLUDE_DIR", tmp_path / "includes")
+    target = generator.generate_model(
+        "polygon32", tmp_path / "dsub9_pair_polygon32.xml"
+    )
+    actual = hashlib.sha256(target.read_bytes()).hexdigest()
+    report = (ROOT / "reports" / "collision_geometry_report.md").read_text(
+        encoding="utf-8"
+    )
+    match = re.search(r"Fallback XML SHA-256 is `([0-9a-f]{64})`", report)
+
+    assert match is not None
+    assert match.group(1) == actual
 
 
 def test_formal_model_uses_real_generated_includes_before_body_geometry():

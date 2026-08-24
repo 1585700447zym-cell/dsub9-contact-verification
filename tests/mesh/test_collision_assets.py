@@ -31,6 +31,22 @@ PROJECT_ROOT = Path(__file__).parents[2]
 VISUAL = PROJECT_ROOT / "assets" / "visual"
 
 
+def _require_pywin32():
+    try:
+        import win32api
+        import win32con
+        import win32security
+    except ImportError:
+        if os.name == "nt":
+            pytest.fail(
+                "Windows ACL tests require pywin32; install the test extra with "
+                "`python -m pip install -e '.[test]'`",
+                pytrace=False,
+            )
+        pytest.skip("Windows ACL behavior")
+    return win32api, win32con, win32security
+
+
 def _vertex_key(vertex: np.ndarray) -> tuple[float, float, float]:
     return tuple(float(value) for value in np.round(vertex, decimals=5))
 
@@ -54,7 +70,7 @@ def _signed_tetrahedron_volumes(mesh: StlMesh) -> np.ndarray:
 
 
 def _windows_acl_summary(path: Path) -> tuple[bool, tuple[tuple[str, int, int, int], ...]]:
-    win32security = pytest.importorskip("win32security")
+    _win32api, _win32con, win32security = _require_pywin32()
     descriptor = win32security.GetNamedSecurityInfo(
         str(path),
         win32security.SE_FILE_OBJECT,
@@ -108,9 +124,7 @@ def _make_windows_acl_fixture(tmp_path: Path, child_count: int) -> tuple[Path, P
 
 def _forge_unprotected_system_read_dacl(path: Path) -> None:
     """Create a real malformed DACL that the old postcondition mistakes for inherited access."""
-    win32api = pytest.importorskip("win32api")
-    win32con = pytest.importorskip("win32con")
-    win32security = pytest.importorskip("win32security")
+    win32api, win32con, win32security = _require_pywin32()
     token = win32security.OpenProcessToken(win32api.GetCurrentProcess(), win32con.TOKEN_QUERY)
     try:
         owner_sid = win32security.GetTokenInformation(token, win32security.TokenUser)[0]
@@ -134,9 +148,7 @@ def _forge_unprotected_system_read_dacl(path: Path) -> None:
 
 def _add_inherited_everyone_read_deny(path: Path) -> None:
     """Preserve every normalized ALLOW while inserting one effective inherited read DENY."""
-    win32api = pytest.importorskip("win32api")
-    win32con = pytest.importorskip("win32con")
-    win32security = pytest.importorskip("win32security")
+    win32api, win32con, win32security = _require_pywin32()
     descriptor = win32security.GetNamedSecurityInfo(
         str(path),
         win32security.SE_FILE_OBJECT,
@@ -179,7 +191,7 @@ def _add_inherited_everyone_read_deny(path: Path) -> None:
 
 def _rewrite_simple_windows_dacl(path: Path, rewrite) -> None:
     """Rewrite an isolated fixture DACL while preserving simple ALLOW/DENY ACE data."""
-    win32security = pytest.importorskip("win32security")
+    _win32api, _win32con, win32security = _require_pywin32()
     descriptor = win32security.GetNamedSecurityInfo(
         str(path),
         win32security.SE_FILE_OBJECT,
@@ -219,7 +231,7 @@ def _rewrite_simple_windows_dacl(path: Path, rewrite) -> None:
 
 
 def _append_inherited_read_allow(path: Path, sid_text: str) -> None:
-    win32security = pytest.importorskip("win32security")
+    _win32api, _win32con, win32security = _require_pywin32()
     sid = win32security.ConvertStringSidToSid(sid_text)
 
     def append(entries):
@@ -237,7 +249,7 @@ def _append_inherited_read_allow(path: Path, sid_text: str) -> None:
 
 
 def _make_inherited_read_allow_effective(path: Path, sid_text: str) -> None:
-    win32security = pytest.importorskip("win32security")
+    _win32api, _win32con, win32security = _require_pywin32()
 
     def clear_inherit_only(entries):
         changed = False
@@ -259,7 +271,7 @@ def _make_inherited_read_allow_effective(path: Path, sid_text: str) -> None:
 
 
 def _remove_read_propagation_flags(path: Path, sid_text: str) -> None:
-    win32security = pytest.importorskip("win32security")
+    _win32api, _win32con, win32security = _require_pywin32()
 
     def remove_flags(entries):
         changed = False
@@ -911,7 +923,7 @@ def test_recursive_normalizer_applies_known_parent_read_ace_to_all_696_children(
     tmp_path, monkeypatch
 ):
     """Inspect an isolated real DACL tree without mutating production collision assets."""
-    win32security = pytest.importorskip("win32security")
+    _win32api, _win32con, win32security = _require_pywin32()
     parent, staging, children, _icacls = _make_windows_acl_fixture(tmp_path, 696)
     monkeypatch.setattr(collision_assets, "COLLISION_DIR", parent / "collision")
     assert _windows_acl_summary(staging)[0]

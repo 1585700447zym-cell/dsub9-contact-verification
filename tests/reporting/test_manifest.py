@@ -100,7 +100,9 @@ def test_verify_accepts_git_crlf_checkout(tmp_path: Path) -> None:
     assert verify_manifest(tmp_path)
 
 
-def test_autocrlf_fresh_checkout_preserves_all_manifest_hashes(tmp_path: Path) -> None:
+def test_autocrlf_fresh_checkout_preserves_all_manifest_hashes(
+    tmp_path: Path, monkeypatch
+) -> None:
     source = tmp_path / "source project"
     for directory in REVIEW_ROOTS:
         (source / directory).mkdir(parents=True)
@@ -125,6 +127,20 @@ def test_autocrlf_fresh_checkout_preserves_all_manifest_hashes(tmp_path: Path) -
         (source / directory / "reviewed.dat").write_bytes(
             f"reviewed {directory}\n".encode("ascii")
         )
+
+    import tools.model.generate_mjcf as model_generator
+    import tools.validation.run_contact_cases as contact_runner
+
+    monkeypatch.setattr(model_generator, "PROJECT_ROOT", source)
+    monkeypatch.setattr(model_generator, "ASSET_DIR", source / "assets")
+    monkeypatch.setattr(model_generator, "MODEL_DIR", source / "models")
+    monkeypatch.setattr(model_generator, "INCLUDE_DIR", source / "models" / "includes")
+    monkeypatch.setattr(model_generator, "_require_assets", lambda: None)
+    model_generator.generate_model("sdf", source / "models" / "generated.xml")
+    contact_runner._write_document(
+        source / "reports" / "generated.json",
+        {"results": [], "schema_version": 3},
+    )
     write_manifest(source)
 
     git_dir = tmp_path / "external.git"

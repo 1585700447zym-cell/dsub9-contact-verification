@@ -31,7 +31,8 @@ Set-Location -LiteralPath $projectRoot
 & $projectPython -m pip install -e '.[test]'
 ```
 
-`pip install` 可能根据本地缓存/包源安装 NumPy、pytest 和 MuJoCo；本仓库的最终审计没有联网执行该步。
+`pip install` 可能根据本地缓存/包源安装 NumPy、pytest、MuJoCo，以及 Windows 上 ACL 测试所需的
+pywin32；本仓库的最终审计没有联网执行该步。
 
 ## 视觉资产
 
@@ -108,7 +109,7 @@ cmake --build $pluginBuild --config Release
 SDF 场景各一条 `uncalibrated_low_response_v1` 和 `uncalibrated_high_response_v1` 结果。它不会产生
 可观测的 stalled-progress 状态；判定只有 `SUCCESS`、`EXCESS_PENETRATION` 和 `NUMERICAL_ERROR`。
 当前 30 µm 穿透阈值是 75 µm 名义径向间隙的 40%，而不是力阈值。正常 Windows 环境中的最新完整测试为
-`161 passed in 51.18s`。
+`164 passed in 47.04s`。
 
 `reports/final_file_manifest.txt` 覆盖 `assets/`、`models/`、`plugins/`、`tools/`、`tests/`、
 `reports/` 下的受审文件，以及根目录的 README、`pyproject.toml`、`.gitattributes` 和
