@@ -94,7 +94,8 @@ def test_low_and_high_profiles_preserve_qualitative_contact_conclusions():
         )
 
 
-def test_result_document_records_profiles_and_diagnostic_sensitivity_scope():
+def test_partial_result_document_reports_only_observed_sensitivity_scope():
+    """Serializer must not claim +X sensitivity when only combined A was supplied."""
     results = [
         run_case(ContactCase.combined(), 0.0002, "sdf", profile=key)
         for key in ("baseline", "low_response", "high_response")
@@ -107,10 +108,7 @@ def test_result_document_records_profiles_and_diagnostic_sensitivity_scope():
         "low_response",
         "high_response",
     )
-    assert document["sensitivity"]["cases"] == [
-        "x_offset_pos_100um",
-        "combined_a",
-    ]
+    assert document["sensitivity"]["cases"] == ["combined_a"]
     assert document["sensitivity"]["profiles"] == [
         "baseline",
         "low_response",
@@ -121,4 +119,21 @@ def test_result_document_records_profiles_and_diagnostic_sensitivity_scope():
         "uncalibrated_diagnostic_v1",
         "uncalibrated_low_response_v1",
         "uncalibrated_high_response_v1",
+    ]
+
+
+def test_full_cli_results_retain_complete_stable_sensitivity_scope():
+    """The reviewed 20-result matrix must still expose both three-profile cases."""
+    results = contact_runner._cli_results("baseline")
+    document = result_document(results)
+
+    assert len(results) == 20
+    assert document["sensitivity"]["cases"] == [
+        "x_offset_pos_100um",
+        "combined_a",
+    ]
+    assert document["sensitivity"]["profiles"] == [
+        "baseline",
+        "low_response",
+        "high_response",
     ]

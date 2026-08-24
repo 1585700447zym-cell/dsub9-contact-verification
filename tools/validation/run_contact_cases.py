@@ -446,6 +446,24 @@ def run_case(
 
 def result_document(results: Iterable[ContactResult]) -> dict:
     result_list = list(results)
+    profiles_by_case: dict[str, set[str]] = {}
+    for result in result_list:
+        profiles_by_case.setdefault(result.case, set()).add(result.contact_profile)
+    case_order = [case.name for case in all_cases()]
+    case_order.extend(name for name in profiles_by_case if name not in case_order)
+    sensitivity_cases = [
+        name for name in case_order if len(profiles_by_case.get(name, ())) > 1
+    ]
+    sensitivity_profile_names = {
+        profile_name
+        for case_name in sensitivity_cases
+        for profile_name in profiles_by_case[case_name]
+    }
+    sensitivity_profiles = [
+        key
+        for key, parameters in _CONTACT_PARAMETER_PROFILES.items()
+        if parameters.name in sensitivity_profile_names
+    ]
     return {
         "cases": [asdict(case) for case in all_cases()],
         "coordinate_convention": {
@@ -468,8 +486,8 @@ def result_document(results: Iterable[ContactResult]) -> dict:
         "results": [asdict(result) for result in result_list],
         "schema_version": 3,
         "sensitivity": {
-            "cases": ["x_offset_pos_100um", "combined_a"],
-            "profiles": list(_CONTACT_PARAMETER_PROFILES),
+            "cases": sensitivity_cases,
+            "profiles": sensitivity_profiles,
             "interpretation": (
                 "Peak force, peak torque and maximum penetration are numerical-model "
                 "diagnostics for qualitative sensitivity, not material calibration."
