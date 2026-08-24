@@ -4,6 +4,8 @@ from collections import Counter
 import os
 from pathlib import Path
 import shutil
+import subprocess
+import tempfile
 
 import numpy as np
 import pytest
@@ -51,7 +53,7 @@ def _signed_tetrahedron_volumes(mesh: StlMesh) -> np.ndarray:
     ) / 6.0
 
 
-def _windows_acl_summary(path: Path) -> tuple[bool, frozenset[str], frozenset[str]]:
+def _windows_acl_summary(path: Path) -> tuple[bool, tuple[tuple[str, int, int, int], ...]]:
     win32security = pytest.importorskip("win32security")
     descriptor = win32security.GetNamedSecurityInfo(
         str(path),
@@ -60,16 +62,38 @@ def _windows_acl_summary(path: Path) -> tuple[bool, frozenset[str], frozenset[st
     )
     control, _revision = descriptor.GetSecurityDescriptorControl()
     dacl = descriptor.GetSecurityDescriptorDacl()
-    all_sids: set[str] = set()
-    inherited_sids: set[str] = set()
+    aces: list[tuple[str, int, int, int]] = []
     for index in range(dacl.GetAceCount()):
-        header, _mask, sid = dacl.GetAce(index)
-        sid_text = win32security.ConvertSidToStringSid(sid)
-        all_sids.add(sid_text)
-        if header[1] & win32security.INHERITED_ACE:
-            inherited_sids.add(sid_text)
+        header, mask, sid = dacl.GetAce(index)
+        aces.append((win32security.ConvertSidToStringSid(sid), header[0], header[1], mask))
     protected = bool(control & win32security.SE_DACL_PROTECTED)
-    return protected, frozenset(all_sids), frozenset(inherited_sids)
+    return protected, tuple(aces)
+
+
+def _make_windows_acl_fixture(tmp_path: Path, child_count: int) -> tuple[Path, Path, tuple[Path, ...], Path]:
+    icacls_text = shutil.which("icacls.exe")
+    if icacls_text is None:
+        pytest.skip("Windows icacls.exe is unavailable")
+    icacls = Path(icacls_text)
+    parent = tmp_path / "acl-parent"
+    parent.mkdir()
+    subprocess.run(
+        [str(icacls), str(parent), "/grant", "*S-1-1-0:(OI)(CI)R", "/Q"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    staging = Path(tempfile.mkdtemp(prefix=".collision-staging-", dir=parent))
+    children = tuple(staging / f"dummy_{index:03d}.stl" for index in range(child_count))
+    for child in children:
+        child.write_bytes(b"acl-probe")
+    subprocess.run(
+        [str(icacls), str(staging), "/inheritance:d", "/T", "/Q"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    return parent, staging, children, icacls
 
 
 def _is_convex(mesh: StlMesh, tolerance_mm: float = 2e-5) -> bool:
@@ -683,21 +707,90 @@ def test_temporary_cleanup_refuses_a_path_outside_the_collision_parent(tmp_path,
 
 
 @pytest.mark.skipif(os.name != "nt", reason="Windows DACL inheritance behavior")
-def test_real_promotion_inherits_parent_access_on_directory_and_child():
-    """Renaming sandbox-created staging must not publish its protected DACL."""
-    assets_dir = PROJECT_ROOT / "assets"
-    collision_dir = assets_dir / "collision"
-    representative = collision_dir / "d_guide_male_seg_000.stl"
-    _parent_protected, parent_sids, _parent_inherited = _windows_acl_summary(assets_dir)
+def test_recursive_normalizer_applies_known_parent_read_ace_to_all_696_children(
+    tmp_path, monkeypatch
+):
+    """Inspect an isolated real DACL tree without mutating production collision assets."""
+    win32security = pytest.importorskip("win32security")
+    parent, staging, children, _icacls = _make_windows_acl_fixture(tmp_path, 696)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", parent / "collision")
+    assert _windows_acl_summary(staging)[0]
+    assert all(_windows_acl_summary(child)[0] for child in children)
 
-    collision_assets.generate_collision_assets()
+    collision_assets._normalize_staging_permissions(staging)
 
-    target_protected, _target_sids, target_inherited = _windows_acl_summary(collision_dir)
-    child_protected, _child_sids, child_inherited = _windows_acl_summary(representative)
-    assert not target_protected
-    assert not child_protected
-    assert parent_sids <= target_inherited
-    assert parent_sids <= child_inherited
+    for path in (staging, *children):
+        protected, aces = _windows_acl_summary(path)
+        assert not protected, path
+        assert any(
+            sid == "S-1-1-0"
+            and ace_type == win32security.ACCESS_ALLOWED_ACE_TYPE
+            and flags & win32security.INHERITED_ACE
+            and mask & 0x1
+            for sid, ace_type, flags, mask in aces
+        ), path
+
+
+@pytest.mark.skipif(os.name != "nt", reason="Windows system-directory lookup behavior")
+def test_spoofed_systemroot_cannot_redirect_icacls_selection(tmp_path, monkeypatch):
+    parent, staging, children, trusted_icacls = _make_windows_acl_fixture(tmp_path, 1)
+    fake_system_root = tmp_path / "fake-windows"
+    fake_icacls = fake_system_root / "System32" / "icacls.exe"
+    fake_icacls.parent.mkdir(parents=True)
+    shutil.copy2(trusted_icacls, fake_icacls)
+    monkeypatch.setenv("SystemRoot", str(fake_system_root))
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", parent / "collision")
+    real_run = subprocess.run
+    invoked_executables: list[Path] = []
+
+    def record_executable(args, **kwargs):
+        invoked_executables.append(Path(args[0]).resolve())
+        return real_run(args, **kwargs)
+
+    monkeypatch.setattr(collision_assets.subprocess, "run", record_executable)
+
+    collision_assets._normalize_staging_permissions(staging)
+
+    assert invoked_executables == [trusted_icacls.resolve()]
+    assert not _windows_acl_summary(staging)[0]
+    assert not _windows_acl_summary(children[0])[0]
+
+
+@pytest.mark.skipif(os.name != "nt", reason="Windows DACL postcondition behavior")
+def test_success_exit_without_acl_normalization_is_rejected_before_promotion(tmp_path, monkeypatch):
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+    real_run = subprocess.run
+    icacls_text = shutil.which("icacls.exe")
+    assert icacls_text is not None
+
+    def write_protected_staging(output_dir):
+        (output_dir / "new.stl").write_bytes(b"staged")
+        real_run(
+            [icacls_text, str(output_dir), "/inheritance:d", "/T", "/Q"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        return ()
+
+    def report_success_without_changing_acl(*args, **kwargs):
+        return subprocess.CompletedProcess(args=args[0], returncode=0, stdout="", stderr="")
+
+    monkeypatch.setattr(collision_assets, "_generate_into", write_protected_staging)
+    monkeypatch.setattr(collision_assets, "_validate_staging_inventory", lambda _directory: ())
+    monkeypatch.setattr(collision_assets.subprocess, "run", report_success_without_changing_acl)
+
+    with pytest.raises(PermissionError, match="DACL"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+    assert not list(collision_dir.parent.glob(".collision-backup-*"))
 
 
 def test_permission_normalization_failure_leaves_previous_target_untouched(tmp_path, monkeypatch):

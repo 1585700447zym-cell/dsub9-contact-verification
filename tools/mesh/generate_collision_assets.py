@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 from collections import Counter
+import ctypes
+from ctypes import wintypes
 import os
 from pathlib import Path
 import shutil
@@ -435,10 +437,17 @@ def _normalize_staging_permissions(staging_dir: Path) -> None:
     expected_parent = COLLISION_DIR.parent.resolve()
     if resolved.parent != expected_parent or not resolved.name.startswith(".collision-staging-"):
         raise ValueError(f"refusing to normalize unsafe staging directory: {resolved}")
-    system_root = os.environ.get("SystemRoot")
-    if not system_root:
-        raise RuntimeError("SystemRoot is unavailable; cannot locate Windows icacls.exe")
-    icacls = Path(system_root) / "System32" / "icacls.exe"
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    get_system_directory = kernel32.GetSystemDirectoryW
+    get_system_directory.argtypes = [wintypes.LPWSTR, wintypes.UINT]
+    get_system_directory.restype = wintypes.UINT
+    system_directory_buffer = ctypes.create_unicode_buffer(32768)
+    length = get_system_directory(system_directory_buffer, len(system_directory_buffer))
+    if length == 0:
+        raise ctypes.WinError(ctypes.get_last_error())
+    if length >= len(system_directory_buffer):
+        raise RuntimeError("Windows system directory exceeds the supported path length")
+    icacls = Path(system_directory_buffer.value) / "icacls.exe"
     if not icacls.is_file():
         raise FileNotFoundError(f"Windows ACL utility is unavailable: {icacls}")
     subprocess.run(
@@ -447,6 +456,119 @@ def _normalize_staging_permissions(staging_dir: Path) -> None:
         capture_output=True,
         text=True,
     )
+    _validate_windows_inherited_dacls((resolved, *sorted(resolved.rglob("*"))))
+
+
+class _AclSizeInformation(ctypes.Structure):
+    _fields_ = [
+        ("ace_count", wintypes.DWORD),
+        ("acl_bytes_in_use", wintypes.DWORD),
+        ("acl_bytes_free", wintypes.DWORD),
+    ]
+
+
+class _AceHeader(ctypes.Structure):
+    _fields_ = [
+        ("ace_type", ctypes.c_ubyte),
+        ("ace_flags", ctypes.c_ubyte),
+        ("ace_size", wintypes.WORD),
+    ]
+
+
+class _AccessAllowedAce(ctypes.Structure):
+    _fields_ = [
+        ("header", _AceHeader),
+        ("mask", wintypes.DWORD),
+        ("sid_start", wintypes.DWORD),
+    ]
+
+
+def _validate_windows_inherited_dacls(paths: tuple[Path, ...]) -> None:
+    advapi32 = ctypes.WinDLL("advapi32", use_last_error=True)
+    kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    get_named_security_info = advapi32.GetNamedSecurityInfoW
+    get_named_security_info.argtypes = [
+        wintypes.LPWSTR,
+        ctypes.c_int,
+        wintypes.DWORD,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        ctypes.POINTER(ctypes.c_void_p),
+        ctypes.c_void_p,
+        ctypes.POINTER(ctypes.c_void_p),
+    ]
+    get_named_security_info.restype = wintypes.DWORD
+    get_descriptor_control = advapi32.GetSecurityDescriptorControl
+    get_descriptor_control.argtypes = [
+        ctypes.c_void_p,
+        ctypes.POINTER(ctypes.c_ushort),
+        ctypes.POINTER(wintypes.DWORD),
+    ]
+    get_descriptor_control.restype = wintypes.BOOL
+    get_acl_information = advapi32.GetAclInformation
+    get_acl_information.argtypes = [
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        wintypes.DWORD,
+        ctypes.c_int,
+    ]
+    get_acl_information.restype = wintypes.BOOL
+    get_ace = advapi32.GetAce
+    get_ace.argtypes = [
+        ctypes.c_void_p,
+        wintypes.DWORD,
+        ctypes.POINTER(ctypes.c_void_p),
+    ]
+    get_ace.restype = wintypes.BOOL
+    kernel32.LocalFree.argtypes = [ctypes.c_void_p]
+    kernel32.LocalFree.restype = ctypes.c_void_p
+
+    for path in paths:
+        dacl = ctypes.c_void_p()
+        descriptor = ctypes.c_void_p()
+        result = get_named_security_info(
+            str(path),
+            1,
+            0x00000004,
+            None,
+            None,
+            ctypes.byref(dacl),
+            None,
+            ctypes.byref(descriptor),
+        )
+        if result != 0:
+            raise ctypes.WinError(result)
+        try:
+            control = ctypes.c_ushort()
+            revision = wintypes.DWORD()
+            if not get_descriptor_control(descriptor, ctypes.byref(control), ctypes.byref(revision)):
+                raise ctypes.WinError(ctypes.get_last_error())
+            if control.value & 0x1000:
+                raise PermissionError(f"protected DACL remains after normalization: {path}")
+            if not dacl.value:
+                raise PermissionError(f"invalid null inherited DACL after normalization: {path}")
+
+            acl_info = _AclSizeInformation()
+            if not get_acl_information(dacl, ctypes.byref(acl_info), ctypes.sizeof(acl_info), 2):
+                raise ctypes.WinError(ctypes.get_last_error())
+            inherited_read_allow = False
+            for index in range(acl_info.ace_count):
+                ace_pointer = ctypes.c_void_p()
+                if not get_ace(dacl, index, ctypes.byref(ace_pointer)):
+                    raise ctypes.WinError(ctypes.get_last_error())
+                header = ctypes.cast(ace_pointer, ctypes.POINTER(_AceHeader)).contents
+                if header.ace_type == 0 and header.ace_flags & 0x10:
+                    allowed = ctypes.cast(
+                        ace_pointer, ctypes.POINTER(_AccessAllowedAce)
+                    ).contents
+                    if allowed.mask & (0x00000001 | 0x80000000):
+                        inherited_read_allow = True
+                        break
+            if not inherited_read_allow:
+                raise PermissionError(f"missing inherited DACL read ALLOW ACE: {path}")
+        finally:
+            if descriptor.value:
+                kernel32.LocalFree(descriptor)
 
 
 def _promote_staging_directory(staging_dir: Path, target_dir: Path) -> None:
