@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import Counter
+import os
 from pathlib import Path
 import shutil
 
@@ -48,6 +49,27 @@ def _signed_tetrahedron_volumes(mesh: StlMesh) -> np.ndarray:
         triangles[:, 0],
         np.cross(triangles[:, 1], triangles[:, 2]),
     ) / 6.0
+
+
+def _windows_acl_summary(path: Path) -> tuple[bool, frozenset[str], frozenset[str]]:
+    win32security = pytest.importorskip("win32security")
+    descriptor = win32security.GetNamedSecurityInfo(
+        str(path),
+        win32security.SE_FILE_OBJECT,
+        win32security.DACL_SECURITY_INFORMATION,
+    )
+    control, _revision = descriptor.GetSecurityDescriptorControl()
+    dacl = descriptor.GetSecurityDescriptorDacl()
+    all_sids: set[str] = set()
+    inherited_sids: set[str] = set()
+    for index in range(dacl.GetAceCount()):
+        header, _mask, sid = dacl.GetAce(index)
+        sid_text = win32security.ConvertSidToStringSid(sid)
+        all_sids.add(sid_text)
+        if header[1] & win32security.INHERITED_ACE:
+            inherited_sids.add(sid_text)
+    protected = bool(control & win32security.SE_DACL_PROTECTED)
+    return protected, frozenset(all_sids), frozenset(inherited_sids)
 
 
 def _is_convex(mesh: StlMesh, tolerance_mm: float = 2e-5) -> bool:
@@ -658,3 +680,51 @@ def test_temporary_cleanup_refuses_a_path_outside_the_collision_parent(tmp_path,
         collision_assets._remove_temporary_directory(unsafe, ".collision-staging-")
 
     assert unsafe.is_dir()
+
+
+@pytest.mark.skipif(os.name != "nt", reason="Windows DACL inheritance behavior")
+def test_real_promotion_inherits_parent_access_on_directory_and_child():
+    """Renaming sandbox-created staging must not publish its protected DACL."""
+    assets_dir = PROJECT_ROOT / "assets"
+    collision_dir = assets_dir / "collision"
+    representative = collision_dir / "d_guide_male_seg_000.stl"
+    _parent_protected, parent_sids, _parent_inherited = _windows_acl_summary(assets_dir)
+
+    collision_assets.generate_collision_assets()
+
+    target_protected, _target_sids, target_inherited = _windows_acl_summary(collision_dir)
+    child_protected, _child_sids, child_inherited = _windows_acl_summary(representative)
+    assert not target_protected
+    assert not child_protected
+    assert parent_sids <= target_inherited
+    assert parent_sids <= child_inherited
+
+
+def test_permission_normalization_failure_leaves_previous_target_untouched(tmp_path, monkeypatch):
+    """ACL repair is a pre-promotion gate, not a best-effort post-promotion action."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    def write_staged_marker(output_dir):
+        (output_dir / "new.stl").write_bytes(b"staged")
+        return ()
+
+    def fail_normalization(_staging_dir):
+        raise PermissionError("injected permission normalization failure")
+
+    monkeypatch.setattr(collision_assets, "_generate_into", write_staged_marker)
+    monkeypatch.setattr(collision_assets, "_validate_staging_inventory", lambda _directory: ())
+    monkeypatch.setattr(
+        collision_assets, "_normalize_staging_permissions", fail_normalization, raising=False
+    )
+
+    with pytest.raises(PermissionError, match="injected permission normalization failure"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+    assert not list(collision_dir.parent.glob(".collision-backup-*"))

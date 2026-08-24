@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 from collections import Counter
+import os
 from pathlib import Path
 import shutil
+import subprocess
 import tempfile
 
 import numpy as np
@@ -425,6 +427,28 @@ def _remove_temporary_directory(path: Path, prefix: str) -> None:
         shutil.rmtree(resolved)
 
 
+def _normalize_staging_permissions(staging_dir: Path) -> None:
+    """Reset a Windows staging tree to the exact assets parent's inherited DACL."""
+    if os.name != "nt":
+        return
+    resolved = staging_dir.resolve()
+    expected_parent = COLLISION_DIR.parent.resolve()
+    if resolved.parent != expected_parent or not resolved.name.startswith(".collision-staging-"):
+        raise ValueError(f"refusing to normalize unsafe staging directory: {resolved}")
+    system_root = os.environ.get("SystemRoot")
+    if not system_root:
+        raise RuntimeError("SystemRoot is unavailable; cannot locate Windows icacls.exe")
+    icacls = Path(system_root) / "System32" / "icacls.exe"
+    if not icacls.is_file():
+        raise FileNotFoundError(f"Windows ACL utility is unavailable: {icacls}")
+    subprocess.run(
+        [str(icacls), str(resolved), "/reset", "/T", "/Q"],
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+
 def _promote_staging_directory(staging_dir: Path, target_dir: Path) -> None:
     backup_dir: Path | None = None
     try:
@@ -462,6 +486,7 @@ def generate_collision_assets() -> tuple[Path, ...]:
     try:
         _generate_into(staging_dir)
         _validate_staging_inventory(staging_dir)
+        _normalize_staging_permissions(staging_dir)
         _promote_staging_directory(staging_dir, COLLISION_DIR)
         paths = generated_collision_paths()
     except BaseException as primary_error:
