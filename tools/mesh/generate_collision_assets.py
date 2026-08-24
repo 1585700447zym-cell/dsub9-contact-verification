@@ -427,16 +427,25 @@ def _remove_temporary_directory(path: Path, prefix: str) -> None:
 
 def _promote_staging_directory(staging_dir: Path, target_dir: Path) -> None:
     backup_dir: Path | None = None
-    if target_dir.exists():
-        backup_dir = _unused_sibling_path(target_dir.parent, ".collision-backup-")
-        target_dir.replace(backup_dir)
     try:
+        if target_dir.exists():
+            backup_dir = _unused_sibling_path(target_dir.parent, ".collision-backup-")
+            target_dir.replace(backup_dir)
         staging_dir.replace(target_dir)
     except BaseException:
         if backup_dir is not None and backup_dir.exists():
+            rollback_error: BaseException | None = None
             try:
+                if target_dir.exists():
+                    if staging_dir.exists():
+                        raise OSError(
+                            "cannot roll back while both target and staging directories exist"
+                        )
+                    target_dir.replace(staging_dir)
                 backup_dir.replace(target_dir)
-            except BaseException as rollback_error:
+            except BaseException as error:
+                rollback_error = error
+            if not target_dir.exists() or backup_dir.exists():
                 raise RuntimeError(
                     f"collision replacement and rollback failed; previous assets remain at {backup_dir}"
                 ) from rollback_error
@@ -455,10 +464,17 @@ def generate_collision_assets() -> tuple[Path, ...]:
         _validate_staging_inventory(staging_dir)
         _promote_staging_directory(staging_dir, COLLISION_DIR)
         paths = generated_collision_paths()
-        print(f"generated {len(paths)} collision STL parts in {COLLISION_DIR}")
-        return paths
-    finally:
-        _remove_temporary_directory(staging_dir, ".collision-staging-")
+    except BaseException as primary_error:
+        try:
+            _remove_temporary_directory(staging_dir, ".collision-staging-")
+        except BaseException as cleanup_error:
+            raise RuntimeError(
+                f"{primary_error}; staging cleanup also failed: {cleanup_error}"
+            ) from primary_error
+        raise
+    _remove_temporary_directory(staging_dir, ".collision-staging-")
+    print(f"generated {len(paths)} collision STL parts in {COLLISION_DIR}")
+    return paths
 
 
 def main() -> None:

@@ -490,6 +490,39 @@ def test_staging_swap_failure_rolls_back_the_complete_previous_asset_set(tmp_pat
     assert after == before
 
 
+def test_completed_backup_move_that_then_raises_is_rolled_back(tmp_path, monkeypatch):
+    """Post-move Windows/wrapper errors must not strand the old set under a hidden backup."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    def write_staged_marker(output_dir):
+        (output_dir / "new.stl").write_bytes(b"staged")
+        return ()
+
+    monkeypatch.setattr(collision_assets, "_generate_into", write_staged_marker)
+    monkeypatch.setattr(collision_assets, "_validate_staging_inventory", lambda _directory: ())
+    original_replace = Path.replace
+
+    def complete_backup_move_then_raise(source, target):
+        if source == collision_dir:
+            original_replace(source, target)
+            raise OSError("injected post-backup-move failure")
+        return original_replace(source, target)
+
+    monkeypatch.setattr(Path, "replace", complete_backup_move_then_raise)
+
+    with pytest.raises(OSError, match="injected post-backup-move failure"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+    assert not list(collision_dir.parent.glob(".collision-backup-*"))
+
+
 def test_rollback_failure_preserves_and_identifies_the_backup(tmp_path, monkeypatch):
     """A failed rollback must never let final cleanup erase the recoverable prior set."""
     project_root = tmp_path / "project"
@@ -525,6 +558,53 @@ def test_rollback_failure_preserves_and_identifies_the_backup(tmp_path, monkeypa
     assert str(backups[0]) in str(captured.value)
     assert (backups[0] / existing.name).read_bytes() == b"known-good"
     assert not list(collision_dir.parent.glob(".collision-staging-*"))
+
+
+def test_cleanup_failure_cannot_mask_the_preserved_backup_after_rollback_failure(
+    tmp_path, monkeypatch
+):
+    """The final exception must retain recovery information across all three failures."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    def write_staged_marker(output_dir):
+        (output_dir / "new.stl").write_bytes(b"staged")
+        return ()
+
+    monkeypatch.setattr(collision_assets, "_generate_into", write_staged_marker)
+    monkeypatch.setattr(collision_assets, "_validate_staging_inventory", lambda _directory: ())
+    original_replace = Path.replace
+
+    def fail_promotion_and_rollback(source, target):
+        if source.name.startswith(".collision-staging-"):
+            raise OSError("injected staging promotion failure")
+        if source.name.startswith(".collision-backup-"):
+            raise OSError("injected rollback failure")
+        return original_replace(source, target)
+
+    monkeypatch.setattr(Path, "replace", fail_promotion_and_rollback)
+    original_remove = collision_assets._remove_temporary_directory
+
+    def fail_staging_cleanup(path, prefix):
+        if path.name.startswith(".collision-staging-"):
+            raise OSError("injected staging cleanup failure")
+        return original_remove(path, prefix)
+
+    monkeypatch.setattr(collision_assets, "_remove_temporary_directory", fail_staging_cleanup)
+
+    with pytest.raises(RuntimeError, match="previous assets remain at") as captured:
+        collision_assets.generate_collision_assets()
+
+    backups = list(collision_dir.parent.glob(".collision-backup-*"))
+    assert len(backups) == 1
+    assert str(backups[0]) in str(captured.value)
+    assert "injected staging cleanup failure" in str(captured.value)
+    assert (backups[0] / existing.name).read_bytes() == b"known-good"
 
 
 def test_target_with_unowned_files_is_rejected_before_generation(tmp_path, monkeypatch):
