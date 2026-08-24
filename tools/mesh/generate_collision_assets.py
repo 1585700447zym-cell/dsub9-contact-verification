@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+from collections import Counter
 from pathlib import Path
+import shutil
+import tempfile
 
 import numpy as np
 
@@ -24,6 +27,8 @@ MALE_WALL_Z_MM = (0.0, 4.00)
 SECTION_TOLERANCE_MM = 1e-5
 
 SECTOR_COUNT = 32
+MALE_D_WALL_PART_COUNT = 78
+FEMALE_D_WALL_PART_COUNT = 42
 BORE_RADIUS_MM = 0.575
 ENTRY_RADIUS_MM = 0.675
 LOCAL_OUTER_RADIUS_MM = 1.0
@@ -234,13 +239,15 @@ def _write_d_wall(
     mesh_path: Path,
     section_z_mm: float,
     wall_z_mm: tuple[float, float],
+    output_dir: Path | None = None,
 ) -> tuple[list[Path], tuple[np.ndarray, np.ndarray]]:
+    destination = COLLISION_DIR if output_dir is None else output_dir
     loops = section_loops(read_binary_stl(mesh_path), section_z_mm, SECTION_TOLERANCE_MM)
     outer, inner = select_centered_d_loops(loops)
     profiles = build_d_wall_profiles(outer, inner, SECTION_TOLERANCE_MM)
     paths: list[Path] = []
     for index, profile in enumerate(profiles):
-        target = COLLISION_DIR / f"{prefix}_seg_{index:03d}.stl"
+        target = destination / f"{prefix}_seg_{index:03d}.stl"
         write_binary_stl(target, make_prism(profile, *wall_z_mm))
         paths.append(target)
     print(f"{prefix}: z={section_z_mm:.3f} mm, outer {_loop_metrics(outer)}")
@@ -256,7 +263,8 @@ def _write_d_wall(
     return paths, (outer, inner)
 
 
-def _write_fallback_holes() -> list[Path]:
+def _write_fallback_holes(output_dir: Path | None = None) -> list[Path]:
+    destination = COLLISION_DIR if output_dir is None else output_dir
     paths: list[Path] = []
     half_angle = np.pi / SECTOR_COUNT
     for hole_index, centre in enumerate(FALLBACK_HOLE_CENTRES_MM, start=1):
@@ -275,7 +283,7 @@ def _write_fallback_holes() -> list[Path]:
                     z0,
                     z1,
                 )
-                target = COLLISION_DIR / (
+                target = destination / (
                     f"hole_fallback_32_h{hole_index:02d}_{layer}_s{sector_index:02d}.stl"
                 )
                 write_binary_stl(target, _translated_xy(mesh, centre))
@@ -288,23 +296,169 @@ def _write_fallback_holes() -> list[Path]:
     return paths
 
 
-def generated_collision_paths() -> tuple[Path, ...]:
+def generated_collision_paths(directory: Path | None = None) -> tuple[Path, ...]:
     """Enumerate only the collision assets owned by this generator."""
+    destination = COLLISION_DIR if directory is None else directory
     patterns = ("d_guide_male_*.stl", "d_socket_female_*.stl", "hole_fallback_32_*.stl")
-    return tuple(sorted(path for pattern in patterns for path in COLLISION_DIR.glob(pattern)))
+    return tuple(sorted(path for pattern in patterns for path in destination.glob(pattern)))
+
+
+def _expected_collision_names() -> frozenset[str]:
+    names = {
+        *(f"d_guide_male_seg_{index:03d}.stl" for index in range(MALE_D_WALL_PART_COUNT)),
+        *(f"d_socket_female_seg_{index:03d}.stl" for index in range(FEMALE_D_WALL_PART_COUNT)),
+    }
+    names.update(
+        f"hole_fallback_32_h{hole_index:02d}_{layer}_s{sector_index:02d}.stl"
+        for hole_index in range(1, len(FALLBACK_HOLE_CENTRES_MM) + 1)
+        for layer in ("entry", "main")
+        for sector_index in range(SECTOR_COUNT)
+    )
+    return frozenset(names)
+
+
+def _validate_staging_inventory(directory: Path) -> tuple[Path, ...]:
+    actual = {path.name for path in directory.iterdir()}
+    expected = _expected_collision_names()
+    if actual != expected:
+        missing = sorted(expected - actual)
+        unexpected = sorted(actual - expected)
+        raise ValueError(
+            "collision asset inventory mismatch: "
+            f"expected={len(expected)}, actual={len(actual)}, "
+            f"missing={missing[:3]}, unexpected={unexpected[:3]}"
+        )
+    paths = tuple(directory / name for name in sorted(expected))
+    for path in paths:
+        try:
+            _validate_collision_mesh(read_binary_stl(path))
+        except (OSError, ValueError) as error:
+            raise ValueError(f"invalid collision asset {path.name}: {error}") from error
+    return paths
+
+
+def _validate_collision_mesh(mesh: StlMesh) -> None:
+    triangles = np.asarray(mesh.triangles, dtype=np.float64)
+    normals = np.asarray(mesh.normals, dtype=np.float64)
+    if len(triangles) < 12 or not np.isfinite(triangles).all() or not np.isfinite(normals).all():
+        raise ValueError("mesh must contain at least 12 finite triangles and normals")
+    if np.any(mesh.bounds.size <= 0):
+        raise ValueError("mesh bounds must have positive extent on every axis")
+
+    cross_products = np.cross(triangles[:, 1] - triangles[:, 0], triangles[:, 2] - triangles[:, 0])
+    lengths = np.linalg.norm(cross_products, axis=1)
+    if np.any(lengths <= 1e-12):
+        raise ValueError("mesh contains a degenerate triangle")
+    expected_normals = cross_products / lengths[:, np.newaxis]
+    if not np.allclose(normals, expected_normals, atol=2e-6, rtol=0.0):
+        raise ValueError("stored facet normals do not match triangle winding")
+
+    edge_counts: Counter[tuple[tuple[float, ...], tuple[float, ...]]] = Counter()
+    for triangle in triangles:
+        for start, end in zip(triangle, np.roll(triangle, -1, axis=0), strict=True):
+            first = tuple(float(value) for value in np.round(start, decimals=5))
+            second = tuple(float(value) for value in np.round(end, decimals=5))
+            edge_counts[tuple(sorted((first, second)))] += 1
+    if not edge_counts or set(edge_counts.values()) != {2}:
+        raise ValueError("mesh is not a closed two-manifold")
+
+    signed_volume = np.einsum(
+        "ij,ij->i", triangles[:, 0], np.cross(triangles[:, 1], triangles[:, 2])
+    ).sum() / 6.0
+    if signed_volume <= 1e-8:
+        raise ValueError("mesh must have positive signed volume and outward winding")
+
+    vertices = np.unique(triangles.reshape(-1, 3), axis=0)
+    centre = vertices.mean(axis=0)
+    for triangle, normal in zip(triangles, cross_products, strict=True):
+        outward = -normal if np.dot(normal, centre - triangle[0]) > 0 else normal
+        if np.max((vertices - triangle[0]) @ outward) > 2e-5 * np.linalg.norm(outward):
+            raise ValueError("mesh is not convex")
+
+
+def _generate_into(output_dir: Path) -> tuple[Path, ...]:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    _write_d_wall("d_guide_male", MALE_VISUAL, MALE_SECTION_Z_MM, MALE_WALL_Z_MM, output_dir)
+    _write_d_wall(
+        "d_socket_female", FEMALE_VISUAL, FEMALE_SECTION_Z_MM, FEMALE_WALL_Z_MM, output_dir
+    )
+    _write_fallback_holes(output_dir)
+    return generated_collision_paths(output_dir)
+
+
+def _unused_sibling_path(parent: Path, prefix: str) -> Path:
+    reserved = Path(tempfile.mkdtemp(prefix=prefix, dir=parent))
+    reserved.rmdir()
+    return reserved
+
+
+def _assert_safe_target() -> None:
+    project_root = PROJECT_ROOT.resolve()
+    target = COLLISION_DIR.resolve()
+    try:
+        target.relative_to(project_root)
+    except ValueError as error:
+        raise ValueError(f"collision target is outside project workspace: {target}") from error
+    expected = (project_root / "assets" / "collision").resolve()
+    if target != expected:
+        raise ValueError(f"collision target must be the project assets/collision directory: {target}")
+    if target.exists() and not target.is_dir():
+        raise ValueError(f"collision target is not a directory: {target}")
+    if target.exists():
+        expected_names = _expected_collision_names()
+        unowned = sorted(
+            path.name for path in target.iterdir() if not path.is_file() or path.name not in expected_names
+        )
+        if unowned:
+            raise ValueError(
+                "collision target contains files not owned by this generator: "
+                f"{unowned[:3]}"
+            )
+
+
+def _remove_temporary_directory(path: Path, prefix: str) -> None:
+    resolved = path.resolve()
+    expected_parent = COLLISION_DIR.parent.resolve()
+    if resolved.parent != expected_parent or not resolved.name.startswith(prefix):
+        raise ValueError(f"refusing to remove unsafe temporary directory: {resolved}")
+    if resolved.exists():
+        shutil.rmtree(resolved)
+
+
+def _promote_staging_directory(staging_dir: Path, target_dir: Path) -> None:
+    backup_dir: Path | None = None
+    if target_dir.exists():
+        backup_dir = _unused_sibling_path(target_dir.parent, ".collision-backup-")
+        target_dir.replace(backup_dir)
+    try:
+        staging_dir.replace(target_dir)
+    except BaseException:
+        if backup_dir is not None and backup_dir.exists():
+            try:
+                backup_dir.replace(target_dir)
+            except BaseException as rollback_error:
+                raise RuntimeError(
+                    f"collision replacement and rollback failed; previous assets remain at {backup_dir}"
+                ) from rollback_error
+        raise
+    if backup_dir is not None:
+        _remove_temporary_directory(backup_dir, ".collision-backup-")
 
 
 def generate_collision_assets() -> tuple[Path, ...]:
     """Regenerate all Task 3 collision assets deterministically."""
-    COLLISION_DIR.mkdir(parents=True, exist_ok=True)
-    for existing in generated_collision_paths():
-        existing.unlink()
-    _write_d_wall("d_guide_male", MALE_VISUAL, MALE_SECTION_Z_MM, MALE_WALL_Z_MM)
-    _write_d_wall("d_socket_female", FEMALE_VISUAL, FEMALE_SECTION_Z_MM, FEMALE_WALL_Z_MM)
-    _write_fallback_holes()
-    paths = generated_collision_paths()
-    print(f"generated {len(paths)} collision STL parts in {COLLISION_DIR}")
-    return paths
+    _assert_safe_target()
+    COLLISION_DIR.parent.mkdir(parents=True, exist_ok=True)
+    staging_dir = Path(tempfile.mkdtemp(prefix=".collision-staging-", dir=COLLISION_DIR.parent))
+    try:
+        _generate_into(staging_dir)
+        _validate_staging_inventory(staging_dir)
+        _promote_staging_directory(staging_dir, COLLISION_DIR)
+        paths = generated_collision_paths()
+        print(f"generated {len(paths)} collision STL parts in {COLLISION_DIR}")
+        return paths
+    finally:
+        _remove_temporary_directory(staging_dir, ".collision-staging-")
 
 
 def main() -> None:

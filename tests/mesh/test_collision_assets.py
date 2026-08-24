@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 from pathlib import Path
+import shutil
 
 import numpy as np
 import pytest
@@ -183,6 +184,17 @@ def test_basic_primitives_are_closed_non_degenerate_and_convex():
         assert _every_undirected_edge_occurs_twice(mesh)
         assert abs(_signed_tetrahedron_volumes(mesh).sum()) > 1e-8
         assert _is_convex(mesh)
+
+
+def test_staging_validation_rejects_inside_out_mesh_with_negative_volume():
+    outward = make_prism(np.array([[0, 0], [1, 0], [0, 1]], dtype=float), 0.0, 0.5)
+    inside_out = StlMesh(
+        normals=-outward.normals,
+        triangles=outward.triangles[:, [0, 2, 1]],
+    )
+
+    with pytest.raises(ValueError, match="positive signed volume"):
+        collision_assets._validate_collision_mesh(inside_out)
 
 
 @pytest.mark.parametrize(
@@ -377,3 +389,192 @@ def test_32_sided_hole_error_is_below_three_microns():
     radius = 0.575
     error = radius * (1.0 / np.cos(np.pi / 32.0) - 1.0)
     assert error < 0.003
+
+
+def test_generation_failure_leaves_existing_collision_assets_untouched(tmp_path, monkeypatch):
+    """A CAD/mesh failure must not delete the last known-good collision set."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    def fail_d_wall(*_args, **_kwargs):
+        raise RuntimeError("injected generation failure")
+
+    monkeypatch.setattr(collision_assets, "_write_d_wall", fail_d_wall)
+
+    with pytest.raises(RuntimeError, match="injected generation failure"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+
+
+def test_incomplete_staging_inventory_is_rejected_before_replacing_assets(tmp_path, monkeypatch):
+    """Successful writer returns are insufficient unless the full inventory exists."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+    monkeypatch.setattr(collision_assets, "_write_d_wall", lambda *_args, **_kwargs: ([], ()))
+    monkeypatch.setattr(collision_assets, "_write_fallback_holes", lambda *_args, **_kwargs: [])
+
+    with pytest.raises(ValueError, match="collision asset inventory"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+
+
+def test_invalid_staging_geometry_is_rejected_before_replacing_assets(tmp_path, monkeypatch):
+    """A name-complete but corrupt staged set must not replace valid assets."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    def write_corrupt_inventory(*args, **_kwargs):
+        output_dir = args[-1]
+        for name in collision_assets._expected_collision_names():
+            (output_dir / name).write_bytes(b"not-a-binary-stl")
+        return ([], ())
+
+    monkeypatch.setattr(collision_assets, "_write_d_wall", write_corrupt_inventory)
+    monkeypatch.setattr(collision_assets, "_write_fallback_holes", lambda *_args, **_kwargs: [])
+
+    with pytest.raises(ValueError, match="invalid collision asset"):
+        collision_assets.generate_collision_assets()
+
+    assert existing.read_bytes() == b"known-good"
+
+
+def test_staging_inventory_rejects_an_unexpected_directory(tmp_path):
+    staging_dir = tmp_path / "staging"
+    shutil.copytree(PROJECT_ROOT / "assets" / "collision", staging_dir)
+    (staging_dir / "unexpected-directory").mkdir()
+
+    with pytest.raises(ValueError, match="collision asset inventory"):
+        collision_assets._validate_staging_inventory(staging_dir)
+
+
+def test_staging_swap_failure_rolls_back_the_complete_previous_asset_set(tmp_path, monkeypatch):
+    """Failure after backing up the target must restore every prior file byte-for-byte."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    shutil.copytree(PROJECT_ROOT / "assets" / "collision", collision_dir)
+    before = {path.name: path.read_bytes() for path in collision_dir.iterdir()}
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+    original_replace = Path.replace
+
+    def fail_when_promoting_staging(source, target):
+        if source.name.startswith(".collision-staging-") or source.parent.name.startswith(
+            ".collision-staging-"
+        ):
+            raise OSError("injected staging promotion failure")
+        return original_replace(source, target)
+
+    monkeypatch.setattr(Path, "replace", fail_when_promoting_staging)
+
+    with pytest.raises(OSError, match="injected staging promotion failure"):
+        collision_assets.generate_collision_assets()
+
+    after = {path.name: path.read_bytes() for path in collision_dir.iterdir()}
+    assert after == before
+
+
+def test_rollback_failure_preserves_and_identifies_the_backup(tmp_path, monkeypatch):
+    """A failed rollback must never let final cleanup erase the recoverable prior set."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    existing = collision_dir / "d_guide_male_seg_000.stl"
+    existing.write_bytes(b"known-good")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    def write_staged_marker(output_dir):
+        (output_dir / "new.stl").write_bytes(b"staged")
+        return ()
+
+    monkeypatch.setattr(collision_assets, "_generate_into", write_staged_marker)
+    monkeypatch.setattr(collision_assets, "_validate_staging_inventory", lambda _directory: ())
+    original_replace = Path.replace
+
+    def fail_promotion_and_rollback(source, target):
+        if source.name.startswith(".collision-staging-"):
+            raise OSError("injected staging promotion failure")
+        if source.name.startswith(".collision-backup-"):
+            raise OSError("injected rollback failure")
+        return original_replace(source, target)
+
+    monkeypatch.setattr(Path, "replace", fail_promotion_and_rollback)
+
+    with pytest.raises(RuntimeError, match="previous assets remain at") as captured:
+        collision_assets.generate_collision_assets()
+
+    backups = list(collision_dir.parent.glob(".collision-backup-*"))
+    assert len(backups) == 1
+    assert str(backups[0]) in str(captured.value)
+    assert (backups[0] / existing.name).read_bytes() == b"known-good"
+    assert not list(collision_dir.parent.glob(".collision-staging-*"))
+
+
+def test_target_with_unowned_files_is_rejected_before_generation(tmp_path, monkeypatch):
+    """Directory-level replacement may only operate on the generator-owned asset directory."""
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    collision_dir.mkdir(parents=True)
+    (collision_dir / "notes.txt").write_text("preserve me", encoding="utf-8")
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    with pytest.raises(ValueError, match="not owned by this generator"):
+        collision_assets.generate_collision_assets()
+
+    assert (collision_dir / "notes.txt").read_text(encoding="utf-8") == "preserve me"
+
+
+def test_collision_target_must_resolve_inside_the_project_workspace(tmp_path, monkeypatch):
+    project_root = tmp_path / "project"
+    collision_dir = tmp_path / "outside" / "collision"
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    with pytest.raises(ValueError, match="outside project workspace"):
+        collision_assets.generate_collision_assets()
+
+    assert not collision_dir.exists()
+
+
+def test_collision_target_must_be_the_exact_project_collision_directory(tmp_path, monkeypatch):
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "temporary" / "collision"
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    with pytest.raises(ValueError, match="must be the project assets/collision directory"):
+        collision_assets.generate_collision_assets()
+
+    assert not collision_dir.exists()
+
+
+def test_temporary_cleanup_refuses_a_path_outside_the_collision_parent(tmp_path, monkeypatch):
+    project_root = tmp_path / "project"
+    collision_dir = project_root / "assets" / "collision"
+    unsafe = project_root / ".collision-staging-do-not-remove"
+    unsafe.mkdir(parents=True)
+    monkeypatch.setattr(collision_assets, "PROJECT_ROOT", project_root)
+    monkeypatch.setattr(collision_assets, "COLLISION_DIR", collision_dir)
+
+    with pytest.raises(ValueError, match="refusing to remove unsafe temporary directory"):
+        collision_assets._remove_temporary_directory(unsafe, ".collision-staging-")
+
+    assert unsafe.is_dir()
