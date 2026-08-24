@@ -429,14 +429,7 @@ def _remove_temporary_directory(path: Path, prefix: str) -> None:
         shutil.rmtree(resolved)
 
 
-def _normalize_staging_permissions(staging_dir: Path) -> None:
-    """Reset a Windows staging tree to the exact assets parent's inherited DACL."""
-    if os.name != "nt":
-        return
-    resolved = staging_dir.resolve()
-    expected_parent = COLLISION_DIR.parent.resolve()
-    if resolved.parent != expected_parent or not resolved.name.startswith(".collision-staging-"):
-        raise ValueError(f"refusing to normalize unsafe staging directory: {resolved}")
+def _trusted_windows_system_directory() -> Path:
     kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
     get_system_directory = kernel32.GetSystemDirectoryW
     get_system_directory.argtypes = [wintypes.LPWSTR, wintypes.UINT]
@@ -447,7 +440,19 @@ def _normalize_staging_permissions(staging_dir: Path) -> None:
         raise ctypes.WinError(ctypes.get_last_error())
     if length >= len(system_directory_buffer):
         raise RuntimeError("Windows system directory exceeds the supported path length")
-    icacls = Path(system_directory_buffer.value) / "icacls.exe"
+    return Path(system_directory_buffer.value)
+
+
+def _normalize_staging_permissions(staging_dir: Path) -> None:
+    """Reset a Windows staging tree to the exact assets parent's inherited DACL."""
+    if os.name != "nt":
+        return
+    resolved = staging_dir.resolve()
+    expected_parent = COLLISION_DIR.parent.resolve()
+    if resolved.parent != expected_parent or not resolved.name.startswith(".collision-staging-"):
+        raise ValueError(f"refusing to normalize unsafe staging directory: {resolved}")
+    system_directory = _trusted_windows_system_directory()
+    icacls = system_directory / "icacls.exe"
     if not icacls.is_file():
         raise FileNotFoundError(f"Windows ACL utility is unavailable: {icacls}")
     subprocess.run(
@@ -459,6 +464,7 @@ def _normalize_staging_permissions(staging_dir: Path) -> None:
     _validate_windows_inherited_dacls(
         expected_parent,
         (resolved, *sorted(resolved.rglob("*"))),
+        system_directory,
     )
 
 
@@ -495,26 +501,77 @@ class _GenericMapping(ctypes.Structure):
     ]
 
 
-_OBJECT_INHERIT_ACE = 0x01
-_CONTAINER_INHERIT_ACE = 0x02
-_NO_PROPAGATE_INHERIT_ACE = 0x04
+class _Luid(ctypes.Structure):
+    _fields_ = [
+        ("low_part", wintypes.DWORD),
+        ("high_part", wintypes.LONG),
+    ]
+
+
+class _SidAndAttributes(ctypes.Structure):
+    _fields_ = [
+        ("sid", ctypes.c_void_p),
+        ("attributes", wintypes.DWORD),
+    ]
+
+
+class _AuthzAccessRequest(ctypes.Structure):
+    _fields_ = [
+        ("desired_access", wintypes.DWORD),
+        ("principal_self_sid", ctypes.c_void_p),
+        ("object_type_list", ctypes.c_void_p),
+        ("object_type_list_length", wintypes.DWORD),
+        ("optional_arguments", ctypes.c_void_p),
+    ]
+
+
+class _AuthzAccessReply(ctypes.Structure):
+    _fields_ = [
+        ("result_list_length", wintypes.DWORD),
+        ("granted_access_mask", ctypes.POINTER(wintypes.DWORD)),
+        ("sacl_evaluation_results", ctypes.POINTER(wintypes.DWORD)),
+        ("error", ctypes.POINTER(wintypes.DWORD)),
+    ]
+
+
 _INHERIT_ONLY_ACE = 0x08
-_INHERITED_ACE = 0x10
 _ACCESS_ALLOWED_ACE_TYPE = 0x00
 _ACCESS_DENIED_ACE_TYPE = 0x01
-_ACCESS_CONTROL_ACE_TYPES = frozenset((0x00, 0x01, 0x05, 0x06, 0x09, 0x0A, 0x0B, 0x0C))
+_SUPPORTED_DACL_ACE_TYPES = frozenset(
+    (_ACCESS_ALLOWED_ACE_TYPE, _ACCESS_DENIED_ACE_TYPE)
+)
 _FILE_GENERIC_READ = 0x00120089
 _FILE_GENERIC_WRITE = 0x00120116
 _FILE_GENERIC_EXECUTE = 0x001200A0
 _FILE_ALL_ACCESS = 0x001F01FF
+_FILE_READ_DATA = 0x00000001
+_AUTHZ_RM_FLAG_NO_AUDIT = 0x00000001
+_AUTHZ_SKIP_TOKEN_GROUPS = 0x00000002
+_SE_GROUP_USE_FOR_DENY_ONLY = 0x00000010
+
+
+def _require_supported_dacl_ace_type(ace_type: int, path: Path) -> None:
+    """Fail closed for every DACL ACE whose access semantics are unsupported."""
+    if ace_type not in _SUPPORTED_DACL_ACE_TYPES:
+        raise PermissionError(f"unsupported DACL ACE type {ace_type} in DACL: {path}")
 
 
 def _validate_windows_inherited_dacls(
     expected_parent: Path,
     paths: tuple[Path, ...],
+    system_directory: Path | None = None,
 ) -> None:
+    if not paths:
+        raise PermissionError("no staged paths are available for DACL validation")
+    if system_directory is None:
+        system_directory = _trusted_windows_system_directory()
+    authz_path = system_directory / "authz.dll"
+    if not authz_path.is_file():
+        raise FileNotFoundError(f"Windows authorization library is unavailable: {authz_path}")
+
     advapi32 = ctypes.WinDLL("advapi32", use_last_error=True)
     kernel32 = ctypes.WinDLL("kernel32", use_last_error=True)
+    authz = ctypes.WinDLL(str(authz_path), use_last_error=True)
     get_named_security_info = advapi32.GetNamedSecurityInfoW
     get_named_security_info.argtypes = [
         wintypes.LPWSTR,
@@ -549,6 +606,24 @@ def _validate_windows_inherited_dacls(
         ctypes.POINTER(ctypes.c_void_p),
     ]
     get_ace.restype = wintypes.BOOL
+    initialize_acl = advapi32.InitializeAcl
+    initialize_acl.argtypes = [
+        ctypes.c_void_p,
+        wintypes.DWORD,
+        wintypes.DWORD,
+    ]
+    initialize_acl.restype = wintypes.BOOL
+    set_named_security_info = advapi32.SetNamedSecurityInfoW
+    set_named_security_info.argtypes = [
+        wintypes.LPWSTR,
+        ctypes.c_int,
+        wintypes.DWORD,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+    ]
+    set_named_security_info.restype = wintypes.DWORD
     is_valid_sid = advapi32.IsValidSid
     is_valid_sid.argtypes = [ctypes.c_void_p]
     is_valid_sid.restype = wintypes.BOOL
@@ -561,6 +636,56 @@ def _validate_windows_inherited_dacls(
         ctypes.POINTER(_GenericMapping),
     ]
     map_generic_mask.restype = None
+    initialize_resource_manager = authz.AuthzInitializeResourceManager
+    initialize_resource_manager.argtypes = [
+        wintypes.DWORD,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        wintypes.LPWSTR,
+        ctypes.POINTER(ctypes.c_void_p),
+    ]
+    initialize_resource_manager.restype = wintypes.BOOL
+    free_resource_manager = authz.AuthzFreeResourceManager
+    free_resource_manager.argtypes = [ctypes.c_void_p]
+    free_resource_manager.restype = wintypes.BOOL
+    initialize_context_from_sid = authz.AuthzInitializeContextFromSid
+    initialize_context_from_sid.argtypes = [
+        wintypes.DWORD,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        _Luid,
+        ctypes.c_void_p,
+        ctypes.POINTER(ctypes.c_void_p),
+    ]
+    initialize_context_from_sid.restype = wintypes.BOOL
+    add_sids_to_context = authz.AuthzAddSidsToContext
+    add_sids_to_context.argtypes = [
+        ctypes.c_void_p,
+        ctypes.POINTER(_SidAndAttributes),
+        wintypes.DWORD,
+        ctypes.POINTER(_SidAndAttributes),
+        wintypes.DWORD,
+        ctypes.POINTER(ctypes.c_void_p),
+    ]
+    add_sids_to_context.restype = wintypes.BOOL
+    access_check = authz.AuthzAccessCheck
+    access_check.argtypes = [
+        wintypes.DWORD,
+        ctypes.c_void_p,
+        ctypes.POINTER(_AuthzAccessRequest),
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        ctypes.c_void_p,
+        wintypes.DWORD,
+        ctypes.POINTER(_AuthzAccessReply),
+        ctypes.c_void_p,
+    ]
+    access_check.restype = wintypes.BOOL
+    free_context = authz.AuthzFreeContext
+    free_context.argtypes = [ctypes.c_void_p]
+    free_context.restype = wintypes.BOOL
     kernel32.LocalFree.argtypes = [ctypes.c_void_p]
     kernel32.LocalFree.restype = ctypes.c_void_p
 
@@ -571,15 +696,33 @@ def _validate_windows_inherited_dacls(
         _FILE_ALL_ACCESS,
     )
 
-    def read_dacl(path: Path) -> tuple[bool, tuple[tuple[int, int, int, bytes], ...]]:
+    resource_manager = ctypes.c_void_p()
+    if not initialize_resource_manager(
+        _AUTHZ_RM_FLAG_NO_AUDIT,
+        None,
+        None,
+        None,
+        "collision asset ACL validation",
+        ctypes.byref(resource_manager),
+    ):
+        raise ctypes.WinError(ctypes.get_last_error())
+
+    all_contexts: list[tuple[bytes, ctypes.c_void_p, tuple[object, ...]]] = []
+
+    def read_dacl(
+        path: Path,
+        contexts: tuple[tuple[bytes, ctypes.c_void_p, tuple[object, ...]], ...] = (),
+    ) -> tuple[bool, tuple[tuple[int, int, int, bytes], ...]]:
+        owner = ctypes.c_void_p()
+        group = ctypes.c_void_p()
         dacl = ctypes.c_void_p()
         descriptor = ctypes.c_void_p()
         result = get_named_security_info(
             str(path),
             1,
-            0x00000004,
-            None,
-            None,
+            0x00000007,
+            ctypes.byref(owner),
+            ctypes.byref(group),
             ctypes.byref(dacl),
             None,
             ctypes.byref(descriptor),
@@ -603,8 +746,7 @@ def _validate_windows_inherited_dacls(
                 if not get_ace(dacl, index, ctypes.byref(ace_pointer)):
                     raise ctypes.WinError(ctypes.get_last_error())
                 header = ctypes.cast(ace_pointer, ctypes.POINTER(_AceHeader)).contents
-                if header.ace_type not in _ACCESS_CONTROL_ACE_TYPES:
-                    continue
+                _require_supported_dacl_ace_type(header.ace_type, path)
                 if header.ace_size < _AccessAce.sid_start.offset + 8:
                     raise PermissionError(f"malformed access ACE in DACL: {path}")
                 access_ace = ctypes.cast(
@@ -613,106 +755,202 @@ def _validate_windows_inherited_dacls(
                 mapped_mask = wintypes.DWORD(access_ace.mask)
                 map_generic_mask(ctypes.byref(mapped_mask), ctypes.byref(generic_mapping))
                 read_mask = mapped_mask.value & _FILE_GENERIC_READ
-                if not read_mask:
-                    continue
-                if header.ace_type not in (
-                    _ACCESS_ALLOWED_ACE_TYPE,
-                    _ACCESS_DENIED_ACE_TYPE,
-                ):
-                    raise PermissionError(
-                        f"unsupported read access ACE type {header.ace_type} in DACL: {path}"
-                    )
                 sid_address = ace_pointer.value + _AccessAce.sid_start.offset
                 sid_pointer = ctypes.c_void_p(sid_address)
                 if not is_valid_sid(sid_pointer):
                     raise PermissionError(f"malformed SID in DACL access ACE: {path}")
                 sid_length = get_length_sid(sid_pointer)
-                if sid_length > header.ace_size - _AccessAce.sid_start.offset:
-                    raise PermissionError(f"oversized SID in DACL access ACE: {path}")
-                entries.append(
-                    (
-                        header.ace_type,
-                        header.ace_flags,
-                        read_mask,
-                        ctypes.string_at(sid_address, sid_length),
+                if sid_length != header.ace_size - _AccessAce.sid_start.offset:
+                    raise PermissionError(f"malformed SID extent in DACL access ACE: {path}")
+                if read_mask:
+                    entries.append(
+                        (
+                            header.ace_type,
+                            header.ace_flags,
+                            read_mask,
+                            ctypes.string_at(sid_address, sid_length),
+                        )
                     )
+
+            for subject_sid, context, _keepalive in contexts:
+                granted = wintypes.DWORD()
+                sacl_result = wintypes.DWORD()
+                access_error = wintypes.DWORD()
+                request = _AuthzAccessRequest(
+                    _FILE_GENERIC_READ,
+                    None,
+                    None,
+                    0,
+                    None,
                 )
+                reply = _AuthzAccessReply(
+                    1,
+                    ctypes.pointer(granted),
+                    ctypes.pointer(sacl_result),
+                    ctypes.pointer(access_error),
+                )
+                if not access_check(
+                    0,
+                    context,
+                    ctypes.byref(request),
+                    None,
+                    descriptor,
+                    None,
+                    0,
+                    ctypes.byref(reply),
+                    None,
+                ):
+                    raise ctypes.WinError(ctypes.get_last_error())
+                if (
+                    access_error.value != 0
+                    or granted.value & _FILE_GENERIC_READ != _FILE_GENERIC_READ
+                ):
+                    raise PermissionError(
+                        "parent-inherited read DACL semantics mismatch: "
+                        "effective read denied after normalization for "
+                        f"SID {subject_sid.hex()} on {path}"
+                    )
             return bool(control.value & 0x1000), tuple(entries)
         finally:
             if descriptor.value:
                 kernel32.LocalFree(descriptor)
 
-    def aggregate(
+    def build_contexts(
         entries: tuple[tuple[int, int, int, bytes], ...],
-        predicate,
-    ) -> dict[tuple[int, bytes], int]:
-        semantics: dict[tuple[int, bytes], int] = {}
+        reference_path: Path,
+    ) -> tuple[tuple[bytes, ctypes.c_void_p, tuple[object, ...]], ...]:
+        subjects: list[bytes] = []
+        deny_sids: list[bytes] = []
         for ace_type, ace_flags, read_mask, sid in entries:
-            if predicate(ace_type, ace_flags):
-                key = (ace_type, sid)
-                semantics[key] = semantics.get(key, 0) | read_mask
-        return semantics
-
-    _parent_protected, parent_entries = read_dacl(expected_parent)
-    permitted = aggregate(parent_entries, lambda _ace_type, _ace_flags: True)
-    required_container = aggregate(
-        parent_entries,
-        lambda _ace_type, ace_flags: bool(ace_flags & _CONTAINER_INHERIT_ACE),
-    )
-    required_file = aggregate(
-        parent_entries,
-        lambda _ace_type, ace_flags: bool(ace_flags & _OBJECT_INHERIT_ACE)
-        and not bool(ace_flags & _NO_PROPAGATE_INHERIT_ACE),
-    )
-    if not any(
-        ace_type == _ACCESS_ALLOWED_ACE_TYPE for ace_type, _sid in required_container
-    ) or not any(ace_type == _ACCESS_ALLOWED_ACE_TYPE for ace_type, _sid in required_file):
-        raise PermissionError(
-            f"assets parent has no inheritable read ALLOW semantics: {expected_parent}"
-        )
-
-    def validate_path(
-        path: Path,
-        required: dict[tuple[int, bytes], int],
-    ) -> None:
-        protected, entries = read_dacl(path)
-        if protected:
-            raise PermissionError(f"protected DACL remains after normalization: {path}")
-        actual = aggregate(
-            entries,
-            lambda _ace_type, ace_flags: bool(ace_flags & _INHERITED_ACE)
-            and not bool(ace_flags & _INHERIT_ONLY_ACE),
-        )
-        explicit_denies = aggregate(
-            entries,
-            lambda ace_type, ace_flags: ace_type == _ACCESS_DENIED_ACE_TYPE
-            and not bool(ace_flags & _INHERITED_ACE)
-            and not bool(ace_flags & _INHERIT_ONLY_ACE),
-        )
-        required_denies = {
-            key: mask for key, mask in required.items() if key[0] == _ACCESS_DENIED_ACE_TYPE
-        }
-        actual_denies = {
-            key: mask for key, mask in actual.items() if key[0] == _ACCESS_DENIED_ACE_TYPE
-        }
-        mismatch = bool(explicit_denies) or actual_denies != required_denies
-        for key, required_mask in required.items():
+            if ace_flags & _INHERIT_ONLY_ACE:
+                continue
             if (
-                key[0] == _ACCESS_ALLOWED_ACE_TYPE
-                and actual.get(key, 0) & required_mask != required_mask
+                ace_type == _ACCESS_ALLOWED_ACE_TYPE
+                and read_mask & _FILE_READ_DATA
+                and sid not in subjects
             ):
-                mismatch = True
-        for key, actual_mask in actual.items():
-            if key[0] == _ACCESS_ALLOWED_ACE_TYPE and actual_mask & ~permitted.get(key, 0):
-                mismatch = True
-        if mismatch:
+                subjects.append(sid)
+            if ace_type == _ACCESS_DENIED_ACE_TYPE and sid not in deny_sids:
+                deny_sids.append(sid)
+        if not subjects:
             raise PermissionError(
-                f"parent-inherited read DACL semantics mismatch after normalization: {path}"
+                f"assets parent produces no applicable read ALLOW subjects: {reference_path}"
             )
 
-    validate_path(paths[0], required_container)
-    for path in paths[1:]:
-        validate_path(path, required_file)
+        built: list[tuple[bytes, ctypes.c_void_p, tuple[object, ...]]] = []
+        try:
+            for subject_sid in subjects:
+                subject_buffer = ctypes.create_string_buffer(subject_sid)
+                base_context = ctypes.c_void_p()
+                if not initialize_context_from_sid(
+                    _AUTHZ_SKIP_TOKEN_GROUPS,
+                    ctypes.cast(subject_buffer, ctypes.c_void_p),
+                    resource_manager,
+                    None,
+                    _Luid(),
+                    None,
+                    ctypes.byref(base_context),
+                ):
+                    raise ctypes.WinError(ctypes.get_last_error())
+
+                keepalive: list[object] = [subject_buffer]
+                context = base_context
+                if deny_sids:
+                    deny_buffers = [ctypes.create_string_buffer(sid) for sid in deny_sids]
+                    deny_entries = (_SidAndAttributes * len(deny_buffers))(
+                        *(
+                            _SidAndAttributes(
+                                ctypes.cast(buffer, ctypes.c_void_p),
+                                _SE_GROUP_USE_FOR_DENY_ONLY,
+                            )
+                            for buffer in deny_buffers
+                        )
+                    )
+                    expanded_context = ctypes.c_void_p()
+                    if not add_sids_to_context(
+                        base_context,
+                        deny_entries,
+                        len(deny_entries),
+                        None,
+                        0,
+                        ctypes.byref(expanded_context),
+                    ):
+                        error = ctypes.WinError(ctypes.get_last_error())
+                        free_context(base_context)
+                        raise error
+                    free_context(base_context)
+                    context = expanded_context
+                    keepalive.extend((*deny_buffers, deny_entries))
+                built.append((subject_sid, context, tuple(keepalive)))
+            return tuple(built)
+        except BaseException:
+            for _sid, context, _keepalive in built:
+                free_context(context)
+            raise
+
+    def reset_reference_to_inherited_dacl(path: Path) -> None:
+        """Ask the kernel to derive a fresh unprotected DACL from the exact parent."""
+        empty_acl = ctypes.create_string_buffer(8)
+        if not initialize_acl(empty_acl, len(empty_acl), 2):
+            raise ctypes.WinError(ctypes.get_last_error())
+        result = set_named_security_info(
+            str(path),
+            1,
+            0x20000004,
+            None,
+            None,
+            empty_acl,
+            None,
+        )
+        if result != 0:
+            raise ctypes.WinError(result)
+
+    probe_dir: Path | None = None
+    try:
+        probe_dir = Path(
+            tempfile.mkdtemp(prefix=".collision-acl-probe-", dir=expected_parent)
+        ).resolve()
+        reset_reference_to_inherited_dacl(probe_dir)
+        probe_file = probe_dir / "probe.stl"
+        probe_file.write_bytes(b"acl-probe")
+        reset_reference_to_inherited_dacl(probe_file)
+        root_protected, root_reference = read_dacl(probe_dir)
+        file_protected, file_reference = read_dacl(probe_file)
+        if root_protected or file_protected:
+            raise PermissionError(
+                f"assets parent produces protected inherited DACLs: {expected_parent}"
+            )
+
+        root_contexts = build_contexts(root_reference, probe_dir)
+        all_contexts.extend(root_contexts)
+        file_contexts = build_contexts(file_reference, probe_file)
+        all_contexts.extend(file_contexts)
+        read_dacl(probe_dir, root_contexts)
+        read_dacl(probe_file, file_contexts)
+
+        def validate_path(
+            path: Path,
+            reference: tuple[tuple[int, int, int, bytes], ...],
+            contexts: tuple[tuple[bytes, ctypes.c_void_p, tuple[object, ...]], ...],
+        ) -> None:
+            protected, entries = read_dacl(path, contexts)
+            if protected:
+                raise PermissionError(f"protected DACL remains after normalization: {path}")
+            if entries != reference:
+                raise PermissionError(
+                    f"parent-inherited read DACL semantics mismatch after normalization: {path}"
+                )
+
+        validate_path(paths[0], root_reference, root_contexts)
+        for path in paths[1:]:
+            validate_path(path, file_reference, file_contexts)
+    finally:
+        for _sid, context, _keepalive in all_contexts:
+            free_context(context)
+        if resource_manager.value:
+            free_resource_manager(resource_manager)
+        if probe_dir is not None:
+            _remove_temporary_directory(probe_dir, ".collision-acl-probe-")
 
 
 def _promote_staging_directory(staging_dir: Path, target_dir: Path) -> None:
