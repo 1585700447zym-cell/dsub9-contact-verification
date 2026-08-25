@@ -1,0 +1,8 @@
+.worktrees/
+.gitdata/
+.superpowers/sdd/
+tmp/
+build/
+.pytest_cache/
+__pycache__/
+*.pyc

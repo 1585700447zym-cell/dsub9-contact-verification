@@ -1,0 +1,209 @@
+<mujoco model="dsub9_pair_sdf">
+  <compiler angle="radian" meshdir="../assets"/>
+  <option gravity="0 0 0"/>
+  <!-- UNCALIBRATED diagnostic contact baseline: uncalibrated_diagnostic_v1; not material-identified. -->
+  <default>
+    <default class="visual">
+      <geom contype="0" conaffinity="0" group="2"/>
+    </default>
+    <default class="pin_collision">
+      <geom contype="1" conaffinity="2" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
+    </default>
+    <default class="hole_sdf_collision">
+      <geom contype="2" conaffinity="1" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
+    </default>
+    <default class="male_guide_collision">
+      <geom contype="4" conaffinity="8" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
+    </default>
+    <default class="female_socket_collision">
+      <geom contype="8" conaffinity="4" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
+    </default>
+    <default class="hole_polygon32_collision">
+      <geom contype="2" conaffinity="1" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0"/>
+    </default>
+  </default>
+  <extension>
+    <plugin plugin="mujoco.sdf.dsub9_hole">
+      <instance name="hole_sdf">
+        <config key="bore_radius" value="0.000575"/>
+        <config key="entry_radius" value="0.000675"/>
+        <config key="entry_depth" value="0.00025"/>
+        <config key="bore_depth" value="0.00450"/>
+        <config key="outer_radius" value="0.00100"/>
+      </instance>
+    </plugin>
+  </extension>
+  <include file="includes/dsub9_visual.xml"/>
+  <include file="includes/dsub9_collision.xml"/>
+  <asset>
+    <mesh name="hole_sdf_mesh">
+      <plugin instance="hole_sdf"/>
+    </mesh>
+  </asset>
+  <worldbody>
+    <body name="female">
+      <geom name="female_visual" class="visual" type="mesh" mesh="dsub9_female_visual" group="2" contype="0" conaffinity="0"/>
+      <geom name="d_socket_female_seg_000" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_000"/>
+      <geom name="d_socket_female_seg_001" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_001"/>
+      <geom name="d_socket_female_seg_002" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_002"/>
+      <geom name="d_socket_female_seg_003" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_003"/>
+      <geom name="d_socket_female_seg_004" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_004"/>
+      <geom name="d_socket_female_seg_005" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_005"/>
+      <geom name="d_socket_female_seg_006" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_006"/>
+      <geom name="d_socket_female_seg_007" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_007"/>
+      <geom name="d_socket_female_seg_008" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_008"/>
+      <geom name="d_socket_female_seg_009" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_009"/>
+      <geom name="d_socket_female_seg_010" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_010"/>
+      <geom name="d_socket_female_seg_011" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_011"/>
+      <geom name="d_socket_female_seg_012" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_012"/>
+      <geom name="d_socket_female_seg_013" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_013"/>
+      <geom name="d_socket_female_seg_014" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_014"/>
+      <geom name="d_socket_female_seg_015" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_015"/>
+      <geom name="d_socket_female_seg_016" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_016"/>
+      <geom name="d_socket_female_seg_017" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_017"/>
+      <geom name="d_socket_female_seg_018" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_018"/>
+      <geom name="d_socket_female_seg_019" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_019"/>
+      <geom name="d_socket_female_seg_020" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_020"/>
+      <geom name="d_socket_female_seg_021" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_021"/>
+      <geom name="d_socket_female_seg_022" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_022"/>
+      <geom name="d_socket_female_seg_023" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_023"/>
+      <geom name="d_socket_female_seg_024" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_024"/>
+      <geom name="d_socket_female_seg_025" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_025"/>
+      <geom name="d_socket_female_seg_026" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_026"/>
+      <geom name="d_socket_female_seg_027" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_027"/>
+      <geom name="d_socket_female_seg_028" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_028"/>
+      <geom name="d_socket_female_seg_029" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_029"/>
+      <geom name="d_socket_female_seg_030" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_030"/>
+      <geom name="d_socket_female_seg_031" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_031"/>
+      <geom name="d_socket_female_seg_032" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_032"/>
+      <geom name="d_socket_female_seg_033" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_033"/>
+      <geom name="d_socket_female_seg_034" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_034"/>
+      <geom name="d_socket_female_seg_035" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_035"/>
+      <geom name="d_socket_female_seg_036" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_036"/>
+      <geom name="d_socket_female_seg_037" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_037"/>
+      <geom name="d_socket_female_seg_038" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_038"/>
+      <geom name="d_socket_female_seg_039" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_039"/>
+      <geom name="d_socket_female_seg_040" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_040"/>
+      <geom name="d_socket_female_seg_041" class="female_socket_collision" type="mesh" mesh="d_socket_female_seg_041"/>
+      <geom name="hole_sdf_01" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="-0.00554 0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_02" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="-0.00277 0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_03" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="0 0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_04" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="0.00277 0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_05" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="0.00554 0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_06" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="-0.004155 -0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_07" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="-0.001385 -0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_08" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="0.001385 -0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+      <geom name="hole_sdf_09" class="hole_sdf_collision" type="sdf" mesh="hole_sdf_mesh" pos="0.004155 -0.00142 0">
+        <plugin instance="hole_sdf"/>
+      </geom>
+    </body>
+    <body name="male">
+      <inertial pos="0 0 0" mass="0.05" diaginertia="0.00002 0.00002 0.00002"/>
+      <freejoint name="male_freejoint"/>
+      <geom name="male_visual" class="visual" type="mesh" mesh="dsub9_male_visual" group="2" contype="0" conaffinity="0"/>
+      <geom name="d_guide_male_seg_000" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_000"/>
+      <geom name="d_guide_male_seg_001" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_001"/>
+      <geom name="d_guide_male_seg_002" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_002"/>
+      <geom name="d_guide_male_seg_003" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_003"/>
+      <geom name="d_guide_male_seg_004" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_004"/>
+      <geom name="d_guide_male_seg_005" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_005"/>
+      <geom name="d_guide_male_seg_006" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_006"/>
+      <geom name="d_guide_male_seg_007" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_007"/>
+      <geom name="d_guide_male_seg_008" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_008"/>
+      <geom name="d_guide_male_seg_009" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_009"/>
+      <geom name="d_guide_male_seg_010" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_010"/>
+      <geom name="d_guide_male_seg_011" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_011"/>
+      <geom name="d_guide_male_seg_012" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_012"/>
+      <geom name="d_guide_male_seg_013" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_013"/>
+      <geom name="d_guide_male_seg_014" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_014"/>
+      <geom name="d_guide_male_seg_015" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_015"/>
+      <geom name="d_guide_male_seg_016" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_016"/>
+      <geom name="d_guide_male_seg_017" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_017"/>
+      <geom name="d_guide_male_seg_018" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_018"/>
+      <geom name="d_guide_male_seg_019" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_019"/>
+      <geom name="d_guide_male_seg_020" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_020"/>
+      <geom name="d_guide_male_seg_021" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_021"/>
+      <geom name="d_guide_male_seg_022" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_022"/>
+      <geom name="d_guide_male_seg_023" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_023"/>
+      <geom name="d_guide_male_seg_024" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_024"/>
+      <geom name="d_guide_male_seg_025" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_025"/>
+      <geom name="d_guide_male_seg_026" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_026"/>
+      <geom name="d_guide_male_seg_027" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_027"/>
+      <geom name="d_guide_male_seg_028" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_028"/>
+      <geom name="d_guide_male_seg_029" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_029"/>
+      <geom name="d_guide_male_seg_030" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_030"/>
+      <geom name="d_guide_male_seg_031" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_031"/>
+      <geom name="d_guide_male_seg_032" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_032"/>
+      <geom name="d_guide_male_seg_033" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_033"/>
+      <geom name="d_guide_male_seg_034" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_034"/>
+      <geom name="d_guide_male_seg_035" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_035"/>
+      <geom name="d_guide_male_seg_036" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_036"/>
+      <geom name="d_guide_male_seg_037" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_037"/>
+      <geom name="d_guide_male_seg_038" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_038"/>
+      <geom name="d_guide_male_seg_039" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_039"/>
+      <geom name="d_guide_male_seg_040" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_040"/>
+      <geom name="d_guide_male_seg_041" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_041"/>
+      <geom name="d_guide_male_seg_042" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_042"/>
+      <geom name="d_guide_male_seg_043" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_043"/>
+      <geom name="d_guide_male_seg_044" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_044"/>
+      <geom name="d_guide_male_seg_045" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_045"/>
+      <geom name="d_guide_male_seg_046" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_046"/>
+      <geom name="d_guide_male_seg_047" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_047"/>
+      <geom name="d_guide_male_seg_048" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_048"/>
+      <geom name="d_guide_male_seg_049" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_049"/>
+      <geom name="d_guide_male_seg_050" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_050"/>
+      <geom name="d_guide_male_seg_051" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_051"/>
+      <geom name="d_guide_male_seg_052" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_052"/>
+      <geom name="d_guide_male_seg_053" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_053"/>
+      <geom name="d_guide_male_seg_054" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_054"/>
+      <geom name="d_guide_male_seg_055" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_055"/>
+      <geom name="d_guide_male_seg_056" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_056"/>
+      <geom name="d_guide_male_seg_057" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_057"/>
+      <geom name="d_guide_male_seg_058" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_058"/>
+      <geom name="d_guide_male_seg_059" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_059"/>
+      <geom name="d_guide_male_seg_060" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_060"/>
+      <geom name="d_guide_male_seg_061" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_061"/>
+      <geom name="d_guide_male_seg_062" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_062"/>
+      <geom name="d_guide_male_seg_063" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_063"/>
+      <geom name="d_guide_male_seg_064" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_064"/>
+      <geom name="d_guide_male_seg_065" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_065"/>
+      <geom name="d_guide_male_seg_066" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_066"/>
+      <geom name="d_guide_male_seg_067" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_067"/>
+      <geom name="d_guide_male_seg_068" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_068"/>
+      <geom name="d_guide_male_seg_069" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_069"/>
+      <geom name="d_guide_male_seg_070" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_070"/>
+      <geom name="d_guide_male_seg_071" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_071"/>
+      <geom name="d_guide_male_seg_072" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_072"/>
+      <geom name="d_guide_male_seg_073" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_073"/>
+      <geom name="d_guide_male_seg_074" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_074"/>
+      <geom name="d_guide_male_seg_075" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_075"/>
+      <geom name="d_guide_male_seg_076" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_076"/>
+      <geom name="d_guide_male_seg_077" class="male_guide_collision" type="mesh" mesh="d_guide_male_seg_077"/>
+      <geom name="pin_01" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="-0.00554 0.00142 0.002"/>
+      <geom name="pin_02" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="-0.00277 0.00142 0.002"/>
+      <geom name="pin_03" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="0 0.00142 0.002"/>
+      <geom name="pin_04" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="0.00277 0.00142 0.002"/>
+      <geom name="pin_05" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="0.00554 0.00142 0.002"/>
+      <geom name="pin_06" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="-0.004155 -0.00142 0.002"/>
+      <geom name="pin_07" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="-0.001385 -0.00142 0.002"/>
+      <geom name="pin_08" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="0.001385 -0.00142 0.002"/>
+      <geom name="pin_09" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="0.004155 -0.00142 0.002"/>
+    </body>
+  </worldbody>
+</mujoco>

@@ -1,0 +1,6 @@
+<mujoco>
+  <asset>
+    <mesh name="dsub9_female_visual" file="visual/dsub9_female_visual_centered.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="dsub9_male_visual" file="visual/dsub9_male_visual_centered.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+</mujoco>
