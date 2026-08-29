@@ -528,6 +528,20 @@ def run_case_trace(
         spatial_step_m=spatial_step_m,
         capture_samples=True,
     )
+    if samples and (
+        result.steps != len(samples)
+        or not math.isclose(
+            result.final_depth_m,
+            samples[-1].depth_m,
+            rel_tol=0.0,
+            abs_tol=1e-15,
+        )
+    ):
+        result = replace(
+            result,
+            final_depth_m=samples[-1].depth_m,
+            steps=len(samples),
+        )
     return ContactTrace(
         case=case,
         collision_mode=collision_mode,

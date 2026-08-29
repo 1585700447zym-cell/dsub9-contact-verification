@@ -8,6 +8,7 @@ import csv
 import hashlib
 import io
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -84,6 +85,34 @@ def _validate_trace_matrix(traces: Iterable[ContactTrace]) -> tuple[ContactTrace
             )
         if not trace.samples:
             raise ValueError(f"trace {trace.case.name} contains no finite samples")
+        expected_indices = list(range(len(trace.samples)))
+        if [sample.step_index for sample in trace.samples] != expected_indices:
+            raise ValueError(
+                f"trace {trace.case.name} sample indices must be consecutive"
+            )
+        for left, right in zip(trace.samples, trace.samples[1:]):
+            if not math.isclose(
+                right.depth_m - left.depth_m,
+                trace.spatial_step_m,
+                rel_tol=0.0,
+                abs_tol=1e-15,
+            ):
+                raise ValueError(
+                    f"trace {trace.case.name} samples must follow the fixed depth grid"
+                )
+        if not math.isclose(
+            trace.summary.final_depth_m,
+            trace.samples[-1].depth_m,
+            rel_tol=0.0,
+            abs_tol=1e-15,
+        ):
+            raise ValueError(
+                f"trace {trace.case.name} summary must end at the last sample"
+            )
+        if trace.summary.steps != len(trace.samples):
+            raise ValueError(
+                f"trace {trace.case.name} summary steps must match sample count"
+            )
         try:
             json.dumps(asdict(trace), allow_nan=False)
         except ValueError as error:

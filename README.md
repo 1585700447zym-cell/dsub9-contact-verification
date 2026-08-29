@@ -100,6 +100,8 @@ cmake --build $pluginBuild --config Release
 ```powershell
 & $projectPython -m pytest -v -W error
 & $projectPython -m tools.validation.run_contact_cases --all --output 'reports/contact_validation_results.json'
+& $projectPython -m tools.validation.run_v1_contact_validation
+& $projectPython -m tools.validation.run_v1_contact_validation --check-only
 & $projectPython -m tools.reporting.generate_manifest
 & $projectPython -m tools.reporting.generate_manifest --verify
 ```
@@ -108,8 +110,18 @@ cmake --build $pluginBuild --config Release
 结果共有 20 条：16 条 `uncalibrated_diagnostic_v1` 基线结果，加上 X +100 µm 与 combined A 两个
 SDF 场景各一条 `uncalibrated_low_response_v1` 和 `uncalibrated_high_response_v1` 结果。它不会产生
 可观测的 stalled-progress 状态；判定只有 `SUCCESS`、`EXCESS_PENETRATION` 和 `NUMERICAL_ERROR`。
-当前 30 µm 穿透阈值是 75 µm 名义径向间隙的 40%，而不是力阈值。正常 Windows 环境中的最新完整测试为
-`164 passed in 47.04s`。
+当前 30 µm 穿透阈值是 75 µm 名义径向间隙的 40%，而不是力阈值。
+
+完整 V1 接触验证使用独立的 schema-1，不修改上述 schema-3 基线。它保存 12 个工况、三个时间步和
+固定 10 µm 深度网格的逐点六维轨迹，并生成 CSV、收敛判定、五张中文图和技术报告。详细入口：
+
+- [V1 接触验证技术报告](reports/v1_contact_validation_report.md)
+- [V1 接触验证详细使用说明](deliverables/chinese_visual_package/V1接触验证使用说明.md)
+- [V1 时间步收敛结构化结果](reports/v1_timestep_convergence.json)
+
+V1 的 `PASS` 只表示冻结的数值有限性、方向、终止一致性和收敛门槛通过；它不表示所有偏差工况都成功
+插到底，也不表示实物装配、控制器或自由动力学验证通过。逐工况终止原因和所有实测值以 schema-1 JSON
+及自动生成报告为准。
 
 `reports/final_file_manifest.txt` 覆盖 `assets/`、`models/`、`plugins/`、`tools/`、`tests/`、
 `reports/` 下的受审文件，以及根目录的 README、`pyproject.toml`、`.gitattributes` 和

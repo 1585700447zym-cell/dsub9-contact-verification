@@ -173,6 +173,25 @@ combined A share termination and Tx sign.  SDF/fallback +X share negative Fx; co
 Different contact counts, penetration and runtime are expected from analytic sampling versus 576 polygon
 sectors.  The early-terminating combined fallback runtime is not a full-depth performance comparison.
 
+## V1 depth-trace and fixed-grid convergence evidence
+
+The immutable schema-3 file above remains the reviewed peak-summary baseline.  The V1 extension writes a
+separate schema-1 trace dataset and convergence decision, so existing consumers and the schema-3 SHA-256 do
+not change.  All three solver timesteps use the same prescribed 10 µm depth grid; this isolates pose sampling
+from timestep configuration for the quasi-static `mj_forward` calculation.  It is not a free-dynamics or
+controller timestep study.
+
+The authoritative values, per-case terminations, gate failures, and overall status are maintained in:
+
+- [`v1_contact_validation_report.md`](v1_contact_validation_report.md)
+- [`v1_contact_traces.json`](v1_contact_traces.json)
+- [`v1_timestep_convergence.json`](v1_timestep_convergence.json)
+- [the beginner-oriented Chinese usage guide](../deliverables/chinese_visual_package/V1接触验证使用说明.md)
+
+An overall V1 `PASS` means the frozen numerical consistency and convergence gates passed.  It does not mean
+every offset case inserted to full depth, and it is not evidence of real assembly success or calibrated force.
+Use the linked generated report rather than duplicating measured tables here.
+
 ## Contact-parameter sensitivity
 
 The schema-3 result document contains 20 results total: 16 `uncalibrated_diagnostic_v1` baseline results and

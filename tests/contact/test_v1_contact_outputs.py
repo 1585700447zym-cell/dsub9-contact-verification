@@ -108,6 +108,17 @@ def test_trace_document_rejects_incomplete_three_timestep_matrix():
         build_trace_document(_matrix()[:-1], "b" * 64)
 
 
+def test_trace_document_rejects_summary_that_does_not_end_at_last_sample():
+    traces = list(_matrix())
+    traces[0] = replace(
+        traces[0],
+        summary=replace(traces[0].summary, final_depth_m=0.00001),
+    )
+
+    with pytest.raises(ValueError, match="last sample"):
+        build_trace_document(traces, "f" * 64)
+
+
 def test_trace_json_rejects_unsupported_schema_without_overwriting(tmp_path: Path):
     output = tmp_path / "trace.json"
     output.write_text("original\n", encoding="utf-8")
@@ -156,4 +167,3 @@ def test_csv_rejects_nonfinite_sample_without_replacing_existing_file(
         write_trace_csv(traces, output)
 
     assert output.read_text(encoding="utf-8") == "original\n"
-

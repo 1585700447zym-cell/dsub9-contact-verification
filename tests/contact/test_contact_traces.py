@@ -5,6 +5,7 @@ import math
 
 import pytest
 
+import tools.validation.run_contact_cases as contact_runner
 from tools.validation.run_contact_cases import (
     DEFAULT_SPEED_M_S,
     ContactCase,
@@ -85,3 +86,26 @@ def test_trace_summary_preserves_existing_run_case_behavior():
     actual.pop("runtime_s")
     assert actual == expected
 
+
+def test_numerical_error_trace_summary_stops_at_last_finite_sample(monkeypatch):
+    original = contact_runner._male_world_wrench
+    call_count = 0
+
+    def fail_on_second_sample(model, data, male_body):
+        nonlocal call_count
+        call_count += 1
+        if call_count == 2:
+            raise RuntimeError("controlled contact failure")
+        return original(model, data, male_body)
+
+    monkeypatch.setattr(
+        contact_runner, "_male_world_wrench", fail_on_second_sample
+    )
+    trace = run_case_trace(
+        ContactCase.aligned(), 0.0002, "sdf", spatial_step_m=0.00001
+    )
+
+    assert trace.summary.termination == "NUMERICAL_ERROR"
+    assert len(trace.samples) == 1
+    assert trace.summary.steps == len(trace.samples)
+    assert trace.summary.final_depth_m == trace.samples[-1].depth_m
