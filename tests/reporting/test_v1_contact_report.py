@@ -105,6 +105,7 @@ def test_report_contains_method_gates_failures_and_scientific_boundaries():
     assert trace_document["source_contact_results_sha256"] in report
     assert "未经实物标定" in report
     assert "自由动力学" in report
+    assert "不表示所有偏差工况都成功插到底" in report
 
 
 def test_failed_comparison_reports_case_timestep_measured_value_and_limit():
@@ -129,4 +130,3 @@ def test_report_writer_uses_utf8_lf_and_one_final_newline(tmp_path: Path):
     assert raw.decode("utf-8").endswith("\n")
     assert not raw.decode("utf-8").endswith("\n\n")
     assert b"\r\n" not in raw
-

@@ -142,6 +142,13 @@ def _depth_mm(trace: dict) -> list[float]:
     return [float(sample["depth_m"]) * 1000.0 for sample in trace["samples"]]
 
 
+def _zero_metric_note(values: Iterable[float]) -> str | None:
+    value_list = list(values)
+    if value_list and all(value == 0.0 for value in value_list):
+        return "所有适用相对指标均为 0.00%，柱高为零"
+    return None
+
+
 def _plot_case_lines(
     axis,
     index: dict[tuple[str, float], dict],
@@ -291,6 +298,7 @@ def _convergence_figure(index, convergence: dict, output: Path, font) -> Path:
     cases = [item for item in convergence["cases"] if item["case"] not in {"separated", "aligned"}]
     positions = list(range(len(cases)))
     width = 0.36
+    all_relative_percent = []
     for offset, timestep_key, label, color in (
         (-width / 2, "0.0002", "0.0002 s 最大相对指标", "#E6A33D"),
         (+width / 2, "0.0004", "0.0004 s 最大相对指标", "#D95F59"),
@@ -304,6 +312,7 @@ def _convergence_figure(index, convergence: dict, output: Path, font) -> Path:
                 comparison["primary_component_normalized_rmse"],
             ]
             values.append(max(value for value in metrics if value is not None) * 100.0)
+        all_relative_percent.extend(values)
         axes[1].bar(
             [position + offset for position in positions],
             values,
@@ -313,6 +322,20 @@ def _convergence_figure(index, convergence: dict, output: Path, font) -> Path:
         )
     axes[1].axhline(10.0, color="#E6A33D", linestyle="--", linewidth=1.3, label="中时间步门槛 10%")
     axes[1].axhline(20.0, color="#D95F59", linestyle="--", linewidth=1.3, label="粗时间步门槛 20%")
+    zero_note = _zero_metric_note(all_relative_percent)
+    if zero_note:
+        axes[1].text(
+            0.5,
+            0.55,
+            zero_note,
+            transform=axes[1].transAxes,
+            ha="center",
+            va="center",
+            fontproperties=font,
+            fontsize=13,
+            color="#333333",
+            bbox={"facecolor": "white", "edgecolor": "#777777", "alpha": 0.9},
+        )
     axes[1].set_xticks(
         positions,
         labels=[CASE_LABELS[case["case"]] for case in cases],
@@ -352,4 +375,3 @@ def generate_v1_charts(
             index, convergence_document, output / EXPECTED_FILENAMES[4], font
         ),
     ]
-

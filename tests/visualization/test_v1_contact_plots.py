@@ -17,6 +17,7 @@ from tools.validation.run_contact_cases import (
 from tools.validation.run_v1_contact_validation import build_trace_document
 from tools.validation.v1_convergence import build_convergence_document
 from tools.visualization.plot_v1_contact_validation import (
+    _zero_metric_note,
     generate_v1_charts,
     load_v1_documents,
 )
@@ -154,3 +155,9 @@ def test_loader_rejects_missing_required_case(tmp_path: Path):
     with pytest.raises(ValueError, match="combined_a"):
         load_v1_documents(trace_path, convergence_path)
 
+
+def test_zero_height_convergence_bars_get_an_explicit_visual_note():
+    assert _zero_metric_note([0.0, 0.0, 0.0]) == (
+        "所有适用相对指标均为 0.00%，柱高为零"
+    )
+    assert _zero_metric_note([0.0, 0.01]) is None

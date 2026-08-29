@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 from dataclasses import asdict
 import csv
 import hashlib
@@ -30,6 +31,14 @@ SOURCE_CONTACT_RESULTS = ROOT / "reports" / "contact_validation_results.json"
 TRACE_JSON = ROOT / "reports" / "v1_contact_traces.json"
 TRACE_CSV = ROOT / "reports" / "v1_contact_traces.csv"
 CONVERGENCE_JSON = ROOT / "reports" / "v1_timestep_convergence.json"
+REPORT_MD = ROOT / "reports" / "v1_contact_validation_report.md"
+CHART_DIR = (
+    ROOT
+    / "deliverables"
+    / "chinese_visual_package"
+    / "charts"
+    / "v1_contact_validation"
+)
 
 _CSV_COLUMNS = (
     "case",
@@ -259,13 +268,10 @@ def write_trace_csv(
     _atomic_write_bytes(path, stream.getvalue().encode("utf-8-sig"))
 
 
-def generate_v1_data() -> tuple[dict, dict]:
-    """Run the complete formal matrix and return trace plus convergence documents."""
+def run_v1_matrix() -> tuple[ContactTrace, ...]:
+    """Run all 12 frozen cases at all three frozen timesteps."""
 
-    if not SOURCE_CONTACT_RESULTS.is_file():
-        raise FileNotFoundError(SOURCE_CONTACT_RESULTS.resolve())
-    source_sha256 = hashlib.sha256(SOURCE_CONTACT_RESULTS.read_bytes()).hexdigest()
-    traces = tuple(
+    return tuple(
         run_case_trace(
             case,
             timestep_s,
@@ -276,8 +282,228 @@ def generate_v1_data() -> tuple[dict, dict]:
         for case in all_cases()
         for timestep_s in TIMESTEP_VALUES_S
     )
+
+
+def _source_sha256() -> str:
+    if not SOURCE_CONTACT_RESULTS.is_file():
+        raise FileNotFoundError(SOURCE_CONTACT_RESULTS.resolve())
+    return hashlib.sha256(SOURCE_CONTACT_RESULTS.read_bytes()).hexdigest()
+
+
+def generate_v1_data() -> tuple[dict, dict]:
+    """Run the complete formal matrix and return trace plus convergence documents."""
+
+    traces = run_v1_matrix()
     return (
-        build_trace_document(traces, source_sha256),
+        build_trace_document(traces, _source_sha256()),
         build_convergence_document(traces),
     )
 
+
+def _strict_json(path: Path) -> dict:
+    def reject_constant(token: str):
+        raise ValueError(f"JSON contains non-finite value {token}")
+
+    try:
+        document = json.loads(
+            path.read_text(encoding="utf-8"), parse_constant=reject_constant
+        )
+    except FileNotFoundError:
+        raise FileNotFoundError(path.resolve()) from None
+    if not isinstance(document, dict):
+        raise ValueError(f"JSON root must be an object: {path.resolve()}")
+    return document
+
+
+def _sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _resolve_output(path: Path) -> Path:
+    return path if path.is_absolute() else ROOT / path
+
+
+def validate_existing_outputs(
+    trace_json: Path,
+    trace_csv: Path,
+    convergence_json: Path,
+    chart_dir: Path,
+    report: Path,
+) -> dict:
+    """Validate a complete tracked delivery without calling MuJoCo."""
+
+    from PIL import Image
+
+    from tools.visualization.plot_v1_contact_validation import (
+        DISCLAIMER,
+        EXPECTED_FILENAMES,
+        load_v1_documents,
+    )
+
+    trace_document = _strict_json(trace_json)
+    convergence_document = _strict_json(convergence_json)
+    load_v1_documents(trace_json, convergence_json)
+    if trace_document.get("trace_count") != 36:
+        raise ValueError("trace schema-1 must contain 36 traces")
+    traces = trace_document.get("traces")
+    if not isinstance(traces, list) or len(traces) != 36:
+        raise ValueError("trace schema-1 traces list must contain 36 items")
+    source_hash = _source_sha256()
+    if trace_document.get("source_contact_results_sha256") != source_hash:
+        raise ValueError("stored source schema-3 SHA-256 does not match current file")
+    if convergence_document.get("trace_count") != 36:
+        raise ValueError("convergence schema-1 must cover 36 traces")
+    status = convergence_document.get("overall_status")
+    if status not in {"PASS", "FAIL"}:
+        raise ValueError("convergence overall_status must be PASS or FAIL")
+
+    sample_count = sum(len(trace["samples"]) for trace in traces)
+    try:
+        with trace_csv.open("r", encoding="utf-8-sig", newline="") as stream:
+            reader = csv.DictReader(stream)
+            if tuple(reader.fieldnames or ()) != _CSV_COLUMNS:
+                raise ValueError("trace CSV columns do not match schema-1")
+            csv_row_count = sum(1 for _ in reader)
+    except FileNotFoundError:
+        raise FileNotFoundError(trace_csv.resolve()) from None
+    if csv_row_count != sample_count:
+        raise ValueError(
+            f"trace CSV row count {csv_row_count} does not match {sample_count} samples"
+        )
+
+    chart_paths = [chart_dir / name for name in EXPECTED_FILENAMES]
+    for path in chart_paths:
+        if not path.is_file():
+            raise FileNotFoundError(path.resolve())
+        with Image.open(path) as image:
+            if image.width < 1600 or image.height < 900:
+                raise ValueError(f"chart resolution is too small: {path.resolve()}")
+            if DISCLAIMER not in image.info.get("Disclaimer", ""):
+                raise ValueError(f"chart is missing disclaimer metadata: {path.resolve()}")
+
+    try:
+        report_text = report.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        raise FileNotFoundError(report.resolve()) from None
+    if source_hash not in report_text or f"**{status}**" not in report_text:
+        raise ValueError("report does not match the source hash and acceptance status")
+    return {
+        "chart_paths": chart_paths,
+        "convergence_document": convergence_document,
+        "sample_count": sample_count,
+        "source_sha256": source_hash,
+        "status": status,
+        "trace_count": len(traces),
+        "trace_document": trace_document,
+    }
+
+
+def _print_summary(
+    *,
+    trace_json: Path,
+    trace_csv: Path,
+    convergence_json: Path,
+    chart_dir: Path,
+    report: Path,
+    trace_count: int,
+    sample_count: int,
+    status: str,
+    source_sha256: str,
+) -> None:
+    print(f"轨迹数量：{trace_count}")
+    print(f"样本数量：{sample_count}")
+    print(f"总体验收：{status}")
+    print(f"schema-3 源文件 SHA-256：{source_sha256}")
+    for label, path in (
+        ("轨迹 JSON", trace_json),
+        ("轨迹 CSV", trace_csv),
+        ("收敛 JSON", convergence_json),
+        ("技术报告", report),
+    ):
+        print(f"{label}：{path.resolve()}｜SHA-256={_sha256(path)}")
+    print(f"图表目录：{chart_dir.resolve()}")
+    for path in sorted(chart_dir.glob("*.png")):
+        print(f"图表：{path.resolve()}｜SHA-256={_sha256(path)}")
+
+
+def _parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="一条命令生成或核对 D-sub9 V1 接触验证交付。",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument(
+        "--check-only",
+        action="store_true",
+        help="只核对现有文件，不运行 MuJoCo，也不改写任何输出",
+    )
+    parser.add_argument("--trace-json", type=Path, default=TRACE_JSON, help="轨迹 JSON")
+    parser.add_argument("--trace-csv", type=Path, default=TRACE_CSV, help="轨迹 CSV")
+    parser.add_argument(
+        "--convergence-json",
+        type=Path,
+        default=CONVERGENCE_JSON,
+        help="时间步收敛 JSON",
+    )
+    parser.add_argument("--chart-dir", type=Path, default=CHART_DIR, help="五张中文图表目录")
+    parser.add_argument("--report", type=Path, default=REPORT_MD, help="V1 技术报告")
+    return parser
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = _parser().parse_args(argv)
+    trace_json = _resolve_output(args.trace_json)
+    trace_csv = _resolve_output(args.trace_csv)
+    convergence_json = _resolve_output(args.convergence_json)
+    chart_dir = _resolve_output(args.chart_dir)
+    report = _resolve_output(args.report)
+    try:
+        if args.check_only:
+            checked = validate_existing_outputs(
+                trace_json, trace_csv, convergence_json, chart_dir, report
+            )
+            _print_summary(
+                trace_json=trace_json,
+                trace_csv=trace_csv,
+                convergence_json=convergence_json,
+                chart_dir=chart_dir,
+                report=report,
+                trace_count=checked["trace_count"],
+                sample_count=checked["sample_count"],
+                status=checked["status"],
+                source_sha256=checked["source_sha256"],
+            )
+            print("核对完成：没有重新运行 MuJoCo，也没有改写文件。")
+            return 0
+
+        from tools.reporting.generate_v1_contact_report import write_v1_report
+        from tools.visualization.plot_v1_contact_validation import generate_v1_charts
+
+        traces = run_v1_matrix()
+        source_sha256 = _source_sha256()
+        trace_document = build_trace_document(traces, source_sha256)
+        convergence_document = build_convergence_document(traces)
+        write_trace_json(trace_document, trace_json)
+        write_trace_csv(traces, trace_csv)
+        write_convergence_json(convergence_document, convergence_json)
+        generate_v1_charts(trace_json, convergence_json, chart_dir)
+        write_v1_report(trace_document, convergence_document, report)
+        sample_count = sum(len(trace.samples) for trace in traces)
+        _print_summary(
+            trace_json=trace_json,
+            trace_csv=trace_csv,
+            convergence_json=convergence_json,
+            chart_dir=chart_dir,
+            report=report,
+            trace_count=len(traces),
+            sample_count=sample_count,
+            status=convergence_document["overall_status"],
+            source_sha256=source_sha256,
+        )
+        return 0
+    except Exception as error:
+        print(f"V1 接触验证失败：{error}")
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -186,6 +186,7 @@ def build_v1_report(trace_document: dict, convergence_document: dict) -> str:
         "## 总体验收",
         "",
         f"总体验收结果为 **{status}**。该结论由结构化 convergence schema-1 直接生成。",
+        "这里的 `PASS` 只表示冻结的数值有限性、方向、终止一致性和时间步收敛门槛通过，不表示所有偏差工况都成功插到底，也不表示实物装配成功。",
         "",
         "超限或硬门槛失败明细：",
         "",
@@ -210,4 +211,3 @@ def write_v1_report(
     with output.open("w", encoding="utf-8", newline="\n") as stream:
         stream.write(build_v1_report(trace_document, convergence_document))
     return output
-
