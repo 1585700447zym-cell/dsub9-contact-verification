@@ -715,6 +715,7 @@ c5b0dcab3561891ca1849dea08581c8f59d5ffd60aab6297bd74444de4dcb7bc  deliverables/c
 042a9a1f9d0775a5126a35a6d04d8616e94fa9e974d90dd4a84a8b9e033de8e4  deliverables/chinese_visual_package/启动正式SDF场景.cmd
 08656dac7cabd0a88470313a7acaeb54caeaa467725d8b3f3682fe520337af55  docs/superpowers/plans/2026-08-22-dsub9-collision-model.md
 d403ee530586dc83da505ff347fb66affcab7b7c44bc385bd98f8b2deae89b3b  docs/superpowers/plans/2026-08-25-dsub9-chinese-visual-package.md
+36fbad7e94b3d61701105a0bc1491b22374b44b4ac96a8328b26d848d7524d2f  docs/superpowers/plans/2026-08-29-dsub9-v1-contact-validation.md
 ff556deb160608acddf667af4babbf3b7adbc957b0079e4cede72a833e40a2a0  docs/superpowers/specs/2026-08-22-dsub9-collision-model-design.md
 90ab101d49421109132df19d80bd62749d3510fc93f0bb0984a022db21391cf8  docs/superpowers/specs/2026-08-25-dsub9-chinese-visual-package-design.md
 4baea3424210eecedfaaa850a6b44b2c365a5c93d80df0bf59059df0f1097e05  docs/superpowers/specs/2026-08-29-dsub9-v1-contact-validation-design.md
