@@ -717,7 +717,7 @@ c5b0dcab3561891ca1849dea08581c8f59d5ffd60aab6297bd74444de4dcb7bc  deliverables/c
 d403ee530586dc83da505ff347fb66affcab7b7c44bc385bd98f8b2deae89b3b  docs/superpowers/plans/2026-08-25-dsub9-chinese-visual-package.md
 ff556deb160608acddf667af4babbf3b7adbc957b0079e4cede72a833e40a2a0  docs/superpowers/specs/2026-08-22-dsub9-collision-model-design.md
 90ab101d49421109132df19d80bd62749d3510fc93f0bb0984a022db21391cf8  docs/superpowers/specs/2026-08-25-dsub9-chinese-visual-package-design.md
-fdcdf7ae16b60062e926936fcdaad0a1618b8469f075b34fe670a6449e9ccbe6  docs/superpowers/specs/2026-08-29-dsub9-v1-contact-validation-design.md
+4baea3424210eecedfaaa850a6b44b2c365a5c93d80df0bf59059df0f1097e05  docs/superpowers/specs/2026-08-29-dsub9-v1-contact-validation-design.md
 8022bf0d5902a66bfb7896a89089007ef2768a65d85dac26742fa5f954121447  models/dsub9_pair.xml
 f58dcb2decc04d28f96bb5353f7feec112ad148105059ad963ac5b4c49374132  models/includes/dsub9_collision.xml
 fcde31ea0192f5ce7333707990a94f1248a729f97f619bb52c37c3da2eb159b8  models/includes/dsub9_visual.xml

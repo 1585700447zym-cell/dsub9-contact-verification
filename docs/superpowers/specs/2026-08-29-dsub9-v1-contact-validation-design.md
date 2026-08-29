@@ -176,7 +176,24 @@ JSON 使用 UTF-8、LF、排序键与 `allow_nan=False`。
 - 穿透、数值发散和终止检查；
 - 已完成、未完成与后续 V2/Failure Boundary 接口。
 
-中文使用说明增加 V1 数据、图表和报告的入口，但不把新轨迹称为 RL 时序数据。
+### 7.1 详细使用与说明文档
+
+新增 `deliverables/chinese_visual_package/V1接触验证使用说明.md`，面向第一次接触本项目、MuJoCo 或科研数据的用户，不假设读者熟悉 Git、Python 或接触求解。文档必须包含：
+
+1. V1 验证解决的问题和不解决的问题；
+2. 项目目录、输入、生成器和全部输出文件的关系；
+3. 从环境检查到一条命令重生成的逐步操作；
+4. JSON 顶层字段、trace metadata、sample 字段和 convergence 字段字典；
+5. CSV 每一列的名称、单位、正负号和使用方法；
+6. 五张图表的逐图阅读方法；
+7. 硬门槛、收敛目标、总体 `PASS/FAIL` 及超限项的解释；
+8. 为什么固定深度网格能隔离时间步影响；
+9. 如何在报告或论文中正确引用这些数据；
+10. Python、DLL、中文字体、schema 不兼容、生成中断和验收失败的故障排查；
+11. 未标定载荷、规定姿态扫描、V1/V2、Failure Boundary 与 RL episode 之间的科学边界；
+12. 可复制的复现记录模板，要求记录 Git 提交、Python/MuJoCo 版本、时间步、空间步长、源数据哈希和总体验收状态。
+
+现有 `deliverables/chinese_visual_package/中文使用说明.md` 增加“V1 正式接触验证”入口、文件树和快速开始，但详细字段和收敛解释仅在新文档中维护，避免两份说明相互复制后漂移。两份说明都不得把新轨迹称为 RL 时序数据。
 
 ## 8. 错误处理
 
@@ -198,8 +215,9 @@ JSON 使用 UTF-8、LF、排序键与 `allow_nan=False`。
 6. JSON/CSV 的编码、字段、顺序和有限数；
 7. 五张图的文件名、分辨率、中文字体、声明和可读性；
 8. 报告的必要章节、数值与源 JSON 一致；
-9. 现有 contact、visualization、reporting 测试全部回归；
-10. 项目全量 pytest 通过，最终 manifest 重生成后 `--verify` 通过。
+9. 详细使用说明的必要章节、字段字典、命令、图表引用和科学边界；
+10. 现有 contact、visualization、reporting 测试全部回归；
+11. 项目全量 pytest 通过，最终 manifest 重生成后 `--verify` 通过。
 
 图表生成后必须人工逐张视觉检查，包括中文字形、图例、坐标轴、线条重叠、截断和声明。
 
