@@ -186,6 +186,34 @@ class ContactResult:
     runtime_s: float
 
 
+@dataclass(frozen=True)
+class ContactSample:
+    """One finite contact state sampled on a prescribed insertion-depth grid."""
+
+    step_index: int
+    depth_m: float
+    male_origin_z_m: float
+    wrench: Wrench
+    force_norm_n: float
+    torque_norm_nm: float
+    contact_count: int
+    penetration_m: float
+
+
+@dataclass(frozen=True)
+class ContactTrace:
+    """A complete prescribed-pose sweep plus its existing peak summary."""
+
+    case: ContactCase
+    collision_mode: str
+    contact_profile: str
+    timestep_s: float
+    spatial_step_m: float
+    solver: str
+    samples: tuple[ContactSample, ...]
+    summary: ContactResult
+
+
 def _signed_case_name(prefix: str, value: float, unit: str, scale: float) -> str:
     if not math.isfinite(value) or value == 0.0:
         raise ValueError(f"{prefix} requires a finite non-zero value")
@@ -337,17 +365,21 @@ def _finite_state(data: mujoco.MjData, wrench: np.ndarray, penetration: float) -
     )
 
 
-def run_case(
+def _run_sweep(
     case: ContactCase,
     timestep_s: float,
     collision_mode: CollisionMode,
     *,
-    profile: str = "baseline",
-) -> ContactResult:
-    """Prescribe a deterministic +Z pose sweep and collect male contact wrench."""
+    profile: str,
+    spatial_step_m: float,
+    capture_samples: bool,
+) -> tuple[ContactResult, tuple[ContactSample, ...]]:
+    """Run the shared deterministic sweep used by summaries and full traces."""
 
     if not math.isfinite(timestep_s) or timestep_s <= 0.0:
         raise ValueError("timestep_s must be finite and positive")
+    if not math.isfinite(spatial_step_m) or spatial_step_m <= 0.0:
+        raise ValueError("spatial_step_m must be finite and positive")
     parameters = _contact_parameters(profile)
     model = _load_model(collision_mode, float(timestep_s), profile)
     data = mujoco.MjData(model)
@@ -355,7 +387,6 @@ def run_case(
     if male_body < 0:
         raise RuntimeError("model has no male body")
 
-    spatial_step_m = DEFAULT_SPEED_M_S * timestep_s
     requested_intervals = math.ceil(case.target_depth_m / spatial_step_m) if case.target_depth_m else 0
     max_steps = requested_intervals + 1
     peak_components = np.zeros(6, dtype=float)
@@ -367,6 +398,7 @@ def run_case(
     final_depth = 0.0
     termination: Termination = "NUMERICAL_ERROR"
     executed_steps = 0
+    samples: list[ContactSample] = []
     quaternion = _quaternion(case)
     started = _clock()
 
@@ -401,6 +433,19 @@ def run_case(
         max_contacts = max(max_contacts, int(data.ncon))
         total_contact_samples += int(data.ncon)
         max_penetration = max(max_penetration, penetration)
+        if capture_samples:
+            samples.append(
+                ContactSample(
+                    step_index=step_index,
+                    depth_m=float(depth),
+                    male_origin_z_m=float(case.start_origin_z_m + depth),
+                    wrench=Wrench(*map(float, wrench)),
+                    force_norm_n=float(np.linalg.norm(wrench[:3])),
+                    torque_norm_nm=float(np.linalg.norm(wrench[3:])),
+                    contact_count=int(data.ncon),
+                    penetration_m=float(penetration),
+                )
+            )
 
         if max_penetration > MAX_PENETRATION_M:
             termination = "EXCESS_PENETRATION"
@@ -423,7 +468,7 @@ def run_case(
         runtime_s = float(np.nan_to_num(runtime_s, nan=0.0, posinf=0.0, neginf=0.0))
 
     solver_name = mujoco.mjtSolver(model.opt.solver).name.removeprefix("mjSOL_")
-    return ContactResult(
+    result = ContactResult(
         case=case.name,
         collision_mode=collision_mode,
         contact_profile=parameters.name,
@@ -436,11 +481,62 @@ def run_case(
         total_contact_samples=total_contact_samples,
         max_penetration_m=float(max_penetration),
         timestep_s=float(timestep_s),
-        speed_m_s=DEFAULT_SPEED_M_S,
+        speed_m_s=float(spatial_step_m / timestep_s),
         spatial_step_m=float(spatial_step_m),
         steps=executed_steps,
         solver=f"{solver_name}(iterations={model.opt.iterations})",
         runtime_s=float(runtime_s),
+    )
+    return result, tuple(samples)
+
+
+def run_case(
+    case: ContactCase,
+    timestep_s: float,
+    collision_mode: CollisionMode,
+    *,
+    profile: str = "baseline",
+) -> ContactResult:
+    """Prescribe the legacy speed-based +Z sweep and return its peak summary."""
+
+    result, _ = _run_sweep(
+        case,
+        timestep_s,
+        collision_mode,
+        profile=profile,
+        spatial_step_m=DEFAULT_SPEED_M_S * timestep_s,
+        capture_samples=False,
+    )
+    return result
+
+
+def run_case_trace(
+    case: ContactCase,
+    timestep_s: float,
+    collision_mode: CollisionMode,
+    *,
+    profile: str = "baseline",
+    spatial_step_m: float = 0.00001,
+) -> ContactTrace:
+    """Run a fixed-depth-grid sweep and retain every finite contact sample."""
+
+    result, samples = _run_sweep(
+        case,
+        timestep_s,
+        collision_mode,
+        profile=profile,
+        spatial_step_m=spatial_step_m,
+        capture_samples=True,
+    )
+    return ContactTrace(
+        case=case,
+        collision_mode=collision_mode,
+        contact_profile=result.contact_profile,
+        timestep_s=float(timestep_s),
+        spatial_step_m=float(spatial_step_m),
+        solver=result.solver,
+        samples=samples,
+        summary=result,
     )
 
 
