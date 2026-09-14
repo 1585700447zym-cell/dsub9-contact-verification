@@ -1,0 +1,15 @@
+{
+  "deliverables/v1_applicability/01_针孔几何重叠定位.png": "9dba416c429d1330a28d796e072beedb085c30e530e073f903c501b457708f84",
+  "deliverables/v1_applicability/02_偏差拆分与缩放对照.png": "caf153073b4605b0d06cd1e33b62df509b5ab308af3a623c1aa325c2b63a7b10",
+  "deliverables/v1_applicability/03_接触漏检与搜索敏感性.png": "518f3b3c1bc55d7eeb97410cc98778fc9072edb400bd8c7f8a89496c55f0f66b",
+  "deliverables/v1_applicability/diagnostic_results.json": "e35468a3c665fed5d2670370d44ba2610903b10d7924f0b5d8f2842551fcee39",
+  "deliverables/v1_applicability/inputs/DSub9_Model_Memo_V3.json": "4548e75151b9affb1e31897f5b5b1c0f1ac935f80d9037a991172259af8221c7",
+  "deliverables/v1_applicability/inputs/DSub9_Model_Memo_V3.md": "21b87aaf896ed51045b964a0320e4e986395ba14423c3054062ad5e6da456424",
+  "deliverables/v1_applicability/README.md": "ea44028b358e224a617efa921ab5b21d26afd55f82e2cbb9c54d9b2edaa18099",
+  "deliverables/v1_applicability/V1开发适用性诊断报告.md": "d3117c2c84cfef53fe7fb35b2499b57991b8fdb2be42a86093e32c102f29a25f",
+  "deliverables/v1_applicability/闭环接口协议.md": "2f2de321ed3575f53e85a70aa2ad764ea6dc9cdc2c95857ec84ab2b96aff99ae",
+  "deliverables/v1_applicability/验证记录.md": "b505a78277e3fe90ba0f1d78f7165a24c9558f8c96f0c4ad5e654b4e6189f750",
+  "tests/contact/test_applicability.py": "cbb09f4c386ebb49ec663f85c98beff17dbac8eef3613d220c8fe620e9427fcf",
+  "tools/reporting/report_v1_applicability.py": "e6ebc62521d61c5f85baa2be978fdd96d6d9e92a9e6c93d87865b96dfac5fd4d",
+  "tools/validation/diagnose_v1_applicability.py": "f0dee7a93853d06e0482d63f3fec0e76b1f4409354d6db913f17cb14f97d85f4"
+}

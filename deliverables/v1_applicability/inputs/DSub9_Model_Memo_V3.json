@@ -1,0 +1,312 @@
+{
+  "schema_id": "dsub9_simplified_model_memo",
+  "schema_version": "1.1.0",
+  "memo_date_local": "2026-09-14",
+  "timezone": "Asia/Shanghai",
+  "workspace_root": "D:/dsub9项目计划/first_stage_sim",
+  "source_workspace_root": "C:/Users/ok everything/Documents/Codex/2026-07-16/nih",
+  "path_convention": "path_relative_to_workspace and preview_files_relative_to_workspace resolve against workspace_root; source_files_relative_to_source_workspace resolve against source_workspace_root",
+  "length_unit": "mm",
+  "simulation_length_unit": "m",
+  "source_quality": {
+    "geometry_basis": "SolidWorks 2023 build source, prior parameter notes, existing native and STEP files",
+    "current_check": [
+      "native and STEP files exist",
+      "STEP headers identify SolidWorks 2023",
+      "existing male and female preview images inspected",
+      "build scripts and frame definitions inspected in the original 2026-09-12 memo",
+      "2026-09-14: current project native and STEP byte sizes and SHA-256 verified",
+      "2026-09-12: female STEP copies each had 3253 entity records and 276 unique Cartesian points matching at 8 decimal places; circle radius counts matched",
+      "2026-09-14: current MJCF, includes and existing contact report checked; simulation was not rerun for this memo revision"
+    ],
+    "not_checked_this_memo": [
+      "fresh SolidWorks rebuild",
+      "STEP reimport and BREP interference analysis",
+      "real connector metrology",
+      "fresh contact simulation run for this memo revision",
+      "real insertion force calibration",
+      "standard gripper or fixture fit"
+    ],
+    "fact_status_vocabulary": [
+      "cad_defined",
+      "derived_nominal",
+      "recommendation_unimplemented",
+      "unknown_requires_validation"
+    ]
+  },
+  "model_set": {
+    "assembly_file_present": false,
+    "male": {
+      "version": "V3_two_stage_rear_shell",
+      "native_file": {
+        "path_relative_to_workspace": "DSub9_Deliverables_V4/DSub9_Male_TwoStageRearShell_V3_SW2023.SLDPRT",
+        "size_bytes": 184107,
+        "sha256": "1e2a98808fd0429129e5027910aa1db58640ceccc5ab5eb99982100629324f58"
+      },
+      "step_file": {
+        "path_relative_to_workspace": "DSub9_Deliverables_V4/DSub9_Male_TwoStageRearShell_V3.step",
+        "size_bytes": 145143,
+        "sha256": "e6b3c453c5066ab18e3c594c53a21ee006f6c9030e9e8ee17b4274d2e26ad44a",
+        "step_schema": "AP203"
+      },
+      "preview_files_relative_to_workspace": [
+        "DSub9_Deliverables_V4/DSub9_Male_V3_Front.png",
+        "DSub9_Deliverables_V4/DSub9_Male_V3_Side.png",
+        "DSub9_Deliverables_V4/DSub9_Male_V3_Rear.png"
+      ],
+      "physical_partition": "single_solid_body_in_build_script; pins_and_housing_not_separate_material_bodies",
+      "flange": {
+        "length_x_mm": 30.8,
+        "width_y_mm": 12.55,
+        "thickness_z_mm": 0.6,
+        "z_range_mm": [-0.6, 0.0]
+      },
+      "mounting_holes": {
+        "centres_xy_mm": [[-12.5, 0.0], [12.5, 0.0]],
+        "pitch_x_mm": 25.0,
+        "diameter_mm": 3.2,
+        "simplified_post_outer_diameter_mm": 5.0,
+        "post_note": "posts merge into the first rear shoulder"
+      },
+      "rear_shell": {
+        "total_depth_from_z0_mm": 22.0,
+        "z_extent_mm": [-22.0, 0.0],
+        "first_shoulder": {
+          "length_x_mm": 30.8,
+          "width_y_mm": 12.55,
+          "z_range_mm": [-7.0, 0.0]
+        },
+        "central_second_stage": {
+          "length_x_mm": 20.0,
+          "width_y_mm": 14.0,
+          "z_range_mm": [-22.0, 0.0],
+          "visible_beyond_first_shoulder_mm": 15.0,
+          "side_projection_beyond_shoulder_each_y_mm": 0.725
+        },
+        "rear_trapezoid_and_solder_tails": "omitted"
+      },
+      "d_guide": {
+        "z_range_mm": [0.0, 4.0],
+        "outer_profile": {
+          "top_width_x_mm": 16.9,
+          "bottom_width_x_mm": 12.55,
+          "height_y_mm": 8.3,
+          "corner_radius_mm": 0.75
+        },
+        "inner_profile": {
+          "top_width_x_mm": 15.5,
+          "bottom_width_x_mm": 11.15,
+          "height_y_mm": 6.9,
+          "corner_radius_mm": 0.55
+        }
+      },
+      "pins": {
+        "count": 9,
+        "diameter_mm": 1.0,
+        "z_range_mm": [0.0, 4.0],
+        "layout": "5_plus_4",
+        "centres_xy_mm": [
+          [-5.54, 1.42],
+          [-2.77, 1.42],
+          [0.0, 1.42],
+          [2.77, 1.42],
+          [5.54, 1.42],
+          [-4.155, -1.42],
+          [-1.385, -1.42],
+          [1.385, -1.42],
+          [4.155, -1.42]
+        ],
+        "same_row_pitch_mm": 2.77,
+        "row_pitch_y_mm": 2.84
+      },
+      "overall_z_range_mm": [-22.0, 4.0]
+    },
+    "female": {
+      "version": "V3_recessed_flange_protruding_socket",
+      "native_file": {
+        "path_relative_to_workspace": "DSub9_Deliverables_V4/DSub9_Female_Refined_V3_SW2023.SLDPRT",
+        "size_bytes": 199606,
+        "sha256": "ab6ffdeab906adbf4ccc4353f5b504e913d9f9ec8eaed3f38f9e99e1576c1f34"
+      },
+      "step_file": {
+        "path_relative_to_workspace": "DSub9_Deliverables_V4/DSub9_Female_Refined_V3.step",
+        "size_bytes": 237268,
+        "sha256": "8afb66c2ecbab8b02be06b59a4cd726c29ed949be3c354f3233bf7595d7eb39f",
+        "step_schema": "AP203"
+      },
+      "preview_files_relative_to_workspace": [
+        "DSub9_Deliverables_V4/DSub9_Female_V3_Front.png",
+        "DSub9_Deliverables_V4/DSub9_Female_V3_Side.png",
+        "DSub9_Deliverables_V4/DSub9_Female_V3_Rear.png"
+      ],
+      "physical_partition": "single_solid_body_in_build_script; no_real_contact_springs_or_material_split",
+      "mating_mouth_z_mm": 0.0,
+      "continuous_socket_body": {
+        "z_range_mm": [0.0, 9.7],
+        "outer_d_profile": {
+          "top_width_x_mm": 20.0,
+          "bottom_width_x_mm": 17.0,
+          "height_y_mm": 9.5,
+          "corner_radius_mm": 0.8
+        }
+      },
+      "d_receiver": {
+        "depth_z_mm": 4.1,
+        "outer_pocket_profile": {
+          "top_width_x_mm": 17.2,
+          "bottom_width_x_mm": 12.85,
+          "height_y_mm": 8.6,
+          "corner_radius_mm": 0.9
+        },
+        "central_island_profile": {
+          "top_width_x_mm": 15.2,
+          "bottom_width_x_mm": 10.85,
+          "height_y_mm": 6.6,
+          "corner_radius_mm": 0.4
+        }
+      },
+      "flange": {
+        "length_x_mm": 30.8,
+        "width_y_mm": 12.55,
+        "thickness_z_mm": 0.6,
+        "z_range_mm": [4.1, 4.7]
+      },
+      "rear_housing": {
+        "depth_z_mm": 5.0,
+        "z_range_mm": [4.7, 9.7]
+      },
+      "contact_holes": {
+        "count": 9,
+        "diameter_mm": 1.15,
+        "depth_from_mouth_mm": 4.5,
+        "centres_xy_mm_same_as_male": true,
+        "equivalent_entrance": {
+          "shape": "cylindrical_counterbore_not_conical_chamfer",
+          "diameter_mm": 1.35,
+          "depth_mm": 0.25
+        }
+      },
+      "mounting_holes": {
+        "centres_xy_mm": [[-12.5, 0.0], [12.5, 0.0]],
+        "pitch_x_mm": 25.0,
+        "diameter_mm": 3.2,
+        "simplified_post_outer_diameter_mm": 5.0,
+        "post_projection_rearward_from_flange_mm": 3.5
+      }
+    }
+  },
+  "frames": {
+    "handedness": "right",
+    "axis_convention": {
+      "plus_x": "five-contact row transverse direction",
+      "plus_y": "toward five-contact row",
+      "plus_z": "local male insertion direction into female"
+    },
+    "quaternion_order": "wxyz",
+    "male_mate": {
+      "solidworks_name": "CS_MATE_MALE",
+      "origin_mm": [0.0, 0.0, 0.0],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0]
+    },
+    "male_grasp_nominal": {
+      "solidworks_name": "CS_GRASP_MALE",
+      "origin_mm": [0.0, 0.0, -14.5],
+      "origin_m": [0.0, 0.0, -0.0145],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0],
+      "not_actual_gripper_tcp": true
+    },
+    "female_mate": {
+      "solidworks_name": "CS_MATE_FEMALE",
+      "origin_mm": [0.0, 0.0, 0.0],
+      "quaternion_wxyz": [1.0, 0.0, 0.0, 0.0]
+    },
+    "nominal_full_insert_target": "male_mate and female_mate coincide in a shared assembly frame",
+    "step_named_frame_preservation_guaranteed": false,
+    "external_frame_reference_absolute": "C:/Users/ok everything/Documents/Codex/2026-07-16/nih/outputs/DSub9_Coordinate_Frames/connector_frames.json",
+    "named_sites_present_in_current_formal_mjcf": false,
+    "grasp_frame_status": "nominal_recommendation_not_an_implemented_MJCF_site_or_calibrated_TCP"
+  },
+  "derived_nominal_geometry": {
+    "pin_hole_diameter_difference_mm": 0.15,
+    "pin_hole_radial_clearance_if_coaxial_mm": 0.075,
+    "pin_entrance_radial_clearance_if_coaxial_mm": 0.175,
+    "d_guide_receiver_top_width_total_difference_mm": 0.3,
+    "d_guide_receiver_bottom_width_total_difference_mm": 0.3,
+    "d_guide_receiver_height_total_difference_mm": 0.3,
+    "d_guide_receiver_centered_half_difference_mm": 0.15,
+    "male_guide_to_female_flange_axial_gap_at_nominal_insert_mm": 0.1,
+    "pin_depth_bottom_allowance_at_nominal_insert_mm": 0.5,
+    "male_guide_front_z_mm": 4.0,
+    "male_pin_tip_z_mm": 4.0,
+    "shell_contacts_before_pins_guaranteed": false,
+    "clearance_type": "CAD_nominal_not_measured_tolerance_or_proven_contact_clearance"
+  },
+  "grasping": {
+    "status": "recommendation_unimplemented",
+    "proposed_direction": "jaw_closure_along_local_y",
+    "proposed_workpiece": "male_central_second_stage_free_segment",
+    "candidate_contact_planes_y_mm": [-7.0, 7.0],
+    "candidate_z_region_mm": [-22.0, -7.0],
+    "nominal_grasp_center_z_mm": -14.5,
+    "standard_flat_jaws_only": true,
+    "fixture_recommended": true,
+    "fixture_modeled": false,
+    "actual_gripper_model_selected": false,
+    "actual_tcp_to_male_mate_transform_calibrated": false,
+    "recommended_checks": [
+      "measure real rear-shell dimensions and jaw access",
+      "measure repeat-grasp translation and rotation dispersion",
+      "check slip under expected insertion forces and moments",
+      "provide jaw clearance in any pick-up fixture",
+      "calibrate or estimate flange/TCP-to-male-mate transform after mounting jaws",
+      "do not assume D-shell contacts before pins without geometric or real-part verification"
+    ]
+  },
+  "simulation_notes": {
+    "male_and_female_import_separately": true,
+    "recreate_named_sites_from_frames_json": true,
+    "do_not_use_center_of_mass_as_mating_origin": true,
+    "do_not_assume_one_cad_solid_has_real_material_compliance": true,
+    "separate_collision_geom_or_contact_assignment_may_be_needed": false,
+    "collision_partition_status": "implemented_for_external_D_guides_and_nine_pin_hole_pairs_in_current_MuJoCo_project; CAD_material_bodies_remain_unsplit",
+    "contact_force_and_friction_parameters": "explicit_uncalibrated_diagnostic_v1_baseline_with_low_and_high_response_sensitivity_profiles; real_material_parameters_not_calibrated",
+    "real_part_dimensional_tolerances": "unknown_requires_validation"
+  },
+  "current_simulation": {
+    "formal_model_relative_to_workspace": "models/dsub9_pair.xml",
+    "visual_meshes_relative_to_workspace": ["assets/visual/dsub9_male_visual_centered.stl", "assets/visual/dsub9_female_visual_centered.stl"],
+    "female_source_stl_translation_mm": [-15.4, -6.275, 0.0],
+    "stl_scale_to_meters": 0.001,
+    "formal_holes": "nine_analytic_stepped_circular_hole_SDFs",
+    "fallback_model_relative_to_workspace": "build/dsub9_pair_polygon32.xml",
+    "fallback_role": "polygon32_approximation_for_comparison_not_formal_geometry",
+    "collision_asset_counts": {"male_D_guide": 78, "female_D_socket": 42, "fallback_hole_sectors": 576, "total": 696},
+    "validation_report_relative_to_workspace": "reports/collision_geometry_report.md",
+    "validation_results_relative_to_workspace": "reports/contact_validation_results.json",
+    "validation_status": "existing_prescribed_pose_quasistatic_contact_validation; not_free_dynamics_or_force_control",
+    "result_schema_version": 3,
+    "result_counts": {"baseline": 16, "low_response": 2, "high_response": 2, "total": 20},
+    "real_insertion_force_calibrated": false,
+    "robot_gripper_fixture_in_formal_model": false,
+    "cad_assembly_file_present": false,
+    "mujoco_pair_scene_present": true
+  },
+  "historical_female_source_copy": {
+    "root": "C:/Users/ok everything/Documents/Codex/2026-07-16/nih/outputs/DSub9_Deliverables_V3",
+    "native_file": {"name": "DSub9_Female_Refined_V3_SW2023.SLDPRT", "size_bytes": 203465, "sha256": "011d3c257acbff66cfbbe80647862f0df78455a24e40a45f8f6357d554a230f1"},
+    "step_file": {"name": "DSub9_Female_Refined_V3.step", "size_bytes": 237252, "sha256": "945338f60d51e5ec56c21f387e4ae40d6624c0bdde268234ec624ff6dff19bc7"},
+    "current_project_step_export_date": "2026-07-24T09:51:33",
+    "historical_source_step_export_date": "2026-08-18T09:32:24",
+    "comparison_scope": "matching_nominal_parameters_and_sampled_STEP_records; byte_identity_false; BREP_topology_and_surface_equivalence_not_proven"
+  },
+  "source_files_relative_to_source_workspace": [
+    "work/BuildDSub9MaleV3.cs",
+    "work/MaleV3Parameters.cs",
+    "work/BuildDSub9FemaleV3.cs",
+    "work/FemaleV3Parameters.cs",
+    "work/ConnectorFrameDefinitions.cs",
+    "outputs/DSub9_Deliverables_V4/DSub9_Male_V3_参数说明.md",
+    "outputs/DSub9_Deliverables_V3/DSub9_Female_V3_参数说明.md",
+    "outputs/DSub9_Coordinate_Frames/connector_frames.json"
+  ]
+}
