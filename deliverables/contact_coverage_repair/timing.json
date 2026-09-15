@@ -1,0 +1,43 @@
+{
+  "sdf40": {
+    "seconds_140_pose_checks": 0.28803709999192506,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "sdf200": {
+    "seconds_140_pose_checks": 1.0797045999934198,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "sdf500": {
+    "seconds_140_pose_checks": 2.5383637999912025,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "sdf1000": {
+    "seconds_140_pose_checks": 4.737816900000325,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "polygon32_original": {
+    "seconds_140_pose_checks": 0.2807316999969771,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "convex64": {
+    "seconds_140_pose_checks": 0.31185339999501593,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "convex128": {
+    "seconds_140_pose_checks": 0.5403382999938913,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "convex256": {
+    "seconds_140_pose_checks": 1.0432909999944968,
+    "includes_data_allocation_and_force_extraction": true,
+    "excludes_compilation": true
+  },
+  "dense_scan_seconds_including_witness": 98.46941369998967
+}

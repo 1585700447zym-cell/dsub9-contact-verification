@@ -1,0 +1,17 @@
+{
+  "deliverables/contact_coverage_repair/01_重点姿态接触覆盖.png": "e3fdd754cad5ef2eb6d5ab5aa2a6c5ae88f3e175f7448fa15ef899a5a0b7471e",
+  "deliverables/contact_coverage_repair/02_分辨率与接触力.png": "ce19a510093bca7d38f9931f98c99e826c82524667470857cb4dacb08aeb6449",
+  "deliverables/contact_coverage_repair/03_全深度接触诊断.png": "5cf32893e6ef9358c481d551be27df4eabab93d4e01ca5970f9933d7236bc959",
+  "deliverables/contact_coverage_repair/coverage_results.json": "9fed105c3f1e91b116551d68a47c1e4295d6d3be904f3f39778681d4e69d2fa5",
+  "deliverables/contact_coverage_repair/dsub9_convex128_contact_dev_v1.xml": "4b42451082f06c06c478371d886d66e856dc8b6151674f556570c27a238ab805",
+  "deliverables/contact_coverage_repair/force_resolution_sensitivity.json": "ef00997c3f7945403b8bc8128eb7c50fb6595ec9d554c80b22fe02dc7e33f5c7",
+  "deliverables/contact_coverage_repair/README.md": "822dd3f2d16a101c9126d8dacd6e05d18fff361c8821efe27307c89ef4eb03c1",
+  "deliverables/contact_coverage_repair/timing.json": "c714c1a7112e55cfaf1e7e7d4665c8fe76da323fb1f2aeda6ae95005ec2eff47",
+  "deliverables/contact_coverage_repair/validation_run.log": "840aef46a02909ef1e00c2d102df7d507659baa68a73b1734ca21e8ac830fcd5",
+  "deliverables/contact_coverage_repair/接触覆盖修复报告.md": "6b3f66539201168e752e0b7b332d2430235c92b4861b7590751f7b15c970d8a8",
+  "deliverables/contact_coverage_repair/验证记录.md": "8f01414a4e0dfc1dcfe8cda9a85ac70a34d7f4af16f0acf29a4d8c27b99ec90a",
+  "tools/model/contact_development.py": "db348846da55935e1886318f53492da3edebd506e7c0663a9fdbc1414ef65bf2",
+  "tools/validation/repair_contact_coverage.py": "32726e92b55d16dd8497c37eaf8ed340b0c40a868904917098ec8067d3a1de39",
+  "tools/reporting/report_contact_coverage_repair.py": "6bc72b27718114852b744a86bb0443b7c22ef9fada4978dbb2ff069d0be8be93",
+  "tests/contact/test_contact_development.py": "8cad096b93666d0960f043ac22b40e85556253a8ca13ba091bc88f948edc1bc2"
+}

@@ -1,0 +1,9 @@
+{
+  "poses": 140,
+  "active_force_threshold_N": 0.001,
+  "active_poses": 24,
+  "maximum_force_vector_difference_N": 0.0005143528918943854,
+  "relative_force_difference_median": 0.018831077521358194,
+  "relative_force_difference_max": 0.08007269567495814,
+  "relative_denominator": "max(norm(F128), norm(F256)); poses above 0.001 N only"
+}
