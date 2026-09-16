@@ -1,0 +1,25 @@
+{
+  "as_of": "2026-09-16",
+  "tests": {
+    "command": "python -X utf8 -B -m pytest tests/control tests/dynamics tests/contact/test_contact_development.py tests/contact/test_applicability.py -q",
+    "passed": 96,
+    "failed": 0
+  },
+  "paired_episodes": 14,
+  "geometric_success_counts": [
+    1,
+    1
+  ],
+  "historical_input_count": 715,
+  "historical_and_dynamic_fingerprints_verified": true,
+  "scientific_plots_visually_reviewed": 2,
+  "replay_keyframes_reviewed": [
+    0,
+    52,
+    105
+  ],
+  "replay_frame_count": 106,
+  "monthly_slides_reviewed": 6,
+  "native_chart_workbook_count": 2,
+  "scope": "development baseline only; six contact cases remain incomplete; no hardware or statistical success claim"
+}

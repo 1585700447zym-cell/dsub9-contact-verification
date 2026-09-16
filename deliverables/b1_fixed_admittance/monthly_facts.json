@@ -1,0 +1,199 @@
+{
+  "as_of": "2026-09-16",
+  "status_title": "D-sub9 接触驱动仿真与固定导纳基线",
+  "experiment_summary": "完成 7 个预定工况、14 个配对回合。零反馈几何完成 1 项，B1 几何完成 1 项。",
+  "representative_case": "combined_a_scale_0.75",
+  "improvement_statement": "联合 A ×0.75：零反馈推进 0.157 mm，B1 推进 0.247 mm，差值 +0.090 mm。",
+  "limitations": [
+    "7 个固定开发工况，未开展随机误差统计试验。",
+    "几何完成不代表电连接、锁止或实机插装成功。",
+    "孔离散精度仍影响部分组合偏差，256 段仅作为开发配置。",
+    "质量、夹持关系、接触参数及保护阈值尚未实物标定。"
+  ],
+  "next_steps": [
+    "B2：加入受限搜索和条件回撤，先处理 B1 停滞工况。",
+    "冻结评价协议，划分开发集与独立测试集。",
+    "再接入四维残差 SAC，并与固定基线比较。"
+  ],
+  "successful_cases": [
+    [
+      "同轴"
+    ],
+    [
+      "同轴"
+    ]
+  ],
+  "cases": [
+    "同轴",
+    "X +100 μm",
+    "Y −100 μm",
+    "Roll +1.5°",
+    "联合 A ×0.75",
+    "联合 B ×0.75",
+    "联合 A 全幅"
+  ],
+  "advance_mm": [
+    [
+      3.991205576542506,
+      0.24999795940839004,
+      0.24999666563845033,
+      0.2238664739704836,
+      0.15667317992024274,
+      0.16778961657899988,
+      0.11130201464988652
+    ],
+    [
+      3.991205576542506,
+      0.24999786865147633,
+      0.24999745644280505,
+      0.2381102196423292,
+      0.2468386021180981,
+      0.2463082039005685,
+      0.23871309418692063
+    ]
+  ],
+  "records": [
+    {
+      "case": "aligned",
+      "label": "同轴",
+      "controller": "零反馈",
+      "advance_mm": 3.991205576542506,
+      "termination": "GEOMETRIC_SUCCESS",
+      "termination_zh": "几何完成",
+      "contact_observed": false
+    },
+    {
+      "case": "aligned",
+      "label": "同轴",
+      "controller": "B1",
+      "advance_mm": 3.991205576542506,
+      "termination": "GEOMETRIC_SUCCESS",
+      "termination_zh": "几何完成",
+      "contact_observed": false
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "label": "X +100 μm",
+      "controller": "零反馈",
+      "advance_mm": 0.24999795940839004,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "label": "X +100 μm",
+      "controller": "B1",
+      "advance_mm": 0.24999786865147633,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "label": "Y −100 μm",
+      "controller": "零反馈",
+      "advance_mm": 0.24999666563845033,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "label": "Y −100 μm",
+      "controller": "B1",
+      "advance_mm": 0.24999745644280505,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "roll_pos_1.5deg",
+      "label": "Roll +1.5°",
+      "controller": "零反馈",
+      "advance_mm": 0.2238664739704836,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "roll_pos_1.5deg",
+      "label": "Roll +1.5°",
+      "controller": "B1",
+      "advance_mm": 0.2381102196423292,
+      "termination": "TIME_LIMIT",
+      "termination_zh": "到达时限",
+      "contact_observed": true
+    },
+    {
+      "case": "combined_a_scale_0.75",
+      "label": "联合 A ×0.75",
+      "controller": "零反馈",
+      "advance_mm": 0.15667317992024274,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "combined_a_scale_0.75",
+      "label": "联合 A ×0.75",
+      "controller": "B1",
+      "advance_mm": 0.2468386021180981,
+      "termination": "TIME_LIMIT",
+      "termination_zh": "到达时限",
+      "contact_observed": true
+    },
+    {
+      "case": "combined_b_scale_0.75",
+      "label": "联合 B ×0.75",
+      "controller": "零反馈",
+      "advance_mm": 0.16778961657899988,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "combined_b_scale_0.75",
+      "label": "联合 B ×0.75",
+      "controller": "B1",
+      "advance_mm": 0.2463082039005685,
+      "termination": "TIME_LIMIT",
+      "termination_zh": "到达时限",
+      "contact_observed": true
+    },
+    {
+      "case": "combined_a",
+      "label": "联合 A 全幅",
+      "controller": "零反馈",
+      "advance_mm": 0.11130201464988652,
+      "termination": "NO_PROGRESS",
+      "termination_zh": "推进停滞",
+      "contact_observed": true
+    },
+    {
+      "case": "combined_a",
+      "label": "联合 A 全幅",
+      "controller": "B1",
+      "advance_mm": 0.23871309418692063,
+      "termination": "TIME_LIMIT",
+      "termination_zh": "到达时限",
+      "contact_observed": true
+    }
+  ],
+  "source_files": {
+    "runs/aligned_reference.json": "93cb2770d6887e382af12bc76d7b86ee61f451ec75439696689833f0baccc63b",
+    "runs/aligned_b1.json": "c090eff007e0b5e96afd044e02fb6787e03ae622accb0e84c89a4ab10d131363",
+    "runs/x_offset_pos_100um_reference.json": "d037041f144181cb98c5739a140b18e4f55868bbc2c1eaac857a5ae39f8034fe",
+    "runs/x_offset_pos_100um_b1.json": "2c6ac10cac6dce591d7134c4b84346b79c890782f0c4db9d0e9e844c59c92d09",
+    "runs/y_offset_neg_100um_reference.json": "d7f4709ee73a9813c1ac9d2dfd7c50939a230ecebba3165b5ac4badb302ab21f",
+    "runs/y_offset_neg_100um_b1.json": "a50ef3cf8935ba510c164298f30bb8ccfab3116e7833821f651a7c370971f85f",
+    "runs/roll_pos_1.5deg_reference.json": "83a19e1b37fdca08a937f244bf40dd9038719e9414840a8d59054c9634646eb3",
+    "runs/roll_pos_1.5deg_b1.json": "bd9c7a895297b69b29035f5b50799e404aec77815b089d0180c3e37ad118d219",
+    "runs/combined_a_scale_0.75_reference.json": "bf36540260a0bf2bc80aa63b23a7c0bf2ff14d3285eeccfcfb3128c76f08a083",
+    "runs/combined_a_scale_0.75_b1.json": "b2e5d596aa954b094d54197ac4ec198aac332888491e100fdd85ea5d3a6a3abd",
+    "runs/combined_b_scale_0.75_reference.json": "39032080ca2510a284baa2dd3b683ee813b36b821f25ba0be5ea21c8b6974906",
+    "runs/combined_b_scale_0.75_b1.json": "0cbca20c2bd70895d199549429f57e8b871d442b8d7c0e78f9a1b220501a36be",
+    "runs/combined_a_reference.json": "09e77535add4097274dc1841ef8fda189beaf1164e15812efd9ac7f61535930e",
+    "runs/combined_a_b1.json": "507ee834237b9bf00c1757c526249ada17146ae786358f7e09758cdcc746f212"
+  }
+}

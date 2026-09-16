@@ -1,0 +1,32 @@
+{
+  "as_of": "2026-09-16",
+  "template": "C:/Users/ok everything/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-light-mode/assets/reference.pptx",
+  "selected_template_slides": [
+    1,
+    17,
+    8,
+    22,
+    21,
+    5
+  ],
+  "template_sha256": "2ae8105571f68403f438458cd51e6ad14f0d989c7af64239e280437a4ac2a633",
+  "facts_sha256": "7d4bed2992ad28b08fe3d1ab9c7fc10fc4c43538f03d05fa5a46acfb449b76d6",
+  "source_runs": {
+    "runs/aligned_reference.json": "93cb2770d6887e382af12bc76d7b86ee61f451ec75439696689833f0baccc63b",
+    "runs/aligned_b1.json": "c090eff007e0b5e96afd044e02fb6787e03ae622accb0e84c89a4ab10d131363",
+    "runs/x_offset_pos_100um_reference.json": "d037041f144181cb98c5739a140b18e4f55868bbc2c1eaac857a5ae39f8034fe",
+    "runs/x_offset_pos_100um_b1.json": "2c6ac10cac6dce591d7134c4b84346b79c890782f0c4db9d0e9e844c59c92d09",
+    "runs/y_offset_neg_100um_reference.json": "d7f4709ee73a9813c1ac9d2dfd7c50939a230ecebba3165b5ac4badb302ab21f",
+    "runs/y_offset_neg_100um_b1.json": "a50ef3cf8935ba510c164298f30bb8ccfab3116e7833821f651a7c370971f85f",
+    "runs/roll_pos_1.5deg_reference.json": "83a19e1b37fdca08a937f244bf40dd9038719e9414840a8d59054c9634646eb3",
+    "runs/roll_pos_1.5deg_b1.json": "bd9c7a895297b69b29035f5b50799e404aec77815b089d0180c3e37ad118d219",
+    "runs/combined_a_scale_0.75_reference.json": "bf36540260a0bf2bc80aa63b23a7c0bf2ff14d3285eeccfcfb3128c76f08a083",
+    "runs/combined_a_scale_0.75_b1.json": "b2e5d596aa954b094d54197ac4ec198aac332888491e100fdd85ea5d3a6a3abd",
+    "runs/combined_b_scale_0.75_reference.json": "39032080ca2510a284baa2dd3b683ee813b36b821f25ba0be5ea21c8b6974906",
+    "runs/combined_b_scale_0.75_b1.json": "0cbca20c2bd70895d199549429f57e8b871d442b8d7c0e78f9a1b220501a36be",
+    "runs/combined_a_reference.json": "09e77535add4097274dc1841ef8fda189beaf1164e15812efd9ac7f61535930e",
+    "runs/combined_a_b1.json": "507ee834237b9bf00c1757c526249ada17146ae786358f7e09758cdcc746f212"
+  },
+  "deck_sha256": "25eb9212d54fe66dae12b38ae1f3919a1ded005b4f956f3ce1b47624f6d5b94a",
+  "builder_sha256": "f9033a27d724a8c5add27e3ee9bb794f635089234c426f2acd27243e9971eee5"
+}
