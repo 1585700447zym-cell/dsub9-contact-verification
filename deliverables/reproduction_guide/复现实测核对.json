@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-17",
+  "baseline_commit": "1645282",
+  "replica_directory": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b1_reproduction_20260917",
+  "command": "python -X utf8 -B -m tools.validation.run_b1_baseline --case combined_a_scale_0.75",
+  "used_resume": false,
+  "compared_fields": "All fields except wall_seconds and physical_steps_per_second, including every saved trajectory sample, events, peaks and input fingerprints",
+  "ignored_fields": [
+    "physical_steps_per_second",
+    "wall_seconds"
+  ],
+  "runs": [
+    {
+      "file": "combined_a_scale_0.75_reference.json",
+      "original_sha256": "bf36540260a0bf2bc80aa63b23a7c0bf2ff14d3285eeccfcfb3128c76f08a083",
+      "reproduced_sha256": "905a0284254c88d488e858f3ac8c305ea269b593f40e7a3bde7e3cfa7ec936ad",
+      "all_non_timing_fields_identical": true,
+      "identical_control_trace_samples": 2451,
+      "physical_steps": 24500,
+      "termination": "NO_PROGRESS",
+      "advance_mm": 0.15667317992024274,
+      "peak_force_N": 0.024594352802764684,
+      "original_wall_seconds": 41.801390299980994,
+      "reproduced_wall_seconds": 50.42479819999426
+    },
+    {
+      "file": "combined_a_scale_0.75_b1.json",
+      "original_sha256": "b2e5d596aa954b094d54197ac4ec198aac332888491e100fdd85ea5d3a6a3abd",
+      "reproduced_sha256": "47f0f32ec6f2fe4fa36071a70fd55bbf95342ae53938d7759907c2ea16be4730",
+      "all_non_timing_fields_identical": true,
+      "identical_control_trace_samples": 3501,
+      "physical_steps": 35000,
+      "termination": "TIME_LIMIT",
+      "advance_mm": 0.2468386021180981,
+      "peak_force_N": 0.024516379773500952,
+      "original_wall_seconds": 80.95917709998321,
+      "reproduced_wall_seconds": 139.02693020002334
+    }
+  ],
+  "original_B1_and_dynamic_packages_unchanged": true,
+  "historical_input_count": 715,
+  "scope": "one paired development case actually rerun; other six cases not rerun in this reproduction audit"
+}
