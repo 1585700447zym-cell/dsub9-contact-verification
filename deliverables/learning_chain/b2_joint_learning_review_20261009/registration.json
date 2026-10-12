@@ -1,0 +1,19 @@
+{
+  "stage_id": "B2-SCOPE-07",
+  "user_date": "2026-10-09",
+  "user_message": "继续",
+  "authorized_scope": "existing J01-J04 offline review only",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "before_documents": {
+    "项目当前入口.md": "ab66cab5bf259845a55fe9a678c50a1f88f53c4b3f9c8e3ef692f07d745f6aee",
+    "项目进度跟踪.md": "6e4b97a2f1f2a81465b06f4deb8aed0d62ce89ebb7ba09c6f23e220cde2da5b9",
+    "项目交付总览.md": "37d8afa257332716d6d9da855c9e09ae40ccd7f8c8a26d9bf4c1fa53b9d55857",
+    "研究推进计划_当前版.md": "5878ae32796e07fa751b0ca0cb70003a51dbb79ea6971d7f052957b68db94974",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "7f896fc40e092e6dc4a42780250bbdfd16f4c4498a811978e6a2a27111ce1591",
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+  },
+  "new_physical_authorization": false,
+  "new_training_authorization": false,
+  "cumulative_dynamic": 225
+}

@@ -1,0 +1,13 @@
+{
+  "pid": 38500,
+  "selection_rule": "final_after_target_whole_episode_and_updates",
+  "checkpoint": {
+    "episode_id": "train_000006",
+    "path": "checkpoints/train_000006",
+    "sha256": "c503f0b823776d4a4c4757d5facca148c8fe5ca05b4669e7e524a2b4255e10e8",
+    "cumulative_audited": 21315,
+    "critic_updates": 4078,
+    "bytes": 48424561
+  },
+  "training_state_sha256": "4d88cef35445c81795c42fc6204efa5947126fe8310dc20c5414f60554693df7"
+}

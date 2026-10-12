@@ -1,0 +1,330 @@
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+  Checking File Globs
+  1>Checking Build System
+  Building Custom Rule D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/_deps/lodepng-src/CMakeLists.txt
+  lodepng.cpp
+  lodepng.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\lodepng-build\lodepng.dir\Release\lodepng.lib
+  Building Custom Rule D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/_deps/miniz-src/CMakeLists.txt
+  Building Custom Rule D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/_deps/ccd-src/src/CMakeLists.txt
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36252 for x64
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /I"D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\marchingcubecpp-src" /I"D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\miniz-src" /I"D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\miniz-build" /Zi /W3 /WX- /diagnostics:column /O2 /Ob2 /Oi /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_NO_DEPRECATE /D "CMAKE_INTDIR=\"Release\"" /MD /Gy /permissive- /Fo"miniz.dir\Release\\" /Fd"D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\miniz.pdb" /external:W3 /TC /errorReport:queue  /Gw "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\miniz-src\miniz.c" "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\miniz-src\miniz_zip.c" "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\miniz-src\miniz_tinfl.c" "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\miniz-src\miniz_tdef.c"
+  miniz.c
+  Building Custom Rule D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/_deps/tinyxml2-src/CMakeLists.txt
+  ccd.c
+  miniz_zip.c
+  Building Custom Rule D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/_deps/qhull-src/CMakeLists.txt
+  Building Custom Rule D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/_deps/tinyobjloader-src/CMakeLists.txt
+  mpr.c
+  tinyxml2.cpp
+  polytope.c
+  support.c
+  vec3.c
+  global_r.c
+  tiny_obj_loader.cc
+  正在生成代码...
+  stat_r.c
+  geom2_r.c
+  poly2_r.c
+  tinyxml2.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\tinyxml2.lib
+  merge_r.c
+  libqhull_r.c
+  ccd.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\ccd.lib
+  geom_r.c
+  miniz_tinfl.c
+  poly_r.c
+  miniz_tdef.c
+  qset_r.c
+  正在生成代码...
+  mem_r.c
+  random_r.c
+  usermem_r.c
+  userprintf_r.c
+  io_r.c
+  user_r.c
+  accessors_r.c
+  rboxlib_r.c
+  userprintf_rbox_r.c
+  正在生成代码...
+  miniz.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\miniz.lib
+  tinyobjloader.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\tinyobjloader.lib
+  qhullstatic_r.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\qhullstatic_r.lib
+  Building Custom Rule D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_source/CMakeLists.txt
+  obj_decoder.cc
+  stl_decoder.cc
+  engine_crossplatform.cc
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4267: “初始化”: 从“size_t”转换到“_Ty2”，可能丢失数据 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4267:         with [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4267:         [ [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4267:             _Ty2=int [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\utility(277,54): warning C4267:         ] [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  (编译源文件“../mujoco_3_13_horizon_source/plugin/stl_decoder/stl_decoder.cc”)
+      D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\utility(277,54):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\plugin\stl_decoder\stl_decoder.cc(108,37):
+          查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const `anonymous-namespace'::Vec3Key,int>>>>,bool> std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::emplace<`anonymous-namespace'::Vec3Key&,unsigned __int64>(`anonymous-namespace'::Vec3Key &,unsigned __int64 &&)”的引用
+          with
+          [
+              _Kty=`anonymous-namespace'::Vec3Key,
+              _Ty=int,
+              _Pr=std::less<`anonymous-namespace'::Vec3Key>,
+              _Alloc=std::allocator<std::pair<const `anonymous-namespace'::Vec3Key,int>>
+          ]
+              D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\plugin\stl_decoder\stl_decoder.cc(108,37):
+              请参阅 "`anonymous-namespace'::Decode" 中对 "std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::emplace" 的第一个引用
+          with
+          [
+              _Kty=`anonymous-namespace'::Vec3Key,
+              _Ty=int,
+              _Pr=std::less<`anonymous-namespace'::Vec3Key>,
+              _Alloc=std::allocator<std::pair<const `anonymous-namespace'::Vec3Key,int>>
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xtree(1059,30):
+          查看对正在编译的函数 模板 实例化“std::pair<std::_Tree_node<std::pair<const `anonymous-namespace'::Vec3Key,int>,std::_Default_allocator_traits<_Alloc>::void_pointer> *,bool> std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::_Emplace<`anonymous-namespace'::Vec3Key&,unsigned __int64>(`anonymous-namespace'::Vec3Key &,unsigned __int64 &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<std::pair<const `anonymous-namespace'::Vec3Key,int>>,
+              _Kty=`anonymous-namespace'::Vec3Key,
+              _Ty=int,
+              _Pr=std::less<`anonymous-namespace'::Vec3Key>
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xtree(1034,49):
+          查看对正在编译的函数 模板 实例化“std::_Tree_temp_node<std::allocator<std::_Tree_node<std::pair<const `anonymous-namespace'::Vec3Key,int>,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_Tree_temp_node<`anonymous-namespace'::Vec3Key&,_Ty>(_Alnode &,std::_Tree_node<std::pair<const `anonymous-namespace'::Vec3Key,int>,std::_Default_allocator_traits<_Alloc>::void_pointer> *,`anonymous-namespace'::Vec3Key &,_Ty &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<std::pair<const `anonymous-namespace'::Vec3Key,int>>,
+              _Ty=unsigned __int64,
+              _Alnode=std::allocator<std::_Tree_node<std::pair<const `anonymous-namespace'::Vec3Key,int>,std::_Default_allocator_traits<std::allocator<std::pair<const `anonymous-namespace'::Vec3Key,int>>>::void_pointer>>
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xtree(841,25):
+          查看对正在编译的函数 模板 实例化“void std::_Default_allocator_traits<_Alloc>::construct<_Ty,`anonymous-namespace'::Vec3Key&,unsigned __int64>(_Alloc &,_Objty *const ,`anonymous-namespace'::Vec3Key &,unsigned __int64 &&)”的引用
+          with
+          [
+              _Alloc=std::allocator<std::_Tree_node<std::pair<const `anonymous-namespace'::Vec3Key,int>,std::_Default_allocator_traits<std::allocator<std::pair<const `anonymous-namespace'::Vec3Key,int>>>::void_pointer>>,
+              _Ty=std::pair<const `anonymous-namespace'::Vec3Key,int>,
+              _Objty=std::pair<const `anonymous-namespace'::Vec3Key,int>
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xmemory(730,14):
+          查看对正在编译的函数 模板 实例化“_Ty *std::construct_at<_Objty,`anonymous-namespace'::Vec3Key&,unsigned __int64>(_Ty *const ,`anonymous-namespace'::Vec3Key &,unsigned __int64 &&) noexcept”的引用
+          with
+          [
+              _Ty=std::pair<const `anonymous-namespace'::Vec3Key,int>,
+              _Objty=std::pair<const `anonymous-namespace'::Vec3Key,int>
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73):
+          查看对正在编译的函数 模板 实例化“std::pair<const `anonymous-namespace'::Vec3Key,int>::pair<`anonymous-namespace'::Vec3Key&,_Ty,0>(_Other1,_Other2 &&) noexcept”的引用
+          with
+          [
+              _Ty=unsigned __int64,
+              _Other1=`anonymous-namespace'::Vec3Key &,
+              _Other2=unsigned __int64
+          ]
+  
+  engine_plugin.cc
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\engine\engine_plugin.cc(272,14): warning C4305: “return”: 从“int”到“bool”截断 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  engine_thread.cc
+  user_api.cc
+  user_cache.cc
+  user_composite.cc
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244: “初始化”: 从“_Ty”转换到“_Ty”，可能丢失数据 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:         with [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:         [ [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:             _Ty=double [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:         ] [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:         and [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:         [ [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:             _Ty=float [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64): warning C4244:         ] [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  (编译源文件“../mujoco_3_13_horizon_source/src/user/user_composite.cc”)
+      D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(636,64):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\user\user_composite.cc(273,16):
+          查看对正在编译的函数 模板 实例化“std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> std::vector<_Ty,std::allocator<_Ty>>::insert<double*,0>(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,_Iter,_Iter)”的引用
+          with
+          [
+              _Ty=float,
+              _Iter=double *
+          ]
+              D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\user\user_composite.cc(273,22):
+              请参阅 "mjCComposite::MakeCable" 中对 "std::vector<float,std::allocator<float>>::insert" 的第一个引用
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\vector(1285,13):
+          查看对正在编译的函数 模板 实例化“void std::vector<float,std::allocator<float>>::_Insert_counted_range<_Iter>(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,_Iter,const unsigned __int64)”的引用
+          with
+          [
+              _Iter=double *,
+              _Ty=float
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\vector(1198,18):
+          查看对正在编译的函数 模板 实例化“float *std::_Uninitialized_copy_n<_Ty*,std::allocator<float>>(_InIt,size_t,float *,_Alloc &)”的引用
+          with
+          [
+              _Ty=double,
+              _InIt=double *,
+              _Alloc=std::allocator<float>
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xmemory(1962,18):
+          查看对正在编译的函数 模板 实例化“void std::_Uninitialized_backout_al<std::allocator<float>>::_Emplace_back<_Ty&>(_Ty &)”的引用
+          with
+          [
+              _Ty=double
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xmemory(1868,35):
+          查看对正在编译的函数 模板 实例化“void std::_Default_allocator_traits<_Alloc>::construct<_Ty,double&>(_Alloc &,_Objty *const ,double &)”的引用
+          with
+          [
+              _Alloc=std::allocator<float>,
+              _Ty=float,
+              _Objty=float
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xmemory(730,14):
+          查看对正在编译的函数 模板 实例化“_Ty *std::construct_at<_Objty,double&>(_Ty *const ,double &) noexcept(<expr>)”的引用
+          with
+          [
+              _Ty=float,
+              _Objty=float
+          ]
+  
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244: “初始化”: 从“_Ty”转换到“_Objty”，可能丢失数据 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:         with [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:         [ [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:             _Ty=double [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:         ] [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:         and [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:         [ [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:             _Objty=float [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73): warning C4244:         ] [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  (编译源文件“../mujoco_3_13_horizon_source/src/user/user_composite.cc”)
+      D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(647,73):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xmemory(1868,35):
+          查看对正在编译的函数 模板 实例化“void std::_Default_allocator_traits<_Alloc>::construct<_Ty,double&>(_Alloc &,_Objty *const ,double &)”的引用
+          with
+          [
+              _Alloc=std::allocator<float>,
+              _Ty=float,
+              _Objty=float
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xmemory(730,14):
+          查看对正在编译的函数 模板 实例化“_Ty *std::construct_at<_Objty,double&>(_Ty *const ,double &) noexcept”的引用
+          with
+          [
+              _Ty=float,
+              _Objty=float
+          ]
+  
+  user_flexcomp.cc
+  user_mesh.cc
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\user\user_mesh.cc(4331,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(5133,22): warning C4244: “=”: 从“const double”转换到“float”，可能丢失数据 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  (编译源文件“../mujoco_3_13_horizon_source/src/user/user_mesh.cc”)
+      D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(5133,22):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\user\user_mesh.cc(134,3):
+          查看对正在编译的函数 模板 实例化“void mjuu_copyvec<float,double>(T1 *,const T2 *,int)”的引用
+          with
+          [
+              T1=float,
+              T2=double
+          ]
+          D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\user\user_util.h(55,8):
+          查看对正在编译的函数 模板 实例化“_OutIt std::copy<const T2*,T1*>(_InIt,_InIt,_OutIt)”的引用
+          with
+          [
+              _OutIt=float *,
+              T2=double,
+              T1=float,
+              _InIt=const double *
+          ]
+          D:\software\vs chanpin\VC\Tools\MSVC\14.51.36231\include\xutility(5146,36):
+          查看对正在编译的函数 模板 实例化“_OutIt *std::_Copy_unchecked<_InIt,_InIt,float*>(_InIt,_Sent,_OutIt)”的引用
+          with
+          [
+              _OutIt=float *,
+              _InIt=const double [],
+              _Sent=const double []
+          ]
+  
+  user_model.cc
+  user_objects.cc
+  user_resolver.cc
+  user_resource.cc
+  user_threadpool.cc
+  user_util.cc
+  user_vfs.cc
+  xml_api.cc
+  xml_base.cc
+  xml_global.cc
+  正在生成代码...
+  正在编译...
+  xml.cc
+  xml_native_reader.cc
+  xml_numeric_format.cc
+  xml_native_writer.cc
+  xml_urdf.cc
+  xml_util.cc
+  mjz_decoder.cc
+  mjz_encoder.cc
+  loader.cc
+  正在生成代码...
+  engine_callback.c
+  engine_collision_box.c
+  engine_collision_continuous.c
+  engine_collision_convex.c
+  engine_collision_driver.c
+  engine_collision_gjk.c
+  engine_collision_primitive.c
+  engine_collision_sdf.c
+  engine_core_constraint.c
+  engine_core_util.c
+  engine_core_smooth.c
+  engine_derivative.c
+  engine_derivative_fd.c
+  engine_forward.c
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\engine\engine_solver.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  (编译源文件“../mujoco_3_13_horizon_source/src/engine/engine_forward.c”)
+  
+  engine_inverse.c
+  engine_init.c
+  engine_island.c
+  engine_io.c
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\engine\engine_io.c(1640,12): warning C4566: 由通用字符名称“\u00B5”表示的字符不能在当前代码页(936)中表示出来 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  engine_memory.c
+  engine_name.c
+  正在生成代码...
+  正在编译...
+  engine_passive.c
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\engine\engine_passive.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  engine_print.c
+  engine_ray.c
+  engine_sensor.c
+  engine_setconst.c
+  engine_sleep.c
+  engine_solver.c
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\engine\engine_solver.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\engine\engine_solver.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  (编译源文件“../mujoco_3_13_horizon_source/src/engine/engine_solver.c”)
+  
+  engine_support.c
+  engine_util_blas.c
+  engine_util_errmem.c
+  engine_util_misc.c
+D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_source\src\engine\engine_util_misc.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\mujoco.vcxproj]
+  engine_util_solve.c
+  engine_util_sparse.c
+  engine_util_spatial.c
+  engine_vis_init.c
+  engine_vis_interact.c
+  engine_vis_visualize.c
+  user_init.c
+  glad.c
+  render_context.c
+  正在生成代码...
+  正在编译...
+  render_gl2.c
+  render_gl3.c
+  render_util.c
+  ui_main.c
+  正在生成代码...
+    正在创建库 D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/lib/Release/mujoco.lib 和对象 D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/mujoco_3_13_horizon_build/lib/Release/mujoco.exp
+  mujoco.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\bin\Release\mujoco.dll

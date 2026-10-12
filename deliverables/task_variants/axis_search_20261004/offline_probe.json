@@ -1,0 +1,24 @@
+{
+  "archived_search_time_s": 7.998000000008029,
+  "old_target_xy_um": [
+    2.578802736805285,
+    8.536872483408832
+  ],
+  "new_target_xy_um": [
+    8.023902357863166,
+    -110.17103214294042
+  ],
+  "new_raw_xy_mm_s": [
+    0.19080973783865082,
+    -0.3
+  ],
+  "old_return_exit_time_s": 10.050000000003255,
+  "return_advance_from_start_um": 100.24336412333074,
+  "return_net_advance_um": -161.07440451703727,
+  "old_exits": true,
+  "new_exits": false,
+  "legacy_shared_hook_comparisons": 3000,
+  "legacy_commands_states_exact": true,
+  "dynamic_episodes": 0,
+  "scope": "Pure controller/archive checks only; not physical efficacy evidence"
+}

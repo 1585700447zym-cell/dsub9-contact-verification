@@ -1,0 +1,10 @@
+{
+  "candidate_sha256": "78c7f13fe1426fe18f29ceeeceaf71babfb70ebb9bf9a8ba42601cffcaa1a42b",
+  "authorization_sha256": "a4be2e34446d55d84b8b87f7883f30c9ff5d60bcdb7f36936cec376f7b2d7b6d",
+  "verify_only_passed": true,
+  "missing_authorization_rejected": true,
+  "authorized_admission_verified": true,
+  "physical_starts": 0,
+  "optimizer_batches": 0,
+  "policy_predictions": 0
+}

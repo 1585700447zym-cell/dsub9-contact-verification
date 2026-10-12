@@ -1,0 +1,15 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_close_expires_every_remaining_operation (__main__.GateTests.test_close_expires_every_remaining_operation) ... ok
+test_exact_grant_allowed (__main__.GateTests.test_exact_grant_allowed) ... ok
+test_reader_mismatch_never_qualifies (__main__.GateTests.test_reader_mismatch_never_qualifies) ... ok
+test_restored_boundary_cannot_claim_online_or_updates (__main__.GateTests.test_restored_boundary_cannot_claim_online_or_updates) ... ok
+test_roles_share_bounds_and_cannot_restart (__main__.GateTests.test_roles_share_bounds_and_cannot_restart) ... ok
+test_training_allowance_or_wrong_source_refused (__main__.GateTests.test_training_allowance_or_wrong_source_refused) ... ok
+test_unsigned_grant_refused (__main__.GateTests.test_unsigned_grant_refused) ... ok
+test_zero_checkpoint_with_history_is_rejected (__main__.GateTests.test_zero_checkpoint_with_history_is_rejected) ... ok
+test_zero_limits_and_unclaimed_role_refused (__main__.GateTests.test_zero_limits_and_unclaimed_role_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.096s
+
+OK

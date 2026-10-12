@@ -1,0 +1,36 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_unsigned_grant_refused (__main__.GateTests.test_unsigned_grant_refused) ... FAIL
+test_zero_checkpoint_with_history_is_rejected (__main__.GateTests.test_zero_checkpoint_with_history_is_rejected) ... FAIL
+test_reader_mismatch_never_qualifies (__main__.GateTests.test_reader_mismatch_never_qualifies) ... FAIL
+
+======================================================================
+FAIL: test_unsigned_grant_refused (__main__.GateTests.test_unsigned_grant_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_gate_contract.py", line 20, in test_unsigned_grant_refused
+    with self.assertRaises(PermissionError):verify_grant(self.candidate,self.grant,digest(self.grant),'a'*64)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: PermissionError not raised
+
+======================================================================
+FAIL: test_zero_checkpoint_with_history_is_rejected (__main__.GateTests.test_zero_checkpoint_with_history_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_gate_contract.py", line 53, in test_zero_checkpoint_with_history_is_rejected
+    with self.assertRaises(ValueError):require_zero_metadata(z)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_reader_mismatch_never_qualifies (__main__.GateTests.test_reader_mismatch_never_qualifies)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_gate_contract.py", line 63, in test_reader_mismatch_never_qualifies
+    with self.assertRaises(ValueError):verify_reply('a'*64,dict(state_digest='b'*64,verified=True))
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.003s
+
+FAILED (failures=3)

@@ -1,0 +1,1112 @@
+{
+  "stage_id": "B2-SCOPE-06",
+  "user_date": "2026-10-08",
+  "status": "CLOSED_COMPLETE",
+  "grant_sha256": "5bddc98560ee56993427b5007f7a86bf5fcdccf2f7f31e01af4b3a464d6f39f5",
+  "binding_sha256": "b7746e0cfaf29317c1ae692f6ed03c685d0d1a3398965c3fa36fc012b8ed3952",
+  "bound_files_verified": 2173,
+  "original_ledger_sha256": "c530c169c8302ba4ea13b585d10a982745e7685de92fde50061324a9a1601ab1",
+  "actual": {
+    "case_environment_instances_attempted": 25,
+    "case_environment_instances_completed": 25,
+    "reset_attempts": 25,
+    "resets_completed": 25,
+    "control_cycles": 67016,
+    "physical_substeps": 670160,
+    "engine_processes_with_runtime_proof": 25,
+    "learner_constructions": 0,
+    "tensor_reads": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "replay_publications": 0,
+    "static_initializations": 9,
+    "dynamic_attempts": 16
+  },
+  "exact_final_counts_reconciled": true,
+  "count_issues": [],
+  "original_ledger_step_bounds": [
+    670160,
+    670160
+  ],
+  "cumulative_dynamic_before": 209,
+  "cumulative_dynamic_after": 225,
+  "unused_static_closed": 0,
+  "unused_dynamic_closed": 0,
+  "retry_allowed": false,
+  "old_budgets_reopened": false,
+  "process_exit_confirmed": true,
+  "physical_stop_confirmation_basis": "Bound worker/full-matrix raw STOP-tail audits and outcome.physical_stopped; supervisor physical_stop_confirmed is an unpopulated conservative placeholder, not stop evidence.",
+  "whole_supervised_wall_seconds": 4516.8366687999805,
+  "deadline_hit": false,
+  "registered_static_audit_passes": 9,
+  "registered_dynamic_audit_passes": 16,
+  "functional_successes": 16,
+  "strict_precision_successes": 16,
+  "original_assessment_route": "INSUFFICIENT_COVERAGE_NO_EXTRA_ATTEMPTS",
+  "automatic_tracking": "PAUSED",
+  "training_admitted": false,
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "independent_tests": 0,
+  "actual_attempts": [
+    {
+      "id": "init_zero_sentinel",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_zero_sentinel.json.gz",
+      "archive_sha256": "eb7d6ba1cecf239ea7e6d0290d34f57eaa38c043867fd547c0ab705a0f693f49",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.903479899978265,
+      "supervisor_wall_seconds": 10.038398000004236,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P01",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_P01.json.gz",
+      "archive_sha256": "4eb84764472bd237645d6e7ebeb4584363dd5a37cd43e1b7387729ae22d93176",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.891516500036232,
+      "supervisor_wall_seconds": 9.987515399989206,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P02",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_P02.json.gz",
+      "archive_sha256": "af60d5f2e321213b51a3252845bd712263d566de1ef35058b508444012e61974",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.893402499961667,
+      "supervisor_wall_seconds": 9.633268600038718,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P03",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_P03.json.gz",
+      "archive_sha256": "9cbb645038b3c0a6e1424fd8fc57bbf1c078b7ef47200afacc0380edb1a2b4a8",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.908256700029597,
+      "supervisor_wall_seconds": 9.743026499985717,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P04",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_P04.json.gz",
+      "archive_sha256": "9a19da8e9c4628e791dddab9074723843b85fe31961e0c4b3053ef797b6e4ded",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.871367099985946,
+      "supervisor_wall_seconds": 9.281245699967258,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J01",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_J01.json.gz",
+      "archive_sha256": "3600f1d54b01584c6f3a98c9fa9da554312af2b48b5102ba3dcd6c884efcadb2",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.856566400034353,
+      "supervisor_wall_seconds": 9.736080400005449,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J02",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_J02.json.gz",
+      "archive_sha256": "0c14ed88a653961ec6320965c4454d7e807490e71094bd45491a2124f4763c60",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.820244599948637,
+      "supervisor_wall_seconds": 9.336580400005914,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J03",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_J03.json.gz",
+      "archive_sha256": "ece11b6e340767275559df23ec6a1c1d8351825ecc7d00bd6b814ce3587894b6",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.828323099995032,
+      "supervisor_wall_seconds": 9.337668499967549,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J04",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/init_J04.json.gz",
+      "archive_sha256": "feaf6d73b40074c647b0f574a35a82f0c040b134581bd4011e87ecc6c667d821",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.920281299971975,
+      "supervisor_wall_seconds": 9.383691700000782,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 0,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "P01_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P01_zero.json.gz",
+      "archive_sha256": "ad0f4441dc82ce66e5b96ce92fd3d261932bab4ae77bc366074fb9f28e75b142",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 131.42669769999338,
+      "supervisor_wall_seconds": 154.67773420002777,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.0,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "P01_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P01_script.json.gz",
+      "archive_sha256": "746c12ab5abf9f25ef06dcc6ccab3f9cacf3c6479352d0cd9f58347ac7f1854a",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 132.39699179999297,
+      "supervisor_wall_seconds": 156.23580979998223,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 7.6088055341279755e-06,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "P02_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P02_zero.json.gz",
+      "archive_sha256": "5c292ce736d2bebad5b3b2a2e118b58dc9a007c3d173b78474a7ac83aab875d3",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 130.03447700000834,
+      "supervisor_wall_seconds": 153.32859789999202,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.0,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "P02_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P02_script.json.gz",
+      "archive_sha256": "c0debb5c27ae8d95c4713630d5ba014c06906a56471f87e24d9f633eadd550a4",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 131.5148615000071,
+      "supervisor_wall_seconds": 155.22183980001137,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 7.6088055341279755e-06,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "P03_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P03_zero.json.gz",
+      "archive_sha256": "7b1c89a97c9d4a4de257ea83e32ef4648d5eb411f0bad3d2caac654e88a98416",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 129.1448461000109,
+      "supervisor_wall_seconds": 152.46883560001152,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.0,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "P03_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P03_script.json.gz",
+      "archive_sha256": "1f589ff174c8b007aa20208f77f93ddb4b9141ac23991b0f391ce713dd8c4759",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 130.59981899999548,
+      "supervisor_wall_seconds": 154.49410889996216,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 7.608805534130434e-06,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "P04_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P04_zero.json.gz",
+      "archive_sha256": "f8cf238d7280755b52866cf2843b35b018e841bb00aca2f507d3a30cbcaefaa9",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 138.62890539999353,
+      "supervisor_wall_seconds": 164.32224870001664,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.0,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "P04_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/P04_script.json.gz",
+      "archive_sha256": "6468102aa6c6231a6bffeb2fd8eb11f9828f61b0c057be0c2492c5c632aabcc6",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 144.06668079999508,
+      "supervisor_wall_seconds": 170.108514499967,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 30450,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 7.608805534130434e-06,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J01_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J01_zero.json.gz",
+      "archive_sha256": "5ee0bece351b57d7079fa23e40d4af48ebb6177f50f186230ab101e813009f82",
+      "cycles": 4840,
+      "physical_substeps": 48400,
+      "wall_seconds": 269.52608750003856,
+      "supervisor_wall_seconds": 312.5049642000231,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 48400,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 48400,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.00629289163506181,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J01_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J01_script.json.gz",
+      "archive_sha256": "53e57b41c86b1d7c03eba4de74c32f81c3fdc79a89162917a4804e58028f60db",
+      "cycles": 4834,
+      "physical_substeps": 48340,
+      "wall_seconds": 260.2514693000121,
+      "supervisor_wall_seconds": 303.49147529999027,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 48340,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 48340,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.006278642337338792,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J02_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J02_zero.json.gz",
+      "archive_sha256": "05ff4de62c06c5b89e696ba57cc6ab61344f4e5a3c3968ae4e7ce7857c46a47f",
+      "cycles": 5098,
+      "physical_substeps": 50980,
+      "wall_seconds": 276.52438739995705,
+      "supervisor_wall_seconds": 321.56093230005354,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 50980,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 50980,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.006179670314637666,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J02_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J02_script.json.gz",
+      "archive_sha256": "b94e5be72bfc16f34c5fc0a44fdc873912f1734205d8778a547225076170c188",
+      "cycles": 5096,
+      "physical_substeps": 50960,
+      "wall_seconds": 275.89143899997,
+      "supervisor_wall_seconds": 320.3912363999989,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 50960,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 50960,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.006181432523659067,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J03_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J03_zero.json.gz",
+      "archive_sha256": "7c1c5561b2fe199e05e76607fd3575a6e35d5e88b94bb2a61f3aaee2cc8284af",
+      "cycles": 5501,
+      "physical_substeps": 55010,
+      "wall_seconds": 328.82237929996336,
+      "supervisor_wall_seconds": 375.9225805000169,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 55010,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 55010,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.00662059809390721,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J03_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J03_script.json.gz",
+      "archive_sha256": "8ec6c6970ed60637efd621385f7d7210bac0d20e8b52b71c1f3e05e98f589b67",
+      "cycles": 5528,
+      "physical_substeps": 55280,
+      "wall_seconds": 328.29538180003874,
+      "supervisor_wall_seconds": 378.6377976000076,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 55280,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 55280,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.006619102267915542,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J04_zero",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J04_zero.json.gz",
+      "archive_sha256": "dae3f9a7ff02bc5a46e03b0e98d1a32607fb1adad5af223dd633027a6f9a9692",
+      "cycles": 5885,
+      "physical_substeps": 58850,
+      "wall_seconds": 337.0146007000003,
+      "supervisor_wall_seconds": 392.30442920001224,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 58850,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 58850,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.00620208473757898,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    },
+    {
+      "id": "J04_script",
+      "kind": "dynamic",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "complete_raw": true,
+      "archive": "run/J04_script.json.gz",
+      "archive_sha256": "5596d239241285852e78d2c08605456697c86766befacf0de0f72cc66b607a36",
+      "cycles": 5874,
+      "physical_substeps": 58740,
+      "wall_seconds": 335.0386699999799,
+      "supervisor_wall_seconds": 386.98994709999533,
+      "process_exit_confirmed": true,
+      "costs": {
+        "case_environment_instances_attempted": 1,
+        "case_environment_instances_completed": 1,
+        "learner_constructions": 0,
+        "native_step_calls": 58740,
+        "network_forwards": 0,
+        "optimizer_updates": 0,
+        "replay_publications": 0,
+        "reset_attempts": 1,
+        "resets_completed": 1,
+        "tensor_reads": 0
+      },
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 58740,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.006201129016820781,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    }
+  ],
+  "evidence_copies": {
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_preflight_rebound_20261008\\claims\\5bddc98560ee56993427b5007f7a86bf5fcdccf2f7f31e01af4b3a464d6f39f5\\closed.json": {
+      "copy": "execution_evidence/claim/closed.json",
+      "sha256": "55979faa6f6a45cd512fcbdd7fca767ba897cdad00ec2a7fc28230d907581ad4"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_preflight_rebound_20261008\\claims\\5bddc98560ee56993427b5007f7a86bf5fcdccf2f7f31e01af4b3a464d6f39f5\\identity.json": {
+      "copy": "execution_evidence/claim/identity.json",
+      "sha256": "2978a7490417a4aa8d4ca407cc5687e0e84892056b01f9079a3acba720ef7291"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\7a979189b4e349c98d7ce73a6da662be\\outer.go.json": {
+      "copy": "execution_evidence/outer_supervisor/outer.go.json",
+      "sha256": "d75dcee2d2f11d09ec308603a3620369b8235e900f507e60ceee1c30c48c6329"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\7a979189b4e349c98d7ce73a6da662be\\outer.log": {
+      "copy": "execution_evidence/outer_supervisor/outer.log",
+      "sha256": "d3c8a9a51fd0dd897a4721a586e9886caa27ef610360202c450f9b5d263cbee6"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\7a979189b4e349c98d7ce73a6da662be\\outer.ready.json": {
+      "copy": "execution_evidence/outer_supervisor/outer.ready.json",
+      "sha256": "fc5482eab2074698d46fa9636cdf6ea3bf7f654a1ec56d0c77c93eb828df2e49"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\7a979189b4e349c98d7ce73a6da662be\\outer.supervisor.json": {
+      "copy": "execution_evidence/outer_supervisor/outer.supervisor.json",
+      "sha256": "bf431bf32fd72049f7d5698a1334a549a5dfee71b4f842fcf91b287c1a484346"
+    }
+  },
+  "consumed_claim_directories": [
+    "J01_script.consumed",
+    "J01_zero.consumed",
+    "J02_script.consumed",
+    "J02_zero.consumed",
+    "J03_script.consumed",
+    "J03_zero.consumed",
+    "J04_script.consumed",
+    "J04_zero.consumed",
+    "P01_script.consumed",
+    "P01_zero.consumed",
+    "P02_script.consumed",
+    "P02_zero.consumed",
+    "P03_script.consumed",
+    "P03_zero.consumed",
+    "P04_script.consumed",
+    "P04_zero.consumed",
+    "init_J01.consumed",
+    "init_J02.consumed",
+    "init_J03.consumed",
+    "init_J04.consumed",
+    "init_P01.consumed",
+    "init_P02.consumed",
+    "init_P03.consumed",
+    "init_P04.consumed",
+    "init_zero_sentinel.consumed"
+  ]
+}

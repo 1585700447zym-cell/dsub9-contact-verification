@@ -1,0 +1,45 @@
+"""Record prepared scripts and pending calculation authorization separately."""
+from pathlib import Path
+import sys
+OUT=Path(__file__).resolve().parent;sys.path.insert(0,str(OUT))
+from numeric_contract import read,sha,digest,ROOT
+
+
+def main():
+    if (OUT/'delivery_manifest.json').exists():raise RuntimeError('Sealed')
+    t=read(OUT/'offline_tests.json');c=read(OUT/'numeric_candidate.json');p=read(OUT/'source_bindings.json');r=read(OUT/'review.json')
+    assert t['passed'] and r['critical_open']==r['important_open']==0
+    (OUT/'结果说明.md').write_text(f'''# PC-13：C公平对照的数值门脚本准备
+
+2026-10-07，原工作区/分支/全部未提交修改保留。本轮完成可审阅的数值集成门候选，**真实数值计算尚未授权、尚未执行**。
+
+| 部分 | 已准备内容 | 将来一次性计算上限 |
+|---|---|---|
+| 范围与授权 | 新grant、候选/profile/来源/CPU runtime绑定；缺授权在模型、tensor读取及执行目录创建之前拒绝 | 只允许synthetic_numeric_only，物理0、正式训练0 |
+| 全局预算 | 授权摘要排他领取；父/reader共用账本与持久化逐次领取/完成证据 | 父更新3＋reader更新1，总4；父/reader显式测试状态各16，总32 |
+| 新合成数据 | 4warmup＋1online，每份80周期；a保留归一化，只有物理合成0.25a，inactive尾段0 | 全新合成400行，warm活动312行/4case，hold50、8次warm抽样；不使用旧回放 |
+| 保存与恢复 | 父2更新后保存完整外层checkpoint；独立进程恢复后，与父的下一步对照；实际critic replay输入和inactive target钩子 | 完整参数/Adam/replay/终末边界、RNG、采样索引和下一更新对照；仅墙钟wall_s排除 |
+| runtime | 36文件哈希与原CPU资格接口；worker/reader都使用-I，导入前后核对包来源 | 数值整体1200s、reader300s；额度不足或失败关余额、无重试 |
+| 失败与成本 | 已返回前向/已提交critic批先记完成；收据落盘而投影中断后只允许恢复为关闭状态；PID/创建时间/镜像确认所属进程 | 停止无法确认时保留不确定标记与耗用授权，禁止继续或重开；构造/CPU张量读取各记尝试、完成、墙钟开销 |
+
+**本轮实际：** 学习器构造0、真实张量读取0、网络前向0、优化0、真实经验发布0、物理/子步0，累计动态208，自动跟踪PAUSED，旧预算保持关闭。协议测试中的假账本、假core和纯命令数据不计为实际数值执行。
+
+[关联纯检查](offline_tests.json)：{t['tests_passed']}项通过，包含封存PC-12的53项及新数值门协议反例；未运行全历史SAC/物理测试，未导入真实torch或执行独立数值worker。限定独立审查与作者修复见[review](review.md)，不是第二次数值或独立复审。
+
+[来源](source_bindings.json)：{p['old_files']}旧封存文件及{p['shared_input_count']}共享输入不变；36个runtime文件绑定并在文件级核验（原32份，加3包入口与环境登记）。元数据/文件哈希不等于实际CPU库加载、零起点、Adam/RNG恢复或训练资格通过。
+
+合成raw中的simulation_valid/physical_stopped等布尔值用于复用原synthetic_qualification接口；raw明确synthetic=true、dynamics_executed=false、physical_stop_measurement=null。这些不是停稳测量或新的物理样本。结果即使以后通过也只允许PASSED_NUMERIC_ONLY，不能签发物理训练资格、翻转旧S/F0.39%负结果或验收完整B.2/C。
+
+[数值候选](numeric_candidate.json)status=PREPARED_NOT_AUTHORIZED，numeric_authorized/numeric_verified/training_admitted/dynamic_authorized=false。[授权请求](authorization_request.json)status=REQUEST_NOT_GRANTED，explicit_user_authorized=false；脚本不制造肯定授权或默认开启。PC-12原35文件/草案保持封存，没有重贴历史评价标签。
+
+下一项需明确批准**一次最多4合成更新事务＋32显式测试状态，新合成400行，物理与正式训练0**，并提供独立授权pin后，才使用候选已绑定的CPU解释器执行。此前[PC-11冻结计划](../../../docs/superpowers/plans/2026-10-07-small-boundary-fair-comparison.md)明确：“当前无训练/数值计算/物理授权”。本轮“继续工作”落实离线准备，不据此重新开启旧预算。
+
+4/32并非所有计算调用总数：每批SAC内部前后向属于该更新事务；原核心保存/读取审核会额外构造模型，张量CPU读取也单列记录尝试/完成/时间。总体仍在1200s内监督，真实Windows树终止与张量恢复尚未执行，纯fixture只能证明协议分支。
+
+可审阅范围见[实施计划](../../../docs/superpowers/plans/2026-10-07-small-boundary-numeric-gate.md)、[代码](numeric_worker.py)。仅查看可运行numeric_worker.py --inspect；任何执行模式缺新grant/pin都先拒绝。封存后只读复核用verify.py，生成/更新脚本不得覆盖原交付。
+
+五份滚动资料及快照已维护。本可交付阶段完成后暂停汇报；21动态/2000正式批及物理backend仍待独立后续准备和准入。
+''',encoding='utf8')
+
+
+if __name__=='__main__':main()

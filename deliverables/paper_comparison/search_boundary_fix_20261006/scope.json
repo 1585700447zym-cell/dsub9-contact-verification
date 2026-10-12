@@ -1,0 +1,16 @@
+{
+  "authorization": "继续修复",
+  "prior_cumulative_dynamic": 142,
+  "max_new_dynamic": 3,
+  "max_gradient_batches": 0,
+  "max_policy_calls": 0,
+  "replay_publication": 0,
+  "independent_tests": 0,
+  "purpose": "bounded common search-boundary regression, no learning",
+  "source_before": {
+    "tools/control/reference_search.py": "5e1a6dfa561831403bd959b6adab341a1f448bf1f29e9dbfddf89988b4fe4763",
+    "tools/learning/v4_continuation.py": "e7cf27c22b81ceb4cb7fe6a3d5abd6117a1e13d65253069677beba5f3730475d",
+    "tests/task_variants/test_reference_search.py": "4fcce875962ea53d9747bf280dbd3a203d8621e8fc6f5808d0adc9e20ea9d043",
+    "tests/task_variants/test_v4_continuation.py": "c36fd9b9c449b9584b35a1541bad5b790eb88cfbf85b5b43db146ab53aad451f"
+  }
+}

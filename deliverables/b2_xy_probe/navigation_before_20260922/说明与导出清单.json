@@ -1,0 +1,11 @@
+{
+  "README.md": "20fd043f06735a5f1ff5a1076e01188646be1199966ccf170d9b70e167b69ec6",
+  "报告总索引.md": "2c36db12720b08a60db4f5acc7c4959b9e65546ec47616489dc6498f01365fa0",
+  "项目复现与使用说明.md": "f4d25e69ca1a4e1414cf817eeec898a62c7ad6118f1c8feb84b3232b37a24f39",
+  "docs/superpowers/plans/2026-09-17-reproduction-guide.md": "8860ecc5c92679702745fa7da7bfc7a2650d09c61965c9b2b8b03048c8821056",
+  "tools/usage/export_b1_model.py": "43f4e60a951089681f26a23ca8994fc4302bce4764ff470235c187315aebbd43",
+  "deliverables/model_exports_256/dsub9_convex256_b1_mpr.xml": "02a02b61cef364bc843c7e5a48513fbf783cf61cb064f19f7c4e0f822fd744b5",
+  "deliverables/model_exports_256/导出核对记录.json": "afdd8b2ef6521baf337e39da7952cd5d64b13f0b1d899691e1345efab8d4c8ed",
+  "deliverables/model_exports_256/模型说明.md": "50adbdbf9b78eab19ef38a5ef822cc7ab62002f4f8505dc8ce7b41bdfcd620ee",
+  "deliverables/reproduction_guide/复现实测核对.json": "d56668f0abbab258dfd2b8963d165a379b9dd83a3b56713e69d42e5ac545e8b9"
+}

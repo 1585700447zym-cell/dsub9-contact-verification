@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="14" skipped="0" tests="25" time="4.685" timestamp="2026-09-29T10:43:21.888714+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_force_failure_runner" name="test_one_shot_claim_refuses_second_launch" time="0.009" /><testcase classname="tests.learning.test_force_failure_runner" name="test_controlled_exit_preserves_finished_failure_ledger" time="0.042" /><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[0-incomplete_execution]" time="0.007" /><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[20-invalid_controlled_stop]" time="0.007" /><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[-1073741819-native_crash]" time="0.008" /><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[1-entry_rejection]" time="0.007" /><testcase classname="tests.learning.test_force_failure_runner" name="test_crash_cannot_be_relabelled_using_stale_controlled_stop" time="0.044" /><testcase classname="tests.learning.test_force_failure_runner" name="test_missing_authorization_in_cli_never_calls_supervisor" time="0.002" /><testcase classname="tests.learning.test_force_failure_runner" name="test_child_commands_preserve_both_external_pins" time="0.000" /><testcase classname="tests.learning.test_force_failure_runner" name="test_worker_retains_controlled_stop_without_starting_final_evaluation" time="0.055" /><testcase classname="tests.learning.test_force_failure_runner" name="test_zero_exit_requires_every_registered_stage_and_recovery_evidence" time="0.194"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_zero_exit_requires_every_0')
+
+    def test_zero_exit_requires_every_registered_stage_and_recovery_evidence(tmp_path):
+        from tools.learning.force_failure_cycle import ForceLedger
+        m=api();run=tmp_path/'run';run.mkdir();ledger=ForceLedger(run/'ledger.json')
+        for stage,cap in ledger.CAPS.items():
+            for i in range(cap):ledger.start(stage,str(i));ledger.finish({})
+        write(run/'frozen.json',dict(episodes=12,updates=4500))
+        write(run/'training_episodes/update_budget.json',dict(attempted=4500,completed=4500))
+        for stage in ('initial','final','restored','holdout_b2','holdout_sac'):
+            write(run/stage/'verification.json',dict(training_state_unchanged=True))
+        write(run/'restoration.json',dict(exact_physical_replay=True))
+        write(run/'holdout_scope_gate.json',dict(passed=True))
+        write(run/'completed.json',dict(status='execution_complete'))
+&gt;       assert m.finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:100: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_complete_integrity_bundle_still_requires_later_physical_audit" time="0.450" /><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[archive_missing]" time="0.399"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B647570&gt;
+damage = 'archive_missing'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[archive_changed]" time="0.395"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B51CE50&gt;
+damage = 'archive_changed'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[checkpoint_missing]" time="0.335"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B51CF50&gt;
+damage = 'checkpoint_missing'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[payload_changed]" time="0.431"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B62AE40&gt;
+damage = 'payload_changed'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[wrong_frozen_path]" time="0.346"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin4')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B62B3E0&gt;
+damage = 'wrong_frozen_path'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[case_missing]" time="0.414"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin5')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0C714D70&gt;
+damage = 'case_missing'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[wrong_ledger_point]" time="0.380"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin6')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0C717070&gt;
+damage = 'wrong_ledger_point'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[receipt_changed]" time="0.346"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin7')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B61DF30&gt;
+damage = 'receipt_changed'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_completion_rejects_missing_or_mismatched_original_evidence[scope_binding_changed]" time="0.468"><failure message="AssertionError: assert 'execution_complete' == 'incomplete_execution'&#10;  &#10;  - incomplete_execution&#10;  + execution_complete">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_completion_rejects_missin8')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B4A8350&gt;
+damage = 'scope_binding_changed'
+
+    @pytest.mark.parametrize('damage',['archive_missing','archive_changed','checkpoint_missing','payload_changed',
+        'wrong_frozen_path','case_missing','wrong_ledger_point','receipt_changed','scope_binding_changed'])
+    def test_completion_rejects_missing_or_mismatched_original_evidence(tmp_path,monkeypatch,damage):
+        run=integrity_fixture(tmp_path,monkeypatch)
+        archive=run/'final/episodes/x_pos_100/episode.json.gz'
+        if damage=='archive_missing':archive.unlink()
+        elif damage=='archive_changed':archive.write_bytes(b'changed')
+        elif damage=='checkpoint_missing':(run/'training/checkpoints/train_11/manifest.json').unlink()
+        elif damage=='payload_changed':(run/'training/checkpoints/train_11/state.pt').write_bytes(b'changed')
+        elif damage=='wrong_frozen_path':
+            r=api().read(run/'frozen.json');r['path']='../outside';write(run/'frozen.json',r)
+        elif damage=='case_missing':write(run/'final/results.json',api().read(run/'final/results.json')[:-1])
+        elif damage=='wrong_ledger_point':
+            r=api().read(run/'ledger.json');r['attempts'][0]['id']='unregistered';write(run/'ledger.json',r)
+        elif damage=='receipt_changed':
+            r=api().read(run/'final/episodes/x_pos_100/status.json');r['committed']=1
+            write(run/'final/episodes/x_pos_100/status.json',r)
+        else:
+            r=api().read(run/'holdout_scope_gate.json');r['archives']={};write(run/'holdout_scope_gate.json',r)
+&gt;       assert api().finalize_exit(0,tmp_path)['kind']=='incomplete_execution'
+E       AssertionError: assert 'execution_complete' == 'incomplete_execution'
+E         
+E         - incomplete_execution
+E         + execution_complete
+
+tests\learning\test_force_failure_runner.py:183: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_restore_native_crash_keeps_child_code_and_stops_before_holdout" time="0.032"><failure message="AssertionError: assert (['initial', 'final'] == ['initial', 'final']&#10;  &#10;  Use -v to get more diff and 'execution_failure' == 'native_crash'&#10;  &#10;  - native_crash&#10;  + execution_failure)">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_restore_native_crash_keep0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B4A8590&gt;
+
+    def test_restore_native_crash_keeps_child_code_and_stops_before_holdout(tmp_path,monkeypatch):
+        from types import SimpleNamespace
+        from tools.learning import bounded_checkpoint as cp,bounded_cycle,bounded_contact,repaired_cycle
+        m=api();monkeypatch.setattr(m,'DELIVERY',tmp_path);monkeypatch.setattr(m,'require_parent',lambda restore:None)
+        monkeypatch.setattr(m,'verify_initial_chain',lambda chain:{});monkeypatch.setattr(m,'reuse_baseline',lambda run:None)
+        monkeypatch.setattr(bounded_contact,'BoundedCollection',lambda **kw:SimpleNamespace(fail=lambda exc:None))
+        monkeypatch.setattr(cp,'save_checkpoint',lambda *a:'synthetic')
+        seen=[]
+        def evaluate(chain,stage,**kw):
+            assert stage in ('initial','final');seen.append(stage)
+        monkeypatch.setattr(bounded_cycle,'evaluate',evaluate)
+        monkeypatch.setattr(bounded_cycle,'train',lambda *a,**kw:dict(sha256='synthetic'))
+        monkeypatch.setattr(repaired_cycle,'development_decision',lambda run:{})
+        monkeypatch.setattr(m.subprocess,'run',lambda *a,**kw:SimpleNamespace(returncode=-1073741819))
+        with pytest.raises(RuntimeError):m.worker(SimpleNamespace(expected_digest='a'*64,authorization_digest='b'*64))
+        result=m.finalize_exit(1,tmp_path)
+&gt;       assert seen==['initial','final'] and result['kind']=='native_crash'
+E       AssertionError: assert (['initial', 'final'] == ['initial', 'final']
+E         
+E         Use -v to get more diff and 'execution_failure' == 'native_crash'
+E         
+E         - native_crash
+E         + execution_failure)
+
+tests\learning\test_force_failure_runner.py:202: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_supervisor_exception_seals_ledger_and_retains_cleanup_uncertainty[True]" time="0.014"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-344\\test_supervisor_exception_seal0\\exit_classification.json'">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_supervisor_exception_seal0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B4BC730&gt;
+cleaned = True
+
+    @pytest.mark.parametrize('cleaned',[True,False])
+    def test_supervisor_exception_seals_ledger_and_retains_cleanup_uncertainty(tmp_path,monkeypatch,cleaned):
+        from types import SimpleNamespace
+        from tools.learning.force_failure_cycle import ForceLedger
+        m=api();monkeypatch.setattr(m,'DELIVERY',tmp_path)
+        run=tmp_path/'run';run.mkdir();ledger=ForceLedger(run/'ledger.json');ledger.start('initial','x_pos_100')
+        monkeypatch.setattr(m,'ForceAdmission',lambda *a,**kw:None)
+        def supervise(*a):
+            write(tmp_path/'process_exit.json',dict(status='supervisor_error',error='KeyboardInterrupt()',
+                worker_stopped=cleaned,cleanup_error=None if cleaned else 'cleanup uncertain'))
+            raise KeyboardInterrupt()
+        spec=SimpleNamespace(loader=SimpleNamespace(exec_module=lambda module:setattr(module,'supervise',supervise)))
+        monkeypatch.setattr(m.importlib.util,'spec_from_file_location',lambda *a:spec)
+        monkeypatch.setattr(m.importlib.util,'module_from_spec',lambda spec:SimpleNamespace())
+        with pytest.raises(KeyboardInterrupt):m.main(['--candidate-sha256','a'*64,'--authorization-sha256','b'*64])
+&gt;       state=m.read(run/'ledger.json');report=m.read(tmp_path/'exit_classification.json')
+
+tests\learning\test_force_failure_runner.py:224: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\repaired_cycle.py:27: in read
+    def read(path): return json.loads(Path(path).read_text(encoding='utf-8'))
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+D:\KEYANRUJIAN\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_supervisor_exception_seal0/exit_classification.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-344\\test_supervisor_exception_seal0\\exit_classification.json'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_supervisor_exception_seals_ledger_and_retains_cleanup_uncertainty[False]" time="0.011"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-344\\test_supervisor_exception_seal1\\exit_classification.json'">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_supervisor_exception_seal1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000025B0B4BCD60&gt;
+cleaned = False
+
+    @pytest.mark.parametrize('cleaned',[True,False])
+    def test_supervisor_exception_seals_ledger_and_retains_cleanup_uncertainty(tmp_path,monkeypatch,cleaned):
+        from types import SimpleNamespace
+        from tools.learning.force_failure_cycle import ForceLedger
+        m=api();monkeypatch.setattr(m,'DELIVERY',tmp_path)
+        run=tmp_path/'run';run.mkdir();ledger=ForceLedger(run/'ledger.json');ledger.start('initial','x_pos_100')
+        monkeypatch.setattr(m,'ForceAdmission',lambda *a,**kw:None)
+        def supervise(*a):
+            write(tmp_path/'process_exit.json',dict(status='supervisor_error',error='KeyboardInterrupt()',
+                worker_stopped=cleaned,cleanup_error=None if cleaned else 'cleanup uncertain'))
+            raise KeyboardInterrupt()
+        spec=SimpleNamespace(loader=SimpleNamespace(exec_module=lambda module:setattr(module,'supervise',supervise)))
+        monkeypatch.setattr(m.importlib.util,'spec_from_file_location',lambda *a:spec)
+        monkeypatch.setattr(m.importlib.util,'module_from_spec',lambda spec:SimpleNamespace())
+        with pytest.raises(KeyboardInterrupt):m.main(['--candidate-sha256','a'*64,'--authorization-sha256','b'*64])
+&gt;       state=m.read(run/'ledger.json');report=m.read(tmp_path/'exit_classification.json')
+
+tests\learning\test_force_failure_runner.py:224: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\repaired_cycle.py:27: in read
+    def read(path): return json.loads(Path(path).read_text(encoding='utf-8'))
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+D:\KEYANRUJIAN\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_supervisor_exception_seal1/exit_classification.json')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+&gt;       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-344\\test_supervisor_exception_seal1\\exit_classification.json'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_technical_candidate_uses_immutable_document_snapshots" time="0.004"><failure message="AttributeError: module 'force_qualify_test' has no attribute 'freeze_docs'">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-344/test_technical_candidate_uses_0')
+
+    def test_technical_candidate_uses_immutable_document_snapshots(tmp_path):
+        from tools.learning.force_failure_cycle import DELIVERY
+        spec=importlib.util.spec_from_file_location('force_qualify_test',DELIVERY/'qualify.py')
+        m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+        (tmp_path/'README.md').write_bytes(b'approved proposed plan')
+        (tmp_path/'实施记录.md').write_bytes(b'preparation record')
+&gt;       names=m.freeze_docs(tmp_path);assert len(names)==2
+E       AttributeError: module 'force_qualify_test' has no attribute 'freeze_docs'
+
+tests\learning\test_force_failure_runner.py:237: AttributeError</failure></testcase></testsuite></testsuites>

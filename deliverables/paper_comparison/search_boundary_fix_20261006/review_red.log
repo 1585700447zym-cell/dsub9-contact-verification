@@ -1,0 +1,67 @@
+.....FFF......                                                           [100%]
+================================== FAILURES ===================================
+_ test_current_reference_fault_precedes_normal_search_phase_changes[advance] __
+
+branch = 'advance'
+
+    @pytest.mark.parametrize('branch', ['advance', 'search_timeout', 'spiral_end'])
+    def test_current_reference_fault_precedes_normal_search_phase_changes(branch):
+        from dataclasses import replace
+        c, sample = controller_and_sample()
+        sample = replace(sample, reference_displacement_m=(121e-6, 0., 0.))
+        if branch == 'advance': sample = replace(sample, displacement_m=(0., 0., .00015))
+        if branch == 'search_timeout': sample = replace(sample, time_s=2.+c.config.search_time_s)
+        if branch == 'spiral_end': c.theta=c.config.spiral_radius_m/(c.config.spiral_pitch_m/(2*math.pi))
+        c.command(sample, .002)
+>       assert c.phase == 'FAILED' and c.reason == 'SEARCH_REFERENCE_LIMIT'
+E       AssertionError: assert ('INSERT' == 'FAILED'
+E         
+E         - FAILED
+E         + INSERT)
+
+tests\task_variants\test_search_boundary_end.py:85: AssertionError
+_ test_current_reference_fault_precedes_normal_search_phase_changes[search_timeout] _
+
+branch = 'search_timeout'
+
+    @pytest.mark.parametrize('branch', ['advance', 'search_timeout', 'spiral_end'])
+    def test_current_reference_fault_precedes_normal_search_phase_changes(branch):
+        from dataclasses import replace
+        c, sample = controller_and_sample()
+        sample = replace(sample, reference_displacement_m=(121e-6, 0., 0.))
+        if branch == 'advance': sample = replace(sample, displacement_m=(0., 0., .00015))
+        if branch == 'search_timeout': sample = replace(sample, time_s=2.+c.config.search_time_s)
+        if branch == 'spiral_end': c.theta=c.config.spiral_radius_m/(c.config.spiral_pitch_m/(2*math.pi))
+        c.command(sample, .002)
+>       assert c.phase == 'FAILED' and c.reason == 'SEARCH_REFERENCE_LIMIT'
+E       AssertionError: assert ('WAIT_RECOVERY' == 'FAILED'
+E         
+E         - FAILED
+E         + WAIT_RECOVERY)
+
+tests\task_variants\test_search_boundary_end.py:85: AssertionError
+_ test_current_reference_fault_precedes_normal_search_phase_changes[spiral_end] _
+
+branch = 'spiral_end'
+
+    @pytest.mark.parametrize('branch', ['advance', 'search_timeout', 'spiral_end'])
+    def test_current_reference_fault_precedes_normal_search_phase_changes(branch):
+        from dataclasses import replace
+        c, sample = controller_and_sample()
+        sample = replace(sample, reference_displacement_m=(121e-6, 0., 0.))
+        if branch == 'advance': sample = replace(sample, displacement_m=(0., 0., .00015))
+        if branch == 'search_timeout': sample = replace(sample, time_s=2.+c.config.search_time_s)
+        if branch == 'spiral_end': c.theta=c.config.spiral_radius_m/(c.config.spiral_pitch_m/(2*math.pi))
+        c.command(sample, .002)
+>       assert c.phase == 'FAILED' and c.reason == 'SEARCH_REFERENCE_LIMIT'
+E       AssertionError: assert ('WAIT_RECOVERY' == 'FAILED'
+E         
+E         - FAILED
+E         + WAIT_RECOVERY)
+
+tests\task_variants\test_search_boundary_end.py:85: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_search_boundary_end.py::test_current_reference_fault_precedes_normal_search_phase_changes[advance]
+FAILED tests/task_variants/test_search_boundary_end.py::test_current_reference_fault_precedes_normal_search_phase_changes[search_timeout]
+FAILED tests/task_variants/test_search_boundary_end.py::test_current_reference_fault_precedes_normal_search_phase_changes[spiral_end]
+3 failed, 11 passed in 0.31s

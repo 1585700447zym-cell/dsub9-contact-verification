@@ -1,0 +1,32 @@
+{
+  "version": "b2_11_preparation_manifest_v1",
+  "files": {
+    "deliverables/learning_chain/b2_contact_preparation_20260927/analysis/delivery_checks.json": "8d8c147c703ac2a3cf871fffc450df49dacf8860de23eeb49286d6334bca0b62",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/analysis/report.py": "5883a4c6184b6b42f07c7c0341a6afc21c0e958ead130cb136f3887149e5cfee",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/analysis/rolling_documents_update.json": "07b4d7f9ced3429baee36039f252dfbefbe8c7525a2521e7a4242133a2c8df8c",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/analysis/run_tests.py": "6c9f15aa0448d84f33cdd7450a2b40863d33bd43e7f3eedf471d7e6241a7dc44",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/analysis/seal.py": "fc0bee4269bc41bba70d6182383e866e871264fff442cc14ca608a2ba7b95a2b",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/analysis/summary.json": "d4879e9656e31e6c95d4d15696ff879a757d72ec1e9e38a758d4bed89765f896",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/analysis/update_documents.py": "3a243e0517fd3c42d84c14a625ddadc85bef1df73a53524515c2b724ef3e340f",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/contract.py": "dab7f832c0a1ffa4027fa0542353616c8b7abc0795d4cd5cf2ee95dcb17a94c7",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/contract_red.log": "9621d94eb5a16dfab97df34fe8455154e2d39558b6e5646977c0fa1ae7663c06",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/preparation_red.log": "bfc81e5d1be473b5836202641ad1555707ef581307982117cd29d867d2a3cfd8",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/prepare.py": "e9bf3b18ec9c7692f34ff06f6f20374b72ad134c348326eedd9cedfe57e27da1",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/review_red.log": "81af84802b2228cf0a9393bea7d95fe0cb2fc809b3ae0b99305462302b54c0a2",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/test_binding.json": "bbc5c2fb552832c639f9e2413ab943bceaad613bf7590cd4f1a7d2c8f7fb1ca4",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/test_contract.py": "35e994f83386ed0545dc4435a7954c486ecba600e803f4283da730e1e05a9039",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/test_preparation.py": "9a9e2e51bb8b9d3db82a825e6753b49e676ff3a75f965f80ba432040995300f5",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/tests.log": "bdb970a3398b36fffaca06633d2e6bed6dc673fca5092f90beab46f0441d64ce",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/checks/tests.xml": "7589bbe4e648eabf7d06f74bceaae6a1896c98a74967396027a76142228273bf",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/document_snapshot/月报素材_2026-09.md": "fc3687bad9978431fd934fdb0026c7b3fd45f22f1ee6c830dc764c358e0b0c4f",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/document_snapshot/项目交付总览.md": "473384432943d6e1d9d065d237e77abee52dafbb005587a8c113143484169522",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/document_snapshot/项目进度跟踪.md": "29c3aa339206a91e22f70342a73df47effa3e9c04b855f44724c22041d8a5767",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/preparation.json": "57471f37ef0506aa2f83bf1065af0e8762f917365dedc622c0abb3d6368cace1",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/README.md": "395a07c7383471b00a9245229702a82149cef2061cf66b2088e2f8126add98f5",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/verification.json": "538b17b15c2803a7c33cf4cd8a877575e26e6d95af2ba2ff163cac98ba621270",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/下一步决策.md": "88de3ae443c005b8fdb55e38d8e25f2dc3a5ef065067e8eb959174ce8fa65957",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/实施记录.md": "b5869843b3d1199e4c24ea3048b1e7e511490110fe3f1ad554f6c70b7ac72e6c",
+    "deliverables/learning_chain/b2_contact_preparation_20260927/范围与执行边界.md": "d8059a3055aa9e82d93a65ab534d92890c1b53f659ff0d39e538ca1b0043fcd1",
+    "docs/stage_b/四点接触短训配置_v1.json": "67444e2204dd0522138a769b7fbefb51a21ec866345b633b203ae95be4adef34"
+  }
+}

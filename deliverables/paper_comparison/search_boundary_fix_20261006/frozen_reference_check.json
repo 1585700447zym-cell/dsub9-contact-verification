@@ -1,0 +1,51 @@
+{
+  "scope": "recorded B2 SEARCH state command regression only; no new physics",
+  "cases": [
+    {
+      "case": "y_neg_150",
+      "archive": "deliverables/task_variants/layered_referee_20261004/run/y_neg_150.json.gz",
+      "sha256": "604437ff1ef4d3e936849272376b8003286972bd527c9a3d69fbf60bfe3973bd",
+      "checked_search_commands": 7384,
+      "changed_commands": 0,
+      "max_reference_prediction_error_m": 0.0
+    },
+    {
+      "case": "y_pos_150",
+      "archive": "deliverables/task_variants/layered_referee_20261004/run/y_pos_150.json.gz",
+      "sha256": "0adccfc5021a8664fe21133fc83e68142297d617717f4bb5277a022fdecb5b6f",
+      "checked_search_commands": 3021,
+      "changed_commands": 0,
+      "max_reference_prediction_error_m": 0.0
+    },
+    {
+      "case": "x_pos_150",
+      "archive": "deliverables/task_variants/layered_referee_20261004/run/x_pos_150.json.gz",
+      "sha256": "b5b9e4e602d746cea6990fac51af190cbe76feccee6fb20db1bf2e94d61767df",
+      "checked_search_commands": 2683,
+      "changed_commands": 0,
+      "max_reference_prediction_error_m": 0.0
+    },
+    {
+      "case": "x_neg_150",
+      "archive": "deliverables/task_variants/layered_referee_20261004/run/x_neg_150.json.gz",
+      "sha256": "ec9a47d4539f97ab93d4299f6ba7344551faf80f89a664609df63b40268bfd3c",
+      "checked_search_commands": 3475,
+      "changed_commands": 0,
+      "max_reference_prediction_error_m": 0.0
+    },
+    {
+      "case": "aligned",
+      "archive": "deliverables/task_variants/layered_referee_20261004/run/aligned.json.gz",
+      "sha256": "076a6ecdb9ce478b4ed9a691ce68c2d1dec1f922fb58f754b52b7527180150ef",
+      "checked_search_commands": 0,
+      "changed_commands": 0,
+      "max_reference_prediction_error_m": 0.0
+    }
+  ],
+  "total_commands": 16563,
+  "new_physics": 0,
+  "production_sha256": {
+    "tools/control/reference_search.py": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+    "tools/learning/v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219"
+  }
+}

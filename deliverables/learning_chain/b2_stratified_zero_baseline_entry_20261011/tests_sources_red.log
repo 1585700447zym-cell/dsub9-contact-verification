@@ -1,0 +1,45 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_inherited_numerical_files_and_new_execution_controls_bound (__main__.SourceTests.test_inherited_numerical_files_and_new_execution_controls_bound) ... FAIL
+test_no_learning_runtime_import_during_binding (__main__.SourceTests.test_no_learning_runtime_import_during_binding) ... FAIL
+test_preceding_delivery_sources_sealed_and_current_docs_not_frozen (__main__.SourceTests.test_preceding_delivery_sources_sealed_and_current_docs_not_frozen) ... FAIL
+
+======================================================================
+FAIL: test_inherited_numerical_files_and_new_execution_controls_bound (__main__.SourceTests.test_inherited_numerical_files_and_new_execution_controls_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_sources.py", line 18, in test_inherited_numerical_files_and_new_execution_controls_bound
+    binding=self.api('build_binding')()
+            ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_sources.py", line 14, in api
+    self.assertTrue(callable(getattr(p,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: build_binding
+
+======================================================================
+FAIL: test_no_learning_runtime_import_during_binding (__main__.SourceTests.test_no_learning_runtime_import_during_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_sources.py", line 34, in test_no_learning_runtime_import_during_binding
+    self.api('build_binding')()
+    ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_sources.py", line 14, in api
+    self.assertTrue(callable(getattr(p,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: build_binding
+
+======================================================================
+FAIL: test_preceding_delivery_sources_sealed_and_current_docs_not_frozen (__main__.SourceTests.test_preceding_delivery_sources_sealed_and_current_docs_not_frozen)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_sources.py", line 27, in test_preceding_delivery_sources_sealed_and_current_docs_not_frozen
+    binding=self.api('build_binding')()
+            ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_sources.py", line 14, in api
+    self.assertTrue(callable(getattr(p,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: build_binding
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=3)

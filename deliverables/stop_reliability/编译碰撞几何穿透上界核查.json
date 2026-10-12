@@ -1,0 +1,295 @@
+{
+  "sample_index": 20,
+  "sample_time_s": 11.805999999999162,
+  "meaning": "For each convex mesh entirely above its actual minimum world Z, translating the full modeled cylinder down by max(0,cylinder_maxZ-mesh_minZ) separates the pair. This upper-bounds Euclidean minimum separating translation, not solver compliance. Includes actual compiled mesh transforms.",
+  "contacts": [
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_175"
+      ],
+      "compiled_hole_min_z_m": 0.00025000002642627805,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730950499e-08,
+      "reported_depth_m": 1.6207224144748073e-06,
+      "normal": [
+        -0.024908566383213118,
+        -0.9902615135947221,
+        -0.13697334782293646
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_176"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262785,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730907131e-08,
+      "reported_depth_m": 1.8259127720149263e-06,
+      "normal": [
+        -0.4675301303726136,
+        -0.8777044425640962,
+        -0.10512130467710355
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_177"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262785,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730907131e-08,
+      "reported_depth_m": 2.30197965060727e-06,
+      "normal": [
+        -0.717709769263707,
+        -0.6927031668794665,
+        -0.07109859139669705
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_178"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262776,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730993867e-08,
+      "reported_depth_m": 2.907827901153223e-06,
+      "normal": [
+        -0.8382261213661977,
+        -0.5432779295766609,
+        -0.04718114765748171
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_179"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262776,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730993867e-08,
+      "reported_depth_m": 3.5704866221214335e-06,
+      "normal": [
+        -0.8993443096643103,
+        -0.43610347091027035,
+        -0.03152103003457264
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_185"
+      ],
+      "compiled_hole_min_z_m": 0.00025000002642627805,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730950499e-08,
+      "reported_depth_m": 2.2785941875266002e-06,
+      "normal": [
+        -0.13004209816586612,
+        -0.991508036610115,
+        0.0009306138695679938
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_186"
+      ],
+      "compiled_hole_min_z_m": 0.00025000002642627805,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730950499e-08,
+      "reported_depth_m": 2.122139540730789e-06,
+      "normal": [
+        -0.12304518092442092,
+        -0.9923813724993596,
+        0.006252596865615666
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_187"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262785,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730907131e-08,
+      "reported_depth_m": 1.809465863188505e-06,
+      "normal": [
+        -0.09849142898593342,
+        -0.9950655063693862,
+        0.012003185000083048
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_188"
+      ],
+      "compiled_hole_min_z_m": 0.00025000002642627805,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730950499e-08,
+      "reported_depth_m": 1.5615671311401646e-06,
+      "normal": [
+        -0.05166732714911652,
+        -0.9984958842001247,
+        0.01834275172043033
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_189"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262785,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730907131e-08,
+      "reported_depth_m": 1.2092768018381976e-06,
+      "normal": [
+        -0.05746537878566044,
+        -0.9979727426703966,
+        0.02735205893433097
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_189"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262785,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730907131e-08,
+      "reported_depth_m": 1.2092768018381976e-06,
+      "normal": [
+        0.8539987918481103,
+        -0.5202001985729329,
+        0.008821390290037461
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_190"
+      ],
+      "compiled_hole_min_z_m": 0.00025000002642627805,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730950499e-08,
+      "reported_depth_m": 2.934636362428007e-06,
+      "normal": [
+        0.892324019287525,
+        -0.45124805495001546,
+        0.011534188588041843
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_190"
+      ],
+      "compiled_hole_min_z_m": 0.00025000002642627805,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730950499e-08,
+      "reported_depth_m": 2.934636362428007e-06,
+      "normal": [
+        0.008598990635652275,
+        -0.9973295984079255,
+        0.07252399257855524
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_191"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262785,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730907131e-08,
+      "reported_depth_m": 2.030931621371475e-06,
+      "normal": [
+        0.9124422005191081,
+        -0.40883030169353257,
+        0.01752184719209411
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_191"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262785,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730907131e-08,
+      "reported_depth_m": 2.030931621371475e-06,
+      "normal": [
+        0.029019357144599366,
+        -0.9808180178281325,
+        0.19275345085006307
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_192"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262776,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730993867e-08,
+      "reported_depth_m": 1.1161809853005747e-06,
+      "normal": [
+        0.9555475183965506,
+        -0.2931279426501174,
+        0.031700935694447145
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_192"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262776,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730993867e-08,
+      "reported_depth_m": 1.1161809853005747e-06,
+      "normal": [
+        -0.0020696415014505834,
+        0.15830815339460355,
+        0.9873875860840292
+      ],
+      "margin": 0.0
+    },
+    {
+      "geoms": [
+        "pin_07",
+        "hole_convex256_07_main_193"
+      ],
+      "compiled_hole_min_z_m": 0.0002500000264262776,
+      "exact_cylinder_max_z_m": 0.00025003576389358756,
+      "negative_Z_separating_translation_upper_bound_m": 3.573746730993867e-08,
+      "reported_depth_m": 3.180109978497135e-07,
+      "normal": [
+        0.8090162485395707,
+        0.5784135273176761,
+        0.1045490364129853
+      ],
+      "margin": 0.0
+    }
+  ]
+}

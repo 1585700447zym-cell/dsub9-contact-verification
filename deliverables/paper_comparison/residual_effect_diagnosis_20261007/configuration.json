@@ -1,0 +1,323 @@
+{
+  "scope": "offline_descriptive_diagnosis_only",
+  "dynamic_episodes": 0,
+  "optimizer_batches": 0,
+  "network_policy_calls": 0,
+  "published_transitions": 0,
+  "cumulative_dynamic": 200,
+  "first_use_positions_consumed": true,
+  "source_proof": {
+    "sealed_files": {
+      "frozen_comparison_20261007": 96,
+      "v4_learning_requalification_20261006": 457
+    },
+    "production_inputs_unchanged": 1057,
+    "seals": {
+      "frozen_comparison_20261007": "8c64d623247c31e217f71e90cbb473c3d21a05c49360f10872dab4eddd36596c",
+      "v4_learning_requalification_20261006": "fd98d247484e919c3c4e099d03575b1d4d40e977a5da939efc088759c84b9ed5"
+    }
+  },
+  "archives": [
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_y_neg_150.json.gz",
+      "sha256": "62070fe63304b03bf8ce24b35f9f60c3fdf7d6e30af654567067959227ea4c67",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "dev_B2_y_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_y_neg_150.json.gz",
+      "sha256": "b1444d582abd86dc3737cfc538f163ad4e875bc35a6cfd9a2c9c42bf2e8afa42",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "dev_F0_y_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_y_neg_150.json.gz",
+      "sha256": "b5f10fd5cf0f962bba241f7a406cc456439b4c3298bb3d6c944ba7b5b86513f9",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "dev_S0_y_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_y_pos_150.json.gz",
+      "sha256": "78778ded7ac0cfaedfa1feb97d47b2633e390cc20198f991be5c71efbf83afec",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "dev_B2_y_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_y_pos_150.json.gz",
+      "sha256": "8978d23b8fee8a228bd9f865925b0b52165a1a71a410ac4b10e837f3d3a10a22",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "dev_F0_y_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_y_pos_150.json.gz",
+      "sha256": "661b2cb24f84fca08ff66caae5e7ffdf0cd8c54709c69fc2422d4b3cfe1e2499",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "dev_S0_y_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_x_pos_150.json.gz",
+      "sha256": "841f612ab3afe44826c30a822fe3a2181e3e50b24f2741f4faa3f3ac4bb463cf",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "dev_B2_x_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_x_pos_150.json.gz",
+      "sha256": "1db3a90c8ad9ce88c669e1fb3ec4d98c6502ea1c0a4f6c4e94c261af77febf93",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "dev_F0_x_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_x_pos_150.json.gz",
+      "sha256": "098cd21464686f45f5891b67f613b18443ee5837fb5fddd864ad4e20899f020a",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "dev_S0_x_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_x_neg_150.json.gz",
+      "sha256": "18390dadd4e1c4dea49ce4f3b3b76b8e43422277c40f6f78ea763c4f4e5d1a26",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "dev_B2_x_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_x_neg_150.json.gz",
+      "sha256": "2be6b3fe3de90871316d750592479935c5842f91804fd691361c9efb7c0ad455",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "dev_F0_x_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_x_neg_150.json.gz",
+      "sha256": "16d8a02d7cc643550036dc1d582795936ff6fdd4ccba68078b0928bb3b300b0e",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "dev_S0_x_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_aligned.json.gz",
+      "sha256": "38b7cd2e7027cede2a084773c60ce3d984471b73249f86d02da874194e5a23f8",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "dev_B2_aligned"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_aligned.json.gz",
+      "sha256": "cfaea97f644a8e52fd14f26de1eb4918e86c46546cb8c5f69d63f2e4b79ea82d",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "dev_F0_aligned"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_aligned.json.gz",
+      "sha256": "3c454cd71cfaf8b7fbc961ae177c5d5e0c1253556289c39d8cfed588a8de2497",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "dev_S0_aligned"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_01.json.gz",
+      "sha256": "30636e797a909d820ee026a1a5c0c938917be0198b467ddb6a4eb31acaf929f7",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_01",
+      "id": "test_B2_holdout_01"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_01.json.gz",
+      "sha256": "7499b4654fa99fa246dfbd43b520b9a6215f5f5ce1d09f7e57300fe186690568",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_01",
+      "id": "test_F2000_holdout_01"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_01.json.gz",
+      "sha256": "4e0882de784bea2687649e428d569d8b3f9c436ba6826040f9a57256bd1bdd9a",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_01",
+      "id": "test_S2000_holdout_01"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_02.json.gz",
+      "sha256": "ccf9e6ddef7fadae8df73414749f305f26b3a1f65412711fddb1257f57791635",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_02",
+      "id": "test_B2_holdout_02"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_02.json.gz",
+      "sha256": "34ff240ab7f4638b8091552cb3ee5c58df536a3d69c326220a931a76cf78bd2a",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_02",
+      "id": "test_F2000_holdout_02"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_02.json.gz",
+      "sha256": "dfd076d720184a5137ac536e8b2b91631831ff58ce061a8972ff7af04d0f7a09",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_02",
+      "id": "test_S2000_holdout_02"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_03.json.gz",
+      "sha256": "d487cb2fe014f6dc217e78e899e8065edb59bd6724fbd23428efcc9b06736902",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_03",
+      "id": "test_B2_holdout_03"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_03.json.gz",
+      "sha256": "1ce5d1b49785950ff8778c5ae7909d2b1b7368638b067c185eb6489d5b14d3aa",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_03",
+      "id": "test_F2000_holdout_03"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_03.json.gz",
+      "sha256": "b787fbd1e7e5518dbef49966e70ac7ac7e155fde36b489efc07f2aab86d2229f",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_03",
+      "id": "test_S2000_holdout_03"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_04.json.gz",
+      "sha256": "92d6f7b9915bfa006ad2303377671ac3601af32156d381af1cdf5d875a32af94",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_04",
+      "id": "test_B2_holdout_04"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_04.json.gz",
+      "sha256": "6bbcf6006df4035955535b1969454f78ae544187ffe7317bb83cfd038fcfcf58",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_04",
+      "id": "test_F2000_holdout_04"
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_04.json.gz",
+      "sha256": "a0d7f5e51fd1028d53ef87c05736300268b866f62b7ddee0bc590bc1aed86f9a",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_04",
+      "id": "test_S2000_holdout_04"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_y_neg_150.json.gz",
+      "sha256": "b06edc4b29df45373d731d48e2bb55c1fb105a68811bd2f25c4ce6aa3801c3f2",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "final_F50_y_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_neg_150.json.gz",
+      "sha256": "e043f85a4c37869e996aaba0777783027130dec03b63b0b3b4b4a4ce0dcce3d6",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "final_S50_y_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_y_pos_150.json.gz",
+      "sha256": "6ba2d71616dcbe8b92ea48e145c49b22725fe3625a08232976dde38a97053f13",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "final_F50_y_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_pos_150.json.gz",
+      "sha256": "7b3aa929e3dbcf72401f7c7bb87e36b59c1fe4df216401f535341801c4302614",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "final_S50_y_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_x_pos_150.json.gz",
+      "sha256": "f819d500577bef17937e21226e1e94899bff24e4a2f580ba503cc555e176189d",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "final_F50_x_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_x_pos_150.json.gz",
+      "sha256": "ebf3a03c973c526c4497d8154b9d3860b1975540b79dc843b0479194026d7318",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "final_S50_x_pos_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_x_neg_150.json.gz",
+      "sha256": "45252569064e879ba039d453d805a03ac8e74bae73897db3eca644b013be78a5",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "final_F50_x_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_x_neg_150.json.gz",
+      "sha256": "c3dba141b25ab5f6dfb005a4930ba48a1512dc28c00d2ea7a5e08b58f198b226",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "final_S50_x_neg_150"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_aligned.json.gz",
+      "sha256": "8be0f0eb8f51775200479ebc83ef058841e390f92c47a9d71c830020d985f171",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "final_F50_aligned"
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_aligned.json.gz",
+      "sha256": "f4ad917085b21225c294f9ea47f878a772a4a77c0c9109a32deac9f84bf8d36b",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "final_S50_aligned"
+    }
+  ],
+  "diagnostic_input_sha256": {
+    "deliverables/paper_comparison/residual_effect_diagnosis_20261007/diagnose.py": "c8489368d5d7f41e1444bdd8b949dc1bfe87888b022b3ed5d96929fd98419350",
+    "deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py": "54ae114657d336a8c9609430d3480de4dca0cd36c49e2da545eddf41245238ca",
+    "docs/superpowers/plans/2026-10-07-residual-effect-diagnosis.md": "48ae7151d235164b3d4221eb9020f757a17bb7f674b30e92e314ef03facfa430"
+  }
+}

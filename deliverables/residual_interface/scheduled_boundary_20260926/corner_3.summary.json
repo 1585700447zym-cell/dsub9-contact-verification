@@ -1,0 +1,232 @@
+{
+  "id": "corner_3",
+  "spec": {
+    "id": "corner_3",
+    "family": "corner_coupled_rotation",
+    "case": {
+      "name": "corner_3",
+      "x_offset_m": 5e-05,
+      "y_offset_m": 5e-05,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    "schedule": [
+      {
+        "start_cycle": 0,
+        "action": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "start_cycle": 250,
+        "action": [
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      {
+        "start_cycle": 500,
+        "action": [
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "start_cycle": 1000,
+        "action": [
+          0,
+          0,
+          1,
+          1
+        ]
+      }
+    ]
+  },
+  "initialization_valid": true,
+  "simulation_valid": true,
+  "physical_stopped": true,
+  "completed": true,
+  "observation_valid": true,
+  "masking_valid": true,
+  "schedule_valid": true,
+  "error": null,
+  "active_cycles": 5084,
+  "masked_cycles": 1390,
+  "contact_cycles": 4687,
+  "command_effect_cycles": 5084,
+  "rotation_guard_observations": [],
+  "diagnostic_failures": [],
+  "adjudication_status": "available",
+  "training_admitted": false,
+  "model_scope_qualified": false,
+  "valid_for_learning": false,
+  "initial_state": {
+    "time_s": 0.0,
+    "position_m": [
+      5e-05,
+      5e-05,
+      -0.004
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "velocity_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "contact_wrench_M": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "contact_wrench_G": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "penetration_m": 0.0,
+    "contact_count": 0,
+    "phase": "RUNNING",
+    "reference_qpos": [
+      5e-05,
+      5e-05,
+      -0.004,
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "raw_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "limited_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "drive_wrench_M": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "outcome": {
+    "simulation_valid": true,
+    "task_outcome": "TASK_FAILURE",
+    "guard_violations": {
+      "contact": false,
+      "motion": false
+    },
+    "physical_stopped": true,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "training_admitted": false,
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.042444791276200045,
+      "checked_substeps": 64740
+    }
+  },
+  "task_outcome": "TASK_FAILURE",
+  "interface_fault": null,
+  "guard_facts": {
+    "simulation_valid": true,
+    "invalid_reasons": [],
+    "contact_reasons": [],
+    "motion_reasons": [],
+    "max_rotation_from_start_rad": 0.042444791276200045,
+    "checked_substeps": 64740
+  },
+  "events": [
+    {
+      "time_s": 10.948000000001162,
+      "reason": "TARGET_PLANE_REACHED",
+      "phase": "STOPPING"
+    }
+  ],
+  "physical_steps": 64740,
+  "peaks": {
+    "force_N": 0.024628592091749456,
+    "torque_G_Nm": 0.00020632156317119035,
+    "penetration_m": 6.525508955517627e-06,
+    "speed_m_s": 0.0018773661344508427,
+    "drive_force_components_N": [
+      0.006735182269127791,
+      0.0069293421178273406,
+      0.024472369669717838
+    ],
+    "drive_torque_components_Nm": [
+      5.445582804448771e-05,
+      0.00010759529573333312,
+      3.785476586231275e-05
+    ],
+    "contact_count": 1992.0
+  },
+  "end_time_s": 12.947999999996501,
+  "final_phase": "STOPPING",
+  "max_rotation_deg": 2.4319074024399576,
+  "boundary_observations": [],
+  "segments": [
+    {
+      "start_cycle": 0,
+      "requested_cycles": 250,
+      "enabled_cycles": 250,
+      "effect_cycles": 250
+    },
+    {
+      "start_cycle": 250,
+      "requested_cycles": 250,
+      "enabled_cycles": 177,
+      "effect_cycles": 177
+    },
+    {
+      "start_cycle": 500,
+      "requested_cycles": 500,
+      "enabled_cycles": 183,
+      "effect_cycles": 183
+    },
+    {
+      "start_cycle": 1000,
+      "requested_cycles": 5474,
+      "enabled_cycles": 4474,
+      "effect_cycles": 4474
+    }
+  ],
+  "wall_seconds": 231.5339172000531
+}

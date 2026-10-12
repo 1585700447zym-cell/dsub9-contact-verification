@@ -1,0 +1,44 @@
+{
+  "stage": "initial",
+  "completed": 4,
+  "successes": 4,
+  "cycles": 24430,
+  "actual_action_scale_verified": true,
+  "training_state_unchanged": true,
+  "wall_s": 1173.2564201999994,
+  "results": [
+    {
+      "case": "x_pos_100",
+      "success": true,
+      "final_xy_um": 36.08588021396613,
+      "final_angle_deg": 0.01975715234149278
+    },
+    {
+      "case": "x_neg_100",
+      "success": true,
+      "final_xy_um": 31.947094872733466,
+      "final_angle_deg": 0.01921295536240703
+    },
+    {
+      "case": "y_pos_100",
+      "success": true,
+      "final_xy_um": 36.01852561506797,
+      "final_angle_deg": 0.07074427317871279
+    },
+    {
+      "case": "y_neg_100",
+      "success": true,
+      "final_xy_um": 34.724165574699455,
+      "final_angle_deg": 0.049866736981901826
+    }
+  ],
+  "archive_sha256": {
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/x_pos_100/episode.json.gz": "171753dcb88e8d8ec9eb01424b1ce39434aefeb5cf5d9bacf5a0e9b446c73ede",
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/x_neg_100/episode.json.gz": "ef965a019c39203e1bfc617b9e73b77ceccdc3213de95ba99c7b577c908970b5",
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/y_pos_100/episode.json.gz": "586a7ef48152f4ba9d69a4f74aa4fe5de0a5c81f09d0ad7ef393599d2ed01835",
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/y_neg_100/episode.json.gz": "75c3b460571219eae90be2fa54e3af558541ef668898874203077482091481a0"
+  },
+  "additional_physical_starts": 0,
+  "additional_optimizer_calls": 0,
+  "scope": "Initial network only; not a learned improvement."
+}

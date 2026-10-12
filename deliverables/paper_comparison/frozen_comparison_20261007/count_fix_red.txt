@@ -1,0 +1,27 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+FF                                                                       [100%]
+================================== FAILURES ===================================
+____ test_fault_after_network_calls_preserves_actual_attempt_cost[rollout] ____
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:89: in test_fault_after_network_calls_preserves_actual_attempt_cost
+    assert ledger['status']=='error' and ledger['network_policy_calls']==7
+E   AssertionError: assert ('error' == 'error'
+E     
+E       error and 0 == 7)
+---------------------------- Captured stdout call -----------------------------
+Loaded frozen provider F0
+{"cumulative_limit":200,"ended_at":"2026-10-07T12:11:52.461866+08:00","error":"RuntimeError('injected native boundary fault')","first_use_test_cases":[{"id":"holdout_01","x_um":72.199490668416,"y_um":110.16091384637778},{"id":"holdout_02","x_um":-81.00634530576173,"y_um":113.36589217486193},{"id":"holdout_03","x_um":-120.25298159936679,"y_um":-40.4509150025434},{"id":"holdout_04","x_um":120.13977198565823,"y_um":-43.40297118393552}],"formal_updates":0,"inputs_unchanged":true,"max_new_episodes":27,"network_policy_calls":0,"policy_calls":7,"policy_loads":{"F0":{"checkpoint":{"label":"zero","pin":"unused"},"counts":{"actor":0,"critic":0,"target":0,"temperature":0},"fingerprints":{"actor":"ba20c000fb4b68fb1941ebd613b67e70b64e46d55069a6a77db8381d0c9b2cda"},"read_only":true}},"prior_cumulative":173,"published_transitions":0,"qualification_sha256":"52c6b0ba2153bbb8f6e83ef1c1ced6ad11a8d5e1570ca8e2e0886de51500c791","retry_allowed":false,"started_at":"2026-10-07T12:11:52.453775+08:00","status":"error","unused_closed":26}
+------------------------------ Captured log call ------------------------------
+WARNING  matplotlib.font_manager:font_manager.py:1180 Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\ok everything\\.matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+_____ test_fault_after_network_calls_preserves_actual_attempt_cost[audit] _____
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:89: in test_fault_after_network_calls_preserves_actual_attempt_cost
+    assert ledger['status']=='error' and ledger['network_policy_calls']==7
+E   AssertionError: assert ('error' == 'error'
+E     
+E       error and 0 == 7)
+---------------------------- Captured stdout call -----------------------------
+Loaded frozen provider F0
+{"cumulative_limit":200,"ended_at":"2026-10-07T12:11:52.497749+08:00","error":"RuntimeError('injected audit boundary fault')","first_use_test_cases":[{"id":"holdout_01","x_um":72.199490668416,"y_um":110.16091384637778},{"id":"holdout_02","x_um":-81.00634530576173,"y_um":113.36589217486193},{"id":"holdout_03","x_um":-120.25298159936679,"y_um":-40.4509150025434},{"id":"holdout_04","x_um":120.13977198565823,"y_um":-43.40297118393552}],"formal_updates":0,"inputs_unchanged":true,"max_new_episodes":27,"network_policy_calls":0,"policy_calls":7,"policy_loads":{"F0":{"checkpoint":{"label":"zero","pin":"unused"},"counts":{"actor":0,"critic":0,"target":0,"temperature":0},"fingerprints":{"actor":"ba20c000fb4b68fb1941ebd613b67e70b64e46d55069a6a77db8381d0c9b2cda"},"read_only":true}},"prior_cumulative":173,"published_transitions":0,"qualification_sha256":"52c6b0ba2153bbb8f6e83ef1c1ced6ad11a8d5e1570ca8e2e0886de51500c791","retry_allowed":false,"started_at":"2026-10-07T12:11:52.489141+08:00","status":"error","unused_closed":26}
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_fault_after_network_calls_preserves_actual_attempt_cost[rollout]
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_fault_after_network_calls_preserves_actual_attempt_cost[audit]
+2 failed, 14 deselected in 6.13s

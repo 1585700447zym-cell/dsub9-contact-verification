@@ -1,0 +1,615 @@
+{
+  "version": "pc11_small_boundary_registration_draft_v1",
+  "status": "DRAFT_NOT_ADMITTED",
+  "authorization_scope": "registration draft only",
+  "training_admitted": false,
+  "execution_authorized": false,
+  "automatic_tracking": "PAUSED",
+  "actual": {
+    "new_dynamics": 0,
+    "new_physical_substeps": 0,
+    "new_network_predictions": 0,
+    "new_optimizer_batches": 0,
+    "new_published_transitions": 0,
+    "cumulative_dynamic": 208
+  },
+  "question": "Can matched small-boundary F learning retain offset correction while reducing aligned disturbance and improve over B2 and its own zero-update policy?",
+  "common_source": "deliverables/paper_comparison/v4_learning_requalification_20261006/configuration.json",
+  "common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+  "common_sha256": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+  "groups": {
+    "B2": "read-only PC07 zero residual",
+    "F50": "read-only matched PC06 2000 batches",
+    "S50": "read-only matched PC06 2000 batches",
+    "F12p5": {
+      "new_training": true,
+      "permission": "INSERT/SEARCH with all original base guards",
+      "action_scale_SI": [
+        1.25e-05,
+        1.25e-05,
+        0.000125,
+        0.000125
+      ],
+      "normalized_action_bounds": [
+        -1.0,
+        1.0
+      ],
+      "replay_action": "unscaled four-dimensional normalized request, zero when inactive",
+      "physical_request": "scale12.5 multiplied by normalized action before shared compositing/limits",
+      "observation_width": 137,
+      "learning": {
+        "learning_rate": 0.0003,
+        "actor_learning_rate": 0.0003,
+        "batch_size": 256,
+        "replay_capacity": 116000,
+        "network": [
+          256,
+          256
+        ],
+        "seed": 2026092716,
+        "torch_threads": 1,
+        "device": "cpu",
+        "entropy_initial": 0.01,
+        "target_entropy": -4.0,
+        "tau": 0.005,
+        "max_gradient_batches": 2000,
+        "critic_boundary_rows": 16,
+        "exact_terminal_tail": true
+      },
+      "warmup": {
+        "episodes": 4,
+        "hold_cycles": 50,
+        "min_active_rows": 256,
+        "min_active_cases": 2
+      },
+      "online": {
+        "episodes": 4,
+        "batches_per_episode": 500
+      },
+      "zero_origin": {
+        "actor": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+        "critic": "bafa2de8d1bb258ffd29da087d2a74377093a44f0570b26a0c5ee262f242c6e5",
+        "target": "bafa2de8d1bb258ffd29da087d2a74377093a44f0570b26a0c5ee262f242c6e5",
+        "alpha": "1cc1b9c3ff04c5a91f604011a647e885e9652a30a69cb23fe32c2d5a63680383"
+      },
+      "initialization": "fresh same-seed zero-update network; replay/optimizers reset, no old replay or trained weights"
+    }
+  },
+  "cases": [
+    {
+      "id": "y_neg_150",
+      "x_um": 0,
+      "y_um": -150
+    },
+    {
+      "id": "y_pos_150",
+      "x_um": 0,
+      "y_um": 150
+    },
+    {
+      "id": "x_pos_150",
+      "x_um": 150,
+      "y_um": 0
+    },
+    {
+      "id": "x_neg_150",
+      "x_um": -150,
+      "y_um": 0
+    },
+    {
+      "id": "aligned",
+      "x_um": 0,
+      "y_um": 0
+    }
+  ],
+  "inherited_evaluation": [
+    {
+      "group": "B2",
+      "id": "dev_B2_y_neg_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_y_neg_150.json.gz",
+      "sha256": "62070fe63304b03bf8ce24b35f9f60c3fdf7d6e30af654567067959227ea4c67",
+      "case_id": "y_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "B2",
+      "id": "dev_B2_y_pos_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_y_pos_150.json.gz",
+      "sha256": "78778ded7ac0cfaedfa1feb97d47b2633e390cc20198f991be5c71efbf83afec",
+      "case_id": "y_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "B2",
+      "id": "dev_B2_x_pos_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_x_pos_150.json.gz",
+      "sha256": "841f612ab3afe44826c30a822fe3a2181e3e50b24f2741f4faa3f3ac4bb463cf",
+      "case_id": "x_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "B2",
+      "id": "dev_B2_x_neg_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_x_neg_150.json.gz",
+      "sha256": "18390dadd4e1c4dea49ce4f3b3b76b8e43422277c40f6f78ea763c4f4e5d1a26",
+      "case_id": "x_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "B2",
+      "id": "dev_B2_aligned",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_aligned.json.gz",
+      "sha256": "38b7cd2e7027cede2a084773c60ce3d984471b73249f86d02da874194e5a23f8",
+      "case_id": "aligned",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F0",
+      "id": "dev_F0_y_neg_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_y_neg_150.json.gz",
+      "sha256": "b1444d582abd86dc3737cfc538f163ad4e875bc35a6cfd9a2c9c42bf2e8afa42",
+      "case_id": "y_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F0",
+      "id": "dev_F0_y_pos_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_y_pos_150.json.gz",
+      "sha256": "8978d23b8fee8a228bd9f865925b0b52165a1a71a410ac4b10e837f3d3a10a22",
+      "case_id": "y_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F0",
+      "id": "dev_F0_x_pos_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_x_pos_150.json.gz",
+      "sha256": "1db3a90c8ad9ce88c669e1fb3ec4d98c6502ea1c0a4f6c4e94c261af77febf93",
+      "case_id": "x_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F0",
+      "id": "dev_F0_x_neg_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_x_neg_150.json.gz",
+      "sha256": "2be6b3fe3de90871316d750592479935c5842f91804fd691361c9efb7c0ad455",
+      "case_id": "x_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F0",
+      "id": "dev_F0_aligned",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_aligned.json.gz",
+      "sha256": "cfaea97f644a8e52fd14f26de1eb4918e86c46546cb8c5f69d63f2e4b79ea82d",
+      "case_id": "aligned",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S0",
+      "id": "dev_S0_y_neg_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_y_neg_150.json.gz",
+      "sha256": "b5f10fd5cf0f962bba241f7a406cc456439b4c3298bb3d6c944ba7b5b86513f9",
+      "case_id": "y_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S0",
+      "id": "dev_S0_y_pos_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_y_pos_150.json.gz",
+      "sha256": "661b2cb24f84fca08ff66caae5e7ffdf0cd8c54709c69fc2422d4b3cfe1e2499",
+      "case_id": "y_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S0",
+      "id": "dev_S0_x_pos_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_x_pos_150.json.gz",
+      "sha256": "098cd21464686f45f5891b67f613b18443ee5837fb5fddd864ad4e20899f020a",
+      "case_id": "x_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S0",
+      "id": "dev_S0_x_neg_150",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_x_neg_150.json.gz",
+      "sha256": "16d8a02d7cc643550036dc1d582795936ff6fdd4ccba68078b0928bb3b300b0e",
+      "case_id": "x_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S0",
+      "id": "dev_S0_aligned",
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_aligned.json.gz",
+      "sha256": "3c454cd71cfaf8b7fbc961ae177c5d5e0c1253556289c39d8cfed588a8de2497",
+      "case_id": "aligned",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F50_2000",
+      "id": "final_F50_y_neg_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_y_neg_150.json.gz",
+      "sha256": "b06edc4b29df45373d731d48e2bb55c1fb105a68811bd2f25c4ce6aa3801c3f2",
+      "case_id": "y_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S50_2000",
+      "id": "final_S50_y_neg_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_neg_150.json.gz",
+      "sha256": "e043f85a4c37869e996aaba0777783027130dec03b63b0b3b4b4a4ce0dcce3d6",
+      "case_id": "y_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F50_2000",
+      "id": "final_F50_y_pos_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_y_pos_150.json.gz",
+      "sha256": "6ba2d71616dcbe8b92ea48e145c49b22725fe3625a08232976dde38a97053f13",
+      "case_id": "y_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S50_2000",
+      "id": "final_S50_y_pos_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_pos_150.json.gz",
+      "sha256": "7b3aa929e3dbcf72401f7c7bb87e36b59c1fe4df216401f535341801c4302614",
+      "case_id": "y_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F50_2000",
+      "id": "final_F50_x_pos_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_x_pos_150.json.gz",
+      "sha256": "f819d500577bef17937e21226e1e94899bff24e4a2f580ba503cc555e176189d",
+      "case_id": "x_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S50_2000",
+      "id": "final_S50_x_pos_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_x_pos_150.json.gz",
+      "sha256": "ebf3a03c973c526c4497d8154b9d3860b1975540b79dc843b0479194026d7318",
+      "case_id": "x_pos_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F50_2000",
+      "id": "final_F50_x_neg_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_x_neg_150.json.gz",
+      "sha256": "45252569064e879ba039d453d805a03ac8e74bae73897db3eca644b013be78a5",
+      "case_id": "x_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S50_2000",
+      "id": "final_S50_x_neg_150",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_x_neg_150.json.gz",
+      "sha256": "c3dba141b25ab5f6dfb005a4930ba48a1512dc28c00d2ea7a5e08b58f198b226",
+      "case_id": "x_neg_150",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "F50_2000",
+      "id": "final_F50_aligned",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_aligned.json.gz",
+      "sha256": "8be0f0eb8f51775200479ebc83ef058841e390f92c47a9d71c830020d985f171",
+      "case_id": "aligned",
+      "role": "historical_development_evaluation_only"
+    },
+    {
+      "group": "S50_2000",
+      "id": "final_S50_aligned",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_aligned.json.gz",
+      "sha256": "f4ad917085b21225c294f9ea47f878a772a4a77c0c9109a32deac9f84bf8d36b",
+      "case_id": "aligned",
+      "role": "historical_development_evaluation_only"
+    }
+  ],
+  "source_seals": {
+    "v4_learning_requalification_20261006": "fd98d247484e919c3c4e099d03575b1d4d40e977a5da939efc088759c84b9ed5",
+    "frozen_comparison_20261007": "8c64d623247c31e217f71e90cbb473c3d21a05c49360f10872dab4eddd36596c",
+    "residual_effect_diagnosis_20261007": "1500e169da44e364c33dc01e84b30538b3de2abedb37c9486055d6fe4687a76f",
+    "contact_gate_probe_20261007": "c123f8f1f445c856e04222156f519e7b39e5cb8097e00bd646720f95858d3038",
+    "search_path_comparison_20261007": "e40e58a4523d493416068c1a5326377ebd58a1e5390aff289c0b83f478769736"
+  },
+  "inheritance_gate": {
+    "metadata_verified": true,
+    "numeric_origin_verified_now": false,
+    "adapter_implemented": false,
+    "behavioral_equivalence_verified": false,
+    "admission_verified": false,
+    "requirement": "original 1057 shared inputs and common key remain unchanged; new outer profile bound separately; if incompatible stop this proposal, no silent old-row retag or full-retrain fallback"
+  },
+  "proposals": {
+    "numeric_qualification": {
+      "max_synthetic_update_batches": 4,
+      "max_test_state_forward_evaluations": 32
+    },
+    "physical_attempts": 21,
+    "preflight_attempts": 2,
+    "learning_and_evaluation_attempts": 19,
+    "formal_batches": 2000,
+    "prior_dynamic": 208,
+    "cumulative_dynamic_limit": 229,
+    "max_control_cycles_per_attempt": 14500,
+    "max_total_control_cycles": 304500,
+    "max_total_physical_substeps": 3045000,
+    "max_control_policy_call_attempts": 217500,
+    "max_warmup_draws": 1160,
+    "per_episode_wall_limit_s": 1200,
+    "checkpoint_read_wall_limit_s": 300,
+    "update_block_wall_limit_s": 1200,
+    "whole_execution_wall_limit_s": 21600,
+    "attempts": [
+      {
+        "id": "preflight_zero_y_neg",
+        "stage": "preflight",
+        "case": {
+          "id": "y_neg_150",
+          "x_um": 0,
+          "y_um": -150
+        },
+        "policy": "zero",
+        "updates": 0
+      },
+      {
+        "id": "preflight_bounded_axes_y_neg",
+        "stage": "preflight",
+        "case": {
+          "id": "y_neg_150",
+          "x_um": 0,
+          "y_um": -150
+        },
+        "policy": "registered_four_axis_script",
+        "updates": 0
+      },
+      {
+        "id": "initial_F12p5_y_neg_150",
+        "stage": "initial",
+        "case": {
+          "id": "y_neg_150",
+          "x_um": 0,
+          "y_um": -150
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "initial_F12p5_y_pos_150",
+        "stage": "initial",
+        "case": {
+          "id": "y_pos_150",
+          "x_um": 0,
+          "y_um": 150
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "initial_F12p5_x_pos_150",
+        "stage": "initial",
+        "case": {
+          "id": "x_pos_150",
+          "x_um": 150,
+          "y_um": 0
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "initial_F12p5_x_neg_150",
+        "stage": "initial",
+        "case": {
+          "id": "x_neg_150",
+          "x_um": -150,
+          "y_um": 0
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "initial_F12p5_aligned",
+        "stage": "initial",
+        "case": {
+          "id": "aligned",
+          "x_um": 0,
+          "y_um": 0
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "warmup_F12p5_y_neg_150",
+        "stage": "warmup",
+        "case": {
+          "id": "y_neg_150",
+          "x_um": 0,
+          "y_um": -150
+        },
+        "policy": "random_hold_50_cycles",
+        "updates": 0
+      },
+      {
+        "id": "warmup_F12p5_y_pos_150",
+        "stage": "warmup",
+        "case": {
+          "id": "y_pos_150",
+          "x_um": 0,
+          "y_um": 150
+        },
+        "policy": "random_hold_50_cycles",
+        "updates": 0
+      },
+      {
+        "id": "warmup_F12p5_x_pos_150",
+        "stage": "warmup",
+        "case": {
+          "id": "x_pos_150",
+          "x_um": 150,
+          "y_um": 0
+        },
+        "policy": "random_hold_50_cycles",
+        "updates": 0
+      },
+      {
+        "id": "warmup_F12p5_x_neg_150",
+        "stage": "warmup",
+        "case": {
+          "id": "x_neg_150",
+          "x_um": -150,
+          "y_um": 0
+        },
+        "policy": "random_hold_50_cycles",
+        "updates": 0
+      },
+      {
+        "id": "online_F12p5_y_neg_150",
+        "stage": "online",
+        "case": {
+          "id": "y_neg_150",
+          "x_um": 0,
+          "y_um": -150
+        },
+        "policy": "stochastic",
+        "updates": 500
+      },
+      {
+        "id": "online_F12p5_y_pos_150",
+        "stage": "online",
+        "case": {
+          "id": "y_pos_150",
+          "x_um": 0,
+          "y_um": 150
+        },
+        "policy": "stochastic",
+        "updates": 500
+      },
+      {
+        "id": "online_F12p5_x_pos_150",
+        "stage": "online",
+        "case": {
+          "id": "x_pos_150",
+          "x_um": 150,
+          "y_um": 0
+        },
+        "policy": "stochastic",
+        "updates": 500
+      },
+      {
+        "id": "online_F12p5_x_neg_150",
+        "stage": "online",
+        "case": {
+          "id": "x_neg_150",
+          "x_um": -150,
+          "y_um": 0
+        },
+        "policy": "stochastic",
+        "updates": 500
+      },
+      {
+        "id": "final_F12p5_y_neg_150",
+        "stage": "final",
+        "case": {
+          "id": "y_neg_150",
+          "x_um": 0,
+          "y_um": -150
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "final_F12p5_y_pos_150",
+        "stage": "final",
+        "case": {
+          "id": "y_pos_150",
+          "x_um": 0,
+          "y_um": 150
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "final_F12p5_x_pos_150",
+        "stage": "final",
+        "case": {
+          "id": "x_pos_150",
+          "x_um": 150,
+          "y_um": 0
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "final_F12p5_x_neg_150",
+        "stage": "final",
+        "case": {
+          "id": "x_neg_150",
+          "x_um": -150,
+          "y_um": 0
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "final_F12p5_aligned",
+        "stage": "final",
+        "case": {
+          "id": "aligned",
+          "x_um": 0,
+          "y_um": 0
+        },
+        "policy": "deterministic",
+        "updates": 0
+      },
+      {
+        "id": "restore_F12p5_y_neg_150",
+        "stage": "restore",
+        "case": {
+          "id": "y_neg_150",
+          "x_um": 0,
+          "y_um": -150
+        },
+        "policy": "deterministic",
+        "updates": 0
+      }
+    ]
+  },
+  "criteria": {
+    "failure_penalty_s": 26.0,
+    "minimum_time_improvement": 0.1,
+    "maximum_peak_force_relative_increase": 0.05,
+    "matrix_complete": true,
+    "all_valid_and_stopped": true,
+    "success_count_not_less": true,
+    "guard_count_not_more": true,
+    "primary_pairs": [
+      "F12p5_final vs B2",
+      "F12p5_final vs F12p5_initial"
+    ],
+    "secondary_pairs": [
+      "F12p5_final vs F50",
+      "F12p5_final vs S50"
+    ],
+    "aligned_precision_required": true,
+    "strict_precision_count_not_less_than_B2": true,
+    "S50_vs_F50_prior_signal": false,
+    "S50_prior_time_improvement_fraction": 0.0039,
+    "no_S50_automatic_advancement": true
+  },
+  "stop": {
+    "run_or_source_or_invalid_or_stop_failure": "stop whole proposal and close unused budget",
+    "physical_guard": "stop only new F12p5 branch after stop/archive; no further formal optimization, matrix stays missing",
+    "warmup_gate_failure": "stop; do not collect extra warmup",
+    "ordinary_task_failure": "keep and continue within fixed quota",
+    "time_budget": "reserve worst-case atomic task limit before each task; insufficient remainder means no start and unused budget closed",
+    "retries": false,
+    "checkpoint_selection": "final 2000-batch checkpoint only; no best-of-middle selection"
+  },
+  "limitations": [
+    "single previously used training seed and five development points",
+    "XY/RP bounds shrink together, not XY-only ablation",
+    "S50 vs F12p5 changes permission and bounds together, not a single-variable stage-permission test",
+    "S50 vs F50 prior continue gate already failed; adding a baseline cannot undo it",
+    "four previously consumed first-use points are excluded from this draft",
+    "full B.2/C and paper multiseed/independent tests remain separate"
+  ]
+}

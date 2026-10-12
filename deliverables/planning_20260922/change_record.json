@@ -1,0 +1,14 @@
+{
+  "scope": "planning and navigation only; no code, dynamics or training change",
+  "current_files_sha256": {
+    "报告总索引.md": "894314f7a64ee574fe382eeb2dfcf249eb76e7cb036ef196a7c956c5ffcfe476",
+    "deliverables/reproduction_guide/说明与导出清单.json": "5d89c815954ca06c7857bbfd4a3d44f5063afcd1fc1af928c3cd7f925ba4de65",
+    "deliverables/b2_exit_gate_v2/delivery_manifest.json": "e68948ad1deedb06644691cb93fa3f93183820491a5613c1ac3cfff6b04de6df",
+    "研究推进计划_能力交付版_2026-09-22.md": "e7ebc757300d4fcd82eaf0a420f4fc0cebb683a286298eedcceeb5560da6f3a6"
+  },
+  "backup_files_sha256": {
+    "deliverables/planning_20260922/before/报告总索引.md": "d22d75692331c6558e34082a157f7d9df62abfca5eb37fceacfce02f3c019fe5",
+    "deliverables/planning_20260922/before/deliverables/b2_exit_gate_v2/delivery_manifest.json": "dd97245fb0c7dbd54785fad4b250434a92a3d9c746d7247988f9dff6b0aeb002",
+    "deliverables/planning_20260922/before/deliverables/reproduction_guide/说明与导出清单.json": "37b9a2507e796185793c6b5eb0249f3f603b8d8fd894b97a695cf7ed2a6dd536"
+  }
+}

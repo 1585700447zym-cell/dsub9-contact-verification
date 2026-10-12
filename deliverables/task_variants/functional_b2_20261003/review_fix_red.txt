@@ -1,0 +1,9 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_____ test_error_before_first_checkpoint_preserves_live_controller_events _____
+tests\task_variants\test_functional_preflight.py:51: in test_error_before_first_checkpoint_preserves_live_controller_events
+    assert saved['controller_events']==events
+E   KeyError: 'controller_events'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_functional_preflight.py::test_error_before_first_checkpoint_preserves_live_controller_events
+1 failed in 1.76s

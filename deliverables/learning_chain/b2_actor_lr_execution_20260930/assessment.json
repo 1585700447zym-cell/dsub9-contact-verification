@@ -1,0 +1,27 @@
+{
+  "status": "execution_protocol_preparation_accepted",
+  "date": "2026-09-30",
+  "tests": 216,
+  "monitored_actual_calls": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "current_sources": 296,
+  "protected_original_sources": 286,
+  "protected_parent_artifacts": 45,
+  "old_sealed_files": 4149,
+  "inherited_original_source_bytes": 929,
+  "execution_adapter_implemented": true,
+  "protocol_checks_passed": true,
+  "real_validation_passed": false,
+  "a_learning_reproduced": false,
+  "user_execution_authorized": false,
+  "training_launched": false,
+  "policy_effect_validated": false,
+  "old_unused_dynamic": 19,
+  "old_unused_batches": 2000,
+  "old_unused_consumed": 0,
+  "automatic_tracking": "PAUSED",
+  "b2_complete": false
+}

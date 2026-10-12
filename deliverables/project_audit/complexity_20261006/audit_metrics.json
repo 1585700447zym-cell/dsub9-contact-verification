@@ -1,0 +1,252 @@
+{
+  "observation_width": 137,
+  "original_width": 120,
+  "added_width": 17,
+  "action_width": 4,
+  "added_schema": [
+    {
+      "name": "relative_drive_reference_m",
+      "start": 120,
+      "width": 3,
+      "scale": [
+        0.004,
+        0.004,
+        0.004
+      ],
+      "unit": "m",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "search_reference_xy_m",
+      "start": 123,
+      "width": 2,
+      "scale": [
+        0.00012,
+        0.00012
+      ],
+      "unit": "m",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "search_reference_valid",
+      "start": 125,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "episode_peak_z_m",
+      "start": 126,
+      "width": 1,
+      "scale": [
+        0.004
+      ],
+      "unit": "m",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "episode_peak_valid",
+      "start": 127,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "net_search_remaining_m",
+      "start": 128,
+      "width": 1,
+      "scale": [
+        0.004
+      ],
+      "unit": "m",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "net_search_valid",
+      "start": 129,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "rotation_risk_elapsed_s",
+      "start": 130,
+      "width": 1,
+      "scale": [
+        0.05
+      ],
+      "unit": "s",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "rotation_risk_valid",
+      "start": 131,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "search_load_elapsed_s",
+      "start": 132,
+      "width": 1,
+      "scale": [
+        0.02
+      ],
+      "unit": "s",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "search_load_valid",
+      "start": 133,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "admittance_xy_rebase_count",
+      "start": 134,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "reference_release_pending",
+      "start": 135,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    },
+    {
+      "name": "previous_reference_filter_fraction",
+      "start": 136,
+      "width": 1,
+      "scale": [
+        1.0
+      ],
+      "unit": "1",
+      "source": "relative_sensed_drive_or_controller"
+    }
+  ],
+  "archive_checks": [
+    {
+      "archive": "deliverables/paper_comparison/v4_continuation_20261006/run/F50_boundary_y_neg_150.json.gz",
+      "sha256": "c07bf6c39259fe42cb2ad1faaf1898749d61bcbcf6756d4f9ac0da8476191f30",
+      "rows": 11245,
+      "active_rows": 9559,
+      "drive_reference_reconstruction_max_error": 5.7392753660678864e-08,
+      "search_reference_reconstruction_max_error": 9.538295364652782e-08,
+      "search_valid_equals_old_origin_valid": true,
+      "active_episode_peak_vs_old_max_error": 0.0
+    },
+    {
+      "archive": "deliverables/paper_comparison/v4_learning_pilot_20261006/run/warmup_F50_y_neg_150.json.gz",
+      "sha256": "b8687e1de3569427ee7939ed71c266ec012b487694bdc921dd699c78218e213a",
+      "rows": 5885,
+      "active_rows": 4495,
+      "drive_reference_reconstruction_max_error": 5.130641511641443e-08,
+      "search_reference_reconstruction_max_error": 6.242953531909734e-08,
+      "search_valid_equals_old_origin_valid": true,
+      "active_episode_peak_vs_old_max_error": 0.0
+    },
+    {
+      "archive": "deliverables/paper_comparison/v4_learning_pilot_20261006/run/warmup_S50_y_neg_150.json.gz",
+      "sha256": "265392f565464dff7ed60c330d721caed0056fde67c406547ff97df60c3e88a4",
+      "rows": 5378,
+      "active_rows": 3615,
+      "drive_reference_reconstruction_max_error": 7.450580596923828e-09,
+      "search_reference_reconstruction_max_error": 6.44855996378979e-08,
+      "search_valid_equals_old_origin_valid": true,
+      "active_episode_peak_vs_old_max_error": 0.0
+    }
+  ],
+  "validated_rows": 22508,
+  "six_added_reference_coordinates_or_validity_reconstructible_in_checked_archives": true,
+  "reconstruction_is_not_universal_necessity_or_ablation_proof": true,
+  "current_v4_learning_family": [
+    {
+      "path": "tools/learning/v4_action.py",
+      "lines": 50
+    },
+    {
+      "path": "tools/learning/v4_observation.py",
+      "lines": 39
+    },
+    {
+      "path": "tools/learning/v4_session.py",
+      "lines": 71
+    },
+    {
+      "path": "tools/learning/v4_continuation.py",
+      "lines": 85
+    },
+    {
+      "path": "tools/learning/v4_pilot_contract.py",
+      "lines": 85
+    },
+    {
+      "path": "tools/learning/v4_replay.py",
+      "lines": 59
+    },
+    {
+      "path": "tools/learning/v4_sac.py",
+      "lines": 213
+    },
+    {
+      "path": "tools/learning/v4_pilot_chain.py",
+      "lines": 178
+    },
+    {
+      "path": "tools/learning/v4_checkpoint.py",
+      "lines": 134
+    }
+  ],
+  "family_lines": 914,
+  "runner_lines": 342,
+  "old_sac_lines": 209,
+  "v4_sac_lines": 213,
+  "same_literal_lines": 200,
+  "only_input_layer_change_actor_parameters": 4352,
+  "only_input_layer_change_actor_twin_critic_and_targets_parameters": 21760,
+  "latest_formal_updates": 0,
+  "latest_policy_calls": 0,
+  "new_physics": 0,
+  "new_optimizer_batches": 0,
+  "source_sha256": {
+    "tools/learning/v4_action.py": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+    "tools/learning/v4_observation.py": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+    "tools/learning/v4_session.py": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+    "tools/learning/v4_continuation.py": "e7cf27c22b81ceb4cb7fe6a3d5abd6117a1e13d65253069677beba5f3730475d",
+    "tools/learning/v4_pilot_contract.py": "bb9f51a3e1579fefd2659d9c580f334f78804a68ccf7ed2da565d553996ebc2e",
+    "tools/learning/v4_replay.py": "df93983969cdf05e2f315da8145a61b3c2c85dcc6b12437e4a26b213a70f209b",
+    "tools/learning/v4_sac.py": "e1319d45e6694a38879d31ebee952eba2fae916d2c3d8124573db8d9a356970e",
+    "tools/learning/v4_pilot_chain.py": "393aa86d7fa661ae87e15d8758920212ccfddcdecd6f298d3505e2872833e2de",
+    "tools/learning/v4_checkpoint.py": "1e2550d3e80c90d2030ad9d07bf6ee8ce0fd6ea7407754a15a8487f01bbf7dd8",
+    "tools/validation/run_v4_learning_pilot.py": "f5ef19eaa4d004bbdd803acb8835e96fa972c9cab7ce82732ed464bab33ffcad",
+    "tools/learning/observation.py": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+    "tools/learning/session.py": "9318d696b38a252368b98e1a6ae52b5b6f5043a6368c701e79376f41077b2be3",
+    "tools/control/reference_search.py": "5e1a6dfa561831403bd959b6adab341a1f448bf1f29e9dbfddf89988b4fe4763",
+    "tools/learning/boundary_targets.py": "a990a1a20f1efed70e267a35cfb16b331f2126b02a3603fcf2fcbf3fc2d8721a",
+    "tools/learning/sac_update.py": "4e5f7c452b478d8671ef5483240514738d5ee6d4fad1b7ff0b64d3ad73a3d4d3"
+  }
+}

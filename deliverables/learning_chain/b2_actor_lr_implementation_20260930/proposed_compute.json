@@ -1,0 +1,29 @@
+{
+  "approved": false,
+  "runnable": false,
+  "automatic_tracking": false,
+  "formal_batches": {
+    "A": 500,
+    "B": 500,
+    "total": 1000
+  },
+  "physical_starts": {
+    "A": 4,
+    "B": 4,
+    "total": 8
+  },
+  "synthetic_transaction_attempts": 16,
+  "extra_test_state_forwards": 128,
+  "diagnostic_actor_state_forwards": 768,
+  "diagnostic_critic_state_forwards": 0,
+  "online_training_collection": 0,
+  "new_warmup_physics": 0,
+  "independent_test": 0,
+  "old_unused_dynamic": 19,
+  "old_unused_batches": 2000,
+  "old_unused_budget_consumed": 0,
+  "fail_on_a_reproduction_mismatch": true,
+  "stop_on_any_evaluation_guard": true,
+  "automatic_retry": false,
+  "note": "Each optimizer transaction includes its required network computations; physical evaluation actor calls belong to its dynamic budget. No proposed budget is authorized by the repair request."
+}

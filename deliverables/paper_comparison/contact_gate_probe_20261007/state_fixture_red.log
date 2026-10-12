@@ -1,0 +1,32 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+..................................F..................................... [ 83%]
+..............                                                           [100%]
+================================== FAILURES ===================================
+____________ test_hidden_rng_change_invalidates_frozen_evaluation _____________
+
+    def test_hidden_rng_change_invalidates_frozen_evaluation():
+        a={'counts':{'critic':2000},'actor':np.array([1.,2.]),'rng':np.array([3,4])};b=deepcopy(a)
+>       assert r.verify_frozen_state(a,b) is True
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+deliverables\paper_comparison\contact_gate_probe_20261007\run_probe.py:52: in verify_frozen_state
+    if not _same(before,after):raise ValueError('Full frozen model/optimizer/RNG state changed')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = {'actor': array([1., 2.]), 'counts': {'critic': 2000}, 'rng': array([3, 4])}
+b = {'actor': array([1., 2.]), 'counts': {'critic': 2000}, 'rng': array([3, 4])}
+
+    def _same(a, b):
+        if isinstance(a, torch.Tensor):
+            return isinstance(b, torch.Tensor) and a.dtype == b.dtype and a.shape == b.shape and torch.equal(a, b)
+        if isinstance(a, dict):
+>           return isinstance(b, dict) and a.keys() == b.keys() and all(_same(a[k], b[k]) for k in a)
+E           ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+tools\learning\sac_checkpoint.py:30: ValueError
+------------------------------ Captured log call ------------------------------
+WARNING  matplotlib.font_manager:font_manager.py:1180 Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\ok everything\\.matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_hidden_rng_change_invalidates_frozen_evaluation
+1 failed, 85 passed in 13.39s

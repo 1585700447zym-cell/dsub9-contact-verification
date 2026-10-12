@@ -1,0 +1,7 @@
+{
+  "observations": 4300,
+  "commands_and_state_exact": true,
+  "final_phase": "WAIT_RECOVERY",
+  "physics_steps": 0,
+  "scope": "Pure legacy controller equivalence on a fixed synthetic observation sequence; not a dynamic episode"
+}

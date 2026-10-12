@@ -1,0 +1,48 @@
+{
+  "status": "VERIFIED_CLOSED_EXECUTION_AND_DIAGNOSIS",
+  "user_date": "2026-10-08",
+  "assertions": 182,
+  "bound_files_verified": 2167,
+  "old_scope_members_verified": 82,
+  "historical_recheck": {
+    "checked_during_stage": "B2-SCOPE-03",
+    "user_date": "2026-10-08",
+    "command": "D:\\KEYANRUJIAN\\python.exe -I -X utf8 -B D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_scope_audit_20261008\\verify.py",
+    "exit_code": 0,
+    "result": {
+      "status": "VERIFIED_OFFLINE_SCOPE_PLAN",
+      "assertions": 72,
+      "sealed_files": 19,
+      "manifest_sha256": "f0ece40fc2fc3ab83b99506bb13a59158dc0282fe674dbaf03b3f5b7e47e0576",
+      "old_members": 950,
+      "shared_inputs": 1057,
+      "raw_pose_records": 63,
+      "new_physics": 0,
+      "new_learning": 0,
+      "cumulative_dynamic": 208
+    },
+    "counter_scope": "Verifier output describes the immutable B2-SCOPE-01 archive, not current execution costs. B2-SCOPE-03 cumulative dynamic is 209."
+  },
+  "actual": {
+    "engine_processes_with_runtime_proof": 10,
+    "case_environment_instances": 10,
+    "resets": 10,
+    "static_initializations": 9,
+    "dynamic_attempts": 1,
+    "control_cycles": 3045,
+    "physical_substeps": 30450,
+    "learner_constructions": 0,
+    "tensor_reads": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "replay_publications": 0
+  },
+  "cumulative_dynamic": 209,
+  "unused_dynamic_closed": 15,
+  "diagnostic_only": true,
+  "dynamic_scope_accepted": false,
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "training_admitted": false,
+  "automatic_tracking": "PAUSED"
+}

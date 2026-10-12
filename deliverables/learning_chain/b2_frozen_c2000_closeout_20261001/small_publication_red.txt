@@ -1,0 +1,15 @@
+test_small_nonzero_action_publishes_through_actual_collector (test_protocol.ReviewRegressions.test_small_nonzero_action_publishes_through_actual_collector) ... FAIL
+
+======================================================================
+FAIL: test_small_nonzero_action_publishes_through_actual_collector (test_protocol.ReviewRegressions.test_small_nonzero_action_publishes_through_actual_collector)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 95, in test_small_nonzero_action_publishes_through_actual_collector
+    self.assertFalse(c._blocked);self.assertEqual(c._record['committed'],0);self.assertEqual(len(c.replay),0)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 12.037s
+
+FAILED (failures=1)

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="10" time="67.569" timestamp="2026-09-28T22:10:18.136181+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[row_penetration]" time="3.912"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'row_penetration'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[row_torque]" time="3.341"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'row_torque'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[row_motion]" time="3.262"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'row_motion'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[moved_force_event]" time="5.614" /><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[row_event_time]" time="3.214"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'row_event_time'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[matched_wrong_dt]" time="3.226"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'matched_wrong_dt'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[trace_gap]" time="3.126"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'trace_gap'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[audit_clock]" time="3.247"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.586009999997344, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'audit_clock'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.586009999997344, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_rules" name="test_review_event_and_frozen_clock_counterexamples[shifted_clock]" time="3.299"><failure message="AssertionError: assert not True&#10; +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})&#10; +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts&#10; +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY&#10; +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()">change = 'shifted_clock'
+
+    @pytest.mark.parametrize('change',('row_penetration','row_torque','row_motion','moved_force_event',
+        'row_event_time','matched_wrong_dt','trace_gap','audit_clock','shifted_clock'))
+    def test_review_event_and_frozen_clock_counterexamples(change):
+        from tools.learning.boundary_targets import exact_tail
+        raw=fixture();rows=raw['transitions']
+        if change.startswith('row_') and change!='row_event_time':
+            reason={'row_penetration':'PENETRATION_LIMIT','row_torque':'TORQUE_LIMIT','row_motion':'ROTATION_LIMIT'}[change]
+            rows[5292]['events'].append(dict(time_s=10.5842,reason=reason,phase='STOPPING'))
+        elif change=='moved_force_event':
+            # Flattened events still equal the top-level stream, but cycle is wrong.
+            rows[5293]['events']=rows[5292]['events'];rows[5292]['events']=[]
+        elif change=='row_event_time':rows[5292]['events'][0]['time_s']+=.0002
+        elif change=='matched_wrong_dt':
+            rows[-2]['dt']=.004;rows[-2]['discount']=math.exp(-.004/10.)
+        elif change=='trace_gap':rows[100]['trace_row']['time_s']+=.0002
+        elif change=='audit_clock':raw['audit_end_time_s']+=.00001
+        else:
+            # Same row spacing, but a shifted episode origin is not the frozen clock.
+            for row in rows:row['trace_row']['time_s']+=.0002
+&gt;       assert not api().FORCE_ONLY.accepts(raw)
+E       AssertionError: assert not True
+E        +  where True = accepts({'audit_end_time_s': 12.585999999997345, 'case': {'name': 'train_04', 'pitch_rad': 0.0, 'roll_rad': 0.0, 'start_origin...UMED', 'time_s': 9.830000000003768}, {'phase': 'STOPPING', 'reason': 'FORCE_LIMIT', 'time_s': 10.58420000000201}], ...})
+E        +    where accepts = &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt;.accepts
+E        +      where &lt;tools.learning.episode_rules.ForceOnlyRules object at 0x0000022D60BD4590&gt; = &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt;.FORCE_ONLY
+E        +        where &lt;module 'tools.learning.episode_rules' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\episode_rules.py'&gt; = api()
+
+tests\learning\test_force_failure_rules.py:127: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_pipeline" name="test_review_frequency_stop_finishes_run_ledger_without_runtime_fault" time="35.151"><failure message="assert (5 is None)">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-338/test_review_frequency_stop_fin0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000022D643A3BB0&gt;
+
+    def test_review_frequency_stop_finishes_run_ledger_without_runtime_fault(tmp_path,monkeypatch):
+        from tools.learning import bounded_cycle as cycle
+        from tools.learning.bounded_contact import RunLedger
+        chain=chain_at(tmp_path/'episodes');ledger=RunLedger(tmp_path/'ledger.json')
+        # Synthetic completed initial stage; no evaluation calls.
+        for i in range(4):ledger.start('initial',str(i));ledger.finish(dict(synthetic_only=True))
+        starts=[];checkpoints=[]
+        def protocol_start(identity):
+            starts.append(identity);case=chain.sampler.next_case()
+            raw=prepare_collector(chain.collector,fixture(),identity,case)
+            chain.warmup.rng.bit_generator.advance(4*len(raw['transitions']))
+            def archive_only(policy,steps):
+                chain.collector._seal();return dict(episode_finished=True)
+            chain.collector.collect=archive_only
+        def no_update(*args):raise AssertionError('No update allowed at frequency threshold')
+        def checkpoint_stub(chain,path):
+            checkpoints.append(str(path));return 'SYNTHETIC-CHECKPOINT-STUB'
+        monkeypatch.setattr(chain,'start',protocol_start)
+        monkeypatch.setattr(chain,'update',no_update)
+        monkeypatch.setattr(cycle.cp,'save_checkpoint',checkpoint_stub)
+        with pytest.raises(RuntimeError,match='two_consecutive'):
+            cycle.train(chain,ledger=ledger,output=tmp_path/'training')
+        saved=json.loads(ledger.path.read_text(encoding='utf-8'))
+&gt;       assert saved['active'] is None and saved['attempts'][-1]['status']=='finished'
+E       assert (5 is None)
+
+tests\learning\test_force_failure_pipeline.py:183: AssertionError</failure></testcase></testsuite></testsuites>

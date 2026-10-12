@@ -1,0 +1,176 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_case_units_and_registered_off_diagonal_orientation (__main__.ContractTests.test_case_units_and_registered_off_diagonal_orientation) ... FAIL
+test_claim_or_wrong_order_cannot_be_retried (__main__.ContractTests.test_claim_or_wrong_order_cannot_be_retried) ... FAIL
+test_draft_wrong_pin_and_changed_limits_rejected (__main__.ContractTests.test_draft_wrong_pin_and_changed_limits_rejected) ... FAIL
+test_exact_pose_and_quaternion_sign_equivalence (__main__.ContractTests.test_exact_pose_and_quaternion_sign_equivalence) ... FAIL
+test_guard_invalid_unstopped_missing_receipt_never_advances (__main__.ContractTests.test_guard_invalid_unstopped_missing_receipt_never_advances) ... FAIL
+test_initial_audit_retains_ordinary_no_contact_reset_rule (__main__.ContractTests.test_initial_audit_retains_ordinary_no_contact_reset_rule) ... FAIL
+test_initial_guard_latch_rejected (__main__.ContractTests.test_initial_guard_latch_rejected) ... FAIL
+test_new_order_excludes_the_four_consumed_cases (__main__.ContractTests.test_new_order_excludes_the_four_consumed_cases) ... FAIL
+test_nonfinite_incomplete_and_bool_pose_rejected (__main__.ContractTests.test_nonfinite_incomplete_and_bool_pose_rejected) ... FAIL
+test_nonzero_cost_overrun_and_second_reset_cannot_advance (__main__.ContractTests.test_nonzero_cost_overrun_and_second_reset_cannot_advance) ... FAIL
+test_old_grant_version_and_old_total_rejected (__main__.ContractTests.test_old_grant_version_and_old_total_rejected) ... FAIL
+test_registered_registry_rejects_duplicate_missing_reorder_pose_and_bool (__main__.ContractTests.test_registered_registry_rejects_duplicate_missing_reorder_pose_and_bool) ... FAIL
+test_unregistered_or_extra_case_parameters_rejected (__main__.ContractTests.test_unregistered_or_extra_case_parameters_rejected) ... FAIL
+test_valid_stopped_task_failure_advances (__main__.ContractTests.test_valid_stopped_task_failure_advances) ... FAIL
+
+======================================================================
+FAIL: test_case_units_and_registered_off_diagonal_orientation (__main__.ContractTests.test_case_units_and_registered_off_diagonal_orientation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 54, in test_case_units_and_registered_off_diagonal_orientation
+    kw=self.api('case_kwargs')(self.point('J12'))
+       ~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: case_kwargs
+
+======================================================================
+FAIL: test_claim_or_wrong_order_cannot_be_retried (__main__.ContractTests.test_claim_or_wrong_order_cannot_be_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 130, in test_claim_or_wrong_order_cannot_be_retried
+    fn=self.api('next_case')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: next_case
+
+======================================================================
+FAIL: test_draft_wrong_pin_and_changed_limits_rejected (__main__.ContractTests.test_draft_wrong_pin_and_changed_limits_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 93, in test_draft_wrong_pin_and_changed_limits_rejected
+    template=self.api('grant_template');require=self.api('require_grant')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: grant_template
+
+======================================================================
+FAIL: test_exact_pose_and_quaternion_sign_equivalence (__main__.ContractTests.test_exact_pose_and_quaternion_sign_equivalence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 66, in test_exact_pose_and_quaternion_sign_equivalence
+    fn=self.api('check_pose');row=self.row();fn(self.point(),row)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: check_pose
+
+======================================================================
+FAIL: test_guard_invalid_unstopped_missing_receipt_never_advances (__main__.ContractTests.test_guard_invalid_unstopped_missing_receipt_never_advances)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 114, in test_guard_invalid_unstopped_missing_receipt_never_advances
+    fn=self.api('next_case')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: next_case
+
+======================================================================
+FAIL: test_initial_audit_retains_ordinary_no_contact_reset_rule (__main__.ContractTests.test_initial_audit_retains_ordinary_no_contact_reset_rule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 79, in test_initial_audit_retains_ordinary_no_contact_reset_rule
+    fn=self.api('check_initial_state');common=json.loads((OUT/'configuration.json').read_text(encoding='utf-8'))['common']
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: check_initial_state
+
+======================================================================
+FAIL: test_initial_guard_latch_rejected (__main__.ContractTests.test_initial_guard_latch_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 88, in test_initial_guard_latch_rejected
+    fn=self.api('check_initial_state');common=json.loads((OUT/'configuration.json').read_text(encoding='utf-8'))['common']
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: check_initial_state
+
+======================================================================
+FAIL: test_new_order_excludes_the_four_consumed_cases (__main__.ContractTests.test_new_order_excludes_the_four_consumed_cases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 41, in test_new_order_excludes_the_four_consumed_cases
+    self.assertEqual([p['id'] for p in self.api('new_cases')()],
+                                       ~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: new_cases
+
+======================================================================
+FAIL: test_nonfinite_incomplete_and_bool_pose_rejected (__main__.ContractTests.test_nonfinite_incomplete_and_bool_pose_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 72, in test_nonfinite_incomplete_and_bool_pose_rejected
+    fn=self.api('check_pose')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: check_pose
+
+======================================================================
+FAIL: test_nonzero_cost_overrun_and_second_reset_cannot_advance (__main__.ContractTests.test_nonzero_cost_overrun_and_second_reset_cannot_advance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 124, in test_nonzero_cost_overrun_and_second_reset_cannot_advance
+    fn=self.api('next_case')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: next_case
+
+======================================================================
+FAIL: test_old_grant_version_and_old_total_rejected (__main__.ContractTests.test_old_grant_version_and_old_total_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 103, in test_old_grant_version_and_old_total_rejected
+    template=self.api('grant_template');require=self.api('require_grant')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: grant_template
+
+======================================================================
+FAIL: test_registered_registry_rejects_duplicate_missing_reorder_pose_and_bool (__main__.ContractTests.test_registered_registry_rejects_duplicate_missing_reorder_pose_and_bool)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 45, in test_registered_registry_rejects_duplicate_missing_reorder_pose_and_bool
+    validate=self.api('validate_registry')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: validate_registry
+
+======================================================================
+FAIL: test_unregistered_or_extra_case_parameters_rejected (__main__.ContractTests.test_unregistered_or_extra_case_parameters_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 60, in test_unregistered_or_extra_case_parameters_rejected
+    fn=self.api('case_kwargs')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: case_kwargs
+
+======================================================================
+FAIL: test_valid_stopped_task_failure_advances (__main__.ContractTests.test_valid_stopped_task_failure_advances)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 110, in test_valid_stopped_task_failure_advances
+    fn=self.api('next_case');row=self.healthy();row['outcome']['task_outcome']='TASK_FAILURE'
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_contract.py", line 18, in api
+    self.assertTrue(callable(getattr(c,name,None)), 'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: next_case
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.006s
+
+FAILED (failures=14)

@@ -1,0 +1,197 @@
+test_bad_rng_output_poisoned_and_not_retried (test_warmup_hold.HoldTests.test_bad_rng_output_poisoned_and_not_retried) ... FAIL
+test_context_rejects_repeated_skipped_and_invalid_cycles_before_draw (test_warmup_hold.HoldTests.test_context_rejects_repeated_skipped_and_invalid_cycles_before_draw) ... FAIL
+test_equal_context_opposite_hidden_case_cannot_change_output (test_warmup_hold.HoldTests.test_equal_context_opposite_hidden_case_cannot_change_output) ... FAIL
+test_exact_100ms_holds_and_redraws (test_warmup_hold.HoldTests.test_exact_100ms_holds_and_redraws) ... FAIL
+test_insert_search_transition_starts_new_block (test_warmup_hold.HoldTests.test_insert_search_transition_starts_new_block) ... FAIL
+test_invalid_permission_or_phase_refused_without_draw (test_warmup_hold.HoldTests.test_invalid_permission_or_phase_refused_without_draw) ... FAIL
+test_no_draw_in_inactive_cycles_and_immediate_zero (test_warmup_hold.HoldTests.test_no_draw_in_inactive_cycles_and_immediate_zero) ... FAIL
+test_reentry_redraws_instead_of_reusing_stale_action (test_warmup_hold.HoldTests.test_reentry_redraws_instead_of_reusing_stale_action) ... FAIL
+test_returned_action_cannot_mutate_held_value (test_warmup_hold.HoldTests.test_returned_action_cannot_mutate_held_value) ... FAIL
+test_rng_exception_poisoned_and_not_retried (test_warmup_hold.HoldTests.test_rng_exception_poisoned_and_not_retried) ... FAIL
+test_snapshot_and_external_rng_restore_agree (test_warmup_hold.HoldTests.test_snapshot_and_external_rng_restore_agree) ... FAIL
+test_snapshot_tamper_and_cross_config_refused (test_warmup_hold.HoldTests.test_snapshot_tamper_and_cross_config_refused) ... FAIL
+test_two_ms_control_matches_each_supplied_draw (test_warmup_hold.HoldTests.test_two_ms_control_matches_each_supplied_draw) ... FAIL
+test_unregistered_hold_duration_refused (test_warmup_hold.HoldTests.test_unregistered_hold_duration_refused) ... FAIL
+test_whole_episode_13000_cycle_cap (test_warmup_hold.HoldTests.test_whole_episode_13000_cycle_cap) ... FAIL
+
+======================================================================
+FAIL: test_bad_rng_output_poisoned_and_not_retried (test_warmup_hold.HoldTests.test_bad_rng_output_poisoned_and_not_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 51, in test_bad_rng_output_poisoned_and_not_retried
+    p,_=self.make(draw=lambda:bad)
+        ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_context_rejects_repeated_skipped_and_invalid_cycles_before_draw (test_warmup_hold.HoldTests.test_context_rejects_repeated_skipped_and_invalid_cycles_before_draw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 40, in test_context_rejects_repeated_skipped_and_invalid_cycles_before_draw
+    p,d=self.make();p.next(0,'INSERT',True)
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_equal_context_opposite_hidden_case_cannot_change_output (test_warmup_hold.HoldTests.test_equal_context_opposite_hidden_case_cannot_change_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 34, in test_equal_context_opposite_hidden_case_cannot_change_output
+    p,_=self.make();q,_=self.make()
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_exact_100ms_holds_and_redraws (test_warmup_hold.HoldTests.test_exact_100ms_holds_and_redraws)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 18, in test_exact_100ms_holds_and_redraws
+    p,d=self.make();a=[p.next(i,'INSERT',True) for i in range(51)]
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_insert_search_transition_starts_new_block (test_warmup_hold.HoldTests.test_insert_search_transition_starts_new_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 31, in test_insert_search_transition_starts_new_block
+    p,d=self.make();a=p.next(0,'INSERT',True);b=p.next(1,'SEARCH',True)
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_invalid_permission_or_phase_refused_without_draw (test_warmup_hold.HoldTests.test_invalid_permission_or_phase_refused_without_draw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 45, in test_invalid_permission_or_phase_refused_without_draw
+    p,d=self.make()
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_no_draw_in_inactive_cycles_and_immediate_zero (test_warmup_hold.HoldTests.test_no_draw_in_inactive_cycles_and_immediate_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 24, in test_no_draw_in_inactive_cycles_and_immediate_zero
+    p,d=self.make();p.next(0,'INSERT',True)
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_reentry_redraws_instead_of_reusing_stale_action (test_warmup_hold.HoldTests.test_reentry_redraws_instead_of_reusing_stale_action)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 28, in test_reentry_redraws_instead_of_reusing_stale_action
+    p,d=self.make();a=p.next(0,'INSERT',True);p.next(1,'UNLOAD',False)
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_returned_action_cannot_mutate_held_value (test_warmup_hold.HoldTests.test_returned_action_cannot_mutate_held_value)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 37, in test_returned_action_cannot_mutate_held_value
+    p,_=self.make();p.next(0,'INSERT',True)['action'][0]=1
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_rng_exception_poisoned_and_not_retried (test_warmup_hold.HoldTests.test_rng_exception_poisoned_and_not_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 56, in test_rng_exception_poisoned_and_not_retried
+    p,_=self.make(draw=bad)
+        ~~~~~~~~~^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_snapshot_and_external_rng_restore_agree (test_warmup_hold.HoldTests.test_snapshot_and_external_rng_restore_agree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 60, in test_snapshot_and_external_rng_restore_agree
+    p,d=self.make()
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_snapshot_tamper_and_cross_config_refused (test_warmup_hold.HoldTests.test_snapshot_tamper_and_cross_config_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 66, in test_snapshot_tamper_and_cross_config_refused
+    p,_=self.make();p.next(0,'INSERT',True);s=p.snapshot()
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_two_ms_control_matches_each_supplied_draw (test_warmup_hold.HoldTests.test_two_ms_control_matches_each_supplied_draw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 21, in test_two_ms_control_matches_each_supplied_draw
+    p,d=self.make(1)
+        ~~~~~~~~~^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_unregistered_hold_duration_refused (test_warmup_hold.HoldTests.test_unregistered_hold_duration_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 72, in test_unregistered_hold_duration_refused
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+======================================================================
+FAIL: test_whole_episode_13000_cycle_cap (test_warmup_hold.HoldTests.test_whole_episode_13000_cycle_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 76, in test_whole_episode_13000_cycle_cap
+    p,d=self.make()
+        ~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 15, in make
+    self.assertIsNotNone(module,'The temporal warmup behavior has not been implemented')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The temporal warmup behavior has not been implemented
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.003s
+
+FAILED (failures=15)

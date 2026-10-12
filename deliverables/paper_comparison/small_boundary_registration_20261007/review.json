@@ -1,0 +1,17 @@
+{
+  "scope": "limited independent design and registration review",
+  "critical": 0,
+  "important": 0,
+  "minor": 1,
+  "minor_author_closed": 1,
+  "minor_description": "clarified that 59 dynamics/6000 batches is three fully retrained groups, not two",
+  "second_review": false,
+  "budget_arithmetic_independently_checked": true,
+  "rolling_snapshots_checked": 5,
+  "implementation_reviewed": false,
+  "numerical_admission_reviewed": false,
+  "new_model_loads": 0,
+  "new_network_predictions": 0,
+  "new_physics": 0,
+  "new_optimizer_batches": 0
+}

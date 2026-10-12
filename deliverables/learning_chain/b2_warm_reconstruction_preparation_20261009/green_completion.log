@@ -1,0 +1,19 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_close_expires_every_remaining_operation (test_gate_contract.GateTests.test_close_expires_every_remaining_operation) ... ok
+test_complete_accounting_requires_both_roles (test_gate_contract.GateTests.test_complete_accounting_requires_both_roles) ... ok
+test_corrupt_negative_counter_refused (test_gate_contract.GateTests.test_corrupt_negative_counter_refused) ... ok
+test_exact_grant_allowed (test_gate_contract.GateTests.test_exact_grant_allowed) ... ok
+test_expanded_wall_refused (test_gate_contract.GateTests.test_expanded_wall_refused) ... ok
+test_incomplete_accounting_cannot_complete (test_gate_contract.GateTests.test_incomplete_accounting_cannot_complete) ... ok
+test_reader_mismatch_never_qualifies (test_gate_contract.GateTests.test_reader_mismatch_never_qualifies) ... ok
+test_restored_boundary_cannot_claim_online_or_updates (test_gate_contract.GateTests.test_restored_boundary_cannot_claim_online_or_updates) ... ok
+test_roles_share_bounds_and_cannot_restart (test_gate_contract.GateTests.test_roles_share_bounds_and_cannot_restart) ... ok
+test_training_allowance_or_wrong_source_refused (test_gate_contract.GateTests.test_training_allowance_or_wrong_source_refused) ... ok
+test_unsigned_grant_refused (test_gate_contract.GateTests.test_unsigned_grant_refused) ... ok
+test_zero_checkpoint_with_history_is_rejected (test_gate_contract.GateTests.test_zero_checkpoint_with_history_is_rejected) ... ok
+test_zero_limits_and_unclaimed_role_refused (test_gate_contract.GateTests.test_zero_limits_and_unclaimed_role_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.262s
+
+OK

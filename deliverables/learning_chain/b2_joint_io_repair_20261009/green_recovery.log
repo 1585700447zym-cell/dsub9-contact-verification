@@ -1,0 +1,13 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_complete_fixture_preserves_boundary_and_draws (__main__.RecoveryTests.test_complete_fixture_preserves_boundary_and_draws) ... ok
+test_discontinuous_or_nonfinite_observation_rejected (__main__.RecoveryTests.test_discontinuous_or_nonfinite_observation_rejected) ... ok
+test_held_request_mutation_rejected (__main__.RecoveryTests.test_held_request_mutation_rejected) ... ok
+test_missing_or_truncated_terminal_rejected (__main__.RecoveryTests.test_missing_or_truncated_terminal_rejected) ... ok
+test_receipt_or_draw_count_conflict_rejected (__main__.RecoveryTests.test_receipt_or_draw_count_conflict_rejected) ... ok
+test_unpermitted_nonzero_action_rejected (__main__.RecoveryTests.test_unpermitted_nonzero_action_rejected) ... ok
+test_wrong_episode_or_nonzero_update_rejected (__main__.RecoveryTests.test_wrong_episode_or_nonzero_update_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK

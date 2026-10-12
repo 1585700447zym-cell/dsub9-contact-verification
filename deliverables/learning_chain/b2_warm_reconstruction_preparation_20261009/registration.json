@@ -1,0 +1,31 @@
+{
+  "stage_id": "B2-SCOPE-15",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "before_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "项目当前入口.md": "154611720852debad36803e2443e636b13f40c0c3d0833711d58a29d539b0e9f",
+    "项目进度跟踪.md": "fad37f06270ebb9de708ca84c1c99377ee69aa1186abc93478cc67a8272dc4de",
+    "研究推进计划_当前版.md": "1a45d3ca2c5592478ad92d5a97bf0c322cc4a2b55bcfbb018596afec9b148eb2",
+    "项目交付总览.md": "1b4f2f0baf01e452ad57855eafd2417e2cffca5101ac70283de5a17ba3cc533d",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "570d1f8648da33061f217eca45c6dfaf6d2ba81d6e0c6fa3fa3fcf07b47cfcc2"
+  },
+  "prior_seal": "92ccd263ae92b870e2381a25f5ebca10effcd7f3ac779caac43980c661fd85aa",
+  "copies": {
+    "bounded_io.py": "83174f30a5d380ab432c8cb21cf224596ab1133a1697762b68fee58531959c81",
+    "phase_deadline.py": "609d36435aea4037ab557d7f712ab67f8bf0f84e655bfd9691aabb1da6d31c8e",
+    "supervised.py": "7c71c91f8fd8bcc104607ac986ff5efa3022d2af59aae4ec105fcdf1480b3334",
+    "windows_job.py": "4929fe110b9558510d99fdfbdaa3ce77b48e0dfd353932216e4d6fa87de11c08",
+    "joint_contract.py": "8443f9b8607b0495717795b2f4d201a59940b703f57d5282b30dca2ee8f1b4aa",
+    "recovery_audit.py": "35f2015172a8cdcc0988a326b533d7a08ffda0fc64d539f36f99ec7ee3d4df73",
+    "test_io_repair.py": "f56fbf77ccbc91beed2b423baef83814adaee047af6b2d44d6d46459cc8d32ed",
+    "test_supervisor.py": "e4fd0cc8d14227040723c0f2dbc86d01b5a5f8d73a008c6a1a44de7b6fa081da",
+    "fixture_worker.py": "b267a4dbb165913475447c6fc2644f13b6c8a87d32524b631585a50e657ccbd1",
+    "test_related_contract.py": "902847b6e4abeed8f7c5a5172f239bbd24a9911a95e8e96b3fdf72e0ea3bc214",
+    "test_recovery_audit.py": "7b2aec36bcd4292955688d7c5429a22ffc1f64d987d63852fa3d04c4a8f7f649",
+    "run_suite.py": "185812389c4ce1f35fe447934a245585abf708459184915511ab3e879cea0950"
+  },
+  "numeric_execution_authorized": false,
+  "training_admitted": false,
+  "cumulative_dynamic": 245
+}

@@ -1,0 +1,6 @@
+........................................................................ [ 48%]
+........................................................................ [ 96%]
+.....                                                                    [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_force_failure_implementation_20260928\suite_after_review.xml -
+149 passed in 306.93s (0:05:06)
+{"exit_code": 0, "tests": 149, "tests_with_failure_or_error": 0, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "6557fa0366d315d0298d30757bf50867eaea46d508347eb667c49c2dd0553ed2", "runner_sha256": "f2c199b21b6e9958975f8a6c7ab2f48b8c95a4489618f1e850f92768cb58f34f"}

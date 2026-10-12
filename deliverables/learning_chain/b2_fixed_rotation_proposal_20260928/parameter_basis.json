@@ -1,0 +1,82 @@
+{
+  "status": "proposal_not_execution_authorization",
+  "date": "2026-09-28",
+  "physical_starts_added": 0,
+  "optimizer_batches_added": 0,
+  "policy_forward_calls_added": 0,
+  "static_initializations_added": 0,
+  "old_action_scale": [
+    0.00015,
+    0.00015,
+    0.005,
+    0.005
+  ],
+  "proposed_action_scale": [
+    0.00015,
+    0.00015,
+    0.0005,
+    0.0005
+  ],
+  "rotation_scale_ratio": 0.1,
+  "initial_reference": [
+    {
+      "case": "x_neg_100",
+      "mean_rotation_request_norm_rad_s": 0.0005113757834222777,
+      "active_duration_s": 8.042,
+      "final_angle_deg": 0.15126511983432436
+    },
+    {
+      "case": "x_pos_100",
+      "mean_rotation_request_norm_rad_s": 0.0005694779235747283,
+      "active_duration_s": 9.762,
+      "final_angle_deg": 0.11230469127193407
+    },
+    {
+      "case": "y_neg_100",
+      "mean_rotation_request_norm_rad_s": 0.0005458658908866597,
+      "active_duration_s": 8.954,
+      "final_angle_deg": 0.09794651781679228
+    },
+    {
+      "case": "y_pos_100",
+      "mean_rotation_request_norm_rad_s": 0.000584821001797605,
+      "active_duration_s": 10.758000000000001,
+      "final_angle_deg": 0.2197522047504617
+    }
+  ],
+  "request_scale_only": {
+    "new_two_axis_norm_rad_s": 0.0007071067811865476,
+    "new_10s_integral_deg": 0.4051423422706978,
+    "old_10s_integral_deg": 4.0514234227069785,
+    "new_20s_integral_deg": 0.8102846845413956,
+    "interpretation": "Integral of requested angular speed norm only; not realized pose, a counterfactual trajectory, or a safety bound."
+  },
+  "proposed_budget": {
+    "stage_caps": {
+      "initial": 4,
+      "training": 12,
+      "final": 4,
+      "restored": 4,
+      "holdout_b2": 4,
+      "holdout_sac": 4
+    },
+    "new_dynamic_cap": 32,
+    "prior_lineage_dynamic_starts": 27,
+    "lineage_cumulative_cap": 59,
+    "new_formal_batch_cap": 4500,
+    "prior_lineage_formal_batches": 3000,
+    "lineage_formal_batch_cap": 7500,
+    "new_synthetic_updates": 0,
+    "new_separate_static_initializations": 0,
+    "old_unspent_budget_not_carried_forward": true,
+    "scope": "Bounded-cycle lineage only; earlier project runs, synthetic updates and diagnostics remain separately recorded."
+  },
+  "sources_sha256": {
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/policy_analysis.json": "340bbbccb75635416c2e0a26c557c141aec57653ca86903ca8a449788212b64a",
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/baseline_audit.json": "f7b5a10292171de2da2067d590d0e18af572041aedf44a0bfddc2646af6c24bb",
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/run/cumulative_budget.json": "5d96474699badd7e3ec5f38ab17ad63fd7f9c95d2fceff5e4b12584a3670c736",
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/run/training_episodes/update_budget.json": "45e84be8c3de808beb8478b89fe60708398ec525f0a13a7a0abb6087ec7ef681",
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/authorization.json": "590876e6041426732880989550126883458f7ff2c28dab29ff444cda76319a8c",
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/admission.json": "31815c4a9a12f97a784537e00d2ebceb8d8e6860089cf5f09188bc926d79052e"
+  }
+}

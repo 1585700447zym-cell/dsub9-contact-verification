@@ -1,0 +1,570 @@
+{
+  "version": "b2_06_posthoc_command_decomposition_v1",
+  "rows": [
+    {
+      "id": "pulse_x_neg_100_neg",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        -7.499999999999168,
+        0.0
+      ],
+      "limiter_delta_xy_integral_um": [
+        -2.0089821324387684,
+        0.0
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        -4.2962604225898735,
+        -0.00469725350056127
+      ],
+      "max_window_position_difference_nm": 4.51103798284924,
+      "max_sampled_contact_force_vector_difference_N": 0.000490224338918157,
+      "end_window_reference_position_difference_um": [
+        -4.296260422590001,
+        -0.004697253500561883,
+        -2.3174631918337907e-05
+      ],
+      "end_window_position_difference_nm": [
+        -2.5790939916630347,
+        -3.7009723908014096,
+        -0.02326429457064072
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.312000000002361
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.314000000002365
+        }
+      ],
+      "baseline_final_xy_um": 61.09917993189201,
+      "pulse_final_xy_um": 61.27188442933977,
+      "baseline_outcome": "TASK_FAILURE",
+      "pulse_outcome": "TASK_FAILURE"
+    },
+    {
+      "id": "pulse_x_neg_100_pos",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        7.499999999999168,
+        0.0
+      ],
+      "limiter_delta_xy_integral_um": [
+        2.006044145484442,
+        0.0
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        4.235986086012115,
+        -0.002111945136538707
+      ],
+      "max_window_position_difference_nm": 6.128812335746201,
+      "max_sampled_contact_force_vector_difference_N": 0.0008105169719016803,
+      "end_window_reference_position_difference_um": [
+        4.235986086012245,
+        -0.002111945136539072,
+        -4.918871993747631e-05
+      ],
+      "end_window_position_difference_nm": [
+        6.093526514616828,
+        -0.6549155593733231,
+        -0.04858881092612011
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.312000000002361
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.248000000002226
+        }
+      ],
+      "baseline_final_xy_um": 61.09917993189201,
+      "pulse_final_xy_um": 50.898206236910084,
+      "baseline_outcome": "TASK_FAILURE",
+      "pulse_outcome": "TASK_FAILURE"
+    },
+    {
+      "id": "pulse_x_pos_100_neg",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        -7.499999999999168,
+        0.0
+      ],
+      "limiter_delta_xy_integral_um": [
+        -2.007592947984891,
+        0.0
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        -4.254656018600823,
+        -9.746674919679352e-05
+      ],
+      "max_window_position_difference_nm": 3.843073443615624,
+      "max_sampled_contact_force_vector_difference_N": 0.000578121169491994,
+      "end_window_reference_position_difference_um": [
+        -4.254656018602184,
+        -9.746674919679757e-05,
+        3.6568820020732584e-05
+      ],
+      "end_window_position_difference_nm": [
+        -3.76458708451551,
+        -0.7718556196986268,
+        0.03655787825240786
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.896000000005704
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.890000000005691
+        }
+      ],
+      "baseline_final_xy_um": 12.295406474513543,
+      "pulse_final_xy_um": 11.459890331561256,
+      "baseline_outcome": "FULL_SUCCESS",
+      "pulse_outcome": "FULL_SUCCESS"
+    },
+    {
+      "id": "pulse_x_pos_100_pos",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        7.499999999999168,
+        0.0
+      ],
+      "limiter_delta_xy_integral_um": [
+        2.007261447019816,
+        0.0
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        4.2934226970651554,
+        -0.005528777550060533
+      ],
+      "max_window_position_difference_nm": 0.8706498150624095,
+      "max_sampled_contact_force_vector_difference_N": 0.000490162970767465,
+      "end_window_reference_position_difference_um": [
+        4.29342269706479,
+        -0.0055287775500610335,
+        -3.582070057239761e-05
+      ],
+      "end_window_position_difference_nm": [
+        0.5053567753610273,
+        -0.6815350069437707,
+        -0.03581742801656018
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.896000000005704
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.9480000000058135
+        }
+      ],
+      "baseline_final_xy_um": 12.295406474513543,
+      "pulse_final_xy_um": 19.61039035552837,
+      "baseline_outcome": "FULL_SUCCESS",
+      "pulse_outcome": "FULL_SUCCESS"
+    },
+    {
+      "id": "pulse_y_neg_100_neg",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        0.0,
+        -7.499999999999168
+      ],
+      "limiter_delta_xy_integral_um": [
+        0.0,
+        -2.006791813938748
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        -1.7189508210028857e-05,
+        -4.27049471589192
+      ],
+      "max_window_position_difference_nm": 3.725329423541161,
+      "max_sampled_contact_force_vector_difference_N": 0.0004880280446415093,
+      "end_window_reference_position_difference_um": [
+        -1.7189508210202953e-05,
+        -4.27049471589329,
+        -0.00013657209434539408
+      ],
+      "end_window_position_difference_nm": [
+        -0.010618708110891486,
+        -3.7228076787477247,
+        -0.1366365397562075
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.0960000000040155
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.094000000004011
+        }
+      ],
+      "baseline_final_xy_um": 41.41494041413124,
+      "pulse_final_xy_um": 41.21835540993229,
+      "baseline_outcome": "FULL_SUCCESS",
+      "pulse_outcome": "FULL_SUCCESS"
+    },
+    {
+      "id": "pulse_y_neg_100_pos",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        0.0,
+        7.499999999999168
+      ],
+      "limiter_delta_xy_integral_um": [
+        0.0,
+        2.0081615586489012
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        0.00017637416534793996,
+        4.2693666070209035
+      ],
+      "max_window_position_difference_nm": 3.66175200682635,
+      "max_sampled_contact_force_vector_difference_N": 0.00048794192890729086,
+      "end_window_reference_position_difference_um": [
+        0.0001763741653480521,
+        4.269366607021374,
+        0.0001358858468455959
+      ],
+      "end_window_position_difference_nm": [
+        -0.10519640836172696,
+        3.6577148161155963,
+        0.13595513647171598
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.0960000000040155
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 6.064000000003948
+        }
+      ],
+      "baseline_final_xy_um": 41.41494041413124,
+      "pulse_final_xy_um": 36.5326740004843,
+      "baseline_outcome": "FULL_SUCCESS",
+      "pulse_outcome": "FULL_SUCCESS"
+    },
+    {
+      "id": "pulse_y_pos_100_neg",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        0.0,
+        -7.499999999999168
+      ],
+      "limiter_delta_xy_integral_um": [
+        0.0,
+        -2.000607317891789
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        0.01218076780010355,
+        -4.331936219074825
+      ],
+      "max_window_position_difference_nm": 3.5882761701431396,
+      "max_sampled_contact_force_vector_difference_N": 0.0006444014685955699,
+      "end_window_reference_position_difference_um": [
+        0.012180767800104847,
+        -4.331936219075433,
+        0.0002820812272999462
+      ],
+      "end_window_position_difference_nm": [
+        -0.019690193071384667,
+        -3.5771039211219753,
+        0.2822511417296947
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 7.8720000000077635
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 7.884000000007789
+        }
+      ],
+      "baseline_final_xy_um": 17.290456976338138,
+      "pulse_final_xy_um": 16.710052593296453,
+      "baseline_outcome": "FULL_SUCCESS",
+      "pulse_outcome": "FULL_SUCCESS"
+    },
+    {
+      "id": "pulse_y_pos_100_pos",
+      "window_phases": [
+        "INSERT"
+      ],
+      "requested_xy_integral_um": [
+        0.0,
+        7.499999999999168
+      ],
+      "limiter_delta_xy_integral_um": [
+        0.0,
+        2.011799653400014
+      ],
+      "paired_total_command_difference_xy_integral_um": [
+        0.0010919264061118462,
+        4.270925618636839
+      ],
+      "max_window_position_difference_nm": 3.5278125403833758,
+      "max_sampled_contact_force_vector_difference_N": 0.0007466574484468243,
+      "end_window_reference_position_difference_um": [
+        0.0010919264061119288,
+        4.270925618637468,
+        -0.00027883798438613216
+      ],
+      "end_window_position_difference_nm": [
+        -0.13211757508669328,
+        3.5142788527186197,
+        -0.2790168664688897
+      ],
+      "baseline_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 7.8720000000077635
+        }
+      ],
+      "pulse_phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 7.88000000000778
+        }
+      ],
+      "baseline_final_xy_um": 17.290456976338138,
+      "pulse_final_xy_um": 16.714598281489792,
+      "baseline_outcome": "FULL_SUCCESS",
+      "pulse_outcome": "FULL_SUCCESS"
+    }
+  ],
+  "posthoc": true,
+  "changes_frozen_rollout": false,
+  "native_rollouts": 0,
+  "optimizer_updates": 0,
+  "limitation": "Limiter counterfactual is not a causal displacement; later controller evolution contributes to final differences."
+}

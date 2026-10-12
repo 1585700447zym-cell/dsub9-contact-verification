@@ -1,0 +1,39 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+___ test_known_failure_is_first_and_unfixed_failure_closes_remaining_budget ___
+tests\task_variants\test_functional_preflight.py:9: in test_known_failure_is_first_and_unfixed_failure_closes_remaining_budget
+    from tools.validation.run_functional_preflight import next_case,case_specs
+E   ModuleNotFoundError: No module named 'tools.validation.run_functional_preflight'
+____________ test_any_protection_stops_new_runs[MOTION_VIOLATION] _____________
+tests\task_variants\test_functional_preflight.py:19: in test_any_protection_stops_new_runs
+    from tools.validation.run_functional_preflight import next_case
+E   ModuleNotFoundError: No module named 'tools.validation.run_functional_preflight'
+______________ test_any_protection_stops_new_runs[CONTACT_GUARD] ______________
+tests\task_variants\test_functional_preflight.py:19: in test_any_protection_stops_new_runs
+    from tools.validation.run_functional_preflight import next_case
+E   ModuleNotFoundError: No module named 'tools.validation.run_functional_preflight'
+___________ test_any_protection_stops_new_runs[INVALID_SIMULATION] ____________
+tests\task_variants\test_functional_preflight.py:19: in test_any_protection_stops_new_runs
+    from tools.validation.run_functional_preflight import next_case
+E   ModuleNotFoundError: No module named 'tools.validation.run_functional_preflight'
+___________ test_any_protection_stops_new_runs[STOP_NOT_QUALIFIED] ____________
+tests\task_variants\test_functional_preflight.py:19: in test_any_protection_stops_new_runs
+    from tools.validation.run_functional_preflight import next_case
+E   ModuleNotFoundError: No module named 'tools.validation.run_functional_preflight'
+___________ test_unfinished_attempt_and_wrong_order_cannot_restart ____________
+tests\task_variants\test_functional_preflight.py:24: in test_unfinished_attempt_and_wrong_order_cannot_restart
+    from tools.validation.run_functional_preflight import next_case
+E   ModuleNotFoundError: No module named 'tools.validation.run_functional_preflight'
+_____________ test_claim_new_budget_cannot_reuse_an_existing_run ______________
+tests\task_variants\test_functional_preflight.py:30: in test_claim_new_budget_cannot_reuse_an_existing_run
+    from tools.validation.run_functional_preflight import claim_run
+E   ModuleNotFoundError: No module named 'tools.validation.run_functional_preflight'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_functional_preflight.py::test_known_failure_is_first_and_unfixed_failure_closes_remaining_budget
+FAILED tests/task_variants/test_functional_preflight.py::test_any_protection_stops_new_runs[MOTION_VIOLATION]
+FAILED tests/task_variants/test_functional_preflight.py::test_any_protection_stops_new_runs[CONTACT_GUARD]
+FAILED tests/task_variants/test_functional_preflight.py::test_any_protection_stops_new_runs[INVALID_SIMULATION]
+FAILED tests/task_variants/test_functional_preflight.py::test_any_protection_stops_new_runs[STOP_NOT_QUALIFIED]
+FAILED tests/task_variants/test_functional_preflight.py::test_unfinished_attempt_and_wrong_order_cannot_restart
+FAILED tests/task_variants/test_functional_preflight.py::test_claim_new_budget_cannot_reuse_an_existing_run
+7 failed in 0.07s

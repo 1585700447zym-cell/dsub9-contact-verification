@@ -1,0 +1,2 @@
+BEGIN buffer=21680 iterations=35 geom_types=5,7
+END dist=-2.3561768402525625e-07 contacts=1 gjk=13 epa=35 overflow_bytes=0

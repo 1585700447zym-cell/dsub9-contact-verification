@@ -1,0 +1,7 @@
+{
+  "version": "actor_lr_preparation_binding_v1",
+  "branch": "A",
+  "config_sha256": "e9c4296434864d304251d4cd5274c9ab3ceaafd537abc6ec864ee24f1ce5dfb8",
+  "parent_config_sha256": "18b43f1c27e7a5c33a26ae2127efbf4a48dd5da18cf4bbb3b7fa6d0e60a2b85b",
+  "source_manifest_sha256": "95eca0350231074a9fb14cf44e1fff6635709cb62a293ede13d6cd95344b6213"
+}

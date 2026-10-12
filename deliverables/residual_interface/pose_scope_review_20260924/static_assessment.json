@@ -1,0 +1,87 @@
+{
+  "static_sample_checks_passed": true,
+  "source_unchanged": true,
+  "attempts_planned": 243,
+  "attempts_recorded": 243,
+  "passed_count": 243,
+  "failed_ids": [],
+  "positive_witness_poses": 241,
+  "positive_witness_pairs": 1969,
+  "missing_pairs": 0,
+  "contact_poses": 241,
+  "warning_poses": 0,
+  "wall_seconds": 24.79572150000604,
+  "runtime": {
+    "version": "3.13.0",
+    "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+    "dll_verified": true,
+    "dll_sha256": {
+      "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+    },
+    "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+  },
+  "environment": {
+    "config": {
+      "collision_backend": "native",
+      "timestep": 0.0002,
+      "control_period": 0.002,
+      "linear_speed": 0.001,
+      "angular_speed": 0.03,
+      "linear_acceleration": 0.005,
+      "angular_acceleration": 0.3,
+      "translational_stiffness": 100.0,
+      "rotational_stiffness": 0.02,
+      "force_limit_N": 0.05,
+      "torque_limit_Nm": 0.002,
+      "reference_lead_m": 0.0002,
+      "reference_lead_rad": 0.03,
+      "stop_force_N": 0.025,
+      "stop_torque_Nm": 0.0005,
+      "stop_penetration_m": 3e-05,
+      "invalid_penetration_m": 8e-05,
+      "actual_speed_limit": 0.02,
+      "actual_angular_speed_limit": 0.5,
+      "travel_limit_m": 0.006,
+      "recovery_distance_m": 0.00025,
+      "recovery_speed": 0.0005,
+      "recovery_time_limit_s": 1.0,
+      "recovery_force_N": 0.01,
+      "stopped_speed": 1e-05,
+      "stopped_angular_speed": 0.001
+    },
+    "segments": 256,
+    "contacts_enabled": true,
+    "effective_options": {
+      "timestep": 0.0002,
+      "disableflags": 0,
+      "ccd_tolerance": 1e-12,
+      "ccd_iterations": 35,
+      "integrator": 0
+    },
+    "mass_kg": 0.05,
+    "inertia_kg_m2": [
+      2e-05,
+      2e-05,
+      2e-05
+    ],
+    "grasp_local_m": [
+      0.0,
+      0.0,
+      -0.0145
+    ],
+    "measurement": "simulation_contact_wrench",
+    "calibrated": false,
+    "drive": "bounded_cartesian_PD_at_M_equivalent_wrench_applied_at_G",
+    "contact_candidate": "native_tight_v1",
+    "candidate_only": true
+  },
+  "parameter_frozen": false,
+  "model_scope_qualified": false,
+  "training_admitted": false,
+  "limitations": [
+    "prescribed static diagnostic poses, not dynamic states or admitted initializations",
+    "sampled positive witnesses for corresponding pin-hole pairs, not continuous clearance",
+    "finite/in-bounds axial contact depths do not qualify forces, stiffness or D-shell coverage",
+    "2.52deg diagnostic sample is NOT a new guard threshold, trust envelope or overshoot guarantee"
+  ]
+}

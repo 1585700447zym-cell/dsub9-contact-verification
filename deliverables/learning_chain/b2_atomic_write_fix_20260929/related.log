@@ -1,0 +1,65 @@
+........................................................................ [ 63%]
+.......................F..............F...                               [100%]
+================================== FAILURES ===================================
+_______ test_evaluation_uses_four_points_without_training_state_change ________
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/related_work/test_evaluation_uses_four_poin0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001E7D2D86B30>
+runtime = {'compatibility_record_sha256': '99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a', 'dll_sha256': {'D:...dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py', ...}
+
+    def test_evaluation_uses_four_points_without_training_state_change(tmp_path,monkeypatch,runtime):
+        from tools.learning import contact_evaluation as ev
+        from tools.learning import sac_checkpoint as cp
+        c=make(tmp_path,monkeypatch,runtime); c.start('one'); c.collect(10)
+        monkeypatch.setattr(ev,'episode_metrics',lambda raw:dict(success=False))
+        before=cp.capture(c)
+>       results=ev.evaluate(c,checkpoint_sha256='a'*64,output=tmp_path/'evaluation')
+
+tests\learning\test_contact_execution.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\contact_evaluation.py:46: in evaluate
+    while collector.active: collector.collect(FrozenPolicy(chain.updater),500)
+tools\learning\contact_evaluation.py:30: in collect
+    return super().collect(policy,steps,cut_at_end=cut_at_end,deterministic=True)
+tools\learning\contact_execution.py:48: in collect
+    result=super().collect(policy,steps,deterministic=deterministic)
+tools\learning\admitted_collection.py:189: in collect
+    action, _ = policy.predict(self._obs.copy(), deterministic=deterministic)
+tools\learning\engineering_evaluation.py:34: in predict
+    def predict(self, observation, deterministic=True): return self.updater.predict(observation, deterministic=True)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = (<tools.learning.contact_execution.ContactUpdater object at 0x000001E7D12AF350>, array([0., 0., 0., 0., 0., 0., 0., 0.... 0., 0., 0., 0.,
+       0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+       0.], dtype=float32))
+kw = {'deterministic': True}
+
+    def stop(*a,**kw):
+>       calls[kind]+=1;raise AssertionError('Forbidden during protocol verification: '+kind)
+E       AssertionError: Forbidden during protocol verification: prediction
+
+deliverables\learning_chain\b2_atomic_write_fix_20260929\run_tests.py:16: AssertionError
+___________ test_evaluation_audit_interrupt_retains_diagnostic_raw ____________
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/related_work/test_evaluation_audit_interrup0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001E7D2D27AF0>
+runtime = {'compatibility_record_sha256': '99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a', 'dll_sha256': {'D:...dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py', ...}
+
+    def test_evaluation_audit_interrupt_retains_diagnostic_raw(tmp_path,monkeypatch,runtime):
+        from tools.learning import contact_evaluation as ev
+        import tools.learning.admitted_collection as base
+        c=make(tmp_path,monkeypatch,runtime);c.start('one');c.collect(10)
+        monkeypatch.setattr(base,'_physical_audit',lambda s:(_ for _ in ()).throw(KeyboardInterrupt()))
+        with pytest.raises(KeyboardInterrupt):ev.evaluate(c,checkpoint_sha256='a'*64,output=tmp_path/'evaluation')
+        raw=json.loads(gzip.decompress((tmp_path/'evaluation/episodes/x_neg_100/failure_episode.json.gz').read_bytes()))
+>       assert len(raw['transitions'])==3 and raw['training_admitted'] is False
+E       assert (0 == 3)
+E        +  where 0 = len([])
+
+tests\learning\test_contact_execution.py:252: AssertionError
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_atomic_write_fix_20260929\related.xml -
+=========================== short test summary info ===========================
+FAILED tests/learning/test_contact_execution.py::test_evaluation_uses_four_points_without_training_state_change
+FAILED tests/learning/test_contact_execution.py::test_evaluation_audit_interrupt_retains_diagnostic_raw
+2 failed, 112 passed in 203.06s (0:03:23)
+{"exit_code": 1, "tests": 114, "tests_with_failure_or_error": 2, "source_unchanged": true, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 2}, "report_sha256": "ed37cbcef96d8faa62f1e9b770ef790c8ee4949642939a3c6dc3d79800532d71", "runner_sha256": "2fc4a7bb3298d2654a666ac69a9772661cd2a1ac3c1e76650558092c8303fb0a"}

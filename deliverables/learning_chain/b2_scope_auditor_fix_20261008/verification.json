@@ -1,0 +1,31 @@
+{
+  "status": "VERIFIED_OFFLINE_AUDITOR_REPAIR",
+  "user_date": "2026-10-08",
+  "assertions": 305,
+  "revision_sha256": "35897d7988d1273227e4baa0f921698ae5082f0a526d7691a9d2e87e68005222",
+  "revision_inputs": 20,
+  "inherited_inputs": 2167,
+  "historical_members": 950,
+  "prior_scope_members": 201,
+  "production_inputs": 1057,
+  "new_regression_tests": 14,
+  "inherited_audit_tests": 6,
+  "existing_archives_reaudited": 10,
+  "actual_new": {
+    "engine_loads": 0,
+    "initializations": 0,
+    "dynamic_attempts": 0,
+    "physical_substeps": 0,
+    "learner_constructions": 0,
+    "tensor_reads": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "replay_publications": 0
+  },
+  "cumulative_dynamic": 209,
+  "automatic_tracking": "PAUSED",
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "training_admitted": false,
+  "physical_runner_rebound": false
+}

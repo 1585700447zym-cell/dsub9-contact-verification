@@ -1,0 +1,13 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_clearance_negative_infinity_retains_no_overlap_status (__main__.AssessmentTests.test_clearance_negative_infinity_retains_no_overlap_status) ... ok
+test_complete25_mean_and_valid_failure_penalty (__main__.AssessmentTests.test_complete25_mean_and_valid_failure_penalty) ... ok
+test_duplicate_unknown_cases_and_nan_time_rejected (__main__.AssessmentTests.test_duplicate_unknown_cases_and_nan_time_rejected) ... ok
+test_guard_does_not_receive_ordinary26s_penalty (__main__.AssessmentTests.test_guard_does_not_receive_ordinary26s_penalty) ... ok
+test_missing_invalid_unstopped_and_guard_never_make_complete_mean (__main__.AssessmentTests.test_missing_invalid_unstopped_and_guard_never_make_complete_mean) ... ok
+test_old_four_aliases_preserve_original_case_and_fingerprint (__main__.AssessmentTests.test_old_four_aliases_preserve_original_case_and_fingerprint) ... ok
+test_unfinished_ledger_refuses_result_assessment (__main__.AssessmentTests.test_unfinished_ledger_refuses_result_assessment) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.028s
+
+OK

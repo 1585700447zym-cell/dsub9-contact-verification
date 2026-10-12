@@ -1,0 +1,28 @@
+...FFF                                                                   [100%]
+================================== FAILURES ===================================
+_ test_prepared_configuration_and_model_cannot_change_unnoticed[configuration.json] _
+tests\task_variants\test_admittance_rebase_preflight.py:47: in test_prepared_configuration_and_model_cannot_change_unnoticed
+    from tools.validation.run_admittance_rebase_preflight import verify_prepared_files
+E   ImportError: cannot import name 'verify_prepared_files' from 'tools.validation.run_admittance_rebase_preflight' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_admittance_rebase_preflight.py)
+__ test_prepared_configuration_and_model_cannot_change_unnoticed[model.xml] ___
+tests\task_variants\test_admittance_rebase_preflight.py:47: in test_prepared_configuration_and_model_cannot_change_unnoticed
+    from tools.validation.run_admittance_rebase_preflight import verify_prepared_files
+E   ImportError: cannot import name 'verify_prepared_files' from 'tools.validation.run_admittance_rebase_preflight' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_admittance_rebase_preflight.py)
+______ test_changed_preparation_closes_unused_budget_before_any_episode _______
+tests\task_variants\test_admittance_rebase_preflight.py:66: in test_changed_preparation_closes_unused_budget_before_any_episode
+    with pytest.raises(RuntimeError,match='Prepared file changed'):execute(tmp_path)
+tools\validation\run_admittance_rebase_preflight.py:106: in execute
+    raise RuntimeError('Preflight source changed after preparation')
+E   RuntimeError: Preflight source changed after preparation
+
+During handling of the above exception, another exception occurred:
+tests\task_variants\test_admittance_rebase_preflight.py:66: in test_changed_preparation_closes_unused_budget_before_any_episode
+    with pytest.raises(RuntimeError,match='Prepared file changed'):execute(tmp_path)
+E   AssertionError: Regex pattern did not match.
+E    Regex: 'Prepared file changed'
+E    Input: 'Preflight source changed after preparation'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_admittance_rebase_preflight.py::test_prepared_configuration_and_model_cannot_change_unnoticed[configuration.json]
+FAILED tests/task_variants/test_admittance_rebase_preflight.py::test_prepared_configuration_and_model_cannot_change_unnoticed[model.xml]
+FAILED tests/task_variants/test_admittance_rebase_preflight.py::test_changed_preparation_closes_unused_budget_before_any_episode
+3 failed, 3 passed in 2.69s

@@ -1,0 +1,36 @@
+test_missing_context_and_bad_reward_command_or_stop_rejected (test_assess.AssessmentTests.test_missing_context_and_bad_reward_command_or_stop_rejected) ... ok
+test_partial_and_missing_attempts_remain_in_denominator (test_assess.AssessmentTests.test_partial_and_missing_attempts_remain_in_denominator) ... ok
+test_success_and_failure_keep_separate_metrics (test_assess.AssessmentTests.test_success_and_failure_keep_separate_metrics) ... ok
+test_reset_failure_retains_attempt_and_error_archive (test_physical_interface.BackendTests.test_reset_failure_retains_attempt_and_error_archive) ... ok
+test_static_uses_registered_angle_and_never_steps (test_physical_interface.BackendTests.test_static_uses_registered_angle_and_never_steps) ... ok
+test_I1_relocated_entrypoint_rejected_before_claim (test_review_regressions.ReviewRegressions.test_I1_relocated_entrypoint_rejected_before_claim) ... ok
+test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) ... ok
+test_I3_missing_information_prevents_training_route (test_review_regressions.ReviewRegressions.test_I3_missing_information_prevents_training_route) ... ok
+test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) ... ok
+test_I4_stalled_inert_audit_is_killed_by_production_deadline_guard (test_review_regressions.ReviewRegressions.test_I4_stalled_inert_audit_is_killed_by_production_deadline_guard) ... ok
+test_I5_assignment_failure_terminates_owned_handle (test_review_regressions.ReviewRegressions.test_I5_assignment_failure_terminates_owned_handle) ... ok
+test_close_kills_owned_child (test_runner.JobTests.test_close_kills_owned_child) ... ok
+test_kill_confirmed_by_job_accounting (test_runner.JobTests.test_kill_confirmed_by_job_accounting) ... ok
+test_cycle_budget_counts_tail_and_static_time (test_runner.RunnerTests.test_cycle_budget_counts_tail_and_static_time) ... ok
+test_missing_grant_and_direct_worker_fail_before_runtime (test_runner.RunnerTests.test_missing_grant_and_direct_worker_fail_before_runtime) ... ok
+test_output_escape_and_existing_rejected (test_runner.RunnerTests.test_output_escape_and_existing_rejected) ... ok
+test_angles_reach_contact_case_once (test_scope_preflight.ContractTests.test_angles_reach_contact_case_once) ... ok
+test_candidate_and_parent_cannot_change (test_scope_preflight.ContractTests.test_candidate_and_parent_cannot_change) ... ok
+test_fixed_sequence_and_failure_closure (test_scope_preflight.ContractTests.test_fixed_sequence_and_failure_closure) ... ok
+test_full_sequence_has_no_extra_attempt (test_scope_preflight.ContractTests.test_full_sequence_has_no_extra_attempt) ... ok
+test_malformed_and_unregistered_cases_rejected (test_scope_preflight.ContractTests.test_malformed_and_unregistered_cases_rejected) ... ok
+test_pulse_exact_window_and_stop_permissions (test_scope_preflight.ContractTests.test_pulse_exact_window_and_stop_permissions) ... ok
+test_attempt_durable_before_executor_and_static_abort (test_scope_preflight.ExecutionTests.test_attempt_durable_before_executor_and_static_abort) ... ok
+test_bound_files_detect_source_and_runtime_change (test_scope_preflight.ExecutionTests.test_bound_files_detect_source_and_runtime_change) ... ok
+test_existing_output_rejected_before_claim (test_scope_preflight.ExecutionTests.test_existing_output_rejected_before_claim) ... ok
+test_global_claim_cannot_move_to_another_output (test_scope_preflight.ExecutionTests.test_global_claim_cannot_move_to_another_output) ... ok
+test_grant_exact_pin_limits_and_explicit_approval (test_scope_preflight.ExecutionTests.test_grant_exact_pin_limits_and_explicit_approval) ... ok
+test_last_guard_or_incomplete_result_does_not_report_complete (test_scope_preflight.ExecutionTests.test_last_guard_or_incomplete_result_does_not_report_complete) ... ok
+test_pose_actual_zero_or_double_conversion_rejected (test_scope_preflight.ExecutionTests.test_pose_actual_zero_or_double_conversion_rejected) ... ok
+test_protection_closes_and_task_failure_continues (test_scope_preflight.ExecutionTests.test_protection_closes_and_task_failure_continues) ... ok
+test_stop_before_matrix_never_invokes (test_scope_preflight.ExecutionTests.test_stop_before_matrix_never_invokes) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 35.209s
+
+OK

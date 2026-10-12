@@ -1,0 +1,155 @@
+test_any_guard_stops_whole_stage (test_protocol.ContractTests.test_any_guard_stops_whole_stage) ... FAIL
+test_credit_500_after_four_and_no_duplicate_credit (test_protocol.ContractTests.test_credit_500_after_four_and_no_duplicate_credit) ... FAIL
+test_cross_binding_or_auth_restore_refused (test_protocol.ContractTests.test_cross_binding_or_auth_restore_refused) ... FAIL
+test_data_id_duplicates_refused (test_protocol.ContractTests.test_data_id_duplicates_refused) ... FAIL
+test_exact_scope_and_candidate_first (test_protocol.ContractTests.test_exact_scope_and_candidate_first) ... FAIL
+test_fault_attempt_not_refunded (test_protocol.ContractTests.test_fault_attempt_not_refunded) ... FAIL
+test_inactive_or_stale_update_token_refused (test_protocol.ContractTests.test_inactive_or_stale_update_token_refused) ... FAIL
+test_initial_not_four_successes_closes_after_four (test_protocol.ContractTests.test_initial_not_four_successes_closes_after_four) ... FAIL
+test_new_authorization_scope_not_old_eight_zero (test_protocol.ContractTests.test_new_authorization_scope_not_old_eight_zero) ... FAIL
+test_online_requires_exact_preceding_updates (test_protocol.ContractTests.test_online_requires_exact_preceding_updates) ... FAIL
+test_reserve_before_physics_and_no_second_active (test_protocol.ContractTests.test_reserve_before_physics_and_no_second_active) ... FAIL
+test_stale_ledger_cannot_write (test_protocol.ContractTests.test_stale_ledger_cannot_write) ... FAIL
+test_update_requires_current_dataset_and_initial_pass (test_protocol.ContractTests.test_update_requires_current_dataset_and_initial_pass) ... FAIL
+test_write_fault_poison (test_protocol.ContractTests.test_write_fault_poison) ... FAIL
+test_wrong_identity_or_impossible_result_rejected (test_protocol.ContractTests.test_wrong_identity_or_impossible_result_rejected) ... FAIL
+
+======================================================================
+FAIL: test_any_guard_stops_whole_stage (test_protocol.ContractTests.test_any_guard_stops_whole_stage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_credit_500_after_four_and_no_duplicate_credit (test_protocol.ContractTests.test_credit_500_after_four_and_no_duplicate_credit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_cross_binding_or_auth_restore_refused (test_protocol.ContractTests.test_cross_binding_or_auth_restore_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_data_id_duplicates_refused (test_protocol.ContractTests.test_data_id_duplicates_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_exact_scope_and_candidate_first (test_protocol.ContractTests.test_exact_scope_and_candidate_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_fault_attempt_not_refunded (test_protocol.ContractTests.test_fault_attempt_not_refunded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_inactive_or_stale_update_token_refused (test_protocol.ContractTests.test_inactive_or_stale_update_token_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_initial_not_four_successes_closes_after_four (test_protocol.ContractTests.test_initial_not_four_successes_closes_after_four)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_new_authorization_scope_not_old_eight_zero (test_protocol.ContractTests.test_new_authorization_scope_not_old_eight_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_online_requires_exact_preceding_updates (test_protocol.ContractTests.test_online_requires_exact_preceding_updates)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_reserve_before_physics_and_no_second_active (test_protocol.ContractTests.test_reserve_before_physics_and_no_second_active)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_stale_ledger_cannot_write (test_protocol.ContractTests.test_stale_ledger_cannot_write)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_update_requires_current_dataset_and_initial_pass (test_protocol.ContractTests.test_update_requires_current_dataset_and_initial_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_write_fault_poison (test_protocol.ContractTests.test_write_fault_poison)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+======================================================================
+FAIL: test_wrong_identity_or_impossible_result_rejected (test_protocol.ContractTests.test_wrong_identity_or_impossible_result_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 10, in setUp
+    self.assertIsNotNone(C,'Missing bounded learning-validation contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing bounded learning-validation contract
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+FAILED (failures=15)

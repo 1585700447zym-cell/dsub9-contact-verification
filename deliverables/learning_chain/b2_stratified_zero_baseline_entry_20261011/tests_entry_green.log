@@ -1,0 +1,14 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_closed_ledger_cannot_launch_worker (__main__.EntryTests.test_closed_ledger_cannot_launch_worker) ... ok
+test_draft_denied_before_source_or_run_creation (__main__.EntryTests.test_draft_denied_before_source_or_run_creation) ... ok
+test_missing_authorization_has_no_execution_side_effect (__main__.EntryTests.test_missing_authorization_has_no_execution_side_effect) ... ok
+test_missing_owned_exit_confirmation_stops_sequence (__main__.EntryTests.test_missing_owned_exit_confirmation_stops_sequence) ... ok
+test_modified_grant_pin_rejected (__main__.EntryTests.test_modified_grant_pin_rejected) ... ok
+test_receipt_case_mismatch_never_changes_reserved_attempt (__main__.EntryTests.test_receipt_case_mismatch_never_changes_reserved_attempt) ... ok
+test_worker_claim_cannot_be_consumed_twice (__main__.EntryTests.test_worker_claim_cannot_be_consumed_twice) ... ok
+test_wrong_nonce_order_and_gate_do_not_claim_worker (__main__.EntryTests.test_wrong_nonce_order_and_gate_do_not_claim_worker) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.160s
+
+OK

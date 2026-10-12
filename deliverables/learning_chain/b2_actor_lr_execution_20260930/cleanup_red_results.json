@@ -1,0 +1,15 @@
+{
+  "exit_code": 1,
+  "tests": 1,
+  "failures": 1,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "dbe7a56e6eea40fba4fb41788490ada92c5e2d68f51b46d93bccbbc962f0333c",
+  "test_ids": [
+    "tests.learning.test_actor_lr_runner::test_cleanup_unconfirmed_preserves_ledger_and_reports_uncertainty"
+  ]
+}

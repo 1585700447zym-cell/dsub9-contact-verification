@@ -1,0 +1,4149 @@
+[
+  {
+    "spec": {
+      "id": "initialization_center",
+      "kind": "initialization",
+      "point": "center",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_center",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_center",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.931430900003761,
+    "archive_sha256": "da153742b2a065eb71246fcb78d1b88cae381b229c2873a47eef5c0d920e8b7c",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_x_neg_75",
+      "kind": "initialization",
+      "point": "x_neg_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_x_neg_75",
+        "x_offset_m": -7.5e-05,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_x_neg_75",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        -7.5e-05,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        -7.5e-05,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.66337670001667,
+    "archive_sha256": "8032665f59a1ce820944b25edbe613f1e52dd244daadfdb75886be03eaeff377",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_x_pos_75",
+      "kind": "initialization",
+      "point": "x_pos_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_x_pos_75",
+        "x_offset_m": 7.5e-05,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_x_pos_75",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        7.5e-05,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        7.5e-05,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.6445123999146745,
+    "archive_sha256": "24abb9ac5522a395051d7050b97febf76a2246c7d66839fca45748f7bfb0d304",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_x_neg_100",
+      "kind": "initialization",
+      "point": "x_neg_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_x_neg_100",
+        "x_offset_m": -0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_x_neg_100",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        -0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        -0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.6871065000304952,
+    "archive_sha256": "7c0789e56734a560f47854a1d8259935fa3feec5a649a394089a197641ed0f4b",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_x_pos_100",
+      "kind": "initialization",
+      "point": "x_pos_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_x_pos_100",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_x_pos_100",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.773290100041777,
+    "archive_sha256": "5acb4e38d1adc0d5e8001de30392160999f08c65fba4faee54f6f89f75720fed",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_y_neg_75",
+      "kind": "initialization",
+      "point": "y_neg_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_y_neg_75",
+        "x_offset_m": 0.0,
+        "y_offset_m": -7.5e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_y_neg_75",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        -7.5e-05,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        -7.5e-05,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.7205513999797404,
+    "archive_sha256": "d471ddc76ca05d80e00176388b0505ec1363d483cae8c05a41012c8eb6c40797",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_y_pos_75",
+      "kind": "initialization",
+      "point": "y_pos_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_y_pos_75",
+        "x_offset_m": 0.0,
+        "y_offset_m": 7.5e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_y_pos_75",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        7.5e-05,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        7.5e-05,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.7424559999490157,
+    "archive_sha256": "fc293a3a35d8c1fb941da81258e3abe630122b938c9ecd2ad30064487e4e9aba",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_y_neg_100",
+      "kind": "initialization",
+      "point": "y_neg_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_y_neg_100",
+        "x_offset_m": 0.0,
+        "y_offset_m": -0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_y_neg_100",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        -0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        -0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.734664099989459,
+    "archive_sha256": "a6af4b181f5f9a5254dc6d294cd66743042b349f142446fec84f104ae60ee035",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "initialization_y_pos_100",
+      "kind": "initialization",
+      "point": "y_pos_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "initialization_y_pos_100",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "initialization_y_pos_100",
+    "kind": "initialization",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": false,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 0
+    },
+    "events": [],
+    "physical_steps": 0,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 0.0,
+    "stop_time_s": null,
+    "final_reason": null,
+    "final_phase": "RUNNING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 2.706705500022508,
+    "archive_sha256": "b3cab51fc5d7b667a547d6fc48a5ee8fc869af0373ccff4851bf58daa2a47192",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_center",
+      "kind": "zero",
+      "point": "center",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_center",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_center",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 30450
+    },
+    "events": [
+      {
+        "time_s": 4.089999999999782,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 30450,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0010411487000259111,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0044721359549995746
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 6.090000000004003,
+    "stop_time_s": 4.089999999999782,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 92.30031129997224,
+    "archive_sha256": "5d4c0f600375bed99491c1a4d6393c96bd8495c071a570fa5e9672cbea3a0717",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_x_neg_75",
+      "kind": "zero",
+      "point": "x_neg_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_x_neg_75",
+        "x_offset_m": -7.5e-05,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_x_neg_75",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        -7.5e-05,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        -7.5e-05,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      }
+    },
+    "task_outcome": "TASK_FAILURE",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 30450
+    },
+    "events": [
+      {
+        "time_s": 4.089999999999782,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 30450,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0010411487000259111,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0044721359549995746
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 6.090000000004003,
+    "stop_time_s": 4.089999999999782,
+    "final_reason": "TARGET_POSE_NOT_SETTLED",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 110.84571009990759,
+    "archive_sha256": "a6cbae0c196afa993c3a4f315731da2c795e1c575d25836236cfc5455403419c",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_x_pos_75",
+      "kind": "zero",
+      "point": "x_pos_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_x_pos_75",
+        "x_offset_m": 7.5e-05,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_x_pos_75",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        7.5e-05,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        7.5e-05,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      }
+    },
+    "task_outcome": "TASK_FAILURE",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 30450
+    },
+    "events": [
+      {
+        "time_s": 4.089999999999782,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 30450,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0010411487000259111,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0044721359549995746
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 6.090000000004003,
+    "stop_time_s": 4.089999999999782,
+    "final_reason": "TARGET_POSE_NOT_SETTLED",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 122.93427119997796,
+    "archive_sha256": "38dcd14b644f54aa54793243013412174563a6e7859e3af5e5874ee2ec9dc152",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_x_neg_100",
+      "kind": "zero",
+      "point": "x_neg_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_x_neg_100",
+        "x_offset_m": -0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_x_neg_100",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        -0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        -0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0007897926888818615,
+        "checked_substeps": 54910
+      }
+    },
+    "task_outcome": "TASK_FAILURE",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0007897926888818615,
+      "checked_substeps": 54910
+    },
+    "events": [
+      {
+        "time_s": 8.982000000005744,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 54910,
+    "peaks": {
+      "force_N": 0.02447401028819452,
+      "torque_G_Nm": 0.00014739522912905027,
+      "penetration_m": 7.1062189250221505e-06,
+      "speed_m_s": 0.0018457862813903683,
+      "drive_force_components_N": [
+        0.007064800526169347,
+        0.005999601433723244,
+        0.024475375070335675
+      ],
+      "drive_torque_components_Nm": [
+        9.964229591908905e-06,
+        7.265724443483607e-06,
+        5.850127861324413e-06
+      ],
+      "contact_count": 1971.0
+    },
+    "end_time_s": 10.982000000001083,
+    "stop_time_s": 8.982000000005744,
+    "final_reason": "TARGET_POSE_NOT_SETTLED",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.04525178776321956,
+    "pulse": null,
+    "wall_seconds": 229.34658219991252,
+    "archive_sha256": "9c5c7d369265ca8ba609d190f5fb035432276d0d06f347f57974fe1d66514071",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_x_pos_100",
+      "kind": "zero",
+      "point": "x_pos_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_x_pos_100",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_x_pos_100",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0016363814084113832,
+        "checked_substeps": 62830
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0016363814084113832,
+      "checked_substeps": 62830
+    },
+    "events": [
+      {
+        "time_s": 10.566000000002052,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 62830,
+    "peaks": {
+      "force_N": 0.024474290943882458,
+      "torque_G_Nm": 0.0001633620103583486,
+      "penetration_m": 7.135577284739954e-06,
+      "speed_m_s": 0.001883279056864502,
+      "drive_force_components_N": [
+        0.0075008696469710655,
+        0.008662858588850395,
+        0.02447583847054623
+      ],
+      "drive_torque_components_Nm": [
+        2.0050359172300405e-05,
+        1.072107950840984e-05,
+        1.3742735711813113e-05
+      ],
+      "contact_count": 2185.0
+    },
+    "end_time_s": 12.565999999997391,
+    "stop_time_s": 10.566000000002052,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.09375774837564572,
+    "pulse": null,
+    "wall_seconds": 237.29242730000988,
+    "archive_sha256": "ed2098204ff2c2a2abf323146c135a3d023bc31aa5e27716cc7e3f63cdd318a6",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_y_neg_75",
+      "kind": "zero",
+      "point": "y_neg_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_y_neg_75",
+        "x_offset_m": 0.0,
+        "y_offset_m": -7.5e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_y_neg_75",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        -7.5e-05,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        -7.5e-05,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      }
+    },
+    "task_outcome": "TASK_FAILURE",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 30450
+    },
+    "events": [
+      {
+        "time_s": 4.089999999999782,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 30450,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0010411487000259111,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0044721359549995746
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 6.090000000004003,
+    "stop_time_s": 4.089999999999782,
+    "final_reason": "TARGET_POSE_NOT_SETTLED",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 113.84475579997525,
+    "archive_sha256": "b6ee8e69385aa10a703aedc624ac7ff5e079c64812c7b96e941303cebcfa865f",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_y_pos_75",
+      "kind": "zero",
+      "point": "y_pos_75",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_y_pos_75",
+        "x_offset_m": 0.0,
+        "y_offset_m": 7.5e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_y_pos_75",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        7.5e-05,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        7.5e-05,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      }
+    },
+    "task_outcome": "TASK_FAILURE",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0,
+      "checked_substeps": 30450
+    },
+    "events": [
+      {
+        "time_s": 4.089999999999782,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 30450,
+    "peaks": {
+      "force_N": 0.0,
+      "torque_G_Nm": 0.0,
+      "penetration_m": 0.0,
+      "speed_m_s": 0.0010411487000259111,
+      "drive_force_components_N": [
+        0.0,
+        0.0,
+        0.0044721359549995746
+      ],
+      "drive_torque_components_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_count": 0
+    },
+    "end_time_s": 6.090000000004003,
+    "stop_time_s": 4.089999999999782,
+    "final_reason": "TARGET_POSE_NOT_SETTLED",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.0,
+    "pulse": null,
+    "wall_seconds": 115.82914439996239,
+    "archive_sha256": "c5e48e25ab69eb365a8ee3305b75345002997f5985d9b7f9150a2cd98f3bb992",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_y_neg_100",
+      "kind": "zero",
+      "point": "y_neg_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_y_neg_100",
+        "x_offset_m": 0.0,
+        "y_offset_m": -0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_y_neg_100",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        -0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        -0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0019027187496787356,
+        "checked_substeps": 58830
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0019027187496787356,
+      "checked_substeps": 58830
+    },
+    "events": [
+      {
+        "time_s": 9.766000000003917,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 58830,
+    "peaks": {
+      "force_N": 0.0244742828248713,
+      "torque_G_Nm": 0.00015083553179183395,
+      "penetration_m": 7.1389225478462114e-06,
+      "speed_m_s": 0.0018763495027012583,
+      "drive_force_components_N": [
+        0.007026388933718947,
+        0.007139810805249576,
+        0.02447582773761342
+      ],
+      "drive_torque_components_Nm": [
+        1.925049837955508e-05,
+        2.3905012365394003e-05,
+        2.230680173273125e-05
+      ],
+      "contact_count": 2232.0
+    },
+    "end_time_s": 11.765999999999256,
+    "stop_time_s": 9.766000000003917,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.10901775395700052,
+    "pulse": null,
+    "wall_seconds": 241.23666310007684,
+    "archive_sha256": "379b94f6d9c98d1100ace74f316a34b5d0f3dd328aaa6a9c1c32547e9ae768e1",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "zero_y_pos_100",
+      "kind": "zero",
+      "point": "y_pos_100",
+      "axis": null,
+      "sign": 0,
+      "case": {
+        "name": "zero_y_pos_100",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "zero_y_pos_100",
+    "kind": "zero",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.001569828672500994,
+        "checked_substeps": 67720
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.001569828672500994,
+      "checked_substeps": 67720
+    },
+    "events": [
+      {
+        "time_s": 11.543999999999773,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 67720,
+    "peaks": {
+      "force_N": 0.024474261683900468,
+      "torque_G_Nm": 0.00018444759474668074,
+      "penetration_m": 7.13814222800085e-06,
+      "speed_m_s": 0.0018232236652303085,
+      "drive_force_components_N": [
+        0.008830830662666041,
+        0.00761967788008895,
+        0.02447581350540936
+      ],
+      "drive_torque_components_Nm": [
+        1.9621885304468644e-05,
+        1.0568259180060835e-05,
+        1.2955648875584586e-05
+      ],
+      "contact_count": 2599.0
+    },
+    "end_time_s": 13.543999999995112,
+    "stop_time_s": 11.543999999999773,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.08994455749293168,
+    "pulse": null,
+    "wall_seconds": 272.13298600004055,
+    "archive_sha256": "6b4516f733e35ae5fbaafb4367604abf02cd0c75297e094809eb852c380adfbe",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_x_neg_100_neg",
+      "kind": "pulse",
+      "point": "x_neg_100",
+      "axis": 0,
+      "sign": -1,
+      "case": {
+        "name": "pulse_x_neg_100_neg",
+        "x_offset_m": -0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_x_neg_100_neg",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        -0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        -0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0007969034504072262,
+        "checked_substeps": 54920
+      }
+    },
+    "task_outcome": "TASK_FAILURE",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0007969034504072262,
+      "checked_substeps": 54920
+    },
+    "events": [
+      {
+        "time_s": 8.98400000000574,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 54920,
+    "peaks": {
+      "force_N": 0.0244791194272482,
+      "torque_G_Nm": 0.00015376472686910503,
+      "penetration_m": 7.1062514960153324e-06,
+      "speed_m_s": 0.0018438176331869135,
+      "drive_force_components_N": [
+        0.007053613348485615,
+        0.006008047136817005,
+        0.024475377365763606
+      ],
+      "drive_torque_components_Nm": [
+        1.0001736233671204e-05,
+        7.479570537088034e-06,
+        5.947330286588419e-06
+      ],
+      "contact_count": 1971.0
+    },
+    "end_time_s": 10.984000000001078,
+    "stop_time_s": 8.98400000000574,
+    "final_reason": "TARGET_POSE_NOT_SETTLED",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.04565920438774697,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 211.05612620001193,
+    "archive_sha256": "fe3b98401361b4a6e62b4fe8aec5cb21581b21711bdcca989ce2fc26293edaaa",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_x_neg_100_pos",
+      "kind": "pulse",
+      "point": "x_neg_100",
+      "axis": 0,
+      "sign": 1,
+      "case": {
+        "name": "pulse_x_neg_100_pos",
+        "x_offset_m": -0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_x_neg_100_pos",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        -0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        -0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.000793336096115301,
+        "checked_substeps": 54590
+      }
+    },
+    "task_outcome": "TASK_FAILURE",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.000793336096115301,
+      "checked_substeps": 54590
+    },
+    "events": [
+      {
+        "time_s": 8.918000000005893,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 54590,
+    "peaks": {
+      "force_N": 0.02447839023488185,
+      "torque_G_Nm": 0.0001558242511917369,
+      "penetration_m": 7.106226186716779e-06,
+      "speed_m_s": 0.0018152058358382555,
+      "drive_force_components_N": [
+        0.007053922895792983,
+        0.00601274154454786,
+        0.024475359176435185
+      ],
+      "drive_torque_components_Nm": [
+        1.0171095545080416e-05,
+        7.336054949894621e-06,
+        5.872871731776107e-06
+      ],
+      "contact_count": 1948.0
+    },
+    "end_time_s": 10.918000000001232,
+    "stop_time_s": 8.918000000005893,
+    "final_reason": "TARGET_POSE_NOT_SETTLED",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.04545481004279177,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 223.80194669996854,
+    "archive_sha256": "92bc27b1a31f9a36a6b3fb178edaffa488147ec0b68ba79984a5915a258e6ea5",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_x_pos_100_neg",
+      "kind": "pulse",
+      "point": "x_pos_100",
+      "axis": 0,
+      "sign": -1,
+      "case": {
+        "name": "pulse_x_pos_100_neg",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_x_pos_100_neg",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.00169141372769024,
+        "checked_substeps": 62800
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.00169141372769024,
+      "checked_substeps": 62800
+    },
+    "events": [
+      {
+        "time_s": 10.560000000002066,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 62800,
+    "peaks": {
+      "force_N": 0.02447905397066844,
+      "torque_G_Nm": 0.0001521278363702318,
+      "penetration_m": 7.135642956785868e-06,
+      "speed_m_s": 0.0018858004601447766,
+      "drive_force_components_N": [
+        0.007095964810295723,
+        0.008633204607902562,
+        0.0244758388379961
+      ],
+      "drive_torque_components_Nm": [
+        1.9994554711673437e-05,
+        1.057056111712021e-05,
+        1.5369394959557214e-05
+      ],
+      "contact_count": 2116.0
+    },
+    "end_time_s": 12.559999999997405,
+    "stop_time_s": 10.560000000002066,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.09691086800714066,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 243.7379550000187,
+    "archive_sha256": "86dd6b1470f8c2e5bf5bae9fe666bae743ff5b85d1e669119e4497c4d5da3871",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_x_pos_100_pos",
+      "kind": "pulse",
+      "point": "x_pos_100",
+      "axis": 0,
+      "sign": 1,
+      "case": {
+        "name": "pulse_x_pos_100_pos",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_x_pos_100_pos",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0001,
+        0.0,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0001,
+        0.0,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0016387190756549433,
+        "checked_substeps": 63090
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0016387190756549433,
+      "checked_substeps": 63090
+    },
+    "events": [
+      {
+        "time_s": 10.618000000001931,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 63090,
+    "peaks": {
+      "force_N": 0.02447905456958181,
+      "torque_G_Nm": 0.0001588827465141516,
+      "penetration_m": 7.135671974885915e-06,
+      "speed_m_s": 0.0019361486286753483,
+      "drive_force_components_N": [
+        0.0072570151013158085,
+        0.00858036335778796,
+        0.024475838305092725
+      ],
+      "drive_torque_components_Nm": [
+        1.9498649740673508e-05,
+        1.1518330754390404e-05,
+        1.4452486067148587e-05
+      ],
+      "contact_count": 2195.0
+    },
+    "end_time_s": 12.61799999999727,
+    "stop_time_s": 10.618000000001931,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.09389168684260771,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 244.23168179998174,
+    "archive_sha256": "16ad19324ba14dbfce923a6faf3b5725510ce21b125c0bad75cbbc16fbacdc96",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_y_neg_100_neg",
+      "kind": "pulse",
+      "point": "y_neg_100",
+      "axis": 1,
+      "sign": -1,
+      "case": {
+        "name": "pulse_y_neg_100_neg",
+        "x_offset_m": 0.0,
+        "y_offset_m": -0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_y_neg_100_neg",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        -0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        -0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.001848591165678729,
+        "checked_substeps": 58820
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.001848591165678729,
+      "checked_substeps": 58820
+    },
+    "events": [
+      {
+        "time_s": 9.764000000003922,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 58820,
+    "peaks": {
+      "force_N": 0.024479039963081067,
+      "torque_G_Nm": 0.00015375762685742564,
+      "penetration_m": 7.138902991562149e-06,
+      "speed_m_s": 0.001911579354486078,
+      "drive_force_components_N": [
+        0.00705246611662136,
+        0.007159784130740254,
+        0.024475829139060632
+      ],
+      "drive_torque_components_Nm": [
+        1.932386428188419e-05,
+        1.3944966994800106e-05,
+        1.6576172305096388e-05
+      ],
+      "contact_count": 2232.0
+    },
+    "end_time_s": 11.76399999999926,
+    "stop_time_s": 9.764000000003922,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.1059164718385603,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 241.8620096000377,
+    "archive_sha256": "1f37b0b460a15d3153f479f0cc0e7ebf84ff80cd94028acacaa659f3a77233de",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_y_neg_100_pos",
+      "kind": "pulse",
+      "point": "y_neg_100",
+      "axis": 1,
+      "sign": 1,
+      "case": {
+        "name": "pulse_y_neg_100_pos",
+        "x_offset_m": 0.0,
+        "y_offset_m": -0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_y_neg_100_pos",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        -0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        -0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0018001274422636314,
+        "checked_substeps": 58680
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0018001274422636314,
+      "checked_substeps": 58680
+    },
+    "events": [
+      {
+        "time_s": 9.736000000003987,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 58680,
+    "peaks": {
+      "force_N": 0.02447903319002921,
+      "torque_G_Nm": 0.00015407073761552638,
+      "penetration_m": 7.138981063809059e-06,
+      "speed_m_s": 0.0018618270069014843,
+      "drive_force_components_N": [
+        0.007052650789416447,
+        0.007054872511047387,
+        0.024475826206976487
+      ],
+      "drive_torque_components_Nm": [
+        1.8917141045168524e-05,
+        1.0427062431229374e-05,
+        1.1580819713873931e-05
+      ],
+      "contact_count": 2235.0
+    },
+    "end_time_s": 11.735999999999326,
+    "stop_time_s": 9.736000000003987,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.10313970502738586,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 227.52038240002003,
+    "archive_sha256": "3c7ab31b8d8602bdad06e80633739f841972318f19a6068647b825644cfb5710",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_y_pos_100_neg",
+      "kind": "pulse",
+      "point": "y_pos_100",
+      "axis": 1,
+      "sign": -1,
+      "case": {
+        "name": "pulse_y_pos_100_neg",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_y_pos_100_neg",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0016151821927906436,
+        "checked_substeps": 67770
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0016151821927906436,
+      "checked_substeps": 67770
+    },
+    "events": [
+      {
+        "time_s": 11.55399999999975,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 67770,
+    "peaks": {
+      "force_N": 0.024479168460031134,
+      "torque_G_Nm": 0.0001591688323609867,
+      "penetration_m": 7.138193676241275e-06,
+      "speed_m_s": 0.0018355359180380008,
+      "drive_force_components_N": [
+        0.008842981905013756,
+        0.0076279706342194,
+        0.02447580962825391
+      ],
+      "drive_torque_components_Nm": [
+        1.9653352504713248e-05,
+        1.1566273198189549e-05,
+        1.2630471753529673e-05
+      ],
+      "contact_count": 2610.0
+    },
+    "end_time_s": 13.553999999995089,
+    "stop_time_s": 11.55399999999975,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.09254312279158955,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 262.72330449998844,
+    "archive_sha256": "f51ad523eac6dc01e754e3d5bafef84b3c0f64291041c80d083fa59db7ebac43",
+    "passed": true
+  },
+  {
+    "spec": {
+      "id": "pulse_y_pos_100_pos",
+      "kind": "pulse",
+      "point": "y_pos_100",
+      "axis": 1,
+      "sign": 1,
+      "case": {
+        "name": "pulse_y_pos_100_pos",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      }
+    },
+    "id": "pulse_y_pos_100_pos",
+    "kind": "pulse",
+    "initialization_valid": true,
+    "simulation_valid": true,
+    "physical_stopped": true,
+    "observation_valid": true,
+    "masking_valid": true,
+    "completed": true,
+    "error": null,
+    "training_admitted": false,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "initial_state": {
+      "time_s": 0.0,
+      "position_m": [
+        0.0,
+        0.0001,
+        -0.004
+      ],
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "velocity_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_wrench_G": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "penetration_m": 0.0,
+      "contact_count": 0,
+      "phase": "RUNNING",
+      "reference_qpos": [
+        0.0,
+        0.0001,
+        -0.004,
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "raw_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limited_command_world": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "drive_wrench_M": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false,
+      "model_scope_qualified": false,
+      "training_admitted": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0015993308730985196,
+        "checked_substeps": 67750
+      }
+    },
+    "task_outcome": "FULL_SUCCESS",
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0015993308730985196,
+      "checked_substeps": 67750
+    },
+    "events": [
+      {
+        "time_s": 11.54999999999976,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "physical_steps": 67750,
+    "peaks": {
+      "force_N": 0.024478966951545823,
+      "torque_G_Nm": 0.00017923365900233032,
+      "penetration_m": 7.138101760216761e-06,
+      "speed_m_s": 0.001835622161830676,
+      "drive_force_components_N": [
+        0.008865598936117975,
+        0.0076202927251678345,
+        0.024475817613028906
+      ],
+      "drive_torque_components_Nm": [
+        1.963176375448199e-05,
+        1.2138625200092244e-05,
+        1.2848523948263136e-05
+      ],
+      "contact_count": 2616.0
+    },
+    "end_time_s": 13.549999999995098,
+    "stop_time_s": 11.54999999999976,
+    "final_reason": "GEOMETRIC_SUCCESS",
+    "final_phase": "STOPPING",
+    "max_rotation_deg": 0.09163490907351822,
+    "pulse": {
+      "trigger_cycle": 177,
+      "trigger_time_s": 0.35399999999999365,
+      "request_cycles": 100,
+      "requested_duration_s": 0.2,
+      "end_reason": "duration_completed"
+    },
+    "wall_seconds": 262.16219830000773,
+    "archive_sha256": "06465e1086de99bc93ac3de28783f7257b006e336ebe9b4fe3b495845a9b7764",
+    "passed": true
+  }
+]

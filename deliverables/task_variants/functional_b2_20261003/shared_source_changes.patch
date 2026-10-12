@@ -1,0 +1,60 @@
+--- before/tools/learning/session.py
++++ after/tools/learning/session.py
+@@ -82,16 +82,24 @@
+                              admittance_velocity=c.admittance.velocity.tolist(),
+                              admittance_offset=c.admittance.offset.tolist(), events=c.events))
+ 
++    def policy_observation(self, row):
++        from tools.validation.run_b2_search import policy_observation
++        return policy_observation(row, self.initial)
++
++    def completion_ready(self, row):
++        from tools.validation.run_b1_baseline import geometric_finish
++        return geometric_finish(row, criteria=self.finish_criteria)
++
+     def prepare_cycle(self):
+         if not self._ready:
+             raise RuntimeError('A successful reset is required')
+         if self._cache is not None:
+             return deepcopy(self._cache)
+-        from tools.validation.run_b2_search import policy_observation, stable_for_recovery
++        from tools.validation.run_b2_search import stable_for_recovery
+         from tools.control.search_recovery import resume_after_recovery
+         e, c = self.env, self.controller.config
+         row = e.observe()
+-        obs = policy_observation(row, self.initial)
++        obs = self.policy_observation(row)
+         command = np.zeros(6)
+         if not self.task_finished and not self.done:
+             if e.phase == 'TERMINAL':
+@@ -146,7 +154,6 @@
+ 
+     def _post_task_cycle(self, row):
+         from tools.control.search_recovery import latched_contact_guard
+-        from tools.validation.run_b1_baseline import geometric_finish
+         FINISH = self.finish_criteria
+         e, c = self.env, self.controller.config
+         if e.phase == 'TERMINAL':
+@@ -171,7 +178,7 @@
+         if self.reason is not None:
+             peaks_ok = (e.peaks['force_N'] < FINISH['force_N'] and e.peaks['torque_G_Nm'] < FINISH['torque_Nm']
+                         and e.peaks['penetration_m'] < FINISH['penetration_m'])
+-            if (self.reason == 'TARGET_PLANE_REACHED' and geometric_finish(row, criteria=FINISH) and peaks_ok
++            if (self.reason == 'TARGET_PLANE_REACHED' and self.completion_ready(row) and peaks_ok
+                     and (self.geometry_checker is None or self.geometry_checker(row))):
+                 if self.hold_start is None:
+                     self.hold_start = row['time_s']
+--- before/tools/validation/run_clearance_preflight.py
++++ after/tools/validation/run_clearance_preflight.py
+@@ -96,6 +96,11 @@
+     for key in ('guard_facts','peaks','events','stop_samples'):
+         try:facts[key]=getattr(env,key,None)
+         except Exception as exc:facts[key]={'read_error':repr(exc)}
++    try:
++        controller=getattr(session,'controller',None)
++        facts['controller_events']=getattr(controller,'events',None)
++    except Exception as exc:
++        facts['controller_events']={'read_error':repr(exc)}
+     try:
+         facts['initial_or_current_state']=dict(qpos=list(env.data.qpos),qvel=list(env.data.qvel),time_s=float(env.data.time))
+     except Exception as exc:

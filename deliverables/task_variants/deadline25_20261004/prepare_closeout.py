@@ -1,0 +1,17 @@
+from pathlib import Path
+OUT=Path(__file__).resolve().parent;OLD=OUT.parent/'reference_search_20261004'
+s=(OLD/'update_documents.py').read_text(encoding='utf-8')
+s=s.replace('reference_search_20261004','deadline25_20261004').replace('2026-10-04-reference-search','2026-10-04-deadline25-preflight')
+s=s.replace('reference-search-current','deadline25-current').replace('axis-search-current','reference-search-current')
+s=s.replace('184','199').replace('驱动参考一致性','25秒共同任务').replace('TV-07','TV-08').replace('TV-01～06','TV-01～07')
+s=s.replace('新增驱动参考反馈、离散螺旋前馈及参考包络前瞻核验，修正恢复后观测时序；分轴/净推进及原保护保持；尚未接入残差学习','新共同任务总时限20→25秒；驱动参考控制器、会话、功能判据和保护保持，未接入残差学习')
+s=s.replace('本轮修共同控制的速度到驱动参考映射，未新增残差/约束候选比较','本轮仅验证共同总时限，控制器不变，未新增残差/约束候选比较')
+s=s.replace('| 分轴搜索与净推进最新验证 |','| 驱动参考一致性最新验证 |').replace('| 前轮分轴搜索与净推进验证 |','| 前轮驱动参考一致性验证 |')
+s=s.replace('SEARCH反馈采用目标与当前驱动参考的误差，前馈采用连续目标点差分；按实际驱动限速/加速度预测下一参考，越界受控停止。保留分轴/净推进，恢复后首命令使用重置后的参考与命令。离散末端不可行段最多提前一个控制周期结束，不扩大圆盘；两项恢复观测反例已修复。','仅将共同任务总动作时限改为25秒；当前控制器、几何、功能判据和保护不变。20秒历史失败保留；未来基线须在相同25秒任务版本公平重评。')
+s=s.replace('run_reference_search_preflight.py','run_deadline25_preflight.py')
+s=s.replace("r'^最新分轴搜索:.*$'", "r'^最新参考跟踪:.*$'")
+s=s.replace("r'^最新分轴搜索：.*$'", "r'^最新参考跟踪：.*$'").replace("f'最新参考跟踪：", "f'最新25秒任务：")
+s=s.replace('[参考跟踪旧新对照]','[20秒与25秒同控制器对照]')
+s=s.replace('[驱动参考对照](../../../{rel}/reference_diagnosis.png)','[末段深度、配合与稳定](../../../{rel}/completion.png)')
+s=s.replace('[分轴搜索结果]','[25秒任务结果]')
+(OUT/'update_documents.py').write_text(s,encoding='utf-8')

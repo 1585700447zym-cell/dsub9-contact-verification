@@ -1,0 +1,11 @@
+{
+  "method": "one new XY probe vs preserved V2",
+  "input_index": "first_frozen_x100/results_index.json",
+  "input_index_sha256": "213bc748f26174440a1994ad893d3667f99a5b20d5342179282ebba4da66c6b8",
+  "reference": {
+    "file": "deliverables/b2_exit_gate_v2/verified_frozen_x100/runs/x_offset_pos_100um_b2_v2.json.gz",
+    "sha256": "78b4c342264f2630d0c57573467f34c3a82f8f6b2bca80868f4216c26dfc63b8",
+    "index": "deliverables/b2_exit_gate_v2/verified_frozen_x100/results_index.json",
+    "index_sha256": "3909f623a2d51a0d889ced4419ee8176bd2dafefaf646cfa01b2230406b70489"
+  }
+}

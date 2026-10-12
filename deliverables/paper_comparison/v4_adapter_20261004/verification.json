@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-05T00:20:15.859171+08:00",
+  "tests_passed": 297,
+  "full_project_suite": false,
+  "review": {
+    "independent_author": true,
+    "fresh_context": true,
+    "initial_critical": 0,
+    "initial_important": 4,
+    "fixed_important": 4,
+    "deferred_minor": 0
+  },
+  "prior_sealed_files_verified": 2334,
+  "input_files": 901,
+  "source_snapshots": 195,
+  "document_snapshots": 8,
+  "links_checked": 19,
+  "live_changes_since_execution": [
+    "docs/superpowers/plans/2026-10-04-v4-residual-adapter.md"
+  ],
+  "bounded_preflight_passed": true,
+  "attempts": 9,
+  "completed": 9,
+  "unused_closed": 0,
+  "cumulative": 139,
+  "physical_substeps": 817720,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "training_admitted": false,
+  "stage_B2_complete": false,
+  "automatic_tracking": "PAUSED"
+}

@@ -1,0 +1,39 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_33_reused_42_pending_75 (__main__.AdmissionTests.test_33_reused_42_pending_75) ... ok
+test_all_42_closes (__main__.AdmissionTests.test_all_42_closes) ... ok
+test_both_unauthorized_cli_fail_before_execution (__main__.AdmissionTests.test_both_unauthorized_cli_fail_before_execution) ... ok
+test_cost_caps (__main__.AdmissionTests.test_cost_caps) ... ok
+test_exit_or_identity_failure_closes (__main__.AdmissionTests.test_exit_or_identity_failure_closes) ... ok
+test_first_12_then_next (__main__.AdmissionTests.test_first_12_then_next) ... ok
+test_grant_draft_refused (__main__.AdmissionTests.test_grant_draft_refused) ... ok
+test_import_isolation_check (__main__.AdmissionTests.test_import_isolation_check) ... ok
+test_invalid_guard_unstopped_close (__main__.AdmissionTests.test_invalid_guard_unstopped_close) ... ok
+test_missing_or_reordered_precheck_refused (__main__.AdmissionTests.test_missing_or_reordered_precheck_refused) ... ok
+test_no_nonzero_evidence_closes_first_12 (__main__.AdmissionTests.test_no_nonzero_evidence_closes_first_12) ... ok
+test_numeric_certificate_requires_closed_proof (__main__.AdmissionTests.test_numeric_certificate_requires_closed_proof) ... ok
+test_numeric_proof_cross_run_splice_refused (__main__.AdmissionTests.test_numeric_proof_cross_run_splice_refused) ... ok
+test_numeric_raw_process_members_and_receipt_bound (__main__.AdmissionTests.test_numeric_raw_process_members_and_receipt_bound) ... ok
+test_open_exact_grant (__main__.AdmissionTests.test_open_exact_grant) ... ok
+test_ordinary_failure_is_scored_and_continues (__main__.AdmissionTests.test_ordinary_failure_is_scored_and_continues) ... ok
+test_package_exit_recovers_charged_receipt (__main__.AdmissionTests.test_package_exit_recovers_charged_receipt) ... ok
+test_package_exit_retains_lower_bound_if_worker_interrupted (__main__.AdmissionTests.test_package_exit_retains_lower_bound_if_worker_interrupted) ... ok
+test_runtime_calls_without_owned_claim_refused (__main__.AdmissionTests.test_runtime_calls_without_owned_claim_refused) ... ok
+test_schedule (__main__.AdmissionTests.test_schedule) ... ok
+test_source_states_exact_old_inputs (__main__.AdmissionTests.test_source_states_exact_old_inputs) ... ok
+test_weight_bytes_manifest_and_old_actor_agree (__main__.AdmissionTests.test_weight_bytes_manifest_and_old_actor_agree) ... ok
+test_active_predict_and_command_audit (__main__.DriverTests.test_active_predict_and_command_audit) ... ok
+test_command_drift_refused (__main__.DriverTests.test_command_drift_refused) ... ok
+test_cycle_stop_before_predict (__main__.DriverTests.test_cycle_stop_before_predict) ... ok
+test_failed_prediction_charged (__main__.DriverTests.test_failed_prediction_charged) ... ok
+test_first_cycle_failure_preserves_latest_physical_facts (__main__.DriverTests.test_first_cycle_failure_preserves_latest_physical_facts) ... ok
+test_inactive_never_predicts (__main__.DriverTests.test_inactive_never_predicts) ... ok
+test_late_failure_uses_current_not_partial_snapshot (__main__.DriverTests.test_late_failure_uses_current_not_partial_snapshot) ... ok
+test_out_of_range_action_refused (__main__.DriverTests.test_out_of_range_action_refused) ... ok
+test_permission_mismatch_before_predict (__main__.DriverTests.test_permission_mismatch_before_predict) ... ok
+test_unconstructed_failure_explicitly_marks_missing (__main__.DriverTests.test_unconstructed_failure_explicitly_marks_missing) ... ok
+test_changed_binding_invalidates_old_pass_flags (__main__.RebindingTests.test_changed_binding_invalidates_old_pass_flags) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 7.495s
+
+OK

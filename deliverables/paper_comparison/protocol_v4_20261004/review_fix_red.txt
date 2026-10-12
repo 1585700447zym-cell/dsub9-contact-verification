@@ -1,0 +1,59 @@
+.........................FFFFFFFFFFF                                     [100%]
+================================== FAILURES ===================================
+_ test_review_failure_category_must_match_independent_facts[INVALID_SIMULATION] _
+tests\task_variants\test_paper_comparison.py:107: in test_review_failure_category_must_match_independent_facts
+    with pytest.raises(ValueError):summarize([r],['a'])
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_review_failure_category_must_match_independent_facts[STOP_NOT_QUALIFIED] _
+tests\task_variants\test_paper_comparison.py:107: in test_review_failure_category_must_match_independent_facts
+    with pytest.raises(ValueError):summarize([r],['a'])
+E   Failed: DID NOT RAISE <class 'ValueError'>
+__ test_review_failure_category_must_match_independent_facts[CONTACT_GUARD] ___
+tests\task_variants\test_paper_comparison.py:107: in test_review_failure_category_must_match_independent_facts
+    with pytest.raises(ValueError):summarize([r],['a'])
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_review_failure_category_must_match_independent_facts[MOTION_VIOLATION] _
+tests\task_variants\test_paper_comparison.py:107: in test_review_failure_category_must_match_independent_facts
+    with pytest.raises(ValueError):summarize([r],['a'])
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____ test_review_falsely_valid_invalid_attempt_cannot_create_pilot_signal _____
+tests\task_variants\test_paper_comparison.py:113: in test_review_falsely_valid_invalid_attempt_cannot_create_pilot_signal
+    with pytest.raises(ValueError):
+E   Failed: DID NOT RAISE <class 'ValueError'>
+____________________ test_review_guard_facts_and_priority _____________________
+tests\task_variants\test_paper_comparison.py:119: in test_review_guard_facts_and_priority
+    with pytest.raises(ValueError):summarize([r],['a'])
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_review_common_fingerprint_binds_real_dependencies[tools/validation/run_b2_search.py] _
+tests\task_variants\test_paper_comparison.py:134: in test_review_common_fingerprint_binds_real_dependencies
+    from tools.evaluation.paper_comparison import build_common_contract
+E   ImportError: cannot import name 'build_common_contract' from 'tools.evaluation.paper_comparison' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\evaluation\paper_comparison.py)
+_ test_review_common_fingerprint_binds_real_dependencies[tools/validation/native313_matrix_audit.py] _
+tests\task_variants\test_paper_comparison.py:134: in test_review_common_fingerprint_binds_real_dependencies
+    from tools.evaluation.paper_comparison import build_common_contract
+E   ImportError: cannot import name 'build_common_contract' from 'tools.evaluation.paper_comparison' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\evaluation\paper_comparison.py)
+_ test_review_common_fingerprint_binds_real_dependencies[tools/validation/run_contact_candidate_stop.py] _
+tests\task_variants\test_paper_comparison.py:134: in test_review_common_fingerprint_binds_real_dependencies
+    from tools.evaluation.paper_comparison import build_common_contract
+E   ImportError: cannot import name 'build_common_contract' from 'tools.evaluation.paper_comparison' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\evaluation\paper_comparison.py)
+_ test_review_common_fingerprint_binds_real_dependencies[tools/validation/run_contact_cases.py] _
+tests\task_variants\test_paper_comparison.py:134: in test_review_common_fingerprint_binds_real_dependencies
+    from tools.evaluation.paper_comparison import build_common_contract
+E   ImportError: cannot import name 'build_common_contract' from 'tools.evaluation.paper_comparison' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\evaluation\paper_comparison.py)
+____________ test_review_evaluator_runtime_and_initial_pose_bound _____________
+tests\task_variants\test_paper_comparison.py:145: in test_review_evaluator_runtime_and_initial_pose_bound
+    from tools.evaluation.paper_comparison import build_common_contract
+E   ImportError: cannot import name 'build_common_contract' from 'tools.evaluation.paper_comparison' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\evaluation\paper_comparison.py)
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_paper_comparison.py::test_review_failure_category_must_match_independent_facts[INVALID_SIMULATION]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_failure_category_must_match_independent_facts[STOP_NOT_QUALIFIED]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_failure_category_must_match_independent_facts[CONTACT_GUARD]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_failure_category_must_match_independent_facts[MOTION_VIOLATION]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_falsely_valid_invalid_attempt_cannot_create_pilot_signal
+FAILED tests/task_variants/test_paper_comparison.py::test_review_guard_facts_and_priority
+FAILED tests/task_variants/test_paper_comparison.py::test_review_common_fingerprint_binds_real_dependencies[tools/validation/run_b2_search.py]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_common_fingerprint_binds_real_dependencies[tools/validation/native313_matrix_audit.py]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_common_fingerprint_binds_real_dependencies[tools/validation/run_contact_candidate_stop.py]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_common_fingerprint_binds_real_dependencies[tools/validation/run_contact_cases.py]
+FAILED tests/task_variants/test_paper_comparison.py::test_review_evaluator_runtime_and_initial_pose_bound
+11 failed, 25 passed in 0.11s

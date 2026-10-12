@@ -1,0 +1,299 @@
+{
+  "status": "complete",
+  "episodes": 5,
+  "unused_closed": 0,
+  "cumulative": 130,
+  "functional_success": 5,
+  "strict_precision_success": 1,
+  "control_cycles": 36165,
+  "physical_substeps": 361650,
+  "wall_seconds": 1093.362841500013,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "inputs_unchanged": true,
+  "rows": [
+    {
+      "id": "y_neg_150",
+      "outcome": "FULL_SUCCESS",
+      "reason": "GEOMETRIC_SUCCESS",
+      "functional_success": true,
+      "strict_precision_success": false,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "xy_um": 97.60747132374003,
+      "z_um": -9.1161852567936,
+      "angle_deg": 0.4102504859232651,
+      "pin_clearance_um": 0.007450513432876067,
+      "legacy_pin_clearance_um": -1.4293528886850189,
+      "peak_force_mN": 24.474139103047843,
+      "peak_penetration_um": 7.106486275531078,
+      "control_cycles": 11270,
+      "physical_substeps": 112700,
+      "wall_seconds": 431.5373538999993,
+      "stop_time_s": 20.539999999978807,
+      "task_end_time_s": 20.779999999978248,
+      "end_time_s": 22.539999999974146,
+      "contact_cycles": 8109,
+      "search_cycles": 7384,
+      "controller_events": [
+        {
+          "time_s": 0.7459999999999505,
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL"
+        },
+        {
+          "time_s": 1.5259999999998646,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.0002568198433027663
+        },
+        {
+          "time_s": 9.150000000005353,
+          "phase": "WAIT_RECOVERY",
+          "reason": "SEARCH_EXHAUSTED",
+          "reference_boundary_final_segment": true
+        },
+        {
+          "time_s": 9.742000000003973,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.0002568198433027663
+        },
+        {
+          "time_s": 16.885999999987323,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED",
+          "progress_origin_z_m": 0.0002568198433027663,
+          "observed_z_m": 0.00035693758537839147,
+          "net_advance_m": 0.00010011774207562517
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.007323737775633605,
+        "checked_substeps": 112700
+      }
+    },
+    {
+      "id": "y_pos_150",
+      "outcome": "FULL_SUCCESS",
+      "reason": "GEOMETRIC_SUCCESS",
+      "functional_success": true,
+      "strict_precision_success": false,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "xy_um": 76.92079899054933,
+      "z_um": -9.746684010127925,
+      "angle_deg": 1.720314620644609,
+      "pin_clearance_um": 0.013205585401771837,
+      "legacy_pin_clearance_um": -0.121527165375542,
+      "peak_force_mN": 24.31135669404151,
+      "peak_penetration_um": 3.236216729140447,
+      "control_cycles": 7962,
+      "physical_substeps": 79620,
+      "wall_seconds": 216.6010333000013,
+      "stop_time_s": 13.923999999994226,
+      "task_end_time_s": 14.163999999993667,
+      "end_time_s": 15.923999999989565,
+      "contact_cycles": 5077,
+      "search_cycles": 3021,
+      "controller_events": [
+        {
+          "time_s": 2.439999999999764,
+          "phase": "UNLOAD",
+          "reason": "LOADED_ROTATION_RISK",
+          "relative_rotation_rad": 0.026682897257887278,
+          "axial_force_N": -0.024286531507634827,
+          "risk_since_s": 2.3899999999997696
+        },
+        {
+          "time_s": 3.229999999999677,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.00011666307384349157
+        },
+        {
+          "time_s": 6.230000000004298,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED",
+          "progress_origin_z_m": 0.00011666307384349157,
+          "observed_z_m": 0.00021668406235631843,
+          "net_advance_m": 0.00010002098851282686
+        },
+        {
+          "time_s": 6.412000000004682,
+          "phase": "UNLOAD",
+          "reason": "LOADED_ROTATION_RISK",
+          "relative_rotation_rad": 0.03133518445008068,
+          "axial_force_N": -0.02025896807304045,
+          "risk_since_s": 6.362000000004577
+        },
+        {
+          "time_s": 7.184000000006312,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.00021941285369821628
+        },
+        {
+          "time_s": 10.226000000002845,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED",
+          "progress_origin_z_m": 0.00021941285369821628,
+          "observed_z_m": 0.00032023081252419887,
+          "net_advance_m": 0.0001008179588259826
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.033480579348940075,
+        "checked_substeps": 79620
+      }
+    },
+    {
+      "id": "x_pos_150",
+      "outcome": "FULL_SUCCESS",
+      "reason": "GEOMETRIC_SUCCESS",
+      "functional_success": true,
+      "strict_precision_success": false,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "xy_um": 29.910402568712804,
+      "z_um": -9.144207206116908,
+      "angle_deg": 1.085043476487604,
+      "pin_clearance_um": 46.91634427882868,
+      "legacy_pin_clearance_um": 46.830623105841,
+      "peak_force_mN": 24.60243170623439,
+      "peak_penetration_um": 19.279597175470027,
+      "control_cycles": 6550,
+      "physical_substeps": 65500,
+      "wall_seconds": 166.4895639000024,
+      "stop_time_s": 11.100000000000808,
+      "task_end_time_s": 11.340000000000249,
+      "end_time_s": 13.099999999996147,
+      "contact_cycles": 3617,
+      "search_cycles": 2683,
+      "controller_events": [
+        {
+          "time_s": 1.1719999999999036,
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL"
+        },
+        {
+          "time_s": 1.9699999999998157,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.00015536026926828454
+        },
+        {
+          "time_s": 7.336000000006632,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED",
+          "progress_origin_z_m": 0.00015536026926828454,
+          "observed_z_m": 0.0002560555686215325,
+          "net_advance_m": 0.00010069529935324796
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.021340177698300815,
+        "checked_substeps": 65500
+      }
+    },
+    {
+      "id": "x_neg_150",
+      "outcome": "FULL_SUCCESS",
+      "reason": "GEOMETRIC_SUCCESS",
+      "functional_success": true,
+      "strict_precision_success": false,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "xy_um": 91.92144049298524,
+      "z_um": -9.75747282558483,
+      "angle_deg": 0.6942518027843213,
+      "pin_clearance_um": 9.512014572514243,
+      "legacy_pin_clearance_um": 7.645660197582501,
+      "peak_force_mN": 24.612254857349388,
+      "peak_penetration_um": 19.27498382239945,
+      "control_cycles": 7338,
+      "physical_substeps": 73380,
+      "wall_seconds": 194.4484533000068,
+      "stop_time_s": 12.675999999997135,
+      "task_end_time_s": 12.915999999996576,
+      "end_time_s": 14.675999999992474,
+      "contact_cycles": 4436,
+      "search_cycles": 3475,
+      "controller_events": [
+        {
+          "time_s": 1.1699999999999038,
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL"
+        },
+        {
+          "time_s": 1.967999999999816,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.00015536397403590396
+        },
+        {
+          "time_s": 8.918000000005893,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED",
+          "progress_origin_z_m": 0.00015536397403590396,
+          "observed_z_m": 0.00025590524558636793,
+          "net_advance_m": 0.00010054127155046397
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.021258972291948796,
+        "checked_substeps": 73380
+      }
+    },
+    {
+      "id": "aligned",
+      "outcome": "FULL_SUCCESS",
+      "reason": "GEOMETRIC_SUCCESS",
+      "functional_success": true,
+      "strict_precision_success": true,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "xy_um": 0.0,
+      "z_um": -8.799999999390428,
+      "angle_deg": 0.0,
+      "pin_clearance_um": 99.9999999999995,
+      "legacy_pin_clearance_um": 99.99999999999994,
+      "peak_force_mN": 0.0,
+      "peak_penetration_um": 0.0,
+      "control_cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 84.28643710000324,
+      "stop_time_s": 4.089999999999782,
+      "task_end_time_s": 4.330000000000289,
+      "end_time_s": 6.090000000004003,
+      "contact_cycles": 0,
+      "search_cycles": 0,
+      "controller_events": [],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      }
+    }
+  ]
+}

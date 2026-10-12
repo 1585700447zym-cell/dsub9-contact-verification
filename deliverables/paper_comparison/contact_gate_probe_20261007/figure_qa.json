@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "visually_inspected": [
+    "time_comparison.png",
+    "force_comparison.png"
+  ],
+  "figure_sha256": {
+    "time_comparison.png": "89477950a888c55914cdbab4e9dfe8c438726e002d61ca3b358b106700887b03",
+    "force_comparison.png": "cacfca79c5704da0e64a6b5a9786ae4f551aebe17d58146c67ba1c36804ad4e6"
+  },
+  "checks": [
+    "fixed four methods and two used development cases",
+    "all successful task times match raw audit",
+    "G failure retained as26s penalty, distinct from18s failure adjudication",
+    "whole-episode forces in mN and unchanged25mN guard",
+    "labels legible, no clipping, force labels moved inside bars to avoid guard-line overlap",
+    "scope states frozen deployment/no new training"
+  ],
+  "assessment_sha256": "4229d935823102f7028a3f90986da2e53eab898745a522ca779babe8dec02603"
+}

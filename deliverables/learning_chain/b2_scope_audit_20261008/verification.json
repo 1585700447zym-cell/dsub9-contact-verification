@@ -1,0 +1,20 @@
+{
+  "status": "PASSED_DOCUMENT_AND_ARCHIVE_CHECKS",
+  "checked_at_user_date": "2026-10-08",
+  "check_assertions": 58,
+  "prior_sealed_members": 950,
+  "shared_inputs": 1057,
+  "raw_archives": 63,
+  "current_documents_checked": true,
+  "actual_new": {
+    "physical_episodes": 0,
+    "physics_substeps": 0,
+    "engine_loads": 0,
+    "static_initializations": 0,
+    "network_forwards": 0,
+    "tensor_reads": 0,
+    "optimizer_updates": 0,
+    "replay_publications": 0
+  },
+  "limitation": "No new physical preflight or independent code review"
+}

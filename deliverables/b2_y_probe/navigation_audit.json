@@ -1,0 +1,14 @@
+{
+  "historical_manifest_counts_verified_before_and_after": {
+    "deliverables/b2_search_recovery/delivery_manifest.json": 148,
+    "deliverables/b2_exit_gate_v2/delivery_manifest.json": 66,
+    "deliverables/reproduction_guide/说明与导出清单.json": 9,
+    "deliverables/b2_switch_diagnosis/delivery_manifest.json": 15,
+    "deliverables/b2_xy_probe/delivery_manifest.json": 36
+  },
+  "changed_v2_manifest_entries": [
+    "报告总索引.md",
+    "deliverables/reproduction_guide/说明与导出清单.json"
+  ],
+  "old_dynamics_and_frozen_x_unchanged": true
+}

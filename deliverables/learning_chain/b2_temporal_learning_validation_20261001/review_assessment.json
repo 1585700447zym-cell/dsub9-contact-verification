@@ -1,0 +1,15 @@
+{
+  "author_fix_pass": 1,
+  "ready": true,
+  "independent_reviewer": "/root/temporal_validation_review",
+  "actual_calls": {
+    "model_forward": 0,
+    "physics": 0,
+    "optimizer": 0
+  },
+  "critical": 0,
+  "tests": 174,
+  "verification": "reviewed_related_green.json",
+  "important": 0,
+  "original_important": 3
+}

@@ -1,0 +1,55 @@
+..........FFF                                                            [100%]
+================================== FAILURES ===================================
+______ test_reused_supervisor_and_its_test_are_in_current_source_binding ______
+
+    def test_reused_supervisor_and_its_test_are_in_current_source_binding():
+        sources=api().fixed_sources()
+        for name in ('driver.py','test_driver.py'):
+            key='deliverables/learning_chain/b2_bounded_cycle_20260927/retry_01/'+name
+>           assert key in sources
+E           AssertionError: assert 'deliverables/learning_chain/b2_bounded_cycle_20260927/retry_01/driver.py' in {'assets/collision/d_guide_male_seg_000.stl': '0a512270efb181247d3eff14e8cb197029f0a71100428c695bd36252c60bae35', 'ass..., 'assets/collision/d_guide_male_seg_003.stl': 'd7329b3970ee7e87087d65d766b0ede762162c47831f31e32c186c7a902720e6', ...}
+
+tests\learning\test_fixed_rotation_cycle.py:75: AssertionError
+_ test_supervisor_tampering_is_rejected_against_trusted_old_binding[driver.py] _
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-332/test_supervisor_tampering_is_r0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000023C03771EB0>
+changed = 'driver.py'
+
+    @pytest.mark.parametrize('changed',['driver.py','test_driver.py'])
+    def test_supervisor_tampering_is_rejected_against_trusted_old_binding(tmp_path,monkeypatch,changed):
+        import json
+        m=api();old=tmp_path/'old';folder=old/'retry_01';folder.mkdir(parents=True)
+        for name in ('driver.py','test_driver.py'):(folder/name).write_text('original')
+        binding=folder/'binding.json'
+        binding.write_text(json.dumps(dict(files={f'old/retry_01/{n}':m.digest(folder/n) for n in ('driver.py','test_driver.py')})))
+        monkeypatch.setattr(m,'ROOT',tmp_path);monkeypatch.setattr(m,'OLD',old)
+>       monkeypatch.setattr(m,'RETRY_BINDING_PIN',m.digest(binding))
+E       AttributeError: <module 'tools.learning.fixed_rotation_cycle' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\fixed_rotation_cycle.py'> has no attribute 'RETRY_BINDING_PIN'
+
+tests\learning\test_fixed_rotation_cycle.py:86: AttributeError
+_ test_supervisor_tampering_is_rejected_against_trusted_old_binding[test_driver.py] _
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-332/test_supervisor_tampering_is_r1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000023C038D99D0>
+changed = 'test_driver.py'
+
+    @pytest.mark.parametrize('changed',['driver.py','test_driver.py'])
+    def test_supervisor_tampering_is_rejected_against_trusted_old_binding(tmp_path,monkeypatch,changed):
+        import json
+        m=api();old=tmp_path/'old';folder=old/'retry_01';folder.mkdir(parents=True)
+        for name in ('driver.py','test_driver.py'):(folder/name).write_text('original')
+        binding=folder/'binding.json'
+        binding.write_text(json.dumps(dict(files={f'old/retry_01/{n}':m.digest(folder/n) for n in ('driver.py','test_driver.py')})))
+        monkeypatch.setattr(m,'ROOT',tmp_path);monkeypatch.setattr(m,'OLD',old)
+>       monkeypatch.setattr(m,'RETRY_BINDING_PIN',m.digest(binding))
+E       AttributeError: <module 'tools.learning.fixed_rotation_cycle' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\fixed_rotation_cycle.py'> has no attribute 'RETRY_BINDING_PIN'
+
+tests\learning\test_fixed_rotation_cycle.py:86: AttributeError
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_fixed_rotation_cycle_20260928\red.xml -
+=========================== short test summary info ===========================
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_reused_supervisor_and_its_test_are_in_current_source_binding
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_supervisor_tampering_is_rejected_against_trusted_old_binding[driver.py]
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_supervisor_tampering_is_rejected_against_trusted_old_binding[test_driver.py]
+3 failed, 10 passed in 0.45s
+Forbidden call counts: {'optimizer': 0, 'physics': 0}

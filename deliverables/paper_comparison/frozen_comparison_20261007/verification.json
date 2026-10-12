@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "command": [
+    "deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py",
+    "tests/task_variants/test_paper_comparison.py",
+    "tests/task_variants/test_v4_learning_pilot.py",
+    "-q",
+    "--tb=short",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp=tmp/pc07_related_final"
+  ],
+  "evaluation_input_sha256": {
+    "docs/superpowers/plans/2026-10-07-v4-frozen-comparison.md": "63a0315efd5c18114e47426056dcd226668e05c843229c070c21196522f79748",
+    "deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py": "04a83583c1ffe942aa2e5a13f24c8a74d74ddf0ae5da41f18c7ebfa37537b0b5",
+    "deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py": "47d123d2931862957ae8d9706788977fee1987cbd9f586bb4b2ce5f5dd55f3d5"
+  },
+  "at": "2026-10-07T12:12:44.914742",
+  "wall_s": 9.816447800025344,
+  "scope": "new evaluation adapter, failure bookkeeping, unchanged metric and pilot admission regression",
+  "dynamic_episodes": 0,
+  "formal_updates": 0
+}

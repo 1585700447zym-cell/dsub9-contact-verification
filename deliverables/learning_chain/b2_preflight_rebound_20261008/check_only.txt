@@ -1,0 +1,2 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+{"binding_sha256":"d378ee4daeab7745b57afba0d1d66437562edc445c816ec3b1c92b6aaba60473","dynamic_attempts":0,"engine_loads":0,"files":2172,"static_initializations":0,"status":"CHECK_ONLY_PASSED","training_admitted":false}

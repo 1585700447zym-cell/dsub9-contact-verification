@@ -1,0 +1,540 @@
+{
+  "stage_id": "B2-SCOPE-03",
+  "diagnostic_only": true,
+  "sealed_runner_modified": false,
+  "ledger_modified": false,
+  "retry_allowed": false,
+  "training_admitted": false,
+  "original_archive_sha256": "38c98530f446de718a596156c78eae76e67aceb646d5d3978dda333fad865a6f",
+  "original_ledger_sha256": "dbd71ff12c965fe043777bafcb9361a092a536c4a842b0c7e7f28d7f20706b0d",
+  "source_sha256": {
+    "assess.py": "eb82738fe141f339b970a09ede6bb1fd7bf081184d38611e7d61ba246ff01ed9",
+    "offline_math.py": "dee0b419a10100d9a3c2e37318d41ca04dc769ecdb1db9a3addddf1c1d75f04f",
+    "physical_worker.py": "d2318904dc108dbbf973e1c1952701125616129ebe5063329a1820c412595928"
+  },
+  "production_reward_sha256": "511a008eb8261e39f261a707644de742faefbbc9dc670f44ca44e6c59e81ba5b",
+  "loaded_forbidden": [],
+  "new_physical_steps": 0,
+  "new_network_forwards": 0,
+  "new_optimizer_updates": 0,
+  "worker_original_error": "ValueError: reward.progress differs/nonfinite",
+  "serialized_archive_reproduction": {
+    "error": "ValueError('action log.unfiltered_stage_limited_total differs')",
+    "frames": [
+      {
+        "line": 104,
+        "cycle_index": 0
+      },
+      {
+        "line": 28,
+        "label": "action log.unfiltered_stage_limited_total",
+        "left_type": "builtins.list",
+        "right_type": "builtins.list",
+        "left": "[np.float64(0.0), np.float64(0.0), np.float64(0.001), np.float64(0.0), np.float64(0.0), np.float64(0.0)]",
+        "right": "[0.0, 0.0, 0.001, 0.0, 0.0, 0.0]"
+      },
+      {
+        "line": 32,
+        "label": "action log.unfiltered_stage_limited_total",
+        "left_type": "numpy.float64",
+        "right_type": "builtins.float",
+        "left": "np.float64(0.0)",
+        "right": "0.0"
+      }
+    ]
+  },
+  "equal_numeric_counterexamples": [
+    {
+      "equal_finite_value": 0.0,
+      "evidence": {
+        "error": "ValueError('scalar_counterexample differs/nonfinite')",
+        "frames": [
+          {
+            "line": 31,
+            "label": "scalar_counterexample",
+            "left_type": "builtins.float",
+            "right_type": "numpy.float64",
+            "left": "0.0",
+            "right": "np.float64(0.0)"
+          }
+        ]
+      }
+    },
+    {
+      "equal_finite_value": 0.0,
+      "evidence": {
+        "error": "ValueError('scalar_counterexample differs')",
+        "frames": [
+          {
+            "line": 32,
+            "label": "scalar_counterexample",
+            "left_type": "numpy.float64",
+            "right_type": "builtins.float",
+            "left": "np.float64(0.0)",
+            "right": "0.0"
+          }
+        ]
+      }
+    },
+    {
+      "equal_finite_value": 2.37286798391613e-06,
+      "evidence": {
+        "error": "ValueError('scalar_counterexample differs/nonfinite')",
+        "frames": [
+          {
+            "line": 31,
+            "label": "scalar_counterexample",
+            "left_type": "builtins.float",
+            "right_type": "numpy.float64",
+            "left": "2.37286798391613e-06",
+            "right": "np.float64(2.37286798391613e-06)"
+          }
+        ]
+      }
+    }
+  ],
+  "reward_rows_verified": 3045,
+  "reward_mismatch_rows": [],
+  "negative_controls": [
+    {
+      "label": "changed_number",
+      "rejected": {
+        "error": "ValueError('negative_control differs/nonfinite')",
+        "frames": [
+          {
+            "line": 31,
+            "label": "negative_control",
+            "left_type": "builtins.float",
+            "right_type": "builtins.float",
+            "left": "0.0",
+            "right": "1e-06"
+          }
+        ]
+      }
+    },
+    {
+      "label": "nonfinite",
+      "rejected": {
+        "error": "ValueError('negative_control differs/nonfinite')",
+        "frames": [
+          {
+            "line": 31,
+            "label": "negative_control",
+            "left_type": "builtins.float",
+            "right_type": "builtins.float",
+            "left": "nan",
+            "right": "nan"
+          }
+        ]
+      }
+    },
+    {
+      "label": "bool_vs_number",
+      "rejected": {
+        "error": "ValueError('negative_control differs')",
+        "frames": [
+          {
+            "line": 32,
+            "label": "negative_control",
+            "left_type": "builtins.bool",
+            "right_type": "builtins.float",
+            "left": "True",
+            "right": "1.0"
+          }
+        ]
+      }
+    },
+    {
+      "label": "number_vs_bool",
+      "rejected": {
+        "error": "ValueError('negative_control differs/nonfinite')",
+        "frames": [
+          {
+            "line": 31,
+            "label": "negative_control",
+            "left_type": "builtins.float",
+            "right_type": "builtins.bool",
+            "left": "1.0",
+            "right": "True"
+          }
+        ]
+      }
+    }
+  ],
+  "counterfactual": {
+    "status": "DIAGNOSTIC_AUDIT_PASSED_AFTER_SCALAR_TYPE_NORMALIZATION",
+    "assessment": {
+      "audit_passed": true,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false
+      },
+      "initial_pose": {
+        "contact_count": 0,
+        "contact_wrench_G": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_wrench_M": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "drive_wrench_M": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "limited_command_world": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "penetration_m": 0.0,
+        "phase": "RUNNING",
+        "position_m": [
+          0.0,
+          0.0,
+          -0.004
+        ],
+        "quaternion_wxyz": [
+          0.9999976201773518,
+          0.0021816598343367697,
+          0.0,
+          -0.0
+        ],
+        "raw_command_world": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "reference_qpos": [
+          0.0,
+          0.0,
+          -0.004,
+          0.9999976201773518,
+          0.0021816598343367697,
+          0.0,
+          -0.0
+        ],
+        "time_s": 0.0,
+        "velocity_world": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "functional_success": true,
+      "strict_precision_success": true,
+      "failure_penalized_task_time_s": 4.330000000000289,
+      "guard_reasons": [],
+      "script_nonzero_cycles": 0,
+      "axis_command_effect_integral": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_observed_motion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "contact_cycles": 0,
+      "contact_effect_cycles": 0,
+      "effect_coverage": "INSUFFICIENT_COVERAGE",
+      "contact_coverage": "INSUFFICIENT_COVERAGE",
+      "recovery_coverage": "INSUFFICIENT_COVERAGE",
+      "observation": {
+        "schema_version": "residual_reference_whitelist_v4",
+        "vectors_verified": 3046,
+        "width": 137,
+        "initial_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "precontact": null,
+        "first_contact": null,
+        "contact_feature_delta": null,
+        "contact_information": "INSUFFICIENT_COVERAGE",
+        "limitation": "Exact recorded feature differences only; significance/observability and causal benefit are not established"
+      },
+      "training_admitted": false,
+      "full_B2_accepted": false,
+      "task_endpoint": {
+        "admittance_velocity": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "commanded_correction": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_count": 0,
+        "contact_wrench_G": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_wrench_M": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "drive_wrench_M": [
+          0.0,
+          0.0,
+          4.370111021252222e-07,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "episode_peak_z_m": 0.00398920000000061,
+        "limited_command_world": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "penetration_m": 0.0,
+        "phase": "STOPPING",
+        "policy_phase": "INSERT",
+        "position_m": [
+          0.0,
+          0.0,
+          -8.794423457493899e-06
+        ],
+        "quaternion_wxyz": [
+          0.9999976201773518,
+          0.0021816598343367697,
+          0.0,
+          0.0
+        ],
+        "raw_command_world": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "recovery_state": null,
+        "reference_qpos": [
+          0.0,
+          0.0,
+          -8.799999999390508e-06,
+          0.9999976201773518,
+          0.0021816598343367697,
+          0.0,
+          0.0
+        ],
+        "search_composition": null,
+        "search_count": 0,
+        "search_progress_origin_z_m": null,
+        "spiral_theta_rad": 0.0,
+        "time_s": 4.330000000000289,
+        "velocity_world": [
+          0.0,
+          0.0,
+          -2.2165715726353042e-07,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "peak_loads": {
+        "contact_count": 0,
+        "drive_force_components_N": [
+          0.0,
+          0.0,
+          0.0044721359549995746
+        ],
+        "drive_torque_components_Nm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "force_N": 0.0,
+        "penetration_m": 0.0,
+        "speed_m_s": 0.0010411487000259111,
+        "torque_G_Nm": 0.0
+      }
+    }
+  },
+  "limitation": "Type-normalization is an offline diagnostic hypothesis test; original run remains closed and unqualified."
+}

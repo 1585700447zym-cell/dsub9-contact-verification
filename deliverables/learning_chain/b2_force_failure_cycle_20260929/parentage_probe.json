@@ -1,0 +1,18 @@
+{
+  "probe": "stdlib_only_venv_process_parentage",
+  "timestamp": "2026-09-29T11:07:09.001390+08:00",
+  "supervising_python_pid": 21440,
+  "popen_reported_child_pid": 2328,
+  "child": {
+    "pid": 14480,
+    "parent_pid": 2328,
+    "executable": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Scripts\\python.exe",
+    "base_executable": "D:\\KEYANRUJIAN\\python.exe"
+  },
+  "direct_parent_check_passed": false,
+  "extra_launcher_layer_observed": true,
+  "new_physical_starts": 0,
+  "new_optimizer_updates": 0,
+  "new_policy_predictions": 0,
+  "training_entry_invoked": false
+}

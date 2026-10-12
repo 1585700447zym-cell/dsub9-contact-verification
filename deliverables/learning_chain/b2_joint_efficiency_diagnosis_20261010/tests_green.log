@@ -1,0 +1,14 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_archive_action_transition_trace_alignment_rejected (__main__.ArchiveBoundaryTests.test_archive_action_transition_trace_alignment_rejected) ... ok
+test_bad_time_sequence_is_rejected (__main__.ArchiveBoundaryTests.test_bad_time_sequence_is_rejected) ... ok
+test_fixed_real_pose_has_zero_path_despite_nonzero_command (__main__.ArchiveBoundaryTests.test_fixed_real_pose_has_zero_path_despite_nonzero_command) ... ok
+test_forward_back_forward_does_not_duplicate_progress_reward (__main__.ArchiveBoundaryTests.test_forward_back_forward_does_not_duplicate_progress_reward) ... ok
+test_input_phase_defines_cycle_not_stale_left_trace (__main__.ArchiveBoundaryTests.test_input_phase_defines_cycle_not_stale_left_trace) ... ok
+test_invalid_onehot_is_rejected (__main__.ArchiveBoundaryTests.test_invalid_onehot_is_rejected) ... ok
+test_physical_stop_overrides_latched_policy_phase (__main__.ArchiveBoundaryTests.test_physical_stop_overrides_latched_policy_phase) ... ok
+test_task_cut_keeps_stop_confirmation_and_excludes_audit_tail (__main__.ArchiveBoundaryTests.test_task_cut_keeps_stop_confirmation_and_excludes_audit_tail) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

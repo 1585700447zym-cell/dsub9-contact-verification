@@ -1,0 +1,4 @@
+........................                                                 [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_force_failure_cycle_20260929\green_gate_v2.xml -
+24 passed in 0.88s
+{"exit_code": 0, "tests": 24, "tests_with_failure_or_error": 0, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "f0b26c31f3021794e6e08484ee608c7de326e19b459f667c76c4ba61627aa48e", "runner_sha256": "4b75b427bcfcc3c97848df7f8f958b8d9486d286bc12b7d56df4e503238fdc52"}

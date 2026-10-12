@@ -1,0 +1,149 @@
+--- before/tools/dynamics/cartesian.py
++++ after/tools/dynamics/cartesian.py
+@@ -57,10 +57,10 @@
+ 
+ 
+ class CartesianEnvironment:
+-    def __init__(self, config=None, segments=128, contacts_enabled=True):
++    def __init__(self, config=None, segments=128, contacts_enabled=True, *, model_xml=None):
+         self.config=config or DynamicConfig()
+         with _project_root_cwd():
+-            self.model=mujoco.MjModel.from_xml_string(build_xml(segments))
++            self.model=mujoco.MjModel.from_xml_string(build_xml(segments) if model_xml is None else model_xml)
+         self.model.opt.timestep=self.config.timestep
+         if self.config.collision_backend=='mpr':
+             self.model.opt.disableflags |= int(mujoco.mjtDisableBit.mjDSBL_NATIVECCD)
+--- before/tools/dynamics/contact_candidate.py
++++ after/tools/dynamics/contact_candidate.py
+@@ -3,8 +3,8 @@
+ 
+ 
+ class NativeTightCandidate(CartesianEnvironment):
+-    def __init__(self, *, segments=256, timestep=.0002):
+-        super().__init__(DynamicConfig(collision_backend='native', timestep=timestep), segments=segments)
++    def __init__(self, *, segments=256, timestep=.0002, model_xml=None):
++        super().__init__(DynamicConfig(collision_backend='native', timestep=timestep), segments=segments, model_xml=model_xml)
+         self.model.opt.ccd_tolerance=1e-12
+ 
+     def metadata(self):
+--- before/tools/learning/guarded_environment.py
++++ after/tools/learning/guarded_environment.py
+@@ -42,13 +42,13 @@
+ 
+ 
+ class LearningEnvironment(SampledCompatibilityEnvironment):
+-    def __init__(self, *, guard_config: GuardCandidateConfig):
++    def __init__(self, *, guard_config: GuardCandidateConfig, model_xml=None):
+         if not isinstance(guard_config, GuardCandidateConfig):
+             raise TypeError('Explicit GuardCandidateConfig required')
+         self.guard_config = guard_config
+         self._observation_ready = False
+         self._clear_facts()
+-        super().__init__()
++        super().__init__(model_xml=model_xml)
+ 
+     def _clear_facts(self):
+         self._facts = dict(simulation_valid=True, invalid_reasons=[], contact_reasons=[],
+--- before/tools/learning/session.py
++++ after/tools/learning/session.py
+@@ -12,8 +12,16 @@
+ 
+ 
+ class EpisodeSession:
+-    def __init__(self, *, environment=None, controller_factory=None):
++    def __init__(self, *, environment=None, controller_factory=None, finish_criteria=None, geometry_checker=None):
+         verify_runtime(active_package())
++        from tools.validation.run_b1_baseline import FINISH
++        self.finish_criteria = deepcopy(FINISH if finish_criteria is None else finish_criteria)
++        if (set(self.finish_criteria) != set(FINISH) or
++                any(isinstance(v, bool) or not np.isfinite(v) or v <= 0 for v in self.finish_criteria.values())):
++            raise ValueError('Complete finite positive finish criteria required')
++        if geometry_checker is not None and not callable(geometry_checker):
++            raise TypeError('geometry_checker must be callable')
++        self.geometry_checker = geometry_checker
+         from .environment import SampledCompatibilityEnvironment
+         from tools.control.search_recovery import SearchRecovery, SearchConfig
+         self.env = environment if environment is not None else SampledCompatibilityEnvironment()
+@@ -138,7 +146,8 @@
+ 
+     def _post_task_cycle(self, row):
+         from tools.control.search_recovery import latched_contact_guard
+-        from tools.validation.run_b1_baseline import FINISH, geometric_finish
++        from tools.validation.run_b1_baseline import geometric_finish
++        FINISH = self.finish_criteria
+         e, c = self.env, self.controller.config
+         if e.phase == 'TERMINAL':
+             self.reason = e.events[-1]['reason']
+@@ -162,7 +171,8 @@
+         if self.reason is not None:
+             peaks_ok = (e.peaks['force_N'] < FINISH['force_N'] and e.peaks['torque_G_Nm'] < FINISH['torque_Nm']
+                         and e.peaks['penetration_m'] < FINISH['penetration_m'])
+-            if self.reason == 'TARGET_PLANE_REACHED' and geometric_finish(row) and peaks_ok:
++            if (self.reason == 'TARGET_PLANE_REACHED' and geometric_finish(row, criteria=FINISH) and peaks_ok
++                    and (self.geometry_checker is None or self.geometry_checker(row))):
+                 if self.hold_start is None:
+                     self.hold_start = row['time_s']
+                 if row['time_s'] - self.hold_start >= FINISH['hold_s'] - 1e-12:
+--- before/tools/learning/guarded_session.py
++++ after/tools/learning/guarded_session.py
+@@ -5,11 +5,12 @@
+ 
+ 
+ class CandidateEpisodeSession(EpisodeSession):
+-    def __init__(self, *, environment, controller_factory=None):
++    def __init__(self, *, environment, controller_factory=None, finish_criteria=None, geometry_checker=None):
+         from .guarded_environment import LearningEnvironment
+         if not isinstance(environment, LearningEnvironment):
+             raise TypeError('Candidate session requires the explicit candidate environment')
+-        super().__init__(environment=environment, controller_factory=controller_factory)
++        super().__init__(environment=environment, controller_factory=controller_factory,
++                         finish_criteria=finish_criteria, geometry_checker=geometry_checker)
+ 
+     def _post_task_cycle(self, row):
+         facts = self.env.guard_facts
+--- before/tools/learning/residual_session.py
++++ after/tools/learning/residual_session.py
+@@ -12,11 +12,13 @@
+ 
+ 
+ class ResidualSession(CandidateEpisodeSession):
+-    def __init__(self, *, environment, controller_factory=None, action_scale=DEFAULT_ACTION_SCALE):
++    def __init__(self, *, environment, controller_factory=None, action_scale=DEFAULT_ACTION_SCALE,
++                 finish_criteria=None, geometry_checker=None):
+         self._action_scale = validated_action_scale(action_scale)
+         self._features_ready = False
+         self._decorated_cache = None
+-        super().__init__(environment=environment, controller_factory=controller_factory)
++        super().__init__(environment=environment, controller_factory=controller_factory,
++                         finish_criteria=finish_criteria, geometry_checker=geometry_checker)
+ 
+     def reset(self, case, seed=None):
+         self.interface_fault = None
+--- before/tools/validation/run_b1_baseline.py
++++ after/tools/validation/run_b1_baseline.py
+@@ -18,17 +18,18 @@
+         'force_N':.025,'torque_Nm':.0005,'penetration_m':30e-6}
+ 
+ 
+-def geometric_finish(row):
++def geometric_finish(row, criteria=None):
++    criteria = FINISH if criteria is None else criteria
+     p=np.asarray(row['position_m']);q=np.asarray(row['quaternion_wxyz']);v=np.asarray(row['velocity_world'])
+     if not np.isfinite(np.r_[p,q,v,row['contact_wrench_G'],row['penetration_m']]).all():return False
+     if np.linalg.norm(q)<1e-12:return False
+     angle=2*math.acos(min(1.,abs(float(q[0]))/float(np.linalg.norm(q))))
+-    return bool(abs(p[2])<=FINISH['z_tolerance_m'] and np.linalg.norm(p[:2])<=FINISH['xy_tolerance_m']
+-                and angle<=FINISH['angle_tolerance_rad'] and np.linalg.norm(v[:3])<=FINISH['linear_speed_m_s']
+-                and np.linalg.norm(v[3:])<=FINISH['angular_speed_rad_s']
+-                and np.linalg.norm(row['contact_wrench_G'][:3])<FINISH['force_N']
+-                and np.linalg.norm(row['contact_wrench_G'][3:])<FINISH['torque_Nm']
+-                and row['penetration_m']<FINISH['penetration_m'])
++    return bool(abs(p[2])<=criteria['z_tolerance_m'] and np.linalg.norm(p[:2])<=criteria['xy_tolerance_m']
++                and angle<=criteria['angle_tolerance_rad'] and np.linalg.norm(v[:3])<=criteria['linear_speed_m_s']
++                and np.linalg.norm(v[3:])<=criteria['angular_speed_rad_s']
++                and np.linalg.norm(row['contact_wrench_G'][:3])<criteria['force_N']
++                and np.linalg.norm(row['contact_wrench_G'][3:])<criteria['torque_Nm']
++                and row['penetration_m']<criteria['penetration_m'])
+ 
+ 
+ def run_episode(env,case,controller,*,max_time=6.,settle_time=1.):

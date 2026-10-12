@@ -1,0 +1,15 @@
+
+=================================== ERRORS ====================================
+________ ERROR collecting tests/task_variants/test_paper_comparison.py ________
+ImportError while importing test module 'D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tests\task_variants\test_paper_comparison.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+tests\task_variants\test_paper_comparison.py:5: in <module>
+    from tools.evaluation.paper_comparison import comparison_key, summarize, compare
+E   ModuleNotFoundError: No module named 'tools.evaluation'
+=========================== short test summary info ===========================
+ERROR tests/task_variants/test_paper_comparison.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 0.16s

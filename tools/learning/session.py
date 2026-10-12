@@ -7,13 +7,21 @@ from copy import deepcopy
 import json
 import numpy as np
 
-from .runtime import ROOT, verify_runtime
+from .runtime import ROOT, verify_runtime, active_package
 from .types import CycleSnapshot, CycleResult
 
 
 class EpisodeSession:
-    def __init__(self, *, environment=None, controller_factory=None):
-        verify_runtime(ROOT / 'tmp/mujoco_3_13_probe')
+    def __init__(self, *, environment=None, controller_factory=None, finish_criteria=None, geometry_checker=None):
+        verify_runtime(active_package())
+        from tools.validation.run_b1_baseline import FINISH
+        self.finish_criteria = deepcopy(FINISH if finish_criteria is None else finish_criteria)
+        if (set(self.finish_criteria) != set(FINISH) or
+                any(isinstance(v, bool) or not np.isfinite(v) or v <= 0 for v in self.finish_criteria.values())):
+            raise ValueError('Complete finite positive finish criteria required')
+        if geometry_checker is not None and not callable(geometry_checker):
+            raise TypeError('geometry_checker must be callable')
+        self.geometry_checker = geometry_checker
         from .environment import SampledCompatibilityEnvironment
         from tools.control.search_recovery import SearchRecovery, SearchConfig
         self.env = environment if environment is not None else SampledCompatibilityEnvironment()
@@ -74,16 +82,24 @@ class EpisodeSession:
                              admittance_velocity=c.admittance.velocity.tolist(),
                              admittance_offset=c.admittance.offset.tolist(), events=c.events))
 
+    def policy_observation(self, row):
+        from tools.validation.run_b2_search import policy_observation
+        return policy_observation(row, self.initial)
+
+    def completion_ready(self, row):
+        from tools.validation.run_b1_baseline import geometric_finish
+        return geometric_finish(row, criteria=self.finish_criteria)
+
     def prepare_cycle(self):
         if not self._ready:
             raise RuntimeError('A successful reset is required')
         if self._cache is not None:
             return deepcopy(self._cache)
-        from tools.validation.run_b2_search import policy_observation, stable_for_recovery
+        from tools.validation.run_b2_search import stable_for_recovery
         from tools.control.search_recovery import resume_after_recovery
         e, c = self.env, self.controller.config
         row = e.observe()
-        obs = policy_observation(row, self.initial)
+        obs = self.policy_observation(row)
         command = np.zeros(6)
         if not self.task_finished and not self.done:
             if e.phase == 'TERMINAL':
@@ -105,6 +121,9 @@ class EpisodeSession:
                     if stable_for_recovery(e):
                         try:
                             resume_after_recovery(e, c.recovery_min_actual_m)
+                            # Recovery resets actuator reference/command; adapters
+                            # that expose that state need a fresh observation.
+                            obs = self.policy_observation(e.observe())
                             self.controller.start_recovered_search(obs)
                             self.recovery_state = None
                         except RuntimeError:
@@ -138,7 +157,7 @@ class EpisodeSession:
 
     def _post_task_cycle(self, row):
         from tools.control.search_recovery import latched_contact_guard
-        from tools.validation.run_b1_baseline import FINISH, geometric_finish
+        FINISH = self.finish_criteria
         e, c = self.env, self.controller.config
         if e.phase == 'TERMINAL':
             self.reason = e.events[-1]['reason']
@@ -162,7 +181,8 @@ class EpisodeSession:
         if self.reason is not None:
             peaks_ok = (e.peaks['force_N'] < FINISH['force_N'] and e.peaks['torque_G_Nm'] < FINISH['torque_Nm']
                         and e.peaks['penetration_m'] < FINISH['penetration_m'])
-            if self.reason == 'TARGET_PLANE_REACHED' and geometric_finish(row) and peaks_ok:
+            if (self.reason == 'TARGET_PLANE_REACHED' and self.completion_ready(row) and peaks_ok
+                    and (self.geometry_checker is None or self.geometry_checker(row))):
                 if self.hold_start is None:
                     self.hold_start = row['time_s']
                 if row['time_s'] - self.hold_start >= FINISH['hold_s'] - 1e-12:

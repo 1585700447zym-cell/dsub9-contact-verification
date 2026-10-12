@@ -1,0 +1,11 @@
+--- before/record_error
++++ after/record_error
+@@ -109,7 +109,7 @@
+     entry.update(status='error',error=repr(error),ended_at=now(),error_facts=facts,
+                  control_cycles=0 if session is None else getattr(session,'cycle_id',0),
+                  physical_substeps=0 if env is None else getattr(env,'physical_steps',0))
+-    ledger.update(status='error',ended_at=now(),unused_closed=9-len(ledger['episodes']))
++    ledger.update(status='error',ended_at=now(),unused_closed=ledger['max_new_episodes']-len(ledger['episodes']))
+     # First preserve a small receipt even if the large archive cannot be saved.
+     try:write(run/'ledger.json',ledger)
+     except Exception as exc:entry['ledger_write_error']=repr(exc)

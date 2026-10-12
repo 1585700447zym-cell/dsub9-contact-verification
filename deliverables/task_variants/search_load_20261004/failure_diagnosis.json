@@ -1,0 +1,38 @@
+{
+  "search_control_samples": 4913,
+  "positive_y_budget_saturated_with_positive_force": 949,
+  "saturated_but_total_y_command_negative": 693,
+  "first": {
+    "time_s": 8.248000000007455,
+    "search_count": 1,
+    "y_um": -159.23282919164743,
+    "actual_y_displacement_um": -9.232829191647442,
+    "admittance_y_offset_um": 500.0,
+    "admittance_y_velocity_m_s": 0.0,
+    "contact_Fy_mN": 9.356392065251995,
+    "total_command_y_m_s": 2.903750323242463e-05,
+    "reference_y_error_um": -95.1713639168355
+  },
+  "last_before_stop": {
+    "time_s": 11.43400000000003,
+    "search_count": 2,
+    "y_um": -170.00886259790448,
+    "actual_y_displacement_um": -20.008862597904496,
+    "admittance_y_offset_um": 500.0,
+    "admittance_y_velocity_m_s": 0.0,
+    "contact_Fy_mN": 20.431578318348613,
+    "total_command_y_m_s": -0.00022104617404126244,
+    "reference_y_error_um": -196.05944471093102
+  },
+  "same_state_force_formula_probe": {
+    "recorded_integral_output_y_m_s": 0.0,
+    "hypothetical_zeroed_y_offset_output_m_s": 0.0001851808407597644,
+    "scope": "one offline controller formula call per cloned state; no physics; not a validated reset fix"
+  },
+  "stop": {
+    "reason": "SEARCH_BUDGET_EXHAUSTED",
+    "time_s": 11.436000000000025,
+    "search_count": 2
+  },
+  "conclusion": "Drive reference release worked, but force-admittance accumulated Y correction remained capped; spiral/tracking continued opposite positive unloading force. This identifies a specific contributor, not sole causality or an approved wider budget."
+}

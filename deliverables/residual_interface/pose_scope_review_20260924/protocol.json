@@ -1,0 +1,3911 @@
+{
+  "version": "pose_scope_static_review_v1",
+  "data_use": "development_diagnostic_only",
+  "training_admitted": false,
+  "parameter_frozen": false,
+  "model_scope_qualified": false,
+  "scope": "Prescribed static poses, NOT permitted initialization or reachable-state/force/dynamic qualification",
+  "angles_note": "2.52deg is a rounded-up diagnostic sample around previously observed2.513404deg overshoot, NOT a hard bound or new guard threshold. Diagonal roll/pitch Euler components divide nominal magnitude by sqrt(2); true SO(3) magnitude recorded.",
+  "positive_witness_threshold_m": 0.000001,
+  "axial_bound_tolerance_m": 1e-9,
+  "source_protocol": "deliverables/residual_interface/engineering_preflight_20260924/protocol.json",
+  "attempts": [
+    {
+      "id": "a2.5_d0_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d0_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d0_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d1_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d1_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.04363323129985824,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d2_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d2_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d3_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d3_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.04363323129985824,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d4_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d4_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d5_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d5_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d6_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d6_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": 0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.5_d7_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.5,
+      "case": {
+        "name": "a2.5_d7_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.030853353737210872,
+        "pitch_rad": -0.030853353737210872,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d0_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d0_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d1_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d1_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.0439822971502571,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d2_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d2_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": 0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d3_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d3_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0,
+        "pitch_rad": -0.0439822971502571,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d4_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d4_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d5_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d5_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": 0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d6_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d6_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": 0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p0_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p0_z250",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p0_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p0_z2000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p0_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p0_z4000",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p1_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p1_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p1_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p1_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p1_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p1_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p2_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p2_z250",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p2_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p2_z2000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p2_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p2_z4000",
+        "x_offset_m": -0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p3_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p3_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p3_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p3_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p3_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p3_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": -0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p4_z250",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p4_z250",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.00025,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p4_z2000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p4_z2000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.002,
+      "expected_contact": null
+    },
+    {
+      "id": "a2.52_d7_p4_z4000",
+      "family": "prescribed_boundary_grid",
+      "nominal_angle_deg": 2.52,
+      "case": {
+        "name": "a2.52_d7_p4_z4000",
+        "x_offset_m": 0.000049999999999999996,
+        "y_offset_m": 0.000049999999999999996,
+        "roll_rad": -0.03110018056710856,
+        "pitch_rad": -0.03110018056710856,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": null
+    },
+    {
+      "id": "sentinel_separated",
+      "family": "sentinel",
+      "case": {
+        "name": "sentinel_separated",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.005,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0,
+      "expected_contact": false
+    },
+    {
+      "id": "sentinel_aligned",
+      "family": "sentinel",
+      "case": {
+        "name": "sentinel_aligned",
+        "x_offset_m": 0,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.004,
+      "expected_contact": false
+    },
+    {
+      "id": "sentinel_wall_x",
+      "family": "sentinel",
+      "case": {
+        "name": "sentinel_wall_x",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0,
+        "roll_rad": 0,
+        "pitch_rad": 0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "depth_m": 0.001,
+      "expected_contact": true
+    }
+  ],
+  "evidence_sha256": {
+    "docs/stage_b/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+    "deliverables/residual_interface/engineering_preflight_20260924/manifest.json": "12d1255eeac6f9dcd363107978cec28d9cf41462871d0af63cf96d2c24467cec",
+    "deliverables/residual_interface/engineering_preflight_20260924/protocol.json": "31a56d58926cb5f6e7d3c08dbe3e98e59842c1f82de351a98752db45c8291b3c",
+    "deliverables/residual_interface/guard_candidate_20260923/姿态候选参数记录.md": "2d3912547fc73601a5fe20a1475ae00a6654bbe93d099d6ca610d1afeca76a83",
+    "deliverables/residual_interface/implementation_20260923/orientation_envelope.json": "a3c9b2f15219c181b1ff52cb5d143d18a0df0d40a7382097381cd639cf395683",
+    "deliverables/residual_interface/guard_boundary_dynamics_v2_review_fixes/assessment.json": "55f2101672a2a2f78c217d9ce10a696266a961403be56b5cc1f2f40b6229f0aa",
+    "deliverables/residual_interface/guard_b2_regression_v3_review_fixes/assessment.json": "f3007948d835b47593d5bd3900e2f97b2b58a7c45afaa7b7cb1bfcb0b5549bf7",
+    "deliverables/native313_validation/static_gate_v1/results.json": "1dd68ca57b34d1b0b95e2251bb6afedabea3f601d8b0e383f254d01aeaa48d34",
+    "deliverables/native313_validation/static_extended.json": "65449c2b2fe4ac701390b75bb6a9bd6128de6ce2eec0cd9d648e01ffca00d486"
+  },
+  "analysis_script_sha256": "22443514e38ed7017a97fbc29aa5255c7a3d0a12ba390e6ad3e7e349294d5261"
+}

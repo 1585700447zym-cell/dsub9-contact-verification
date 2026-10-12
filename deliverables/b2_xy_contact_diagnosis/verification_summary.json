@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-22",
+  "subtask": "B2-5.5 offline X/Y geometry-contact diagnosis",
+  "saved_dynamics_runs_read": 4,
+  "new_dynamics_runs": 0,
+  "snapshots_checked": 43,
+  "per_snapshot_pins": 9,
+  "axial_commands_checked": 1364,
+  "execution_guard": "Analysis completed with mujoco.mj_step and CartesianEnvironment.step patched to raise if called. Geometry only uses mj_forward and retains time 0.",
+  "new_helper_tests": "4 RED missing module then PASS; reused geometry tests 2 PASS",
+  "full_tests": "23 failed, 389 passed in 138.87s (0:02:18)",
+  "full_test_limitation": "23 old SDF build tests share Windows SDK directory access denial; no claim of full green suite",
+  "independent_review": "43 snapshots independently compared to saved traces and analytic geometry; max pin/projection difference 9.87e-18 m, no blockers",
+  "figure_qa": "Both figures checked by primary and independent reviewer; legible with projection/force limitations",
+  "markdown_links_checked": 17,
+  "historical_fingerprint_unchanged": true,
+  "preserved_ui_settings_difference": {
+    ".vscode/settings.json": "e8a18f2fbbb734665a9860cd81eb5cea40ce0d15f03395dc90ed45fbf4924691"
+  },
+  "proposed_next": "Y pause upper duration 1s to 2s, all other rules/budgets preserved; NOT run this turn"
+}

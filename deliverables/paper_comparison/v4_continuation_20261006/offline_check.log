@@ -1,0 +1,1 @@
+{"search_zero_rows": 16563, "max_zero_command_error": 0.0, "unproven_zero_predictions": 0, "old_next_reference_failures": 3, "continuation_filtered_examples": 3, "new_next_reference_failures": 0, "new_dynamic_episodes": 0, "new_physical_steps": 0, "formal_updates": 0, "policy_calls": 0}

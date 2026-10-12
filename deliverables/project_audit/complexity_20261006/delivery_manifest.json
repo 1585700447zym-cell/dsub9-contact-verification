@@ -1,0 +1,67 @@
+{
+  "status": "SEALED",
+  "created_at": "2026-10-06T19:53:35.368381+08:00",
+  "scope": "objective audit and priority update only; no new production implementation, dynamics, policy call or optimizer step",
+  "files": {
+    "audit.py": {
+      "sha256": "75507117692b8201bda9fb49c4ce608f257ff32c4e11bdcf8f5f9ac30b353fed",
+      "bytes": 7179
+    },
+    "audit_metrics.json": {
+      "sha256": "928557c7051b1ae51f63cacd0bced31cc39638d7d7b0d41069da74d2db6b8014",
+      "bytes": 7718
+    },
+    "before_documents/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "aeb1513b5cfaf1ed975f14162d9ba627ddf8dfa3d5342d1243ee9b29786fc367",
+      "bytes": 62027
+    },
+    "before_documents/研究推进计划_当前版.md": {
+      "sha256": "d413cebf618fa73f0eee0cdfa99341e09e3219671482c061a03f22953872549c",
+      "bytes": 35302
+    },
+    "before_documents/项目交付总览.md": {
+      "sha256": "12e7079146995960c2378783c4494bc2c69cfccce2e895159a02638d8a82253f",
+      "bytes": 116240
+    },
+    "before_documents/项目当前入口.md": {
+      "sha256": "2895d9e6451c69b3637c2f7c1795f948547f4cc2231be7e39384a3639afa69ff",
+      "bytes": 15770
+    },
+    "before_documents/项目进度跟踪.md": {
+      "sha256": "030c51487ffb693aa4e7e50b73ed8cdbb1bae44f64df725519dd3ba46decc1e9",
+      "bytes": 149461
+    },
+    "document_snapshot/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "30b2db1f8d5013b4a91a889d770b8b2416dbc4d44633a4be7d47dff51362a7a3",
+      "bytes": 65484
+    },
+    "document_snapshot/研究推进计划_当前版.md": {
+      "sha256": "f22f439b467a16bd4fb03a30f68d12a0631dddeb812e8a3cb4eca4d8d3973a9d",
+      "bytes": 37081
+    },
+    "document_snapshot/项目交付总览.md": {
+      "sha256": "d3c4115b3651f5c889958b1aa92b5400b676f4ba011e1806643c82309b0518d4",
+      "bytes": 118772
+    },
+    "document_snapshot/项目当前入口.md": {
+      "sha256": "42a456ccc0405f4d4d535e3d5f771e710aae339acb707bc40f3b1f64ce5f1945",
+      "bytes": 17535
+    },
+    "document_snapshot/项目进度跟踪.md": {
+      "sha256": "7821613942c7d1b18f7c685cd4ead66256d2c8774e4eae26c97e2cd7f9496496",
+      "bytes": 152668
+    },
+    "reference_counterfactual.json": {
+      "sha256": "b1ca8a61ced743542838aeb201d04e688ce9396af1e2e9bbd634f9f20ccbdcd0",
+      "bytes": 933
+    },
+    "verification.json": {
+      "sha256": "d8b8628296864cb20f0276579703ac56245200b145fb137229eda8c179c85947",
+      "bytes": 1181
+    },
+    "客观审查与修复优先级.md": {
+      "sha256": "31d7c74e72922bb413883a9243bad73095448348c1555425014ee022dea2887b",
+      "bytes": 9107
+    }
+  }
+}

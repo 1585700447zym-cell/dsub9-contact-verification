@@ -1,0 +1,220 @@
+{
+  "scope": "bounded development repair regression, no learned-policy benefit proof",
+  "status": "complete",
+  "launched": 3,
+  "completed": 3,
+  "prior_cumulative": 142,
+  "cumulative": 145,
+  "unused_closed": 0,
+  "reports": [
+    {
+      "id": "B2_y_neg_150",
+      "archive_sha256": "72adf1e1516c2314529584680c68eb2c4262bb18cc640b93d9a63d06e91a4a7c",
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "reason": "GEOMETRIC_SUCCESS",
+      "stopped_recomputed": true,
+      "control_cycles": 11270,
+      "physical_substeps": 112700,
+      "wall_s": 457.18241249996936,
+      "task_end_time_s": 20.779999999978248,
+      "end_time_s": 22.539999999974146,
+      "reference_ends": [
+        {
+          "time_s": 9.150000000005353,
+          "phase": "WAIT_RECOVERY",
+          "reason": "SEARCH_EXHAUSTED",
+          "reference_boundary_end": true,
+          "reference_boundary_final_segment": true,
+          "reference_xy_m": [
+            0.00011999581848163143,
+            -7.833507843310757e-08
+          ],
+          "predicted_reference_xy_m": [
+            0.00011999999999999968,
+            2.0123250220403783e-07
+          ],
+          "radius_limit_m": 0.00012
+        }
+      ],
+      "reference_problems": [],
+      "max_actual_reference_radius_m": 0.0001199958440507885,
+      "independent_observed_reference_checks": 0,
+      "independent_reconstructed_radius_m": 0.0,
+      "terminal_reward": 10.0,
+      "reward_total": 11.81580072764523,
+      "peaks": {
+        "force_N": 0.024474139103047843,
+        "torque_G_Nm": 0.00025797003248999523,
+        "penetration_m": 7.106486275531079e-06,
+        "speed_m_s": 0.0013342605510384554,
+        "drive_force_components_N": [
+          0.012487272015023539,
+          0.01353967913412075,
+          0.02447555455653372
+        ],
+        "drive_torque_components_Nm": [
+          4.198871357969457e-05,
+          4.788403262109566e-05,
+          2.888253449139219e-05
+        ],
+        "contact_count": 2189.0
+      },
+      "final_xy_um": 97.60747132374003,
+      "final_z_um": -9.1161852567936,
+      "valid_training_format": false,
+      "published": 0,
+      "zero_baseline_full_trace_exact": true
+    },
+    {
+      "id": "S50_y_neg_150",
+      "archive_sha256": "069cd396e28cd4a6c2629006af878a1e631c93be85c3edcd6f7d640b9696efde",
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "reason": "SEARCH_BUDGET_EXHAUSTED",
+      "stopped_recomputed": true,
+      "control_cycles": 9240,
+      "physical_substeps": 92400,
+      "wall_s": 440.24667710001813,
+      "task_end_time_s": 17.47999999998594,
+      "end_time_s": 18.479999999983608,
+      "reference_ends": [
+        {
+          "time_s": 8.754000000006275,
+          "phase": "WAIT_RECOVERY",
+          "reason": "SEARCH_EXHAUSTED",
+          "reference_boundary_end": true,
+          "reference_boundary_final_segment": false,
+          "reference_xy_m": [
+            0.0001067870110088187,
+            -5.46114213645831e-05
+          ],
+          "predicted_reference_xy_m": [
+            0.00010697568695578643,
+            -5.43811288259802e-05
+          ],
+          "radius_limit_m": 0.00012
+        },
+        {
+          "time_s": 16.47999999998827,
+          "phase": "FAILED",
+          "reason": "SEARCH_BUDGET_EXHAUSTED",
+          "reference_boundary_end": true,
+          "reference_boundary_final_segment": false,
+          "reference_xy_m": [
+            9.263792320845489e-05,
+            -7.627722427844632e-05
+          ],
+          "predicted_reference_xy_m": [
+            9.281782861784779e-05,
+            -7.60731682201898e-05
+          ],
+          "radius_limit_m": 0.00012
+        }
+      ],
+      "reference_problems": [],
+      "max_actual_reference_radius_m": 0.00011999999899999994,
+      "independent_observed_reference_checks": 7163,
+      "independent_reconstructed_radius_m": 0.00011999999924572603,
+      "terminal_reward": -2.0,
+      "reward_total": -4.358799868538894,
+      "peaks": {
+        "force_N": 0.024474139103047843,
+        "torque_G_Nm": 0.00023228871536367168,
+        "penetration_m": 7.106486275531079e-06,
+        "speed_m_s": 0.0010743669301466314,
+        "drive_force_components_N": [
+          0.01266355072770261,
+          0.011084027585524403,
+          0.02447555455653372
+        ],
+        "drive_torque_components_Nm": [
+          2.9332109728762565e-05,
+          1.9392503128297346e-05,
+          1.6992777385809235e-05
+        ],
+        "contact_count": 2164.0
+      },
+      "final_xy_um": 166.33519811302335,
+      "final_z_um": -3760.8383599832173,
+      "valid_training_format": true,
+      "published": 0
+    },
+    {
+      "id": "F50_y_neg_150",
+      "archive_sha256": "4ed0b8c71358c69a40e42babfe867be81efa94a3d7b858f01f489a4467ffd752",
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "reason": "GEOMETRIC_SUCCESS",
+      "stopped_recomputed": true,
+      "control_cycles": 5885,
+      "physical_substeps": 58850,
+      "wall_s": 280.13495799998054,
+      "task_end_time_s": 10.010000000003348,
+      "end_time_s": 11.769999999999246,
+      "reference_ends": [],
+      "reference_problems": [],
+      "max_actual_reference_radius_m": 9.418776043322615e-05,
+      "independent_observed_reference_checks": 2289,
+      "independent_reconstructed_radius_m": 9.418776077932013e-05,
+      "terminal_reward": 10.0,
+      "reward_total": 13.541710233520202,
+      "peaks": {
+        "force_N": 0.024478934346875692,
+        "torque_G_Nm": 0.00016267051611219398,
+        "penetration_m": 7.012744256570753e-06,
+        "speed_m_s": 0.0017530163155206801,
+        "drive_force_components_N": [
+          0.007950023733562276,
+          0.006750898913838909,
+          0.024475403402454937
+        ],
+        "drive_torque_components_Nm": [
+          1.8097113840557352e-05,
+          1.1036620059022105e-05,
+          1.1041260615806467e-05
+        ],
+        "contact_count": 2067.0
+      },
+      "final_xy_um": 70.57670353820147,
+      "final_z_um": -8.24787013647822,
+      "valid_training_format": true,
+      "published": 0
+    }
+  ],
+  "control_cycles": 26395,
+  "physical_substeps": 263950,
+  "formal_updates": 0,
+  "policy_calls": 0,
+  "replay_published": 0,
+  "independent_tests": 0,
+  "B2_complete": false,
+  "production_sha256": {
+    "tools/control/reference_search.py": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+    "tools/learning/v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219"
+  }
+}

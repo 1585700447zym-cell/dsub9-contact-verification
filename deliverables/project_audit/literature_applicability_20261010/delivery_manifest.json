@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-10",
+  "scope": "Plan items 1 and 2: targeted literature and static applicability; no scientific execution",
+  "files": {
+    "before_state.json": {
+      "bytes": 24661,
+      "sha256": "2ac2439897f731841611ff8bf261989ddf98ba82a79e22e2b489cf5887ebc50b"
+    },
+    "git_status_after.bin": {
+      "bytes": 9952,
+      "sha256": "9eff2a41b7c93cf108bf4a38ca5109e27d35865332b54aefa51de0fc2b671c51"
+    },
+    "git_status_before.bin": {
+      "bytes": 9952,
+      "sha256": "9eff2a41b7c93cf108bf4a38ca5109e27d35865332b54aefa51de0fc2b671c51"
+    },
+    "learning_literature.md": {
+      "bytes": 13912,
+      "sha256": "9d3a18a066630171cd79ea309eb4608a6639df20a15cc458a09b8617b9f7461c"
+    },
+    "model_audit.md": {
+      "bytes": 18740,
+      "sha256": "53e4c1a262c58dcb8887fe39849d31d1fab47888fad95e0b86b174bb8746f039"
+    },
+    "model_evidence.json": {
+      "bytes": 13858,
+      "sha256": "b338533ee87a8e5d18ab21c6a66ddfcfb2fddaef2db6948f35a764d43f03d722"
+    },
+    "search_log_traditional.json": {
+      "bytes": 2266,
+      "sha256": "cc52c03c874a695a8dfd0d7105f1802759b08d2d424d639ccae7747f7c5de443"
+    },
+    "snapshots_after/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "snapshots_after/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 235349,
+      "sha256": "38290dd26987dce548ea3559577504e81bb6f6428c0cec154a0535a3fa6c8ce3"
+    },
+    "snapshots_after/研究推进计划_当前版.md": {
+      "bytes": 64131,
+      "sha256": "378e7a1b99ef34c6d2b5ddae442be039ce08f6d89ce8701c86a780e4856bc7fa"
+    },
+    "snapshots_after/项目交付总览.md": {
+      "bytes": 206972,
+      "sha256": "b600d5f78434af8745ed29447e185db0814291a3a11325a3ce609446815843ac"
+    },
+    "snapshots_after/项目当前入口.md": {
+      "bytes": 40472,
+      "sha256": "1d5cd4713041b499b364569f0d7244480ad0c16cbe7b890e416ffd4982f2ec74"
+    },
+    "snapshots_after/项目进度跟踪.md": {
+      "bytes": 253130,
+      "sha256": "f19c34f53342bf512789234bd5207285ffef3760c1745e5bbd1467655b682406"
+    },
+    "snapshots_before/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "snapshots_before/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 234894,
+      "sha256": "4294ea1b6f08585901c4f828c6e8f10f5081105bbd403f332e82f28954e2b72e"
+    },
+    "snapshots_before/研究推进计划_当前版.md": {
+      "bytes": 63316,
+      "sha256": "5f17e59322eae717d4b2f3ad421f7d34fcac7e7f6d71f6004890b97d38da03a1"
+    },
+    "snapshots_before/项目交付总览.md": {
+      "bytes": 206228,
+      "sha256": "04cc74f929843eb1519c470d3076348baafe97c152a725318a144688e6eeea3a"
+    },
+    "snapshots_before/项目当前入口.md": {
+      "bytes": 40386,
+      "sha256": "c01f170875d875f141b945488c0e1fb884e704345d9888cd9c0d0b40fe6452af"
+    },
+    "snapshots_before/项目进度跟踪.md": {
+      "bytes": 251480,
+      "sha256": "4f75a2cc9351ab0aca8b492d4405ac9107a8e8f09bafffe1f43ad8124408fb30"
+    },
+    "traditional_sources.json": {
+      "bytes": 7255,
+      "sha256": "c8707eef8254bba7cf1fc8adef2ba84c7c307017fa7d7aefd7f36f88e2351213"
+    },
+    "verification.json": {
+      "bytes": 5515,
+      "sha256": "ac68b93cd4e6b296790a120147772563bc109550440aa68cb7cf744c01cbe738"
+    },
+    "文献对照表.md": {
+      "bytes": 7680,
+      "sha256": "d69437755e0f59a98af4704200f07a7299ccb912295886784ad6bc7451dc67b8"
+    },
+    "结果说明.md": {
+      "bytes": 10805,
+      "sha256": "bf7f7af4507433e91bb9c1727efb1d59563adbaf4ad264135faf4e814bbb51d9"
+    }
+  }
+}

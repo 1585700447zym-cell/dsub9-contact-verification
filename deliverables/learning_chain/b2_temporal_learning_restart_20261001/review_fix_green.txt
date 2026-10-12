@@ -1,0 +1,8 @@
+test_reader_guard_rejects_wrong_worker_and_stop_fence (test_protocol.RestartTests.test_reader_guard_rejects_wrong_worker_and_stop_fence) ... ok
+test_real_reader_chain_accepts_worker_child_and_checks_registered_root (test_protocol.RestartTests.test_real_reader_chain_accepts_worker_child_and_checks_registered_root) ... ok
+test_zero_reader_failure_blocks_worker_before_initial_and_updates (test_protocol.RestartTests.test_zero_reader_failure_blocks_worker_before_initial_and_updates) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.635s
+
+OK

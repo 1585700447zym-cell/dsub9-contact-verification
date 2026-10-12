@@ -1,0 +1,33 @@
+{
+  "status": "common_origin_preparation_accepted",
+  "date": "2026-09-30",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "tests": 133,
+  "failures": 0,
+  "errors": 0,
+  "monitored_actual_calls": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "reconstruction_manifest_sha256": "d31f696ae82c7e3f992afa27bcd68ab222a4ea8dbc965f29cbd26c5f1f0cde5f",
+  "state_sha256": "a4faa252528eea2753035e8c19d412fec6aeaedba17e3adfba55a8ec16efcb2f",
+  "source_manifest_sha256": "0a640e0b8c191d24226efda9bba425a65371732803617ffda240a5b584b2a914",
+  "current_sources": 286,
+  "protected_original_sources": 283,
+  "protected_parent_artifacts": 39,
+  "old_sealed_files": 4149,
+  "inherited_original_source_bytes": 929,
+  "replay_rows": 22766,
+  "reconstruction_complete": true,
+  "a_learning_reproduced": false,
+  "actual_update_validated": false,
+  "execution_adapter_complete": false,
+  "qualification_issued": false,
+  "training_launched": false,
+  "policy_effect_validated": false,
+  "old_unused_dynamic": 19,
+  "old_unused_batches": 2000,
+  "automatic_tracking": "PAUSED",
+  "b2_complete": false
+}

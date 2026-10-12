@@ -1,0 +1,17 @@
+{
+  "reference_index": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\b2_search_recovery\\matrix_v1_7cases\\results_index.json",
+  "reference_index_sha256": "d80fbf8ba4708c95976aa951fcf426def80f968caca361e02a1ac95b007fb98a",
+  "candidate_index_sha256": "3cfd8f685c5f6c1033bb517681dc9610b13e70c90879383672409e3fcd50d7a6",
+  "exact_equal_fields": {
+    "case": true,
+    "environment": true,
+    "finish_criteria": true,
+    "trace": true,
+    "events": true,
+    "termination": true,
+    "peaks": true,
+    "physical_steps": true
+  },
+  "all_equal": true,
+  "interpretation": "unchanged nominal path reproduced with the candidate; not a zero-residual SAC adapter test"
+}

@@ -1,0 +1,31 @@
+{
+  "tests_passed": 420,
+  "full_project_suite": false,
+  "prior_sealed_files_verified": 2827,
+  "bound_inputs": 1057,
+  "source_snapshots": 1057,
+  "document_snapshots": 8,
+  "links_checked": 26,
+  "review": {
+    "fresh_context": true,
+    "reported_important": 5,
+    "unresolved_important": 0,
+    "fix_passes": 1,
+    "second_review": false,
+    "minor_deferred": 1
+  },
+  "attempts": 2,
+  "completed": 2,
+  "cumulative": 142,
+  "formal_updates": 0,
+  "training_admitted": true,
+  "stage_B2_complete": false,
+  "independent_tests": 0,
+  "automatic_tracking": "PAUSED",
+  "audit_errors": [
+    {
+      "id": "warmup_S50_y_neg_150",
+      "audit_error": "ValueError('Common reference failure')"
+    }
+  ]
+}

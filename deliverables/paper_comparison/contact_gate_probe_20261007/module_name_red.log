@@ -1,0 +1,42 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+F                                                                        [100%]
+================================== FAILURES ===================================
+___________ test_deployment_module_does_not_break_stdlib_profiling ____________
+
+    def test_deployment_module_does_not_break_stdlib_profiling():
+        # Our module name must not shadow stdlib profile when Torch loads cProfile.
+>       import cProfile,importlib
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    #! /usr/bin/env python3
+    
+    """Python interface for the 'lsprof' profiler.
+       Compatible with the 'profile' module.
+    """
+    
+    __all__ = ["run", "runctx", "Profile"]
+    
+    import _lsprof
+    import importlib.machinery
+    import io
+    import profile as _pyprofile
+    
+    # ____________________________________________________________
+    # Simple interface
+    
+    def run(statement, filename=None, sort=-1):
+        return _pyprofile._Utils(Profile).run(statement, filename, sort)
+    
+    def runctx(statement, globals, locals, filename=None, sort=-1):
+        return _pyprofile._Utils(Profile).runctx(statement, globals, locals,
+                                                 filename, sort)
+    
+>   run.__doc__ = _pyprofile.run.__doc__
+E   AttributeError: module 'profile' has no attribute 'run'
+
+D:\KEYANRUJIAN\Lib\cProfile.py:24: AttributeError
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_deployment_module_does_not_break_stdlib_profiling
+1 failed in 5.37s

@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/b2_io_repair_review",
+  "status": "RESOLVED",
+  "initial_verdict": "With fixes for offline candidate only",
+  "initial_critical": 0,
+  "initial_important": 2,
+  "initial_minor": 0,
+  "open_critical": 0,
+  "open_important": 0,
+  "deferred_minor": [],
+  "fixed": [
+    {"issue": "Validate before duplicate phase shortcut", "regressions": ["test_first_null_phase_is_invalid", "test_equal_value_with_invalid_type_does_not_bypass_validation"]},
+    {"issue": "Read final phase before successful process receipt", "regressions": ["test_final_phase_is_checked_after_fast_child_exit"]}
+  ],
+  "red_evidence": "red_review.log",
+  "green_evidence": "suite_final.json",
+  "numeric_restore_verified": false,
+  "restart_authorized": false
+}

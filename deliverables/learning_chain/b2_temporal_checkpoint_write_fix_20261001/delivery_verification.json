@@ -1,0 +1,30 @@
+{
+  "version": "checkpoint_write_fix_delivery_v1",
+  "sha256": {
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/assessment.json": "1228ca8ebc6baa769bb3fb1708e7e89ebf88a4312834e2459815093c57769fad",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/corrected_runtime.py": "fd86285c570c74dd8e725e47ff488acb38d354761cc91106eca7cc5c3d9ed340",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/protocol_runner.py": "9cacf1c08fcd40de749395b6b2efac8504d82f6a2816a79e9bef468c7225c9a1",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/README.md": "ed93a8773ace921d33ea4ef6d16b566325b29d41bc8b1a66a4f2cce0a1dbe47c",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/review.md": "157f295e8dad567021bba820fea6ea547b295bf3962d487a28641d80ee8871fe",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/review_assessment.json": "e92a09b8eb79ccab5f03d211b20355c2c819694e2741722cdbbcacbe58552150",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/seal_fix.py": "b89dfac0ee51ae4ef73a849a65582f8bf471e12491565f656eeadfe294c11795",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/test_protocol.py": "9bca059780589175a14753bf483daf80a3f53155f259dda6c2d5096f5fa457eb",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/verify_saved.py": "267588c32c33681eef1e4c89cfce6321b3095b1b1fb3cb1e3d5e39e4eeb39377",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/writer_final_green.json": "64a46039b4239243f0eb10eb25bd917dde272cc988816d78a7c91a5f154d05fc",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/writer_final_green.txt": "6ee8a2b2848d9470f404e8c643d45bf98d04f7fa561b0da1c0f42a8acc1f9356",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/writer_green.json": "59c27b2c406d59a01da01c73a5d01a20e32bf5af27e6d8f3a7f7e093c5ef5361",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/writer_green.txt": "f29b85899eb1eda7bb8a6c438e77bf396ce9dc1ddb9555dc3a31bd91f9168663",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/writer_red.json": "58c1080e0f424b84a68dceee5ace97c46b8915ff5009fcadea5bbad1ad7027d1",
+    "deliverables/learning_chain/b2_temporal_checkpoint_write_fix_20261001/writer_red.txt": "f6c13c4c947b731604124771e24904b40bdbdf4e80aad1d1aa7856c996e29c14"
+  },
+  "original_binding_sha256": "43cc9313f361973682a431d74aebcf2d358e8d3a835f7d5b5544c9e8f79820ad",
+  "actual_calls": {
+    "model_forward": 0,
+    "optimizer": 0,
+    "physics": 0
+  },
+  "tests": 7,
+  "policy_effect_validated": false,
+  "retry_allowed": false,
+  "b2_complete": false
+}

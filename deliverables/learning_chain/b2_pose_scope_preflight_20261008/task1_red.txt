@@ -1,0 +1,66 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_angles_reach_contact_case_once (__main__.ContractTests.test_angles_reach_contact_case_once) ... FAIL
+test_candidate_and_parent_cannot_change (__main__.ContractTests.test_candidate_and_parent_cannot_change) ... FAIL
+test_fixed_sequence_and_failure_closure (__main__.ContractTests.test_fixed_sequence_and_failure_closure) ... FAIL
+test_full_sequence_has_no_extra_attempt (__main__.ContractTests.test_full_sequence_has_no_extra_attempt) ... FAIL
+test_malformed_and_unregistered_cases_rejected (__main__.ContractTests.test_malformed_and_unregistered_cases_rejected) ... FAIL
+test_pulse_exact_window_and_stop_permissions (__main__.ContractTests.test_pulse_exact_window_and_stop_permissions) ... FAIL
+
+======================================================================
+FAIL: test_angles_reach_contact_case_once (__main__.ContractTests.test_angles_reach_contact_case_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 31, in setUp
+    self.assertIsNotNone(self.api, 'Missing pure scope contract implementation')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing pure scope contract implementation
+
+======================================================================
+FAIL: test_candidate_and_parent_cannot_change (__main__.ContractTests.test_candidate_and_parent_cannot_change)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 31, in setUp
+    self.assertIsNotNone(self.api, 'Missing pure scope contract implementation')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing pure scope contract implementation
+
+======================================================================
+FAIL: test_fixed_sequence_and_failure_closure (__main__.ContractTests.test_fixed_sequence_and_failure_closure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 31, in setUp
+    self.assertIsNotNone(self.api, 'Missing pure scope contract implementation')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing pure scope contract implementation
+
+======================================================================
+FAIL: test_full_sequence_has_no_extra_attempt (__main__.ContractTests.test_full_sequence_has_no_extra_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 31, in setUp
+    self.assertIsNotNone(self.api, 'Missing pure scope contract implementation')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing pure scope contract implementation
+
+======================================================================
+FAIL: test_malformed_and_unregistered_cases_rejected (__main__.ContractTests.test_malformed_and_unregistered_cases_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 31, in setUp
+    self.assertIsNotNone(self.api, 'Missing pure scope contract implementation')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing pure scope contract implementation
+
+======================================================================
+FAIL: test_pulse_exact_window_and_stop_permissions (__main__.ContractTests.test_pulse_exact_window_and_stop_permissions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 31, in setUp
+    self.assertIsNotNone(self.api, 'Missing pure scope contract implementation')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing pure scope contract implementation
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.037s
+
+FAILED (failures=6)

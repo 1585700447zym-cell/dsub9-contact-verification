@@ -1,0 +1,90 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_bad_length_substeps_and_initial_audit_cannot_be_healthy (__main__.WorkerTests.test_bad_length_substeps_and_initial_audit_cannot_be_healthy) ... FAIL
+test_initial_contact_failure_retains_charged_successful_reset (__main__.WorkerTests.test_initial_contact_failure_retains_charged_successful_reset) ... FAIL
+test_nonzero_action_and_wrong_matrix_scope_rejected (__main__.WorkerTests.test_nonzero_action_and_wrong_matrix_scope_rejected) ... FAIL
+test_reset_exception_retains_attempt_without_fabricated_completion (__main__.WorkerTests.test_reset_exception_retains_attempt_without_fabricated_completion) ... FAIL
+test_reset_is_charged_before_call_and_usable_only_once (__main__.WorkerTests.test_reset_is_charged_before_call_and_usable_only_once) ... FAIL
+test_valid_ordinary_failure_and_guard_are_distinct (__main__.WorkerTests.test_valid_ordinary_failure_and_guard_are_distinct) ... FAIL
+test_zero_archive_identity_and_original_negative_qualification_preserved (__main__.WorkerTests.test_zero_archive_identity_and_original_negative_qualification_preserved) ... FAIL
+
+======================================================================
+FAIL: test_bad_length_substeps_and_initial_audit_cannot_be_healthy (__main__.WorkerTests.test_bad_length_substeps_and_initial_audit_cannot_be_healthy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 89, in test_bad_length_substeps_and_initial_audit_cannot_be_healthy
+    fn=self.api('audit_baseline')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 18, in api
+    self.assertTrue(callable(getattr(worker,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: audit_baseline
+
+======================================================================
+FAIL: test_initial_contact_failure_retains_charged_successful_reset (__main__.WorkerTests.test_initial_contact_failure_retains_charged_successful_reset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 48, in test_initial_contact_failure_retains_charged_successful_reset
+    fn=self.api('reset_once')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 18, in api
+    self.assertTrue(callable(getattr(worker,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: reset_once
+
+======================================================================
+FAIL: test_nonzero_action_and_wrong_matrix_scope_rejected (__main__.WorkerTests.test_nonzero_action_and_wrong_matrix_scope_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 82, in test_nonzero_action_and_wrong_matrix_scope_rejected
+    fn=self.api('audit_baseline')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 18, in api
+    self.assertTrue(callable(getattr(worker,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: audit_baseline
+
+======================================================================
+FAIL: test_reset_exception_retains_attempt_without_fabricated_completion (__main__.WorkerTests.test_reset_exception_retains_attempt_without_fabricated_completion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 56, in test_reset_exception_retains_attempt_without_fabricated_completion
+    fn=self.api('reset_once')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 18, in api
+    self.assertTrue(callable(getattr(worker,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: reset_once
+
+======================================================================
+FAIL: test_reset_is_charged_before_call_and_usable_only_once (__main__.WorkerTests.test_reset_is_charged_before_call_and_usable_only_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 34, in test_reset_is_charged_before_call_and_usable_only_once
+    fn=self.api('reset_once')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 18, in api
+    self.assertTrue(callable(getattr(worker,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: reset_once
+
+======================================================================
+FAIL: test_valid_ordinary_failure_and_guard_are_distinct (__main__.WorkerTests.test_valid_ordinary_failure_and_guard_are_distinct)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 95, in test_valid_ordinary_failure_and_guard_are_distinct
+    fn=self.api('audit_baseline');raw=self.raw();raw['outcome']['task_outcome']='TASK_FAILURE'
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 18, in api
+    self.assertTrue(callable(getattr(worker,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: audit_baseline
+
+======================================================================
+FAIL: test_zero_archive_identity_and_original_negative_qualification_preserved (__main__.WorkerTests.test_zero_archive_identity_and_original_negative_qualification_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 77, in test_zero_archive_identity_and_original_negative_qualification_preserved
+    fn=self.api('audit_baseline');self.assertTrue(fn(self.raw(),self.config()))
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_worker.py", line 18, in api
+    self.assertTrue(callable(getattr(worker,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: audit_baseline
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.004s
+
+FAILED (failures=7)

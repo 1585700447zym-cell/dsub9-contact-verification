@@ -1,0 +1,18 @@
+{
+  "exact_repeat": {
+    "case": true,
+    "controller": true,
+    "environment": true,
+    "termination": true,
+    "finish_criteria": true,
+    "trace": true,
+    "events": true,
+    "peaks": true,
+    "physical_steps": true
+  },
+  "source_sha256": {
+    "deliverables/native313_validation/stop_dt0p2_v1/original_duration.json.gz": "4ba6d7cd4aac4a36d27f750ae3785814cda13946517e387caf0cfa1647ff3164",
+    "deliverables/native313_baseline_matrix/b2_v1/y_offset_neg_100um/original.json.gz": "0620527760612e18ef8e90528512234cda00cf2d3c721ee083fa1bd4a9429ef5"
+  },
+  "scope": "Read-only comparison; this matrix Y is one of the 14 planned runs, not an additional simulation"
+}

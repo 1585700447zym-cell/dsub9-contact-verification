@@ -1,0 +1,18 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_dictionary_reordering_preserves_semantic_identity (test_state_structure.DigestStructureTests.test_dictionary_reordering_preserves_semantic_identity) ... ok
+test_moving_envelope_fields_into_warm_state_changes_digest (test_state_structure.DigestStructureTests.test_moving_envelope_fields_into_warm_state_changes_digest) ... FAIL
+test_numeric_types_and_sequence_boundaries_remain_distinct (test_state_structure.DigestStructureTests.test_numeric_types_and_sequence_boundaries_remain_distinct) ... ok
+
+======================================================================
+FAIL: test_moving_envelope_fields_into_warm_state_changes_digest (test_state_structure.DigestStructureTests.test_moving_envelope_fields_into_warm_state_changes_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_state_structure.py", line 19, in test_moving_envelope_fields_into_warm_state_changes_digest
+    self.assertNotEqual(context['state_digest'](a),context['state_digest'](b))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'b2d41f9af927340c288033288c156bccedb18a697dcb20b37851e5e3a52687f1' == 'b2d41f9af927340c288033288c156bccedb18a697dcb20b37851e5e3a52687f1'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (failures=1)

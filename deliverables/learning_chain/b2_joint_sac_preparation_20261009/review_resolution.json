@@ -1,0 +1,24 @@
+{
+  "stage_id": "B2-SCOPE-12",
+  "reviewer": "/root/b2_joint_sac_candidate_review",
+  "mode": "read_only_independent_review",
+  "verdict": "READY_FOR_OFFLINE_CANDIDATE_DELIVERY_AFTER_FINAL_BINDING_AND_SEAL",
+  "unresolved_critical": 0,
+  "unresolved_important": 0,
+  "unresolved_minor": 0,
+  "issues_resolved": [
+    {"severity":"important","issue":"Runtime consumed unhashed configuration/model execution copies","resolution":"verify_execution_copies before runtime import and every physical entry, including reader","test":"test_drifted_execution_copy_is_rejected_before_backend"},
+    {"severity":"important","issue":"Reader temporary ledger/finally restore could erase history or failed restore evidence","resolution":"Blocked parent; reader atomically appends to complete ledger; no rollback; outer finally preserves current disk ledger and closes admission","test":"test_reader_failure_preserves_all_parent_rows_and_failed_restore"},
+    {"severity":"important","issue":"STOP was not checked within the 500-update block","resolution":"Inherited before_update callback calls current.verify before each numeric update","test":"test_stop_between_batches_prevents_second_numeric_update"}
+  ],
+  "late_self_review": {
+    "issue":"Initial candidate confused 29-second physical-plus-stop ceiling with common 26-second task failure penalty",
+    "resolution":"Metric, candidate and generator restored to the common 26-second penalty before any outcomes; floating-point success-time tolerance 1e-9",
+    "regression":"Expected 14.0 first failed with 14.75, then passed after correction",
+    "independent_followup":"Reviewer checked parent 26.0 and current contract/candidate/generator, ran 5/5 contract checks, and confirmed correction"
+  },
+  "reviewer_executed_pure_tests": 15,
+  "not_executed": ["physical simulation", "learner construction", "torch tensor load", "network forward", "optimizer update", "real checkpoint restoration", "Windows hard-termination fault injection"],
+  "excluded_from_reviewer_repeat": ["historical full archive re-analysis handled by main agent", "final source binding and document seal handled by main agent"],
+  "training_admitted": false
+}

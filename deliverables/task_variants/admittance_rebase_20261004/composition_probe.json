@@ -1,0 +1,18 @@
+{
+  "reconstructed_commands": 3266,
+  "max_abs_error_m_s": 0.0,
+  "unsaturated_opposition_samples": 642,
+  "example": {
+    "command_time_s": 14.829999999992115,
+    "trace_time_s": 14.83199999999211,
+    "input_Fy_mN": 12.625704386756771,
+    "admittance_y_mm_s": 0.5000000000000121,
+    "tangent_y_mm_s": -0.04083009270374337,
+    "tracking_y_mm_s": -0.5651879735707857,
+    "raw_y_mm_s": -0.10601806627451683,
+    "limited_y_mm_s": -0.10601806627451683,
+    "integral_y_um": 498.95382941140036,
+    "actual_y_um": -153.086633933066
+  },
+  "scope": "Algebra reconstruction of archived raw command from prior sensor sample, recorded applied admittance, known spiral origin/theta; zero physics and controller calls."
+}

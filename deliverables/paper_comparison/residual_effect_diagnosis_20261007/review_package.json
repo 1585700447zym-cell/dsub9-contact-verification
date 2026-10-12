@@ -1,0 +1,17 @@
+{
+  "scope": "new PC-08 files only; legacy dirty branch and already sealed deliveries read-only dependencies",
+  "files": {
+    "diagnose.py": "c8489368d5d7f41e1444bdd8b949dc1bfe87888b022b3ed5d96929fd98419350",
+    "test_diagnose.py": "54ae114657d336a8c9609430d3480de4dca0cd36c49e2da545eddf41245238ca",
+    "finish.py": "119c803b1d20e7a16f29eb2b715290f04c982cff8a4c2a6986c869fad6a731a1",
+    "next_candidate.md": "524bc7eb8fd614ffc54e12bf401f34cb5a23132ea51e579eebac5080516b4ddb",
+    "结果说明.md": "a8c025dc3bd28d7b49f85928b256c53272bdeaa227403f8f6bc00b6adc25cf69",
+    "diagnosis.json": "ff6ed53ddce6ecfad5b86f99c6c7286c603da3d606e232d3ecd76e1e781c0981",
+    "configuration.json": "ea4608d07e8a4ab634d18cfd5101f0bf5897eb4c0e06a73d0a507708a1afd252",
+    "verification.json": "38cff5af86bfb4cb2ea4216f0d7899d1c8cdbdc5cd9d685821afe03d60bdad62",
+    "figure_qa.json": "9d6c3890191deda8a87074ba397d7f38bf7011c97ab077bcebb60939fb25af94"
+  },
+  "plan": "docs/superpowers/plans/2026-10-07-residual-effect-diagnosis.md",
+  "rolling_documents_pending": "finish.py close updates five existing documents after review",
+  "limitations": "no new physics or training, candidate not implemented/admitted/tested"
+}

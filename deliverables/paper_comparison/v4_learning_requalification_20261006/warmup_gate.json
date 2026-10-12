@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "actual_new_physical_data": true,
+  "branches": {
+    "F50": {
+      "rows": 29352,
+      "active_rows": 23384,
+      "active_cases": 4,
+      "cases": [
+        {
+          "case": "y_neg_150",
+          "active_rows": 4495,
+          "outcome": "FULL_SUCCESS"
+        },
+        {
+          "case": "y_pos_150",
+          "active_rows": 7699,
+          "outcome": "FULL_SUCCESS"
+        },
+        {
+          "case": "x_pos_150",
+          "active_rows": 5146,
+          "outcome": "FULL_SUCCESS"
+        },
+        {
+          "case": "x_neg_150",
+          "active_rows": 6044,
+          "outcome": "FULL_SUCCESS"
+        }
+      ],
+      "gate_passed": true
+    },
+    "S50": {
+      "rows": 31038,
+      "active_rows": 16288,
+      "active_cases": 4,
+      "cases": [
+        {
+          "case": "y_neg_150",
+          "active_rows": 7163,
+          "outcome": "TASK_FAILURE"
+        },
+        {
+          "case": "y_pos_150",
+          "active_rows": 2878,
+          "outcome": "FULL_SUCCESS"
+        },
+        {
+          "case": "x_pos_150",
+          "active_rows": 2671,
+          "outcome": "FULL_SUCCESS"
+        },
+        {
+          "case": "x_neg_150",
+          "active_rows": 3576,
+          "outcome": "FULL_SUCCESS"
+        }
+      ],
+      "gate_passed": true
+    }
+  },
+  "formal_updates_at_gate": 0
+}

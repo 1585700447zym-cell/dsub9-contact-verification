@@ -1,0 +1,48 @@
+progress search_x_neg cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_x_neg cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_x_neg cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_x_neg cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_x_neg cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_x_neg TASK_FAILURE passed= True cycles= 5468 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 213.65
+progress search_x_pos cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_x_pos cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_x_pos cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_x_pos cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_x_pos cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_x_pos TASK_FAILURE passed= True cycles= 5468 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 212.86
+progress search_y_neg cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_y_neg cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_y_neg cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_y_neg cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_y_neg cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_y_neg TASK_FAILURE passed= True cycles= 5459 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 209.38
+progress search_y_pos cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_y_pos cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_y_pos cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_y_pos cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_y_pos cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_y_pos TASK_FAILURE passed= True cycles= 5490 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 213.85
+progress search_roll_neg cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_roll_neg cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_roll_neg cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_roll_neg cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_roll_neg cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_roll_neg TASK_FAILURE passed= True cycles= 5489 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 211.6
+progress search_roll_pos cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_roll_pos cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_roll_pos cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_roll_pos cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_roll_pos cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_roll_pos TASK_FAILURE passed= True cycles= 5487 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 212.26
+progress search_pitch_neg cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_pitch_neg cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_pitch_neg cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_pitch_neg cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_pitch_neg cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_pitch_neg TASK_FAILURE passed= True cycles= 5508 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 215.79
+progress search_pitch_pos cycle= 1000 sim_s= 2.0 phase= SEARCH pulse_cycles= 100
+progress search_pitch_pos cycle= 2000 sim_s= 4.0 phase= SEARCH pulse_cycles= 100
+progress search_pitch_pos cycle= 3000 sim_s= 6.0 phase= INSERT pulse_cycles= 100
+progress search_pitch_pos cycle= 4000 sim_s= 8.0 phase= INSERT pulse_cycles= 100
+progress search_pitch_pos cycle= 5000 sim_s= 10.0 phase= INSERT pulse_cycles= 100
+search_pitch_pos TASK_FAILURE passed= True cycles= 5459 pulse= {'trigger_cycle': 763, 'trigger_time_s': 1.5259999999998646, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 210.2

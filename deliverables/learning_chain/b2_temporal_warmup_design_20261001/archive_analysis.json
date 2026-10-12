@@ -1,0 +1,2011 @@
+{
+  "status": "archive_analysis_complete",
+  "new_model_forwards": 0,
+  "new_physics": 0,
+  "new_updates": 0,
+  "first_observation_width": 120,
+  "opposite_x_initial_observations_equal": true,
+  "initial_differences": [],
+  "pooled_warmup_windows": {
+    "0.02": {
+      "count": 1718,
+      "axes": [
+        {
+          "rms_mean": 0.17873505683801985,
+          "max_abs_mean": 0.5879180923104286,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.1748713406716384,
+          "max_abs_mean": 0.6118383526802063,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.1873009010057205,
+          "max_abs_mean": 0.603058448433876,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.18602397332509887,
+          "max_abs_mean": 0.6663610307499767,
+          "fraction_abs_mean_ge_08": 0.0
+        }
+      ]
+    },
+    "0.1": {
+      "count": 341,
+      "axes": [
+        {
+          "rms_mean": 0.07920426457245038,
+          "max_abs_mean": 0.2542988432943821,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.07879120663569739,
+          "max_abs_mean": 0.2381368542835116,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.0829230044153333,
+          "max_abs_mean": 0.22216968153603375,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.08252955087379396,
+          "max_abs_mean": 0.259456791356206,
+          "fraction_abs_mean_ge_08": 0.0
+        }
+      ]
+    },
+    "0.4": {
+      "count": 80,
+      "axes": [
+        {
+          "rms_mean": 0.035042681828459765,
+          "max_abs_mean": 0.08239674984011798,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.03772541080441343,
+          "max_abs_mean": 0.12409592797049841,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.03975282452148176,
+          "max_abs_mean": 0.09707018862944096,
+          "fraction_abs_mean_ge_08": 0.0
+        },
+        {
+          "rms_mean": 0.03644318750880646,
+          "max_abs_mean": 0.10130618505645543,
+          "fraction_abs_mean_ge_08": 0.0
+        }
+      ]
+    }
+  },
+  "episodes": {
+    "warmup_0": {
+      "case": {
+        "name": "train_00",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 6288,
+      "active_cycles": 4898,
+      "first_contact_s": 0.3499999999999941,
+      "first_cross_s": 6.878000000005666,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 2060,
+      "zero_wrench_history_x_mean": 0.012528856689035802,
+      "full_active_x_mean": 0.012656295999486065,
+      "windows": {
+        "0.02": {
+          "count": 489,
+          "axes": [
+            {
+              "rms_mean": 0.17606193255467184,
+              "max_abs_mean": 0.574658565595746,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5419222903885481
+            },
+            {
+              "rms_mean": 0.17456415931405883,
+              "max_abs_mean": 0.509636178985238,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.523517382413088
+            },
+            {
+              "rms_mean": 0.1921548457744072,
+              "max_abs_mean": 0.603058448433876,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.50920245398773
+            },
+            {
+              "rms_mean": 0.19064979984809394,
+              "max_abs_mean": 0.6663610307499767,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4867075664621677
+            }
+          ]
+        },
+        "0.1": {
+          "count": 97,
+          "axes": [
+            {
+              "rms_mean": 0.07786402048288905,
+              "max_abs_mean": 0.20027222499251365,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5567010309278351
+            },
+            {
+              "rms_mean": 0.07084725509975184,
+              "max_abs_mean": 0.2090920277684927,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4845360824742268
+            },
+            {
+              "rms_mean": 0.07832819776923138,
+              "max_abs_mean": 0.21582745406776668,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4948453608247423
+            },
+            {
+              "rms_mean": 0.08750745947620615,
+              "max_abs_mean": 0.259456791356206,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.44329896907216493
+            }
+          ]
+        },
+        "0.4": {
+          "count": 23,
+          "axes": [
+            {
+              "rms_mean": 0.033259160029166075,
+              "max_abs_mean": 0.0680630905600537,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.6086956521739131
+            },
+            {
+              "rms_mean": 0.03194729288608048,
+              "max_abs_mean": 0.06691663751589658,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5652173913043478
+            },
+            {
+              "rms_mean": 0.04314832083319169,
+              "max_abs_mean": 0.09707018862944096,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.391304347826087
+            },
+            {
+              "rms_mean": 0.02710909363885968,
+              "max_abs_mean": 0.05393327965401113,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.34782608695652173
+            }
+          ]
+        }
+      }
+    },
+    "warmup_1": {
+      "case": {
+        "name": "train_01",
+        "x_offset_m": -0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 5475,
+      "active_cycles": 4085,
+      "first_contact_s": 0.3499999999999941,
+      "first_cross_s": null,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 2059,
+      "zero_wrench_history_x_mean": 0.011118962480289114,
+      "full_active_x_mean": 0.0031440463148332664,
+      "windows": {
+        "0.02": {
+          "count": 408,
+          "axes": [
+            {
+              "rms_mean": 0.17574751029156224,
+              "max_abs_mean": 0.48952747918665407,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5049019607843137
+            },
+            {
+              "rms_mean": 0.1849791348837508,
+              "max_abs_mean": 0.5881515726447105,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.49019607843137253
+            },
+            {
+              "rms_mean": 0.1811658102169958,
+              "max_abs_mean": 0.5383067443966866,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5
+            },
+            {
+              "rms_mean": 0.18181397755935214,
+              "max_abs_mean": 0.5540457660332322,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4730392156862745
+            }
+          ]
+        },
+        "0.1": {
+          "count": 81,
+          "axes": [
+            {
+              "rms_mean": 0.0774532881473447,
+              "max_abs_mean": 0.1678683799877763,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5679012345679012
+            },
+            {
+              "rms_mean": 0.08880975600391229,
+              "max_abs_mean": 0.20445917177945327,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5061728395061729
+            },
+            {
+              "rms_mean": 0.0881698653263798,
+              "max_abs_mean": 0.1821377282589674,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4691358024691358
+            },
+            {
+              "rms_mean": 0.07931339827723505,
+              "max_abs_mean": 0.17062003913335502,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.41975308641975306
+            }
+          ]
+        },
+        "0.4": {
+          "count": 19,
+          "axes": [
+            {
+              "rms_mean": 0.03293366053329173,
+              "max_abs_mean": 0.08239674984011798,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.47368421052631576
+            },
+            {
+              "rms_mean": 0.04953039585669308,
+              "max_abs_mean": 0.12409592797049841,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.631578947368421
+            },
+            {
+              "rms_mean": 0.0393457155907563,
+              "max_abs_mean": 0.06507673539221287,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5263157894736842
+            },
+            {
+              "rms_mean": 0.04564215143509692,
+              "max_abs_mean": 0.10130618505645543,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.3157894736842105
+            }
+          ]
+        }
+      }
+    },
+    "warmup_2": {
+      "case": {
+        "name": "train_02",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 5124,
+      "active_cycles": 3734,
+      "first_contact_s": 0.3499999999999941,
+      "first_cross_s": null,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 1978,
+      "zero_wrench_history_x_mean": -0.012317251476211544,
+      "full_active_x_mean": -0.00010232361488495208,
+      "windows": {
+        "0.02": {
+          "count": 373,
+          "axes": [
+            {
+              "rms_mean": 0.1784676426084925,
+              "max_abs_mean": 0.5879180923104286,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5040214477211796
+            },
+            {
+              "rms_mean": 0.1797347699654156,
+              "max_abs_mean": 0.5031188771128654,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.46380697050938335
+            },
+            {
+              "rms_mean": 0.18188204022598026,
+              "max_abs_mean": 0.5903375655412674,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5067024128686327
+            },
+            {
+              "rms_mean": 0.18730251820656343,
+              "max_abs_mean": 0.5653380438685417,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4745308310991957
+            }
+          ]
+        },
+        "0.1": {
+          "count": 74,
+          "axes": [
+            {
+              "rms_mean": 0.08319011495772632,
+              "max_abs_mean": 0.23607641009846703,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5
+            },
+            {
+              "rms_mean": 0.07919177646485481,
+              "max_abs_mean": 0.20115096249501221,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4189189189189189
+            },
+            {
+              "rms_mean": 0.08106383015977146,
+              "max_abs_mean": 0.22021028242976173,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5135135135135135
+            },
+            {
+              "rms_mean": 0.08032653030718027,
+              "max_abs_mean": 0.22137812077999117,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5135135135135135
+            }
+          ]
+        },
+        "0.4": {
+          "count": 17,
+          "axes": [
+            {
+              "rms_mean": 0.03806433829212066,
+              "max_abs_mean": 0.08048283992975484,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5882352941176471
+            },
+            {
+              "rms_mean": 0.037761975569880805,
+              "max_abs_mean": 0.0617587567406008,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.29411764705882354
+            },
+            {
+              "rms_mean": 0.034569779624060486,
+              "max_abs_mean": 0.07479580963961781,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5294117647058824
+            },
+            {
+              "rms_mean": 0.0419406093563318,
+              "max_abs_mean": 0.07517108162559452,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5882352941176471
+            }
+          ]
+        }
+      }
+    },
+    "warmup_3": {
+      "case": {
+        "name": "train_03",
+        "x_offset_m": 0.0,
+        "y_offset_m": -0.0001,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 5879,
+      "active_cycles": 4489,
+      "first_contact_s": 0.3499999999999941,
+      "first_cross_s": null,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 2059,
+      "zero_wrench_history_x_mean": -0.009470231148342282,
+      "full_active_x_mean": -0.00752179450712185,
+      "windows": {
+        "0.02": {
+          "count": 448,
+          "axes": [
+            {
+              "rms_mean": 0.18445986148694557,
+              "max_abs_mean": 0.5333823055028916,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4888392857142857
+            },
+            {
+              "rms_mean": 0.1610860898560973,
+              "max_abs_mean": 0.6118383526802063,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5066964285714286
+            },
+            {
+              "rms_mean": 0.19182175128697945,
+              "max_abs_mean": 0.5900600671768188,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.45535714285714285
+            },
+            {
+              "rms_mean": 0.18361903359843038,
+              "max_abs_mean": 0.6006028836127371,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.45982142857142855
+            }
+          ]
+        },
+        "0.1": {
+          "count": 89,
+          "axes": [
+            {
+              "rms_mean": 0.0788302426423142,
+              "max_abs_mean": 0.2542988432943821,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5168539325842697
+            },
+            {
+              "rms_mean": 0.07695987400087846,
+              "max_abs_mean": 0.2381368542835116,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5280898876404494
+            },
+            {
+              "rms_mean": 0.08438145316965813,
+              "max_abs_mean": 0.22216968153603375,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.43820224719101125
+            },
+            {
+              "rms_mean": 0.08161278209886513,
+              "max_abs_mean": 0.22759391009807586,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.47191011235955055
+            }
+          ]
+        },
+        "0.4": {
+          "count": 21,
+          "axes": [
+            {
+              "rms_mean": 0.03622556642180561,
+              "max_abs_mean": 0.08175601528011611,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.3333333333333333
+            },
+            {
+              "rms_mean": 0.030494865190744104,
+              "max_abs_mean": 0.08908525720238686,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5238095238095238
+            },
+            {
+              "rms_mean": 0.04016174106998676,
+              "max_abs_mean": 0.09458925263956189,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.3333333333333333
+            },
+            {
+              "rms_mean": 0.03075366129427456,
+              "max_abs_mean": 0.07713652284350246,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.3333333333333333
+            }
+          ]
+        }
+      }
+    },
+    "initial_x_pos_100": {
+      "case": {
+        "name": "x_pos_100",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 6295,
+      "active_cycles": 4905,
+      "first_contact_s": 0.3499999999999941,
+      "first_cross_s": 6.926000000005767,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 2060,
+      "zero_wrench_history_x_mean": 0.03769976971218887,
+      "full_active_x_mean": 0.04131086983325892,
+      "windows": {
+        "0.02": {
+          "count": 490,
+          "axes": [
+            {
+              "rms_mean": 0.04213326956348397,
+              "max_abs_mean": 0.06763808727264405,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.04131103154056538,
+              "max_abs_mean": 0.06690931916236878,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5489795918367347
+            },
+            {
+              "rms_mean": 0.11187616597857325,
+              "max_abs_mean": 0.16356552839279176,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.04062434043580428,
+              "max_abs_mean": 0.06891764402389526,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4061224489795918
+            }
+          ]
+        },
+        "0.1": {
+          "count": 97,
+          "axes": [
+            {
+              "rms_mean": 0.04203502304213765,
+              "max_abs_mean": 0.06673208713531495,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.04137795843038478,
+              "max_abs_mean": 0.06305146336555478,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.5567010309278351
+            },
+            {
+              "rms_mean": 0.1122212704499638,
+              "max_abs_mean": 0.15896831035614015,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.04076961918182684,
+              "max_abs_mean": 0.06803085088729859,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4020618556701031
+            }
+          ]
+        },
+        "0.4": {
+          "count": 23,
+          "axes": [
+            {
+              "rms_mean": 0.04117747513285084,
+              "max_abs_mean": 0.057947155833244404,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.0407231788574302,
+              "max_abs_mean": 0.06185931086540284,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.6086956521739131
+            },
+            {
+              "rms_mean": 0.11399395541514389,
+              "max_abs_mean": 0.1568141946196556,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.04118954902947439,
+              "max_abs_mean": 0.0676028659939766,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.391304347826087
+            }
+          ]
+        }
+      }
+    },
+    "B_x_pos_100": {
+      "case": {
+        "name": "x_pos_100",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 3061,
+      "active_cycles": 2061,
+      "first_contact_s": 1.1239999999999088,
+      "first_cross_s": 0.7119999999999542,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 652,
+      "zero_wrench_history_x_mean": -0.9593025622375172,
+      "full_active_x_mean": -0.9661417369817079,
+      "windows": {
+        "0.02": {
+          "count": 206,
+          "axes": [
+            {
+              "rms_mean": 0.9661693983209818,
+              "max_abs_mean": 0.9755078315734864,
+              "fraction_abs_mean_ge_08": 1.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.2685863119291962,
+              "max_abs_mean": 0.2799947142601013,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.020298453247980745,
+              "max_abs_mean": 0.043712615966796875,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.44660194174757284
+            },
+            {
+              "rms_mean": 0.13778528497060288,
+              "max_abs_mean": 0.17250699996948243,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            }
+          ]
+        },
+        "0.1": {
+          "count": 41,
+          "axes": [
+            {
+              "rms_mean": 0.9661233904393361,
+              "max_abs_mean": 0.9751706504821778,
+              "fraction_abs_mean_ge_08": 1.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.26864358164413776,
+              "max_abs_mean": 0.27975585699081423,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.020198666966367216,
+              "max_abs_mean": 0.041407541036605815,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.43902439024390244
+            },
+            {
+              "rms_mean": 0.13760739546827802,
+              "max_abs_mean": 0.1693049192428589,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            }
+          ]
+        },
+        "0.4": {
+          "count": 10,
+          "axes": [
+            {
+              "rms_mean": 0.9658890841006122,
+              "max_abs_mean": 0.9742342832684517,
+              "fraction_abs_mean_ge_08": 1.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.2688916984866488,
+              "max_abs_mean": 0.27854049384593965,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.019721454499672875,
+              "max_abs_mean": 0.03350374698638931,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4
+            },
+            {
+              "rms_mean": 0.13668807791753754,
+              "max_abs_mean": 0.1649553483724594,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "initial_x_neg_100": {
+      "case": {
+        "name": "x_neg_100",
+        "x_offset_m": -0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 5475,
+      "active_cycles": 4085,
+      "first_contact_s": 0.3499999999999941,
+      "first_cross_s": 8.804000000006159,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 2062,
+      "zero_wrench_history_x_mean": 0.03727049248294849,
+      "full_active_x_mean": 0.04030065912949411,
+      "windows": {
+        "0.02": {
+          "count": 408,
+          "axes": [
+            {
+              "rms_mean": 0.041180654708388054,
+              "max_abs_mean": 0.06763808727264405,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.03979304078772377,
+              "max_abs_mean": 0.06690931916236878,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4583333333333333
+            },
+            {
+              "rms_mean": 0.10168842411581583,
+              "max_abs_mean": 0.153952693939209,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.03385126054207762,
+              "max_abs_mean": 0.08629926443099976,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.49019607843137253
+            }
+          ]
+        },
+        "0.1": {
+          "count": 81,
+          "axes": [
+            {
+              "rms_mean": 0.04102233432659771,
+              "max_abs_mean": 0.0667034649848938,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.03962938799393958,
+              "max_abs_mean": 0.06305146336555478,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.4691358024691358
+            },
+            {
+              "rms_mean": 0.1018722309707283,
+              "max_abs_mean": 0.15232404947280884,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.03370254234418178,
+              "max_abs_mean": 0.07665211558341979,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.49382716049382713
+            }
+          ]
+        },
+        "0.4": {
+          "count": 19,
+          "axes": [
+            {
+              "rms_mean": 0.039904378566042176,
+              "max_abs_mean": 0.057994974851608344,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.03917703218173285,
+              "max_abs_mean": 0.06188219606876436,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.47368421052631576
+            },
+            {
+              "rms_mean": 0.10360701895032035,
+              "max_abs_mean": 0.15041370362043383,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.03359192003092186,
+              "max_abs_mean": 0.06659544885158539,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.47368421052631576
+            }
+          ]
+        }
+      }
+    },
+    "B_x_neg_100": {
+      "case": {
+        "name": "x_neg_100",
+        "x_offset_m": -0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "CONTACT_GUARD",
+        "guard_violations": {
+          "contact": true,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "cycles": 6581,
+      "active_cycles": 4863,
+      "first_contact_s": 0.10800000000000104,
+      "first_cross_s": null,
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "zero_wrench_history_active_cycles": 79,
+      "zero_wrench_history_x_mean": -0.9346346281751802,
+      "full_active_x_mean": -0.9367633430574893,
+      "windows": {
+        "0.02": {
+          "count": 485,
+          "axes": [
+            {
+              "rms_mean": 0.9370505989492035,
+              "max_abs_mean": 0.9573102116584777,
+              "fraction_abs_mean_ge_08": 1.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.5381316102682921,
+              "max_abs_mean": 0.604215133190155,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.10165971211425964,
+              "max_abs_mean": 0.14001277685165403,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.020618556701030927
+            },
+            {
+              "rms_mean": 0.4766181640774136,
+              "max_abs_mean": 0.5643808245658875,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            }
+          ]
+        },
+        "0.1": {
+          "count": 96,
+          "axes": [
+            {
+              "rms_mean": 0.9371301076599742,
+              "max_abs_mean": 0.9562586212158203,
+              "fraction_abs_mean_ge_08": 1.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.5392247371049428,
+              "max_abs_mean": 0.6041825532913208,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.1017790577924695,
+              "max_abs_mean": 0.13947969913482666,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.010416666666666666
+            },
+            {
+              "rms_mean": 0.4779377465884772,
+              "max_abs_mean": 0.5643187522888183,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            }
+          ]
+        },
+        "0.4": {
+          "count": 23,
+          "axes": [
+            {
+              "rms_mean": 0.9374539426532696,
+              "max_abs_mean": 0.9561824321746826,
+              "fraction_abs_mean_ge_08": 1.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.5457754737429504,
+              "max_abs_mean": 0.6035283958911896,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            },
+            {
+              "rms_mean": 0.10257456688380182,
+              "max_abs_mean": 0.1362592625617981,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 0.0
+            },
+            {
+              "rms_mean": 0.485436210175488,
+              "max_abs_mean": 0.5642375582456589,
+              "fraction_abs_mean_ge_08": 0.0,
+              "positive_fraction": 1.0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_00/episode.json.gz": "3ca3fa4613ab5d421a9bf7dfd3f0c0c7bc1f17638d40844b5bbd63216d7fcb79",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_01/episode.json.gz": "9df8a492e8173c39dd81ded3a9428d60e7ef39082df9628ecac279064134f24a",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_02/episode.json.gz": "ea92d040563e5dd97afd9da1e7c56c319303e53225d3d390e39006f10813c91a",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_03/episode.json.gz": "f86383814e809a098ac013cbc0692f765d54d0eb1e318df1d7a7711eabaa8635",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/initial/episodes/x_pos_100/episode.json.gz": "a332016dfb0f02ff0676fa53e814da97f432c33992592eff970ab46627c067b0",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/run/episodes/x_pos_100/episode.json.gz": "bd59cc1fd44266df618d4ce92000291245e36a920d4203a613c360ec0311d7a2",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/initial/episodes/x_neg_100/episode.json.gz": "5c57b848a6015ac9d95196a3d6d04d03f2a7f1a8c64666ba1b822fc170258b83",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/run/episodes/x_neg_100/episode.json.gz": "61939c228731006f4dd02c8e9f4f7bce07228264c413bd2dbb8bf4000f7a2cf2"
+  },
+  "interpretation": "Window statistics describe saved requests, not physical counterfactuals or policy value."
+}

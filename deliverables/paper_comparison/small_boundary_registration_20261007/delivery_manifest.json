@@ -1,0 +1,114 @@
+{
+  "status": "SEALED_DRAFT_ONLY",
+  "created_at": "2026-10-07T19:42:00+08:00",
+  "scope": "PC-11 proposed small-boundary fair comparison; not implementation/admission/compute authorization",
+  "training_admitted": false,
+  "execution_authorized": false,
+  "actual_new_computation": 0,
+  "files": {
+    "before_documents/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "af243a4c24a09269725b98095e521ef06a4671a16ae21ea12261bc26d6c71e55",
+      "bytes": 106600
+    },
+    "before_documents/研究推进计划_当前版.md": {
+      "sha256": "19d4643f280b1658737e69bd3a9d16ab83539f77a4f2dde0725c6e853e417108",
+      "bytes": 50478
+    },
+    "before_documents/项目交付总览.md": {
+      "sha256": "f8b1f725898ccc612c661a539b3259d7cd3a02374feba003362c79678a3712c8",
+      "bytes": 140783
+    },
+    "before_documents/项目当前入口.md": {
+      "sha256": "2af011e69ff729d267941e0444ca25ccbe0388cf2304e1795ea19a06ee0a58ac",
+      "bytes": 30924
+    },
+    "before_documents/项目进度跟踪.md": {
+      "sha256": "1d8a3f1215b9abab677de9fffcda7f4862bdcc2925acf6134aacb8c900742831",
+      "bytes": 175671
+    },
+    "budget_basis.json": {
+      "sha256": "6b5596ad392c3f58961c73253583fb03cf18475b09c943bc057b8aeede0e71a8",
+      "bytes": 1442
+    },
+    "build_draft.py": {
+      "sha256": "07a19151506c569ae6b23500a319bae09008c6a2a18ca9f639f5678f37815743",
+      "bytes": 10952
+    },
+    "closure_summary.md": {
+      "sha256": "29b6484703156b0ec0c2fefbf2cb8cae893303ec2a8671065949764ee9961707",
+      "bytes": 903
+    },
+    "closure_verification.json": {
+      "sha256": "76866bc8d69a9b3c1e52bb633701e5c135ab76aa26b33ff4306dcfc52d61fda7",
+      "bytes": 4647
+    },
+    "design_snapshot.md": {
+      "sha256": "0f40910745886fa9f48b36ab84c04a8ee57b1823d3b09fd914990067713c6753",
+      "bytes": 10946
+    },
+    "documents_snapshot/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "6bb8fed3801c21922996046f0fb37fdb52cf776e6c6715a7b1167133417a124d",
+      "bytes": 111363
+    },
+    "documents_snapshot/研究推进计划_当前版.md": {
+      "sha256": "db21eae9a34ba9d0214c54c4493684d5fd1806c019f6c6a5f97a6f849c41bf7a",
+      "bytes": 52407
+    },
+    "documents_snapshot/项目交付总览.md": {
+      "sha256": "ed97b808e2b68020243711a5239883e1a6f91c3f87e81086084a8268017381f2",
+      "bytes": 143881
+    },
+    "documents_snapshot/项目当前入口.md": {
+      "sha256": "05f1e9a38c4dfec77fc6d07a4b038ca6493133785266d65f905566fc560fac57",
+      "bytes": 32853
+    },
+    "documents_snapshot/项目进度跟踪.md": {
+      "sha256": "8944f9d3cf63d80ca4554f1d73b0a3631b7693cd2b4a2dd85f22de7df2dbfc47",
+      "bytes": 178604
+    },
+    "draft_contract.json": {
+      "sha256": "21929639eac7c447467c851c0aec4dec2ba5f9c45e551cc19a8d892797515bc8",
+      "bytes": 21073
+    },
+    "finish.py": {
+      "sha256": "e5313bcfc89ea9a1e1516213d52c1a7934bf1312eece0d6a06d7c5099f466a55",
+      "bytes": 3572
+    },
+    "implementation_plan_snapshot.md": {
+      "sha256": "5f617f981a86f5ccaff6662cc2a37929f17b46e31181758339ac3b130e8b2cc3",
+      "bytes": 5972
+    },
+    "progress.md": {
+      "sha256": "e905cc87748c3a1edb45b521669ce4230ef89066829b62423b0e6a06d10c5079",
+      "bytes": 2041
+    },
+    "review.json": {
+      "sha256": "83fe9eb94e2dd3d11665dfe5aee78b445f0c11d0dee6f156c2136b5dbc6ee867",
+      "bytes": 546
+    },
+    "review.md": {
+      "sha256": "36de4a554c2db03ad4e14d093ec090e678309e99cbfff2b75a5ea20e6a1d3ca1",
+      "bytes": 1405
+    },
+    "source_checks.json": {
+      "sha256": "20fd65ea24f999516dcd274bd421afcbcb731e9d1e8dc7574f0af7dfdafae424",
+      "bytes": 678
+    },
+    "update_documents.py": {
+      "sha256": "c29f08692a42c935aa6144a6b03f628ea4ef3fd0af485fa27141fc7d7a813cdd",
+      "bytes": 9143
+    },
+    "verification.json": {
+      "sha256": "746dd62b62cda3da4baac16b10cda3e98e2c23823d06a987c787b863401c9230",
+      "bytes": 4444
+    },
+    "verify_draft.py": {
+      "sha256": "2fb2d7dc3d5ab25e3ea25e4cc88c8056a6e59856537cdd9aa6aff02a2c7148a2",
+      "bytes": 6820
+    },
+    "结果说明.md": {
+      "sha256": "a26f68d380de3119474f325ff1d5f34331e29fcbc1d22f2a1d7bdfcc53d306ac",
+      "bytes": 2643
+    }
+  }
+}

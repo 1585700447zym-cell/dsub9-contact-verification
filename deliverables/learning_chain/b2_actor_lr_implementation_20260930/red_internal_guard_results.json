@@ -1,0 +1,34 @@
+{
+  "exit_code": 1,
+  "tests": 20,
+  "failures": 2,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "a5730d6679db57c923049dd016b3f3147021ca28519322ae2633556a4ed00f51",
+  "test_ids": [
+    "tests.learning.test_actor_lr_preparation::test_preparation_updater_blocks_all_model_computation[predict]",
+    "tests.learning.test_actor_lr_preparation::test_preparation_updater_blocks_all_model_computation[targets]",
+    "tests.learning.test_actor_lr_preparation::test_preparation_updater_blocks_all_model_computation[_targets]",
+    "tests.learning.test_actor_lr_preparation::test_preparation_updater_blocks_all_model_computation[update]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[0.0]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[-1.0]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[True]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[inf]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[nan]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[None]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[0.0003]",
+    "tests.learning.test_learning_rate_validation::test_invalid_public_rate_cannot_initialize_any_optimizer[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]",
+    "tests.learning.test_learning_rate_validation::test_every_group_must_match_and_guard_does_not_repair_saved_rates",
+    "tests.learning.test_learning_rate_validation::test_incomplete_or_non_numeric_saved_groups_are_rejected[missing]",
+    "tests.learning.test_learning_rate_validation::test_incomplete_or_non_numeric_saved_groups_are_rejected[empty]",
+    "tests.learning.test_learning_rate_validation::test_incomplete_or_non_numeric_saved_groups_are_rejected[nonlist]",
+    "tests.learning.test_learning_rate_validation::test_incomplete_or_non_numeric_saved_groups_are_rejected[nondict]",
+    "tests.learning.test_learning_rate_validation::test_incomplete_or_non_numeric_saved_groups_are_rejected[missing_lr]",
+    "tests.learning.test_learning_rate_validation::test_incomplete_or_non_numeric_saved_groups_are_rejected[bool_lr]",
+    "tests.learning.test_learning_rate_validation::test_matching_multiple_groups_are_accepted_without_state_changes"
+  ]
+}

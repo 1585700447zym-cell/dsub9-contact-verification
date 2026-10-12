@@ -1,0 +1,12 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\run_preflight.py", line 286, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\run_preflight.py", line 276, in main
+    try:bounded_process(command,gate,21600.)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\deadline_guard.py", line 66, in bounded_process
+    if child.returncode:raise RuntimeError('Guarded child returned failure; no retry')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Guarded child returned failure; no retry

@@ -1,0 +1,2 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+{"status": "VERIFIED_CLOSED_EXECUTION_AND_DIAGNOSIS", "assertions": 294, "bound_files": 2167, "sealed_files": 119, "manifest_sha256": "dee846ade20816e11f5487c7968c0067bcd40c3b59d8e9e180f9138f505962fc", "cumulative_dynamic": 209, "static_passed": 9, "dynamic_attempts": 1, "unused_dynamic_closed": 15, "training_admitted": false}

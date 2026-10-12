@@ -1,0 +1,56 @@
+{
+  "stage_id": "B2-SCOPE-07",
+  "status": "OFFLINE_REVIEW_COMPLETE",
+  "decision": "JOINT_CANDIDATE_PREPARATION_SUPPORTED_TRAINING_NOT_ADMITTED",
+  "supports_limited_joint_candidate_preparation": true,
+  "new_training_scope_qualified": false,
+  "training_admitted": false,
+  "new_physical_authorization": false,
+  "new_training_authorization": false,
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "automatic_tracking": "PAUSED",
+  "cumulative_dynamic": 225,
+  "new_physics": 0,
+  "new_policy_forwards": 0,
+  "new_updates": 0,
+  "new_replay_publications": 0,
+  "retained_candidates": [
+    "J01",
+    "J02",
+    "J03",
+    "J04"
+  ],
+  "no_contact_functional_controls": [
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+  ],
+  "old_scope06_route_unchanged": "INSUFFICIENT_COVERAGE_NO_EXTRA_ATTEMPTS",
+  "positive_evidence": [
+    "contact feature differences in zero arms",
+    "permission at contact and force peaks",
+    "four-axis command effect in 50 contact cycles per joint script",
+    "all eight valid and physically stopped"
+  ],
+  "gaps": [
+    "no nonzero action at observed force/torque/penetration peak intervals",
+    "correlated action magnitude 0.1 does not cover full F50 or proposed exploration",
+    "no joint-pose recovery events",
+    "stall_span clipping during 2468 permitted SEARCH vectors",
+    "case-signed scripts cannot establish deployable inference of correction direction",
+    "no noise/repetition/statistical identifiability or learned benefit evidence",
+    "discrete 0.25-degree points do not accept original 1.5-degree scope"
+  ],
+  "next_deliverable": "B.2联合点动作域与恢复准入登记：先审查时长饱和语义，复用共同守卫和既有恢复证据，登记最少新增缺口预检；通过后才允许另行登记姿态匹配普通SAC短训。",
+  "unchanged": [
+    "137-dimensional observation",
+    "physics",
+    "controller permissions",
+    "reward",
+    "protection and success thresholds",
+    "closed budgets"
+  ],
+  "scope_note": "This is an additional interpretation of sealed development evidence, not an upgrade of SCOPE-06 acceptance."
+}

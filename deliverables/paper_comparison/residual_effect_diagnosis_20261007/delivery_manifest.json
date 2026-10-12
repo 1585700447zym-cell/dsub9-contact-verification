@@ -1,0 +1,116 @@
+{
+  "status": "SEALED",
+  "created_at": "2026-10-07T15:26:58.878416+08:00",
+  "scope": "offline descriptive attribution; no new physics, policy inference, optimization or candidate effectiveness",
+  "files": {
+    "analysis.log": {
+      "sha256": "d4e974709d185bcece25068b1eda7fcd746b737780f799a61c9c1f91ba56681f",
+      "bytes": 3904
+    },
+    "closure_verification.json": {
+      "sha256": "ff3871f0623e9d01287caf74ea6406bf2d026d8bb737f179c6f93cd651757490",
+      "bytes": 1654
+    },
+    "configuration.json": {
+      "sha256": "ea4608d07e8a4ab634d18cfd5101f0bf5897eb4c0e06a73d0a507708a1afd252",
+      "bytes": 13654
+    },
+    "diagnose.py": {
+      "sha256": "c8489368d5d7f41e1444bdd8b949dc1bfe87888b022b3ed5d96929fd98419350",
+      "bytes": 12401
+    },
+    "diagnosis.json": {
+      "sha256": "ff6ed53ddce6ecfad5b86f99c6c7286c603da3d606e232d3ecd76e1e781c0981",
+      "bytes": 185182
+    },
+    "documents_snapshot/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "fbf3ef10fd22d8f2f4582a98bdf7ae770fb38ed4af1a8a9de222216f1f8f388c",
+      "bytes": 89244
+    },
+    "documents_snapshot/研究推进计划_当前版.md": {
+      "sha256": "f7e7c8a6e02b5dcbbef78cce7253780b2f6d0bde3154a6500e9f6873926bad96",
+      "bytes": 45035
+    },
+    "documents_snapshot/项目交付总览.md": {
+      "sha256": "d8ddbf6fbc1ddd31ffc169aa3ab3992b1bcbde2c2d271b2296edd7cfd6e5a050",
+      "bytes": 132544
+    },
+    "documents_snapshot/项目当前入口.md": {
+      "sha256": "bf04b565942c84bc52b80a2937b496624e8b67d7a10790eddc26ba8ca805190a",
+      "bytes": 25481
+    },
+    "documents_snapshot/项目进度跟踪.md": {
+      "sha256": "a7f37aa8cfff7095c5a25671bf93b62689ef7a6b2b4ae174604f68fd7d2e90a0",
+      "bytes": 164609
+    },
+    "figure_data.json": {
+      "sha256": "7ab8893eaaf39a0ecb66a07414e481ca9025ae95efa0227d1f3de3c275af5ace",
+      "bytes": 4437
+    },
+    "figure_qa.json": {
+      "sha256": "9d6c3890191deda8a87074ba397d7f38bf7011c97ab077bcebb60939fb25af94",
+      "bytes": 857
+    },
+    "finish.py": {
+      "sha256": "119c803b1d20e7a16f29eb2b715290f04c982cff8a4c2a6986c869fad6a731a1",
+      "bytes": 16625
+    },
+    "green_tests.log": {
+      "sha256": "10c0b4395acc1405345a33a5f3563f9d3efc85792e6ddf07b4784b56c3e0ec19",
+      "bytes": 160
+    },
+    "limiter_definitions.png": {
+      "sha256": "093eaa8bf6cc24826c79859f6d1f8d3131dd8621b56b15ab3dabdc3c3d93c2e9",
+      "bytes": 106380
+    },
+    "limiter_red.log": {
+      "sha256": "3fc69584bfd25f739a5d2437d71dce8e10b96ece757a418af58636302ece50fe",
+      "bytes": 1940
+    },
+    "next_candidate.md": {
+      "sha256": "524bc7eb8fd614ffc54e12bf401f34cb5a23132ea51e579eebac5080516b4ddb",
+      "bytes": 3629
+    },
+    "peak_before_action.png": {
+      "sha256": "5e715a9632dc6ca61830ab7dc26bfbd18d31d38efac87212b360021c6810b269",
+      "bytes": 84228
+    },
+    "progress.md": {
+      "sha256": "8ed508a3b4ef196748583d8a5aa2b1a3ab0cb3dcef814f55653efaaa807203b3",
+      "bytes": 3777
+    },
+    "recovery_red.log": {
+      "sha256": "726937a58f2c2da8104e57af8d72b3cdd1cfaedcc517598c1ebb6ab44ecad6e5",
+      "bytes": 1728
+    },
+    "red_tests.log": {
+      "sha256": "7857faa09062f63297d4c258f2a4400dbfdfe64e8bfc1376a9bcb9125e5f43b4",
+      "bytes": 12700
+    },
+    "review.json": {
+      "sha256": "302100207e98779a503302526912e7c24137b932f87a53b262baf4e667489d90",
+      "bytes": 797
+    },
+    "review.md": {
+      "sha256": "959df6855972191766ddcf7888efa8fd6992b0dede0bab1d1c53bd32f69290da",
+      "bytes": 1799
+    },
+    "review_package.json": {
+      "sha256": "f89aeb7ec6e78477d87c1908fedde2c536631a33526303dfab19f8a9f1296f7b",
+      "bytes": 1222
+    },
+    "test_diagnose.py": {
+      "sha256": "54ae114657d336a8c9609430d3480de4dca0cd36c49e2da545eddf41245238ca",
+      "bytes": 6749
+    },
+    "verification.json": {
+      "sha256": "38cff5af86bfb4cb2ea4216f0d7899d1c8cdbdc5cd9d685821afe03d60bdad62",
+      "bytes": 457
+    },
+    "结果说明.md": {
+      "sha256": "a8c025dc3bd28d7b49f85928b256c53272bdeaa227403f8f6bc00b6adc25cf69",
+      "bytes": 5490
+    }
+  },
+  "local_links_checked": 24
+}

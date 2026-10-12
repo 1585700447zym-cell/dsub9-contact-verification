@@ -1,0 +1,39 @@
+{
+  "version": "actor_lr_user_authorization_v1",
+  "approved": false,
+  "candidate_sha256": "79a9bd0084f871e2ab6c6b24ff96ac69a772aa0e9e53003205866a31c11d2fba",
+  "scope": "validation_and_conditional_ab",
+  "user_confirmation": "",
+  "budget": {
+    "formal": {
+      "A": 500,
+      "B": 500
+    },
+    "physical": {
+      "A": 4,
+      "B": 4
+    },
+    "synthetic": 16,
+    "test_forward": 128,
+    "diagnostic": {
+      "initial": 256,
+      "A": 256,
+      "B": 256
+    },
+    "extra_critic_diagnostic": 0,
+    "new_warmup": 0,
+    "new_training_collection": 0,
+    "independent_test": 0,
+    "previous_dynamic": 57,
+    "new_dynamic_cap": 8,
+    "cumulative_dynamic_cap": 65,
+    "watchdog_cycles_per_start": 13000,
+    "old_unused_dynamic": 19,
+    "old_unused_batches": 2000,
+    "old_unused_consumed": 0,
+    "automatic_tracking": false,
+    "automatic_retry": false,
+    "stop_on_any_evaluation_guard": true,
+    "stop_on_a_reproduction_mismatch": true
+  }
+}

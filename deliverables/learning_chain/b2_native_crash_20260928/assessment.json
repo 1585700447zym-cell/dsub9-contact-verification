@@ -1,0 +1,123 @@
+{
+  "status": "captured_native_crash_repaired_and_episode_audited",
+  "root_cause": "EPA horizon arrays of 24 integers overflow at entry 25",
+  "scope": "captured state and original-seed failure-case regression; not universal engine or training qualification",
+  "patch": "two allocations and one layout offset increased to 18 * iterations",
+  "independent_capacity_review": {
+    "critical": 0,
+    "important": 0
+  },
+  "original_dll_sha256": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48",
+  "candidate_dll_sha256": "4007b6b0956eabc1a3892ac3c3f0947d0e98b90a0604cd8ffcbb795227274047",
+  "matched_compiler_unpatched_dll_sha256": "29114119aa437c242135eb74f7eb47498a847e03f824c119ef90f52435213d2b",
+  "matched_compiler_control_access_violation": true,
+  "patched_forward": {
+    "ncon": 687,
+    "nefc": 2748,
+    "finite": true,
+    "warnings": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "physical_steps": 0,
+    "optimizer_calls": 0
+  },
+  "canary_overflow_bytes": {
+    "original": 4,
+    "fixed": 0
+  },
+  "invalid_control_01": "Same DLL as fixed: old copied source timestamp caused incremental build to skip; not counted as unpatched evidence",
+  "preserved": {
+    "source_inputs": 890,
+    "historical_files": 84,
+    "retry_binding_files": 25
+  },
+  "diagnostic_setup_failures": 1,
+  "diagnostic_dynamic_starts": 2,
+  "original_training_and_retry_starts": 6,
+  "total_dynamic_starts_including_diagnostics": 8,
+  "diagnostic_episode": {
+    "cycles": 6311,
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": true
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0015081563555613237,
+      "checked_substeps": 63110
+    },
+    "elapsed_s": 307.5812579001067,
+    "archive_sha256": "e4e6efed34566c3b2d1ea45cd4449bb9cd5f03be1ae2dcddf83072ee159d5ebc"
+  },
+  "diagnostic_only": true,
+  "formal_optimizer_updates": 0,
+  "replay_published": 0,
+  "training_runtime_admitted": false,
+  "policy_benefit_verified": false,
+  "b2_complete": false,
+  "static_subprocess_attempts": {
+    "canary_fixed_exit": {
+      "returncode": 0,
+      "hex": "0x0"
+    },
+    "canary_guard_exit": {
+      "returncode": 86,
+      "hex": "0x56"
+    },
+    "canary_original_exit": {
+      "returncode": 0,
+      "hex": "0x0"
+    },
+    "control_forward_01_exit": {
+      "returncode": 0,
+      "hex": "0x0"
+    },
+    "control_forward_02_exit": {
+      "returncode": 3221225477,
+      "hex": "0xc0000005"
+    },
+    "fixed_forward_01_exit": {
+      "returncode": 0,
+      "hex": "0x0"
+    },
+    "pair_scan_exit": {
+      "returncode": 0,
+      "hex": "0x0"
+    },
+    "replay_collision_01_exit": {
+      "returncode": 3221225477,
+      "hex": "0xc0000005"
+    },
+    "replay_forward_01_exit": {
+      "returncode": 3221225477,
+      "hex": "0xc0000005"
+    },
+    "replay_no_midphase_01_exit": {
+      "returncode": 3221225477,
+      "hex": "0xc0000005"
+    },
+    "replay_no_multiccd_01_exit": {
+      "returncode": 3221225477,
+      "hex": "0xc0000005"
+    }
+  },
+  "validation_script_sha256": "ee17647dc25ea6122f74acb51e39ef1ce02de6d0c7ab34adc99ca3bfc0f32312",
+  "original_admission_preserved": true,
+  "original_checkpoint_preserved": true,
+  "other_candidate_package_files_identical_to_original": 250
+}

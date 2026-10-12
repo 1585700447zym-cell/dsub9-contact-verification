@@ -1,0 +1,21 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_axis_and_corner_periods (__main__.ContractTests.test_axis_and_corner_periods) ... ok
+test_fixed_order_and_guard_closure (__main__.ContractTests.test_fixed_order_and_guard_closure) ... FAIL
+test_mask_does_not_pause_index (__main__.ContractTests.test_mask_does_not_pause_index) ... ok
+test_no_trigger_on_pending_guard_or_no_contact (__main__.FixtureTests.test_no_trigger_on_pending_guard_or_no_contact) ... ok
+test_once_refresh_and_no_sensor_change (__main__.FixtureTests.test_once_refresh_and_no_sensor_change) ... ok
+test_rejected_recovery_does_not_force_resume (__main__.FixtureTests.test_rejected_recovery_does_not_force_resume) ... ok
+
+======================================================================
+FAIL: test_fixed_order_and_guard_closure (__main__.ContractTests.test_fixed_order_and_guard_closure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_contract.py", line 37, in test_fixed_order_and_guard_closure
+    self.assertEqual(next_attempt(entries,c),spec)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != {'id': 'J02_A_AXIS', 'kind': 'dynamic', '[194 chars]ope'}
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.005s
+
+FAILED (failures=1)

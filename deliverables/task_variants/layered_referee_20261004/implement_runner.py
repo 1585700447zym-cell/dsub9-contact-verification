@@ -1,0 +1,23 @@
+from pathlib import Path
+OUT=Path(__file__).resolve().parent;ROOT=OUT.parents[2]
+s=(ROOT/'tools/validation/run_deadline25_preflight.py').read_text(encoding='utf-8')
+s=s.replace('Bounded 25-second common task verification.','Bounded layered-referee task verification.')
+s=s.replace('deadline25_20261004','layered_referee_20261004').replace('2026-10-04-deadline25-preflight.md','2026-10-04-layered-referee.md')
+s=s.replace("TASK_ID = 'dsub9_clearance120_functional_25s_v3'","TASK_ID = 'dsub9_clearance120_layered_25s_v4'")
+s=s.replace('prior_cumulative=124','prior_cumulative=125').replace('cumulative_limit=129','cumulative_limit=130')
+s=s.replace('from tools.learning.reference_session import ReferenceSearchSession','from tools.learning.layered_session import LayeredReferenceSession')
+s=s.replace('from tools.model.clearance_task import finish_criteria,pin_fit','from tools.model.clearance_task import finish_criteria\n    from tools.model.layered_task import layered_pin_fit,referee_metadata')
+s=s.replace('config=config or dict(b2_config=', 'config=config or dict(geometry_referee=referee_metadata(),b2_config=')
+s=s.replace('    return ReferenceSearchSession(environment=env,',"    if config.get('geometry_referee') != referee_metadata():\n        raise ValueError('Geometry referee differs from the bound task version')\n    return LayeredReferenceSession(environment=env,")
+s=s.replace('geometry_checker=pin_fit)','geometry_checker=layered_pin_fit)')
+s=s.replace('    from tools.model.clearance_task import pin_fit','    from tools.model.layered_task import referee_metadata')
+s=s.replace("parent_task_id='dsub9_clearance120_functional_v2',common_task_change='total_action_time_s:20->25; applies equally to all future baselines'", "parent_task_id='dsub9_clearance120_functional_25s_v3',geometry_referee=referee_metadata(),common_task_change='Geometry only: cylinder clipped to actual bore layers; same 1nm tolerance; common to all baselines'")
+s=s.replace("success_mode='functional_geometry_depth_stability'", "success_mode='functional_layered_geometry_depth_stability'")
+s=s.replace('from tools.model.clearance_task import build_task_xml,finish_criteria,pin_fit,pin_clearance_m','from tools.model.clearance_task import build_task_xml,finish_criteria,pin_clearance_m as legacy_pin_clearance_m\n    from tools.model.layered_task import layered_pin_clearance_m as pin_clearance_m')
+s=s.replace('pin_clearance_um=pin_clearance_m(final)*1e6,peaks=', 'pin_clearance_um=pin_clearance_m(final)*1e6,legacy_pin_clearance_um=legacy_pin_clearance_m(final)*1e6,peaks=')
+s=s.replace('tmp/matplotlib_deadline25','tmp/matplotlib_layered_referee')
+(ROOT/'tools/validation/run_layered_referee_preflight.py').write_text(s,encoding='utf-8')
+# Static preparation/evidence routine is copied, not run from a sealed folder.
+s=(OUT.parent/'deadline25_20261004/prepare_evidence.py').read_text(encoding='utf-8')
+s=s.replace("'reference_search_20261004']","'reference_search_20261004','deadline25_20261004']").replace("glob('test_deadline25*.py')","glob('test_layered*.py')")
+(OUT/'prepare_evidence.py').write_text(s,encoding='utf-8')

@@ -1,0 +1,152 @@
+{
+  "version": "pc12_offline_delivery_v1",
+  "status": "SEALED_OFFLINE_CANDIDATE_NOT_ADMITTED",
+  "created_at": "2026-10-07T22:03:55+08:00",
+  "scope": "offline action/checkpoint wrapper/scheduling protocol; actual numerical/physical backend unverified",
+  "actual_new_compute": 0,
+  "cumulative_dynamic": 208,
+  "training_admitted": false,
+  "execution_authorized": false,
+  "files": {
+    "before_documents/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "6bb8fed3801c21922996046f0fb37fdb52cf776e6c6715a7b1167133417a124d",
+      "bytes": 111363
+    },
+    "before_documents/研究推进计划_当前版.md": {
+      "sha256": "db21eae9a34ba9d0214c54c4493684d5fd1806c019f6c6a5f97a6f849c41bf7a",
+      "bytes": 52407
+    },
+    "before_documents/项目交付总览.md": {
+      "sha256": "ed97b808e2b68020243711a5239883e1a6f91c3f87e81086084a8268017381f2",
+      "bytes": 143881
+    },
+    "before_documents/项目当前入口.md": {
+      "sha256": "05f1e9a38c4dfec77fc6d07a4b038ca6493133785266d65f905566fc560fac57",
+      "bytes": 32853
+    },
+    "before_documents/项目进度跟踪.md": {
+      "sha256": "8944f9d3cf63d80ca4554f1d73b0a3631b7693cd2b4a2dd85f22de7df2dbfc47",
+      "bytes": 178604
+    },
+    "build_report.py": {
+      "sha256": "8695eaefaf9a5d0011fb722514950fa669999f7b986505469d5c9aeb346b9290",
+      "bytes": 4360
+    },
+    "closure_verification.json": {
+      "sha256": "40cc1ebe6ebc0400fbf3509e38b610b9ebc6619d6e9cce1b427741a5a880677c",
+      "bytes": 701
+    },
+    "command_equivalence.json": {
+      "sha256": "ac3442ca218e60b2331a94d018e668e7ecdf88c329aaca3b06c72a3925745961",
+      "bytes": 1445
+    },
+    "document_snapshots/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "304b6417b6f921b9daa0a8e690d47ea24299545caca3c57ccd2c8a0d710eecec",
+      "bytes": 116754
+    },
+    "document_snapshots/研究推进计划_当前版.md": {
+      "sha256": "b85faa4fe2f2a3c3f22f5b790c8bbeb537a3c0480696fce94ba42d1bb0b03bb0",
+      "bytes": 54616
+    },
+    "document_snapshots/项目交付总览.md": {
+      "sha256": "6817b94f5c1a5c600d69de5d60d132604eab2161b5e652ec8e0513240effe28d",
+      "bytes": 148229
+    },
+    "document_snapshots/项目当前入口.md": {
+      "sha256": "ad8638e3c8035fb2698dd721ad94d17194c755f0cd203a558a5b8dcafcf65ada",
+      "bytes": 34942
+    },
+    "document_snapshots/项目进度跟踪.md": {
+      "sha256": "71932c211a6b112b526416b94185d3c194a16c34d3751da3ce800d7f01147af4",
+      "bytes": 182937
+    },
+    "finish.py": {
+      "sha256": "384d29dc1c1f575fcdafc7508862ee1f5ee747ff08e010f91db50f1fa2c63d84",
+      "bytes": 2560
+    },
+    "inspect_archives.py": {
+      "sha256": "8c2cb5d22bb00aaebf5014fbeb61a003ec8b5574c6609ae7729dbd9be666e582",
+      "bytes": 781
+    },
+    "offline_commands.py": {
+      "sha256": "5b9d8264b0f9b583aff819aed1afc0df5dde4c7bc5c887743b31b66944aaedaf",
+      "bytes": 3918
+    },
+    "offline_tests.json": {
+      "sha256": "45a4414a196a2458360f34b0b9355165777e71b2b2877a356be3348628ad4992",
+      "bytes": 2346
+    },
+    "prepare_candidate.py": {
+      "sha256": "df13131227b3b21249ce5b3b85988cff1c4801b9e808688e546f4869974ee5a3",
+      "bytes": 3564
+    },
+    "progress.md": {
+      "sha256": "2f2d5a86925cdc2303944c903eeaeef67b66273994d42d9be425ddb0f0c00eb7",
+      "bytes": 3707
+    },
+    "qualification_candidate.json": {
+      "sha256": "811cb2286e4cb2799ffa1858a61bab31a3844aa169706575af0d6093fe932106",
+      "bytes": 4793
+    },
+    "review.json": {
+      "sha256": "a4758b44dcc71f5d53430f1f5d7e88b5ec809e760edd5eb1e36d9afa3fb37bf9",
+      "bytes": 1829
+    },
+    "review.md": {
+      "sha256": "04e9f47e613a9d184dce6652306b177ebe97c24a7b696ce28922fb78083a3c24",
+      "bytes": 1321
+    },
+    "run_offline_checks.py": {
+      "sha256": "dd706d5d2da446f65b1e7ea00c8658feab8d5af9d2b063bf38d037eae9ce85a4",
+      "bytes": 2209
+    },
+    "run_small_bound_pilot.py": {
+      "sha256": "41939e0416a7c3e34118a0e098cedddc330874ee387217d95a8d9fda92642582",
+      "bytes": 15924
+    },
+    "small_bound_learning.py": {
+      "sha256": "c42aa81b64540d02de1fdb149ac5d26eb899c96f5e13aaf3f87f5bba5236e336",
+      "bytes": 12610
+    },
+    "small_bound_profile.py": {
+      "sha256": "2d5f8945df8cf948a41f634f29a413c414f23b4efa68f2537bc55e55d43968a1",
+      "bytes": 9217
+    },
+    "small_bound_session.py": {
+      "sha256": "47c0711492f94c5ca706bf102c1e4cd974987118aa548e9d441a1bcf3f920557",
+      "bytes": 2150
+    },
+    "source_bindings.json": {
+      "sha256": "fd865860daa8a737b12e16b666c88a11c844b6cdb418519a4802fe3bbda4b4b1",
+      "bytes": 144962
+    },
+    "test_small_bound_budget.py": {
+      "sha256": "f276938400855d2af01476489cceb3e4c330b89054693526394897c35aa9fa26",
+      "bytes": 7422
+    },
+    "test_small_bound_checkpoint.py": {
+      "sha256": "1f806d038cc27e8e1b1f06c37adf6abc5c5c052bbb0dbf84b1ca2a26ab2eb6e6",
+      "bytes": 6011
+    },
+    "test_small_bound_profile.py": {
+      "sha256": "26bb9b4b23d020dda451c35c9f7eaf7c1355d74ceb959143cdb192e7f72aa2d6",
+      "bytes": 6065
+    },
+    "update_documents.py": {
+      "sha256": "93fb669c87b4fd44801a6ce9af0238d73f8f23815b3e4f0a0034ba96ca1d37b6",
+      "bytes": 8370
+    },
+    "verify.py": {
+      "sha256": "3314f22fa9de8b848bd4f597ea9537f70c1fc1dc24db80a77d1eeac4163f719f",
+      "bytes": 3954
+    },
+    "数值门清单.md": {
+      "sha256": "419802dfe785dd77d690cd3855d9c0f636c0ac583bacc3d3560a5546910a8b16",
+      "bytes": 2044
+    },
+    "结果说明.md": {
+      "sha256": "8bb80cde132b7023a214c4d23ef96155ee805127b79f12c3da06d7aa60d4192d",
+      "bytes": 3747
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "BLOCKED_STOP_SETTLING",
+  "input_index_sha256": "4d32a63ed90f9d2905688fb06c1447420edb5e9c25bc22d3db0f2cf31d18b2fb",
+  "original_runner_sha256": "1288802f575b569811f512d78bece582ea06eca66191b94e0e539c030d315e6a",
+  "review_fixed_runner_sha256": "28ce649d9c48a5d1c3231f277ff92f1e0b4f626c0354b6669add0057ef6069ca",
+  "recomputed_pass": false,
+  "recorded_end_after_stop_s": 1.9999999999953388,
+  "all_samples_finite": true,
+  "new_events_during_extension": [],
+  "position_range_per_axis_um": [
+    3.758477344734605,
+    9.803233125224569,
+    0.5300730184583553
+  ],
+  "max_reference_component_change": 0.0,
+  "peak_sampled_linear_um_s": 107.77687126988846,
+  "original_one_s_linear_um_s": 13.365385417958276,
+  "two_s_linear_um_s": 103.81331652036381,
+  "two_s_angular_rad_s": 0.0011730758933022015,
+  "stable_confirmation": null,
+  "additional_net_displacement_um": 0.1387370573952441,
+  "longest_stable_sample_span_over_full_two_s": 0.011999999999972033,
+  "interpretation": "No continuous settling within the prescribed observation; root cause not diagnosed. Tiny net displacement does not imply low instantaneous velocity. No training admission."
+}

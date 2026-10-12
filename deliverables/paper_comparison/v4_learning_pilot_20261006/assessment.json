@@ -1,0 +1,184 @@
+{
+  "status": "error",
+  "attempts": 2,
+  "completed": 2,
+  "cumulative": 142,
+  "unused_closed": 26,
+  "formal_update_attempts": 0,
+  "formal_updates": 0,
+  "per_branch_updates": {
+    "F50": 0,
+    "S50": 0
+  },
+  "policy_calls": 0,
+  "published_transitions": 5885,
+  "control_cycles": 11263,
+  "physical_substeps": 112630,
+  "wall_seconds": 495.56173479999416,
+  "branches": {
+    "F50": "ready",
+    "S50": "ready"
+  },
+  "rows": [
+    {
+      "id": "warmup_F50_y_neg_150",
+      "mode": "F50",
+      "stage": "warmup",
+      "case_id": "y_neg_150",
+      "status": "finished",
+      "control_cycles": 5885,
+      "physical_substeps": 58850,
+      "wall_seconds": 255.4689776999876,
+      "policy_calls": 0,
+      "outcome": "FULL_SUCCESS",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "reason": "GEOMETRIC_SUCCESS",
+      "peak_force_mN": 24.478934346875693,
+      "peak_torque_mNm": 0.162670516112194,
+      "task_end_time_s": 10.010000000003348,
+      "physical_end_time_s": 11.769999999999246,
+      "active_rows": 4495,
+      "transitions": 5885,
+      "committed": 5885,
+      "functional_success_recomputed": true,
+      "optimizer_steps": 0,
+      "independent_reward_rows": 5885,
+      "reference_problems": [],
+      "max_actual_reference_radius_um": 94.18776043322615
+    },
+    {
+      "id": "warmup_S50_y_neg_150",
+      "mode": "S50",
+      "stage": "warmup",
+      "case_id": "y_neg_150",
+      "status": "finished",
+      "control_cycles": 5378,
+      "physical_substeps": 53780,
+      "wall_seconds": 240.09275710000657,
+      "policy_calls": 0,
+      "outcome": "TASK_FAILURE",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "reason": "SEARCH_REFERENCE_LIMIT",
+      "peak_force_mN": 24.474139103047843,
+      "peak_torque_mNm": 0.22308362178370666,
+      "task_end_time_s": 9.75600000000394,
+      "physical_end_time_s": 10.75600000000161,
+      "active_rows": 3615,
+      "transitions": 5378,
+      "committed": 0,
+      "functional_success_recomputed": false,
+      "optimizer_steps": 0,
+      "independent_reward_rows": 5378,
+      "reference_problems": [
+        {
+          "time_s": 8.75600000000627,
+          "phase": "FAILED",
+          "reason": "SEARCH_REFERENCE_LIMIT",
+          "reference_xy_m": [
+            0.00010695684626314158,
+            -5.436250121519483e-05
+          ],
+          "predicted_reference_xy_m": [
+            0.00010711610186378689,
+            -5.4122590344158264e-05
+          ],
+          "radius_limit_m": 0.00012
+        }
+      ],
+      "max_actual_reference_radius_um": 119.97936698003271
+    }
+  ],
+  "audit_errors": [
+    {
+      "id": "warmup_S50_y_neg_150",
+      "audit_error": "ValueError('Common reference failure')"
+    }
+  ],
+  "checkpoints": {
+    "F50": {
+      "label": "F50_warmup_0",
+      "pin": "25b14a2a8208aa1fdd85eb1b7f0cf3a747a93f9b2c441c330a8e3124e450b41b",
+      "updates": {
+        "critic": 0,
+        "actor": 0,
+        "temperature": 0,
+        "target": 0
+      },
+      "replay_rows": 5885,
+      "attempts": 1,
+      "fingerprints": {
+        "actor": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+        "critic": "bafa2de8d1bb258ffd29da087d2a74377093a44f0570b26a0c5ee262f242c6e5",
+        "target": "bafa2de8d1bb258ffd29da087d2a74377093a44f0570b26a0c5ee262f242c6e5",
+        "alpha": "1cc1b9c3ff04c5a91f604011a647e885e9652a30a69cb23fe32c2d5a63680383"
+      }
+    }
+  },
+  "metrics": {
+    "F50": {
+      "comparison_key": null,
+      "attempts": 0,
+      "planned_cases": 5,
+      "missing_cases": [
+        "y_neg_150",
+        "y_pos_150",
+        "x_pos_150",
+        "x_neg_150",
+        "aligned"
+      ],
+      "successes": 0,
+      "success_rate": null,
+      "strict_precision_successes": 0,
+      "guarded_attempts": 0,
+      "invalid_attempts": 0,
+      "unstopped_attempts": 0,
+      "unassessed_attempts": 0,
+      "comparison_eligible": false,
+      "failure_penalty_s": 26.0,
+      "mean_penalized_time_s": null,
+      "mean_success_time_s": null,
+      "mean_peak_force_N": null,
+      "mean_peak_torque_Nm": null,
+      "mean_sampled_force_integral_N_s": null
+    },
+    "S50": {
+      "comparison_key": null,
+      "attempts": 0,
+      "planned_cases": 5,
+      "missing_cases": [
+        "y_neg_150",
+        "y_pos_150",
+        "x_pos_150",
+        "x_neg_150",
+        "aligned"
+      ],
+      "successes": 0,
+      "success_rate": null,
+      "strict_precision_successes": 0,
+      "guarded_attempts": 0,
+      "invalid_attempts": 0,
+      "unstopped_attempts": 0,
+      "unassessed_attempts": 0,
+      "comparison_eligible": false,
+      "failure_penalty_s": 26.0,
+      "mean_penalized_time_s": null,
+      "mean_success_time_s": null,
+      "mean_peak_force_N": null,
+      "mean_peak_torque_Nm": null,
+      "mean_sampled_force_integral_N_s": null
+    }
+  },
+  "comparisons": {
+    "S_vs_B2": null,
+    "S_vs_F": null
+  },
+  "pilot_signal": null,
+  "training_admitted": true,
+  "stage_B2_complete": false,
+  "independent_tests": 0,
+  "automatic_tracking": "PAUSED",
+  "error": "ValueError('Common reference failure')",
+  "scope": "registered_development_pilot_not_independent_test"
+}

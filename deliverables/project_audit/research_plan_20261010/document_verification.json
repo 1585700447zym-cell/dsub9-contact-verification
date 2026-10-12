@@ -1,0 +1,207 @@
+{
+  "date": "2026-10-10",
+  "kind": "documentation_planning_only",
+  "checks": {
+    "branch_unchanged": true,
+    "head_unchanged": true,
+    "prior_dirty_entries_preserved": true,
+    "dirty_status_identical": true,
+    "before_snapshots_match": true,
+    "agents_and_contracts_unchanged": true,
+    "scope21_manifest_unchanged": true,
+    "scope21_53_members_unchanged": true,
+    "five_current_markers_unique": true,
+    "five_current_markers_consistent": true,
+    "ten_ordered_plan_rows": true,
+    "plan_no_new_execution": true,
+    "new_local_links_resolve": true,
+    "six_after_snapshots_match": true
+  },
+  "passed": true,
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "prior_dirty_entries": 224,
+  "scope21_members_verified": 53,
+  "new_scientific_execution": 0,
+  "local_links_checked": 30,
+  "document_changes": {
+    "项目当前入口.md": {
+      "diff_lines": 29,
+      "new_bytes": 40386
+    },
+    "项目进度跟踪.md": {
+      "diff_lines": 111,
+      "new_bytes": 251480
+    },
+    "研究推进计划_当前版.md": {
+      "diff_lines": 71,
+      "new_bytes": 63316
+    },
+    "项目交付总览.md": {
+      "diff_lines": 44,
+      "new_bytes": 206228
+    },
+    "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md": {
+      "diff_lines": 92,
+      "new_bytes": 234894
+    }
+  },
+  "next_pending": "定向文献与场景适用性核查（计划1、2）",
+  "limitations": [
+    "不是定向文献调研完成",
+    "不是新科学执行准入或B.2/C验收",
+    "没有重跑训练或全项目测试"
+  ],
+  "links": [
+    {
+      "from": "deliverables\\project_audit\\research_plan_20261010\\研究问题与证据推进计划表.md",
+      "target": "../../../研究推进计划_当前版.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\project_audit\\research_plan_20261010\\研究问题与证据推进计划表.md",
+      "target": "../../../docs/stage_b/训练合同_v3.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\project_audit\\research_plan_20261010\\研究问题与证据推进计划表.md",
+      "target": "../../../docs/stage_b/论文对照协议_v4.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\project_audit\\research_plan_20261010\\研究问题与证据推进计划表.md",
+      "target": "../../learning_chain/b2_joint_sac_continuation_execution_20261009/结果说明.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\project_audit\\research_plan_20261010\\研究问题与证据推进计划表.md",
+      "target": "../../learning_chain/b2_joint_efficiency_diagnosis_20261010/结果说明.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目当前入口.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "研究推进计划_当前版.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "项目当前入口.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_joint_efficiency_diagnosis_20261010/结果说明.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/paper_comparison/small_boundary_numeric_execution_20261008/结果说明.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/monthly_progress/2026-10/月报素材_2026-10.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/project_audit/research_plan_20261010/document_verification.json",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/monthly_progress/2026-10/月报素材_2026-10.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "研究推进计划_当前版.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "研究推进计划_当前版.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "项目进度跟踪.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../../项目进度跟踪.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "exists_or_self_receipt": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../project_audit/research_plan_20261010/document_verification.json",
+      "exists_or_self_receipt": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "one limited independent review of PC12 offline action/checkpoint/scheduling candidate; no runtime/numeric/physical test",
+  "reviewer": "pc12_review",
+  "critical_found": 0,
+  "important_found": 3,
+  "minor_found": 0,
+  "critical_open": 0,
+  "important_open": 0,
+  "minor_deferred": 0,
+  "fix_verification": "author RED/GREEN and full associated pure suite 53/53; no second independent review",
+  "fixed": [
+    {"finding":"Same authorization could claim two output directories", "fix":"Authorization digest owns a global exclusive durable claim, independent of output folder; failed setup keeps grant consumed", "test":"test_same_authorization_cannot_claim_two_output_directories", "red":"second claim did not raise", "green":true},
+    {"finding":"Inner archives matched only after core construction/restoration", "fix":"After outer pin/admission, decode tensor payload without model construction and match inner version/config/binding/archive witnesses before importing/restoring the original core", "test":"test_inner_witness_mismatch_rejected_before_any_core_restore[read/load]", "red":"core was reached before rejection", "green":true},
+    {"finding":"Partial update completion and failure result lost", "fix":"Separate reserved quota from actual attempted/completed batches, retain partial result; missing exception counter snapshot is unknown, never false zero", "test":"test_partial_update_actual_count_and_failure_are_preserved; test_backend_exception_without_counts_is_unknown_not_false_zero", "red":"completed100 became0; missing failure accounting method", "green":true}
+  ],
+  "remaining_gates": ["Actual torch decoding/serialization and model/Adam/replay/RNG restore not executed", "Actual physical backend not implemented", "Numeric qualification and new physical/training authorization absent"]
+}

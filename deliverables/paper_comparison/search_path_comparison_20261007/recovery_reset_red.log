@@ -1,0 +1,15 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+...E.
+======================================================================
+ERROR: test_explicit_recovery_reference_reset_is_not_command_error (__main__.ArchiveTests.test_explicit_recovery_reference_reset_is_not_command_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9��Ŀ�ƻ�\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\paper_comparison\search_path_comparison_20261007\test_analysis.py", line 68, in test_explicit_recovery_reference_reset_is_not_command_error
+    self.assertLess(module().reference_integration_error(r,1),1e-14)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pc10_archive_analysis' has no attribute 'reference_integration_error'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.123s
+
+FAILED (errors=1)

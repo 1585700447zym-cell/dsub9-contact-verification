@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "archive_count": 37,
+  "cycle_rows": 245221,
+  "sources_unchanged": {
+    "sealed_files": {
+      "frozen_comparison_20261007": 96,
+      "v4_learning_requalification_20261006": 457
+    },
+    "production_inputs_unchanged": 1057,
+    "seals": {
+      "frozen_comparison_20261007": "8c64d623247c31e217f71e90cbb473c3d21a05c49360f10872dab4eddd36596c",
+      "v4_learning_requalification_20261006": "fd98d247484e919c3c4e099d03575b1d4d40e977a5da939efc088759c84b9ed5"
+    }
+  },
+  "tests": 57,
+  "new_physics": 0,
+  "new_optimizer_batches": 0,
+  "new_network_calls": 0,
+  "published_transitions": 0,
+  "cumulative_dynamic": 200,
+  "figure_qa": true,
+  "independent_review": {
+    "ready_to_close": true,
+    "critical": 0,
+    "important": 0,
+    "minor": 0,
+    "unresolved_critical": 0,
+    "unresolved_important": 0,
+    "fresh_independent_reviews": 1,
+    "reviewer_model": "gpt-6-astra",
+    "independent_new_cases_run": 21,
+    "author_related_tests_run": 57,
+    "reviewed_archive_count": 37,
+    "reviewed_stage_groups": 106,
+    "verified_prefixes": 14,
+    "new_physics_or_policy_or_optimizer_runs": 0,
+    "review_package": "review_package.json",
+    "declined_to_judge": [
+      "candidate dynamic effect/stability/paper superiority",
+      "new-method training admission/full restore/multiple seeds",
+      "legacy dirty branch and whole repository",
+      "future document snapshots/final seal (author must verify)",
+      "independent rerun of36 legacy related tests"
+    ]
+  },
+  "scope": "offline diagnosis complete; candidate implementation/admission/effect unverified"
+}

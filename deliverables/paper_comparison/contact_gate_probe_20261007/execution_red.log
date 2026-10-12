@@ -1,0 +1,81 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+FFFFFFFFF                                                                [100%]
+================================== FAILURES ===================================
+___________ test_fixed_matrix_is_case_major_and_cannot_use_holdouts ___________
+
+    def test_fixed_matrix_is_case_major_and_cannot_use_holdouts():
+>       s=r.attempt_specs(COMMON)
+E       AttributeError: module 'run_probe' has no attribute 'attempt_specs'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:9: AttributeError
+____________________ test_unfinished_attempt_has_no_retry _____________________
+
+    def test_unfinished_attempt_has_no_retry():
+>       specs=r.attempt_specs(COMMON)
+E       AttributeError: module 'run_probe' has no attribute 'attempt_specs'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:16: AttributeError
+_________________ test_finished_failure_keeps_fixed_next_case _________________
+
+    def test_finished_failure_keeps_fixed_next_case():
+>       specs=r.attempt_specs(COMMON)
+E       AttributeError: module 'run_probe' has no attribute 'attempt_specs'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:20: AttributeError
+______________ test_closed_execution_cannot_consume_more_budget _______________
+
+    def test_closed_execution_cannot_consume_more_budget():
+>       assert r.next_spec({'status':'error','episodes':[]},r.attempt_specs(COMMON)) is None
+E       AttributeError: module 'run_probe' has no attribute 'next_spec'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:24: AttributeError
+_____________________ test_out_of_order_attempt_rejected ______________________
+
+    def test_out_of_order_attempt_rejected():
+>       specs=r.attempt_specs(COMMON)
+E       AttributeError: module 'run_probe' has no attribute 'attempt_specs'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:27: AttributeError
+___________ test_fault_keeps_successful_and_attempted_network_calls ___________
+
+    def test_fault_keeps_successful_and_attempted_network_calls():
+        ledger={'episodes':[{'profile':'F50','policy_calls':7,'policy_call_attempts':8,'status':'error'},
+                            {'profile':'B2','policy_calls':0,'policy_call_attempts':0,'status':'finished'}]}
+>       r.reconcile_calls(ledger)
+E       AttributeError: module 'run_probe' has no attribute 'reconcile_calls'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:33: AttributeError
+________________ test_zero_baseline_cannot_have_network_calls _________________
+
+    def test_zero_baseline_cannot_have_network_calls():
+>       with pytest.raises(ValueError):r.reconcile_calls({'episodes':[{'profile':'B2','policy_calls':1,'policy_call_attempts':1}]})
+E       AttributeError: module 'run_probe' has no attribute 'reconcile_calls'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:39: AttributeError
+____________ test_hidden_rng_change_invalidates_frozen_evaluation _____________
+
+    def test_hidden_rng_change_invalidates_frozen_evaluation():
+        a={'counts':{'critic':2000},'actor':np.array([1.,2.]),'rng':np.array([3,4])};b=deepcopy(a)
+>       assert r.verify_frozen_state(a,b) is True
+E       AttributeError: module 'run_probe' has no attribute 'verify_frozen_state'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:43: AttributeError
+_______________ test_model_change_invalidates_frozen_evaluation _______________
+
+    def test_model_change_invalidates_frozen_evaluation():
+        a={'counts':{'critic':2000},'actor':np.array([1.,2.]),'rng':np.array([3,4])};b=deepcopy(a);b['actor'][0]=8
+>       with pytest.raises(ValueError):r.verify_frozen_state(a,b)
+E       AttributeError: module 'run_probe' has no attribute 'verify_frozen_state'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:49: AttributeError
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_fixed_matrix_is_case_major_and_cannot_use_holdouts
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_unfinished_attempt_has_no_retry
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_finished_failure_keeps_fixed_next_case
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_closed_execution_cannot_consume_more_budget
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_out_of_order_attempt_rejected
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_fault_keeps_successful_and_attempted_network_calls
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_zero_baseline_cannot_have_network_calls
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_hidden_rng_change_invalidates_frozen_evaluation
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_model_change_invalidates_frozen_evaluation
+9 failed in 0.84s

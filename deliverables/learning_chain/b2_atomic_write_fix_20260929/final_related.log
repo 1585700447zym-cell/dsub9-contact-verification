@@ -1,0 +1,5 @@
+........................................................................ [ 64%]
+........................................                                 [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_atomic_write_fix_20260929\final_related.xml -
+112 passed, 2 deselected in 197.01s (0:03:17)
+{"exit_code": 0, "tests": 112, "tests_with_failure_or_error": 0, "source_unchanged": true, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "15b17be465ee346a19321f865f2c4f87efa26153cde3b940939c01f60c6bd2ed", "runner_sha256": "2fc4a7bb3298d2654a666ac69a9772661cd2a1ac3c1e76650558092c8303fb0a"}

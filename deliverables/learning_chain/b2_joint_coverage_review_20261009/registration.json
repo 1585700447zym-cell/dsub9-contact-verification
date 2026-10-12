@@ -1,0 +1,31 @@
+{
+  "before_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "56757eb432faa666a61c5a766c2accd6a756535baf9d0cc8e54049a8a445460c",
+    "研究推进计划_当前版.md": "a301ba4ac35d712da33aeb5b968bcd225cff8c43d95d53a7bb9350dd0bcfda0a",
+    "项目交付总览.md": "d2dae9276f62193a214c166874191416f2f76c6db1b2047995bf493162580851",
+    "项目当前入口.md": "ab74f68f64c5b630f4e98a780a439c6dd21cb2294ae1181e56dab8e35823c37f",
+    "项目进度跟踪.md": "158934715b3e79ff7aaf138cfbeb1fce427e13931507f931c1888c354870cad1"
+  },
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "cumulative_dynamic": 237,
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "human_request": "继续",
+  "new_physical_attempts": 0,
+  "new_training": 0,
+  "parent_manifests": {
+    "b2_joint_coverage_clarification_20261009": "6a4b0d025f267f3456bc7c17e803f0765d09b27ce32edfa74e29624266a1dd11",
+    "b2_joint_preflight_execution_20261009": "e24379e1d2ae9553a7bb3e6b245edb281e4089f0a1ff13174e25bcc3ebfa7c6c"
+  },
+  "purpose": "离线复核并形成最小覆盖条件修改方案，不启动物理或训练",
+  "source_pins": {
+    "deliverables/learning_chain/b2_joint_admission_preflight_20261009/coverage_checks.py": "65855bb729a0a68b96757bb8419a304455c29a253f1b229a58e0b43ee34a4f25",
+    "deliverables/learning_chain/b2_joint_admission_preflight_20261009/physical_worker.py": "b84ec4ab3d72e62ffbb6543da723e57ecadb5eba90c813d8d5c581c0e6293012",
+    "deliverables/learning_chain/b2_joint_admission_preflight_20261009/scope_contract.py": "bda43edc70520ecf244c4d79ffd669aa9c67db3ae30ace73374bc8de37c415e8",
+    "tools/learning/observation.py": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+    "tools/learning/v4_action.py": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+    "tools/learning/v4_observation.py": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+    "tools/learning/v4_session.py": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974"
+  },
+  "stage_id": "B2-SCOPE-11"
+}

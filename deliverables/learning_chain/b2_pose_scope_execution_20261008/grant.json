@@ -1,0 +1,33 @@
+{
+  "version": "b2_pose_scope_grant_v1",
+  "status": "OPEN",
+  "explicit_user_approval": true,
+  "authorization_text": "本对话上一阶段提出上述具体额度后，用户最新消息明确回复“批准继续”。批准范围：9 次静态初始化全部通过后，按固定顺序执行最多 16 个动态预检；训练 0，不重试。",
+  "binding_sha256": "9c15895cf6c8bac905715275c65dead6a8a48be617a3c197839077c7acf673c6",
+  "proposal_sha256": "1cf7ada9d0bc105732bae21c657826c32797a1541bb2b05c9279e20c9f9be2ce",
+  "scope_key": "d99ad10c9c66bb519bf04a996b0d5fa5f35b487fd013d112274775585a85c71c",
+  "limits": {
+    "case_environment_instances": 25,
+    "control_cycles_per_episode": 14500,
+    "cumulative_dynamic_if_all_run": 224,
+    "dynamic_attempts": 16,
+    "learner_constructions": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "per_episode_wall_s": 1200,
+    "per_static_wall_s": 60,
+    "physical_substeps_per_episode": 145000,
+    "replay_publications": 0,
+    "static_batch_wall_s": 600,
+    "static_initializations": 9,
+    "tensor_reads": 0,
+    "total_physical_substeps": 2320000,
+    "total_resets": 25,
+    "total_supervised_wall_s": 21600
+  },
+  "stage_id": "B2-SCOPE-03",
+  "recorded_at": "2026-10-08T15:15:53.695077+08:00",
+  "automatic_tracking": "PAUSED",
+  "training_admitted": false,
+  "retry_allowed": false
+}

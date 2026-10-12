@@ -1,0 +1,27 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\run_preflight.py", line 277, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\run_preflight.py", line 267, in main
+    try:bounded_process(command,gate,21600.)
+        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\deadline_guard.py", line 66, in bounded_process
+    if child.returncode:raise RuntimeError('Guarded child returned failure; no retry')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Guarded child returned failure; no retry
+
+OWNED CHILD LOG
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\run_preflight.py", line 277, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\run_preflight.py", line 259, in main
+    result=execute(args.grant,args.grant_pin,args.output,outer_gate=args.outer_gate);print(canonical(result))
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\run_preflight.py", line 224, in execute
+    validate_grant(read(path),sha(BINDING),candidate)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\execution_contract.py", line 34, in validate_grant
+    raise ValueError('Explicit new scope grant, binding and exact ceilings required')
+ValueError: Explicit new scope grant, binding and exact ceilings required

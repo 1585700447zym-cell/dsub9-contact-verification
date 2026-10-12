@@ -1,0 +1,12 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_angles_reach_contact_case_once (__main__.ContractTests.test_angles_reach_contact_case_once) ... ok
+test_candidate_and_parent_cannot_change (__main__.ContractTests.test_candidate_and_parent_cannot_change) ... ok
+test_fixed_sequence_and_failure_closure (__main__.ContractTests.test_fixed_sequence_and_failure_closure) ... ok
+test_full_sequence_has_no_extra_attempt (__main__.ContractTests.test_full_sequence_has_no_extra_attempt) ... ok
+test_malformed_and_unregistered_cases_rejected (__main__.ContractTests.test_malformed_and_unregistered_cases_rejected) ... ok
+test_pulse_exact_window_and_stop_permissions (__main__.ContractTests.test_pulse_exact_window_and_stop_permissions) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.097s
+
+OK

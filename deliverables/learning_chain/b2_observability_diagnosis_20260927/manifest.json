@@ -1,0 +1,18 @@
+{
+  "version": "b2_05_diagnosis_delivery_v1",
+  "parent_manifest_sha256": "7441f3efec534b57abab0610a1e6b09db86c03b6f32633cb27c2cd48ef287449",
+  "files": {
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/checks/delivery_checks.json": "1abe7fda34e93c064b7a46578f74040e6f39c7994374a03ae1f8dd1dbd5d93e3",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/checks/diagnose.py": "f5081395f9c5c7873bff51c14cd82d5537c7e1797d8a430e055b510d4be4c02e",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/checks/recheck.log": "a2a8be89e5595e3b41a471d0a3dc72d60ac83d98c4bbb1ada40cf046854599c4",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/checks/render_report.py": "995d944df4642a990b7dfbd9ab5f0d1429a720489a1bc2792acc9789925645bd",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/diagnosis.json": "0c893141f8e6af4b7a9e2232f6bb4aae30c8f5621a704c5efa60f21d1c3bbba9",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/document_snapshot/deliverables/monthly_progress/2026-09/月报素材_2026-09.md": "d09ce0b35cd4515402d9aa5043031ec314c9de46030cf82e409f447d2e8d3c4c",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/document_snapshot/项目交付总览.md": "6675ffa865de8dc8f05d913bc4ac4bdd32f5f3b6edd8975bf6f2825203f52d5e",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/document_snapshot/项目进度跟踪.md": "eba6dd376cb75321d4aa818d22d8f089a41f4b7b0ff3149136ec8bedaf746aeb",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/figures/01_可辨识性与尺度诊断.png": "7f2104be59f5eb7028a7ffd3d1acbabc730cee5507b5379941543013e3fe2566",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/figures/01_可辨识性与尺度诊断.svg": "84bece501b2fdfb662f07ad388548ab9315eb9ae6b15299e241d3dc195a899f8",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/README.md": "c59fd000c5173c5d2914697485ac8c2cdb4993fc3821d53c9d242c0aeb99cd64",
+    "deliverables/learning_chain/b2_observability_diagnosis_20260927/下一项建议.md": "2c7ba31dbf7740118611a825b81dca762c6620f0d33b38cdcdecb31222ea6a0f"
+  }
+}

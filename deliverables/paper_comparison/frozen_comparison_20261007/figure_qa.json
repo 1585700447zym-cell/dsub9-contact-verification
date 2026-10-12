@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "records_verified": 37,
+  "assessment_sha256": "0510f1de64e38606a355cf699e1964ffcf6bf4d7bfbe22f42d113b41139af8c4",
+  "figure_data_sha256": "7b04d8af0da89daf139d1be498f5b3ec2ef3ecd62e2584c72876e7a9f8730454",
+  "figures": {
+    "development_comparison.png": {
+      "sha256": "2ab746d43a53850754eef1c1ddcd19c4f3d5e1a78451e1f93cbf1b3dc7962326",
+      "size_px": [
+        1980,
+        1332
+      ]
+    },
+    "first_use_positions.png": {
+      "sha256": "45e94ebfb0b1104890bd5a0472409fff4601e281e27d2378731107f2335ba8f7",
+      "size_px": [
+        1980,
+        1332
+      ]
+    }
+  },
+  "visual_inspection": "Both rendered images viewed: titles, legends, axes, case labels, failure hatches and guard lines readable; no clipping or overlaps; plotted values agree with all 37 audited records. Zero force and the F aligned-point force are preserved."
+}

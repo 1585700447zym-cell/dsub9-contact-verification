@@ -1,0 +1,39 @@
+{
+  "status": "verified",
+  "source_bindings_unchanged": 912,
+  "test_sources_unchanged": true,
+  "qualified_tests": 311,
+  "archived_episodes_verified": 3,
+  "local_links_checked": 51,
+  "link_failures": [],
+  "document_snapshots_equal": 5,
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "cumulative_dynamic": 145,
+  "formal_updates": 0,
+  "policy_calls": 0,
+  "replay_published": 0,
+  "independent_tests": 0,
+  "B2_complete": false,
+  "finite_boundary_repair_verified": true,
+  "final_dynamic_status": "complete",
+  "historical_seal_checks": [
+    {
+      "manifest": "deliverables/paper_comparison/v4_learning_pilot_20261006/delivery_manifest_v2.json",
+      "sha256": "f740dd75a922b5962c293da16213bdc2818fef6bca6ec885a7b28a1d3f3c80a9",
+      "files": 1204,
+      "mismatches": 0
+    },
+    {
+      "manifest": "deliverables/paper_comparison/v4_continuation_20261006/delivery_manifest.json",
+      "sha256": "536a599cd5b8baaab8fbb8951f8b1557a6eb40bc2d215f12603103d0a07a4673",
+      "files": 239,
+      "mismatches": 0
+    },
+    {
+      "manifest": "deliverables/project_audit/complexity_20261006/delivery_manifest.json",
+      "sha256": "11081e20a423bdefede246a1686db9a58d9723b2d1e962977eed31a86bedfdbc",
+      "files": 15,
+      "mismatches": 0
+    }
+  ]
+}

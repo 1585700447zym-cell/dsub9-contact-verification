@@ -1,0 +1,6 @@
+test_started_fault_with_archive_is_retained_and_bound_to_checkpoint (test_protocol.FaultEvidenceTests.test_started_fault_with_archive_is_retained_and_bound_to_checkpoint) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.049s
+
+OK

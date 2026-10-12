@@ -1,0 +1,236 @@
+{
+  "status": "controlled_stop",
+  "rows": [
+    {
+      "id": "aligned",
+      "success": true,
+      "reason": "GEOMETRIC_SUCCESS",
+      "xy_um": 0.0,
+      "angle_deg": 0.0,
+      "final_failed_pose_gates": [],
+      "functional_pose_screen_only": true,
+      "force_peak_N": 0.0,
+      "penetration_peak_um": 0.0,
+      "pin_clearance_um": 99.99999999999994,
+      "contact_cycles": 0,
+      "search_cycles": 0,
+      "task_end_time": 4.330000000000289,
+      "end_time": 6.090000000004003,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": true,
+      "control_cycles": 3045,
+      "physical_substeps": 30450,
+      "archive_sha256": "765b9ecc468096df6133f3d203175ebfc2dc7ab01bc2740b2ffb0a81c2a28fb5"
+    },
+    {
+      "id": "x_pos_100",
+      "success": false,
+      "reason": "TARGET_POSE_NOT_SETTLED",
+      "xy_um": 99.99999999999999,
+      "angle_deg": 0.0,
+      "final_failed_pose_gates": [
+        "XY>80um"
+      ],
+      "functional_pose_screen_only": true,
+      "force_peak_N": 0.0,
+      "penetration_peak_um": 0.0,
+      "pin_clearance_um": -3.2526065174565133e-13,
+      "contact_cycles": 0,
+      "search_cycles": 0,
+      "task_end_time": 5.090000000001893,
+      "end_time": 6.090000000004003,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": false,
+      "control_cycles": 3045,
+      "physical_substeps": 30450,
+      "archive_sha256": "a3a0362d5ac8f2e4b91aee63379d3fd94dc9c69b2d2995ed08d7d063c68758ab"
+    },
+    {
+      "id": "x_neg_100",
+      "success": false,
+      "reason": "TARGET_POSE_NOT_SETTLED",
+      "xy_um": 99.99999999999999,
+      "angle_deg": 0.0,
+      "final_failed_pose_gates": [
+        "XY>80um"
+      ],
+      "functional_pose_screen_only": true,
+      "force_peak_N": 0.0,
+      "penetration_peak_um": 0.0,
+      "pin_clearance_um": -3.2526065174565133e-13,
+      "contact_cycles": 0,
+      "search_cycles": 0,
+      "task_end_time": 5.090000000001893,
+      "end_time": 6.090000000004003,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": false,
+      "control_cycles": 3045,
+      "physical_substeps": 30450,
+      "archive_sha256": "2c96dfb768bd1c8db30b1fb49bf215e0179c94039d59a6173a93613f3b7edac1"
+    },
+    {
+      "id": "y_pos_100",
+      "success": false,
+      "reason": "TARGET_POSE_NOT_SETTLED",
+      "xy_um": 99.99999999999999,
+      "angle_deg": 0.0,
+      "final_failed_pose_gates": [
+        "XY>80um"
+      ],
+      "functional_pose_screen_only": true,
+      "force_peak_N": 0.0,
+      "penetration_peak_um": 0.0,
+      "pin_clearance_um": -1.0842021724855044e-13,
+      "contact_cycles": 0,
+      "search_cycles": 0,
+      "task_end_time": 5.090000000001893,
+      "end_time": 6.090000000004003,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": false,
+      "control_cycles": 3045,
+      "physical_substeps": 30450,
+      "archive_sha256": "fcb87f5a1a01e08f0bdd1edd0067c20237e088ec5079cc8424662fcef9555989"
+    },
+    {
+      "id": "y_neg_100",
+      "success": false,
+      "reason": "TARGET_POSE_NOT_SETTLED",
+      "xy_um": 99.99999999999999,
+      "angle_deg": 0.0,
+      "final_failed_pose_gates": [
+        "XY>80um"
+      ],
+      "functional_pose_screen_only": true,
+      "force_peak_N": 0.0,
+      "penetration_peak_um": 0.0,
+      "pin_clearance_um": -1.0842021724855044e-13,
+      "contact_cycles": 0,
+      "search_cycles": 0,
+      "task_end_time": 5.090000000001893,
+      "end_time": 6.090000000004003,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": false,
+      "control_cycles": 3045,
+      "physical_substeps": 30450,
+      "archive_sha256": "04b20f0338e7bf6eb7330e2cd4e102168ae8faea968e55b8304a8e4311dd3274"
+    },
+    {
+      "id": "x_pos_150",
+      "success": false,
+      "reason": "TARGET_POSE_NOT_SETTLED",
+      "xy_um": 36.627399617651484,
+      "angle_deg": 1.091957734708198,
+      "final_failed_pose_gates": [
+        "angle>0.5deg"
+      ],
+      "functional_pose_screen_only": true,
+      "force_peak_N": 0.02460243170623439,
+      "penetration_peak_um": 19.279597175470027,
+      "pin_clearance_um": 52.076553971443985,
+      "contact_cycles": 3625,
+      "search_cycles": 2687,
+      "task_end_time": 12.11199999999845,
+      "end_time": 13.111999999996119,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": false,
+      "control_cycles": 6556,
+      "physical_substeps": 65560,
+      "archive_sha256": "8c21a45adf1f495581d4b04cb0f8246d7b84ed7c9870fa67389f2a9dcdf82280"
+    },
+    {
+      "id": "x_neg_150",
+      "success": false,
+      "reason": "TARGET_POSE_NOT_SETTLED",
+      "xy_um": 56.43333151210687,
+      "angle_deg": 0.6507880540138786,
+      "final_failed_pose_gates": [
+        "angle>0.5deg"
+      ],
+      "functional_pose_screen_only": true,
+      "force_peak_N": 0.02461225485734939,
+      "penetration_peak_um": 19.27498382239945,
+      "pin_clearance_um": 43.05174476374829,
+      "contact_cycles": 4632,
+      "search_cycles": 3668,
+      "task_end_time": 14.069999999993886,
+      "end_time": 15.069999999991555,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": false,
+      "control_cycles": 7535,
+      "physical_substeps": 75350,
+      "archive_sha256": "5ea9766aee035e5339c3f63936c9d82f8603f40c593dffbfbe12b5f32b4345bb"
+    },
+    {
+      "id": "y_pos_150",
+      "success": false,
+      "reason": "MOTION_VIOLATION",
+      "xy_um": 20.634445931275014,
+      "angle_deg": 2.502704034723368,
+      "final_failed_pose_gates": [
+        "angle>0.5deg",
+        "depth",
+        "pin_fit"
+      ],
+      "functional_pose_screen_only": false,
+      "force_peak_N": 0.02431135669404151,
+      "penetration_peak_um": 2.5690949764254056,
+      "pin_clearance_um": -55.386185373228095,
+      "contact_cycles": 3070,
+      "search_cycles": 0,
+      "task_end_time": 5.140000000001998,
+      "end_time": 6.140000000004108,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "hold_pass": false,
+      "control_cycles": 3070,
+      "physical_substeps": 30700,
+      "archive_sha256": "eacc9f4b949046a1377860bec7dd605f06abd530e363735eb32f008f9db420bb"
+    }
+  ],
+  "completed": 8,
+  "attempted": 8,
+  "unused_closed": 1,
+  "cumulative_attempts": 117,
+  "control_cycles": 32386,
+  "physical_substeps": 323860,
+  "successful": 1,
+  "training_updates": 0,
+  "policy_calls": 0,
+  "reduction_dynamic_calls": 0,
+  "peak_source": "Saved substep-aggregated environment peaks; no separate substep force trace",
+  "all_recorded_inputs_unchanged": true,
+  "independent_test": false,
+  "opposite_100um_observation_comparison": [
+    {
+      "axis": "x",
+      "rows": [
+        3046,
+        3046
+      ],
+      "max_sensed_command_difference": 0.0,
+      "source_sha256": [
+        "a3a0362d5ac8f2e4b91aee63379d3fd94dc9c69b2d2995ed08d7d063c68758ab",
+        "2c96dfb768bd1c8db30b1fb49bf215e0179c94039d59a6173a93613f3b7edac1"
+      ]
+    },
+    {
+      "axis": "y",
+      "rows": [
+        3046,
+        3046
+      ],
+      "max_sensed_command_difference": 0.0,
+      "source_sha256": [
+        "fcb87f5a1a01e08f0bdd1edd0067c20237e088ec5079cc8424662fcef9555989",
+        "04b20f0338e7bf6eb7330e2cd4e102168ae8faea968e55b8304a8e4311dd3274"
+      ]
+    }
+  ]
+}

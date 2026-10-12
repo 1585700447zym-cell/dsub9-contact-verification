@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-24",
+  "scope": "B.1 partial deliverable: whitelist observation, candidate residual/Gym, reward/quarantine/truncation integration",
+  "interface_checks_passed": true,
+  "learning_tests": {"passed": 143, "failed": 0, "skipped": 0},
+  "development_zero_residual_regression": {
+    "passed": 7,
+    "comparison": "exact frozen archive and same candidate guard archive",
+    "task_cycles": 36708,
+    "tail_cycles": 4640,
+    "physical_substeps": 413480,
+    "source_inputs": 809,
+    "source_unchanged": true,
+    "source_snapshot_verified": true,
+    "original_success_count_preserved": 3
+  },
+  "legacy_checks": {"passed": 429, "skipped_then_rechecked_in_isolated_runtime": 1, "plugin_build_not_rerun": 23},
+  "historical_delivery_checks": {"files": 112, "raw_archives": 14, "passed": true},
+  "B1_complete": false,
+  "training_admitted": false,
+  "model_scope_qualified": false,
+  "candidate_experience_allowed": false,
+  "sac_updates": 0,
+  "independent_test_episodes": 0,
+  "open_gates": [
+    "torch actual import fails with WinError 126; isolated learning dependency environment required",
+    "tensor gradients, actor/temperature optimizer skipping and real SAC collection/replay adaptation",
+    "untrained policy serialization and library execution checks",
+    "representative initialization/exploration range, contact information and qualified orientation freeze",
+    "sampling/learning-computation costs and reproducible training configuration"
+  ],
+  "limitations": [
+    "NumPy losses are only a numeric oracle, not a differentiable learner",
+    "explicit external-cut protocol; no generic TimeLimit or automatic reset bypass",
+    "engineered recovery and short nonzero action tests are not natural success rates or learned policy performance",
+    "test and regression timings overlap, not a training throughput estimate"
+  ]
+}

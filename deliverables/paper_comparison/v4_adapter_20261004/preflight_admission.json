@@ -1,0 +1,13 @@
+{
+  "allowed_scope": "nine_bounded_adapter_development_episodes_only",
+  "max_episodes": 9,
+  "prior_cumulative": 130,
+  "cumulative_limit": 139,
+  "training_admitted": false,
+  "training_updates": 0,
+  "network_calls": 0,
+  "tests_passed": 297,
+  "independent_review_important_fixed": 4,
+  "configuration_sha256": "8c7ec8a0031363d49de6d15973f38960eb3ffb2170cfe55fdc667bf8f42e4b72",
+  "source_snapshots": 193
+}

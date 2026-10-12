@@ -1,0 +1,46 @@
+{
+  "status": "archive_recheck_passed",
+  "worktree": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "sealed_files_verified": 4149,
+  "review_artifacts_verified": 10,
+  "physical_archives_verified": 13,
+  "checkpoint_files_verified": 4,
+  "protected_source_test_contract_files": 276,
+  "stop": {
+    "dynamic": 13,
+    "batches": 2500,
+    "unused_dynamic": 19,
+    "unused_batches": 2000,
+    "code": 20
+  },
+  "prior_probe": {
+    "states": 1747,
+    "state_action_pairs": 20968,
+    "dangerous_min_q": 9.3637056350708,
+    "exact_tail_label": -8.358676499183241,
+    "gap": 17.72238213425404,
+    "in_checkpoint_replay": false
+  },
+  "failure_boundary_draws": [
+    5116,
+    2134,
+    0
+  ],
+  "automation_status": "PAUSED",
+  "automation_sha256": "a084cd4aee6ee19a3cca7f33afc9e71c3fca2819cc1b9547cdd0fa8a43775d33",
+  "current_work": {
+    "physics": 0,
+    "actor_forwards": 0,
+    "critic_forwards": 0,
+    "optimizer_updates": 0,
+    "training_launched": false,
+    "qualification_issued": false
+  },
+  "limitation": "Archived results and byte hashes rechecked; no new model/physics computation or software test execution.",
+  "document_checks": {
+    "plan_links_existing": 9,
+    "rolling_originals_linked": 3,
+    "plan_sha256": "d5ff5bcd567f2d8928d55bd226629be2ae9ca9e278ff0e2e4c0f0db7d787886a"
+  }
+}

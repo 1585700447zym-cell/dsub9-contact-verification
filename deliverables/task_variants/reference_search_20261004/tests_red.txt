@@ -1,0 +1,126 @@
+FFFFFFFFFFFFFFFFFF                                                       [100%]
+================================== FAILURES ===================================
+___ test_blocked_actual_position_does_not_change_reference_tracking_command ___
+tests\task_variants\test_reference_search.py:19: in test_blocked_actual_position_does_not_change_reference_tracking_command
+    a=controller();b=copy.deepcopy(a);a.theta=b.theta=8.
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+____ test_stuck_pose_reference_follows_whole_bounded_search_without_windup ____
+tests\task_variants\test_reference_search.py:28: in test_stuck_pose_reference_follows_whole_bounded_search_without_windup
+    c=controller();ref=np.zeros(3);previous=np.zeros(6);maxradius=0.;maxerror=0.;count=0
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+___ test_reference_gate_checks_current_and_slew_limited_future[ref0-prev0] ____
+tests\task_variants\test_reference_search.py:42: in test_reference_gate_checks_current_and_slew_limited_future
+    c=controller();before=c.admittance.offset.copy()
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+___ test_reference_gate_checks_current_and_slew_limited_future[ref1-prev1] ____
+tests\task_variants\test_reference_search.py:42: in test_reference_gate_checks_current_and_slew_limited_future
+    c=controller();before=c.admittance.offset.copy()
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+________ test_xy_freezes_but_angles_integrate_once_and_z_is_unchanged _________
+tests\task_variants\test_reference_search.py:50: in test_xy_freezes_but_angles_integrate_once_and_z_is_unchanged
+    c=controller();c.admittance.offset[:2]=[10e-6,20e-6];c.admittance.velocity[:2]=[.0002,.0003]
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+_____ test_invalid_drive_observation_never_mutates_state[command-ref_nan] _____
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+____ test_invalid_drive_observation_never_mutates_state[command-ref_shape] ____
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+__ test_invalid_drive_observation_never_mutates_state[command-previous_nan] ___
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+_ test_invalid_drive_observation_never_mutates_state[command-previous_speed] __
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+_____ test_invalid_drive_observation_never_mutates_state[command-missing] _____
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+____ test_invalid_drive_observation_never_mutates_state[recovery-ref_nan] _____
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+___ test_invalid_drive_observation_never_mutates_state[recovery-ref_shape] ____
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+__ test_invalid_drive_observation_never_mutates_state[recovery-previous_nan] __
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+_ test_invalid_drive_observation_never_mutates_state[recovery-previous_speed] _
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+____ test_invalid_drive_observation_never_mutates_state[recovery-missing] _____
+tests\task_variants\test_reference_search.py:62: in test_invalid_drive_observation_never_mutates_state
+    c=controller();sample=obs(.2)
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+______________________ test_nonsearch_commands_preserved ______________________
+tests\task_variants\test_reference_search.py:79: in test_nonsearch_commands_preserved
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+_ test_new_observation_uses_relative_drive_state_and_does_not_write_environment _
+tests\task_variants\test_reference_search.py:89: in test_new_observation_uses_relative_drive_state_and_does_not_write_environment
+    from tools.learning.reference_session import ReferenceSearchSession
+E   ModuleNotFoundError: No module named 'tools.learning.reference_session'
+_______________ test_net_progress_and_load_priority_still_apply _______________
+tests\task_variants\test_reference_search.py:99: in test_net_progress_and_load_priority_still_apply
+    c=controller();c.episode_peak_z_m=250e-6;c.phase='WAIT_RECOVERY'
+tests\task_variants\test_reference_search.py:14: in controller
+    from tools.control.reference_search import ReferenceSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.reference_search'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_reference_search.py::test_blocked_actual_position_does_not_change_reference_tracking_command
+FAILED tests/task_variants/test_reference_search.py::test_stuck_pose_reference_follows_whole_bounded_search_without_windup
+FAILED tests/task_variants/test_reference_search.py::test_reference_gate_checks_current_and_slew_limited_future[ref0-prev0]
+FAILED tests/task_variants/test_reference_search.py::test_reference_gate_checks_current_and_slew_limited_future[ref1-prev1]
+FAILED tests/task_variants/test_reference_search.py::test_xy_freezes_but_angles_integrate_once_and_z_is_unchanged
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[command-ref_nan]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[command-ref_shape]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[command-previous_nan]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[command-previous_speed]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[command-missing]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[recovery-ref_nan]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[recovery-ref_shape]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[recovery-previous_nan]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[recovery-previous_speed]
+FAILED tests/task_variants/test_reference_search.py::test_invalid_drive_observation_never_mutates_state[recovery-missing]
+FAILED tests/task_variants/test_reference_search.py::test_nonsearch_commands_preserved
+FAILED tests/task_variants/test_reference_search.py::test_new_observation_uses_relative_drive_state_and_does_not_write_environment
+FAILED tests/task_variants/test_reference_search.py::test_net_progress_and_load_priority_still_apply
+18 failed in 0.65s

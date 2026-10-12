@@ -1,0 +1,28 @@
+{
+  "execution_complete": false,
+  "controlled_stop": true,
+  "returncode": 20,
+  "retry_allowed": false,
+  "b2_complete": false,
+  "accounting": {
+    "previous_dynamic": 57,
+    "new_dynamic_starts": 1,
+    "cumulative_dynamic_starts": 58,
+    "cumulative_dynamic_cap": 65,
+    "formal": {
+      "A": 500,
+      "B": 500
+    },
+    "synthetic": 4,
+    "test_forward_states": 8,
+    "diagnostic_states": {
+      "initial": 256,
+      "A": 256,
+      "B": 256
+    },
+    "status": "stopped",
+    "phase": "stopped",
+    "old_unused_consumed": 0,
+    "automatic_retry": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "VERIFIED_OFFLINE_SCOPE_PLAN",
+  "command": "D:\\KEYANRUJIAN\\python.exe -I -X utf8 -B deliverables/learning_chain/b2_scope_audit_20261008/verify.py",
+  "exit_code": 0,
+  "assertions": 72,
+  "sealed_files": 19,
+  "manifest_sha256": "f0ece40fc2fc3ab83b99506bb13a59158dc0282fe674dbaf03b3f5b7e47e0576",
+  "old_members": 950,
+  "shared_inputs": 1057,
+  "raw_pose_records": 63,
+  "new_physics": 0,
+  "new_learning": 0,
+  "cumulative_dynamic": 208
+}

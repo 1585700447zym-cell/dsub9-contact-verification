@@ -1,0 +1,123 @@
+{
+  "attempts": [
+    {
+      "id": "warmup_0",
+      "transitions": 3045,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 0,
+      "action_active_cycles": 2045,
+      "truncated": false,
+      "optimizer_steps": 0,
+      "sampling_mode": "uniform_warmup"
+    },
+    {
+      "id": "warmup_1",
+      "transitions": 3045,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 0,
+      "action_active_cycles": 2045,
+      "truncated": false,
+      "optimizer_steps": 0,
+      "sampling_mode": "uniform_warmup"
+    },
+    {
+      "id": "updated_cut",
+      "transitions": 8,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 0,
+      "action_active_cycles": 8,
+      "truncated": true,
+      "optimizer_steps": 16,
+      "sampling_mode": "sac_policy"
+    }
+  ],
+  "published_transitions": 6098,
+  "cumulative_audited": 6098,
+  "update_counts": {
+    "critic": 16,
+    "actor": 16,
+    "temperature": 16,
+    "target": 16
+  },
+  "credit_remaining": 258,
+  "numerical_updates_reproduced": true,
+  "updated_policy_actions_reproduced": true,
+  "parameter_blocks_changed": [
+    "actor",
+    "critic",
+    "target",
+    "alpha"
+  ],
+  "sac_update_verified": true,
+  "runnable_trainer": false,
+  "full_checkpoint_verified": false,
+  "first_engineering_short_train": false,
+  "collection_and_update_wall_s": 252.33233610005118,
+  "update_batch_total_s": 0.41884520009625703,
+  "update_batch_mean_s": 0.026177825006016064,
+  "tests": {
+    "passed": 375,
+    "modules": [
+      "test_action",
+      "test_admission",
+      "test_admitted_collection",
+      "test_audited_replay",
+      "test_b2_admission",
+      "test_b2_sac_admission",
+      "test_candidate_collector",
+      "test_cycle_statistics",
+      "test_engineering_domain",
+      "test_episode_buffer",
+      "test_guard_baseline",
+      "test_guard_events",
+      "test_guard_probe",
+      "test_guarded_session",
+      "test_gym_env",
+      "test_learning_masks",
+      "test_observation",
+      "test_orientation_evidence",
+      "test_outcome",
+      "test_recovery",
+      "test_residual_recovery",
+      "test_residual_regression",
+      "test_residual_session",
+      "test_reward",
+      "test_runtime",
+      "test_sac_collection",
+      "test_sac_update",
+      "test_scheduled_boundary",
+      "test_session",
+      "test_tensor_masks",
+      "test_untrained_policy_runtime",
+      "test_zero_residual"
+    ],
+    "sha256": "6c9ff42a9eefbff87e40121165d00c96debb573876f872309f863ceb6f2ab801"
+  }
+}

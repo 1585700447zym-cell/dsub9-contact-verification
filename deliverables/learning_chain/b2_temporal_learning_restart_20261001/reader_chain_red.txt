@@ -1,0 +1,64 @@
+test_any_guard_stops_whole_stage (test_protocol.ContractTests.test_any_guard_stops_whole_stage) ... ok
+test_credit_500_after_four_and_no_duplicate_credit (test_protocol.ContractTests.test_credit_500_after_four_and_no_duplicate_credit) ... ok
+test_cross_binding_or_auth_restore_refused (test_protocol.ContractTests.test_cross_binding_or_auth_restore_refused) ... ok
+test_data_id_duplicates_refused (test_protocol.ContractTests.test_data_id_duplicates_refused) ... ok
+test_exact_scope_and_candidate_first (test_protocol.ContractTests.test_exact_scope_and_candidate_first) ... ok
+test_fault_attempt_not_refunded (test_protocol.ContractTests.test_fault_attempt_not_refunded) ... ok
+test_forged_guard_history_cannot_resume (test_protocol.ContractTests.test_forged_guard_history_cannot_resume) ... ok
+test_forged_update_lease_rejected (test_protocol.ContractTests.test_forged_update_lease_rejected) ... ok
+test_inactive_or_stale_update_token_refused (test_protocol.ContractTests.test_inactive_or_stale_update_token_refused) ... ok
+test_initial_not_four_successes_closes_after_four (test_protocol.ContractTests.test_initial_not_four_successes_closes_after_four) ... ok
+test_new_authorization_scope_not_old_eight_zero (test_protocol.ContractTests.test_new_authorization_scope_not_old_eight_zero) ... ok
+test_online_requires_exact_preceding_updates (test_protocol.ContractTests.test_online_requires_exact_preceding_updates) ... ok
+test_reserve_before_physics_and_no_second_active (test_protocol.ContractTests.test_reserve_before_physics_and_no_second_active) ... ok
+test_stale_ledger_cannot_write (test_protocol.ContractTests.test_stale_ledger_cannot_write) ... ok
+test_update_requires_current_dataset_and_initial_pass (test_protocol.ContractTests.test_update_requires_current_dataset_and_initial_pass) ... ok
+test_write_fault_poison (test_protocol.ContractTests.test_write_fault_poison) ... ok
+test_wrong_identity_or_impossible_result_rejected (test_protocol.ContractTests.test_wrong_identity_or_impossible_result_rejected) ... ok
+test_failure_and_fix_parent_seals_checked (test_protocol.RestartTests.test_failure_and_fix_parent_seals_checked) ... ok
+test_prior_costs_are_retained (test_protocol.RestartTests.test_prior_costs_are_retained) ... ok
+test_reader_guard_rejects_wrong_worker_and_stop_fence (test_protocol.RestartTests.test_reader_guard_rejects_wrong_worker_and_stop_fence) ... FAIL
+test_real_complete_zero_snapshot_writer (test_protocol.RestartTests.test_real_complete_zero_snapshot_writer) ... ok
+test_real_reader_chain_accepts_worker_child_and_checks_registered_root (test_protocol.RestartTests.test_real_reader_chain_accepts_worker_child_and_checks_registered_root) ... ERROR
+test_zero_reader_failure_blocks_worker_before_initial_and_updates (test_protocol.RestartTests.test_zero_reader_failure_blocks_worker_before_initial_and_updates) ... ok
+test_authorization_precedes_runtime (test_protocol.RuntimeTests.test_authorization_precedes_runtime) ... ok
+test_checkpoint_boundary_before_next_online (test_protocol.RuntimeTests.test_checkpoint_boundary_before_next_online) ... ok
+test_complete_preflight_requalification_is_separate (test_protocol.RuntimeTests.test_complete_preflight_requalification_is_separate) ... ok
+test_confirmed_worker_death_closes_attempted_lease (test_protocol.RuntimeTests.test_confirmed_worker_death_closes_attempted_lease) ... ok
+test_counts_and_history_must_agree (test_protocol.RuntimeTests.test_counts_and_history_must_agree) ... ok
+test_cross_arm_snapshot_rejected (test_protocol.RuntimeTests.test_cross_arm_snapshot_rejected) ... ok
+test_dataset_digest_preserves_windows_line_endings (test_protocol.RuntimeTests.test_dataset_digest_preserves_windows_line_endings) ... ok
+test_historical_permission_preserved (test_protocol.RuntimeTests.test_historical_permission_preserved) ... ok
+test_invalid_source_rejected (test_protocol.RuntimeTests.test_invalid_source_rejected) ... ok
+test_latched_guard_tail_does_not_run_model (test_protocol.RuntimeTests.test_latched_guard_tail_does_not_run_model) ... ok
+test_model_and_optimizer_without_lease_refused (test_protocol.RuntimeTests.test_model_and_optimizer_without_lease_refused) ... ok
+test_module_failure_charge_and_local_cap (test_protocol.RuntimeTests.test_module_failure_charge_and_local_cap) ... ok
+test_new_meter_reuses_live_checked_fault_tail (test_protocol.RuntimeTests.test_new_meter_reuses_live_checked_fault_tail) ... ok
+test_physics_failure_is_charged (test_protocol.RuntimeTests.test_physics_failure_is_charged) ... ok
+test_physics_unreserved_refused (test_protocol.RuntimeTests.test_physics_unreserved_refused) ... ok
+test_previously_published_rejected (test_protocol.RuntimeTests.test_previously_published_rejected) ... ok
+test_stopped_ledger_refuses_model (test_protocol.RuntimeTests.test_stopped_ledger_refuses_model) ... ok
+test_uncertain_cleanup_preserves_active_reservation (test_protocol.RuntimeTests.test_uncertain_cleanup_preserves_active_reservation) ... ok
+
+======================================================================
+ERROR: test_real_reader_chain_accepts_worker_child_and_checks_registered_root (test_protocol.RestartTests.test_real_reader_chain_accepts_worker_child_and_checks_registered_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_restart_20261001\test_protocol.py", line 20, in test_real_reader_chain_accepts_worker_child_and_checks_registered_root
+    worker=subprocess.run([sys.executable,'-X','utf8','-B','-c',code,str(p)],cwd=ROOT,capture_output=True,text=True,encoding='utf-8',timeout=60)
+                                                                                 ^^^^
+NameError: name 'ROOT' is not defined
+
+======================================================================
+FAIL: test_reader_guard_rejects_wrong_worker_and_stop_fence (test_protocol.RestartTests.test_reader_guard_rejects_wrong_worker_and_stop_fence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_restart_20261001\test_protocol.py", line 25, in test_reader_guard_rejects_wrong_worker_and_stop_fence
+    self.assertTrue(hasattr(V,'reader_guard'),'Missing qualified reader ancestry guard')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing qualified reader ancestry guard
+
+----------------------------------------------------------------------
+Ran 41 tests in 56.939s
+
+FAILED (failures=1, errors=1)

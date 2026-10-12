@@ -1,0 +1,82 @@
+{
+  "summary": "B2-SCOPE-06一次执行已收口：静态审核9/9；动态尝试16/16、审核通过16/16、功能成功16/16、80μm/0.5°附加精度成功16/16。运行状态CLOSED_COMPLETE；本轮未用动态0，新授权已关闭。",
+  "evidence": "本轮环境创建/复位完成各25次，67016控制周期/670160物理子步，整轮监督4516.837s；进程退出确认，学习器/张量读取/网络前向/优化/经验发布全0。实际累计动态225，自动跟踪PAUSED，原旧15回合未重开。",
+  "limit": "本轮接触覆盖8/16、script四轴命令作用覆盖8/8、接触时作用覆盖4/8、对称接触信息差异覆盖4/8，恢复事件覆盖0/16。±0.25°离散开发点不覆盖±0.5°边界、原±1.5°目标或连续域；固定0.1幅度且四轴相关的脚本不覆盖完整F50动作域，脚本不是SAC，非零差异不等于可辨识性或学习收益。完整B.2/C未验收，无新训练准入，独立测试0。",
+  "next": "下一项只离线复核J01～J04的现有接触信息、动作许可与作用时序，判断4个有接触联合点是否支持限定姿态匹配学习候选，并列出恢复及动作域缺口。P01～P04保留为无接触功能对照；不追加它们填接触覆盖，不扩137维观测或物理范围，不进入C或训练。原±1.5°目标与当前±0.25°开发验证的验收边界须另行明确。",
+  "route": "INSUFFICIENT_COVERAGE_NO_EXTRA_ATTEMPTS",
+  "gate_explanation": "固定路线的接触覆盖条件要求8个script臂均记录接触时的命令作用；缺口点为：P01_script、P02_script、P03_script、P04_script。这些点没有相应接触证据时，不能记成接触控制或接触信息通过。恢复覆盖另外分列，不是本次choose_route的判定项。",
+  "metrics": {
+    "contact_episodes": 8,
+    "script_effect_covered": 8,
+    "script_contact_effect_covered": 4,
+    "recovery_episodes": 0,
+    "verified_observation_vectors": 67032,
+    "symmetric_contact_pairs_with_recorded_difference": 4,
+    "paired_task_times": [
+      {
+        "case_id": "P01",
+        "zero_task_s": 4.330000000000289,
+        "script_task_s": 4.330000000000289,
+        "script_minus_zero_s": 0.0,
+        "zero_success": true,
+        "script_success": true
+      },
+      {
+        "case_id": "P02",
+        "zero_task_s": 4.330000000000289,
+        "script_task_s": 4.330000000000289,
+        "script_minus_zero_s": 0.0,
+        "zero_success": true,
+        "script_success": true
+      },
+      {
+        "case_id": "P03",
+        "zero_task_s": 4.330000000000289,
+        "script_task_s": 4.330000000000289,
+        "script_minus_zero_s": 0.0,
+        "zero_success": true,
+        "script_success": true
+      },
+      {
+        "case_id": "P04",
+        "zero_task_s": 4.330000000000289,
+        "script_task_s": 4.330000000000289,
+        "script_minus_zero_s": 0.0,
+        "zero_success": true,
+        "script_success": true
+      },
+      {
+        "case_id": "J01",
+        "zero_task_s": 7.920000000007865,
+        "script_task_s": 7.908000000007839,
+        "script_minus_zero_s": -0.012000000000025324,
+        "zero_success": true,
+        "script_success": true
+      },
+      {
+        "case_id": "J02",
+        "zero_task_s": 8.436000000007017,
+        "script_task_s": 8.432000000007026,
+        "script_minus_zero_s": -0.003999999999990678,
+        "zero_success": true,
+        "script_success": true
+      },
+      {
+        "case_id": "J03",
+        "zero_task_s": 9.242000000005138,
+        "script_task_s": 9.296000000005012,
+        "script_minus_zero_s": 0.05399999999987415,
+        "zero_success": true,
+        "script_success": true
+      },
+      {
+        "case_id": "J04",
+        "zero_task_s": 10.010000000003348,
+        "script_task_s": 9.9880000000034,
+        "script_minus_zero_s": -0.021999999999948727,
+        "zero_success": true,
+        "script_success": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+initialization_center INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.93
+initialization_x_neg_75 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.66
+initialization_x_pos_75 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.64
+initialization_x_neg_100 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.69
+initialization_x_pos_100 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.77
+initialization_y_neg_75 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.72
+initialization_y_pos_75 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.74
+initialization_y_neg_100 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.73
+initialization_y_pos_100 INITIALIZATION passed= True cycles= 0 pulse= None wall_s= 2.71
+zero_center FULL_SUCCESS passed= True cycles= 3045 pulse= None wall_s= 92.3
+zero_x_neg_75 TASK_FAILURE passed= True cycles= 3045 pulse= None wall_s= 110.85
+zero_x_pos_75 TASK_FAILURE passed= True cycles= 3045 pulse= None wall_s= 122.93
+zero_x_neg_100 TASK_FAILURE passed= True cycles= 5491 pulse= None wall_s= 229.35
+zero_x_pos_100 FULL_SUCCESS passed= True cycles= 6283 pulse= None wall_s= 237.29
+zero_y_neg_75 TASK_FAILURE passed= True cycles= 3045 pulse= None wall_s= 113.84
+zero_y_pos_75 TASK_FAILURE passed= True cycles= 3045 pulse= None wall_s= 115.83
+zero_y_neg_100 FULL_SUCCESS passed= True cycles= 5883 pulse= None wall_s= 241.24
+zero_y_pos_100 FULL_SUCCESS passed= True cycles= 6772 pulse= None wall_s= 272.13
+pulse_x_neg_100_neg TASK_FAILURE passed= True cycles= 5492 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 211.06
+pulse_x_neg_100_pos TASK_FAILURE passed= True cycles= 5459 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 223.8
+pulse_x_pos_100_neg FULL_SUCCESS passed= True cycles= 6280 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 243.74
+pulse_x_pos_100_pos FULL_SUCCESS passed= True cycles= 6309 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 244.23
+pulse_y_neg_100_neg FULL_SUCCESS passed= True cycles= 5882 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 241.86
+pulse_y_neg_100_pos FULL_SUCCESS passed= True cycles= 5868 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 227.52
+pulse_y_pos_100_neg FULL_SUCCESS passed= True cycles= 6777 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 262.72
+pulse_y_pos_100_pos FULL_SUCCESS passed= True cycles= 6775 pulse= {'trigger_cycle': 177, 'trigger_time_s': 0.35399999999999365, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 262.16

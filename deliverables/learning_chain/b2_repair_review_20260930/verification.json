@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "date": "2026-09-30",
+  "sealed_old_files": 4149,
+  "review_inputs": 25,
+  "checkpoints": 4,
+  "protected_sources": 276,
+  "local_report_links": 6,
+  "rolling_docs": 3,
+  "old_design_unchanged": true,
+  "automation": "PAUSED",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "physics": 0,
+  "model_forwards": 0,
+  "optimizer_updates": 0,
+  "artifacts_sha256": {
+    "analyze_archives.py": "409b9a5874f0f5982bb94bc8557e1e622293958ea73dfb878cf6dc11788d62fc",
+    "archive_review.json": "f852fb4f547017f6cc494536fe460dea93e70ab2085826c6e8119dd6c991479c",
+    "source_before.json": "f4214598e24c2fd7191292c14c68db76e29a6645beb7a86ff7d5f9773e8e57db",
+    "原因复核与修复建议.md": "27c2929da6b91f7ca5eea4ba18925bcacb61f2b9c7198d5a366f4652368f5a93"
+  },
+  "limitation": "Archive/document verification only; no production tests or model/physics execution. Rolling documents are not frozen inputs."
+}

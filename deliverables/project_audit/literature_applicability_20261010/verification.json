@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-10",
+  "task": "plan_items_1_2_targeted_literature_and_static_applicability",
+  "status": "PASS",
+  "checks": {
+    "only_five_rolling_documents_changed_in_215_bound_files": true,
+    "six_before_snapshots_match": true,
+    "six_after_snapshots_match": true,
+    "branch_and_head_unchanged": true,
+    "all_prior_dirty_status_entries_preserved": true,
+    "S21_manifest_identity_preserved": true,
+    "S21_manifest_members_preserved": true,
+    "model_audit_bound_sources_match": true,
+    "PC07_B2_archive_matches_frozen_assessment": true,
+    "reported_B2_times_match_raw_events": true,
+    "eleven_unique_literature_ids": true,
+    "all_five_current_markers_consistent": true,
+    "all_other_historical_marker_blocks_preserved": true,
+    "new_local_markdown_links_resolve": true,
+    "verification_uses_no_scientific_libraries": true
+  },
+  "details": {
+    "bound_input_count": 215,
+    "unchanged_nonrolling_bound_inputs": 210,
+    "changed_bound_files": [
+      "项目当前入口.md",
+      "项目进度跟踪.md",
+      "研究推进计划_当前版.md",
+      "项目交付总览.md",
+      "deliverables/monthly_progress/2026-10/月报素材_2026-10.md"
+    ],
+    "bound_input_scope": "6 documents plus .py/.json/.md/.xml under tools and docs/stage_b; not all repository bytes",
+    "dirty_before": 224,
+    "dirty_after": 224,
+    "new_status_entries": [],
+    "S21_member_count": 53,
+    "S21_bad_members": [],
+    "model_source_checks": [
+      {
+        "file": "tools/model/layered_task.py",
+        "sha256": "d1d73f139199ebf705d539fa73caddeb42a0b473f5e132fbda3501cc33f3d56b",
+        "bound_sha256": "d1d73f139199ebf705d539fa73caddeb42a0b473f5e132fbda3501cc33f3d56b",
+        "matched": true
+      },
+      {
+        "file": "tools/learning/observation.py",
+        "sha256": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+        "bound_sha256": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+        "matched": true
+      },
+      {
+        "file": "tools/learning/v4_observation.py",
+        "sha256": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+        "bound_sha256": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+        "matched": true
+      },
+      {
+        "file": "tools/learning/v4_action.py",
+        "sha256": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+        "bound_sha256": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+        "matched": true
+      },
+      {
+        "file": "tools/learning/v4_session.py",
+        "sha256": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+        "bound_sha256": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+        "matched": true
+      },
+      {
+        "file": "tools/dynamics/cartesian.py",
+        "sha256": "bc06000c5ce82de6fdb2d3cee111131481ec58d6ac3d038e73c23c75b38db935",
+        "bound_sha256": "bc06000c5ce82de6fdb2d3cee111131481ec58d6ac3d038e73c23c75b38db935",
+        "matched": true
+      },
+      {
+        "file": "tools/control/reference_search.py",
+        "sha256": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+        "bound_sha256": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+        "matched": true
+      }
+    ],
+    "negative_y_pure_B2": {
+      "success": "FULL_SUCCESS",
+      "task_s": 20.779999999978248,
+      "search_s": 14.767999999988838,
+      "search_percent": 71.06833493746052,
+      "recovery_accept_count": 1
+    },
+    "literature_ids": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6"
+    ],
+    "access_levels": {
+      "A_full_text": 6,
+      "B_publisher_key_sections_tables": 1,
+      "C_abstract_fragments": 4
+    },
+    "access_level_members": {
+      "A": [
+        "T01",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L6"
+      ],
+      "B": [
+        "T02"
+      ],
+      "C": [
+        "T03",
+        "T04",
+        "T05",
+        "L5"
+      ]
+    },
+    "marker_checks": {
+      "项目当前入口.md": true,
+      "项目进度跟踪.md": true,
+      "研究推进计划_当前版.md": true,
+      "项目交付总览.md": true,
+      "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": true
+    },
+    "historical_marker_checks": {
+      "项目当前入口.md": true,
+      "项目进度跟踪.md": true,
+      "研究推进计划_当前版.md": true,
+      "项目交付总览.md": true,
+      "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": true
+    },
+    "new_local_link_count": 30,
+    "bad_links": [],
+    "scientific_modules_in_verification_process": []
+  },
+  "new_scientific_execution": {
+    "physics": 0,
+    "model_loads": 0,
+    "inference": 0,
+    "updates": 0
+  },
+  "limits": [
+    "Targeted source checks, not a systematic review or independent peer review.",
+    "Static source/archive/document verification, not new physics qualification or complete historical replay.",
+    "Scientific zero-execution is the activity record of this task; hash checks do not independently measure every possible external process."
+  ],
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406"
+}

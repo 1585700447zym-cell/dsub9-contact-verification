@@ -1,0 +1,45 @@
+{
+  "scope": "Navigation only; no experimental file or historical source hash changed",
+  "changes": [
+    {
+      "manifest": "deliverables/reproduction_guide/说明与导出清单.json",
+      "updates": {
+        "报告总索引.md": {
+          "before": "6d1fec55a5684e09c744fb162f569558da01ab14cb385f197c50272fefb550a5",
+          "after": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f"
+        }
+      }
+    },
+    {
+      "manifest": "deliverables/b2_exit_gate_v2/delivery_manifest.json",
+      "updates": {
+        "deliverables/reproduction_guide/说明与导出清单.json": {
+          "before": "ef8aa3ac5dd5cb36093102adee4c1a343011a7767904f6830df3155c8793ccc9",
+          "after": "12ec840631ee1df8433f9cb562c4a9fb0e490485f01d9f97ba7405e9270c991c"
+        },
+        "报告总索引.md": {
+          "before": "6d1fec55a5684e09c744fb162f569558da01ab14cb385f197c50272fefb550a5",
+          "after": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f"
+        }
+      }
+    },
+    {
+      "manifest": "deliverables/baseline_training_readiness/delivery_manifest.json",
+      "updates": {
+        "报告总索引.md": {
+          "before": "6d1fec55a5684e09c744fb162f569558da01ab14cb385f197c50272fefb550a5",
+          "after": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f"
+        }
+      }
+    },
+    {
+      "manifest": "deliverables/stop_reliability/delivery_manifest.json",
+      "updates": {
+        "报告总索引.md": {
+          "before": "6d1fec55a5684e09c744fb162f569558da01ab14cb385f197c50272fefb550a5",
+          "after": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f"
+        }
+      }
+    }
+  ]
+}

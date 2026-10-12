@@ -1,0 +1,210 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "module": "tools.usage.visual_sim",
+      "python": "D:/KEYANRUJIAN/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUTF8": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "name": "01 查看 256 段模型（不运行控制）",
+      "args": [
+        "--mode",
+        "model"
+      ]
+    },
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "module": "tools.usage.visual_sim",
+      "python": "D:/KEYANRUJIAN/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUTF8": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "name": "02 回放已有仿真（选择工况和策略）",
+      "args": [
+        "--mode",
+        "replay",
+        "--case",
+        "${input:case}",
+        "--policy",
+        "${input:policy}"
+      ]
+    },
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "module": "tools.usage.visual_sim",
+      "python": "D:/KEYANRUJIAN/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUTF8": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "name": "03 重新仿真 B1 固定导纳（6 秒预算）",
+      "args": [
+        "--mode",
+        "live",
+        "--case",
+        "${input:case}",
+        "--policy",
+        "b1"
+      ]
+    },
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "module": "tools.usage.visual_sim",
+      "python": "D:/KEYANRUJIAN/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUTF8": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "name": "04 重新仿真 B2 搜索恢复（20 秒预算）",
+      "args": [
+        "--mode",
+        "live",
+        "--case",
+        "${input:case}",
+        "--policy",
+        "b2"
+      ]
+    },
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "module": "tools.usage.visual_sim",
+      "python": "D:/KEYANRUJIAN/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUTF8": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "name": "05 复测退出条件 V2（实验失败版本）",
+      "args": [
+        "--mode",
+        "live",
+        "--case",
+        "${input:two_cases}",
+        "--policy",
+        "b2_v2"
+      ]
+    },
+    {
+      "type": "debugpy",
+      "request": "launch",
+      "module": "tools.usage.visual_sim",
+      "python": "D:/KEYANRUJIAN/python.exe",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "env": {
+        "PYTHONUTF8": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "name": "06 回放自己保存的记录",
+      "args": [
+        "--mode",
+        "replay",
+        "--record",
+        "${input:record}"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "case",
+      "type": "pickString",
+      "description": "选择初始位置与姿态偏差工况",
+      "options": [
+        {
+          "label": "同轴",
+          "value": "aligned"
+        },
+        {
+          "label": "单独 X +100 μm",
+          "value": "x_offset_pos_100um"
+        },
+        {
+          "label": "单独 Y −100 μm",
+          "value": "y_offset_neg_100um"
+        },
+        {
+          "label": "Roll +1.5°",
+          "value": "roll_pos_1.5deg"
+        },
+        {
+          "label": "联合 A ×0.75",
+          "value": "combined_a_scale_0.75"
+        },
+        {
+          "label": "联合 B ×0.75",
+          "value": "combined_b_scale_0.75"
+        },
+        {
+          "label": "联合 A 全幅",
+          "value": "combined_a"
+        }
+      ],
+      "default": "combined_a_scale_0.75"
+    },
+    {
+      "id": "two_cases",
+      "type": "pickString",
+      "description": "退出条件 V2 的两个开发工况",
+      "options": [
+        {
+          "label": "单独 X +100 μm",
+          "value": "x_offset_pos_100um"
+        },
+        {
+          "label": "单独 Y −100 μm",
+          "value": "y_offset_neg_100um"
+        }
+      ],
+      "default": "x_offset_pos_100um"
+    },
+    {
+      "id": "policy",
+      "type": "pickString",
+      "description": "回放哪个保存的版本；V2 仅有 X/Y 两例",
+      "options": [
+        {
+          "label": "B1 固定导纳（原 6 秒预算）",
+          "value": "b1"
+        },
+        {
+          "label": "B2 搜索恢复（七工况版本）",
+          "value": "b2"
+        },
+        {
+          "label": "V2 退出条件复测（仅 X/Y，未改善）",
+          "value": "b2_v2"
+        }
+      ],
+      "default": "b1"
+    },
+    {
+      "id": "record",
+      "type": "promptString",
+      "description": "粘贴 run.json.gz 或 partial_trace.json.gz 完整路径（不加引号）"
+    }
+  ]
+}

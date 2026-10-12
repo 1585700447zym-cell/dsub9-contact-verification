@@ -1,0 +1,7 @@
+{
+  "termination": "TIME_LIMIT",
+  "advance_mm": 0.2468386021180981,
+  "peak_force_N": 0.024516379773500952,
+  "reference_available": true,
+  "all_trace_samples_equal_to_reference": true
+}

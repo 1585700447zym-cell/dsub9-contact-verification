@@ -42,13 +42,13 @@ def relative_rotation_rad(initial, current):
 
 
 class LearningEnvironment(SampledCompatibilityEnvironment):
-    def __init__(self, *, guard_config: GuardCandidateConfig):
+    def __init__(self, *, guard_config: GuardCandidateConfig, model_xml=None):
         if not isinstance(guard_config, GuardCandidateConfig):
             raise TypeError('Explicit GuardCandidateConfig required')
         self.guard_config = guard_config
         self._observation_ready = False
         self._clear_facts()
-        super().__init__()
+        super().__init__(model_xml=model_xml)
 
     def _clear_facts(self):
         self._facts = dict(simulation_valid=True, invalid_reasons=[], contact_reasons=[],

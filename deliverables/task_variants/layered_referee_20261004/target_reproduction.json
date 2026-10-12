@@ -1,0 +1,19 @@
+{
+  "samples": 11271,
+  "fields_equal": {
+    "position_m": true,
+    "quaternion_wxyz": true,
+    "velocity_world": true,
+    "contact_wrench_M": true,
+    "limited_command_world": true,
+    "reference_qpos": true
+  },
+  "old_outcome": "TASK_FAILURE",
+  "new_outcome": "FULL_SUCCESS",
+  "old_task_end_time": 21.539999999976477,
+  "new_task_end_time": 20.779999999978248,
+  "old_sha256": "8f78d621f00789a0067d4590bf6cda9ec6be0b20c143e585a9d5beb1afc9e15c",
+  "new_sha256": "604437ff1ef4d3e936849272376b8003286972bd527c9a3d69fbf60bfe3973bd",
+  "meaning": "Actual run with new referee; all compared physical states and commands identical to the archived old-referee run",
+  "new_physics": 0
+}

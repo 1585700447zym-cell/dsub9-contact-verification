@@ -1,0 +1,35 @@
+{
+  "y_pos_150": {
+    "first_transition": [
+      {
+        "time_s": 2.439999999999764,
+        "phase": "UNLOAD",
+        "reason": "LOADED_ROTATION_RISK",
+        "relative_rotation_rad": 0.026682897257887278,
+        "axial_force_N": -0.024286531507634827,
+        "risk_since_s": 2.3899999999997696
+      }
+    ],
+    "scope": "offline saved observations, NOT counterfactual dynamics"
+  },
+  "x_pos_150": {
+    "first_transition": [
+      {
+        "time_s": 1.1719999999999036,
+        "phase": "UNLOAD",
+        "reason": "AXIAL_STALL"
+      }
+    ],
+    "scope": "offline saved observations, NOT counterfactual dynamics"
+  },
+  "x_neg_150": {
+    "first_transition": [
+      {
+        "time_s": 1.1699999999999038,
+        "phase": "UNLOAD",
+        "reason": "AXIAL_STALL"
+      }
+    ],
+    "scope": "offline saved observations, NOT counterfactual dynamics"
+  }
+}

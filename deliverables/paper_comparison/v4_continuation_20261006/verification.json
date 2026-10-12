@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-10-06T16:08:40.999207+08:00",
+  "tests_passed": 310,
+  "full_project_suite": false,
+  "review": {
+    "independent_author": true,
+    "fresh_context": true,
+    "critical": 0,
+    "important": 0,
+    "minor_deferred": 2
+  },
+  "prior_sealed_files_verified": 2588,
+  "bound_inputs": 906,
+  "source_snapshots": 197,
+  "document_snapshots": 8,
+  "links_checked": 20,
+  "live_changes_since_execution": [
+    "docs/superpowers/plans/2026-10-06-v4-continuation-preflight.md"
+  ],
+  "bounded_preflight_passed": true,
+  "attempts": 1,
+  "completed": 1,
+  "cumulative": 140,
+  "physical_substeps": 112450,
+  "training_updates": 0,
+  "policy_calls": 0,
+  "replay_published": 0,
+  "independent_tests": 0,
+  "training_admitted": false,
+  "stage_B2_complete": false,
+  "automatic_tracking": "PAUSED"
+}

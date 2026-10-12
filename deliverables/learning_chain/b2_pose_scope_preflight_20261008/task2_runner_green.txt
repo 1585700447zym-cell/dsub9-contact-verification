@@ -1,0 +1,19 @@
+test_close_kills_owned_child (test_runner.JobTests.test_close_kills_owned_child) ... FAIL
+test_kill_confirmed_by_job_accounting (test_runner.JobTests.test_kill_confirmed_by_job_accounting) ... ok
+test_cycle_budget_counts_tail_and_static_time (test_runner.RunnerTests.test_cycle_budget_counts_tail_and_static_time) ... ok
+test_missing_grant_and_direct_worker_fail_before_runtime (test_runner.RunnerTests.test_missing_grant_and_direct_worker_fail_before_runtime) ... ok
+test_output_escape_and_existing_rejected (test_runner.RunnerTests.test_output_escape_and_existing_rejected) ... ok
+
+======================================================================
+FAIL: test_close_kills_owned_child (test_runner.JobTests.test_close_kills_owned_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_runner.py", line 62, in test_close_kills_owned_child
+    self.assertNotEqual(child.wait(timeout=5),0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.397s
+
+FAILED (failures=1)

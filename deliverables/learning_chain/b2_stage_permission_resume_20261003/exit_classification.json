@@ -1,0 +1,8 @@
+{
+  "controlled_stop": true,
+  "execution_complete": false,
+  "status": "stopped",
+  "returncode": 20,
+  "worker_stop_confirmed": true,
+  "retry_allowed": false
+}

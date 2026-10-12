@@ -1,0 +1,12 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_sac_continuation_preparation_20261009\verify_delivery.py", line 79, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_sac_continuation_preparation_20261009\verify_delivery.py", line 48, in main
+    check(not (OUT/'future_claims').exists() and not (OUT/'grant.json').exists() and not (OUT/'checkpoint').exists(),'candidate not executed')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_sac_continuation_preparation_20261009\verify_delivery.py", line 15, in check
+    if not ok:raise AssertionError(label)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: candidate not executed

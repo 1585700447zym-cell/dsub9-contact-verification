@@ -3,8 +3,8 @@ from tools.dynamics.cartesian import CartesianEnvironment, DynamicConfig
 
 
 class NativeTightCandidate(CartesianEnvironment):
-    def __init__(self, *, segments=256, timestep=.0002):
-        super().__init__(DynamicConfig(collision_backend='native', timestep=timestep), segments=segments)
+    def __init__(self, *, segments=256, timestep=.0002, model_xml=None):
+        super().__init__(DynamicConfig(collision_backend='native', timestep=timestep), segments=segments, model_xml=model_xml)
         self.model.opt.ccd_tolerance=1e-12
 
     def metadata(self):

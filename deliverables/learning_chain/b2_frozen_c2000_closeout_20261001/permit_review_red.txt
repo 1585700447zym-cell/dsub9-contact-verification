@@ -1,0 +1,16 @@
+E
+======================================================================
+ERROR: test_real_permit_constructs_with_registered_deployment_config (test_protocol.FrozenRunnerProtocol.test_real_permit_constructs_with_registered_deployment_config)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 69, in test_real_permit_constructs_with_registered_deployment_config
+    permit=permit_type()(l,'a'*64,'b'*64)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\run_evaluation.py", line 79, in __init__
+    self.ledger=ledger;self.expected_digest=binding;self.auth=auth;self.config=N.config(ledger.state['variant']);self.verify()
+                                                                   ^^^^^^^^^^^
+AttributeError: property 'config' of 'permit_type.<locals>.Permit' object has no setter
+
+----------------------------------------------------------------------
+Ran 1 test in 1.875s
+
+FAILED (errors=1)

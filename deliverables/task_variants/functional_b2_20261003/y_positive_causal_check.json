@@ -1,0 +1,74 @@
+{
+  "same_physics_before_trigger": true,
+  "sample_pairs": 1221,
+  "through_time_s": 2.439999999999764,
+  "fields": {
+    "position_m": true,
+    "quaternion_wxyz": true,
+    "velocity_world": true,
+    "contact_wrench_M": true,
+    "contact_wrench_G": true,
+    "limited_command_world": true,
+    "penetration_m": true
+  },
+  "old_first_guard_time_s": 4.138199999999884,
+  "new_controller_events": [
+    {
+      "time_s": 2.439999999999764,
+      "phase": "UNLOAD",
+      "reason": "LOADED_ROTATION_RISK",
+      "relative_rotation_rad": 0.026682897257887278,
+      "axial_force_N": -0.024286531507634827,
+      "risk_since_s": 2.3899999999997696
+    },
+    {
+      "time_s": 3.229999999999677,
+      "phase": "SEARCH",
+      "reason": "LOW_LOAD_SEARCH"
+    },
+    {
+      "time_s": 6.164000000004159,
+      "phase": "INSERT",
+      "reason": "SEARCH_ADVANCED"
+    },
+    {
+      "time_s": 6.348000000004547,
+      "phase": "UNLOAD",
+      "reason": "LOADED_ROTATION_RISK",
+      "relative_rotation_rad": 0.0315532260041245,
+      "axial_force_N": -0.020248573584179377,
+      "risk_since_s": 6.298000000004442
+    },
+    {
+      "time_s": 7.122000000006181,
+      "phase": "SEARCH",
+      "reason": "LOW_LOAD_SEARCH"
+    },
+    {
+      "time_s": 10.13400000000306,
+      "phase": "INSERT",
+      "reason": "SEARCH_ADVANCED"
+    }
+  ],
+  "new_outcome": {
+    "simulation_valid": true,
+    "task_outcome": "FULL_SUCCESS",
+    "guard_violations": {
+      "contact": false,
+      "motion": false
+    },
+    "physical_stopped": true,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "training_admitted": false,
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.033640507269222256,
+      "checked_substeps": 79170
+    }
+  },
+  "geometry_source_unchanged": true
+}

@@ -1,0 +1,59 @@
+FFF..                                                                    [100%]
+================================== FAILURES ===================================
+_ test_recorded_infeasible_next_step_ends_search_without_spending_extra_retry[1-WAIT_RECOVERY-SEARCH_EXHAUSTED] _
+
+count = 1, phase = 'WAIT_RECOVERY', reason = 'SEARCH_EXHAUSTED'
+
+    @pytest.mark.parametrize('count,phase,reason', [
+        (1, 'WAIT_RECOVERY', 'SEARCH_EXHAUSTED'),
+        (2, 'FAILED', 'SEARCH_BUDGET_EXHAUSTED'),
+    ])
+    def test_recorded_infeasible_next_step_ends_search_without_spending_extra_retry(count, phase, reason):
+        c, sample = controller_and_sample(count)
+        before_offset = c.admittance.offset.copy()
+        before_velocity = c.admittance.velocity.copy()
+        command = c.command(sample, .002)
+>       assert c.phase == phase and c.events[-1]['reason'] == reason
+E       AssertionError: assert ('FAILED' == 'WAIT_RECOVERY'
+E         
+E         - WAIT_RECOVERY
+E         + FAILED)
+
+tests\task_variants\test_search_boundary_end.py:33: AssertionError
+_ test_recorded_infeasible_next_step_ends_search_without_spending_extra_retry[2-FAILED-SEARCH_BUDGET_EXHAUSTED] _
+
+count = 2, phase = 'FAILED', reason = 'SEARCH_BUDGET_EXHAUSTED'
+
+    @pytest.mark.parametrize('count,phase,reason', [
+        (1, 'WAIT_RECOVERY', 'SEARCH_EXHAUSTED'),
+        (2, 'FAILED', 'SEARCH_BUDGET_EXHAUSTED'),
+    ])
+    def test_recorded_infeasible_next_step_ends_search_without_spending_extra_retry(count, phase, reason):
+        c, sample = controller_and_sample(count)
+        before_offset = c.admittance.offset.copy()
+        before_velocity = c.admittance.velocity.copy()
+        command = c.command(sample, .002)
+>       assert c.phase == phase and c.events[-1]['reason'] == reason
+E       AssertionError: assert ('FAILED' == 'FAILED'
+E         
+E           FAILED and 'SEARCH_REFERENCE_LIMIT' == 'SEARCH_BUDGET_EXHAUSTED'
+E         
+E         - SEARCH_BUDGET_EXHAUSTED
+E         + SEARCH_REFERENCE_LIMIT)
+
+tests\task_variants\test_search_boundary_end.py:33: AssertionError
+_ test_continuation_predictor_matches_the_actual_controlled_end_before_final_segment _
+
+    def test_continuation_predictor_matches_the_actual_controlled_end_before_final_segment():
+        from tools.learning.v4_continuation import predict_next_search
+        c, sample = controller_and_sample()
+        result = predict_next_search(REFERENCE, PREVIOUS, THETA, c.config, .002)
+>       assert result['reference_feasible'] and result['controlled_search_end']
+E       assert (False)
+
+tests\task_variants\test_search_boundary_end.py:46: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_search_boundary_end.py::test_recorded_infeasible_next_step_ends_search_without_spending_extra_retry[1-WAIT_RECOVERY-SEARCH_EXHAUSTED]
+FAILED tests/task_variants/test_search_boundary_end.py::test_recorded_infeasible_next_step_ends_search_without_spending_extra_retry[2-FAILED-SEARCH_BUDGET_EXHAUSTED]
+FAILED tests/task_variants/test_search_boundary_end.py::test_continuation_predictor_matches_the_actual_controlled_end_before_final_segment
+3 failed, 2 passed in 0.29s

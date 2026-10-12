@@ -1,0 +1,41 @@
+{
+  "returncode": 0,
+  "all_passed": true,
+  "command": [
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "pytest",
+    "deliverables\\learning_chain\\b2_stage_permission_20261002\\test_learning_runtime.py",
+    "deliverables\\learning_chain\\b2_stage_permission_20261002\\test_permission.py",
+    "deliverables\\learning_chain\\b2_stage_permission_20261002\\test_protocol.py",
+    "deliverables\\learning_chain\\b2_stage_permission_20261002\\test_report.py",
+    "deliverables\\learning_chain\\b2_stage_permission_20261002\\test_runner.py",
+    "tests/learning/test_action.py",
+    "tests/learning/test_observation.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--tb=short"
+  ],
+  "tested_source_sha256": {
+    "deliverables/learning_chain/b2_stage_permission_20261002/learning_runtime.py": "d34b3a6babf61460423d7b901f625e7cb8a5e1afb200fc52bb45461a91bded8c",
+    "deliverables/learning_chain/b2_stage_permission_20261002/paired_collection.py": "991dcc7b32e3ebe63055c832720496b38529769599717173cebf5514592efece",
+    "deliverables/learning_chain/b2_stage_permission_20261002/paired_contract.py": "72829ec8e431989457d3a6110915a95ad346caa414ae76b1c69c403ee7ec2110",
+    "deliverables/learning_chain/b2_stage_permission_20261002/prepare.py": "1615d50bf7ea225c902b18509c403cecc33cff47f8e3c72b4a5b3822bbec1b43",
+    "deliverables/learning_chain/b2_stage_permission_20261002/protocol_runner.py": "e684efb08a0d685957739f75665e973ffc1f060da3872b3c271e4189c802b034",
+    "deliverables/learning_chain/b2_stage_permission_20261002/report_result.py": "6d09ece5258154c4f9a493f54df6bbc3832d79151506e60780a5408de1a880d6",
+    "deliverables/learning_chain/b2_stage_permission_20261002/run_pair.py": "bc64f255c5eb74618cf0c99e0477fd533a5849ba2fd70dd193ef587b88bde3ed",
+    "deliverables/learning_chain/b2_stage_permission_20261002/stage_rules.py": "721d2afa6204754a6edebd0b9dbba73e10f72458336d8ebd802b5a65500f85d0",
+    "deliverables/learning_chain/b2_stage_permission_20261002/stage_session.py": "2b58f4c3b8714373512c478215a7869974a86fc754e550a2a555b0d6cd83f50f",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_learning_runtime.py": "0fc39cf7ced113c464c224b7847b09be1e2be3131dde4f3d734ffa0e1dc80ec7",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_permission.py": "a5e9c7378b887438630fb87309cd184dc61db8a4074e4cce1ea0655599168cb2",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_protocol.py": "c78a3b13750bccb6030cdce6851768a9f8ba081d3851cf9d4560ad5d2cbf5836",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_report.py": "1eaa9d1971c555bd7e2c21abd3a8572387d70add40b43513e0a9f3a34765bd5b",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_runner.py": "a0a821f65a57ce0a7ee447e40093f25be004a99dc6eb0fdac9960e891aaaa3fa"
+  },
+  "physics_model_optimizer_calls": 0,
+  "note": "Permission and learning-state suites install explicit no-physics/no-forward/no-Adam guards; other tests are pure protocol/data tests."
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "episode_id": "train_000000",
+    "path": "checkpoints/train_000000",
+    "sha256": "c1d3d887ee24aa100963e65a970e4ee22e58e7ad3d35186207569b2f6a31d893",
+    "cumulative_audited": 3045,
+    "critic_updates": 0,
+    "bytes": 8291423
+  },
+  {
+    "episode_id": "train_000001",
+    "path": "checkpoints/train_000001",
+    "sha256": "ddfb7bddd5bd75d502d4cbbcb9fd1699301e163ad48e9786c5aab598ba308426",
+    "cumulative_audited": 6090,
+    "critic_updates": 272,
+    "bytes": 16891413
+  },
+  {
+    "episode_id": "train_000002",
+    "path": "checkpoints/train_000002",
+    "sha256": "d6f384572f4d027c5476bf4512e203e5311aae99573ffe56ead2506aad06af8f",
+    "cumulative_audited": 9135,
+    "critic_updates": 1033,
+    "bytes": 23187521
+  },
+  {
+    "episode_id": "train_000003",
+    "path": "checkpoints/train_000003",
+    "sha256": "9d06708edbe9ceb244590606c024d50d6b5e480fa90b6275cd74264b43ab14a5",
+    "cumulative_audited": 12180,
+    "critic_updates": 1795,
+    "bytes": 29498733
+  },
+  {
+    "episode_id": "train_000004",
+    "path": "checkpoints/train_000004",
+    "sha256": "61d4706b0d25ce99b45e98f1af9457d356ee7660f1efee9cb60ee752aca09d1d",
+    "cumulative_audited": 15225,
+    "critic_updates": 2556,
+    "bytes": 35812633
+  },
+  {
+    "episode_id": "train_000005",
+    "path": "checkpoints/train_000005",
+    "sha256": "33f4ee6be2f433c70fd24db0f9bb1dba4dd630e8229dc0c00dbc2694d0a2166e",
+    "cumulative_audited": 18270,
+    "critic_updates": 3317,
+    "bytes": 42115013
+  },
+  {
+    "episode_id": "train_000006",
+    "path": "checkpoints/train_000006",
+    "sha256": "c503f0b823776d4a4c4757d5facca148c8fe5ca05b4669e7e524a2b4255e10e8",
+    "cumulative_audited": 21315,
+    "critic_updates": 4078,
+    "bytes": 48424561
+  }
+]

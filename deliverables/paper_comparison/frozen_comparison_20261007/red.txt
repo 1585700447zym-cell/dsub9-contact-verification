@@ -1,0 +1,159 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+FFFFFFFFFFFFFF                                                           [100%]
+================================== FAILURES ===================================
+__________________ test_unfinished_attempt_cannot_be_retried __________________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:13: in test_unfinished_attempt_cannot_be_retried
+    m=module();ss=m.attempt_specs(COMMON)
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+__________ test_ordinary_failure_remains_attempt_and_next_case_runs ___________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:17: in test_ordinary_failure_remains_attempt_and_next_case_runs
+    m=module();ss=m.attempt_specs(COMMON)
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+________________ test_closed_or_complete_budget_never_reopens _________________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:21: in test_closed_or_complete_budget_never_reopens
+    m=module();ss=m.attempt_specs(COMMON)
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+________________ test_unknown_or_duplicate_attempt_is_rejected ________________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:25: in test_unknown_or_duplicate_attempt_is_rejected
+    m=module();ss=m.attempt_specs(COMMON)
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+______ test_fixed_matrix_has_initial_controls_and_first_use_points_only _______
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:29: in test_fixed_matrix_has_initial_controls_and_first_use_points_only
+    m=module();ss=m.attempt_specs(COMMON)
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+__________________ test_zero_provider_never_needs_a_network ___________________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:38: in test_zero_provider_never_needs_a_network
+    z=module().ZeroUpdater();action,_=z.predict(np.zeros(137),deterministic=True)
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+____________ test_changed_model_or_rng_refuses_evaluation[counts] _____________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:48: in test_changed_model_or_rng_refuses_evaluation
+    m=module();s,r,b=fixture();after=copy.deepcopy(b);after[part]=None
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+______________ test_changed_model_or_rng_refuses_evaluation[rng] ______________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:48: in test_changed_model_or_rng_refuses_evaluation
+    m=module();s,r,b=fixture();after=copy.deepcopy(b);after[part]=None
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+__________ test_nonzero_b2_cannot_be_mislabeled_baseline[raw_action] __________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:52: in test_nonzero_b2_cannot_be_mislabeled_baseline
+    m=module();s,r,b=fixture();r['actions'][0][field][0]=.01
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+______ test_nonzero_b2_cannot_be_mislabeled_baseline[requested_residual] ______
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:52: in test_nonzero_b2_cannot_be_mislabeled_baseline
+    m=module();s,r,b=fixture();r['actions'][0][field][0]=.01
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+_______ test_nonzero_b2_cannot_be_mislabeled_baseline[applied_residual] _______
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:52: in test_nonzero_b2_cannot_be_mislabeled_baseline
+    m=module();s,r,b=fixture();r['actions'][0][field][0]=.01
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+___ test_nonzero_b2_cannot_be_mislabeled_baseline[effective_command_delta] ____
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:52: in test_nonzero_b2_cannot_be_mislabeled_baseline
+    m=module();s,r,b=fixture();r['actions'][0][field][0]=.01
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+___________ test_case_or_scope_change_refuses_registered_evaluation ___________
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:55: in test_case_or_scope_change_refuses_registered_evaluation
+    m=module();s,r,b=fixture()
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+_______ test_network_calls_are_zero_for_b2_and_actual_for_initial_actor _______
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:60: in test_network_calls_are_zero_for_b2_and_actual_for_initial_actor
+    m=module();s,r,b=fixture();assert m.verify_evaluation(r,s,b,b)['network_policy_calls']==0
+deliverables\paper_comparison\frozen_comparison_20261007\test_evaluation.py:10: in module
+    assert PATH.exists(), 'Evaluation adapter is not implemented'
+E   AssertionError: Evaluation adapter is not implemented
+E   assert False
+E    +  where False = exists()
+E    +    where exists = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py').exists
+============================== warnings summary ===============================
+tmp\learning_cpu_20260924\Lib\site-packages\_pytest\cacheprovider.py:475
+  D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\learning_cpu_20260924\Lib\site-packages\_pytest\cacheprovider.py:475: PytestCacheWarning: could not create cache path D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\.pytest_cache\v\cache\nodeids: [WinError 5] 拒绝访问。: 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+tmp\learning_cpu_20260924\Lib\site-packages\_pytest\cacheprovider.py:429
+  D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\learning_cpu_20260924\Lib\site-packages\_pytest\cacheprovider.py:429: PytestCacheWarning: could not create cache path D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\.pytest_cache\v\cache\lastfailed: [WinError 5] 拒绝访问。: 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\.pytest_cache\\v\\cache'
+    config.cache.set("cache/lastfailed", self.lastfailed)
+
+tmp\learning_cpu_20260924\Lib\site-packages\_pytest\stepwise.py:51
+  D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\learning_cpu_20260924\Lib\site-packages\_pytest\stepwise.py:51: PytestCacheWarning: could not create cache path D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\.pytest_cache\v\cache\stepwise: [WinError 5] 拒绝访问。: 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\.pytest_cache\\v\\cache'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_unfinished_attempt_cannot_be_retried
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_ordinary_failure_remains_attempt_and_next_case_runs
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_closed_or_complete_budget_never_reopens
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_unknown_or_duplicate_attempt_is_rejected
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_fixed_matrix_has_initial_controls_and_first_use_points_only
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_zero_provider_never_needs_a_network
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_changed_model_or_rng_refuses_evaluation[counts]
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_changed_model_or_rng_refuses_evaluation[rng]
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_nonzero_b2_cannot_be_mislabeled_baseline[raw_action]
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_nonzero_b2_cannot_be_mislabeled_baseline[requested_residual]
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_nonzero_b2_cannot_be_mislabeled_baseline[applied_residual]
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_nonzero_b2_cannot_be_mislabeled_baseline[effective_command_delta]
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_case_or_scope_change_refuses_registered_evaluation
+FAILED deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py::test_network_calls_are_zero_for_b2_and_actual_for_initial_actor
+14 failed, 3 warnings in 0.77s

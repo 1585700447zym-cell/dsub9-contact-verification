@@ -1,0 +1,40 @@
+{
+  "exit_code": 1,
+  "tests": 26,
+  "tests_with_failure_or_error": 26,
+  "forbidden_call_counts": {
+    "optimizer": 0,
+    "physics": 0,
+    "prediction": 0
+  },
+  "report_sha256": "7d9e49aff480df0a1e68f88fc188a17485c463607ac1ba21c88e7d90fe7acc32",
+  "runner_sha256": "56fba0245eac9deb4dfdd35c63f696bad7003a6a9b88a99a4eb1fa54e4cda75c",
+  "test_ids": [
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[action_after_guard]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[action_mapping]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[case]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[continuity]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[discount]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[false_guard_clear]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[fault]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[in_episode_update]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[invalid]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[missing_event]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[motion]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[nan]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[penetration]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[reward_total]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[stopped]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[substeps]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[terminal]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[torque]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[truncated]",
+    "tests.learning.test_force_failure_rules::test_force_failure_rejects_unqualified_counterexamples[wrong_outcome]",
+    "tests.learning.test_force_failure_rules::test_force_failure_stays_failure_and_preserves_negative_terminal",
+    "tests.learning.test_force_failure_rules::test_forged_guard_clear_receipt_cannot_earn_credit_and_duplicates_are_idempotent",
+    "tests.learning.test_force_failure_rules::test_frequency_stops_second_consecutive_and_third_total_and_no_update_credit",
+    "tests.learning.test_force_failure_rules::test_historical_rejection_cannot_be_relabelled_by_new_rules",
+    "tests.learning.test_force_failure_rules::test_negative_tail_reaches_last_active_row_without_rewriting_rows",
+    "tests.learning.test_force_failure_rules::test_preparation_admission_refuses_execution_even_with_existing_parent_pin"
+  ]
+}

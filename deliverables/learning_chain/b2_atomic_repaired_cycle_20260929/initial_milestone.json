@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-09-29T16:28:45.665525+08:00",
+  "stage": "initial_complete",
+  "successes": 4,
+  "total": 4,
+  "training_state_unchanged": true,
+  "initial_evaluation_wall_s": 1312.118624099996,
+  "formal_updates": 0,
+  "new_dynamic_starts": 5,
+  "cumulative_dynamic_starts": 49,
+  "next": "registered balanced warmup then SAC updates",
+  "learning_improvement_claimed": false,
+  "evidence_sha256": {
+    "run/initial/results.json": "4dd66bdb23d9081e093a0c8dafc851f64dd86ceb71e3288aa4e40d6adacb8c8d",
+    "run/initial/verification.json": "d8e0221132186956748b585290bd57ae309cddb54310553365be653640540933"
+  }
+}

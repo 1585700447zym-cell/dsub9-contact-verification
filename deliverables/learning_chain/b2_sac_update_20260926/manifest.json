@@ -1,0 +1,33 @@
+{
+  "version": "b2_sac_update_delivery_v1",
+  "files": {
+    "deliverables/learning_chain/b2_sac_update_20260926/admission.json": "d1f42deff861fa00c33b0932695dbb9c06ed0192bb3a0e83901f477996e973bf",
+    "deliverables/learning_chain/b2_sac_update_20260926/assessment.json": "efaab3383c2d676f57130bf5291419590d5588f45a125ad2b281f64c64235408",
+    "deliverables/learning_chain/b2_sac_update_20260926/attempts.json": "44835c7f4f5ef5d66fe33af31f7c1493c01832f50791b0a5768c93b70efc13c5",
+    "deliverables/learning_chain/b2_sac_update_20260926/documentation_checks.json": "bbb07c9bf9542fdd6532e274428416d88ac73bf14cde47de970e678859a502c7",
+    "deliverables/learning_chain/b2_sac_update_20260926/episodes/updated_cut/episode.json.gz": "64811445c047e26bf799cdd2590fecb9e6f40d1ba46d79605d2b50b018c8ce92",
+    "deliverables/learning_chain/b2_sac_update_20260926/episodes/updated_cut/status.json": "d67ce01dd5e76ed42c4180107b01a7f7b11e29cb9f52b47a8c276c86e0d4ca9c",
+    "deliverables/learning_chain/b2_sac_update_20260926/episodes/warmup_0/episode.json.gz": "b7c6b5b0e5807ab9ab32c0b745775ee646ff4209df0b571b0cf05cc79632dea8",
+    "deliverables/learning_chain/b2_sac_update_20260926/episodes/warmup_0/status.json": "7d8e088152f9632495923abec87bf8223924f81c3bed9efd8bf129c4e9d8f301",
+    "deliverables/learning_chain/b2_sac_update_20260926/episodes/warmup_1/episode.json.gz": "428f54bafb7f8bdd3e94edb252af61d3d8b51d8582fa5160b16b7d30d0ac9708",
+    "deliverables/learning_chain/b2_sac_update_20260926/episodes/warmup_1/status.json": "4e28dacdc8de9571dcd47922f496fd722023cb1e43b7073afd7f82f72e86df2e",
+    "deliverables/learning_chain/b2_sac_update_20260926/learning_tests.log": "9cc69bae2b7f730aec087ad30b5d06832790137b327c75c140b12bd1654f4ad2",
+    "deliverables/learning_chain/b2_sac_update_20260926/learning_tests.xml": "6c9ff42a9eefbff87e40121165d00c96debb573876f872309f863ceb6f2ab801",
+    "deliverables/learning_chain/b2_sac_update_20260926/network_fingerprints.json": "890f3be3b95cfa61b28874ee2f556dc22a704caf754d6e376e58a31e5330349a",
+    "deliverables/learning_chain/b2_sac_update_20260926/protocol.json": "002447e19396862d60e3a6c0fda4e37f014fd9dc74d3403840594cd973d114c0",
+    "deliverables/learning_chain/b2_sac_update_20260926/README.md": "159dde7928998f46b8c02b0a3dfb5edba96e80b395612e053d5ab977c2fdac3e",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/docs/deliverables/monthly_progress/2026-09/月报素材_2026-09.md": "7f6c5cc6de20c0002beea50f4fa034ae9519895bb2b0c7a018411d5d561e7611",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/docs/docs/superpowers/plans/2026-09-26-b2-sac-update.md": "59c849b238d6ea061aae3549904f2770ab35ec17ec3b453517463b5fdb541537",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/docs/项目交付总览.md": "3fb2d3a00ae379d75216faca2f9ade36e8495018ce9977c5dc9134be5801ed3d",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/docs/项目进度跟踪.md": "73588abd49e6f095853ac11119862d1e269eb4f38f026456acd6a712d743532f",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/sources/tests/learning/test_b2_sac_admission.py": "ff849df2a8c68e882ac7ec69edb407dcadc06f01caa2f170e199c438e8be85fa",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/sources/tests/learning/test_sac_collection.py": "3682cd1b45a23416acc1a93652a0a00bc3353a442d901a509f62a225bca2d5fd",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/sources/tests/learning/test_sac_update.py": "98f74f5c134fc414fc12921ac661cfb3dc1b6ae02fe8c586b042e115884838d8",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/sources/tools/learning/b2_sac_admission.py": "e233e47459c1586b61877a2f173b17d7d2566c775aeb836f622bf33606a5429e",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/sources/tools/learning/sac_collection.py": "e90021b4f044602baf169ef97832fb1aa109e10e04bb826cd3fbb6b7286e480f",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/sources/tools/learning/sac_update.py": "4e60b7a2c5b6dd69846f23b3d8d1711822d0d4f033028dd425a293590f33ce34",
+    "deliverables/learning_chain/b2_sac_update_20260926/snapshots/sources/tools/validation/verify_sac_update.py": "7cfde7457f80f2e849a4bee626b4f13a05f9d1b64a9c01edd00333ce13b6000b",
+    "deliverables/learning_chain/b2_sac_update_20260926/updates.json": "c5ab58c8d2f494ba79a51ce5efe98b13b89dd2162977bedd16ca486aaf56f8f0",
+    "deliverables/learning_chain/b2_sac_update_20260926/核验说明.md": "3f2ee561d15815c4b214f9e1b8819eb981c9f8cd42c202def5dad15dcfd1d0b0"
+  }
+}

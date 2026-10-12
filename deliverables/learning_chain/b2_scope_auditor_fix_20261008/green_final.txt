@@ -1,0 +1,19 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_closed_attempt_is_not_promoted_by_repair (__main__.ArchiveTests.test_closed_attempt_is_not_promoted_by_repair) ... ok
+test_real_reward_corruption_is_still_rejected (__main__.ArchiveTests.test_real_reward_corruption_is_still_rejected) ... ok
+test_real_serialized_archive_passes_complete_audit (__main__.ArchiveTests.test_real_serialized_archive_passes_complete_audit) ... ok
+test_real_values_restored_to_live_numpy_reward_and_command_types (__main__.ArchiveTests.test_real_values_restored_to_live_numpy_reward_and_command_types) ... ok
+test_boolean_number_mixing_is_rejected (__main__.ScalarTests.test_boolean_number_mixing_is_rejected) ... ok
+test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) ... ok
+test_existing_tolerance_is_preserved (__main__.ScalarTests.test_existing_tolerance_is_preserved) ... ok
+test_keys_shapes_and_text_remain_strict (__main__.ScalarTests.test_keys_shapes_and_text_remain_strict) ... ok
+test_large_integer_low_bits_are_not_discarded (__main__.ScalarTests.test_large_integer_low_bits_are_not_discarded) ... ok
+test_nested_command_and_reward_json_roundtrip (__main__.ScalarTests.test_nested_command_and_reward_json_roundtrip) ... ok
+test_non_numeric_coercions_and_arrays_are_rejected (__main__.ScalarTests.test_non_numeric_coercions_and_arrays_are_rejected) ... ok
+test_nonfinite_values_are_rejected_even_same_type (__main__.ScalarTests.test_nonfinite_values_are_rejected_even_same_type) ... ok
+test_same_boolean_values_keep_boolean_semantics (__main__.ScalarTests.test_same_boolean_values_keep_boolean_semantics) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 55.895s
+
+OK

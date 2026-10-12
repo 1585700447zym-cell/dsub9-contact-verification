@@ -1,0 +1,12 @@
+test_complete_tensor_archive_state_real_disk_roundtrip (test_protocol.WriterTests.test_complete_tensor_archive_state_real_disk_roundtrip) ... ok
+test_duplicate_final_never_overwrites (test_protocol.WriterTests.test_duplicate_final_never_overwrites) ... ok
+test_independent_process_loads_complete_zero_update_state (test_protocol.WriterTests.test_independent_process_loads_complete_zero_update_state) ... ok
+test_manifest_failure_keeps_staging_not_loadable_final (test_protocol.WriterTests.test_manifest_failure_keeps_staging_not_loadable_final) ... ok
+test_original_dataset_bytes_survive_without_reserialization (test_protocol.WriterTests.test_original_dataset_bytes_survive_without_reserialization) ... ok
+test_original_production_failure_reproduced (test_protocol.WriterTests.test_original_production_failure_reproduced) ... ok
+test_synthetic_nonempty_adam_tensor_payload_roundtrip (test_protocol.WriterTests.test_synthetic_nonempty_adam_tensor_payload_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 40.566s
+
+OK

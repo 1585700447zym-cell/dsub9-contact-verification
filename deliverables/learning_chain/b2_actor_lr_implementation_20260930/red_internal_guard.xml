@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="20" time="0.664" timestamp="2026-09-30T11:31:22.083459+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_lr_preparation" name="test_preparation_updater_blocks_all_model_computation[predict]" time="0.526" /><testcase classname="tests.learning.test_actor_lr_preparation" name="test_preparation_updater_blocks_all_model_computation[targets]" time="0.000" /><testcase classname="tests.learning.test_actor_lr_preparation" name="test_preparation_updater_blocks_all_model_computation[_targets]" time="0.001"><failure message="AttributeError: 'PreparationUpdater' object has no attribute 'policy'">method = '_targets'
+
+    @pytest.mark.parametrize('method', ['predict', 'targets', '_targets', 'update'])
+    def test_preparation_updater_blocks_all_model_computation(method):
+        m = api()
+        # Block applies even before a real policy could be constructed.
+        u = object.__new__(m.PreparationUpdater)
+        with pytest.raises(RuntimeError, match='preparation'):
+&gt;           getattr(u, method)(None)
+
+tests\learning\test_actor_lr_preparation.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;tools.learning.actor_lr_preparation.PreparationUpdater object at 0x0000016724DB0A50&gt;
+batch = None, exact_targets = None
+
+    def _targets(self, batch, exact_targets=None):
+        with torch.no_grad():
+&gt;           action, logp = self.policy.actor.action_log_prob(batch.next_observations)
+E           AttributeError: 'PreparationUpdater' object has no attribute 'policy'
+
+tools\learning\sac_update.py:112: AttributeError</failure></testcase><testcase classname="tests.learning.test_actor_lr_preparation" name="test_preparation_updater_blocks_all_model_computation[update]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[0.0]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[-1.0]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[True]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[inf]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[nan]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[None]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[0.0003]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]" time="0.000"><failure message="OverflowError: int too large to convert to float">bad = 100000000000000000...0000000000000000000
+
+    @pytest.mark.parametrize('bad', [0., -1., True, float('inf'), float('nan'), None, '0.0003', 10**400])
+    def test_invalid_public_rate_cannot_initialize_any_optimizer(bad):
+        with pytest.raises(ValueError, match='learning rate'):
+&gt;           optimizer_learning_rates(dict(learning_rate=bad, actor_learning_rate=3e-5))
+
+tests\learning\test_learning_rate_validation.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\learning_rates.py:12: in optimizer_learning_rates
+    base = _rate(settings['learning_rate'])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+value = 100000000000000000...0000000000000000000
+
+    def _rate(value):
+&gt;       if type(value) not in (int, float) or not math.isfinite(value) or value &lt;= 0:
+E       OverflowError: int too large to convert to float
+
+tools\learning\learning_rates.py:6: OverflowError</failure></testcase><testcase classname="tests.learning.test_learning_rate_validation" name="test_every_group_must_match_and_guard_does_not_repair_saved_rates" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[missing]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[empty]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[nonlist]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[nondict]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[missing_lr]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[bool_lr]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_matching_multiple_groups_are_accepted_without_state_changes" time="0.000" /></testsuite></testsuites>

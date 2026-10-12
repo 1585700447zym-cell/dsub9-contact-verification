@@ -1,0 +1,15 @@
+{
+  "existing_joint_archives": 8,
+  "existing_cycles": 42656,
+  "recorded_worker_wall_seconds": 2411.36441499996,
+  "observed_worker_seconds_per_cycle": 0.056530486098086086,
+  "mean_episode_extrapolation_for_12_s": 3617.04662249994,
+  "max_cycle_extrapolation_for_174000_s": 9836.30458106698,
+  "planning_wall_hours": [
+    1,
+    4
+  ],
+  "proposed_whole_wall_limit_s": 21600,
+  "proposed_per_attempt_wall_limit_s": 1200,
+  "limitation": "Historical wall_seconds scaling only; different actions/recovery may change cost. No new benchmark. Whole limit includes audit and closure; process termination is not proof of physical stop."
+}

@@ -1,0 +1,132 @@
+{
+  "criteria": {
+    "angle_tolerance_rad": 0.008726646259971648,
+    "angular_speed_rad_s": 0.001,
+    "force_N": 0.025,
+    "hold_s": 0.1,
+    "linear_speed_m_s": 1e-05,
+    "penetration_m": 3e-05,
+    "torque_Nm": 0.0005,
+    "xy_tolerance_m": 8e-05,
+    "z_tolerance_m": 2e-05
+  },
+  "rows": [
+    {
+      "model": "F0",
+      "case_id": "J01",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": true
+    },
+    {
+      "model": "F2000",
+      "case_id": "J01",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": false
+    },
+    {
+      "model": "F0",
+      "case_id": "J02",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": true
+    },
+    {
+      "model": "F2000",
+      "case_id": "J02",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": false
+    },
+    {
+      "model": "F0",
+      "case_id": "J03",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": true
+    },
+    {
+      "model": "F2000",
+      "case_id": "J03",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": false
+    },
+    {
+      "model": "F0",
+      "case_id": "J04",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": true
+    },
+    {
+      "model": "F2000",
+      "case_id": "J04",
+      "non_xy_angle_conditions": {
+        "z": true,
+        "linear_speed": true,
+        "angular_speed": true,
+        "force": true,
+        "torque": true,
+        "penetration": true
+      },
+      "all_other_conditions_pass": true,
+      "strict_full_pose_pass": false
+    }
+  ],
+  "source_pins": {
+    "tools/validation/run_b1_baseline.py": "6e9c7d83db0af1e28b0cf80b58aa1d36d835cc8c4812791cc240441ab68370d4",
+    "deliverables/paper_comparison/contact_gate_probe_20261007/analyze_results.py": "650e29c9ddcd6373c35df864726992a319c5829f69b890e0ce5e9790c787703b"
+  },
+  "scientific_operations": 0
+}

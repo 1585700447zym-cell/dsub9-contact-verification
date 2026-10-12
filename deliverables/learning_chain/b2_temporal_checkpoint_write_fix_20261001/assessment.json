@@ -1,0 +1,69 @@
+{
+  "version": "checkpoint_writer_offline_fix_v1",
+  "root_cause": "flush_write_received_callback_instead_of_bytes",
+  "producer_fixed": true,
+  "actual_failed_state_recoverable": false,
+  "tests": {
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "actual_calls": {
+      "model_forward": 0,
+      "optimizer": 0,
+      "physics": 0
+    }
+  },
+  "review": {
+    "ready": true,
+    "critical": 0,
+    "important": 0,
+    "scope": "offline_writer_repair_and_terminal_interpretation",
+    "reviewer": "/root/temporal_validation_review",
+    "reviewed_tests": 6,
+    "additional_synthetic_serialization_test_passed": true,
+    "effect_validation_complete": false,
+    "resume_execution_allowed": false
+  },
+  "original_execution_binding_sha256": "43cc9313f361973682a431d74aebcf2d358e8d3a835f7d5b5544c9e8f79820ad",
+  "original_authorization_sha256": "4f15ab5bba881828e010835e357fa6564ff78e792bea33b9d389f59b30e88793",
+  "parent_assessment_sha256": "74928752693714da418862545845eeed32db56cb47390a8320547a14cb1eeb5e",
+  "parent_failure_sha256": "5166f5879b9cb82afd30878d0e29f5b737b317f6dfa30e657866dcc8e9886347",
+  "original_runtime_sha256": "058f82b6090cb5b85011f970c909f0bd8195161fef790592b559e78161e82cf5",
+  "accounting": {
+    "previous_dynamic": 68,
+    "new_dynamic_starts": 4,
+    "cumulative_dynamic": 72,
+    "cumulative_dynamic_cap": 92,
+    "unused_dynamic": 20,
+    "control_cycles_reserved": 52000,
+    "control_cycles_confirmed": 24430,
+    "formal_batches_attempted": 500,
+    "formal_batches_completed": 500,
+    "updates": {
+      "A": {
+        "attempted": 0,
+        "completed": 0
+      },
+      "C": {
+        "attempted": 500,
+        "completed": 500
+      }
+    },
+    "independent_test": 0,
+    "old_unused_consumed": 0,
+    "status": "failed"
+  },
+  "original_costs": {
+    "model_module_calls_attempted": 275800,
+    "optimizer_steps_attempted": 1500,
+    "policy_states_attempted": 24430,
+    "physical_substeps_attempted": 244300,
+    "substep_forwards_attempted": 244300
+  },
+  "judgement": "operational_verification_blocked",
+  "policy_effect_validated": false,
+  "retry_allowed": false,
+  "b2_complete": false,
+  "automatic_tracking": "PAUSED",
+  "created_at": "2026-10-01T19:32:27.530657+08:00"
+}

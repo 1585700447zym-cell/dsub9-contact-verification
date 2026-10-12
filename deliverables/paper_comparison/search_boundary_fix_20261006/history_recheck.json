@@ -1,0 +1,20 @@
+[
+  {
+    "manifest": "deliverables/paper_comparison/v4_learning_pilot_20261006/delivery_manifest_v2.json",
+    "sha256": "f740dd75a922b5962c293da16213bdc2818fef6bca6ec885a7b28a1d3f3c80a9",
+    "files": 1204,
+    "mismatches": 0
+  },
+  {
+    "manifest": "deliverables/paper_comparison/v4_continuation_20261006/delivery_manifest.json",
+    "sha256": "536a599cd5b8baaab8fbb8951f8b1557a6eb40bc2d215f12603103d0a07a4673",
+    "files": 239,
+    "mismatches": 0
+  },
+  {
+    "manifest": "deliverables/project_audit/complexity_20261006/delivery_manifest.json",
+    "sha256": "11081e20a423bdefede246a1686db9a58d9723b2d1e962977eed31a86bedfdbc",
+    "files": 15,
+    "mismatches": 0
+  }
+]

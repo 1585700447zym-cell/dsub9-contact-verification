@@ -1,0 +1,13 @@
+{
+  "ready": true,
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "independent_review_original": {"critical": 0, "important": 4, "minor": 0, "ready": false},
+  "resolution_owner": "implementer",
+  "resolution": "All four findings reproduced and fixed in one necessary pass; regression evidence retained; prepare must pass the complete suite before binding.",
+  "source_review_rounds": 1,
+  "new_dynamic": 0,
+  "new_training": 0,
+  "performance_verified": false
+}

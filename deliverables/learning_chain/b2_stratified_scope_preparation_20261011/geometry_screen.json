@@ -1,0 +1,3915 @@
+{
+  "excludes": [
+    "native_MuJoCo_reset",
+    "full_guide_shell_collisions",
+    "initial_wrench_penetration",
+    "dynamic_trajectory",
+    "nonzero_policy_actions",
+    "continuous_domain_qualification"
+  ],
+  "formulas": {
+    "entry_margin_lower_bound": "entry_radius - xy",
+    "rotation": "Ry(pitch) Rx(roll), yaw=0",
+    "top": "c_z + half_length*abs(R_zz) + radius*hypot(R_zx,R_zy)",
+    "xy": "norm(c_xy-hole_xy) + half_length*hypot(R_xz,R_yz) + radius"
+  },
+  "legacy_four_point_comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+  "pin_geometry": [
+    {
+      "center_m": [
+        -0.00554,
+        0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        -0.00554,
+        0.00142,
+        0.0
+      ],
+      "name": "pin_01",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        -0.00277,
+        0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        -0.00277,
+        0.00142,
+        0.0
+      ],
+      "name": "pin_02",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        0.0,
+        0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        0.0,
+        0.00142,
+        0.0
+      ],
+      "name": "pin_03",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        0.00277,
+        0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        0.00277,
+        0.00142,
+        0.0
+      ],
+      "name": "pin_04",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        0.00554,
+        0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        0.00554,
+        0.00142,
+        0.0
+      ],
+      "name": "pin_05",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        -0.004155,
+        -0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        -0.004155,
+        -0.00142,
+        0.0
+      ],
+      "name": "pin_06",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        -0.001385,
+        -0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        -0.001385,
+        -0.00142,
+        0.0
+      ],
+      "name": "pin_07",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        0.001385,
+        -0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        0.001385,
+        -0.00142,
+        0.0
+      ],
+      "name": "pin_08",
+      "radius_m": 0.0005
+    },
+    {
+      "center_m": [
+        0.004155,
+        -0.00142,
+        0.002
+      ],
+      "half_length_m": 0.002,
+      "hole_center_m": [
+        0.004155,
+        -0.00142,
+        0.0
+      ],
+      "name": "pin_09",
+      "radius_m": 0.0005
+    }
+  ],
+  "referee": {
+    "id": "clipped_cylinder_convex256_v1",
+    "layers": [
+      {
+        "name": "entry",
+        "radius_m": 0.000675,
+        "z0_m": 0.0,
+        "z1_m": 0.00025
+      },
+      {
+        "name": "main",
+        "radius_m": 0.0006,
+        "z0_m": 0.00025,
+        "z1_m": 0.0045
+      }
+    ],
+    "minimum_axis_z": 0.99,
+    "requires_all_nine_main_overlaps": true,
+    "segments": 256,
+    "tolerance_m": 1e-09
+  },
+  "rows": [
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 175.00000000000003,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 250.0,
+      "group": "aligned",
+      "highest_pin_z_bound_um": 0.0,
+      "id": "D00",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_01",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00554,
+            0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_02",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00277,
+            0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_03",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.0,
+            0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_04",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00277,
+            0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_05",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00554,
+            0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_06",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.004155,
+            -0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_07",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.001385,
+            -0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_08",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.001385,
+            -0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00017500000000000003,
+          "pin": "pin_09",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.004155,
+            -0.00142,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0005
+        }
+      ],
+      "pin_axis_z": 1.0,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.0,
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "roll_deg": 0.0,
+      "rotation_Ry_Rx": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 0.0,
+      "y_um": 0.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.93398282201764,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 250.0,
+      "group": "position_only",
+      "highest_pin_z_bound_um": 0.0,
+      "id": "P1",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.005464999999999999,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.002695,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            7.5e-05,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.002845,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.005615,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.004079999999999999,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00131,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00146,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00423,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        }
+      ],
+      "pin_axis_z": 1.0,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.0,
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "roll_deg": 0.0,
+      "rotation_Ry_Rx": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.93398282201764,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 250.0,
+      "group": "position_only",
+      "highest_pin_z_bound_um": 0.0,
+      "id": "P2",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.005615,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.002845,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -7.5e-05,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.002695,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.005464999999999999,
+            0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00423,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00146,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00131,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.004079999999999999,
+            -0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        }
+      ],
+      "pin_axis_z": 1.0,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.0,
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "roll_deg": 0.0,
+      "rotation_Ry_Rx": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.93398282201764,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 250.0,
+      "group": "position_only",
+      "highest_pin_z_bound_um": 0.0,
+      "id": "P3",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.005615,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.002845,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -7.5e-05,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.002695,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.005464999999999999,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00423,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00146,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00131,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.004079999999999999,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        }
+      ],
+      "pin_axis_z": 1.0,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.0,
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "roll_deg": 0.0,
+      "rotation_Ry_Rx": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.93398282201764,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 250.0,
+      "group": "position_only",
+      "highest_pin_z_bound_um": 0.0,
+      "id": "P4",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.005464999999999999,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.002695,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            7.5e-05,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.002845,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.005615,
+            0.001345,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.004079999999999999,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            -0.00131,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201797e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00146,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779821
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893398282201764e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 0.0,
+          "transformed_center_m": [
+            0.00423,
+            -0.001495,
+            -0.002
+          ],
+          "xy_radius_bound_m": 0.0006060660171779824
+        }
+      ],
+      "pin_axis_z": 1.0,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.0,
+      "quaternion_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "roll_deg": 0.0,
+      "rotation_Ry_Rx": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 150.25145943545704,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "orientation_only",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "A1",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 0.00015025145943545703,
+          "pin": "pin_01",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            -0.005531193693070056,
+            0.00141125986405395,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.000524748540564543
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015027016096915444,
+          "pin": "pin_02",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            -0.0027612200614736218,
+            0.00141125986405395,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.0005247298390308456
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001502888345685015,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            8.75357012281232e-06,
+            0.00141125986405395,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0005247111654314985
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015030748010679798,
+          "pin": "pin_04",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            0.0027787272017192467,
+            0.00141125986405395,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.000524692519893202
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015032609745676921,
+          "pin": "pin_05",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            0.0055487008333156805,
+            0.00141125986405395,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0005246739025432308
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015031820584585597,
+          "pin": "pin_06",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            -0.0041462609465207165,
+            -0.001428713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0005246817941541441
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015033686476379187,
+          "pin": "pin_07",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            -0.0013762873149242817,
+            -0.001428713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0005246631352362082
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001503554954666161,
+          "pin": "pin_08",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            0.0013936863166721526,
+            -0.001428713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0005246445045333839
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015037409782595653,
+          "pin": "pin_09",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            0.004163659948268587,
+            -0.001428713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0005246259021740435
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 0.0,
+      "y_um": 0.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 150.26081368620373,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "orientation_only",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "A2",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 0.00015030886584617756,
+          "pin": "pin_01",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            -0.005531247762318933,
+            0.001428713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0005246911341538225
+        },
+        {
+          "entry_margin_lower_bound_m": 0.000150327538823712,
+          "pin": "pin_02",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            -0.0027612741307224986,
+            0.001428713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.000524672461176288
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001503461836501025,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            8.699500873935549e-06,
+            0.001428713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0005246538163498975
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015036480019726766,
+          "pin": "pin_04",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            0.00277867313247037,
+            0.001428713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0005246351998027324
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015038338833654524,
+          "pin": "pin_05",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            0.005548646764066804,
+            0.001428713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0005246166116634548
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015026081368620374,
+          "pin": "pin_06",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            -0.00414620687727184,
+            -0.00141125986405395,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0005247391863137963
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015027950126852714,
+          "pin": "pin_07",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            -0.0013762332456754049,
+            -0.00141125986405395,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0005247204987314729
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015029816085322233,
+          "pin": "pin_08",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            0.0013937403859210294,
+            -0.00141125986405395,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0005247018391467777
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001503167923133013,
+          "pin": "pin_09",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            0.004163714017517464,
+            -0.00141125986405395,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0005246832076866987
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 0.0,
+      "y_um": 0.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 150.26081368620373,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "orientation_only",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "A3",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 0.00015038338833654524,
+          "pin": "pin_01",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            -0.005548646764066804,
+            0.001428713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0005246166116634548
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015036480019726766,
+          "pin": "pin_02",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            -0.00277867313247037,
+            0.001428713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0005246351998027324
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001503461836501025,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            -8.699500873935549e-06,
+            0.001428713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0005246538163498975
+        },
+        {
+          "entry_margin_lower_bound_m": 0.000150327538823712,
+          "pin": "pin_04",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            0.0027612741307224986,
+            0.001428713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.000524672461176288
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015030886584617756,
+          "pin": "pin_05",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            0.005531247762318933,
+            0.001428713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0005246911341538225
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001503167923133013,
+          "pin": "pin_06",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            -0.004163714017517464,
+            -0.00141125986405395,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0005246832076866987
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015029816085322233,
+          "pin": "pin_07",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            -0.0013937403859210294,
+            -0.00141125986405395,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0005247018391467777
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015027950126852714,
+          "pin": "pin_08",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            0.0013762332456754049,
+            -0.00141125986405395,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0005247204987314729
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015026081368620374,
+          "pin": "pin_09",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            0.00414620687727184,
+            -0.00141125986405395,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0005247391863137963
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        -0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 0.0,
+      "y_um": 0.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 150.25145943545704,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "orientation_only",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "A4",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 0.00015032609745676921,
+          "pin": "pin_01",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            -0.0055487008333156805,
+            0.00141125986405395,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0005246739025432308
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015030748010679798,
+          "pin": "pin_02",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            -0.0027787272017192467,
+            0.00141125986405395,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.000524692519893202
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001502888345685015,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            -8.75357012281232e-06,
+            0.00141125986405395,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0005247111654314985
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015027016096915444,
+          "pin": "pin_04",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            0.0027612200614736218,
+            0.00141125986405395,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.0005247298390308456
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015025145943545703,
+          "pin": "pin_05",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            0.005531193693070056,
+            0.00141125986405395,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.000524748540564543
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015037409782595653,
+          "pin": "pin_06",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            -0.004163659948268587,
+            -0.001428713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0005246259021740435
+        },
+        {
+          "entry_margin_lower_bound_m": 0.0001503554954666161,
+          "pin": "pin_07",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            -0.0013936863166721526,
+            -0.001428713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0005246445045333839
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015033686476379187,
+          "pin": "pin_08",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            0.0013762873149242817,
+            -0.001428713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0005246631352362082
+        },
+        {
+          "entry_margin_lower_bound_m": 0.00015031820584585597,
+          "pin": "pin_09",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            0.0041462609465207165,
+            -0.001428713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0005246817941541441
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        -0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 0.0,
+      "y_um": 0.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": true,
+      "actual_pure_B2_evaluation_verified": true,
+      "actual_reset_verified": true,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.82305700820131,
+      "existing_case_id": "J01",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J11",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.582305700820131e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            -0.005456193693070056,
+            0.0014862598640539499,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006191769429917987
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5843740214153075e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            -0.0026862200614736218,
+            0.0014862598640539499,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.000619156259785847
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5864420915311915e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            8.375357012281232e-05,
+            0.0014862598640539499,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006191355790846881
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5885099110222075e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            0.0028537272017192467,
+            0.0014862598640539499,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.000619114900889778
+        },
+        {
+          "entry_margin_lower_bound_m": 5.590577479742769e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            0.005623700833315681,
+            0.0014862598640539499,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0006190942252025723
+        },
+        {
+          "entry_margin_lower_bound_m": 5.585902779587119e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            -0.004071260946520716,
+            -0.001353713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006191409722041288
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587970136158979e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            -0.0013012873149242817,
+            -0.001353713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0006191202986384102
+        },
+        {
+          "entry_margin_lower_bound_m": 5.590037241793753e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            0.0014686863166721526,
+            -0.001353713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0006190996275820625
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5921040963455943e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            0.0042386599482685874,
+            -0.001353713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0006190789590365441
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "existing_discrete_scope_with_gaps",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 44.19484719755408,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J12",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 4.424287644021153e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            -0.005456247762318933,
+            0.001503713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006307571235597885
+        },
+        {
+          "entry_margin_lower_bound_m": 4.42615246066065e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            -0.0026862741307224986,
+            0.001503713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006307384753933935
+        },
+        {
+          "entry_margin_lower_bound_m": 4.428016983717845e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            8.369950087393555e-05,
+            0.001503713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0006307198301628216
+        },
+        {
+          "entry_margin_lower_bound_m": 4.429881213053959e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            0.00285367313247037,
+            0.001503713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006307011878694604
+        },
+        {
+          "entry_margin_lower_bound_m": 4.431745148530193e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            0.005623646764066804,
+            0.001503713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006306825485146981
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4194847197554085e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            -0.004071206877271839,
+            -0.00133625986405395,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.000630805152802446
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4213496904036776e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            -0.0013012332456754049,
+            -0.00133625986405395,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006307865030959633
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4232143676372184e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            0.0014687403859210294,
+            -0.00133625986405395,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006307678563236279
+        },
+        {
+          "entry_margin_lower_bound_m": 4.425078751317329e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            0.004238714017517464,
+            -0.00133625986405395,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006307492124868267
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.83818146709559,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J13",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.5838181467095585e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            -0.005473646764066803,
+            0.001503713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006191618185329045
+        },
+        {
+          "entry_margin_lower_bound_m": 5.585455860570416e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            -0.00270367313247037,
+            0.001503713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006191454413942959
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5870931744960665e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            6.630049912606444e-05,
+            0.001503713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0006191290682550394
+        },
+        {
+          "entry_margin_lower_bound_m": 5.588730088302587e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            0.0028362741307224985,
+            0.001503713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006191126991169742
+        },
+        {
+          "entry_margin_lower_bound_m": 5.590366601805868e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            0.005606247762318934,
+            0.001503713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006190963339819414
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5858747782072584e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            -0.004088714017517463,
+            -0.00133625986405395,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006191412522179275
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587511146778893e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            -0.0013187403859210294,
+            -0.00133625986405395,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006191248885322111
+        },
+        {
+          "entry_margin_lower_bound_m": 5.589147114925879e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            0.0014512332456754048,
+            -0.00133625986405395,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006191085288507412
+        },
+        {
+          "entry_margin_lower_bound_m": 5.590782682464077e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            0.00422120687727184,
+            -0.00133625986405395,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0006190921731753593
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        -0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.8773327800963,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J14",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.892536274291021e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            -0.00547370083331568,
+            0.0014862598640539499,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0006060746372570898
+        },
+        {
+          "entry_margin_lower_bound_m": 6.894401169351663e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            -0.0027037272017192467,
+            0.0014862598640539499,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.0006060559883064834
+        },
+        {
+          "entry_margin_lower_bound_m": 6.896265693522355e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            6.624642987718767e-05,
+            0.0014862598640539499,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006060373430647765
+        },
+        {
+          "entry_margin_lower_bound_m": 6.898129846581713e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            0.0028362200614736217,
+            0.0014862598640539499,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.0006060187015341829
+        },
+        {
+          "entry_margin_lower_bound_m": 6.899993628308061e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            0.005606193693070057,
+            0.0014862598640539499,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006060000637169194
+        },
+        {
+          "entry_margin_lower_bound_m": 6.88773327800963e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            -0.004088659948268587,
+            -0.001353713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0006061226672199037
+        },
+        {
+          "entry_margin_lower_bound_m": 6.889598367566406e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            -0.0013186863166721526,
+            -0.001353713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.000606104016324336
+        },
+        {
+          "entry_margin_lower_bound_m": 6.891463086500683e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            0.0014512873149242816,
+            -0.001353713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0006060853691349932
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893327434591185e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            0.004221260946520717,
+            -0.001353713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006060667256540882
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        -0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.8773327800963,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J21",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.899993628308061e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            -0.005606193693070057,
+            0.0014862598640539499,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006060000637169194
+        },
+        {
+          "entry_margin_lower_bound_m": 6.898129846581713e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            -0.0028362200614736217,
+            0.0014862598640539499,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.0006060187015341829
+        },
+        {
+          "entry_margin_lower_bound_m": 6.896265693522355e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            -6.624642987718767e-05,
+            0.0014862598640539499,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006060373430647765
+        },
+        {
+          "entry_margin_lower_bound_m": 6.894401169351663e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            0.0027037272017192467,
+            0.0014862598640539499,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.0006060559883064834
+        },
+        {
+          "entry_margin_lower_bound_m": 6.892536274291021e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            0.00547370083331568,
+            0.0014862598640539499,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0006060746372570898
+        },
+        {
+          "entry_margin_lower_bound_m": 6.893327434591185e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            -0.004221260946520717,
+            -0.001353713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006060667256540882
+        },
+        {
+          "entry_margin_lower_bound_m": 6.891463086500683e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            -0.0014512873149242816,
+            -0.001353713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0006060853691349932
+        },
+        {
+          "entry_margin_lower_bound_m": 6.889598367566406e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            0.0013186863166721526,
+            -0.001353713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.000606104016324336
+        },
+        {
+          "entry_margin_lower_bound_m": 6.88773327800963e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            0.004088659948268587,
+            -0.001353713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0006061226672199037
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": true,
+      "actual_pure_B2_evaluation_verified": true,
+      "actual_reset_verified": true,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.83818146709559,
+      "existing_case_id": "J02",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J22",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.590366601805868e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            -0.005606247762318934,
+            0.001503713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006190963339819414
+        },
+        {
+          "entry_margin_lower_bound_m": 5.588730088302587e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            -0.0028362741307224985,
+            0.001503713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006191126991169742
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5870931744960665e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            -6.630049912606444e-05,
+            0.001503713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0006191290682550394
+        },
+        {
+          "entry_margin_lower_bound_m": 5.585455860570416e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            0.00270367313247037,
+            0.001503713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006191454413942959
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5838181467095585e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            0.005473646764066803,
+            0.001503713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006191618185329045
+        },
+        {
+          "entry_margin_lower_bound_m": 5.590782682464077e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            -0.00422120687727184,
+            -0.00133625986405395,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0006190921731753593
+        },
+        {
+          "entry_margin_lower_bound_m": 5.589147114925879e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            -0.0014512332456754048,
+            -0.00133625986405395,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006191085288507412
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587511146778893e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            0.0013187403859210294,
+            -0.00133625986405395,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006191248885322111
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5858747782072584e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            0.004088714017517463,
+            -0.00133625986405395,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006191412522179275
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "existing_discrete_scope_with_gaps",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 44.19484719755408,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J23",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 4.431745148530193e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            -0.005623646764066804,
+            0.001503713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006306825485146981
+        },
+        {
+          "entry_margin_lower_bound_m": 4.429881213053959e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            -0.00285367313247037,
+            0.001503713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006307011878694604
+        },
+        {
+          "entry_margin_lower_bound_m": 4.428016983717845e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            -8.369950087393555e-05,
+            0.001503713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0006307198301628216
+        },
+        {
+          "entry_margin_lower_bound_m": 4.42615246066065e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            0.0026862741307224986,
+            0.001503713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006307384753933935
+        },
+        {
+          "entry_margin_lower_bound_m": 4.424287644021153e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            0.005456247762318933,
+            0.001503713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006307571235597885
+        },
+        {
+          "entry_margin_lower_bound_m": 4.425078751317329e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            -0.004238714017517464,
+            -0.00133625986405395,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006307492124868267
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4232143676372184e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            -0.0014687403859210294,
+            -0.00133625986405395,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006307678563236279
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4213496904036776e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            0.0013012332456754049,
+            -0.00133625986405395,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006307865030959633
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4194847197554085e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            0.004071206877271839,
+            -0.00133625986405395,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.000630805152802446
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        -0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.82305700820131,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J24",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.590577479742769e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            -0.005623700833315681,
+            0.0014862598640539499,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0006190942252025723
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5885099110222075e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            -0.0028537272017192467,
+            0.0014862598640539499,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.000619114900889778
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5864420915311915e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            -8.375357012281232e-05,
+            0.0014862598640539499,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006191355790846881
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5843740214153075e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            0.0026862200614736218,
+            0.0014862598640539499,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.000619156259785847
+        },
+        {
+          "entry_margin_lower_bound_m": 5.582305700820131e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            0.005456193693070056,
+            0.0014862598640539499,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006191769429917987
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5921040963455943e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            -0.0042386599482685874,
+            -0.001353713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0006190789590365441
+        },
+        {
+          "entry_margin_lower_bound_m": 5.590037241793753e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            -0.0014686863166721526,
+            -0.001353713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0006190996275820625
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587970136158979e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            0.0013012873149242817,
+            -0.001353713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0006191202986384102
+        },
+        {
+          "entry_margin_lower_bound_m": 5.585902779587119e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            0.004071260946520716,
+            -0.001353713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006191409722041288
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        -0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": 75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.84637053620384,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J31",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.591600315947424e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            -0.005606193693070057,
+            0.00133625986405395,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006190839968405258
+        },
+        {
+          "entry_margin_lower_bound_m": 5.589964948782625e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            -0.0028362200614736217,
+            0.00133625986405395,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.0006191003505121738
+        },
+        {
+          "entry_margin_lower_bound_m": 5.588329180916977e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            -6.624642987718767e-05,
+            0.00133625986405395,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006191167081908303
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5866930125346654e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            0.0027037272017192467,
+            0.00133625986405395,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.0006191330698746534
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5850564438197e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            0.00547370083331568,
+            0.00133625986405395,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.000619149435561803
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5895483951035746e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            -0.004221260946520717,
+            -0.001503713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006191045160489643
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587911681425705e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            -0.0014512873149242816,
+            -0.001503713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.000619120883185743
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5862745675366236e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            0.0013186863166721526,
+            -0.001503713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0006191372543246338
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5846370536203845e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            0.004088659948268587,
+            -0.001503713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0006191536294637962
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.86800594316874,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J32",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.89425946950096e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            -0.005606247762318934,
+            0.001353713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006060574053049904
+        },
+        {
+          "entry_margin_lower_bound_m": 6.892395306915282e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            -0.0028362741307224985,
+            0.001353713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006060760469308472
+        },
+        {
+          "entry_margin_lower_bound_m": 6.890530773375186e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            -6.630049912606444e-05,
+            0.001353713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0006060946922662482
+        },
+        {
+          "entry_margin_lower_bound_m": 6.888665869102034e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            0.00270367313247037,
+            0.001353713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006061133413089797
+        },
+        {
+          "entry_margin_lower_bound_m": 6.886800594316873e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            0.005473646764066803,
+            0.001353713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006061319940568313
+        },
+        {
+          "entry_margin_lower_bound_m": 6.899061783875293e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            -0.00422120687727184,
+            -0.0014862598640539499,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0006060093821612471
+        },
+        {
+          "entry_margin_lower_bound_m": 6.897197816454787e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            -0.0014512332456754048,
+            -0.0014862598640539499,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006060280218354522
+        },
+        {
+          "entry_margin_lower_bound_m": 6.895333477812066e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            0.0013187403859210294,
+            -0.0014862598640539499,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006060466652218794
+        },
+        {
+          "entry_margin_lower_bound_m": 6.89346876816874e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            0.004088714017517463,
+            -0.0014862598640539499,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006060653123183126
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": true,
+      "actual_pure_B2_evaluation_verified": true,
+      "actual_reset_verified": true,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.83339892418571,
+      "existing_case_id": "J03",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J33",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.59313742941991e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            -0.005623646764066804,
+            0.001353713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006190686257058009
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5910707004641624e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            -0.00285367313247037,
+            0.001353713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006190892929953584
+        },
+        {
+          "entry_margin_lower_bound_m": 5.589003720352602e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            -8.369950087393555e-05,
+            0.001353713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.000619109962796474
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5869364892310544e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            0.0026862741307224986,
+            0.001353713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006191306351076895
+        },
+        {
+          "entry_margin_lower_bound_m": 5.584869007245268e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            0.005456247762318933,
+            0.001353713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006191513099275474
+        },
+        {
+          "entry_margin_lower_bound_m": 5.58954372673787e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            -0.004238714017517464,
+            -0.0014862598640539499,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006191045627326213
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587476032613921e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            -0.0014687403859210294,
+            -0.0014862598640539499,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006191252396738608
+        },
+        {
+          "entry_margin_lower_bound_m": 5.585408087792267e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            0.0013012332456754049,
+            -0.0014862598640539499,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006191459191220774
+        },
+        {
+          "entry_margin_lower_bound_m": 5.583339892418571e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            0.004071206877271839,
+            -0.0014862598640539499,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0006191666010758143
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        -0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "existing_discrete_scope_with_gaps",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 44.18552124443994,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J34",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 4.4260108330315814e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            -0.005623700833315681,
+            0.00133625986405395,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0006307398916696842
+        },
+        {
+          "entry_margin_lower_bound_m": 4.424146596180114e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            -0.0028537272017192467,
+            0.00133625986405395,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.0006307585340381989
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4222820657059464e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            -8.375357012281232e-05,
+            0.00133625986405395,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006307771793429406
+        },
+        {
+          "entry_margin_lower_bound_m": 4.420417241747705e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            0.0026862200614736218,
+            0.00133625986405395,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.000630795827582523
+        },
+        {
+          "entry_margin_lower_bound_m": 4.418552124443994e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            0.005456193693070056,
+            0.00133625986405395,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006308144787555601
+        },
+        {
+          "entry_margin_lower_bound_m": 4.430813217533205e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            -0.0042386599482685874,
+            -0.001503713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.000630691867824668
+        },
+        {
+          "entry_margin_lower_bound_m": 4.428949135109716e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            -0.0014686863166721526,
+            -0.001503713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0006307105086489029
+        },
+        {
+          "entry_margin_lower_bound_m": 4.427084758895725e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            0.0013012873149242817,
+            -0.001503713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0006307291524110428
+        },
+        {
+          "entry_margin_lower_bound_m": 4.425220089030054e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            0.004071260946520716,
+            -0.001503713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006307477991096995
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        -0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": -75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 44.18552124443994,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J41",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 4.418552124443994e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            -0.005456193693070056,
+            0.00133625986405395,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006308144787555601
+        },
+        {
+          "entry_margin_lower_bound_m": 4.420417241747705e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            -0.0026862200614736218,
+            0.00133625986405395,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.000630795827582523
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4222820657059464e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            8.375357012281232e-05,
+            0.00133625986405395,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006307771793429406
+        },
+        {
+          "entry_margin_lower_bound_m": 4.424146596180114e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            0.0028537272017192467,
+            0.00133625986405395,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.0006307585340381989
+        },
+        {
+          "entry_margin_lower_bound_m": 4.4260108330315814e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            0.005623700833315681,
+            0.00133625986405395,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.0006307398916696842
+        },
+        {
+          "entry_margin_lower_bound_m": 4.425220089030054e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            -0.004071260946520716,
+            -0.001503713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006307477991096995
+        },
+        {
+          "entry_margin_lower_bound_m": 4.427084758895725e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            -0.0013012873149242817,
+            -0.001503713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.0006307291524110428
+        },
+        {
+          "entry_margin_lower_bound_m": 4.428949135109716e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            0.0014686863166721526,
+            -0.001503713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0006307105086489029
+        },
+        {
+          "entry_margin_lower_bound_m": 4.430813217533205e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            0.0042386599482685874,
+            -0.001503713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.000630691867824668
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.83339892418571,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J42",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.584869007245268e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            -0.005456247762318933,
+            0.001353713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006191513099275474
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5869364892310544e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            -0.0026862741307224986,
+            0.001353713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006191306351076895
+        },
+        {
+          "entry_margin_lower_bound_m": 5.589003720352602e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            8.369950087393555e-05,
+            0.001353713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.000619109962796474
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5910707004641624e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            0.00285367313247037,
+            0.001353713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006190892929953584
+        },
+        {
+          "entry_margin_lower_bound_m": 5.59313742941991e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            0.005623646764066804,
+            0.001353713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006190686257058009
+        },
+        {
+          "entry_margin_lower_bound_m": 5.583339892418571e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            -0.004071206877271839,
+            -0.0014862598640539499,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0006191666010758143
+        },
+        {
+          "entry_margin_lower_bound_m": 5.585408087792267e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            -0.0013012332456754049,
+            -0.0014862598640539499,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006191459191220774
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587476032613921e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            0.0014687403859210294,
+            -0.0014862598640539499,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006191252396738608
+        },
+        {
+          "entry_margin_lower_bound_m": 5.58954372673787e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            0.004238714017517464,
+            -0.0014862598640539499,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006191045627326213
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": 0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          -0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": false,
+      "actual_pure_B2_evaluation_verified": false,
+      "actual_reset_verified": false,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 68.86800594316874,
+      "existing_case_id": "",
+      "gap_to_main_lower_bound_um": 222.6654526910347,
+      "group": "joint",
+      "highest_pin_z_bound_um": 27.334547308965334,
+      "id": "J43",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 6.886800594316873e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -2.735941661434365e-05,
+          "transformed_center_m": [
+            -0.005473646764066803,
+            0.001353713101192936,
+            -0.0020304066505771705
+          ],
+          "xy_radius_bound_m": 0.0006061319940568313
+        },
+        {
+          "entry_margin_lower_bound_m": 6.888665869102034e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -1.5273049895595272e-05,
+          "transformed_center_m": [
+            -0.00270367313247037,
+            0.001353713101192936,
+            -0.002018320283858422
+          ],
+          "xy_radius_bound_m": 0.0006061133413089797
+        },
+        {
+          "entry_margin_lower_bound_m": 6.890530773375186e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": -3.1866831768473263e-06,
+          "transformed_center_m": [
+            6.630049912606444e-05,
+            0.001353713101192936,
+            -0.002006233917139674
+          ],
+          "xy_radius_bound_m": 0.0006060946922662482
+        },
+        {
+          "entry_margin_lower_bound_m": 6.892395306915282e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 8.899683541900618e-06,
+          "transformed_center_m": [
+            0.0028362741307224985,
+            0.001353713101192936,
+            -0.0019941475504209262
+          ],
+          "xy_radius_bound_m": 0.0006060760469308472
+        },
+        {
+          "entry_margin_lower_bound_m": 6.89425946950096e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 2.098605026064856e-05,
+          "transformed_center_m": [
+            0.005606247762318934,
+            0.001353713101192936,
+            -0.0019820611837021783
+          ],
+          "xy_radius_bound_m": 0.0006060574053049904
+        },
+        {
+          "entry_margin_lower_bound_m": 6.89346876816874e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -8.924552847278498e-06,
+          "transformed_center_m": [
+            -0.004088714017517463,
+            -0.0014862598640539499,
+            -0.0020119717868101053
+          ],
+          "xy_radius_bound_m": 0.0006060653123183126
+        },
+        {
+          "entry_margin_lower_bound_m": 6.895333477812066e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": 3.161813871469446e-06,
+          "transformed_center_m": [
+            -0.0013187403859210294,
+            -0.0014862598640539499,
+            -0.0019998854200913574
+          ],
+          "xy_radius_bound_m": 0.0006060466652218794
+        },
+        {
+          "entry_margin_lower_bound_m": 6.897197816454787e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 1.524818059021739e-05,
+          "transformed_center_m": [
+            0.0014512332456754048,
+            -0.0014862598640539499,
+            -0.0019877990533726094
+          ],
+          "xy_radius_bound_m": 0.0006060280218354522
+        },
+        {
+          "entry_margin_lower_bound_m": 6.899061783875293e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 2.7334547308965333e-05,
+          "transformed_center_m": [
+            0.00422120687727184,
+            -0.0014862598640539499,
+            -0.0019757126866538615
+          ],
+          "xy_radius_bound_m": 0.0006060093821612471
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        -0.0021816546423732855,
+        -0.0021816546423732855,
+        -4.759639632758341e-06
+      ],
+      "roll_deg": -0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          -0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "new_combination_pending_qualification",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    },
+    {
+      "actual_F0_F2000_evaluation_verified": true,
+      "actual_pure_B2_evaluation_verified": true,
+      "actual_reset_verified": true,
+      "data_use": "development",
+      "entry_margin_lower_bound_um": 55.84637053620384,
+      "existing_case_id": "J04",
+      "gap_to_main_lower_bound_um": 216.62226933166028,
+      "group": "joint",
+      "highest_pin_z_bound_um": 33.37773066833974,
+      "id": "J44",
+      "initial_component_guard_passed": true,
+      "new_runtime_scope_qualified": false,
+      "new_training_admitted": false,
+      "per_pin": [
+        {
+          "entry_margin_lower_bound_m": 5.5850564438197e-05,
+          "pin": "pin_01",
+          "top_z_bound_m": -1.496773620665247e-05,
+          "transformed_center_m": [
+            -0.00547370083331568,
+            0.00133625986405395,
+            -0.0020180149701694793
+          ],
+          "xy_radius_bound_m": 0.000619149435561803
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5866930125346654e-05,
+          "pin": "pin_02",
+          "top_z_bound_m": -2.881369487904526e-06,
+          "transformed_center_m": [
+            -0.0027037272017192467,
+            0.00133625986405395,
+            -0.0020059286034507314
+          ],
+          "xy_radius_bound_m": 0.0006191330698746534
+        },
+        {
+          "entry_margin_lower_bound_m": 5.588329180916977e-05,
+          "pin": "pin_03",
+          "top_z_bound_m": 9.204997230843418e-06,
+          "transformed_center_m": [
+            6.624642987718767e-05,
+            0.00133625986405395,
+            -0.0019938422367319834
+          ],
+          "xy_radius_bound_m": 0.0006191167081908303
+        },
+        {
+          "entry_margin_lower_bound_m": 5.589964948782625e-05,
+          "pin": "pin_04",
+          "top_z_bound_m": 2.129136394959136e-05,
+          "transformed_center_m": [
+            0.0028362200614736217,
+            0.00133625986405395,
+            -0.0019817558700132355
+          ],
+          "xy_radius_bound_m": 0.0006191003505121738
+        },
+        {
+          "entry_margin_lower_bound_m": 5.591600315947424e-05,
+          "pin": "pin_05",
+          "top_z_bound_m": 3.337773066833974e-05,
+          "transformed_center_m": [
+            0.005606193693070057,
+            0.00133625986405395,
+            -0.001969669503294487
+          ],
+          "xy_radius_bound_m": 0.0006190839968405258
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5846370536203845e-05,
+          "pin": "pin_06",
+          "top_z_bound_m": -2.1316233254969244e-05,
+          "transformed_center_m": [
+            -0.004088659948268587,
+            -0.001503713101192936,
+            -0.002024363467217796
+          ],
+          "xy_radius_bound_m": 0.0006191536294637962
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5862745675366236e-05,
+          "pin": "pin_07",
+          "top_z_bound_m": -9.229866536221298e-06,
+          "transformed_center_m": [
+            -0.0013186863166721526,
+            -0.001503713101192936,
+            -0.002012277100499048
+          ],
+          "xy_radius_bound_m": 0.0006191372543246338
+        },
+        {
+          "entry_margin_lower_bound_m": 5.587911681425705e-05,
+          "pin": "pin_08",
+          "top_z_bound_m": 2.856500182526646e-06,
+          "transformed_center_m": [
+            0.0014512873149242816,
+            -0.001503713101192936,
+            -0.0020001907337803
+          ],
+          "xy_radius_bound_m": 0.000619120883185743
+        },
+        {
+          "entry_margin_lower_bound_m": 5.5895483951035746e-05,
+          "pin": "pin_09",
+          "top_z_bound_m": 1.494286690127459e-05,
+          "transformed_center_m": [
+            0.004221260946520717,
+            -0.001503713101192936,
+            -0.0019881043670615522
+          ],
+          "xy_radius_bound_m": 0.0006191045160489643
+        }
+      ],
+      "pin_axis_z": 0.9999809615320856,
+      "pin_screen_passed": true,
+      "pitch_deg": -0.25,
+      "quaternion_wxyz": [
+        0.9999952403603672,
+        0.0021816546423732855,
+        -0.0021816546423732855,
+        4.759639632758341e-06
+      ],
+      "roll_deg": 0.25,
+      "rotation_Ry_Rx": [
+        [
+          0.9999904807207345,
+          -1.9038467914355635e-05,
+          -0.004363267749186967
+        ],
+        [
+          0.0,
+          0.9999904807207345,
+          -0.004363309284746571
+        ],
+        [
+          0.004363309284746571,
+          0.004363267749186967,
+          0.9999809615320856
+        ]
+      ],
+      "scope_status": "existing_discrete_scope_with_gaps",
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004,
+      "x_um": 75.0,
+      "y_um": -75.0,
+      "yaw_deg": 0.0
+    }
+  ],
+  "scope": "offline_pin_geometry_only",
+  "shared_common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+  "source_binding_sha256": "60c0f867e91d2b5f3fe7fcacdf122546fb0ca4763715b1f8db58270698cc00a0",
+  "summary": {
+    "maximum_pin_top_bound_um": 33.37773066833974,
+    "minimum_entry_margin_lower_bound_um": 44.18552124443994,
+    "minimum_main_gap_lower_bound_um": 216.62226933166028,
+    "new": 21,
+    "old": 4,
+    "passed": 25,
+    "total": 25
+  },
+  "version": "entry_cylinder_projection_screen_v1"
+}

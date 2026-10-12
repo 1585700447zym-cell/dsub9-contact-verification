@@ -1,0 +1,400 @@
+{
+  "plots": {
+    "development": [
+      {
+        "method": "B2",
+        "case": "y_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 20.779999999978248,
+        "peak_force_mN": 24.474139103047843,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "B2",
+        "case": "y_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 14.163999999993667,
+        "peak_force_mN": 24.31135669404151,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "B2",
+        "case": "x_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.340000000000249,
+        "peak_force_mN": 24.60243170623439,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "B2",
+        "case": "x_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.915999999996576,
+        "peak_force_mN": 24.612254857349388,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "B2",
+        "case": "aligned",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 4.330000000000289,
+        "peak_force_mN": 0.0,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F0",
+        "case": "y_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "TASK_FAILURE",
+        "plotted_penalized_time_s": 26.0,
+        "peak_force_mN": 24.47321960352781,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F0",
+        "case": "y_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 14.015999999994012,
+        "peak_force_mN": 24.307134637556793,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F0",
+        "case": "x_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.326000000000281,
+        "peak_force_mN": 24.606337780869346,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F0",
+        "case": "x_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.931999999996538,
+        "peak_force_mN": 24.621533100108053,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F0",
+        "case": "aligned",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 4.330000000000289,
+        "peak_force_mN": 0.0,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S0",
+        "case": "y_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "TASK_FAILURE",
+        "plotted_penalized_time_s": 26.0,
+        "peak_force_mN": 24.474139103047843,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S0",
+        "case": "y_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 17.211999999986563,
+        "peak_force_mN": 24.31135669404151,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S0",
+        "case": "x_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.326000000000281,
+        "peak_force_mN": 24.60243170623439,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S0",
+        "case": "x_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.957999999996478,
+        "peak_force_mN": 24.612254857349388,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S0",
+        "case": "aligned",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 4.330000000000289,
+        "peak_force_mN": 0.0,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F2000",
+        "case": "y_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 10.236000000002822,
+        "peak_force_mN": 24.476199604575275,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "F2000",
+        "case": "y_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 13.927999999994217,
+        "peak_force_mN": 24.34466527188916,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "F2000",
+        "case": "x_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.457999999999974,
+        "peak_force_mN": 24.650860225810465,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "F2000",
+        "case": "x_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.85799999999671,
+        "peak_force_mN": 24.607766668374293,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "F2000",
+        "case": "aligned",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 4.34000000000031,
+        "peak_force_mN": 5.383435284668491,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "S2000",
+        "case": "y_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 10.7600000000016,
+        "peak_force_mN": 24.474139103047843,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "S2000",
+        "case": "y_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 13.195999999995923,
+        "peak_force_mN": 24.31135669404151,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "S2000",
+        "case": "x_pos_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.332000000000267,
+        "peak_force_mN": 24.60243170623439,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "S2000",
+        "case": "x_neg_150",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.995999999996389,
+        "peak_force_mN": 24.612254857349388,
+        "provenance": "immutable_pc06"
+      },
+      {
+        "method": "S2000",
+        "case": "aligned",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 4.330000000000289,
+        "peak_force_mN": 0.0,
+        "provenance": "immutable_pc06"
+      }
+    ],
+    "first_use_frozen_position_test": [
+      {
+        "method": "B2",
+        "case": "holdout_01",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.545999999999768,
+        "peak_force_mN": 24.675967475752255,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "B2",
+        "case": "holdout_02",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.207999999998226,
+        "peak_force_mN": 24.610171870214256,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "B2",
+        "case": "holdout_03",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 9.512000000004509,
+        "peak_force_mN": 24.582272183269833,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "B2",
+        "case": "holdout_04",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 10.534000000002127,
+        "peak_force_mN": 24.60738432529867,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F2000",
+        "case": "holdout_01",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.761999999999265,
+        "peak_force_mN": 24.659866721149026,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F2000",
+        "case": "holdout_02",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.289999999998034,
+        "peak_force_mN": 24.64969475208451,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F2000",
+        "case": "holdout_03",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 9.354000000004877,
+        "peak_force_mN": 24.607815142225107,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "F2000",
+        "case": "holdout_04",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.100000000000808,
+        "peak_force_mN": 24.61930604576803,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S2000",
+        "case": "holdout_01",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.715999999999372,
+        "peak_force_mN": 24.675967475752255,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S2000",
+        "case": "holdout_02",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 12.285999999998044,
+        "peak_force_mN": 24.610171870214256,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S2000",
+        "case": "holdout_03",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 9.384000000004807,
+        "peak_force_mN": 24.582272183269833,
+        "provenance": "new_pc07"
+      },
+      {
+        "method": "S2000",
+        "case": "holdout_04",
+        "attempted": true,
+        "status": "finished",
+        "outcome": "FULL_SUCCESS",
+        "plotted_penalized_time_s": 11.018000000000999,
+        "peak_force_mN": 24.60738432529867,
+        "provenance": "new_pc07"
+      }
+    ]
+  },
+  "positions": [
+    {
+      "id": "holdout_01",
+      "x_um": 72.199490668416,
+      "y_um": 110.16091384637778
+    },
+    {
+      "id": "holdout_02",
+      "x_um": -81.00634530576173,
+      "y_um": 113.36589217486193
+    },
+    {
+      "id": "holdout_03",
+      "x_um": -120.25298159936679,
+      "y_um": -40.4509150025434
+    },
+    {
+      "id": "holdout_04",
+      "x_um": 120.13977198565823,
+      "y_um": -43.40297118393552
+    }
+  ]
+}

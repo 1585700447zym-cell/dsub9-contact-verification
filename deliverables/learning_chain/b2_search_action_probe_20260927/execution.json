@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "blocked_by": null,
+  "batch_error": null,
+  "last_stage": "final_input_verification",
+  "recorded": 8,
+  "unexecuted": [],
+  "wall_seconds": 1722.7029009000398,
+  "source_unchanged": true,
+  "training_admitted": false,
+  "optimizer_updates": 0
+}

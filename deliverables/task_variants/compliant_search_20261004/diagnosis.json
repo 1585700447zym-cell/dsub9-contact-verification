@@ -1,0 +1,85 @@
+{
+  "searches": [
+    {
+      "search_number": 1,
+      "start_s": 1.5259999999998646,
+      "end_s": 9.152000000005348,
+      "end_reason": "SEARCH_EXHAUSTED",
+      "start_z_mm": -3.7499972798268963,
+      "end_z_mm": -3.7503536165793068,
+      "max_actual_xy_excursion_um": 2.207680275333331,
+      "max_composed_target_um": 22.402681060619056,
+      "max_nominal_spiral_um": 119.99584405078882,
+      "max_total_force_mN": 8.923984869681806
+    },
+    {
+      "search_number": 2,
+      "start_s": 9.72600000000401,
+      "end_s": 10.050000000003255,
+      "end_reason": "SEARCH_ADVANCED",
+      "start_z_mm": -4.004497925337602,
+      "end_z_mm": -3.904254561214271,
+      "max_actual_xy_excursion_um": 21.27601197414625,
+      "max_composed_target_um": 21.704817669889025,
+      "max_nominal_spiral_um": 22.74064464411959,
+      "max_total_force_mN": 2.454383998928164
+    }
+  ],
+  "environment_events": [
+    {
+      "time_s": 9.152000000005348,
+      "reason": "B2_SEARCH_EXHAUSTED",
+      "phase": "STOPPING"
+    },
+    {
+      "time_s": 9.154000000005343,
+      "reason": "RECOVERY_ACCEPTED",
+      "phase": "RETRACT"
+    },
+    {
+      "time_s": 9.703000000004064,
+      "reason": "RECOVERY_DISTANCE_REACHED",
+      "phase": "STOPPING"
+    },
+    {
+      "time_s": 9.72600000000401,
+      "phase": "RUNNING",
+      "reason": "B2_RECOVERY_RESUMED"
+    },
+    {
+      "time_s": 10.642000000001875,
+      "reason": "SEARCH_BUDGET_EXHAUSTED",
+      "phase": "STOPPING"
+    }
+  ],
+  "cancellation_example": {
+    "trace_time_s": 8.000000000008033,
+    "nominal_spiral_xy_um": [
+      8.023902357863165,
+      -110.1710321429404
+    ],
+    "admittance_correction_xy_um": [
+      -5.445099621057882,
+      118.70790462634925
+    ],
+    "composed_target_xy_um": [
+      2.578802736805285,
+      8.536872483408832
+    ],
+    "actual_position_xy_um": [
+      -0.16082106061037182,
+      -149.11374061715884
+    ]
+  },
+  "recovered_advance": {
+    "time_s": 10.050000000003255,
+    "second_search_start_z_mm": -4.004497925337602,
+    "advance_z_mm": -3.904254561214271,
+    "advance_from_second_start_um": 100.24336412333074,
+    "deepest_before_recovery_z_mm": -3.7431801566972336,
+    "still_before_prior_depth_um": 161.07440451703727
+  },
+  "final_y_um": -148.87109763542864,
+  "final_advance_mm": 0.2499986722050494,
+  "scope": "Archived kinematics and command decomposition; no extra physics. Does not uniquely isolate contact friction from all other causes."
+}

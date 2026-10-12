@@ -1,0 +1,17 @@
+{
+  "changed": {
+    "报告总索引.md": {
+      "before": "894314f7a64ee574fe382eeb2dfcf249eb76e7cb036ef196a7c956c5ffcfe476",
+      "after": "d69a6c455d6259bdacb431272936ace9963145a8a848cbbbdc7382b7a6db2d80"
+    },
+    "deliverables/reproduction_guide/说明与导出清单.json": {
+      "before": "5d89c815954ca06c7857bbfd4a3d44f5063afcd1fc1af928c3cd7f925ba4de65",
+      "after": "b33488ae424b03eee2cfb1facbc7a02c98217d2eeb7765fb778847b5c3c34ece"
+    },
+    "deliverables/b2_exit_gate_v2/delivery_manifest.json": {
+      "before": "e68948ad1deedb06644691cb93fa3f93183820491a5613c1ac3cfff6b04de6df",
+      "after": "f690afb24a8c62ad3322edac79a4a200c13fe273ef8fad797449d10b3878ffc9"
+    }
+  },
+  "scope": "Only navigation and its two manifest references updated; historical experiments not rewritten."
+}

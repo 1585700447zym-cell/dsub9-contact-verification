@@ -1,0 +1,79 @@
+FFFFF                                                                    [100%]
+================================== FAILURES ===================================
+_________ test_exact_one_pulse_and_missed_or_wrong_phase_fail_closed __________
+tests\task_variants\test_v4_continuation_preflight.py:8: in test_exact_one_pulse_and_missed_or_wrong_phase_fail_closed
+    m=api();s=SimpleNamespace(time_s=9.146,controller_state={'phase':'SEARCH'},residual_enabled=True)
+tests\task_variants\test_v4_continuation_preflight.py:5: in api
+    def api():return importlib.import_module('tools.validation.run_v4_continuation_preflight')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1324: in _find_and_load_unlocked
+    ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_continuation_preflight'
+________________ test_one_claim_cannot_retry_or_extend_budget _________________
+tests\task_variants\test_v4_continuation_preflight.py:17: in test_one_claim_cannot_retry_or_extend_budget
+    m=api();r=tmp_path/'run';ledger=m.claim_run(r)
+tests\task_variants\test_v4_continuation_preflight.py:5: in api
+    def api():return importlib.import_module('tools.validation.run_v4_continuation_preflight')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1324: in _find_and_load_unlocked
+    ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_continuation_preflight'
+____________ test_stop_before_entry_does_not_construct_environment ____________
+tests\task_variants\test_v4_continuation_preflight.py:22: in test_stop_before_entry_does_not_construct_environment
+    m=api();(tmp_path/'STOP').touch();monkeypatch.setattr(m,'verify_inputs',lambda _: {})
+tests\task_variants\test_v4_continuation_preflight.py:5: in api
+    def api():return importlib.import_module('tools.validation.run_v4_continuation_preflight')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1324: in _find_and_load_unlocked
+    ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_continuation_preflight'
+________________ test_whole_lifecycle_exception_closes_ledger _________________
+tests\task_variants\test_v4_continuation_preflight.py:28: in test_whole_lifecycle_exception_closes_ledger
+    m=api();monkeypatch.setattr(m,'verify_inputs',lambda _: {})
+tests\task_variants\test_v4_continuation_preflight.py:5: in api
+    def api():return importlib.import_module('tools.validation.run_v4_continuation_preflight')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1324: in _find_and_load_unlocked
+    ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_continuation_preflight'
+_______________ test_changed_input_is_never_constructed_or_run ________________
+tests\task_variants\test_v4_continuation_preflight.py:36: in test_changed_input_is_never_constructed_or_run
+    m=api()
+tests\task_variants\test_v4_continuation_preflight.py:5: in api
+    def api():return importlib.import_module('tools.validation.run_v4_continuation_preflight')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1324: in _find_and_load_unlocked
+    ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_continuation_preflight'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_v4_continuation_preflight.py::test_exact_one_pulse_and_missed_or_wrong_phase_fail_closed
+FAILED tests/task_variants/test_v4_continuation_preflight.py::test_one_claim_cannot_retry_or_extend_budget
+FAILED tests/task_variants/test_v4_continuation_preflight.py::test_stop_before_entry_does_not_construct_environment
+FAILED tests/task_variants/test_v4_continuation_preflight.py::test_whole_lifecycle_exception_closes_ledger
+FAILED tests/task_variants/test_v4_continuation_preflight.py::test_changed_input_is_never_constructed_or_run
+5 failed in 0.09s

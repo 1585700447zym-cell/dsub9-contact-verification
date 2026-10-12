@@ -1,0 +1,55 @@
+test_close_kills_owned_child (test_runner.JobTests.test_close_kills_owned_child) ... FAIL
+test_kill_confirmed_by_job_accounting (test_runner.JobTests.test_kill_confirmed_by_job_accounting) ... FAIL
+test_cycle_budget_counts_tail_and_static_time (test_runner.RunnerTests.test_cycle_budget_counts_tail_and_static_time) ... FAIL
+test_missing_grant_and_direct_worker_fail_before_runtime (test_runner.RunnerTests.test_missing_grant_and_direct_worker_fail_before_runtime) ... FAIL
+test_output_escape_and_existing_rejected (test_runner.RunnerTests.test_output_escape_and_existing_rejected) ... FAIL
+
+======================================================================
+FAIL: test_close_kills_owned_child (test_runner.JobTests.test_close_kills_owned_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_runner.py", line 44, in setUp
+    self.assertIsNotNone(self.api,'Missing owned process group supervision')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing owned process group supervision
+
+======================================================================
+FAIL: test_kill_confirmed_by_job_accounting (test_runner.JobTests.test_kill_confirmed_by_job_accounting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_runner.py", line 44, in setUp
+    self.assertIsNotNone(self.api,'Missing owned process group supervision')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing owned process group supervision
+
+======================================================================
+FAIL: test_cycle_budget_counts_tail_and_static_time (test_runner.RunnerTests.test_cycle_budget_counts_tail_and_static_time)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_runner.py", line 15, in setUp
+    self.assertIsNotNone(self.api, 'Missing fail-closed runner')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing fail-closed runner
+
+======================================================================
+FAIL: test_missing_grant_and_direct_worker_fail_before_runtime (test_runner.RunnerTests.test_missing_grant_and_direct_worker_fail_before_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_runner.py", line 15, in setUp
+    self.assertIsNotNone(self.api, 'Missing fail-closed runner')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing fail-closed runner
+
+======================================================================
+FAIL: test_output_escape_and_existing_rejected (test_runner.RunnerTests.test_output_escape_and_existing_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_runner.py", line 15, in setUp
+    self.assertIsNotNone(self.api, 'Missing fail-closed runner')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing fail-closed runner
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.007s
+
+FAILED (failures=5)

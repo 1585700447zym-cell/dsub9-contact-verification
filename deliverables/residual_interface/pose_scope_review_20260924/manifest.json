@@ -1,0 +1,38 @@
+{
+  "version": "b1_07_pose_scope_review_manifest_v1",
+  "date": "2026-09-24",
+  "path_base": "worktree_root",
+  "scope": "B1-07 prescribed static diagnostics and archival review only; no new dynamic episodes or SAC updates.",
+  "parameter_frozen": false,
+  "model_scope_qualified": false,
+  "training_admitted": false,
+  "source_binding": "813 production inputs and snapshots are bound transitively by B1-06 protocol/manifest and explicitly rechecked by checks/recheck_review.py. Rolling documents are bound as delivery-time snapshots, not locked live files.",
+  "files": {
+    "deliverables/residual_interface/pose_scope_review_20260924/核验说明.md": "80a1bba49423d239af9cb7a9e2e8f676ebec9380c56778f30ef08774b8f75a40",
+    "deliverables/residual_interface/pose_scope_review_20260924/静态补验协议.md": "5d071dd6f04a0690b47177003dd2f6549aefd63d2715ffd0ed3228cf3d2b7d1e",
+    "deliverables/residual_interface/pose_scope_review_20260924/analyze_static.py": "22443514e38ed7017a97fbc29aa5255c7a3d0a12ba390e6ad3e7e349294d5261",
+    "deliverables/residual_interface/pose_scope_review_20260924/checks/pose_review_geometry_20260924.xml": "29f617929b421478fcd3485a6676cb05746e69b93d5a6b75b24579b46e04bcf1",
+    "deliverables/residual_interface/pose_scope_review_20260924/checks/recheck_review.py": "d4da811f4c635efa4ae8e8e6cf4bb55d6cebe8f70ea87da25be5555ab94a0438",
+    "deliverables/residual_interface/pose_scope_review_20260924/document_snapshot/项目交付总览.md": "d85a2095e0f0fd81a6a123d49a15e1c8b3864d12384030ac12ac16408677bf6a",
+    "deliverables/residual_interface/pose_scope_review_20260924/document_snapshot/项目进度跟踪.md": "641d4fa52d2184aa318dbac8b5efbd707f03786bc6ae4d9bb3c9f3eb55f87d73",
+    "deliverables/residual_interface/pose_scope_review_20260924/document_snapshot/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+    "deliverables/residual_interface/pose_scope_review_20260924/document_snapshot/月报素材_2026-09.md": "ae5cf7303f8526d74b7ab0a39a5a7c4810a18694706ceaed89c99a68dd68c59c",
+    "deliverables/residual_interface/pose_scope_review_20260924/protocol.json": "68364e9c19590674b8aa8809d7d455b75c94c65803475c99e87104a842e1c55e",
+    "deliverables/residual_interface/pose_scope_review_20260924/README.md": "6c05d3c5453a43de23b3de3554e12e966caa9c76ade2e8806dfc296e7e8be67a",
+    "deliverables/residual_interface/pose_scope_review_20260924/review_assessment.json": "0d1fb4bedf22be23f06a2b754fed3461470892a735e7e0de7ba8feea7cf0c6f7",
+    "deliverables/residual_interface/pose_scope_review_20260924/static_assessment.json": "81c207cf149b2730ef0ea75dfd19db7cb765f5e91eb1f64712e328df06024866",
+    "deliverables/residual_interface/pose_scope_review_20260924/static_rows.jsonl": "f465bf2831456862b7be87905a0711164fed95ec3f6ec7ce467a1af7c1936a01",
+    "deliverables/residual_interface/pose_scope_review_20260924/test_snapshot/test_contact_development.py": "8cad096b93666d0960f043ac22b40e85556253a8ca13ba091bc88f948edc1bc2"
+  },
+  "evidence_sha256": {
+    "docs/stage_b/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+    "deliverables/residual_interface/engineering_preflight_20260924/manifest.json": "12d1255eeac6f9dcd363107978cec28d9cf41462871d0af63cf96d2c24467cec",
+    "deliverables/residual_interface/engineering_preflight_20260924/protocol.json": "31a56d58926cb5f6e7d3c08dbe3e98e59842c1f82de351a98752db45c8291b3c",
+    "deliverables/residual_interface/guard_candidate_20260923/姿态候选参数记录.md": "2d3912547fc73601a5fe20a1475ae00a6654bbe93d099d6ca610d1afeca76a83",
+    "deliverables/residual_interface/implementation_20260923/orientation_envelope.json": "a3c9b2f15219c181b1ff52cb5d143d18a0df0d40a7382097381cd639cf395683",
+    "deliverables/residual_interface/guard_boundary_dynamics_v2_review_fixes/assessment.json": "55f2101672a2a2f78c217d9ce10a696266a961403be56b5cc1f2f40b6229f0aa",
+    "deliverables/residual_interface/guard_b2_regression_v3_review_fixes/assessment.json": "f3007948d835b47593d5bd3900e2f97b2b58a7c45afaa7b7cb1bfcb0b5549bf7",
+    "deliverables/native313_validation/static_gate_v1/results.json": "1dd68ca57b34d1b0b95e2251bb6afedabea3f601d8b0e383f254d01aeaa48d34",
+    "deliverables/native313_validation/static_extended.json": "65449c2b2fe4ac701390b75bb6a9bd6128de6ce2eec0cd9d648e01ffca00d486"
+  }
+}

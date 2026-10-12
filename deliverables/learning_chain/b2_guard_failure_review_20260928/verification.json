@@ -1,0 +1,15 @@
+{
+  "status": "verified_review_only",
+  "new_files_sha256": {
+    "README.md": "79c4a604479e4f1c70135511ae8f8b42682f965f471166846073af9416fc8b62",
+    "assessment.json": "52f571650828c1f55fd4f0dd625694925b5426ee4a7491a0d323951877d8e90e",
+    "review_offline.py": "efd1e8d00c3f5142b0f7b498a9ebb781c7a2699f395159ea71b4019e9b41893d"
+  },
+  "evidence_inputs_verified": 25,
+  "current_qualification_unchanged": true,
+  "closed_run_unchanged": true,
+  "old_failure_still_rejected": true,
+  "automation_status": "PAUSED",
+  "production_sources_changed": false,
+  "new_training_started": false
+}

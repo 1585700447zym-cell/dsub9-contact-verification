@@ -18,17 +18,18 @@ FINISH={'z_tolerance_m':20e-6,'xy_tolerance_m':50e-6,'angle_tolerance_rad':math.
         'force_N':.025,'torque_Nm':.0005,'penetration_m':30e-6}
 
 
-def geometric_finish(row):
+def geometric_finish(row, criteria=None):
+    criteria = FINISH if criteria is None else criteria
     p=np.asarray(row['position_m']);q=np.asarray(row['quaternion_wxyz']);v=np.asarray(row['velocity_world'])
     if not np.isfinite(np.r_[p,q,v,row['contact_wrench_G'],row['penetration_m']]).all():return False
     if np.linalg.norm(q)<1e-12:return False
     angle=2*math.acos(min(1.,abs(float(q[0]))/float(np.linalg.norm(q))))
-    return bool(abs(p[2])<=FINISH['z_tolerance_m'] and np.linalg.norm(p[:2])<=FINISH['xy_tolerance_m']
-                and angle<=FINISH['angle_tolerance_rad'] and np.linalg.norm(v[:3])<=FINISH['linear_speed_m_s']
-                and np.linalg.norm(v[3:])<=FINISH['angular_speed_rad_s']
-                and np.linalg.norm(row['contact_wrench_G'][:3])<FINISH['force_N']
-                and np.linalg.norm(row['contact_wrench_G'][3:])<FINISH['torque_Nm']
-                and row['penetration_m']<FINISH['penetration_m'])
+    return bool(abs(p[2])<=criteria['z_tolerance_m'] and np.linalg.norm(p[:2])<=criteria['xy_tolerance_m']
+                and angle<=criteria['angle_tolerance_rad'] and np.linalg.norm(v[:3])<=criteria['linear_speed_m_s']
+                and np.linalg.norm(v[3:])<=criteria['angular_speed_rad_s']
+                and np.linalg.norm(row['contact_wrench_G'][:3])<criteria['force_N']
+                and np.linalg.norm(row['contact_wrench_G'][3:])<criteria['torque_Nm']
+                and row['penetration_m']<criteria['penetration_m'])
 
 
 def run_episode(env,case,controller,*,max_time=6.,settle_time=1.):

@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "new_tests": 33,
+  "failures": 0,
+  "errors": 0,
+  "engine_imports": [],
+  "elapsed_s": 35.50991249998333,
+  "existing_parent_tests": 12,
+  "existing_engine_probe_tests_not_run": 4,
+  "check_only": {
+    "binding_sha256": "9c15895cf6c8bac905715275c65dead6a8a48be617a3c197839077c7acf673c6",
+    "dynamic_attempts": 0,
+    "engine_loads": 0,
+    "files": 2167,
+    "static_initializations": 0,
+    "status": "CHECK_ONLY_PASSED",
+    "training_admitted": false
+  },
+  "unapproved_request_rejected": {
+    "exit_code": 1,
+    "output_created": false,
+    "claim_created": false,
+    "grant_gate_reached": true,
+    "supervisor": {
+      "deadline_hit": false,
+      "error": "RuntimeError('Guarded child returned failure; no retry')",
+      "go_issued": true,
+      "owned_launcher_exit_confirmed": true,
+      "process_exit_confirmed": true,
+      "returncode": 1,
+      "wall_seconds": 1.5143406999995932
+    }
+  },
+  "log_sha256": {
+    "binding_order_red.txt": "6b57d21a0e57d233f29853c88f258d236c257291cc67b39357b6bb459003dbb8",
+    "check_only.txt": "72141883ba0fde6202280b5517d73cca95f8ebe76c89afd4a95994f07c8f938b",
+    "check_only_initial_error.txt": "3d2eb848f54becd215a72589a63b9fecd59825acdfa4097ea2ef6755a399ffa7",
+    "combined_initial.txt": "4a1107552b6254a50a655f3c785cda8eb1e2811ccfab3184db45aace5dbfe207",
+    "existing_parent_tests.txt": "ac4fb0f91dd17c5b65c285ca05dbddca78c7c6c89ad94c7690c2e43921e0b98c",
+    "final_tests.txt": "fda640cbea1538c0b70292ffde48b51793389123d4fb8f2758a5aca766a915f6",
+    "pre_review_tests.txt": "b56eefdb24f28e0af9e763b86690d356c40f6eaf68e7c0b649016eb6d0ae0ecf",
+    "review_correction_green.txt": "13afc3fc2e97183b30c2fc3b6db508f9462f341059459deb212b79eeb4ec7242",
+    "review_correction_run1.txt": "bdb2729967bdbae8cd34ea3f45c8b789e90bb6c90b64db506ab80c67e55d57d6",
+    "review_regressions_red.txt": "572a817fa83291fcc9b7419e5f492b2aefd9eab9124f2e75154ba3d39b345830",
+    "review_timeout_closure_red.txt": "108495bf74cd489618f75c2b6bfe872701073772dd96181dccd27fe27325e3a2",
+    "task1_green.txt": "984e414f04f2ced9101fbf4dedae6343add5cd6ebab7a0afa75f7d26e9eaa6f0",
+    "task1_red.txt": "9ff4f650946ac50e509ecc000320cf81b3d8530c7ce14e8ddc52ab5c0d0b5726",
+    "task2_backend_red.txt": "8607c2e554199f5bd84c77582ac12e5b0bb1246fd5f1f1cdaf09380f0caeb0a0",
+    "task2_contract_green.txt": "96564cb2f4d008d0f6f8175355edb399261e5e6abacf486bb6f66d78764e6f27",
+    "task2_contract_green_workspace.txt": "925406594701ace323babe2f3b68e72ad1c165674bc3c36e7cb1fc2cb8dd6e68",
+    "task2_last_closure_red.txt": "8de8a177616c6293b7d2197e6974859e0a71bce93027c960e7c9e790fec71479",
+    "task2_red.txt": "1117858015d79a0a67aa75a6b491998353481ea33b8e3b7b714b95d75006a4a8",
+    "task2_runner_green.txt": "8bdca9914517b660190ca1ab5e4efadbbafb0da782cd3ef28f153ec319c89f1d",
+    "task2_runner_red.txt": "afbbe4a627efe5e6b6f8e9c66eceeafd23dc69b8c724acfd6055326a63b3ba6b",
+    "task3_red.txt": "e1edec19b99f705eabad4165bd71ccda044af6098422102c390bec1e4b628586",
+    "unapproved_request_cli.txt": "a2a1ea72ecea7e7947267e6292d2cf6d5f6d8b9f70394801a13303861a313300",
+    "unapproved_request_cli_initial_error.txt": "6c8c439bb20666b4ca41f853a1d8b9fd24dbb77d238e23e0904a4a7f01b3ae3f"
+  },
+  "actual_new_physics": 0,
+  "actual_new_learning": 0,
+  "cumulative_dynamic": 208
+}

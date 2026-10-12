@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "method": "author visually inspected both PNG figures, rechecked path figure after endpoint completion",
+  "figures": [
+    "search_paths.png",
+    "actions_commands.png"
+  ],
+  "source_rows": 15626,
+  "notes": "Chinese labels/units/legends readable; endpoint included; XY clearance circle is illustration only, not a functional geometry judgment"
+}

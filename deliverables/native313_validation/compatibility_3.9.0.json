@@ -1,0 +1,243 @@
+{
+  "mujoco_version": "3.9.0",
+  "module_file": "C:\\Users\\ok everything\\AppData\\Roaming\\Python\\Python313\\site-packages\\mujoco\\__init__.py",
+  "dll_sha256": {
+    "C:\\Users\\ok everything\\AppData\\Roaming\\Python\\Python313\\site-packages\\mujoco\\mujoco.dll": "2b1495ed2f2206c7ae0503b67447638a1f8b33acecafec2667dfd181a2b5f173"
+  },
+  "options": {
+    "ccd_iterations": 35,
+    "ccd_tolerance": 1e-12,
+    "cone": 0,
+    "density": 0.0,
+    "disableactuator": 0,
+    "disableflags": 0,
+    "enableflags": 0,
+    "gravity": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "impratio": 1.0,
+    "integrator": 0,
+    "iterations": 100,
+    "jacobian": 2,
+    "ls_iterations": 50,
+    "ls_tolerance": 0.01,
+    "magnetic": [
+      0.0,
+      -0.5,
+      0.0
+    ],
+    "noslip_iterations": 0,
+    "noslip_tolerance": 1e-06,
+    "o_friction": [
+      1.0,
+      1.0,
+      0.005,
+      0.0001,
+      0.0001
+    ],
+    "o_margin": 0.0,
+    "o_solimp": [
+      0.9,
+      0.95,
+      0.001,
+      0.5,
+      2.0
+    ],
+    "o_solref": [
+      0.02,
+      1.0
+    ],
+    "sdf_initpoints": 40,
+    "sdf_iterations": 10,
+    "sleep_tolerance": 0.0001,
+    "solver": 2,
+    "timestep": 0.0002,
+    "tolerance": 1e-08,
+    "viscosity": 0.0,
+    "wind": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "arrays": {
+    "geom_size": {
+      "shape": [
+        4739,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "f00564c84bf27d112a3fb140accd706a43fbd86644796b51246a7bf639d03172"
+    },
+    "geom_pos": {
+      "shape": [
+        4739,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "93c230d69c3d66dae0a3b9eadecd83bbb80f1f2af255e493dacfc5ee050c77d0"
+    },
+    "geom_quat": {
+      "shape": [
+        4739,
+        4
+      ],
+      "dtype": "float64",
+      "sha256": "a88543d455c7baab37eb0b9ce62a0c04fb3635d4fa26602ee913e2db6b28a3ab"
+    },
+    "mesh_vert": {
+      "shape": [
+        9034,
+        3
+      ],
+      "dtype": "float32",
+      "sha256": "94c0f0a41cf0099f064a05f7b58c6e80ee68decaf6f8ef1f2ef1217a3ad704cb"
+    },
+    "mesh_face": {
+      "shape": [
+        15488,
+        3
+      ],
+      "dtype": "int32",
+      "sha256": "d6b3539c129b3d74fdde3edebfe39e1aa9334690b8187b7e112bb0b9c4f2309e"
+    },
+    "body_pos": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "834a709ba2534ebe3ee1397fd4f7bd288b2acc1d20a08d6c862dcd99b6f04400"
+    },
+    "body_quat": {
+      "shape": [
+        3,
+        4
+      ],
+      "dtype": "float64",
+      "sha256": "f95bc6ef57612d102f3ef4a513c355d2973ab71b1b84e69ebdfed58f4218975b"
+    },
+    "body_mass": {
+      "shape": [
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "3125559cdb9ceb469f737f99eee627992ea9f33a79e5f8208f78584388bb5dab"
+    },
+    "body_inertia": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "57c4a8ad7b550ff18510695cf5afb8b63bfcac43a2ab9628dc03669987af1658"
+    },
+    "body_ipos": {
+      "shape": [
+        3,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "4987af898d882498df5de38b1c935235b368a2e557167a9cba70108ed23aedd0"
+    },
+    "geom_solref": {
+      "shape": [
+        4739,
+        2
+      ],
+      "dtype": "float64",
+      "sha256": "6094ab493b874394835b100a0caf3410acdba0a3f5ec6b4a6d243fdc9c67c265"
+    },
+    "geom_solimp": {
+      "shape": [
+        4739,
+        5
+      ],
+      "dtype": "float64",
+      "sha256": "12423606ade959b69fe2c0d2c8d41da8250f4f1a23f606fe85adb22f26d32a69"
+    },
+    "geom_friction": {
+      "shape": [
+        4739,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "7cfbb801907655b531f96d352cdeaf18feb093fa5c09d096ab81b65a6b47cf2a"
+    },
+    "geom_margin": {
+      "shape": [
+        4739
+      ],
+      "dtype": "float64",
+      "sha256": "2e8819a8770da64c1650c6f6c8f4c8760bd83c3127511985d0f3526768bebab5"
+    },
+    "geom_gap": {
+      "shape": [
+        4739
+      ],
+      "dtype": "float64",
+      "sha256": "2e8819a8770da64c1650c6f6c8f4c8760bd83c3127511985d0f3526768bebab5"
+    },
+    "geom_contype": {
+      "shape": [
+        4739
+      ],
+      "dtype": "int32",
+      "sha256": "02495865fa5eb0f3e60ef45a63fc3093d7c0c81f9897b67a8ea21a83b67f2ebc"
+    },
+    "geom_conaffinity": {
+      "shape": [
+        4739
+      ],
+      "dtype": "int32",
+      "sha256": "3ec360b1e3073ee329798a6b0f2a03c212ef1ddf8ce03436b5013da9d16ab85b"
+    },
+    "dof_damping": {
+      "shape": [
+        6
+      ],
+      "dtype": "float64",
+      "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+    },
+    "dof_frictionloss": {
+      "shape": [
+        6
+      ],
+      "dtype": "float64",
+      "sha256": "17b0761f87b081d5cf10757ccc89f12be355c70e2e29df288b65b30710dcbcd1"
+    }
+  },
+  "dynamic_config": {
+    "collision_backend": "native",
+    "timestep": 0.0002,
+    "control_period": 0.002,
+    "linear_speed": 0.001,
+    "angular_speed": 0.03,
+    "linear_acceleration": 0.005,
+    "angular_acceleration": 0.3,
+    "translational_stiffness": 100.0,
+    "rotational_stiffness": 0.02,
+    "force_limit_N": 0.05,
+    "torque_limit_Nm": 0.002,
+    "reference_lead_m": 0.0002,
+    "reference_lead_rad": 0.03,
+    "stop_force_N": 0.025,
+    "stop_torque_Nm": 0.0005,
+    "stop_penetration_m": 3e-05,
+    "invalid_penetration_m": 8e-05,
+    "actual_speed_limit": 0.02,
+    "actual_angular_speed_limit": 0.5,
+    "travel_limit_m": 0.006,
+    "recovery_distance_m": 0.00025,
+    "recovery_speed": 0.0005,
+    "recovery_time_limit_s": 1.0,
+    "recovery_force_N": 0.01,
+    "stopped_speed": 1e-05,
+    "stopped_angular_speed": 0.001
+  },
+  "source_sha256": {
+    "tools/validation/run_native313_validation.py": "4b0a1a12894e56666b6422aada221c4a4685419352dfda18202bf2c21ff31889"
+  }
+}

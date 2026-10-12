@@ -1,0 +1,27 @@
+{
+  "stage_id": "B2-SCOPE-03",
+  "user_date": "2026-10-08",
+  "recorded_at": "2026-10-08T15:15:53.695077+08:00",
+  "latest_user_message": "批准继续",
+  "approved_scope": "9 次静态初始化全部通过后，按固定顺序执行最多 16 个动态预检；训练 0，不重试。",
+  "provenance": "本对话上一阶段提出上述具体额度后，用户最新消息明确回复“批准继续”。",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "root": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation",
+  "request_sha256": "8fa9a8c6ee38934259b7df562f0e16d230d8a3ffb8b32aa7a2103522c2d1e816",
+  "implementation_manifest_sha256": "178bf8cab98360b75148b4a587838e1a3493a4739576e4b713ef08a30f00a693",
+  "binding_sha256": "9c15895cf6c8bac905715275c65dead6a8a48be617a3c197839077c7acf673c6",
+  "before_documents": {
+    "项目当前入口.md": "d14b26a8b1dcdf815d5f6a5f54bf7628c52a7aaa02e11666a0a792fac780460f",
+    "项目进度跟踪.md": "d569e6696476928dc31812358a1db2f781ef78cd13e883d84b48d5d7d16c3922",
+    "项目交付总览.md": "03ffe94edfbe9c9bfda2787265b2af7045048c9e593e13d24de600ec7f3816ad",
+    "研究推进计划_当前版.md": "cc645c8ae268d9733f62a17da60548b69572e76efac7fc3cd01575c243b8e028",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "756f12ad6f33d1ef0b6b2640aeb411564150bf3925305a5bab222c7ec3de45d0",
+    "docs/superpowers/plans/2026-10-08-b2-pose-scope-preflight.md": "5754462b4dc539afa276bcdd9d08b44a12146440bcb6637c4798114946caec30"
+  },
+  "cumulative_dynamic_before": 208,
+  "automatic_tracking": "PAUSED",
+  "old_budgets_reopened": false,
+  "training_admitted": false,
+  "retry_allowed": false
+}

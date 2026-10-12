@@ -1,0 +1,62 @@
+FFFFFFFF                                                                 [100%]
+================================== FAILURES ===================================
+_______ test_shared_zero_origin_and_appended_fields_really_reach_actor ________
+tests\learning\test_v4_learning.py:45: in test_shared_zero_origin_and_appended_fields_really_reach_actor
+    f=updater('F50');s=updater('S50');assert f.fingerprints()==s.fingerprints()
+tests\learning\test_v4_learning.py:13: in updater
+    from tools.learning.v4_sac import V4Updater
+E   ModuleNotFoundError: No module named 'tools.learning.v4_sac'
+_________ test_schema_permission_rejects_false_activity_and_old_width _________
+tests\learning\test_v4_learning.py:51: in test_schema_permission_rejects_false_activity_and_old_width
+    m=contract();o=obs('S50',True);assert m.permission(o,'S50')
+tests\learning\test_v4_learning.py:11: in contract
+    def contract():return importlib.import_module('tools.learning.v4_pilot_contract')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+<frozen importlib._bootstrap>:1324: in _find_and_load_unlocked
+    ???
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_contract'
+___________ test_inactive_preserves_actor_temperature_adam_momentum ___________
+tests\learning\test_v4_learning.py:57: in test_inactive_preserves_actor_temperature_adam_momentum
+    u=updater('S50');u.update(batch('S50',True));before=u._snapshot()
+tests\learning\test_v4_learning.py:13: in updater
+    from tools.learning.v4_sac import V4Updater
+E   ModuleNotFoundError: No module named 'tools.learning.v4_sac'
+__________ test_bad_shape_or_permission_rolls_back_before_any_update __________
+tests\learning\test_v4_learning.py:66: in test_bad_shape_or_permission_rolls_back_before_any_update
+    u=updater();before=u._snapshot();bad=replace(batch(),observations=torch.zeros(16,120))
+tests\learning\test_v4_learning.py:13: in updater
+    from tools.learning.v4_sac import V4Updater
+E   ModuleNotFoundError: No module named 'tools.learning.v4_sac'
+___________ test_next_inactive_zero_action_and_entropy_match_oracle ___________
+tests\learning\test_v4_learning.py:71: in test_next_inactive_zero_action_and_entropy_match_oracle
+    u=updater('S50');b=batch('S50',False);b.terminated[0]=True;b.truncated[1]=True
+tests\learning\test_v4_learning.py:13: in updater
+    from tools.learning.v4_sac import V4Updater
+E   ModuleNotFoundError: No module named 'tools.learning.v4_sac'
+______ test_whole_replay_rejects_invalid_episode_and_old_or_wrong_flags _______
+tests\learning\test_v4_learning.py:80: in test_whole_replay_rejects_invalid_episode_and_old_or_wrong_flags
+    from tools.learning.v4_replay import V4Replay
+E   ModuleNotFoundError: No module named 'tools.learning.v4_replay'
+__ test_boundary_targets_include_terminal_tail_without_rewriting_actor_batch __
+tests\learning\test_v4_learning.py:93: in test_boundary_targets_include_terminal_tail_without_rewriting_actor_batch
+    from tools.learning.v4_replay import V4BoundaryIndex,V4Replay
+E   ModuleNotFoundError: No module named 'tools.learning.v4_replay'
+_______ test_deactivated_action_is_not_published_as_nonzero_experience ________
+tests\learning\test_v4_learning.py:103: in test_deactivated_action_is_not_published_as_nonzero_experience
+    from tools.learning.v4_replay import V4Replay
+E   ModuleNotFoundError: No module named 'tools.learning.v4_replay'
+=========================== short test summary info ===========================
+FAILED tests/learning/test_v4_learning.py::test_shared_zero_origin_and_appended_fields_really_reach_actor
+FAILED tests/learning/test_v4_learning.py::test_schema_permission_rejects_false_activity_and_old_width
+FAILED tests/learning/test_v4_learning.py::test_inactive_preserves_actor_temperature_adam_momentum
+FAILED tests/learning/test_v4_learning.py::test_bad_shape_or_permission_rolls_back_before_any_update
+FAILED tests/learning/test_v4_learning.py::test_next_inactive_zero_action_and_entropy_match_oracle
+FAILED tests/learning/test_v4_learning.py::test_whole_replay_rejects_invalid_episode_and_old_or_wrong_flags
+FAILED tests/learning/test_v4_learning.py::test_boundary_targets_include_terminal_tail_without_rewriting_actor_batch
+FAILED tests/learning/test_v4_learning.py::test_deactivated_action_is_not_published_as_nonzero_experience
+8 failed in 3.86s

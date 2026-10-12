@@ -1,0 +1,17 @@
+{
+  "red": {
+    "failed": 5,
+    "passed": 6,
+    "reason": "current source still old qualification/filter/delivery/budget; registered_common missing"
+  },
+  "green": {
+    "passed": 11,
+    "failed": 0
+  },
+  "full_suite": {
+    "passed": 441,
+    "failed": 0
+  },
+  "dynamic_episodes": 0,
+  "formal_updates": 0
+}

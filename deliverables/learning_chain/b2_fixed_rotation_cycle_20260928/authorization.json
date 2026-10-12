@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-28",
+  "user_reply": "继续，先按照这个看看效果",
+  "approved_plan": "deliverables/learning_chain/b2_fixed_rotation_proposal_20260928/README.md",
+  "plan_sha256": "75cfc630bc4c1aed3bba1018350621c1cd66de2378fcd700ac5c4add2e191640",
+  "action_scale": [
+    0.00015,
+    0.00015,
+    0.0005,
+    0.0005
+  ],
+  "previous_dynamic_starts": 27,
+  "new_dynamic_cap": 32,
+  "cumulative_dynamic_cap": 59,
+  "formal_optimizer_batches": 4500,
+  "new_synthetic_updates": 0,
+  "new_separate_static_initializations": 0,
+  "seed": 2026092716,
+  "stages": {
+    "initial": 4,
+    "training": 12,
+    "final": 4,
+    "restored": 4,
+    "holdout_b2": 4,
+    "holdout_sac": 4
+  },
+  "automatic_retry": false,
+  "old_remaining_budget_retired": true
+}

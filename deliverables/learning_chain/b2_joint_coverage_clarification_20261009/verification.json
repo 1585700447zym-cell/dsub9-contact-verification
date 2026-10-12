@@ -1,0 +1,36 @@
+{
+  "cumulative_dynamic": 237,
+  "documents_updated": 5,
+  "new_physical_attempts": 0,
+  "new_training": 0,
+  "parent_verification": {
+    "C_accepted": false,
+    "audited_attempts": 12,
+    "automatic_tracking": "PAUSED",
+    "bound_inputs": 2516,
+    "checks": 396,
+    "cumulative_dynamic": 237,
+    "dynamic_attempts": 12,
+    "full_B2_accepted": false,
+    "learning_costs": {
+      "learner_constructions": 0,
+      "network_forwards": 0,
+      "optimizer_updates": 0,
+      "replay_publications": 0,
+      "tensor_reads": 0
+    },
+    "manifest_sha256": "e24379e1d2ae9553a7bb3e6b245edb281e4089f0a1ff13174e25bcc3ebfa7c6c",
+    "preserved_sealed_members": 1626,
+    "route": "INSUFFICIENT_COVERAGE_NO_EXTRA_ATTEMPTS",
+    "sealed_files": 152,
+    "stage_id": "B2-SCOPE-10",
+    "status": "VERIFIED_EXECUTION_RECORD_AND_CLOSURE",
+    "training_admitted": false,
+    "unused_dynamic_closed": 0
+  },
+  "preserved_direct_members": 152,
+  "snapshots": 6,
+  "status": "VERIFIED_CONTACT_TIME_CLARIFICATION",
+  "unchanged_parent_manifest": "e24379e1d2ae9553a7bb3e6b245edb281e4089f0a1ff13174e25bcc3ebfa7c6c",
+  "verified_episodes": 3
+}

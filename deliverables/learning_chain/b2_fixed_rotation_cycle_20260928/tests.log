@@ -1,0 +1,5 @@
+........................................................................ [ 69%]
+...............................                                          [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_fixed_rotation_cycle_20260928\tests.xml -
+103 passed in 3.10s
+Forbidden call counts: {'optimizer': 0, 'physics': 0}

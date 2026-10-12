@@ -1,0 +1,325 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+FFFFFFFFFFFFFFFFFFFFFFFFFF                                               [100%]
+================================== FAILURES ===================================
+_ test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-True--0.005-True] _
+
+phase = 'INSERT', base = True, fz = -0.005, want = True
+
+    @pytest.mark.parametrize('phase,base,fz,want',[
+        ('INSERT',True,-.005,True),('INSERT',True,-.004,False),('INSERT',True,.01,False),
+        ('SEARCH',True,0.,True),('UNLOAD',True,-.02,False),('INSERT',False,-.01,False)])
+    def test_gate_uses_sign_existing_threshold_and_common_permission(phase,base,fz,want):
+>       assert p.enabled('G50',phase,base,fz)==want
+E       AttributeError: module 'profile' has no attribute 'enabled'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:23: AttributeError
+_ test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-True--0.004-False] _
+
+phase = 'INSERT', base = True, fz = -0.004, want = False
+
+    @pytest.mark.parametrize('phase,base,fz,want',[
+        ('INSERT',True,-.005,True),('INSERT',True,-.004,False),('INSERT',True,.01,False),
+        ('SEARCH',True,0.,True),('UNLOAD',True,-.02,False),('INSERT',False,-.01,False)])
+    def test_gate_uses_sign_existing_threshold_and_common_permission(phase,base,fz,want):
+>       assert p.enabled('G50',phase,base,fz)==want
+E       AttributeError: module 'profile' has no attribute 'enabled'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:23: AttributeError
+_ test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-True-0.01-False] _
+
+phase = 'INSERT', base = True, fz = 0.01, want = False
+
+    @pytest.mark.parametrize('phase,base,fz,want',[
+        ('INSERT',True,-.005,True),('INSERT',True,-.004,False),('INSERT',True,.01,False),
+        ('SEARCH',True,0.,True),('UNLOAD',True,-.02,False),('INSERT',False,-.01,False)])
+    def test_gate_uses_sign_existing_threshold_and_common_permission(phase,base,fz,want):
+>       assert p.enabled('G50',phase,base,fz)==want
+E       AttributeError: module 'profile' has no attribute 'enabled'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:23: AttributeError
+_ test_gate_uses_sign_existing_threshold_and_common_permission[SEARCH-True-0.0-True] _
+
+phase = 'SEARCH', base = True, fz = 0.0, want = True
+
+    @pytest.mark.parametrize('phase,base,fz,want',[
+        ('INSERT',True,-.005,True),('INSERT',True,-.004,False),('INSERT',True,.01,False),
+        ('SEARCH',True,0.,True),('UNLOAD',True,-.02,False),('INSERT',False,-.01,False)])
+    def test_gate_uses_sign_existing_threshold_and_common_permission(phase,base,fz,want):
+>       assert p.enabled('G50',phase,base,fz)==want
+E       AttributeError: module 'profile' has no attribute 'enabled'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:23: AttributeError
+_ test_gate_uses_sign_existing_threshold_and_common_permission[UNLOAD-True--0.02-False] _
+
+phase = 'UNLOAD', base = True, fz = -0.02, want = False
+
+    @pytest.mark.parametrize('phase,base,fz,want',[
+        ('INSERT',True,-.005,True),('INSERT',True,-.004,False),('INSERT',True,.01,False),
+        ('SEARCH',True,0.,True),('UNLOAD',True,-.02,False),('INSERT',False,-.01,False)])
+    def test_gate_uses_sign_existing_threshold_and_common_permission(phase,base,fz,want):
+>       assert p.enabled('G50',phase,base,fz)==want
+E       AttributeError: module 'profile' has no attribute 'enabled'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:23: AttributeError
+_ test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-False--0.01-False] _
+
+phase = 'INSERT', base = False, fz = -0.01, want = False
+
+    @pytest.mark.parametrize('phase,base,fz,want',[
+        ('INSERT',True,-.005,True),('INSERT',True,-.004,False),('INSERT',True,.01,False),
+        ('SEARCH',True,0.,True),('UNLOAD',True,-.02,False),('INSERT',False,-.01,False)])
+    def test_gate_uses_sign_existing_threshold_and_common_permission(phase,base,fz,want):
+>       assert p.enabled('G50',phase,base,fz)==want
+E       AttributeError: module 'profile' has no attribute 'enabled'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:23: AttributeError
+______ test_float32_threshold_neighbour_agrees_with_observation_contract ______
+
+    def test_float32_threshold_neighbour_agrees_with_observation_contract():
+        # This sub-double perturbation quantizes to the threshold in float32.
+        fz=-.004999999999999
+>       assert p.enabled('G50','INSERT',True,fz) is True
+E       AttributeError: module 'profile' has no attribute 'enabled'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:28: AttributeError
+_______ test_session_gate_uses_the_same_visible_feedback_without_reset ________
+
+    def test_session_gate_uses_the_same_visible_feedback_without_reset():
+>       session=object.__new__(p.ProfileSession);session.profile='G50';session.mode='F50'
+E       AttributeError: module 'profile' has no attribute 'ProfileSession'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:32: AttributeError
+__________ test_low_load_gate_is_valid_as_g_and_rejected_as_legacy_f __________
+
+    def test_low_load_gate_is_valid_as_g_and_rejected_as_legacy_f():
+        o=observation(fz=0,active=False)
+>       assert p.permissions(o,'G50') is False
+E       AttributeError: module 'profile' has no attribute 'permissions'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:40: AttributeError
+_________ test_contact_does_not_bypass_common_stops[simulation_valid] _________
+
+name = 'simulation_valid'
+
+    @pytest.mark.parametrize('name', ['simulation_valid','pending','latched_guards','invalid_latched'])
+    def test_contact_does_not_bypass_common_stops(name):
+        o=observation(active=False);s=field_slices();o[s[name]]=0 if name=='simulation_valid' else 1
+        if name=='pending':o[s['decision']]=0;o[s['decision'].start+1]=1
+>       assert p.permissions(o,'G50') is False
+E       AttributeError: module 'profile' has no attribute 'permissions'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:47: AttributeError
+_____________ test_contact_does_not_bypass_common_stops[pending] ______________
+
+name = 'pending'
+
+    @pytest.mark.parametrize('name', ['simulation_valid','pending','latched_guards','invalid_latched'])
+    def test_contact_does_not_bypass_common_stops(name):
+        o=observation(active=False);s=field_slices();o[s[name]]=0 if name=='simulation_valid' else 1
+        if name=='pending':o[s['decision']]=0;o[s['decision'].start+1]=1
+>       assert p.permissions(o,'G50') is False
+E       AttributeError: module 'profile' has no attribute 'permissions'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:47: AttributeError
+__________ test_contact_does_not_bypass_common_stops[latched_guards] __________
+
+name = 'latched_guards'
+
+    @pytest.mark.parametrize('name', ['simulation_valid','pending','latched_guards','invalid_latched'])
+    def test_contact_does_not_bypass_common_stops(name):
+        o=observation(active=False);s=field_slices();o[s[name]]=0 if name=='simulation_valid' else 1
+        if name=='pending':o[s['decision']]=0;o[s['decision'].start+1]=1
+>       assert p.permissions(o,'G50') is False
+E       AttributeError: module 'profile' has no attribute 'permissions'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:47: AttributeError
+_________ test_contact_does_not_bypass_common_stops[invalid_latched] __________
+
+name = 'invalid_latched'
+
+    @pytest.mark.parametrize('name', ['simulation_valid','pending','latched_guards','invalid_latched'])
+    def test_contact_does_not_bypass_common_stops(name):
+        o=observation(active=False);s=field_slices();o[s[name]]=0 if name=='simulation_valid' else 1
+        if name=='pending':o[s['decision']]=0;o[s['decision'].start+1]=1
+>       assert p.permissions(o,'G50') is False
+E       AttributeError: module 'profile' has no attribute 'permissions'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:47: AttributeError
+_______________ test_false_mask_above_contact_gate_is_rejected ________________
+
+    def test_false_mask_above_contact_gate_is_rejected():
+>       with pytest.raises(ValueError):p.permissions(observation(active=False),'G50')
+E       AttributeError: module 'profile' has no attribute 'permissions'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:50: AttributeError
+_________________ test_f_preserves_low_load_insert_permission _________________
+
+    def test_f_preserves_low_load_insert_permission():
+>       assert p.permissions(observation(fz=0),'F50') is True
+E       AttributeError: module 'profile' has no attribute 'permissions'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:53: AttributeError
+_______ test_small_scale_preserves_actor_output_and_maps_all_four_axes ________
+
+    def test_small_scale_preserves_actor_output_and_maps_all_four_axes():
+        action=np.array([1.,-1.,.5,-.5]);original=action.copy()
+>       assert np.array_equal(p.deployment_action(action,'F12.5'),[.25,-.25,.125,-.125])
+E       AttributeError: module 'profile' has no attribute 'deployment_action'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:58: AttributeError
+_____ test_invalid_actor_request_cannot_be_scaled_into_validity[action0] ______
+
+action = [nan, 0, 0, 0]
+
+    @pytest.mark.parametrize('action', [[float('nan'),0,0,0],[1.01,0,0,0],[0,0,0]])
+    def test_invalid_actor_request_cannot_be_scaled_into_validity(action):
+>       with pytest.raises(ValueError):p.deployment_action(action,'F12.5')
+E       AttributeError: module 'profile' has no attribute 'deployment_action'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:64: AttributeError
+_____ test_invalid_actor_request_cannot_be_scaled_into_validity[action1] ______
+
+action = [1.01, 0, 0, 0]
+
+    @pytest.mark.parametrize('action', [[float('nan'),0,0,0],[1.01,0,0,0],[0,0,0]])
+    def test_invalid_actor_request_cannot_be_scaled_into_validity(action):
+>       with pytest.raises(ValueError):p.deployment_action(action,'F12.5')
+E       AttributeError: module 'profile' has no attribute 'deployment_action'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:64: AttributeError
+_____ test_invalid_actor_request_cannot_be_scaled_into_validity[action2] ______
+
+action = [0, 0, 0]
+
+    @pytest.mark.parametrize('action', [[float('nan'),0,0,0],[1.01,0,0,0],[0,0,0]])
+    def test_invalid_actor_request_cannot_be_scaled_into_validity(action):
+>       with pytest.raises(ValueError):p.deployment_action(action,'F12.5')
+E       AttributeError: module 'profile' has no attribute 'deployment_action'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:64: AttributeError
+_________ test_new_rows_audit_keeps_g_mask_and_original_actor_output __________
+
+    def test_new_rows_audit_keeps_g_mask_and_original_actor_output():
+>       assert p.audit_rows(episode())['rows']==1
+E       AttributeError: module 'profile' has no attribute 'audit_rows'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:75: AttributeError
+____________ test_row_errors_are_rejected_without_retagging[actor] ____________
+
+bad = 'actor'
+
+    @pytest.mark.parametrize('bad', ['actor','mask','discount','terminal','calls'])
+    def test_row_errors_are_rejected_without_retagging(bad):
+        raw=episode();t=raw['transitions'][0]
+        if bad=='actor':t['action_log']['actor_action']=[0.]*4
+        if bad=='mask':t['action_active']=False
+        if bad=='discount':t['discount']=1.
+        if bad=='terminal':t['terminated']=False
+        if bad=='calls':raw['policy_calls']=0
+>       with pytest.raises(ValueError):p.audit_rows(raw)
+E       AttributeError: module 'profile' has no attribute 'audit_rows'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:86: AttributeError
+____________ test_row_errors_are_rejected_without_retagging[mask] _____________
+
+bad = 'mask'
+
+    @pytest.mark.parametrize('bad', ['actor','mask','discount','terminal','calls'])
+    def test_row_errors_are_rejected_without_retagging(bad):
+        raw=episode();t=raw['transitions'][0]
+        if bad=='actor':t['action_log']['actor_action']=[0.]*4
+        if bad=='mask':t['action_active']=False
+        if bad=='discount':t['discount']=1.
+        if bad=='terminal':t['terminated']=False
+        if bad=='calls':raw['policy_calls']=0
+>       with pytest.raises(ValueError):p.audit_rows(raw)
+E       AttributeError: module 'profile' has no attribute 'audit_rows'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:86: AttributeError
+__________ test_row_errors_are_rejected_without_retagging[discount] ___________
+
+bad = 'discount'
+
+    @pytest.mark.parametrize('bad', ['actor','mask','discount','terminal','calls'])
+    def test_row_errors_are_rejected_without_retagging(bad):
+        raw=episode();t=raw['transitions'][0]
+        if bad=='actor':t['action_log']['actor_action']=[0.]*4
+        if bad=='mask':t['action_active']=False
+        if bad=='discount':t['discount']=1.
+        if bad=='terminal':t['terminated']=False
+        if bad=='calls':raw['policy_calls']=0
+>       with pytest.raises(ValueError):p.audit_rows(raw)
+E       AttributeError: module 'profile' has no attribute 'audit_rows'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:86: AttributeError
+__________ test_row_errors_are_rejected_without_retagging[terminal] ___________
+
+bad = 'terminal'
+
+    @pytest.mark.parametrize('bad', ['actor','mask','discount','terminal','calls'])
+    def test_row_errors_are_rejected_without_retagging(bad):
+        raw=episode();t=raw['transitions'][0]
+        if bad=='actor':t['action_log']['actor_action']=[0.]*4
+        if bad=='mask':t['action_active']=False
+        if bad=='discount':t['discount']=1.
+        if bad=='terminal':t['terminated']=False
+        if bad=='calls':raw['policy_calls']=0
+>       with pytest.raises(ValueError):p.audit_rows(raw)
+E       AttributeError: module 'profile' has no attribute 'audit_rows'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:86: AttributeError
+____________ test_row_errors_are_rejected_without_retagging[calls] ____________
+
+bad = 'calls'
+
+    @pytest.mark.parametrize('bad', ['actor','mask','discount','terminal','calls'])
+    def test_row_errors_are_rejected_without_retagging(bad):
+        raw=episode();t=raw['transitions'][0]
+        if bad=='actor':t['action_log']['actor_action']=[0.]*4
+        if bad=='mask':t['action_active']=False
+        if bad=='discount':t['discount']=1.
+        if bad=='terminal':t['terminated']=False
+        if bad=='calls':raw['policy_calls']=0
+>       with pytest.raises(ValueError):p.audit_rows(raw)
+E       AttributeError: module 'profile' has no attribute 'audit_rows'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:86: AttributeError
+_______________ test_previous_next_mask_cannot_be_discontinuous _______________
+
+    def test_previous_next_mask_cannot_be_discontinuous():
+        raw=episode();t=raw['transitions'][0];t['terminated']=False
+        from copy import deepcopy
+        raw['transitions'].append(deepcopy(t));raw['actions'].append(deepcopy(raw['actions'][0]));raw['transitions'][1]['terminated']=True
+        raw['policy_calls']=raw['policy_call_attempts']=2
+>       with pytest.raises(ValueError):p.audit_rows(raw)
+E       AttributeError: module 'profile' has no attribute 'audit_rows'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_profile.py:93: AttributeError
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-True--0.005-True]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-True--0.004-False]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-True-0.01-False]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_gate_uses_sign_existing_threshold_and_common_permission[SEARCH-True-0.0-True]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_gate_uses_sign_existing_threshold_and_common_permission[UNLOAD-True--0.02-False]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_gate_uses_sign_existing_threshold_and_common_permission[INSERT-False--0.01-False]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_float32_threshold_neighbour_agrees_with_observation_contract
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_session_gate_uses_the_same_visible_feedback_without_reset
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_low_load_gate_is_valid_as_g_and_rejected_as_legacy_f
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_contact_does_not_bypass_common_stops[simulation_valid]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_contact_does_not_bypass_common_stops[pending]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_contact_does_not_bypass_common_stops[latched_guards]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_contact_does_not_bypass_common_stops[invalid_latched]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_false_mask_above_contact_gate_is_rejected
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_f_preserves_low_load_insert_permission
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_small_scale_preserves_actor_output_and_maps_all_four_axes
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_invalid_actor_request_cannot_be_scaled_into_validity[action0]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_invalid_actor_request_cannot_be_scaled_into_validity[action1]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_invalid_actor_request_cannot_be_scaled_into_validity[action2]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_new_rows_audit_keeps_g_mask_and_original_actor_output
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_row_errors_are_rejected_without_retagging[actor]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_row_errors_are_rejected_without_retagging[mask]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_row_errors_are_rejected_without_retagging[discount]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_row_errors_are_rejected_without_retagging[terminal]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_row_errors_are_rejected_without_retagging[calls]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py::test_previous_next_mask_cannot_be_discontinuous
+26 failed in 4.94s

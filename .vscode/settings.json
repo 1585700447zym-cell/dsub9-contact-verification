@@ -1,0 +1,8 @@
+{
+  "python.defaultInterpreterPath": "D:/KEYANRUJIAN/python.exe",
+  "files.encoding": "utf8",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}"
+  ],
+  "cmake.sourceDirectory": "D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/plugins/dsub9_hole_sdf"
+}

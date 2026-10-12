@@ -1,0 +1,147 @@
+test_I1_relocated_entrypoint_rejected_before_claim (test_review_regressions.ReviewRegressions.test_I1_relocated_entrypoint_rejected_before_claim) ... ERROR
+test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) ... 
+  test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='force') ... FAIL
+  test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='rotation') ... FAIL
+  test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='samples') ... FAIL
+  test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='cycle_sample') ... FAIL
+  test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='event') ... FAIL
+  test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='nonfinite') ... FAIL
+test_I3_missing_information_prevents_training_route (test_review_regressions.ReviewRegressions.test_I3_missing_information_prevents_training_route) ... ERROR
+test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) ... 
+  test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='missing') ... FAIL
+  test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='vector') ... FAIL
+  test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='raw') ... FAIL
+  test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='schema') ... FAIL
+test_I4_stalled_inert_audit_is_killed_by_production_deadline_guard (test_review_regressions.ReviewRegressions.test_I4_stalled_inert_audit_is_killed_by_production_deadline_guard) ... FAIL
+test_I5_assignment_failure_terminates_owned_handle (test_review_regressions.ReviewRegressions.test_I5_assignment_failure_terminates_owned_handle) ... FAIL
+
+======================================================================
+ERROR: test_I1_relocated_entrypoint_rejected_before_claim (test_review_regressions.ReviewRegressions.test_I1_relocated_entrypoint_rejected_before_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 16, in test_I1_relocated_entrypoint_rejected_before_claim
+    with self.assertRaises(PermissionError):runner.require_registered_location()
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'run_preflight' has no attribute 'require_registered_location'
+
+======================================================================
+ERROR: test_I3_missing_information_prevents_training_route (test_review_regressions.ReviewRegressions.test_I3_missing_information_prevents_training_route)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 56, in test_I3_missing_information_prevents_training_route
+    info=assess.information_comparison(rows)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'assess' has no attribute 'information_comparison'
+
+======================================================================
+FAIL: test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='force')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 32, in test_I2_guard_contradictions_rejected_for_ordinary_failure
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='rotation')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 32, in test_I2_guard_contradictions_rejected_for_ordinary_failure
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='samples')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 32, in test_I2_guard_contradictions_rejected_for_ordinary_failure
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='cycle_sample')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 32, in test_I2_guard_contradictions_rejected_for_ordinary_failure
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='event')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 32, in test_I2_guard_contradictions_rejected_for_ordinary_failure
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) (damage='nonfinite')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 32, in test_I2_guard_contradictions_rejected_for_ordinary_failure
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='missing')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 48, in test_I3_missing_or_fabricated_observations_rejected
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='vector')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 48, in test_I3_missing_or_fabricated_observations_rejected
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='raw')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 48, in test_I3_missing_or_fabricated_observations_rejected
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) (damage='schema')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 48, in test_I3_missing_or_fabricated_observations_rejected
+    with self.subTest(damage=damage),self.assertRaises(ValueError):
+                                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_I4_stalled_inert_audit_is_killed_by_production_deadline_guard (test_review_regressions.ReviewRegressions.test_I4_stalled_inert_audit_is_killed_by_production_deadline_guard)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 62, in test_I4_stalled_inert_audit_is_killed_by_production_deadline_guard
+    guard=module('deadline_guard');self.assertIsNotNone(guard,'Missing hard outer supervisor')
+                                   ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing hard outer supervisor
+
+======================================================================
+FAIL: test_I5_assignment_failure_terminates_owned_handle (test_review_regressions.ReviewRegressions.test_I5_assignment_failure_terminates_owned_handle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 76, in test_I5_assignment_failure_terminates_owned_handle
+    guard=module('deadline_guard');self.assertIsNotNone(guard)
+                                   ~~~~~~~~~~~~~~~~~~~~^^^^^^^
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 6 tests in 6.186s
+
+FAILED (failures=12, errors=2)

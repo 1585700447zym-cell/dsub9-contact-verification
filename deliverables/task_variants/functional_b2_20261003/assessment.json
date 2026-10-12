@@ -1,0 +1,126 @@
+{
+  "status": "controlled_stop",
+  "episodes": 2,
+  "unused_closed": 7,
+  "cumulative": 119,
+  "functional_success": 1,
+  "strict_precision_success": 0,
+  "control_cycles": 13222,
+  "physical_substeps": 132220,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "inputs_unchanged": true,
+  "rows": [
+    {
+      "id": "y_pos_150",
+      "outcome": "FULL_SUCCESS",
+      "reason": "GEOMETRIC_SUCCESS",
+      "functional_success": true,
+      "strict_precision_success": false,
+      "valid": true,
+      "stopped": true,
+      "xy_um": 78.30453174757822,
+      "angle_deg": 1.7441597010617613,
+      "z_um": -8.87692984823147,
+      "pin_clearance_um": 5.990950905877032,
+      "peak_force_mN": 24.31135669404151,
+      "peak_penetration_um": 3.272192588680445,
+      "control_cycles": 7917,
+      "physical_substeps": 79170,
+      "contact_cycles": 5020,
+      "search_cycles": 2973,
+      "stop_time_s": 13.833999999994436,
+      "end_time_s": 15.833999999989775,
+      "controller_events": [
+        {
+          "time_s": 2.439999999999764,
+          "phase": "UNLOAD",
+          "reason": "LOADED_ROTATION_RISK",
+          "relative_rotation_rad": 0.026682897257887278,
+          "axial_force_N": -0.024286531507634827,
+          "risk_since_s": 2.3899999999997696
+        },
+        {
+          "time_s": 3.229999999999677,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH"
+        },
+        {
+          "time_s": 6.164000000004159,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED"
+        },
+        {
+          "time_s": 6.348000000004547,
+          "phase": "UNLOAD",
+          "reason": "LOADED_ROTATION_RISK",
+          "relative_rotation_rad": 0.0315532260041245,
+          "axial_force_N": -0.020248573584179377,
+          "risk_since_s": 6.298000000004442
+        },
+        {
+          "time_s": 7.122000000006181,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH"
+        },
+        {
+          "time_s": 10.13400000000306,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED"
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.033640507269222256,
+        "checked_substeps": 79170
+      }
+    },
+    {
+      "id": "y_neg_150",
+      "outcome": "CONTACT_GUARD",
+      "reason": "CONTACT_GUARD",
+      "functional_success": false,
+      "strict_precision_success": false,
+      "valid": true,
+      "stopped": true,
+      "xy_um": 171.27934577397806,
+      "angle_deg": 0.30426423160090155,
+      "z_um": -3763.495451689931,
+      "pin_clearance_um": -73.67296178442336,
+      "peak_force_mN": 25.000156277660295,
+      "peak_penetration_um": 7.106486275531078,
+      "control_cycles": 5305,
+      "physical_substeps": 53050,
+      "contact_cycles": 5171,
+      "search_cycles": 4542,
+      "stop_time_s": 8.610000000006611,
+      "end_time_s": 10.61000000000195,
+      "controller_events": [
+        {
+          "time_s": 0.7459999999999505,
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL"
+        },
+        {
+          "time_s": 1.5259999999998646,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH"
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [
+          "FORCE_LIMIT"
+        ],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.005370002185899364,
+        "checked_substeps": 53050
+      }
+    }
+  ]
+}

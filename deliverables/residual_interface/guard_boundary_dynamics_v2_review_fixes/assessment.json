@@ -1,0 +1,371 @@
+{
+  "probe_suite_passed": false,
+  "source_unchanged": true,
+  "runs": [
+    {
+      "probe": "contact_pitch_neg",
+      "case": {
+        "name": "contact_pitch_neg",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "command_axis": 4,
+      "requested_angular_speed": -0.005,
+      "scope": "bounded_open_loop_contact",
+      "error": null,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "expected_event_observed": false,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.012013194404995351,
+        "checked_substeps": 30000
+      },
+      "max_rotation_deg": 0.6883053378764078,
+      "actual_stop_start_s": 3.9999999999995923,
+      "end_time_s": 6.000000000003813,
+      "events": [
+        {
+          "time_s": 3.9999999999995923,
+          "reason": "PROBE_TIME_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "peaks": {
+        "force_N": 0.024901367304797577,
+        "torque_G_Nm": 0.00021624902578639706,
+        "penetration_m": 7.317530150527945e-06,
+        "speed_m_s": 0.0010411487000259111,
+        "drive_force_components_N": [
+          0.003866226658146122,
+          0.0004990181308143456,
+          0.02459638524053168
+        ],
+        "drive_torque_components_Nm": [
+          3.173277361414213e-05,
+          0.000162631582743093,
+          7.5270825245204594e-06
+        ],
+        "contact_count": 1351.0
+      },
+      "physical_steps": 30000,
+      "wall_seconds": 91.73093349998817,
+      "training_admitted": false,
+      "probe_passed": false
+    },
+    {
+      "probe": "contact_roll_pos",
+      "case": {
+        "name": "contact_roll_pos",
+        "x_offset_m": 0.0001,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "command_axis": 3,
+      "requested_angular_speed": 0.005,
+      "scope": "bounded_open_loop_contact",
+      "error": null,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "expected_event_observed": true,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [
+          "FORCE_LIMIT"
+        ],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.015554910731100623,
+        "checked_substeps": 28530
+      },
+      "max_rotation_deg": 0.8912307355948195,
+      "actual_stop_start_s": 3.704799999999625,
+      "end_time_s": 5.7060000000031925,
+      "events": [
+        {
+          "time_s": 3.704799999999625,
+          "reason": "FORCE_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "peaks": {
+        "force_N": 0.02500002695684713,
+        "torque_G_Nm": 0.0001261422452463974,
+        "penetration_m": 7.149002903057479e-06,
+        "speed_m_s": 0.0010411487000259111,
+        "drive_force_components_N": [
+          0.0001495526772033213,
+          0.004940665904249651,
+          0.024506691857109984
+        ],
+        "drive_torque_components_Nm": [
+          6.001224337359885e-05,
+          5.632706233388024e-07,
+          6.492585982061953e-07
+        ],
+        "contact_count": 1760.0
+      },
+      "physical_steps": 28530,
+      "wall_seconds": 90.12639699998545,
+      "training_admitted": false,
+      "probe_passed": true
+    },
+    {
+      "probe": "free_pitch_neg",
+      "case": {
+        "name": "free_pitch_neg",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.005,
+        "target_depth_m": 0.004
+      },
+      "command_axis": 4,
+      "requested_angular_speed": -0.02,
+      "scope": "free_approach_boundary_not_training_domain",
+      "error": null,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "expected_event_observed": true,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [
+          "ROTATION_LIMIT"
+        ],
+        "max_rotation_from_start_rad": 0.043867168105383145,
+        "checked_substeps": 21070
+      },
+      "max_rotation_deg": 2.51340359162935,
+      "actual_stop_start_s": 2.213999999999789,
+      "end_time_s": 4.214000000000044,
+      "events": [
+        {
+          "time_s": 2.213999999999789,
+          "reason": "ROTATION_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "peaks": {
+        "force_N": 0.0,
+        "torque_G_Nm": 0.0,
+        "penetration_m": 0.0,
+        "speed_m_s": 0.0,
+        "drive_force_components_N": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "drive_torque_components_Nm": [
+          6.811725981949345e-17,
+          2.529822128134719e-05,
+          2.863823138403092e-18
+        ],
+        "contact_count": 0
+      },
+      "physical_steps": 21070,
+      "wall_seconds": 15.021707799984142,
+      "training_admitted": false,
+      "probe_passed": true
+    },
+    {
+      "probe": "free_pitch_pos",
+      "case": {
+        "name": "free_pitch_pos",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.005,
+        "target_depth_m": 0.004
+      },
+      "command_axis": 4,
+      "requested_angular_speed": 0.02,
+      "scope": "free_approach_boundary_not_training_domain",
+      "error": null,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "expected_event_observed": true,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [
+          "ROTATION_LIMIT"
+        ],
+        "max_rotation_from_start_rad": 0.043867168105383145,
+        "checked_substeps": 21070
+      },
+      "max_rotation_deg": 2.51340359162935,
+      "actual_stop_start_s": 2.213999999999789,
+      "end_time_s": 4.214000000000044,
+      "events": [
+        {
+          "time_s": 2.213999999999789,
+          "reason": "ROTATION_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "peaks": {
+        "force_N": 0.0,
+        "torque_G_Nm": 0.0,
+        "penetration_m": 0.0,
+        "speed_m_s": 0.0,
+        "drive_force_components_N": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "drive_torque_components_Nm": [
+          6.811725981949345e-17,
+          2.529822128134719e-05,
+          2.863823138403092e-18
+        ],
+        "contact_count": 0
+      },
+      "physical_steps": 21070,
+      "wall_seconds": 14.962864500004798,
+      "training_admitted": false,
+      "probe_passed": true
+    },
+    {
+      "probe": "free_roll_neg",
+      "case": {
+        "name": "free_roll_neg",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.005,
+        "target_depth_m": 0.004
+      },
+      "command_axis": 3,
+      "requested_angular_speed": -0.02,
+      "scope": "free_approach_boundary_not_training_domain",
+      "error": null,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "expected_event_observed": true,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [
+          "ROTATION_LIMIT"
+        ],
+        "max_rotation_from_start_rad": 0.04386716810538118,
+        "checked_substeps": 21070
+      },
+      "max_rotation_deg": 2.5134035916292374,
+      "actual_stop_start_s": 2.213999999999789,
+      "end_time_s": 4.214000000000044,
+      "events": [
+        {
+          "time_s": 2.213999999999789,
+          "reason": "ROTATION_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "peaks": {
+        "force_N": 0.0,
+        "torque_G_Nm": 0.0,
+        "penetration_m": 0.0,
+        "speed_m_s": 0.0,
+        "drive_force_components_N": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "drive_torque_components_Nm": [
+          2.5298221281350967e-05,
+          0.0,
+          0.0
+        ],
+        "contact_count": 0
+      },
+      "physical_steps": 21070,
+      "wall_seconds": 14.799267099995632,
+      "training_admitted": false,
+      "probe_passed": true
+    },
+    {
+      "probe": "free_roll_pos",
+      "case": {
+        "name": "free_roll_pos",
+        "x_offset_m": 0.0,
+        "y_offset_m": 0.0,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.005,
+        "target_depth_m": 0.004
+      },
+      "command_axis": 3,
+      "requested_angular_speed": 0.02,
+      "scope": "free_approach_boundary_not_training_domain",
+      "error": null,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "expected_event_observed": true,
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [
+          "ROTATION_LIMIT"
+        ],
+        "max_rotation_from_start_rad": 0.043867168105385206,
+        "checked_substeps": 21070
+      },
+      "max_rotation_deg": 2.513403591629468,
+      "actual_stop_start_s": 2.213999999999789,
+      "end_time_s": 4.214000000000044,
+      "events": [
+        {
+          "time_s": 2.213999999999789,
+          "reason": "ROTATION_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "peaks": {
+        "force_N": 0.0,
+        "torque_G_Nm": 0.0,
+        "penetration_m": 0.0,
+        "speed_m_s": 0.0,
+        "drive_force_components_N": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "drive_torque_components_Nm": [
+          2.5298221281350113e-05,
+          0.0,
+          0.0
+        ],
+        "contact_count": 0
+      },
+      "physical_steps": 21070,
+      "wall_seconds": 14.490012099966407,
+      "training_admitted": false,
+      "probe_passed": true
+    }
+  ],
+  "training_admitted": false,
+  "wall_seconds": 133.67401100002462,
+  "limitations": [
+    "candidate_parameter_not_frozen",
+    "no_continuous_domain_proof",
+    "no_SAC_updates"
+  ]
+}

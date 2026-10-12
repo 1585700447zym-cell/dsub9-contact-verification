@@ -1,0 +1,12 @@
+{
+  "kind": "execution_failure",
+  "execution_complete": false,
+  "returncode": 1,
+  "returncode_hex": "0x1",
+  "retry_allowed": false,
+  "b2_complete": false,
+  "wall_timestamp": 1790665988.7068748,
+  "underlying_failure": {
+    "error": "PermissionError(13, '拒绝访问。')"
+  }
+}

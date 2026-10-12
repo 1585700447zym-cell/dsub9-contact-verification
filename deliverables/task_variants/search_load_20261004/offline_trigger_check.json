@@ -1,0 +1,37 @@
+{
+  "y_neg_150": {
+    "source": "deliverables\\task_variants\\functional_b2_20261003\\run\\y_neg_150.json.gz",
+    "first_load_release": {
+      "event": {
+        "time_s": 8.4860000000069,
+        "phase": "UNLOAD",
+        "reason": "SEARCH_LATERAL_LOAD",
+        "lateral_force_N": 0.020910377255716803,
+        "total_force_N": 0.022509564646576725,
+        "load_since_s": 8.466000000006947,
+        "search_count": 1,
+        "paused_theta_rad": 18.000964367107034
+      },
+      "reference_error_um": [
+        129.667625272451,
+        -148.25733518986607
+      ]
+    },
+    "scope": "offline observation replay only"
+  },
+  "y_pos_150": {
+    "source": "deliverables\\task_variants\\functional_b2_20261003\\run\\y_pos_150.json.gz",
+    "first_load_release": null,
+    "scope": "offline observation replay only"
+  },
+  "x_pos_150": {
+    "source": "deliverables\\task_variants\\clearance120_20261003\\run\\x_pos_150.json.gz",
+    "first_load_release": null,
+    "scope": "offline observation replay only"
+  },
+  "x_neg_150": {
+    "source": "deliverables\\task_variants\\clearance120_20261003\\run\\x_neg_150.json.gz",
+    "first_load_release": null,
+    "scope": "offline observation replay only"
+  }
+}

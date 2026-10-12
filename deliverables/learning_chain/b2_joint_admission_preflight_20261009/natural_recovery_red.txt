@@ -1,0 +1,41 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_fixed_12_and_reservation_before_invoke (test_admission.AdmissionTests.test_fixed_12_and_reservation_before_invoke) ... ok
+test_guard_error_and_no_retry (test_admission.AdmissionTests.test_guard_error_and_no_retry) ... ok
+test_limit_rejection_and_no_learning_import (test_admission.AdmissionTests.test_limit_rejection_and_no_learning_import) ... ok
+test_new_grant_and_reject_old_or_request (test_admission.AdmissionTests.test_new_grant_and_reject_old_or_request) ... ok
+test_single_claim_and_existing_output_rejected (test_admission.AdmissionTests.test_single_claim_and_existing_output_rejected) ... ok
+test_axis_and_corner_periods (test_contract.ContractTests.test_axis_and_corner_periods) ... ok
+test_fixed_order_and_guard_closure (test_contract.ContractTests.test_fixed_order_and_guard_closure) ... ok
+test_mask_does_not_pause_index (test_contract.ContractTests.test_mask_does_not_pause_index) ... ok
+test_no_trigger_on_pending_guard_or_no_contact (test_contract.FixtureTests.test_no_trigger_on_pending_guard_or_no_contact) ... ok
+test_once_refresh_and_no_sensor_change (test_contract.FixtureTests.test_once_refresh_and_no_sensor_change) ... ok
+test_rejected_recovery_does_not_force_resume (test_contract.FixtureTests.test_rejected_recovery_does_not_force_resume) ... ok
+test_directions_hold_blocks_and_all_peak_ties (test_coverage.CoverageTests.test_directions_hold_blocks_and_all_peak_ties) ... ok
+test_protocol_rejects_schedule_shift_or_fixture_on_A (test_coverage.CoverageTests.test_protocol_rejects_schedule_shift_or_fixture_on_A) ... ok
+test_request_without_effect_is_not_coverage (test_coverage.CoverageTests.test_request_without_effect_is_not_coverage) ... ok
+test_routes_separate_task_failure_and_missing_coverage (test_coverage.CoverageTests.test_routes_separate_task_failure_and_missing_coverage) ... ok
+test_real_prepare_decorator_does_not_double_baseline_or_history (test_lifecycle.LifecycleTests.test_real_prepare_decorator_does_not_double_baseline_or_history) ... ok
+test_real_resume_rejects_too_short_or_historical_guard (test_lifecycle.LifecycleTests.test_real_resume_rejects_too_short_or_historical_guard) ... ok
+test_real_resume_uses_fresh_reference_and_single_pulse (test_lifecycle.LifecycleTests.test_real_resume_uses_fresh_reference_and_single_pulse) ... ok
+test_real_wait_stop_rejection_and_timeout (test_lifecycle.LifecycleTests.test_real_wait_stop_rejection_and_timeout) ... ok
+test_recovery_auditor_accepts_logic_fixture_and_rejects_mutations (test_lifecycle.LifecycleTests.test_recovery_auditor_accepts_logic_fixture_and_rejects_mutations) ... ok
+test_untriggered_natural_recovery_is_insufficient_not_fake_audit_failure (test_lifecycle.LifecycleTests.test_untriggered_natural_recovery_is_insufficient_not_fake_audit_failure) ... ERROR
+
+======================================================================
+ERROR: test_untriggered_natural_recovery_is_insufficient_not_fake_audit_failure (test_lifecycle.LifecycleTests.test_untriggered_natural_recovery_is_insufficient_not_fake_audit_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_lifecycle.py", line 182, in test_untriggered_natural_recovery_is_insufficient_not_fake_audit_failure
+    result=audit_protocol(raw,{'profile':'R_RECOVERY'},same)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\coverage_checks.py", line 80, in audit_protocol
+    recovery=audit_recovery_transitions(raw,trigger,pulse,masked,same)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\coverage_checks.py", line 115, in audit_recovery_transitions
+    if pulse!=end['cycle_id']:raise ValueError('Missing first enabled resumed pulse')
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Missing first enabled resumed pulse
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.754s
+
+FAILED (errors=1)
+{"status": "FAIL", "tests": 21, "failures": 0, "errors": 1, "new_physics": 0, "training": 0, "forbidden_modules": []}

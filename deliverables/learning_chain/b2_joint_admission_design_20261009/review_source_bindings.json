@@ -1,0 +1,23 @@
+{
+  "tools\\control\\search_recovery.py": "572824a235a01d0a15b47eb0fe6aa2efe25412f0cba7dc018228f120ee8414d5",
+  "tools\\control\\risk_search.py": "e6ca2845444c4cf270b71eb0fdd5a1ffb92c01b4ebc45b857c3a603c96a7d6d8",
+  "tools\\control\\load_search.py": "07fe18d5a302ddc362aae8c5b5ce607c001ec10b39412d90773e1c56ea91223a",
+  "tools\\control\\axis_search.py": "0a4bc90a12e24f980dc4e6411ada4c3b13b69b9852b333ce4144872d82984201",
+  "tools\\control\\reference_search.py": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+  "tools\\learning\\session.py": "9318d696b38a252368b98e1a6ae52b5b6f5043a6368c701e79376f41077b2be3",
+  "tools\\learning\\observation.py": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+  "tools\\learning\\v4_observation.py": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+  "tools\\learning\\v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219",
+  "tools\\learning\\v4_session.py": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+  "tools\\validation\\run_v4_adapter_preflight.py": "762af4b6bb5e212d65efd08a57865908d777a0a55d74de40cef3e91c93f8babe",
+  "tests\\learning\\test_recovery.py": "6a871d745850efb4e4993f688795969939606dda842fddcda97ed3187812f26e",
+  "tests\\learning\\test_residual_recovery.py": "011131fb317aace1232f831429690c0b19e7acb24ff0699fe915cfbf015eb4dc",
+  "docs\\stage_b\\训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+  "deliverables/paper_comparison/v4_learning_requalification_20261006/configuration.json": "da6b1d4207aeb2f35a0695fff9a33e5a097329ebdace54dd2c0e1e08b7e8cca5",
+  "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml": "e798b67fb76b83978ea179024422cf43321477fccd5c4158c8cb2e21eef1310f",
+  "deliverables/paper_comparison/contact_gate_probe_20261007/run/probe_G50_y_neg_150.json.gz": "a8d47576247bfc635dce783413e641aca00e6bc4f1758b9547791ccf27bb3563",
+  "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml": "061b7cbcc5224effd5a0c064b75219c62bd43cdf5e95ebc0f99ec2edc652b764",
+  "deliverables/learning_chain/b2_joint_learning_review_20261009/delivery_manifest.json": "ef538c8951829a6a1d07cf005134b8ee26788f3a0e40a688dbdfd2c08c83af54",
+  "deliverables/learning_chain/b2_rebound_execution_20261008/delivery_manifest.json": "74773ee946d6c9e6d628af08211ca8a564246308ad76f8889cd116db953f4af0",
+  "docs/stage_b/工程范围与姿态参数冻结记录_v1.md": "f3a19c041411d642f8a13a09eba7d408fa94583f6d6dfbddd42a4a0884741a7c"
+}

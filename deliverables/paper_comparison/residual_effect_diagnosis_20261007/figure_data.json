@@ -1,0 +1,171 @@
+{
+  "timeline": [
+    {
+      "id": "test_S2000_holdout_01",
+      "label": "first-use holdout_01",
+      "peak_cycle_interval_s": [
+        0.7019999999999553,
+        0.7039999999999551
+      ],
+      "first_enabled_time_s": 1.8559999999998282
+    },
+    {
+      "id": "test_S2000_holdout_02",
+      "label": "first-use holdout_02",
+      "peak_cycle_interval_s": [
+        0.7179999999999536,
+        0.7199999999999533
+      ],
+      "first_enabled_time_s": 1.8659999999998271
+    },
+    {
+      "id": "test_S2000_holdout_03",
+      "label": "first-use holdout_03",
+      "peak_cycle_interval_s": [
+        0.7039999999999551,
+        0.7059999999999549
+      ],
+      "first_enabled_time_s": 1.8839999999998251
+    },
+    {
+      "id": "test_S2000_holdout_04",
+      "label": "first-use holdout_04",
+      "peak_cycle_interval_s": [
+        0.7159999999999538,
+        0.7179999999999536
+      ],
+      "first_enabled_time_s": 1.8839999999998251
+    },
+    {
+      "id": "final_S50_y_neg_150",
+      "label": "dev y_neg_150",
+      "peak_cycle_interval_s": [
+        0.5479999999999723,
+        0.5499999999999721
+      ],
+      "first_enabled_time_s": 1.5259999999998646
+    },
+    {
+      "id": "final_S50_y_pos_150",
+      "label": "dev y_pos_150",
+      "peak_cycle_interval_s": [
+        0.9239999999999309,
+        0.9259999999999307
+      ],
+      "first_enabled_time_s": 3.229999999999677
+    },
+    {
+      "id": "final_S50_x_pos_150",
+      "label": "dev x_pos_150",
+      "peak_cycle_interval_s": [
+        0.8199999999999423,
+        0.8219999999999421
+      ],
+      "first_enabled_time_s": 1.9699999999998157
+    },
+    {
+      "id": "final_S50_x_neg_150",
+      "label": "dev x_neg_150",
+      "peak_cycle_interval_s": [
+        0.8179999999999426,
+        0.8199999999999423
+      ],
+      "first_enabled_time_s": 1.967999999999816
+    }
+  ],
+  "clipping": [
+    {
+      "id": "final_F50_y_neg_150",
+      "label": "F2000 INSERT y_neg_150",
+      "enabled": 2208,
+      "legacy_pct": 100.0,
+      "target_limited_pct": 15.76086956521739
+    },
+    {
+      "id": "final_S50_y_neg_150",
+      "label": "S2000 SEARCH y_neg_150",
+      "enabled": 2669,
+      "legacy_pct": 99.7002622705133,
+      "target_limited_pct": 7.6058448857249905
+    },
+    {
+      "id": "final_F50_y_pos_150",
+      "label": "F2000 INSERT y_pos_150",
+      "enabled": 3209,
+      "legacy_pct": 100.0,
+      "target_limited_pct": 24.119663446556558
+    },
+    {
+      "id": "final_S50_y_pos_150",
+      "label": "S2000 SEARCH y_pos_150",
+      "enabled": 2529,
+      "legacy_pct": 100.0,
+      "target_limited_pct": 7.433768287860815
+    },
+    {
+      "id": "final_F50_x_pos_150",
+      "label": "F2000 INSERT x_pos_150",
+      "enabled": 2484,
+      "legacy_pct": 100.0,
+      "target_limited_pct": 21.014492753623188
+    },
+    {
+      "id": "final_S50_x_pos_150",
+      "label": "S2000 SEARCH x_pos_150",
+      "enabled": 2679,
+      "legacy_pct": 100.0,
+      "target_limited_pct": 4.21799178798059
+    },
+    {
+      "id": "final_F50_x_neg_150",
+      "label": "F2000 INSERT x_neg_150",
+      "enabled": 2461,
+      "legacy_pct": 99.06542056074767,
+      "target_limited_pct": 26.980902072328323
+    },
+    {
+      "id": "final_S50_x_neg_150",
+      "label": "S2000 SEARCH x_neg_150",
+      "enabled": 3515,
+      "legacy_pct": 100.0,
+      "target_limited_pct": 2.3613086770981506
+    },
+    {
+      "id": "final_F50_aligned",
+      "label": "F2000 INSERT aligned",
+      "enabled": 2050,
+      "legacy_pct": 100.0,
+      "target_limited_pct": 18.4390243902439
+    }
+  ],
+  "recovery_command_differences": [
+    {
+      "id": "dev_B2_y_neg_150",
+      "cycles": 275,
+      "phases": {
+        "STOPPING->RETRACT": 1,
+        "RETRACT->RETRACT": 273,
+        "RETRACT->STOPPING": 1
+      }
+    },
+    {
+      "id": "dev_F0_y_neg_150",
+      "cycles": 275,
+      "phases": {
+        "STOPPING->RETRACT": 1,
+        "RETRACT->RETRACT": 273,
+        "RETRACT->STOPPING": 1
+      }
+    },
+    {
+      "id": "dev_S0_y_neg_150",
+      "cycles": 275,
+      "phases": {
+        "STOPPING->RETRACT": 1,
+        "RETRACT->RETRACT": 273,
+        "RETRACT->STOPPING": 1
+      }
+    }
+  ],
+  "diagnosis_sha256": "ff6ed53ddce6ecfad5b86f99c6c7286c603da3d606e232d3ecd76e1e781c0981"
+}

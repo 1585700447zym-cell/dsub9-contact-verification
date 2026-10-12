@@ -1,0 +1,17 @@
+{
+  "exit_code": 1,
+  "tests": 3,
+  "failures": 3,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "04f4a1a5aac5c7d4a8bfa54f10ea7ec1956bbc51f763080d1c37d9143735106f",
+  "test_ids": [
+    "tests.learning.test_actor_lr_budget::test_finished_formal_cannot_revert_to_validation",
+    "tests.learning.test_actor_lr_budget::test_dead_supervisor_guard_prevents_reservation",
+    "tests.learning.test_actor_lr_budget::test_external_ledger_write_prevents_stale_owner_overwrite"
+  ]
+}

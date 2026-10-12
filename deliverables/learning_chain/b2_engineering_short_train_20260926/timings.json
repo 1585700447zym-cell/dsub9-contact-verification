@@ -1,0 +1,58 @@
+[
+  {
+    "episode_id": "train_000000",
+    "reset_wall_s": 7.187270499998704,
+    "collection_wall_s": 92.12261880002916,
+    "audit_archive_wall_s": 7.638550600036979,
+    "update_wall_s": 6.7999353632330894e-06,
+    "checkpoint_wall_s": 14.656050199992023
+  },
+  {
+    "episode_id": "train_000001",
+    "reset_wall_s": 7.410514999995939,
+    "collection_wall_s": 92.20410670002457,
+    "audit_archive_wall_s": 7.49171590001788,
+    "update_wall_s": 16.066281100036576,
+    "checkpoint_wall_s": 15.803142299992032
+  },
+  {
+    "episode_id": "train_000002",
+    "reset_wall_s": 7.085318500059657,
+    "collection_wall_s": 96.00705630006269,
+    "audit_archive_wall_s": 7.516644899966195,
+    "update_wall_s": 28.548252600012347,
+    "checkpoint_wall_s": 16.55787669995334
+  },
+  {
+    "episode_id": "train_000003",
+    "reset_wall_s": 7.288216400076635,
+    "collection_wall_s": 95.01494760008063,
+    "audit_archive_wall_s": 7.599190599983558,
+    "update_wall_s": 28.668898100033402,
+    "checkpoint_wall_s": 17.535480299964547
+  },
+  {
+    "episode_id": "train_000004",
+    "reset_wall_s": 7.28311980003491,
+    "collection_wall_s": 95.50292170001194,
+    "audit_archive_wall_s": 7.52399409993086,
+    "update_wall_s": 28.472880200017244,
+    "checkpoint_wall_s": 18.90458169998601
+  },
+  {
+    "episode_id": "train_000005",
+    "reset_wall_s": 7.172794799902476,
+    "collection_wall_s": 100.2319545999635,
+    "audit_archive_wall_s": 7.574980300036259,
+    "update_wall_s": 28.93411659996491,
+    "checkpoint_wall_s": 19.616427200031467
+  },
+  {
+    "episode_id": "train_000006",
+    "reset_wall_s": 7.134933000081219,
+    "collection_wall_s": 96.51942399994005,
+    "audit_archive_wall_s": 7.565842600073665,
+    "update_wall_s": 28.576746099977754,
+    "checkpoint_wall_s": 20.508868100005202
+  }
+]

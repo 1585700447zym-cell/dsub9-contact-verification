@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "archives": 4,
+  "archive_cycles": 28465,
+  "segments": 5,
+  "independent_search_rows": 15626,
+  "boundary_equations_exact": 2,
+  "source_proof": {
+    "sealed_file_counts": {
+      "contact_gate_probe_20261007": 78,
+      "residual_effect_diagnosis_20261007": 27,
+      "frozen_comparison_20261007": 96,
+      "v4_learning_requalification_20261006": 457
+    },
+    "production_inputs_unchanged": 1057
+  },
+  "rolling_documents_verified": 5,
+  "costs": {
+    "new_dynamics": 0,
+    "new_physical_substeps": 0,
+    "new_policy_inferences": 0,
+    "new_optimizer_updates": 0,
+    "new_published_transitions": 0,
+    "cumulative_dynamic": 208
+  },
+  "training_admission": false,
+  "automatic_tracking": "PAUSED",
+  "old_budgets": "closed",
+  "checks": "six hand cases plus 21 prior pure archive tests; independent raw arithmetic and source hashes",
+  "scope": "offline stage evidence only, no full-repository/physics/paper/B.2/C acceptance claim"
+}

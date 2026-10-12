@@ -1,0 +1,66 @@
+test_complete_tensor_archive_state_real_disk_roundtrip (test_protocol.WriterTests.test_complete_tensor_archive_state_real_disk_roundtrip) ... FAIL
+test_duplicate_final_never_overwrites (test_protocol.WriterTests.test_duplicate_final_never_overwrites) ... FAIL
+test_independent_process_loads_complete_zero_update_state (test_protocol.WriterTests.test_independent_process_loads_complete_zero_update_state) ... FAIL
+test_manifest_failure_keeps_staging_not_loadable_final (test_protocol.WriterTests.test_manifest_failure_keeps_staging_not_loadable_final) ... FAIL
+test_original_dataset_bytes_survive_without_reserialization (test_protocol.WriterTests.test_original_dataset_bytes_survive_without_reserialization) ... FAIL
+test_original_production_failure_reproduced (test_protocol.WriterTests.test_original_production_failure_reproduced) ... ok
+
+======================================================================
+FAIL: test_complete_tensor_archive_state_real_disk_roundtrip (test_protocol.WriterTests.test_complete_tensor_archive_state_real_disk_roundtrip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 32, in test_complete_tensor_archive_state_real_disk_roundtrip
+    f=self.fixed();pin=f.Branch.save(self.branch(),self.output);m=C.read(self.output/'manifest.json')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 29, in fixed
+    def fixed(self):self.assertIsNotNone(F,'Missing corrected real checkpoint writer');return F
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing corrected real checkpoint writer
+
+======================================================================
+FAIL: test_duplicate_final_never_overwrites (test_protocol.WriterTests.test_duplicate_final_never_overwrites)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 38, in test_duplicate_final_never_overwrites
+    f=self.fixed();pin=f.Branch.save(self.branch(),self.output)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 29, in fixed
+    def fixed(self):self.assertIsNotNone(F,'Missing corrected real checkpoint writer');return F
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing corrected real checkpoint writer
+
+======================================================================
+FAIL: test_independent_process_loads_complete_zero_update_state (test_protocol.WriterTests.test_independent_process_loads_complete_zero_update_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 53, in test_independent_process_loads_complete_zero_update_state
+    f=self.fixed();pin=f.Branch.save(self.branch(),self.output)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 29, in fixed
+    def fixed(self):self.assertIsNotNone(F,'Missing corrected real checkpoint writer');return F
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing corrected real checkpoint writer
+
+======================================================================
+FAIL: test_manifest_failure_keeps_staging_not_loadable_final (test_protocol.WriterTests.test_manifest_failure_keeps_staging_not_loadable_final)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 43, in test_manifest_failure_keeps_staging_not_loadable_final
+    f=self.fixed()
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 29, in fixed
+    def fixed(self):self.assertIsNotNone(F,'Missing corrected real checkpoint writer');return F
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing corrected real checkpoint writer
+
+======================================================================
+FAIL: test_original_dataset_bytes_survive_without_reserialization (test_protocol.WriterTests.test_original_dataset_bytes_survive_without_reserialization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 48, in test_original_dataset_bytes_survive_without_reserialization
+    f=self.fixed();f.Branch.save(self.branch(),self.output)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_checkpoint_write_fix_20261001\test_protocol.py", line 29, in fixed
+    def fixed(self):self.assertIsNotNone(F,'Missing corrected real checkpoint writer');return F
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing corrected real checkpoint writer
+
+----------------------------------------------------------------------
+Ran 6 tests in 34.666s
+
+FAILED (failures=5)

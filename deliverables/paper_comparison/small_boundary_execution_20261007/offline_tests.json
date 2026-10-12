@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "tests_passed": 53,
+  "pytest_exit": 0,
+  "test_source_sha256": {
+    "test_small_bound_budget.py": "f276938400855d2af01476489cceb3e4c330b89054693526394897c35aa9fa26",
+    "test_small_bound_checkpoint.py": "1f806d038cc27e8e1b1f06c37adf6abc5c5c052bbb0dbf84b1ca2a26ab2eb6e6",
+    "test_small_bound_profile.py": "26bb9b4b23d020dda451c35c9f7eaf7c1355d74ceb959143cdb192e7f72aa2d6"
+  },
+  "output": ".....................................................                    [100%]\n53 passed in 3.62s\nFailed to find real location of D:\\KEYANRUJIAN\\python.exe\n",
+  "inspect_exit": 0,
+  "inspect_output": "{\"status\": \"OFFLINE_CANDIDATE_NOT_ADMITTED\", \"profile_sha256\": \"b96ba75cd5f1ab0345714625ea5873a764e9cb98f273deec3c4494d93df79a01\", \"fixed_attempts\": 21, \"formal_update_budget_proposed\": 2000, \"actual_new_compute\": 0, \"numeric_gate\": \"pending separate authorization\", \"runtime_backend\": \"pending numerical integration gate\"}\n",
+  "unadmitted_execute_exit": 1,
+  "unadmitted_execute_output": "Failed to find real location of D:\\KEYANRUJIAN\\python.exe\nTraceback (most recent call last):\n  File \"D:\\dsub9��Ŀ�ƻ�\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\paper_comparison\\small_boundary_execution_20261007\\run_small_bound_pilot.py\", line 236, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"D:\\dsub9��Ŀ�ƻ�\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\paper_comparison\\small_boundary_execution_20261007\\run_small_bound_pilot.py\", line 230, in main\n    verify_admission(candidate,None,None)\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\dsub9��Ŀ�ƻ�\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\paper_comparison\\small_boundary_execution_20261007\\run_small_bound_pilot.py\", line 43, in verify_admission\n    raise PermissionError('PC12 offline candidate is not numerical/physical/training admission')\nPermissionError: PC12 offline candidate is not numerical/physical/training admission\n",
+  "scope": "pure commands/protocol and admission rejection only; no torch learner, NN forward, optimizer or dynamics",
+  "excludes": "full historical suite and actual numeric checkpoint serialization/restore"
+}

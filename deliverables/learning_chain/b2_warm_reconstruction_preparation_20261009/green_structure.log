@@ -1,0 +1,9 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_dictionary_reordering_preserves_semantic_identity (test_state_structure.DigestStructureTests.test_dictionary_reordering_preserves_semantic_identity) ... ok
+test_moving_envelope_fields_into_warm_state_changes_digest (test_state_structure.DigestStructureTests.test_moving_envelope_fields_into_warm_state_changes_digest) ... ok
+test_numeric_types_and_sequence_boundaries_remain_distinct (test_state_structure.DigestStructureTests.test_numeric_types_and_sequence_boundaries_remain_distinct) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

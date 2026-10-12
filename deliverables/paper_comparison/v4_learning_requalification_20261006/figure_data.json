@@ -1,0 +1,560 @@
+{
+  "frozen": [
+    {
+      "method": "F50",
+      "case": "y_neg_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 10.236000000002822
+    },
+    {
+      "method": "F50",
+      "case": "y_pos_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 13.927999999994217
+    },
+    {
+      "method": "F50",
+      "case": "x_pos_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 11.457999999999974
+    },
+    {
+      "method": "F50",
+      "case": "x_neg_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 12.85799999999671
+    },
+    {
+      "method": "F50",
+      "case": "aligned",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 4.34000000000031
+    },
+    {
+      "method": "S50",
+      "case": "y_neg_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 10.7600000000016
+    },
+    {
+      "method": "S50",
+      "case": "y_pos_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 13.195999999995923
+    },
+    {
+      "method": "S50",
+      "case": "x_pos_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 11.332000000000267
+    },
+    {
+      "method": "S50",
+      "case": "x_neg_150",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 12.995999999996389
+    },
+    {
+      "method": "S50",
+      "case": "aligned",
+      "measured": true,
+      "outcome": "FULL_SUCCESS",
+      "plotted_time_s": 4.330000000000289
+    }
+  ],
+  "training": {
+    "F50": [
+      {
+        "updates": 50,
+        "critic_loss": 8.379108095169068,
+        "weighted_entropy": 0.026560191214084625,
+        "absolute_physical_reward": 0.0023880825960077346
+      },
+      {
+        "updates": 100,
+        "critic_loss": 2.2832451128959654,
+        "weighted_entropy": 0.05482102543115616,
+        "absolute_physical_reward": 0.0008291988691780716
+      },
+      {
+        "updates": 150,
+        "critic_loss": 1.3990140295028686,
+        "weighted_entropy": 0.06834305502474308,
+        "absolute_physical_reward": 0.003946669265860692
+      },
+      {
+        "updates": 200,
+        "critic_loss": 0.9518307888507843,
+        "weighted_entropy": 0.055567978024482725,
+        "absolute_physical_reward": 0.002384041278855875
+      },
+      {
+        "updates": 250,
+        "critic_loss": 0.575467336177826,
+        "weighted_entropy": 0.04304223656654358,
+        "absolute_physical_reward": 0.002384698378155008
+      },
+      {
+        "updates": 300,
+        "critic_loss": 0.33267916649580004,
+        "weighted_entropy": 0.036295854188501835,
+        "absolute_physical_reward": 0.0008134651137515903
+      },
+      {
+        "updates": 350,
+        "critic_loss": 0.1879858534038067,
+        "weighted_entropy": 0.036295064091682434,
+        "absolute_physical_reward": 0.0023899874836206436
+      },
+      {
+        "updates": 400,
+        "critic_loss": 0.10239658258855343,
+        "weighted_entropy": 0.03263033486902714,
+        "absolute_physical_reward": 0.0016005073639098555
+      },
+      {
+        "updates": 450,
+        "critic_loss": 0.07579714328050613,
+        "weighted_entropy": 0.0311003577709198,
+        "absolute_physical_reward": 0.0015999397449195385
+      },
+      {
+        "updates": 500,
+        "critic_loss": 0.05062601275742054,
+        "weighted_entropy": 0.031033892333507538,
+        "absolute_physical_reward": 0.0023744437377899883
+      },
+      {
+        "updates": 550,
+        "critic_loss": 0.0620081465318799,
+        "weighted_entropy": 0.03092572282999754,
+        "absolute_physical_reward": 0.0031865176488645374
+      },
+      {
+        "updates": 600,
+        "critic_loss": 0.03302280433475971,
+        "weighted_entropy": 0.02865123648196459,
+        "absolute_physical_reward": 0.003167827340075746
+      },
+      {
+        "updates": 650,
+        "critic_loss": 0.021838502809405327,
+        "weighted_entropy": 0.028269409090280532,
+        "absolute_physical_reward": 0.0023970413592178373
+      },
+      {
+        "updates": 700,
+        "critic_loss": 0.015829262752085925,
+        "weighted_entropy": 0.026543334014713763,
+        "absolute_physical_reward": 0.0016108492028433829
+      },
+      {
+        "updates": 750,
+        "critic_loss": 0.014297683238983155,
+        "weighted_entropy": 0.02425349276512861,
+        "absolute_physical_reward": 0.0008177670009899884
+      },
+      {
+        "updates": 800,
+        "critic_loss": 0.01198760467581451,
+        "weighted_entropy": 0.02367326833307743,
+        "absolute_physical_reward": 0.003177510375389829
+      },
+      {
+        "updates": 850,
+        "critic_loss": 0.010054307794198393,
+        "weighted_entropy": 0.022438885122537614,
+        "absolute_physical_reward": 0.0015973014873452485
+      },
+      {
+        "updates": 900,
+        "critic_loss": 0.009665140165016056,
+        "weighted_entropy": 0.02152026366442442,
+        "absolute_physical_reward": 0.0008336679346393794
+      },
+      {
+        "updates": 950,
+        "critic_loss": 0.008210223317146301,
+        "weighted_entropy": 0.020038016140460968,
+        "absolute_physical_reward": 0.0016087767097633333
+      },
+      {
+        "updates": 1000,
+        "critic_loss": 0.007528765629976988,
+        "weighted_entropy": 0.018665744327008724,
+        "absolute_physical_reward": 0.0016110092541202902
+      },
+      {
+        "updates": 1050,
+        "critic_loss": 0.006449377606622874,
+        "weighted_entropy": 0.018312586843967436,
+        "absolute_physical_reward": 0.002420071318047121
+      },
+      {
+        "updates": 1100,
+        "critic_loss": 0.005163059956394136,
+        "weighted_entropy": 0.016425013802945615,
+        "absolute_physical_reward": 0.001602121937321499
+      },
+      {
+        "updates": 1150,
+        "critic_loss": 0.004852933515794575,
+        "weighted_entropy": 0.015868878066539763,
+        "absolute_physical_reward": 0.0008349620515946299
+      },
+      {
+        "updates": 1200,
+        "critic_loss": 0.005178272724151611,
+        "weighted_entropy": 0.014451798554509877,
+        "absolute_physical_reward": 0.0024003762647043913
+      },
+      {
+        "updates": 1250,
+        "critic_loss": 0.003360156679991633,
+        "weighted_entropy": 0.013516697455197573,
+        "absolute_physical_reward": 0.002398724918020889
+      },
+      {
+        "updates": 1300,
+        "critic_loss": 0.0036354807880707085,
+        "weighted_entropy": 0.013502200972288847,
+        "absolute_physical_reward": 0.0031734514283016323
+      },
+      {
+        "updates": 1350,
+        "critic_loss": 0.0035242463322356344,
+        "weighted_entropy": 0.013084981348365545,
+        "absolute_physical_reward": 0.002406364915659651
+      },
+      {
+        "updates": 1400,
+        "critic_loss": 0.0028863750211894513,
+        "weighted_entropy": 0.01266343031078577,
+        "absolute_physical_reward": 0.002389496442629024
+      },
+      {
+        "updates": 1450,
+        "critic_loss": 0.0021703987242653964,
+        "weighted_entropy": 0.012199595179408789,
+        "absolute_physical_reward": 0.0016261775279417634
+      },
+      {
+        "updates": 1500,
+        "critic_loss": 0.0023104636813513933,
+        "weighted_entropy": 0.011813490390777589,
+        "absolute_physical_reward": 0.0016032259946223348
+      },
+      {
+        "updates": 1550,
+        "critic_loss": 0.002941593979485333,
+        "weighted_entropy": 0.011726973205804824,
+        "absolute_physical_reward": 0.0024057402089238166
+      },
+      {
+        "updates": 1600,
+        "critic_loss": 0.0021681543020531536,
+        "weighted_entropy": 0.012277188636362553,
+        "absolute_physical_reward": 0.001625174111686647
+      },
+      {
+        "updates": 1650,
+        "critic_loss": 0.002315530579071492,
+        "weighted_entropy": 0.01201552890241146,
+        "absolute_physical_reward": 0.002425147510366514
+      },
+      {
+        "updates": 1700,
+        "critic_loss": 0.0020009767229203137,
+        "weighted_entropy": 0.011969222184270621,
+        "absolute_physical_reward": 0.0016238564695231616
+      },
+      {
+        "updates": 1750,
+        "critic_loss": 0.0019503393804188819,
+        "weighted_entropy": 0.01119869451969862,
+        "absolute_physical_reward": 0.00320218188688159
+      },
+      {
+        "updates": 1800,
+        "critic_loss": 0.0017501235310919583,
+        "weighted_entropy": 0.0114189662784338,
+        "absolute_physical_reward": 0.004745830486062914
+      },
+      {
+        "updates": 1850,
+        "critic_loss": 0.0015680013864766806,
+        "weighted_entropy": 0.011257471293210983,
+        "absolute_physical_reward": 0.001615485881920904
+      },
+      {
+        "updates": 1900,
+        "critic_loss": 0.0014492799795698375,
+        "weighted_entropy": 0.010896586906164884,
+        "absolute_physical_reward": 0.0031991801445838066
+      },
+      {
+        "updates": 1950,
+        "critic_loss": 0.0013832682650536299,
+        "weighted_entropy": 0.010936917942017317,
+        "absolute_physical_reward": 0.002415236671222374
+      },
+      {
+        "updates": 2000,
+        "critic_loss": 0.0013478035747539253,
+        "weighted_entropy": 0.010562553517520428,
+        "absolute_physical_reward": 0.003965452935080976
+      }
+    ],
+    "S50": [
+      {
+        "updates": 50,
+        "critic_loss": 12.163172006607056,
+        "weighted_entropy": 0.03038118027150631,
+        "absolute_physical_reward": 0.001043442675145343
+      },
+      {
+        "updates": 100,
+        "critic_loss": 2.282421511411667,
+        "weighted_entropy": 0.06906554579734803,
+        "absolute_physical_reward": 0.0005731507140444591
+      },
+      {
+        "updates": 150,
+        "critic_loss": 1.013806186914444,
+        "weighted_entropy": 0.041138748973608016,
+        "absolute_physical_reward": 0.0021405696362489833
+      },
+      {
+        "updates": 200,
+        "critic_loss": 0.5917494529485703,
+        "weighted_entropy": 0.03751637849956751,
+        "absolute_physical_reward": 0.0018399469210999087
+      },
+      {
+        "updates": 250,
+        "critic_loss": 0.340368934571743,
+        "weighted_entropy": 0.03708736024796963,
+        "absolute_physical_reward": 0.0007404294615844264
+      },
+      {
+        "updates": 300,
+        "critic_loss": 0.19322942376136779,
+        "weighted_entropy": 0.03533459272235632,
+        "absolute_physical_reward": 0.0029219532757997512
+      },
+      {
+        "updates": 350,
+        "critic_loss": 0.13049467891454697,
+        "weighted_entropy": 0.030963942892849445,
+        "absolute_physical_reward": 0.0015193324547726661
+      },
+      {
+        "updates": 400,
+        "critic_loss": 0.09311379916965962,
+        "weighted_entropy": 0.02646011535078287,
+        "absolute_physical_reward": 0.0005843646998982876
+      },
+      {
+        "updates": 450,
+        "critic_loss": 0.04691752396523952,
+        "weighted_entropy": 0.027358161211013796,
+        "absolute_physical_reward": 0.0005775199260096997
+      },
+      {
+        "updates": 500,
+        "critic_loss": 0.03952122204005718,
+        "weighted_entropy": 0.02632319875061512,
+        "absolute_physical_reward": 0.0015128366672433912
+      },
+      {
+        "updates": 550,
+        "critic_loss": 0.03887205090373755,
+        "weighted_entropy": 0.022566640675067903,
+        "absolute_physical_reward": 0.0015556412714067846
+      },
+      {
+        "updates": 600,
+        "critic_loss": 0.028951952587813138,
+        "weighted_entropy": 0.021078078970313073,
+        "absolute_physical_reward": 0.0007555131218396127
+      },
+      {
+        "updates": 650,
+        "critic_loss": 0.02468376010656357,
+        "weighted_entropy": 0.020119869858026506,
+        "absolute_physical_reward": 0.002169137443415821
+      },
+      {
+        "updates": 700,
+        "critic_loss": 0.021496636644005775,
+        "weighted_entropy": 0.01889593753963709,
+        "absolute_physical_reward": 0.0013916719635017217
+      },
+      {
+        "updates": 750,
+        "critic_loss": 0.02363091954961419,
+        "weighted_entropy": 0.02008894447237253,
+        "absolute_physical_reward": 0.0015505665144883096
+      },
+      {
+        "updates": 800,
+        "critic_loss": 0.022408731188625096,
+        "weighted_entropy": 0.01989569276571274,
+        "absolute_physical_reward": 0.0007768463704269379
+      },
+      {
+        "updates": 850,
+        "critic_loss": 0.02175359956920147,
+        "weighted_entropy": 0.019967968687415124,
+        "absolute_physical_reward": 0.0013956500042695552
+      },
+      {
+        "updates": 900,
+        "critic_loss": 0.02085847467184067,
+        "weighted_entropy": 0.019033101201057435,
+        "absolute_physical_reward": 0.00296330300392583
+      },
+      {
+        "updates": 950,
+        "critic_loss": 0.023558526542037727,
+        "weighted_entropy": 0.018902648184448482,
+        "absolute_physical_reward": 0.0006158971239347011
+      },
+      {
+        "updates": 1000,
+        "critic_loss": 0.022281634658575057,
+        "weighted_entropy": 0.01748450117185712,
+        "absolute_physical_reward": 0.003109135306440294
+      },
+      {
+        "updates": 1050,
+        "critic_loss": 0.01938741346821189,
+        "weighted_entropy": 0.015848052240908145,
+        "absolute_physical_reward": 0.0023596944240853192
+      },
+      {
+        "updates": 1100,
+        "critic_loss": 0.01682731492444873,
+        "weighted_entropy": 0.0150196080096066,
+        "absolute_physical_reward": 0.0006299609458073974
+      },
+      {
+        "updates": 1150,
+        "critic_loss": 0.016345407641492785,
+        "weighted_entropy": 0.014339654333889484,
+        "absolute_physical_reward": 0.0008015521347988397
+      },
+      {
+        "updates": 1200,
+        "critic_loss": 0.016201988514512777,
+        "weighted_entropy": 0.013960996326059103,
+        "absolute_physical_reward": 0.0014166467566974462
+      },
+      {
+        "updates": 1250,
+        "critic_loss": 0.01473635781556368,
+        "weighted_entropy": 0.01420500997453928,
+        "absolute_physical_reward": 0.001725372637156397
+      },
+      {
+        "updates": 1300,
+        "critic_loss": 0.01778586040250957,
+        "weighted_entropy": 0.01460650224238634,
+        "absolute_physical_reward": 0.0007968112442176789
+      },
+      {
+        "updates": 1350,
+        "critic_loss": 0.015968475113622843,
+        "weighted_entropy": 0.01510130576789379,
+        "absolute_physical_reward": 0.002211947621544823
+      },
+      {
+        "updates": 1400,
+        "critic_loss": 0.01732883580029011,
+        "weighted_entropy": 0.014941310398280621,
+        "absolute_physical_reward": 0.0021892903419211507
+      },
+      {
+        "updates": 1450,
+        "critic_loss": 0.016712785940617324,
+        "weighted_entropy": 0.015040551498532295,
+        "absolute_physical_reward": 0.0006455517478752881
+      },
+      {
+        "updates": 1500,
+        "critic_loss": 0.017423172695562244,
+        "weighted_entropy": 0.01695518145337701,
+        "absolute_physical_reward": 0.0006308489688672125
+      },
+      {
+        "updates": 1550,
+        "critic_loss": 0.01939934177324176,
+        "weighted_entropy": 0.014887615665793419,
+        "absolute_physical_reward": 0.0022386445791926237
+      },
+      {
+        "updates": 1600,
+        "critic_loss": 0.019543169531971216,
+        "weighted_entropy": 0.015279459916055203,
+        "absolute_physical_reward": 0.0015968629298731684
+      },
+      {
+        "updates": 1650,
+        "critic_loss": 0.015777787398546933,
+        "weighted_entropy": 0.01498170781880617,
+        "absolute_physical_reward": 0.0016031208948697896
+      },
+      {
+        "updates": 1700,
+        "critic_loss": 0.016962571507319807,
+        "weighted_entropy": 0.013769758138805628,
+        "absolute_physical_reward": 0.0014282847999129444
+      },
+      {
+        "updates": 1750,
+        "critic_loss": 0.018964953254908323,
+        "weighted_entropy": 0.015208176244050265,
+        "absolute_physical_reward": 0.001603180734673515
+      },
+      {
+        "updates": 1800,
+        "critic_loss": 0.01690386443398893,
+        "weighted_entropy": 0.016282946355640888,
+        "absolute_physical_reward": 0.003781850544037297
+      },
+      {
+        "updates": 1850,
+        "critic_loss": 0.02003760132007301,
+        "weighted_entropy": 0.017213781978935003,
+        "absolute_physical_reward": 0.0006531195773277432
+      },
+      {
+        "updates": 1900,
+        "critic_loss": 0.016690559638664126,
+        "weighted_entropy": 0.016754116863012314,
+        "absolute_physical_reward": 0.0017453723249491303
+      },
+      {
+        "updates": 1950,
+        "critic_loss": 0.017184573300182818,
+        "weighted_entropy": 0.01763906143605709,
+        "absolute_physical_reward": 0.0023838254692964255
+      },
+      {
+        "updates": 2000,
+        "critic_loss": 0.017289159521460533,
+        "weighted_entropy": 0.017975894343107937,
+        "absolute_physical_reward": 0.0030136788613162936
+      }
+    ]
+  }
+}

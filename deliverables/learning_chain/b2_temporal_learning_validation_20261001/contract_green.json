@@ -1,0 +1,10 @@
+{
+  "tests": 1,
+  "failures": 0,
+  "errors": 1,
+  "actual_calls": {
+    "model_forward": 0,
+    "optimizer": 0,
+    "physics": 0
+  }
+}

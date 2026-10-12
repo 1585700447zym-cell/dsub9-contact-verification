@@ -1,0 +1,6 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+F50 1 SEARCH segments 2400 cycles
+F12.5 1 SEARCH segments 3117 cycles
+G50 2 SEARCH segments 7440 cycles
+S50 1 SEARCH segments 2669 cycles
+{"archives": 4, "archive_cycles": 28465, "search_segments": 5, "search_cycles": 15626, "sources": {"sealed_file_counts": {"contact_gate_probe_20261007": 78, "residual_effect_diagnosis_20261007": 27, "frozen_comparison_20261007": 96, "v4_learning_requalification_20261006": 457}, "production_inputs_unchanged": 1057}, "new_dynamics": 0}

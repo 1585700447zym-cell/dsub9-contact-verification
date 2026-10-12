@@ -1,0 +1,27 @@
+test_reader_guard_rejects_wrong_worker_and_stop_fence (test_protocol.RestartTests.test_reader_guard_rejects_wrong_worker_and_stop_fence) ... FAIL
+test_real_reader_chain_accepts_worker_child_and_checks_registered_root (test_protocol.RestartTests.test_real_reader_chain_accepts_worker_child_and_checks_registered_root) ... FAIL
+test_zero_reader_failure_blocks_worker_before_initial_and_updates (test_protocol.RestartTests.test_zero_reader_failure_blocks_worker_before_initial_and_updates) ... ok
+
+======================================================================
+FAIL: test_reader_guard_rejects_wrong_worker_and_stop_fence (test_protocol.RestartTests.test_reader_guard_rejects_wrong_worker_and_stop_fence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_restart_20261001\test_protocol.py", line 25, in test_reader_guard_rejects_wrong_worker_and_stop_fence
+    self.assertTrue(hasattr(V,'reader_guard'),'Missing qualified reader ancestry guard')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing qualified reader ancestry guard
+
+======================================================================
+FAIL: test_real_reader_chain_accepts_worker_child_and_checks_registered_root (test_protocol.RestartTests.test_real_reader_chain_accepts_worker_child_and_checks_registered_root)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_restart_20261001\test_protocol.py", line 21, in test_real_reader_chain_accepts_worker_child_and_checks_registered_root
+    self.assertEqual(worker.returncode,0,worker.stderr+worker.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : {"returncode": 1, "stdout": "", "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import sys; sys.path.insert(0,sys.argv[3]); import run_validation as V,json; from pathlib import Path; V.HERE=Path(sys.argv[1]); print(json.dumps(V.reader_guard(int(sys.argv[2]))))\n                                                                                                                                                      ^^^^^^^^^^^^^^\nAttributeError: module 'run_validation' has no attribute 'reader_guard'\n"}
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.579s
+
+FAILED (failures=2)

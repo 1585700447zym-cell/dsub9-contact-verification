@@ -1,0 +1,472 @@
+{
+  "stage_id": "B2-SCOPE-08",
+  "status": "OFFLINE_EVIDENCE_REVIEW_COMPLETE",
+  "source_sha256": {
+    "tools/control/search_recovery.py": "572824a235a01d0a15b47eb0fe6aa2efe25412f0cba7dc018228f120ee8414d5",
+    "tools/control/risk_search.py": "e6ca2845444c4cf270b71eb0fdd5a1ffb92c01b4ebc45b857c3a603c96a7d6d8",
+    "tools/control/load_search.py": "07fe18d5a302ddc362aae8c5b5ce607c001ec10b39412d90773e1c56ea91223a",
+    "tools/control/axis_search.py": "0a4bc90a12e24f980dc4e6411ada4c3b13b69b9852b333ce4144872d82984201",
+    "tools/control/reference_search.py": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+    "tools/learning/session.py": "9318d696b38a252368b98e1a6ae52b5b6f5043a6368c701e79376f41077b2be3",
+    "tools/learning/observation.py": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+    "tools/learning/v4_observation.py": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+    "tools/learning/v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219",
+    "tools/learning/v4_session.py": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+    "tools/validation/run_v4_adapter_preflight.py": "762af4b6bb5e212d65efd08a57865908d777a0a55d74de40cef3e91c93f8babe",
+    "tests/learning/test_recovery.py": "6a871d745850efb4e4993f688795969939606dda842fddcda97ed3187812f26e",
+    "tests/learning/test_residual_recovery.py": "011131fb317aace1232f831429690c0b19e7acb24ff0699fe915cfbf015eb4dc",
+    "docs/stage_b/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86"
+  },
+  "history_reference_lines": {
+    "tools/control/search_recovery.py": [
+      54,
+      80,
+      81,
+      82,
+      104
+    ],
+    "tools/control/risk_search.py": [],
+    "tools/control/load_search.py": [],
+    "tools/control/axis_search.py": [],
+    "tools/control/reference_search.py": []
+  },
+  "episodes": [
+    {
+      "id": "J01_zero",
+      "archive_sha256": "5ee0bece351b57d7079fa23e40d4af48ebb6177f50f186230ab101e813009f82",
+      "cycles": 4840,
+      "search_vectors": 1165,
+      "clipped_search_vectors": 0,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 2005,
+          "time_s": 4.009999999999613,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.40199999999998837,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 269.52608750003856
+    },
+    {
+      "id": "J01_script",
+      "archive_sha256": "53e57b41c86b1d7c03eba4de74c32f81c3fdc79a89162917a4804e58028f60db",
+      "cycles": 4834,
+      "search_vectors": 1159,
+      "clipped_search_vectors": 0,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 1999,
+          "time_s": 3.9979999999995925,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.40199999999998837,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 260.2514693000121
+    },
+    {
+      "id": "J02_zero",
+      "archive_sha256": "05ff4de62c06c5b89e696ba57cc6ab61344f4e5a3c3968ae4e7ce7857c46a47f",
+      "cycles": 5098,
+      "search_vectors": 1422,
+      "clipped_search_vectors": 14,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 2262,
+          "time_s": 4.524000000000698,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.4020000000000037,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 276.52438739995705
+    },
+    {
+      "id": "J02_script",
+      "archive_sha256": "b94e5be72bfc16f34c5fc0a44fdc873912f1734205d8778a547225076170c188",
+      "cycles": 5096,
+      "search_vectors": 1420,
+      "clipped_search_vectors": 12,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 2260,
+          "time_s": 4.52000000000069,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.4020000000000037,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 275.89143899997
+    },
+    {
+      "id": "J03_zero",
+      "archive_sha256": "7c1c5561b2fe199e05e76607fd3575a6e35d5e88b94bb2a61f3aaee2cc8284af",
+      "cycles": 5501,
+      "search_vectors": 1807,
+      "clipped_search_vectors": 399,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 2666,
+          "time_s": 5.332000000002403,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.4020000000000037,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 328.82237929996336
+    },
+    {
+      "id": "J03_script",
+      "archive_sha256": "8ec6c6970ed60637efd621385f7d7210bac0d20e8b52b71c1f3e05e98f589b67",
+      "cycles": 5528,
+      "search_vectors": 1834,
+      "clipped_search_vectors": 426,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 2693,
+          "time_s": 5.386000000002517,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.4020000000000037,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 328.29538180003874
+    },
+    {
+      "id": "J04_zero",
+      "archive_sha256": "dae3f9a7ff02bc5a46e03b0e98d1a32607fb1adad5af223dd633027a6f9a9692",
+      "cycles": 5885,
+      "search_vectors": 2222,
+      "clipped_search_vectors": 814,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 3049,
+          "time_s": 6.09800000000402,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.4020000000000037,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 337.0146007000003
+    },
+    {
+      "id": "J04_script",
+      "archive_sha256": "5596d239241285852e78d2c08605456697c86766befacf0de0f72cc66b607a36",
+      "cycles": 5874,
+      "search_vectors": 2211,
+      "clipped_search_vectors": 803,
+      "search_history_frozen": true,
+      "return_insert": [
+        {
+          "cycle": 3038,
+          "time_s": 6.076000000003973,
+          "history_empty": true,
+          "stall_span_s": 0.0
+        }
+      ],
+      "max_active_insert_stall_span_s": 0.4020000000000037,
+      "search_timing_fields_unsaturated": true,
+      "existing_wall_seconds": 335.0386699999799
+    }
+  ],
+  "total_cycles": 42656,
+  "clipped_search_vectors": 2468,
+  "semantic_decision": "NO_OBSERVATION_CHANGE_REQUIRED_BY_THIS_CLIPPING_FINDING",
+  "semantic_limits": "No proof of complete Markov state or preservation of every predictor useful to a learned policy; controller ignores this historical field in SEARCH and clears it before INSERT.",
+  "natural_recovery": {
+    "source": "deliverables/paper_comparison/contact_gate_probe_20261007/run/probe_G50_y_neg_150.json.gz",
+    "sha256": "a8d47576247bfc635dce783413e641aca00e6bc4f1758b9547791ccf27bb3563",
+    "common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+    "initial_pose": {
+      "name": "y_neg_150",
+      "x_offset_m": 0.0,
+      "y_offset_m": -0.00015,
+      "roll_rad": 0,
+      "pitch_rad": 0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    "events": [
+      {
+        "time_s": 8.996000000005711,
+        "reason": "B2_SEARCH_EXHAUSTED",
+        "phase": "STOPPING"
+      },
+      {
+        "time_s": 9.01800000000566,
+        "reason": "RECOVERY_ACCEPTED",
+        "phase": "RETRACT"
+      },
+      {
+        "time_s": 9.56700000000438,
+        "reason": "RECOVERY_DISTANCE_REACHED",
+        "phase": "STOPPING"
+      },
+      {
+        "time_s": 9.590000000004327,
+        "phase": "RUNNING",
+        "reason": "B2_RECOVERY_RESUMED"
+      },
+      {
+        "time_s": 16.999999999987057,
+        "reason": "SEARCH_BUDGET_EXHAUSTED",
+        "phase": "STOPPING"
+      }
+    ],
+    "observed_retraction_control_boundary_m": 0.00025414316638944874,
+    "start_sample_time_s": 9.01800000000566,
+    "end_sample_time_s": 9.590000000004327,
+    "all_masked_recovery_cycles": 297,
+    "nonzero_requests_during_recovery": 0,
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "TASK_FAILURE",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": true
+    },
+    "joint_initial_pose_covered": false,
+    "limitation": "G50 and zero initial tilt; observed masking of zero requests does not stress nonzero F50 requests; task still failed after the second search."
+  },
+  "historical_test_evidence": [
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_recovery_return_is_not_new_progress_and_baseline_stays_frozen",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_gates_still_precede_search_and_load[timeout-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_gates_still_precede_search_and_load[radius-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_recovery_rejects_invalid_observation_before_consuming_retry[wrench]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_recovery_rejects_invalid_observation_before_consuming_retry[position]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_recovery_rejects_invalid_observation_before_consuming_retry[time]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_recovery_rejects_invalid_observation_before_consuming_retry[angle]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_axis_search",
+      "name": "test_recovery_rejects_invalid_observation_before_consuming_retry[type]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_compliant_search",
+      "name": "test_each_search_anchors_integral_to_current_state_including_recovery",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_compliant_search",
+      "name": "test_original_boundaries_win_before_composition_and_load_relief[timeout-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_compliant_search",
+      "name": "test_original_boundaries_win_before_composition_and_load_relief[radius-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_reference_search",
+      "name": "test_reference_gate_distinguishes_current_violation_from_next_search_exhaustion[ref1-prev1-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_reference_search",
+      "name": "test_invalid_drive_observation_never_mutates_state[recovery-ref_nan]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_reference_search",
+      "name": "test_invalid_drive_observation_never_mutates_state[recovery-ref_shape]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_reference_search",
+      "name": "test_invalid_drive_observation_never_mutates_state[recovery-previous_nan]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_reference_search",
+      "name": "test_invalid_drive_observation_never_mutates_state[recovery-previous_speed]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_reference_search",
+      "name": "test_invalid_drive_observation_never_mutates_state[recovery-missing]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_reference_search",
+      "name": "test_recovery_first_command_observes_reset_reference_without_physics",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_search_boundary_end",
+      "name": "test_recorded_infeasible_next_step_ends_search_without_spending_extra_retry[1-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_search_load",
+      "name": "test_original_search_boundaries_take_priority_over_new_load_trigger[timeout-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.task_variants.test_search_load",
+      "name": "test_original_search_boundaries_take_priority_over_new_load_trigger[radius-WAIT_RECOVERY-SEARCH_EXHAUSTED]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/paper_comparison/v4_learning_requalification_20261006/verification.xml",
+      "classname": "tests.learning.test_action",
+      "name": "test_stage_permission[WAIT_RECOVERY-STOPPING-False-False]",
+      "passed": true,
+      "current_source_qualification": true
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_action",
+      "name": "test_stage_permission[WAIT_RECOVERY-STOPPING-False-False]",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_guard_events",
+      "name": "test_latched_motion_blocks_recovery_even_after_state_returns_inside",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_recovery",
+      "name": "test_session_runs_actual_retraction_then_resumes_second_search",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_recovery",
+      "name": "test_wait_resume_rejects_insufficient_actual_retraction",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_recovery",
+      "name": "test_wait_stop_timeout_does_not_retry_or_reset_stop_segment",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_recovery",
+      "name": "test_latched_historical_load_prevents_recovery",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_recovery",
+      "name": "test_invalid_live_state_during_recovery_is_finalized_with_original_reason",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_residual_recovery",
+      "name": "test_nonzero_requests_stay_masked_through_actual_retraction",
+      "passed": true,
+      "current_source_qualification": false
+    },
+    {
+      "source": "deliverables/residual_interface/b1_closeout_20260926/learning_tests.xml",
+      "classname": "tests.learning.test_residual_session",
+      "name": "test_failed_observation_reset_closes_session_even_after_factory_recovers",
+      "passed": true,
+      "current_source_qualification": false
+    }
+  ],
+  "new_physics": 0,
+  "new_policy_forwards": 0,
+  "new_updates": 0,
+  "cumulative_dynamic": 225
+}

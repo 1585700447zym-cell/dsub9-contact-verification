@@ -1,0 +1,21 @@
+{
+  "before_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "56fb87efbb736b269b61032f0776242bc92743330ba2ba85fc277c0030cbcb13",
+    "研究推进计划_当前版.md": "870752aa86646e481182260e2694b5849f83ab8fe12bdb3f78ed44874978b1af",
+    "项目交付总览.md": "f3ad64fad1f567feb0eb877a9c7df961917334759b2ad99d8a2fdd5959583517",
+    "项目当前入口.md": "3dde4fbbd59ac2c5e68fc1e73f63b6e7ee854e84ccd32b8ad42ad819e90d79db",
+    "项目进度跟踪.md": "c8e6ae9f3949fca3017babfb56b350291d27680ff8abfb98a4e5be4a04fd218e"
+  },
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "checkpoint_loads": 0,
+  "cumulative_dynamic": 245,
+  "formal_updates": 0,
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "human_request": "继续：承接已说明的离线续训入口及匹配评价准备",
+  "physics": 0,
+  "previous_restore_seal": "84c60315821148f7d117a93870fd5831cb6e38825a62927134f53865bd6493a3",
+  "scope": "offline_trainable_continuation_candidate",
+  "stage_id": "B2-SCOPE-19",
+  "training_admitted": false
+}

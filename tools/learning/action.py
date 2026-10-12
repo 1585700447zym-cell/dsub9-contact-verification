@@ -2,6 +2,16 @@
 import numpy as np
 from tools.dynamics.safety import limit_command
 
+DEFAULT_ACTION_SCALE = (.00015, .00015, .005, .005)
+
+
+def validated_action_scale(scale):
+    value = np.asarray(scale, dtype=float)
+    if (value.shape != (4,) or not np.isfinite(value).all() or
+            np.any(value <= 0) or np.any(value > DEFAULT_ACTION_SCALE)):
+        raise ValueError('Finite positive shape4 scale within qualified maximum required')
+    return tuple(float(v) for v in value)
+
 
 def normalized_action(action4):
     try:
@@ -13,11 +23,12 @@ def normalized_action(action4):
     return value.copy()
 
 
-def map_residual(action4, *, enabled: bool):
+def map_residual(action4, *, enabled: bool, action_scale=DEFAULT_ACTION_SCALE):
     value = normalized_action(action4)
+    scale = validated_action_scale(action_scale)
     result = np.zeros(6)
     if enabled:
-        result[[0, 1, 3, 4]] = value * [.00015, .00015, .005, .005]
+        result[[0, 1, 3, 4]] = value * scale
     return result
 
 
@@ -37,9 +48,10 @@ def _stage_limit(command, phase):
     return result
 
 
-def compose_command(base_command, action4, *, phase, enabled, previous_limited, dt):
+def compose_command(base_command, action4, *, phase, enabled, previous_limited, dt,
+                    action_scale=DEFAULT_ACTION_SCALE):
     action = normalized_action(action4)
-    residual = map_residual(action, enabled=enabled)
+    residual = map_residual(action, enabled=enabled, action_scale=action_scale)
     baseline = _stage_limit(base_command, phase)
     total = _stage_limit(np.asarray(base_command) + residual, phase)
     # Counterfactual ONLY at the command limiter; not a causal physics estimate.
@@ -47,7 +59,7 @@ def compose_command(base_command, action4, *, phase, enabled, previous_limited, 
     acceleration = [.005]*3 + [.3]*3
     limited = limit_command(total, previous_limited, dt, velocity, acceleration)
     zero_limited = limit_command(baseline, previous_limited, dt, velocity, acceleration)
-    return total, dict(raw_action=action.tolist(), requested_residual=map_residual(action, enabled=True).tolist(),
+    return total, dict(raw_action=action.tolist(), requested_residual=map_residual(action, enabled=True, action_scale=action_scale).tolist(),
                        enabled=bool(enabled), applied_residual=residual.tolist(),
                        experience_action=(action if enabled else np.zeros(4)).tolist(),
                        stage_limited_total=total.tolist(), predicted_limited_command=limited.tolist(),

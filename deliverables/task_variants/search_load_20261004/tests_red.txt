@@ -1,0 +1,46 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+__ test_persistent_lateral_load_pauses_search_and_requires_reference_release __
+tests\task_variants\test_search_load.py:23: in test_persistent_lateral_load_pauses_search_and_requires_reference_release
+    c=controller();c.command(obs(.1),.002);c.command(obs(.118),.002)
+tests\task_variants\test_search_load.py:18: in controller
+    from tools.control.load_search import LoadSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.load_search'
+_______ test_load_clearing_resets_clock_and_axial_only_does_not_trigger _______
+tests\task_variants\test_search_load.py:34: in test_load_clearing_resets_clock_and_axial_only_does_not_trigger
+    c=controller();c.command(obs(.1),.002);c.command(obs(.118,fx=0.,fz=-.024),.002)
+tests\task_variants\test_search_load.py:18: in controller
+    from tools.control.load_search import LoadSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.load_search'
+________ test_existing_search_budget_cannot_be_extended_by_load_relief ________
+tests\task_variants\test_search_load.py:40: in test_existing_search_budget_cannot_be_extended_by_load_relief
+    c=controller();c.search_count=2;c.command(obs(.1),.002);c.command(obs(.12),.002)
+tests\task_variants\test_search_load.py:18: in controller
+    from tools.control.load_search import LoadSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.load_search'
+___________ test_invalid_observation_does_not_mutate_pending_state ____________
+tests\task_variants\test_search_load.py:46: in test_invalid_observation_does_not_mutate_pending_state
+    c=controller();c.command(obs(.1),.002);since=c.load_since
+tests\task_variants\test_search_load.py:18: in controller
+    from tools.control.load_search import LoadSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.load_search'
+______ test_reference_release_is_once_and_never_teleports_physical_state ______
+tests\task_variants\test_search_load.py:62: in test_reference_release_is_once_and_never_teleports_physical_state
+    s,snapshot=session_fixture();q=s.env.data.qpos.copy();v=s.env.data.qvel.copy();other=s.env.reference[2:].copy()
+tests\task_variants\test_search_load.py:52: in session_fixture
+    from tools.learning.load_session import LoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.load_session'
+______________ test_guarded_environment_never_releases_reference ______________
+tests\task_variants\test_search_load.py:75: in test_guarded_environment_never_releases_reference
+    s,snapshot=session_fixture();s.env.guard_facts['motion_reasons']=['ROTATION_LIMIT'];old=s.env.reference.copy()
+tests\task_variants\test_search_load.py:52: in session_fixture
+    from tools.learning.load_session import LoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.load_session'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_search_load.py::test_persistent_lateral_load_pauses_search_and_requires_reference_release
+FAILED tests/task_variants/test_search_load.py::test_load_clearing_resets_clock_and_axial_only_does_not_trigger
+FAILED tests/task_variants/test_search_load.py::test_existing_search_budget_cannot_be_extended_by_load_relief
+FAILED tests/task_variants/test_search_load.py::test_invalid_observation_does_not_mutate_pending_state
+FAILED tests/task_variants/test_search_load.py::test_reference_release_is_once_and_never_teleports_physical_state
+FAILED tests/task_variants/test_search_load.py::test_guarded_environment_never_releases_reference
+6 failed in 0.61s

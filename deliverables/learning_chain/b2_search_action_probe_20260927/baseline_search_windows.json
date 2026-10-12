@@ -1,0 +1,218 @@
+{
+  "posthoc": true,
+  "new_physical_rollouts": 0,
+  "optimizer_updates": 0,
+  "baseline_id": "zero_x_neg_100",
+  "windows": [
+    {
+      "start_s": 1.5259999999998646,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.008372463194401563,
+      "max_xy_motion_from_window_start_um": 0.008372151039549384,
+      "max_rotation_from_window_start_mrad": 0.0011592015684468975,
+      "min_contact_count": 1638,
+      "max_contact_count": 1638
+    },
+    {
+      "start_s": 1.7259999999998425,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.02190232889443968,
+      "max_xy_motion_from_window_start_um": 0.021900762368150795,
+      "max_rotation_from_window_start_mrad": 0.0031432011220271314,
+      "min_contact_count": 1211,
+      "max_contact_count": 1638
+    },
+    {
+      "start_s": 1.9259999999998205,
+      "duration_s": 0.1999999999999782,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.069830755772568,
+      "max_xy_motion_from_window_start_um": 0.06882629925070773,
+      "max_rotation_from_window_start_mrad": 0.010228193223399577,
+      "min_contact_count": 728,
+      "max_contact_count": 1195
+    },
+    {
+      "start_s": 2.1259999999997987,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.03273654703426921,
+      "max_xy_motion_from_window_start_um": 0.030954195655077274,
+      "max_rotation_from_window_start_mrad": 0.009188206784818244,
+      "min_contact_count": 728,
+      "max_contact_count": 1155
+    },
+    {
+      "start_s": 2.3259999999997767,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.033626681307908475,
+      "max_xy_motion_from_window_start_um": 0.033625698612561615,
+      "max_rotation_from_window_start_mrad": 0.0039672874778451895,
+      "min_contact_count": 1163,
+      "max_contact_count": 1456
+    },
+    {
+      "start_s": 2.5259999999997547,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.38552382480406966,
+      "max_xy_motion_from_window_start_um": 0.36582043292692795,
+      "max_rotation_from_window_start_mrad": 0.0809763100315065,
+      "min_contact_count": 423,
+      "max_contact_count": 1258
+    },
+    {
+      "start_s": 2.7259999999997326,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 1.2988277679747007,
+      "max_xy_motion_from_window_start_um": 1.226401280209828,
+      "max_rotation_from_window_start_mrad": 0.2618692372075391,
+      "min_contact_count": 220,
+      "max_contact_count": 417
+    },
+    {
+      "start_s": 2.9259999999997106,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.37337980929947506,
+      "max_xy_motion_from_window_start_um": 0.36530714386044366,
+      "max_rotation_from_window_start_mrad": 0.05070443569959595,
+      "min_contact_count": 203,
+      "max_contact_count": 220
+    },
+    {
+      "start_s": 3.1259999999996886,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 1.2988170405301935,
+      "max_xy_motion_from_window_start_um": 1.18899063900549,
+      "max_rotation_from_window_start_mrad": 0.3213795663063135,
+      "min_contact_count": 210,
+      "max_contact_count": 609
+    },
+    {
+      "start_s": 3.3259999999996666,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 0.18837246257034662,
+      "max_xy_motion_from_window_start_um": 0.17674143295750327,
+      "max_rotation_from_window_start_mrad": 0.04483399658264254,
+      "min_contact_count": 635,
+      "max_contact_count": 1552
+    },
+    {
+      "start_s": 3.5259999999996445,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 3.5930540338797057,
+      "max_xy_motion_from_window_start_um": 3.5926207800010768,
+      "max_rotation_from_window_start_mrad": 0.031189131482507765,
+      "min_contact_count": 184,
+      "max_contact_count": 1890
+    },
+    {
+      "start_s": 3.7259999999996225,
+      "duration_s": 0.19999999999997797,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 5.203348641295249,
+      "max_xy_motion_from_window_start_um": 5.181601570703807,
+      "max_rotation_from_window_start_mrad": 0.250425579194051,
+      "min_contact_count": 0,
+      "max_contact_count": 1971
+    },
+    {
+      "start_s": 3.9259999999996005,
+      "duration_s": 0.20000000000025775,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 2.073652958382539,
+      "max_xy_motion_from_window_start_um": 1.9714341527934727,
+      "max_rotation_from_window_start_mrad": 0.36771373401881097,
+      "min_contact_count": 129,
+      "max_contact_count": 212
+    },
+    {
+      "start_s": 4.125999999999858,
+      "duration_s": 0.20000000000042206,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 4.293506536767417,
+      "max_xy_motion_from_window_start_um": 4.280415059106892,
+      "max_rotation_from_window_start_mrad": 0.1840807068427223,
+      "min_contact_count": 4,
+      "max_contact_count": 129
+    },
+    {
+      "start_s": 4.32600000000028,
+      "duration_s": 0.20000000000042206,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 11.745356179256198,
+      "max_xy_motion_from_window_start_um": 11.730805422800287,
+      "max_rotation_from_window_start_mrad": 0.31740959699595855,
+      "min_contact_count": 3,
+      "max_contact_count": 33
+    },
+    {
+      "start_s": 4.526000000000702,
+      "duration_s": 0.20000000000042206,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 3.196574891851972,
+      "max_xy_motion_from_window_start_um": 3.086612948205219,
+      "max_rotation_from_window_start_mrad": 0.5141546528227046,
+      "min_contact_count": 9,
+      "max_contact_count": 1600
+    },
+    {
+      "start_s": 4.726000000001124,
+      "duration_s": 0.20000000000042206,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 2.2672011486990264,
+      "max_xy_motion_from_window_start_um": 2.267139274590843,
+      "max_rotation_from_window_start_mrad": 0.016837125617114007,
+      "min_contact_count": 362,
+      "max_contact_count": 1647
+    },
+    {
+      "start_s": 4.9260000000015465,
+      "duration_s": 0.20000000000042206,
+      "cycles": 100,
+      "full_0_2s": true,
+      "max_motion_from_window_start_um": 13.24722824408162,
+      "max_xy_motion_from_window_start_um": 13.24426917966394,
+      "max_rotation_from_window_start_mrad": 0.04014567635113742,
+      "min_contact_count": 0,
+      "max_contact_count": 1598
+    },
+    {
+      "start_s": 5.1260000000019685,
+      "duration_s": 0.18600000000039252,
+      "cycles": 93,
+      "full_0_2s": false,
+      "max_motion_from_window_start_um": 130.1349162163105,
+      "max_xy_motion_from_window_start_um": 82.61090533490173,
+      "max_rotation_from_window_start_mrad": 0.1645031688111277,
+      "min_contact_count": 0,
+      "max_contact_count": 497
+    }
+  ],
+  "limitation": "Baseline self-motion, not residual causal effect; timing context only. Does not alter preregistered pulse window or gates."
+}

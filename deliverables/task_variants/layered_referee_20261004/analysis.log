@@ -1,0 +1,1 @@
+{"status": "complete", "episodes": 5, "unused_closed": 0, "cumulative": 130, "functional_success": 5, "strict_precision_success": 1, "control_cycles": 36165, "physical_substeps": 361650, "wall_seconds": 1093.362841500013, "training_updates": 0, "network_calls": 0, "independent_tests": 0, "inputs_unchanged": true}

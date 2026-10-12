@@ -1,0 +1,795 @@
+{
+  "archive_recount_passed": true,
+  "raw_archives": 8,
+  "stop_audits_recomputed": 8,
+  "source_inputs_verified": 814,
+  "outcomes": {
+    "TASK_FAILURE": 5,
+    "MOTION_VIOLATION": 1,
+    "CONTACT_GUARD": 2
+  },
+  "totals": {
+    "trace_cycles": 34778,
+    "physical_steps": 347780,
+    "contact_cases": 8,
+    "effect_cases": 8,
+    "max_rotation_deg": 2.5039324911868848,
+    "max_force_N": 0.025001242370413516,
+    "max_penetration_m": 0.000007340108029484421,
+    "rotation_trigger_cases": 1,
+    "contact_rotation_trigger_cases": 0
+  },
+  "training_admitted": false,
+  "parameter_frozen": false,
+  "runs": [
+    {
+      "id": "center_roll_neg",
+      "task_outcome": "TASK_FAILURE",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 3048,
+      "physical_steps": 30480,
+      "max_rotation_deg": 1.1238729068073359,
+      "peak_force_N": 0.006317254879380581,
+      "peak_penetration_m": 2.40756830136306e-7,
+      "contact_cycles": 244,
+      "command_effect_cycles": 2048,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 500,
+          "effect_cycles": 500
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 2048,
+          "enabled_cycles": 1048,
+          "effect_cycles": 1048
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0196152825977474,
+        "checked_substeps": 30480
+      },
+      "boundary_observations": [],
+      "events": [
+        {
+          "time_s": 4.095999999999795,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 6.0960000000040155,
+      "stop_start_s": 4.095999999999795,
+      "rotation_triggered": false,
+      "contact_rotation_triggered": false,
+      "boundary_context": []
+    },
+    {
+      "id": "center_roll_pos",
+      "task_outcome": "TASK_FAILURE",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 3046,
+      "physical_steps": 30460,
+      "max_rotation_deg": 1.1241508663244213,
+      "peak_force_N": 0.00652104376890134,
+      "peak_penetration_m": 2.39957102864596e-7,
+      "contact_cycles": 250,
+      "command_effect_cycles": 2046,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 500,
+          "effect_cycles": 500
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 2046,
+          "enabled_cycles": 1046,
+          "effect_cycles": 1046
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.019620133906507797,
+        "checked_substeps": 30460
+      },
+      "boundary_observations": [],
+      "events": [
+        {
+          "time_s": 4.0919999999997865,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 6.092000000004007,
+      "stop_start_s": 4.0919999999997865,
+      "rotation_triggered": false,
+      "contact_rotation_triggered": false,
+      "boundary_context": []
+    },
+    {
+      "id": "center_pitch_neg",
+      "task_outcome": "TASK_FAILURE",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 3045,
+      "physical_steps": 30450,
+      "max_rotation_deg": 1.165762645607687,
+      "peak_force_N": 0.004926902454737774,
+      "peak_penetration_m": 2.606528119852153e-7,
+      "contact_cycles": 27,
+      "command_effect_cycles": 2045,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 500,
+          "effect_cycles": 500
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 2045,
+          "enabled_cycles": 1045,
+          "effect_cycles": 1045
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.02034639646261395,
+        "checked_substeps": 30450
+      },
+      "boundary_observations": [],
+      "events": [
+        {
+          "time_s": 4.089999999999782,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 6.090000000004003,
+      "stop_start_s": 4.089999999999782,
+      "rotation_triggered": false,
+      "contact_rotation_triggered": false,
+      "boundary_context": []
+    },
+    {
+      "id": "center_pitch_pos",
+      "task_outcome": "TASK_FAILURE",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 3045,
+      "physical_steps": 30450,
+      "max_rotation_deg": 1.1657626455953023,
+      "peak_force_N": 0.004926902452227421,
+      "peak_penetration_m": 2.606528104751385e-7,
+      "contact_cycles": 27,
+      "command_effect_cycles": 2045,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 500,
+          "effect_cycles": 500
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 2045,
+          "enabled_cycles": 1045,
+          "effect_cycles": 1045
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.020346396462397796,
+        "checked_substeps": 30450
+      },
+      "boundary_observations": [],
+      "events": [
+        {
+          "time_s": 4.089999999999782,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 6.090000000004003,
+      "stop_start_s": 4.089999999999782,
+      "rotation_triggered": false,
+      "contact_rotation_triggered": false,
+      "boundary_context": []
+    },
+    {
+      "id": "corner_0",
+      "task_outcome": "MOTION_VIOLATION",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 6748,
+      "physical_steps": 67480,
+      "max_rotation_deg": 2.5039324911868848,
+      "peak_force_N": 0.02455655356294039,
+      "peak_penetration_m": 0.000006742244876957768,
+      "contact_cycles": 4290,
+      "command_effect_cycles": 5358,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 130,
+          "effect_cycles": 130
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 230,
+          "effect_cycles": 230
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 5748,
+          "enabled_cycles": 4748,
+          "effect_cycles": 4748
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [
+          "ROTATION_LIMIT"
+        ],
+        "max_rotation_from_start_rad": 0.043701866218875035,
+        "checked_substeps": 67480
+      },
+      "boundary_observations": [
+        {
+          "time_s": 11.494399999999889,
+          "rotation_trigger": true,
+          "contact_at_trigger": false,
+          "rotation_deg": 2.500001596062534,
+          "physical": {
+            "time_s": 11.494399999999889,
+            "position_m": [
+              0.000026016878847514436,
+              -0.0001014622594674027,
+              -0.0013079711582504926
+            ],
+            "quaternion_wxyz": [
+              0.9997620267760644,
+              -0.019986719146198248,
+              -0.008741608235497874,
+              -0.00007183204105121742
+            ],
+            "velocity_world": [
+              0.000015574243354880725,
+              -0.000020626086737420505,
+              0.0009895335185826975,
+              -0.004621239784317298,
+              -0.004431547019192853,
+              -0.00017289154760374625
+            ],
+            "contact_wrench_M": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "contact_wrench_G": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "penetration_m": 0,
+            "contact_count": 0,
+            "phase": "RUNNING",
+            "reference_qpos": [
+              0.000024080185357993148,
+              -0.00009885033892164408,
+              -0.001304843791530304,
+              0.9997610100455507,
+              -0.02001718442138278,
+              -0.008788189104315051,
+              -0.000053411679121007836
+            ],
+            "raw_command_world": [
+              0.0000052319906046211905,
+              -0.000007054501834145681,
+              0.001,
+              -0.004911023032409321,
+              -0.0048665226748142955,
+              0
+            ],
+            "limited_command_world": [
+              0.0000052319906046211905,
+              -0.000007054501834145681,
+              0.001,
+              -0.004911023032409321,
+              -0.0048665226748142955,
+              0
+            ],
+            "drive_wrench_M": [
+              -0.0002439741670432612,
+              0.0003273289438082456,
+              0.0003862442168576578,
+              -0.0000016313787550498782,
+              -0.000002447220067589142,
+              9.937947174853564e-7
+            ]
+          },
+          "guard_facts": {
+            "simulation_valid": true,
+            "invalid_reasons": [],
+            "contact_reasons": [],
+            "motion_reasons": [
+              "ROTATION_LIMIT"
+            ],
+            "max_rotation_from_start_rad": 0.04363325915640453,
+            "checked_substeps": 57472
+          }
+        }
+      ],
+      "events": [
+        {
+          "time_s": 11.494399999999889,
+          "reason": "ROTATION_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 13.495999999995224,
+      "stop_start_s": 11.494399999999889,
+      "rotation_triggered": true,
+      "contact_rotation_triggered": false,
+      "boundary_context": [
+        {
+          "trigger_s": 11.494399999999889,
+          "exact_trigger_contact": false,
+          "stop_tail_contact_endpoints": 2,
+          "max_stop_tail_contact_endpoint_angle_deg": 2.502420274830799,
+          "stop_tail_force_cycle_peak_N": 0.0004950091132506109,
+          "plusminus100ms_contact_endpoints": 6,
+          "descriptive_only_not_new_gate": true
+        }
+      ]
+    },
+    {
+      "id": "corner_1",
+      "task_outcome": "CONTACT_GUARD",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 4232,
+      "physical_steps": 42320,
+      "max_rotation_deg": 0.7304623832167818,
+      "peak_force_N": 0.025001242370413516,
+      "peak_penetration_m": 0.000006158253681383067,
+      "contact_cycles": 4079,
+      "command_effect_cycles": 2841,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 131,
+          "effect_cycles": 131
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 228,
+          "effect_cycles": 228
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 3232,
+          "enabled_cycles": 2232,
+          "effect_cycles": 2232
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [
+          "FORCE_LIMIT"
+        ],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.01274897364909741,
+        "checked_substeps": 42320
+      },
+      "boundary_observations": [
+        {
+          "time_s": 6.464000000004792,
+          "rotation_trigger": false,
+          "contact_at_trigger": true,
+          "rotation_deg": 0.6846327676343966,
+          "physical": {
+            "time_s": 6.464000000004792,
+            "position_m": [
+              -0.00004560370593559904,
+              0.00010015985870385585,
+              -0.0037868373623514417
+            ],
+            "quaternion_wxyz": [
+              0.9999821524412997,
+              -0.005365835953236806,
+              0.0025904589339757547,
+              0.0004383216842257436
+            ],
+            "velocity_world": [
+              -0.00001747017629995113,
+              0.000010630275240155908,
+              -0.000008335340632741734,
+              0.003023500926848527,
+              0.00263535046486952,
+              0.0002532894942541781
+            ],
+            "contact_wrench_M": [
+              0.011844603730797282,
+              -0.020445936385045826,
+              -0.008168914729828086,
+              0.00006689532862214389,
+              -0.000028968469028365382,
+              0.000017897815838482174
+            ],
+            "contact_wrench_G": [
+              0.011844603730797282,
+              -0.020445936385045826,
+              -0.008168914729828086,
+              0.0003620689505942032,
+              0.0001433791979076379,
+              0.000014519784465400387
+            ],
+            "penetration_m": 0.000002799841352412349,
+            "contact_count": 28,
+            "phase": "RUNNING",
+            "reference_qpos": [
+              -0.0001579467295732205,
+              0.00030015773264880784,
+              -0.003705144917139577,
+              0.99996996474738,
+              -0.0069957133174880165,
+              0.0033361047528457,
+              -0.0000018386356757570327
+            ],
+            "raw_command_world": [
+              -0.00015405653641906158,
+              0.00010999983221820172,
+              -0.000008444162114986787,
+              0.0016450356137589052,
+              0.002077965125727439,
+              0
+            ],
+            "limited_command_world": [
+              -0.00015405653641906158,
+              0.00010999983221820172,
+              -0.000008444162114986787,
+              0.0016450356137589052,
+              0.002077965125727439,
+              0
+            ],
+            "drive_wrench_M": [
+              -0.011845501179109619,
+              0.020444365655983295,
+              0.008168585120069917,
+              -0.00006698799230907237,
+              0.000029009555633175964,
+              -0.000017916695943154572
+            ]
+          },
+          "guard_facts": {
+            "simulation_valid": true,
+            "invalid_reasons": [],
+            "contact_reasons": [
+              "FORCE_LIMIT"
+            ],
+            "motion_reasons": [],
+            "max_rotation_from_start_rad": 0.01274897364909741,
+            "checked_substeps": 32320
+          }
+        }
+      ],
+      "events": [
+        {
+          "time_s": 6.464000000004792,
+          "reason": "FORCE_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 8.464000000006951,
+      "stop_start_s": 6.464000000004792,
+      "rotation_triggered": false,
+      "contact_rotation_triggered": false,
+      "boundary_context": []
+    },
+    {
+      "id": "corner_2",
+      "task_outcome": "CONTACT_GUARD",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 5140,
+      "physical_steps": 51400,
+      "max_rotation_deg": 1.0487082565304586,
+      "peak_force_N": 0.025000066928550068,
+      "peak_penetration_m": 0.000007340108029484421,
+      "contact_cycles": 4972,
+      "command_effect_cycles": 3749,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 125,
+          "effect_cycles": 125
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 234,
+          "effect_cycles": 234
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 4140,
+          "enabled_cycles": 3140,
+          "effect_cycles": 3140
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [
+          "FORCE_LIMIT"
+        ],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.01830341196930583,
+        "checked_substeps": 51400
+      },
+      "boundary_observations": [
+        {
+          "time_s": 8.278400000007384,
+          "rotation_trigger": false,
+          "contact_at_trigger": true,
+          "rotation_deg": 0.835753324709297,
+          "physical": {
+            "time_s": 8.278400000007384,
+            "position_m": [
+              0.000039651958535058296,
+              -0.000094859344091971,
+              -0.003784830842007644
+            ],
+            "quaternion_wxyz": [
+              0.9999734038331415,
+              0.007148793188263468,
+              -0.0014417951289822466,
+              0.00008723025964336721
+            ],
+            "velocity_world": [
+              0.00002525307944934505,
+              -0.00001566378052466453,
+              -0.000011550165033605649,
+              -0.003980140287129623,
+              -0.0027694047313994575,
+              0.000007642392945577455
+            ],
+            "contact_wrench_M": [
+              -0.01025473900006498,
+              0.02127179838710139,
+              -0.008206964594235788,
+              -0.00008346630550209522,
+              0.000030411592244270014,
+              0.0000040321078786711464
+            ],
+            "contact_wrench_G": [
+              -0.01025473900006498,
+              0.02127179838710139,
+              -0.008206964594235788,
+              -0.00039017316227731366,
+              -0.00011860929954172346,
+              0.000001017156431834287
+            ],
+            "penetration_m": 0.0000033692366612468374,
+            "contact_count": 31,
+            "phase": "RUNNING",
+            "reference_qpos": [
+              0.00013679840273189039,
+              -0.0002948562113358661,
+              -0.0037028224771582276,
+              0.9999550612669482,
+              0.009214058357689176,
+              -0.0022307963538573607,
+              -0.000011082522702593963
+            ],
+            "raw_command_world": [
+              0.00014625055276773686,
+              -0.0003,
+              -0.00001034549052564204,
+              -0.0033211578255273226,
+              -0.0019243825875576949,
+              0
+            ],
+            "limited_command_world": [
+              0.00014625055276773686,
+              -0.0003,
+              -0.00001034549052564204,
+              -0.0033211578255273226,
+              -0.0019243825875576949,
+              0
+            ],
+            "drive_wrench_M": [
+              0.010256295186777219,
+              -0.021271586349175205,
+              0.00820597498671136,
+              0.00008343943479216944,
+              -0.000030467894313791508,
+              -0.0000040487454170685095
+            ]
+          },
+          "guard_facts": {
+            "simulation_valid": true,
+            "invalid_reasons": [],
+            "contact_reasons": [
+              "FORCE_LIMIT"
+            ],
+            "motion_reasons": [],
+            "max_rotation_from_start_rad": 0.01830341196930583,
+            "checked_substeps": 41392
+          }
+        }
+      ],
+      "events": [
+        {
+          "time_s": 8.278400000007384,
+          "reason": "FORCE_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 10.280000000002719,
+      "stop_start_s": 8.278400000007384,
+      "rotation_triggered": false,
+      "contact_rotation_triggered": false,
+      "boundary_context": []
+    },
+    {
+      "id": "corner_3",
+      "task_outcome": "TASK_FAILURE",
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "trace_cycles": 6474,
+      "physical_steps": 64740,
+      "max_rotation_deg": 2.4319074024399576,
+      "peak_force_N": 0.024628592091749456,
+      "peak_penetration_m": 0.000006525508955517627,
+      "contact_cycles": 4687,
+      "command_effect_cycles": 5084,
+      "segments": [
+        {
+          "start_cycle": 0,
+          "requested_cycles": 250,
+          "enabled_cycles": 250,
+          "effect_cycles": 250
+        },
+        {
+          "start_cycle": 250,
+          "requested_cycles": 250,
+          "enabled_cycles": 177,
+          "effect_cycles": 177
+        },
+        {
+          "start_cycle": 500,
+          "requested_cycles": 500,
+          "enabled_cycles": 183,
+          "effect_cycles": 183
+        },
+        {
+          "start_cycle": 1000,
+          "requested_cycles": 5474,
+          "enabled_cycles": 4474,
+          "effect_cycles": 4474
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.042444791276200045,
+        "checked_substeps": 64740
+      },
+      "boundary_observations": [],
+      "events": [
+        {
+          "time_s": 10.948000000001162,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "end_time_s": 12.947999999996501,
+      "stop_start_s": 10.948000000001162,
+      "rotation_triggered": false,
+      "contact_rotation_triggered": false,
+      "boundary_context": []
+    }
+  ]
+}

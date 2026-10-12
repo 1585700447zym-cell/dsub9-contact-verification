@@ -1,0 +1,39 @@
+F.FFFFFF                                                                 [100%]
+================================== FAILURES ===================================
+__ test_six_counterexamples_do_not_leave_next_actual_b2_in_reference_failure __
+tests\task_variants\test_v4_continuation.py:41: in test_six_counterexamples_do_not_leave_next_actual_b2_in_reference_failure
+    from tools.learning.v4_continuation import compose_continuation_command
+E   ModuleNotFoundError: No module named 'tools.learning.v4_continuation'
+_________ test_zero_requests_and_disabled_stages_preserve_old_outputs _________
+tests\task_variants\test_v4_continuation.py:63: in test_zero_requests_and_disabled_stages_preserve_old_outputs
+    from tools.learning.v4_continuation import compose_continuation_command
+E   ModuleNotFoundError: No module named 'tools.learning.v4_continuation'
+___ test_final_spiral_segment_is_controlled_end_not_false_reference_failure ___
+tests\task_variants\test_v4_continuation.py:74: in test_final_spiral_segment_is_controlled_end_not_false_reference_failure
+    from tools.learning.v4_continuation import predict_next_search
+E   ModuleNotFoundError: No module named 'tools.learning.v4_continuation'
+__________ test_invalid_next_theta_cannot_be_silently_accepted[nan] ___________
+tests\task_variants\test_v4_continuation.py:86: in test_invalid_next_theta_cannot_be_silently_accepted
+    from tools.learning.v4_continuation import compose_continuation_command
+E   ModuleNotFoundError: No module named 'tools.learning.v4_continuation'
+__________ test_invalid_next_theta_cannot_be_silently_accepted[-1.0] __________
+tests\task_variants\test_v4_continuation.py:86: in test_invalid_next_theta_cannot_be_silently_accepted
+    from tools.learning.v4_continuation import compose_continuation_command
+E   ModuleNotFoundError: No module named 'tools.learning.v4_continuation'
+___ test_infeasible_next_baseline_falls_back_with_explicit_unproven_status ____
+tests\task_variants\test_v4_continuation.py:91: in test_infeasible_next_baseline_falls_back_with_explicit_unproven_status
+    from tools.learning.v4_continuation import compose_continuation_command
+E   ModuleNotFoundError: No module named 'tools.learning.v4_continuation'
+______ test_new_session_uses_live_next_theta_and_common_f_s_search_layer ______
+tests\task_variants\test_v4_continuation.py:99: in test_new_session_uses_live_next_theta_and_common_f_s_search_layer
+    from tools.learning.v4_continuation import ContinuationResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_continuation'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_v4_continuation.py::test_six_counterexamples_do_not_leave_next_actual_b2_in_reference_failure
+FAILED tests/task_variants/test_v4_continuation.py::test_zero_requests_and_disabled_stages_preserve_old_outputs
+FAILED tests/task_variants/test_v4_continuation.py::test_final_spiral_segment_is_controlled_end_not_false_reference_failure
+FAILED tests/task_variants/test_v4_continuation.py::test_invalid_next_theta_cannot_be_silently_accepted[nan]
+FAILED tests/task_variants/test_v4_continuation.py::test_invalid_next_theta_cannot_be_silently_accepted[-1.0]
+FAILED tests/task_variants/test_v4_continuation.py::test_infeasible_next_baseline_falls_back_with_explicit_unproven_status
+FAILED tests/task_variants/test_v4_continuation.py::test_new_session_uses_live_next_theta_and_common_f_s_search_layer
+7 failed, 1 passed in 0.57s

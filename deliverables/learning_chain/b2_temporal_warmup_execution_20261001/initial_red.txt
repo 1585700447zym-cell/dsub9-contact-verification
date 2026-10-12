@@ -1,0 +1,285 @@
+test_any_valid_guard_stops_remainder (test_protocol.ContractTests.test_any_valid_guard_stops_remainder) ... FAIL
+test_authorization_scope_must_be_exact (test_protocol.ContractTests.test_authorization_scope_must_be_exact) ... FAIL
+test_complete_needs_all_eight (test_protocol.ContractTests.test_complete_needs_all_eight) ... FAIL
+test_cross_authorization_restore_refused (test_protocol.ContractTests.test_cross_authorization_restore_refused) ... FAIL
+test_duplicate_finish_rejected (test_protocol.ContractTests.test_duplicate_finish_rejected) ... FAIL
+test_fault_charged_and_active_cleared (test_protocol.ContractTests.test_fault_charged_and_active_cleared) ... FAIL
+test_finish_cannot_forge_another_identity (test_protocol.ContractTests.test_finish_cannot_forge_another_identity) ... FAIL
+test_invalid_or_unstopped_is_failed (test_protocol.ContractTests.test_invalid_or_unstopped_is_failed) ... FAIL
+test_ordinary_failure_allows_next (test_protocol.ContractTests.test_ordinary_failure_allows_next) ... FAIL
+test_pair_order_exact (test_protocol.ContractTests.test_pair_order_exact) ... FAIL
+test_reserve_before_first_start (test_protocol.ContractTests.test_reserve_before_first_start) ... FAIL
+test_result_rejects_invalid_accounting (test_protocol.ContractTests.test_result_rejects_invalid_accounting) ... FAIL
+test_scope_zero_learning_and_eight_new_starts (test_protocol.ContractTests.test_scope_zero_learning_and_eight_new_starts) ... FAIL
+test_stale_ledger_cannot_mutate (test_protocol.ContractTests.test_stale_ledger_cannot_mutate) ... FAIL
+test_write_fault_poisoned_without_budget_reuse (test_protocol.ContractTests.test_write_fault_poisoned_without_budget_reuse) ... FAIL
+test_wrong_order_or_second_active_start_refused (test_protocol.ContractTests.test_wrong_order_or_second_active_start_refused) ... FAIL
+test_50_cycle_hold_in_live_context (test_protocol.SamplingTests.test_50_cycle_hold_in_live_context) ... FAIL
+test_cached_context_taken_before_action (test_protocol.SamplingTests.test_cached_context_taken_before_action) ... FAIL
+test_complete_sampler_rng_restoration (test_protocol.SamplingTests.test_complete_sampler_rng_restoration) ... FAIL
+test_cross_case_or_hold_identity_refused (test_protocol.SamplingTests.test_cross_case_or_hold_identity_refused) ... FAIL
+test_current_permission_closes_old_hold (test_protocol.SamplingTests.test_current_permission_closes_old_hold) ... FAIL
+test_metadata_before_and_after_cycle_is_explicit (test_protocol.SamplingTests.test_metadata_before_and_after_cycle_is_explicit) ... FAIL
+test_observation_and_permission_disagreement_refused (test_protocol.SamplingTests.test_observation_and_permission_disagreement_refused) ... FAIL
+test_paired_initial_rng_equal (test_protocol.SamplingTests.test_paired_initial_rng_equal) ... FAIL
+test_stage_change_redraws (test_protocol.SamplingTests.test_stage_change_redraws) ... FAIL
+test_supervision_checked_before_random_draw (test_protocol.SamplingTests.test_supervision_checked_before_random_draw) ... FAIL
+test_training_style_or_truncation_entry_refused (test_protocol.SamplingTests.test_training_style_or_truncation_entry_refused) ... FAIL
+test_wrong_rng_draw_count_refused (test_protocol.SamplingTests.test_wrong_rng_draw_count_refused) ... FAIL
+
+======================================================================
+FAIL: test_any_valid_guard_stops_remainder (test_protocol.ContractTests.test_any_valid_guard_stops_remainder)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_authorization_scope_must_be_exact (test_protocol.ContractTests.test_authorization_scope_must_be_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_complete_needs_all_eight (test_protocol.ContractTests.test_complete_needs_all_eight)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_cross_authorization_restore_refused (test_protocol.ContractTests.test_cross_authorization_restore_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_duplicate_finish_rejected (test_protocol.ContractTests.test_duplicate_finish_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_fault_charged_and_active_cleared (test_protocol.ContractTests.test_fault_charged_and_active_cleared)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_finish_cannot_forge_another_identity (test_protocol.ContractTests.test_finish_cannot_forge_another_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_invalid_or_unstopped_is_failed (test_protocol.ContractTests.test_invalid_or_unstopped_is_failed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_ordinary_failure_allows_next (test_protocol.ContractTests.test_ordinary_failure_allows_next)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_pair_order_exact (test_protocol.ContractTests.test_pair_order_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_reserve_before_first_start (test_protocol.ContractTests.test_reserve_before_first_start)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_result_rejects_invalid_accounting (test_protocol.ContractTests.test_result_rejects_invalid_accounting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_scope_zero_learning_and_eight_new_starts (test_protocol.ContractTests.test_scope_zero_learning_and_eight_new_starts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_stale_ledger_cannot_mutate (test_protocol.ContractTests.test_stale_ledger_cannot_mutate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_write_fault_poisoned_without_budget_reuse (test_protocol.ContractTests.test_write_fault_poisoned_without_budget_reuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_wrong_order_or_second_active_start_refused (test_protocol.ContractTests.test_wrong_order_or_second_active_start_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 19, in setUp
+    self.assertIsNotNone(C,'Missing independent preflight contract')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing independent preflight contract
+
+======================================================================
+FAIL: test_50_cycle_hold_in_live_context (test_protocol.SamplingTests.test_50_cycle_hold_in_live_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_cached_context_taken_before_action (test_protocol.SamplingTests.test_cached_context_taken_before_action)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_complete_sampler_rng_restoration (test_protocol.SamplingTests.test_complete_sampler_rng_restoration)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_cross_case_or_hold_identity_refused (test_protocol.SamplingTests.test_cross_case_or_hold_identity_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_current_permission_closes_old_hold (test_protocol.SamplingTests.test_current_permission_closes_old_hold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_metadata_before_and_after_cycle_is_explicit (test_protocol.SamplingTests.test_metadata_before_and_after_cycle_is_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_observation_and_permission_disagreement_refused (test_protocol.SamplingTests.test_observation_and_permission_disagreement_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_paired_initial_rng_equal (test_protocol.SamplingTests.test_paired_initial_rng_equal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_stage_change_redraws (test_protocol.SamplingTests.test_stage_change_redraws)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_supervision_checked_before_random_draw (test_protocol.SamplingTests.test_supervision_checked_before_random_draw)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_training_style_or_truncation_entry_refused (test_protocol.SamplingTests.test_training_style_or_truncation_entry_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+======================================================================
+FAIL: test_wrong_rng_draw_count_refused (test_protocol.SamplingTests.test_wrong_rng_draw_count_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 90, in setUp
+    def setUp(self):self.assertIsNotNone(S,'Missing live-context sampler integration')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing live-context sampler integration
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.004s
+
+FAILED (failures=28)

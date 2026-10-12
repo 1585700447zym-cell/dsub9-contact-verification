@@ -1,0 +1,903 @@
+{
+  "version": "paired_stage_binding_v1",
+  "parent_delivery_sha256": "bf1126f7e9813ca0d6e0ebbdb65a2260d4172b3834a6a5ca219b0ee50d977072",
+  "scope": {
+    "previous_dynamic": 90,
+    "dynamic_cap": 30,
+    "cumulative_dynamic_cap": 120,
+    "cycles_per_episode": 13000,
+    "total_control_cycles_cap": 390000,
+    "physical_substeps_cap": 3900000,
+    "actor_state_cap": 234000,
+    "training_batches_cap": 5000,
+    "arm_training_batches_cap": 2500,
+    "optimizer_steps_cap": 15000,
+    "model_module_calls_cap": 8128000,
+    "module_calls_per_control_cap": 32,
+    "module_calls_per_batch_cap": 128,
+    "seed": 2026092716,
+    "batch_size": 256,
+    "boundary_quota": 16,
+    "action_scale": [
+      5e-05,
+      5e-05,
+      0.0005,
+      0.0005
+    ],
+    "warmup_hold_cycles": 50,
+    "warmup_min_active_rows": 256,
+    "warmup_min_active_cases": 2,
+    "stop_on_any_guard": true,
+    "automatic_retry": false,
+    "automatic_tracking": false,
+    "independent_test": 0,
+    "old_unused_consumed": 0,
+    "extra_critic_diagnostics": 0,
+    "attempts": [
+      {
+        "id": "b2_B2_x_pos_100",
+        "stage": "b2",
+        "arm": "B2",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "b2_B2_x_neg_100",
+        "stage": "b2",
+        "arm": "B2",
+        "case_index": 1,
+        "case": {
+          "name": "x_neg_100",
+          "x_offset_m": -0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "b2_B2_y_pos_100",
+        "stage": "b2",
+        "arm": "B2",
+        "case_index": 2,
+        "case": {
+          "name": "y_pos_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": 0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "b2_B2_y_neg_100",
+        "stage": "b2",
+        "arm": "B2",
+        "case_index": 3,
+        "case": {
+          "name": "y_neg_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": -0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_F_x_pos_100",
+        "stage": "warmup",
+        "arm": "F",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_S_x_pos_100",
+        "stage": "warmup",
+        "arm": "S",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_F_x_neg_100",
+        "stage": "warmup",
+        "arm": "F",
+        "case_index": 1,
+        "case": {
+          "name": "x_neg_100",
+          "x_offset_m": -0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_S_x_neg_100",
+        "stage": "warmup",
+        "arm": "S",
+        "case_index": 1,
+        "case": {
+          "name": "x_neg_100",
+          "x_offset_m": -0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_F_y_pos_100",
+        "stage": "warmup",
+        "arm": "F",
+        "case_index": 2,
+        "case": {
+          "name": "y_pos_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": 0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_S_y_pos_100",
+        "stage": "warmup",
+        "arm": "S",
+        "case_index": 2,
+        "case": {
+          "name": "y_pos_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": 0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_F_y_neg_100",
+        "stage": "warmup",
+        "arm": "F",
+        "case_index": 3,
+        "case": {
+          "name": "y_neg_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": -0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "warmup_S_y_neg_100",
+        "stage": "warmup",
+        "arm": "S",
+        "case_index": 3,
+        "case": {
+          "name": "y_neg_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": -0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_F_x_pos_100",
+        "stage": "online",
+        "arm": "F",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_S_x_pos_100",
+        "stage": "online",
+        "arm": "S",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_F_x_neg_100",
+        "stage": "online",
+        "arm": "F",
+        "case_index": 1,
+        "case": {
+          "name": "x_neg_100",
+          "x_offset_m": -0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_S_x_neg_100",
+        "stage": "online",
+        "arm": "S",
+        "case_index": 1,
+        "case": {
+          "name": "x_neg_100",
+          "x_offset_m": -0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_F_y_pos_100",
+        "stage": "online",
+        "arm": "F",
+        "case_index": 2,
+        "case": {
+          "name": "y_pos_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": 0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_S_y_pos_100",
+        "stage": "online",
+        "arm": "S",
+        "case_index": 2,
+        "case": {
+          "name": "y_pos_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": 0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_F_y_neg_100",
+        "stage": "online",
+        "arm": "F",
+        "case_index": 3,
+        "case": {
+          "name": "y_neg_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": -0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "online_S_y_neg_100",
+        "stage": "online",
+        "arm": "S",
+        "case_index": 3,
+        "case": {
+          "name": "y_neg_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": -0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_F_x_pos_100",
+        "stage": "final",
+        "arm": "F",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_S_x_pos_100",
+        "stage": "final",
+        "arm": "S",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_F_x_neg_100",
+        "stage": "final",
+        "arm": "F",
+        "case_index": 1,
+        "case": {
+          "name": "x_neg_100",
+          "x_offset_m": -0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_S_x_neg_100",
+        "stage": "final",
+        "arm": "S",
+        "case_index": 1,
+        "case": {
+          "name": "x_neg_100",
+          "x_offset_m": -0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_F_y_pos_100",
+        "stage": "final",
+        "arm": "F",
+        "case_index": 2,
+        "case": {
+          "name": "y_pos_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": 0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_S_y_pos_100",
+        "stage": "final",
+        "arm": "S",
+        "case_index": 2,
+        "case": {
+          "name": "y_pos_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": 0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_F_y_neg_100",
+        "stage": "final",
+        "arm": "F",
+        "case_index": 3,
+        "case": {
+          "name": "y_neg_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": -0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "final_S_y_neg_100",
+        "stage": "final",
+        "arm": "S",
+        "case_index": 3,
+        "case": {
+          "name": "y_neg_100",
+          "x_offset_m": 0.0,
+          "y_offset_m": -0.0001,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "restore_F_x_pos_100",
+        "stage": "restore",
+        "arm": "F",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      },
+      {
+        "id": "restore_S_x_pos_100",
+        "stage": "restore",
+        "arm": "S",
+        "case_index": 0,
+        "case": {
+          "name": "x_pos_100",
+          "x_offset_m": 0.0001,
+          "y_offset_m": 0.0,
+          "roll_rad": 0.0,
+          "pitch_rad": 0.0,
+          "start_origin_z_m": -0.004,
+          "target_depth_m": 0.004
+        }
+      }
+    ]
+  },
+  "configs": {
+    "F": {
+      "version": "stage_permission_learning_v1",
+      "scope": "four_development_contact_points_only",
+      "physics": {
+        "backend": "native",
+        "segments": 256,
+        "ccd_tolerance": 1e-12,
+        "timestep_s": 0.0002,
+        "control_period_s": 0.002,
+        "policy_period_s": 0.002
+      },
+      "guard": {
+        "max_rotation_from_start_rad": 0.04363323129985824,
+        "initial_roll_pitch_limit_rad": 0.026179938779914945
+      },
+      "domain": {
+        "distribution": "balanced_three_rounds",
+        "points_xy_m": [
+          [
+            0.0001,
+            0.0
+          ],
+          [
+            -0.0001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0001
+          ],
+          [
+            0.0,
+            -0.0001
+          ]
+        ],
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "action": {
+        "scale": [
+          5e-05,
+          5e-05,
+          0.0005,
+          0.0005
+        ],
+        "enabled_stages": [
+          "INSERT",
+          "SEARCH"
+        ]
+      },
+      "sampling": {
+        "stop_at": "four_warmup_four_online_2500_batches",
+        "watchdog_cycles": 13000,
+        "workers": 1,
+        "seed": 2026092716,
+        "rng": "PCG64",
+        "initial_resampling": false,
+        "max_attempts": 8,
+        "rng_streams": {
+          "warmup": 1,
+          "replay": 2,
+          "boundary": 3
+        },
+        "seed_rule": "PCG64/SeedSequence([seed,stream])",
+        "total_audited_cycles_upper_bound": 156000
+      },
+      "learning": {
+        "learning_rate": 0.0003,
+        "batch_size": 256,
+        "replay_capacity": 156000,
+        "max_gradient_batches": 2500,
+        "discount_time_constant_s": 10.0,
+        "gamma_nominal": 0.9998000199986667,
+        "discount": "exp(-actual_dt_s/10)",
+        "entropy_initial": 0.01,
+        "target_entropy": -4.0,
+        "entropy_learned": true,
+        "tau": 0.005,
+        "network": [
+          256,
+          256
+        ],
+        "activation": "ReLU",
+        "seed": 2026092716,
+        "device": "cpu",
+        "torch_threads": 1,
+        "replay_publish": "whole_episode_after_audit",
+        "permission_masks": "tensor_masks_v3",
+        "reward": "contract_v3_unchanged",
+        "warmup_episodes": 4,
+        "batches_per_boundary": 500,
+        "critic_boundary_rows": 16,
+        "exact_terminal_tail": true,
+        "actor_learning_rate": 0.0003
+      },
+      "versions": {
+        "python": "3.13.5",
+        "mujoco": "3.13.0",
+        "torch": "2.12.1+cpu",
+        "numpy": "2.1.3",
+        "gymnasium": "1.2.3",
+        "stable-baselines3": "2.8.0"
+      },
+      "execution": {
+        "fresh_initialization": true,
+        "mode_selected_at_episode_start": true,
+        "freeze_actor_within_episode": true,
+        "stop_on": [
+          "invalid",
+          "unstopped",
+          "motion_violation",
+          "input_changed",
+          "archive_error",
+          "operator_interrupt",
+          "unqualified_contact_guard",
+          "force_failure_frequency"
+        ],
+        "publication": "whole_eligible_guard_clear_or_force_only",
+        "updates": "only_after_publication_before_next_episode",
+        "checkpoint": "every_healthy_audited_episode_boundary",
+        "resume": "only_verified_boundary_no_physics_resume",
+        "evaluate": "fixed_four_development_points_once_per_branch",
+        "baseline": "historical_context_only",
+        "independent_test_used": false,
+        "preparation_only": false,
+        "episode_rules": "force_only_v1",
+        "force_failure_stop": {
+          "consecutive": 2,
+          "total": 3
+        },
+        "requires_separate_user_authorization": true,
+        "new_training_collection": 8,
+        "authorized_dynamic_starts": 30,
+        "authorized_optimizer_calls": 2500,
+        "stop_on_any_evaluation_guard": true
+      },
+      "comparison": {
+        "arm": "F",
+        "condition": "paired_stage_permission_v1",
+        "warmup_hold_cycles": 50,
+        "automatic_retry": false
+      },
+      "stage_permission": {
+        "version": "stage_permission_v1",
+        "mode": "F",
+        "phases": [
+          "INSERT",
+          "SEARCH"
+        ]
+      }
+    },
+    "S": {
+      "version": "stage_permission_learning_v1",
+      "scope": "four_development_contact_points_only",
+      "physics": {
+        "backend": "native",
+        "segments": 256,
+        "ccd_tolerance": 1e-12,
+        "timestep_s": 0.0002,
+        "control_period_s": 0.002,
+        "policy_period_s": 0.002
+      },
+      "guard": {
+        "max_rotation_from_start_rad": 0.04363323129985824,
+        "initial_roll_pitch_limit_rad": 0.026179938779914945
+      },
+      "domain": {
+        "distribution": "balanced_three_rounds",
+        "points_xy_m": [
+          [
+            0.0001,
+            0.0
+          ],
+          [
+            -0.0001,
+            0.0
+          ],
+          [
+            0.0,
+            0.0001
+          ],
+          [
+            0.0,
+            -0.0001
+          ]
+        ],
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "action": {
+        "scale": [
+          5e-05,
+          5e-05,
+          0.0005,
+          0.0005
+        ],
+        "enabled_stages": [
+          "INSERT",
+          "SEARCH"
+        ]
+      },
+      "sampling": {
+        "stop_at": "four_warmup_four_online_2500_batches",
+        "watchdog_cycles": 13000,
+        "workers": 1,
+        "seed": 2026092716,
+        "rng": "PCG64",
+        "initial_resampling": false,
+        "max_attempts": 8,
+        "rng_streams": {
+          "warmup": 1,
+          "replay": 2,
+          "boundary": 3
+        },
+        "seed_rule": "PCG64/SeedSequence([seed,stream])",
+        "total_audited_cycles_upper_bound": 156000
+      },
+      "learning": {
+        "learning_rate": 0.0003,
+        "batch_size": 256,
+        "replay_capacity": 156000,
+        "max_gradient_batches": 2500,
+        "discount_time_constant_s": 10.0,
+        "gamma_nominal": 0.9998000199986667,
+        "discount": "exp(-actual_dt_s/10)",
+        "entropy_initial": 0.01,
+        "target_entropy": -4.0,
+        "entropy_learned": true,
+        "tau": 0.005,
+        "network": [
+          256,
+          256
+        ],
+        "activation": "ReLU",
+        "seed": 2026092716,
+        "device": "cpu",
+        "torch_threads": 1,
+        "replay_publish": "whole_episode_after_audit",
+        "permission_masks": "tensor_masks_v3",
+        "reward": "contract_v3_unchanged",
+        "warmup_episodes": 4,
+        "batches_per_boundary": 500,
+        "critic_boundary_rows": 16,
+        "exact_terminal_tail": true,
+        "actor_learning_rate": 0.0003
+      },
+      "versions": {
+        "python": "3.13.5",
+        "mujoco": "3.13.0",
+        "torch": "2.12.1+cpu",
+        "numpy": "2.1.3",
+        "gymnasium": "1.2.3",
+        "stable-baselines3": "2.8.0"
+      },
+      "execution": {
+        "fresh_initialization": true,
+        "mode_selected_at_episode_start": true,
+        "freeze_actor_within_episode": true,
+        "stop_on": [
+          "invalid",
+          "unstopped",
+          "motion_violation",
+          "input_changed",
+          "archive_error",
+          "operator_interrupt",
+          "unqualified_contact_guard",
+          "force_failure_frequency"
+        ],
+        "publication": "whole_eligible_guard_clear_or_force_only",
+        "updates": "only_after_publication_before_next_episode",
+        "checkpoint": "every_healthy_audited_episode_boundary",
+        "resume": "only_verified_boundary_no_physics_resume",
+        "evaluate": "fixed_four_development_points_once_per_branch",
+        "baseline": "historical_context_only",
+        "independent_test_used": false,
+        "preparation_only": false,
+        "episode_rules": "force_only_v1",
+        "force_failure_stop": {
+          "consecutive": 2,
+          "total": 3
+        },
+        "requires_separate_user_authorization": true,
+        "new_training_collection": 8,
+        "authorized_dynamic_starts": 30,
+        "authorized_optimizer_calls": 2500,
+        "stop_on_any_evaluation_guard": true
+      },
+      "comparison": {
+        "arm": "S",
+        "condition": "paired_stage_permission_v1",
+        "warmup_hold_cycles": 50,
+        "automatic_retry": false
+      },
+      "stage_permission": {
+        "version": "stage_permission_v1",
+        "mode": "S",
+        "phases": [
+          "SEARCH"
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "native": {
+      "version": "3.13.0",
+      "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\__init__.py",
+      "dll_verified": true,
+      "dll_sha256": {
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_callbacks.cp313-win_amd64.pyd": "9903814e839f07f99f2053830699a40573c62b9c1429e81be91d8d1c2f3d8217",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_constants.cp313-win_amd64.pyd": "3a93dea3d55f540c86557b8e54ceaef8fc761abaff0a756813f2cd760a845aa2",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_enums.cp313-win_amd64.pyd": "8e3e4b81a9ea59a04a708cf5f70c5efaa17da295d90108000f038ba276572c40",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_errors.cp313-win_amd64.pyd": "5211406c1b31400f9fd57eb9795504b02c8b855095fa518be1ff00e5897d720d",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_functions.cp313-win_amd64.pyd": "e8f273677d2d931fe7975ec32ecffeabbaf56052ebd9bf138c06e03990489dc6",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_render.cp313-win_amd64.pyd": "3ca7f0342fe7a98553b66a1a91f9d9687cfcf673c52452bae4c2f0ddba20c43e",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_rollout.cp313-win_amd64.pyd": "47c21d676202fb4ccc8dd40e1f6799ac5472867f9b53ba14e9e67f8df01c6ba5",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_simulate.cp313-win_amd64.pyd": "be832d86fa07e6ce3708d04cab6cba6ef113286d199247b2d6160ceec7329cad",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_specs.cp313-win_amd64.pyd": "1292780fdb503992d234a07641e9bac9e1b830077f5c5d5730876083fb0836ad",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\_structs.cp313-win_amd64.pyd": "41fe3b3446ebf58d12a7a1917f122a0482ccd175d3d50d7ed3c798b445d2c486",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\experimental\\dear_imgui\\dear_imgui.cp313-win_amd64.pyd": "c4926716baafc7ebdee597e8c6587c6eb1c8d9f0042f4de0fdb7b8e1089392e3",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\experimental\\implot\\implot.cp313-win_amd64.pyd": "a99bb9ac7fa9e0885967620272507c23913cf834702d274d1620a74d8fd643a7",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\experimental\\studio\\native_viewer_cc.cp313-win_amd64.pyd": "c2e77bf46c3285315d74866673aa92d815c1e83070508ee86081128f7ee92efc",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\experimental\\studio\\renderer.cp313-win_amd64.pyd": "4cbbe79ff1fe56de301ae58e25106e43f590d531940638988582f7996ae3d1c0",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\experimental\\studio\\sim.cp313-win_amd64.pyd": "870af7c8c1d5e372e154b3cd666e3ed02774e35d215090a1c17f121922dbe92f",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\experimental\\studio\\ux.cp313-win_amd64.pyd": "79048ed9f67d1f0c10bb81a62e60c4d35ad17e66a787c7e92581e191dde02de2",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\mujoco.dll": "4007b6b0956eabc1a3892ac3c3f0947d0e98b90a0604cd8ffcbb795227274047",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\plugin\\actuator.dll": "cf35af11c5168dab5407238a2bba373029f8fd6bdc84a0bc158a5962ada4d72f",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\plugin\\elasticity.dll": "38c08600753ad59326b04b6dfc22e9320735c337f7b69c1a28cce7af1a7d20a4",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\plugin\\sdf_plugin.dll": "7a6ef60709120a3c6f797932d64ce0fb9279bcf39966b0609f7b5f1e3f0181f9",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_horizon_fixed_runtime\\mujoco\\plugin\\sensor.dll": "f7c3d6a24747076e7af2aed43bb07a31e9889d27ff52870d23b6656f921e129e"
+      },
+      "compatibility_record_sha256": "f542991cab19e6ca93b21330403c5def934faec0cc7c63e048c104352570a2c2",
+      "package_files_verified": 251
+    },
+    "executable": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Scripts\\python.exe",
+    "python": "3.13.5",
+    "versions": {
+      "absl-py": "2.5.0",
+      "cloudpickle": "3.1.2",
+      "colorama": "0.4.6",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "etils": "1.14.0",
+      "Farama-Notifications": "0.0.6",
+      "filelock": "3.32.3",
+      "fonttools": "4.66.0",
+      "fsspec": "2026.7.0",
+      "glfw": "2.10.2",
+      "gymnasium": "1.2.3",
+      "iniconfig": "2.3.0",
+      "Jinja2": "3.1.6",
+      "kiwisolver": "1.5.1",
+      "MarkupSafe": "3.0.3",
+      "matplotlib": "3.11.2",
+      "mpmath": "1.3.0",
+      "networkx": "3.6.1",
+      "numpy": "2.1.3",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "pillow": "12.3.0",
+      "pip": "25.1.1",
+      "pluggy": "1.6.0",
+      "PyOpenGL": "3.1.10",
+      "pyparsing": "3.3.3",
+      "pytest": "8.3.4",
+      "python-dateutil": "2.9.0.post0",
+      "setuptools": "78.1.0",
+      "six": "1.17.0",
+      "stable_baselines3": "2.8.0",
+      "sympy": "1.14.0",
+      "torch": "2.12.1+cpu",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.4",
+      "zipp": "4.1.0"
+    },
+    "torch_dll_sha256": {
+      "c10.dll": "2cab7c2afe6367e5cce674784b9f93c39aac1dc669db010bc10e877a52cc63be",
+      "libiomp5md.dll": "2299b0460e8118e8187fd57a8d17df836c2a3d59f2639c3681582070da66b7be",
+      "libiompstubs5md.dll": "9b2412b5efc9274f3ebc6acbf8364cb5aeeb87788fa7897db20b9597bbf8b780",
+      "shm.dll": "17770b87b1a5ef5a0d916614fe6a931d9f142ab87c9ab7b6d626a532c3c7b1b7",
+      "torch.dll": "e79e7654e47170cedef2573ad9cf13228ff7bf68d4ac661a4124093d996a9017",
+      "torch_cpu.dll": "6578b2c9d855ce218fecd1c2cf6ad89bc54f859398e654c9376f640b42d99bfd",
+      "torch_global_deps.dll": "17b3e297560a08956f99cd217b29160ae40024926265dd4994e35174c8b9b1fb",
+      "torch_python.dll": "ccb2107cb4ab77e5ec5add47d95d7f0227e70165d0c59bc29c5fc0ead3d84122",
+      "uv.dll": "fa569e682fc5fb7a8eb94c6829af9f30a569748dbbc6bce39735d48bc960bcf8"
+    },
+    "lock_sha256": "852036de5bea59f296aa6883553c696a7c525d3374adf55298038bd416639f2f"
+  },
+  "protocol_passed": true,
+  "inputs_sha256": {
+    "deliverables/learning_chain/b2_stage_permission_20261002/learning_runtime.py": "d34b3a6babf61460423d7b901f625e7cb8a5e1afb200fc52bb45461a91bded8c",
+    "deliverables/learning_chain/b2_stage_permission_20261002/paired_collection.py": "991dcc7b32e3ebe63055c832720496b38529769599717173cebf5514592efece",
+    "deliverables/learning_chain/b2_stage_permission_20261002/paired_contract.py": "72829ec8e431989457d3a6110915a95ad346caa414ae76b1c69c403ee7ec2110",
+    "deliverables/learning_chain/b2_stage_permission_20261002/prepare.py": "1615d50bf7ea225c902b18509c403cecc33cff47f8e3c72b4a5b3822bbec1b43",
+    "deliverables/learning_chain/b2_stage_permission_20261002/protocol_runner.py": "e684efb08a0d685957739f75665e973ffc1f060da3872b3c271e4189c802b034",
+    "deliverables/learning_chain/b2_stage_permission_20261002/report_result.py": "6d09ece5258154c4f9a493f54df6bbc3832d79151506e60780a5408de1a880d6",
+    "deliverables/learning_chain/b2_stage_permission_20261002/run_pair.py": "bc64f255c5eb74618cf0c99e0477fd533a5849ba2fd70dd193ef587b88bde3ed",
+    "deliverables/learning_chain/b2_stage_permission_20261002/stage_rules.py": "721d2afa6204754a6edebd0b9dbba73e10f72458336d8ebd802b5a65500f85d0",
+    "deliverables/learning_chain/b2_stage_permission_20261002/stage_session.py": "2b58f4c3b8714373512c478215a7869974a86fc754e550a2a555b0d6cd83f50f",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_learning_runtime.py": "0fc39cf7ced113c464c224b7847b09be1e2be3131dde4f3d734ffa0e1dc80ec7",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_permission.py": "a5e9c7378b887438630fb87309cd184dc61db8a4074e4cce1ea0655599168cb2",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_protocol.py": "c78a3b13750bccb6030cdce6851768a9f8ba081d3851cf9d4560ad5d2cbf5836",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_report.py": "1eaa9d1971c555bd7e2c21abd3a8572387d70add40b43513e0a9f3a34765bd5b",
+    "deliverables/learning_chain/b2_stage_permission_20261002/test_runner.py": "a0a821f65a57ce0a7ee447e40093f25be004a99dc6eb0fdac9960e891aaaa3fa",
+    "deliverables/learning_chain/b2_stage_permission_20261002/protocol_result.json": "2327aaad50ac2e1088764de0d350817827a8a46ad69219e39fb2ebc1e1decf4e",
+    "deliverables/learning_chain/b2_stage_permission_20261002/protocol_output.txt": "d42f411fe759ca8e56dfa21da1cee2165deed1c7d5af8662247cc1b7f8b807cc",
+    "deliverables/learning_chain/b2_stage_permission_20261002/review.md": "61b29e1366baef9c31726bf36075ab90c4c630ee0f85e75a2c2205d89c946b60",
+    "deliverables/learning_chain/b2_stage_permission_20261002/review_assessment.json": "66da0f98ce7450d6d95aaa0ec8138b9b1e7650384e7c5ac3181eb65724040d0d",
+    "docs/superpowers/plans/2026-10-02-stage-residual-feasibility.md": "5f621bb740a827233b4852651b42a32b91785abeef4edf2fed0b0bb16fde2caa"
+  }
+}

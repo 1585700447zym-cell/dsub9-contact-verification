@@ -1,0 +1,128 @@
+{
+  "status": "stopped_by_contact_guard",
+  "stage_b2_complete": false,
+  "benefit_demonstrated": false,
+  "native_crash": false,
+  "python_exit_code": 1,
+  "training_started": 10,
+  "training_published": 9,
+  "formal_optimizer_batches": 3000,
+  "audited_transitions": 49313,
+  "training_successes": 2,
+  "training_results_are_stochastic_not_fixed_evaluation": true,
+  "rejected_episode": {
+    "id": "train_09",
+    "point": "negative X 100um",
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "CONTACT_GUARD",
+      "guard_violations": {
+        "contact": true,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": false
+    },
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [
+        "PENETRATION_LIMIT"
+      ],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.02428456064459919,
+      "checked_substeps": 63830
+    },
+    "events": [
+      {
+        "time_s": 9.178000000005287,
+        "reason": "B2_SEARCH_EXHAUSTED",
+        "phase": "STOPPING"
+      },
+      {
+        "time_s": 9.256000000005105,
+        "reason": "RECOVERY_ACCEPTED",
+        "phase": "RETRACT"
+      },
+      {
+        "time_s": 9.805000000003826,
+        "reason": "RECOVERY_DISTANCE_REACHED",
+        "phase": "STOPPING"
+      },
+      {
+        "time_s": 9.828000000003772,
+        "phase": "RUNNING",
+        "reason": "B2_RECOVERY_RESUMED"
+      },
+      {
+        "time_s": 10.76460000000159,
+        "reason": "PENETRATION_LIMIT",
+        "phase": "STOPPING"
+      }
+    ],
+    "cycles": 6383,
+    "discarded": 6383,
+    "committed": 0,
+    "penetration_limit_m": 3e-05,
+    "cycle_end_penetration_peak_m": 3.0104273659233968e-05,
+    "substep_peak_not_reconstructed": true
+  },
+  "budget": {
+    "previous_training_and_retry_starts": 6,
+    "previous_diagnostic_starts": 2,
+    "previous_rejected_setup_starts": 1,
+    "new_dynamic_starts": 18,
+    "cumulative_dynamic_starts": 27,
+    "cumulative_cap": 45,
+    "new_dynamic_cap": 36,
+    "formal_update_cap": 4500,
+    "automatic_retry": false
+  },
+  "unexecuted_dynamic_allowance": 18,
+  "unexecuted_optimizer_allowance": 1500,
+  "last_checkpoint": {
+    "path": "training/checkpoints/train_08",
+    "sha256": "1adbb5874b136db1ac4cae890d62eb4a5d660fb25f88617c7129560b288dae89",
+    "episodes": 9,
+    "updates": 3000
+  },
+  "checkpoint_file_hashes_verified": 9,
+  "all_ten_archive_stop_and_outcome_audits_passed": true,
+  "all_update_metrics_finite": true,
+  "final_development_evaluation": false,
+  "restoration_evaluation": false,
+  "independent_evaluation": false,
+  "additional_physical_starts": 0,
+  "additional_optimizer_calls": 0,
+  "audit_note": "Rejected guarded episodes require bounded guard-clear learning eligibility, stricter than the legacy generic checkpoint helper; original records unchanged.",
+  "evidence_sha256": {
+    "run\\training_episodes\\train_00\\episode.json.gz": "47b208505b90c81d41aa87eacd48171e9ebb4ebae38085ca387619721f1bed7e",
+    "run\\training_episodes\\train_01\\episode.json.gz": "c8a38cbf5e351693a8e9eb47d7a945e4cb155e2efeca3bb47ff76c4e1b5c8ff9",
+    "run\\training_episodes\\train_02\\episode.json.gz": "abd67658bee3fc379a3d61810dc82b2a278643397a571675b7710ade3120ae63",
+    "run\\training_episodes\\train_03\\episode.json.gz": "dac5c9137de44c7421104b912674b18f6211df4320a0ad6c7ab253a971dc113f",
+    "run\\training_episodes\\train_04\\episode.json.gz": "ed7c8cc745dfc6ddf8efa897d988f56f800244ceb4679ca421997c954d14994a",
+    "run\\training_episodes\\train_05\\episode.json.gz": "e3d7095be36ea471bc14beaac216570719c2586a6d9c3a92664dad0155c9a510",
+    "run\\training_episodes\\train_06\\episode.json.gz": "2561ba117c03b49dbeba78bae6df0ebeb3b75f9c2c22a149a28b835cee8a9bde",
+    "run\\training_episodes\\train_07\\episode.json.gz": "938c25c886257d612007e8419b49f3963e2f0cbd25af380d6831c79a0945ddb6",
+    "run\\training_episodes\\train_08\\episode.json.gz": "b4ba7aa7fa10b792cc13199280eee4948ea45a758fd1ec93717976399bef6854",
+    "run\\training_episodes\\train_09\\episode.json.gz": "a91e33361c0d6f69a4c1eab24678dc70a3acb5e2bc5143279e5c85d390d3490f",
+    "run\\training\\checkpoints\\train_00\\manifest.json": "136ba029ea6beca1a3b7f2c8588a5a6f74bbdd0f79f9d58d5f917ad1c4de15b9",
+    "run\\training\\checkpoints\\train_00\\state.pt": "82385b5cb5188226aac4a7d2c64bc4fc476149580a412470d45b35b302e5cde3",
+    "run\\training\\checkpoints\\train_01\\manifest.json": "a9ef884f7592d325bc32984e02d6d72d935f96addfd44a18c9127c9627675383",
+    "run\\training\\checkpoints\\train_01\\state.pt": "878dcb5ac6311fb77dedb856dadc9338275fce0f275a9b00229fcd2343d865f6",
+    "run\\training\\checkpoints\\train_02\\manifest.json": "8cf011f4daaa21c21737e4a554f6406e29857fee29d142c880a268ec04087492",
+    "run\\training\\checkpoints\\train_02\\state.pt": "294360b95b411af62deccb1379b85074b984a6b415a52f9c736bcafa63490c69",
+    "run\\training\\checkpoints\\train_03\\manifest.json": "59b14c5196d39ed785d01b0dbd7722e4592c3d8afe24e96529b35fde9ad10b36",
+    "run\\training\\checkpoints\\train_03\\state.pt": "5758c11ce6af07bbc9217fe7eeb746ec975150c3601334364bcc97695e3cd5a4",
+    "run\\training\\checkpoints\\train_04\\manifest.json": "435cf67d155c2ae35cbdb3013f76682ea3a3a52c392ab747a9c11656337e1b19",
+    "run\\training\\checkpoints\\train_04\\state.pt": "da4c1d244df24733f1df94a20145d29ad776df78de31b9aa844204c428959fce",
+    "run\\training\\checkpoints\\train_05\\manifest.json": "4c3f86e16b782180db223723db7a30a6c4a1d19ec5a20d5c9458eced83e96205",
+    "run\\training\\checkpoints\\train_05\\state.pt": "3cc5e608a82fc12d0ccdea45425b08048c61333daf5751660515f71ae4b8e1cc",
+    "run\\training\\checkpoints\\train_06\\manifest.json": "0864e5c23c5da6352cbcc702963c1d627ff8b5ff580d467abe28c8616bf39010",
+    "run\\training\\checkpoints\\train_06\\state.pt": "45c5c5f8152c02438439b9a74b2f45804587709f9e5c672ae5a8de78de76cf29",
+    "run\\training\\checkpoints\\train_07\\manifest.json": "8593479c6bc9efc0465c3beee3206913ab3c612320537f26fc680a852f337d64",
+    "run\\training\\checkpoints\\train_07\\state.pt": "491e36b282bbc9f3e9472cd7e137bdc3c9140f82457e3142be3f3a1e665cd86a",
+    "run\\training\\checkpoints\\train_08\\manifest.json": "1adbb5874b136db1ac4cae890d62eb4a5d660fb25f88617c7129560b288dae89",
+    "run\\training\\checkpoints\\train_08\\state.pt": "dd622a683063966ee70bc24d456c749bb76b7021379ab74232d6305fcfb644c3"
+  }
+}

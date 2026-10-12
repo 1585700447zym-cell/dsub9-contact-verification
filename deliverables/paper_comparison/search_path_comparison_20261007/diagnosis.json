@@ -1,0 +1,800 @@
+{
+  "scope": "four existing negative-Y development archives, descriptive offline comparison only",
+  "source_proof": {
+    "sealed_file_counts": {
+      "contact_gate_probe_20261007": 78,
+      "residual_effect_diagnosis_20261007": 27,
+      "frozen_comparison_20261007": 96,
+      "v4_learning_requalification_20261006": 457
+    },
+    "production_inputs_unchanged": 1057
+  },
+  "common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+  "records": [
+    {
+      "method": "F50",
+      "path": "deliverables/paper_comparison/contact_gate_probe_20261007/run/probe_F50_y_neg_150.json.gz",
+      "sha256": "534392e109e661d0c165bbeb1165a6c9f29b454c5d8e7690e0dd88f21ea15877",
+      "actor_sha256": "78523be02ef75d759df5108f4b9ce7c286eb019687f0d0dd716a7df483b5954c",
+      "outcome": "FULL_SUCCESS",
+      "task_end_time_s": 10.236000000002822,
+      "archive_cycles": 5998,
+      "segments": [
+        {
+          "start_cycle": 763,
+          "end_cycle_exclusive": 3163,
+          "cycles": 2400,
+          "duration_s": 4.800000000004636,
+          "start_time_s": 1.5259999999998646,
+          "end_time_s": 6.326000000004501,
+          "entry": {
+            "time_s": 1.5259999999998646,
+            "actual_position_um": [
+              9.926944191513202,
+              -145.8186098794324,
+              -3749.9971467392866
+            ],
+            "reference_position_um": [
+              11.531562742405944,
+              -142.1408052294436,
+              -3688.9903840328257
+            ],
+            "roll_pitch_deg": [
+              4.031422834987868e-05,
+              -2.381353880046852e-06
+            ],
+            "velocity_world": [
+              3.26152325122978e-09,
+              1.6751579553415988e-09,
+              -1.1343565672014032e-08,
+              -1.490467374415636e-06,
+              2.8968316813799745e-08,
+              -1.7915990891149055e-07
+            ],
+            "contact_wrench_M": [
+              -0.0001604473189002417,
+              -0.0003677728426163878,
+              -0.004982692501224579,
+              -1.46306740440191e-07,
+              6.188226789954766e-07,
+              8.066861709868947e-08
+            ]
+          },
+          "exit": {
+            "time_s": 6.326000000004501,
+            "actual_position_um": [
+              -50.669980360190976,
+              -76.69727301910076,
+              -3642.75166385822
+            ],
+            "reference_position_um": [
+              -52.5024856242991,
+              -75.98110139141599,
+              -3638.9857436689013
+            ],
+            "roll_pitch_deg": [
+              0.04466702113531947,
+              -0.006479689724943528
+            ],
+            "velocity_world": [
+              -0.00018614389075737568,
+              -5.801369430880767e-05,
+              0.0005334328316916905,
+              -0.0006284302237501148,
+              0.0005204944914366942,
+              -0.0005126245909877065
+            ],
+            "contact_wrench_M": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "active_cycles": 2400,
+          "actual_xy_net_um": [
+            -60.59692455170418,
+            69.12133686033162
+          ],
+          "actual_xy_path_um": 166.45944278407256,
+          "reference_xy_net_um": [
+            -64.03404836670504,
+            66.15970383802761
+          ],
+          "reference_xy_path_um": 704.8303582298624,
+          "min_actual_global_xy_um": 83.61481276217474,
+          "end_actual_global_xy_um": 91.9234387861367,
+          "segment_z_net_um": 107.24548288106647,
+          "max_net_depth_beyond_frozen_peak_um": 100.57012981600725,
+          "end_net_depth_beyond_frozen_peak_um": 100.57012981600725,
+          "total_command_xy_integral_um": [
+            -64.0340483667885,
+            66.15970383831117
+          ],
+          "request_xy_integral_um": [
+            59.21536244159335,
+            68.09994072320245
+          ],
+          "request_rotation_integral_mrad": [
+            -0.35837439703987856,
+            -0.21497491693554402
+          ],
+          "total_command_rotation_integral_mrad": [
+            0.7522944581295361,
+            -0.05265166939249173
+          ],
+          "mean_four_dimensional_action": [
+            0.2467306768397341,
+            0.28374975301306815,
+            -0.14932266543313846,
+            -0.08957288205639032
+          ],
+          "reference_filtered_cycles": 0,
+          "max_cycle_force_mN": 11.847491413581787,
+          "reference_theta_end_rad": 14.913961072351128,
+          "mean_radial_requested_um_s": -1.6848582940121966,
+          "outward_request_fraction": 0.4629166666666219,
+          "exit_event": {
+            "time_s": 6.326000000004501,
+            "phase": "INSERT",
+            "reason": "SEARCH_ADVANCED",
+            "progress_origin_z_m": 0.00025667820632577264,
+            "observed_z_m": 0.0003572483361417799,
+            "net_advance_m": 0.00010057012981600725
+          }
+        }
+      ]
+    },
+    {
+      "method": "F12.5",
+      "path": "deliverables/paper_comparison/contact_gate_probe_20261007/run/probe_F12p5_y_neg_150.json.gz",
+      "sha256": "05672e155e7b5e8875bf73c6e6f6f5ff6857f833978131ec7649676a9f4e58b2",
+      "actor_sha256": "78523be02ef75d759df5108f4b9ce7c286eb019687f0d0dd716a7df483b5954c",
+      "outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.653999999999517,
+      "archive_cycles": 6707,
+      "segments": [
+        {
+          "start_cycle": 763,
+          "end_cycle_exclusive": 3880,
+          "cycles": 3117,
+          "duration_s": 6.234000000007662,
+          "start_time_s": 1.5259999999998646,
+          "end_time_s": 7.760000000007527,
+          "entry": {
+            "time_s": 1.5259999999998646,
+            "actual_position_um": [
+              2.5591098848662623,
+              -148.26460988463597,
+              -3749.9972222049296
+            ],
+            "reference_position_um": [
+              2.876409260373004,
+              -147.29796144121752,
+              -3688.9904923997437
+            ],
+            "roll_pitch_deg": [
+              2.631374193601187e-05,
+              -3.3078245614416847e-07
+            ],
+            "velocity_world": [
+              6.53559791921432e-10,
+              -3.8889051371446435e-09,
+              -1.1288724018127675e-08,
+              -1.4717153691905614e-06,
+              -3.102121833150285e-10,
+              1.306440710905109e-08
+            ],
+            "contact_wrench_M": [
+              -3.17270265751539e-05,
+              -9.668199666582137e-05,
+              -0.004982688968328585,
+              -1.373669537892715e-07,
+              7.545741631444368e-08,
+              -1.8212281776199038e-08
+            ]
+          },
+          "exit": {
+            "time_s": 7.760000000007527,
+            "actual_position_um": [
+              -35.08984155564345,
+              -114.303552663912,
+              -3643.0382513348777
+            ],
+            "reference_position_um": [
+              -24.28722292076534,
+              -251.8059511168118,
+              -3573.982885980909
+            ],
+            "roll_pitch_deg": [
+              -0.28458651322328743,
+              0.04570735937070825
+            ],
+            "velocity_world": [
+              6.000708733859531e-05,
+              -6.458388776218211e-05,
+              9.137931660220712e-05,
+              -0.004485892991109061,
+              0.001385457420959484,
+              0.005555927887745949
+            ],
+            "contact_wrench_M": [
+              -0.0015411630946240411,
+              0.014003247456405065,
+              -0.007055459946505409,
+              -4.3439780067127404e-05,
+              -5.732328808335423e-06,
+              -5.150101282131814e-06
+            ]
+          },
+          "active_cycles": 3117,
+          "actual_xy_net_um": [
+            -37.64895144050971,
+            33.961057220723994
+          ],
+          "actual_xy_path_um": 201.56880455044106,
+          "reference_xy_net_um": [
+            -27.163632181138343,
+            -104.50798967559426
+          ],
+          "reference_xy_path_um": 929.4313905302425,
+          "min_actual_global_xy_um": 96.37351071255165,
+          "end_actual_global_xy_um": 119.56838684197369,
+          "segment_z_net_um": 106.95897087005177,
+          "max_net_depth_beyond_frozen_peak_um": 100.00969447002042,
+          "end_net_depth_beyond_frozen_peak_um": 100.00969447002042,
+          "total_command_xy_integral_um": [
+            -27.163632181142436,
+            -104.50798967567312
+          ],
+          "request_xy_integral_um": [
+            17.271264922638277,
+            25.635655146861502
+          ],
+          "request_rotation_integral_mrad": [
+            -0.12576833409090335,
+            -0.07107141202705643
+          ],
+          "total_command_rotation_integral_mrad": [
+            -2.7791556473827135,
+            0.9262786904394443
+          ],
+          "mean_four_dimensional_action": [
+            0.05540989708892204,
+            0.08224464275530938,
+            -0.040349160760586734,
+            -0.02280122297945755
+          ],
+          "reference_filtered_cycles": 0,
+          "max_cycle_force_mN": 15.824590038772165,
+          "reference_theta_end_rad": 17.025739672182517,
+          "mean_radial_requested_um_s": -1.4011494629352688,
+          "outward_request_fraction": 0.31985883862675707,
+          "exit_event": {
+            "time_s": 7.760000000007527,
+            "phase": "INSERT",
+            "reason": "SEARCH_ADVANCED",
+            "progress_origin_z_m": 0.0002569520541951019,
+            "observed_z_m": 0.00035696174866512234,
+            "net_advance_m": 0.00010000969447002041
+          }
+        }
+      ]
+    },
+    {
+      "method": "G50",
+      "path": "deliverables/paper_comparison/contact_gate_probe_20261007/run/probe_G50_y_neg_150.json.gz",
+      "sha256": "a8d47576247bfc635dce783413e641aca00e6bc4f1758b9547791ccf27bb3563",
+      "actor_sha256": "78523be02ef75d759df5108f4b9ce7c286eb019687f0d0dd716a7df483b5954c",
+      "outcome": "TASK_FAILURE",
+      "task_end_time_s": 17.999999999984727,
+      "archive_cycles": 9500,
+      "segments": [
+        {
+          "start_cycle": 763,
+          "end_cycle_exclusive": 4498,
+          "cycles": 3735,
+          "duration_s": 7.470000000005847,
+          "start_time_s": 1.5259999999998646,
+          "end_time_s": 8.996000000005711,
+          "entry": {
+            "time_s": 1.5259999999998646,
+            "actual_position_um": [
+              -0.015375674074750522,
+              -149.3834079572925,
+              -3749.997198888575
+            ],
+            "reference_position_um": [
+              1.509741306423587,
+              -145.67525687151374,
+              -3688.990560523265
+            ],
+            "roll_pitch_deg": [
+              3.935636361138398e-05,
+              -1.8607131673565132e-06
+            ],
+            "velocity_world": [
+              3.0102898482666342e-09,
+              1.7992079637893897e-09,
+              -1.1135517295373243e-08,
+              -1.4410648230781636e-06,
+              2.208396962134893e-08,
+              4.6522975755030374e-08
+            ],
+            "contact_wrench_M": [
+              -0.0001524982874076323,
+              -0.0003708069418032939,
+              -0.004982679146196866,
+              -1.3550520027940698e-07,
+              3.316376011549457e-07,
+              -7.308995233891277e-08
+            ]
+          },
+          "exit": {
+            "time_s": 8.996000000005711,
+            "actual_position_um": [
+              21.12245801315461,
+              -152.8710332465348,
+              -3758.227528509756
+            ],
+            "reference_position_um": [
+              117.85809343471446,
+              -171.87440705158198,
+              -3679.4878898883535
+            ],
+            "roll_pitch_deg": [
+              -0.11426291660523193,
+              -0.05926050488595541
+            ],
+            "velocity_world": [
+              0.00024611920921432094,
+              3.9018430297296904e-05,
+              2.2719674949407414e-05,
+              0.0028981026380663186,
+              0.002906109910677148,
+              0.00016145760538072143
+            ],
+            "contact_wrench_M": [
+              -0.009642852608680471,
+              0.0014923020290469621,
+              -0.007906746305818247,
+              8.307547618056194e-06,
+              -4.253457397007188e-06,
+              -1.2530377180621275e-05
+            ]
+          },
+          "active_cycles": 3735,
+          "actual_xy_net_um": [
+            21.13783368722936,
+            -3.487625289242329
+          ],
+          "actual_xy_path_um": 259.82428059261827,
+          "reference_xy_net_um": [
+            116.34835212829087,
+            -26.199150180068248
+          ],
+          "reference_xy_path_um": 1100.2040986524016,
+          "min_actual_global_xy_um": 98.52738442620958,
+          "end_actual_global_xy_um": 154.3233975726968,
+          "segment_z_net_um": -8.230329621181173,
+          "max_net_depth_beyond_frozen_peak_um": -6.139992071069883,
+          "end_net_depth_beyond_frozen_peak_um": -15.047376472485801,
+          "total_command_xy_integral_um": [
+            116.34835212810462,
+            -26.199150180351587
+          ],
+          "request_xy_integral_um": [
+            72.92717763192061,
+            111.09449819332005
+          ],
+          "request_rotation_integral_mrad": [
+            -0.6014414221055258,
+            -0.4793507210022532
+          ],
+          "total_command_rotation_integral_mrad": [
+            -2.3007931886030506,
+            -0.7400755345198133
+          ],
+          "mean_four_dimensional_action": [
+            0.19525348763551137,
+            0.2974417622308783,
+            -0.16102849320081797,
+            -0.12834021981308638
+          ],
+          "reference_filtered_cycles": 1,
+          "max_cycle_force_mN": 16.27448798926928,
+          "reference_theta_end_rad": 18.655666230920747,
+          "mean_radial_requested_um_s": -5.373673831038201,
+          "outward_request_fraction": 0.3220883534135478,
+          "exit_event": {
+            "time_s": 8.996000000005711,
+            "phase": "WAIT_RECOVERY",
+            "reason": "SEARCH_EXHAUSTED",
+            "reference_boundary_end": true,
+            "reference_boundary_final_segment": false,
+            "reference_xy_m": [
+              0.00011787346910878921,
+              -2.2490999094289488e-05
+            ],
+            "predicted_reference_xy_m": [
+              0.00011793325115650892,
+              -2.220394847969081e-05
+            ],
+            "radius_limit_m": 0.00012
+          },
+          "boundary_recheck": {
+            "current_radius_um": 119.99999900000005,
+            "next_radius_um": 120.0052792856755,
+            "current_inside": true,
+            "next_outside": true,
+            "next_excess_nm": 5.279285675489193,
+            "actual_global_xy_um": 154.3233975726968
+          },
+          "boundary_command_rederived": {
+            "theta_rad": 18.655666230920747,
+            "next_theta_rad": 18.658188592471248,
+            "target_radius_um": 118.76565989294342,
+            "target_xy_um": [
+              116.54025337558441,
+              -22.883428785059625
+            ],
+            "tracking_xy_um_s": [
+              -6.6660786660240055,
+              -1.9621484538506826
+            ],
+            "feedforward_xy_um_s": [
+              36.557102525862504,
+              145.48745575311972
+            ],
+            "limited_xy_um_s": [
+              29.891023859838498,
+              143.52530729926903
+            ],
+            "next_reference_xy_um": [
+              117.93325115650875,
+              -22.20394847969162
+            ]
+          },
+          "unused_search_time_s": 0.5299999999941534
+        },
+        {
+          "start_cycle": 4795,
+          "end_cycle_exclusive": 8500,
+          "cycles": 3705,
+          "duration_s": 7.40999999998273,
+          "start_time_s": 9.590000000004327,
+          "end_time_s": 16.999999999987057,
+          "entry": {
+            "time_s": 9.590000000004327,
+            "actual_position_um": [
+              23.071872156950807,
+              -152.54358918138638,
+              -4012.2301520131496
+            ],
+            "reference_position_um": [
+              23.071872156961586,
+              -152.54358918138502,
+              -4008.1869854801944
+            ],
+            "roll_pitch_deg": [
+              -0.11246646679749772,
+              -0.057453046258787596
+            ],
+            "velocity_world": [
+              1.4436817511168024e-17,
+              -3.195103397898757e-19,
+              5.3317657560004974e-06,
+              -3.169313705837039e-11,
+              -3.2427123253109995e-11,
+              -1.8916230367991923e-12
+            ],
+            "contact_wrench_M": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "exit": {
+            "time_s": 16.999999999987057,
+            "actual_position_um": [
+              24.523457669544083,
+              -152.6417291100246,
+              -3761.133546995827
+            ],
+            "reference_position_um": [
+              138.8520370736136,
+              -184.0864674880721,
+              -3680.538894767432
+            ],
+            "roll_pitch_deg": [
+              -0.14861582155299619,
+              -0.08254914967871309
+            ],
+            "velocity_world": [
+              0.00013179809237064052,
+              2.8784064225886505e-05,
+              6.710726234830634e-06,
+              0.0022354121503571,
+              0.0005563481014133477,
+              -0.001308530877594497
+            ],
+            "contact_wrench_M": [
+              -0.01104042964560357,
+              0.002637836769112467,
+              -0.008030618777892011,
+              4.474585794558387e-06,
+              -8.55494405150638e-06,
+              -1.224600378778586e-05
+            ]
+          },
+          "active_cycles": 3705,
+          "actual_xy_net_um": [
+            1.4515855125932777,
+            -0.09813992863825452
+          ],
+          "actual_xy_path_um": 382.5832848280986,
+          "reference_xy_net_um": [
+            115.78016491665201,
+            -31.542878306687083
+          ],
+          "reference_xy_path_um": 1086.6588876819717,
+          "min_actual_global_xy_um": 106.53740274448243,
+          "end_actual_global_xy_um": 154.5991508442658,
+          "segment_z_net_um": 251.09660501732284,
+          "max_net_depth_beyond_frozen_peak_um": -6.355138605369358,
+          "end_net_depth_beyond_frozen_peak_um": -17.95339495855655,
+          "total_command_xy_integral_um": [
+            115.78016491639177,
+            -31.54287830660671
+          ],
+          "request_xy_integral_um": [
+            66.8576015709273,
+            -3.5454443573868137
+          ],
+          "request_rotation_integral_mrad": [
+            -0.8107795127015303,
+            -1.2143314637513474
+          ],
+          "total_command_rotation_integral_mrad": [
+            -0.7307060886227491,
+            0.0893997367783908
+          ],
+          "mean_four_dimensional_action": [
+            0.18045236591385447,
+            -0.009569350492294617,
+            -0.21883387657312262,
+            -0.32775478104026373
+          ],
+          "reference_filtered_cycles": 14,
+          "max_cycle_force_mN": 16.538278101259962,
+          "reference_theta_end_rad": 18.57983659193885,
+          "mean_radial_requested_um_s": -7.106298836026747,
+          "outward_request_fraction": 0.23265856950067476,
+          "exit_event": {
+            "time_s": 16.999999999987057,
+            "phase": "FAILED",
+            "reason": "SEARCH_BUDGET_EXHAUSTED",
+            "reference_boundary_end": true,
+            "reference_boundary_final_segment": false,
+            "reference_xy_m": [
+              0.00011578016491666278,
+              -3.1542878306685726e-05
+            ],
+            "predicted_reference_xy_m": [
+              0.00011585743620778136,
+              -3.1258047511115794e-05
+            ],
+            "radius_limit_m": 0.00012
+          },
+          "boundary_recheck": {
+            "current_radius_um": 119.99999900000006,
+            "next_radius_um": 120.00004607852156,
+            "current_inside": true,
+            "next_outside": true,
+            "next_excess_nm": 0.04607852155933713,
+            "actual_global_xy_um": 154.5991508442658
+          },
+          "boundary_command_rederived": {
+            "theta_rad": 18.57983659193885,
+            "next_theta_rad": 18.582369218295366,
+            "target_radius_um": 118.28291341786971,
+            "target_xy_um": [
+              114.00648008623216,
+              -31.517774429150478
+            ],
+            "tracking_xy_um_s": [
+              -8.868424152153148,
+              0.12551938767624912
+            ],
+            "feedforward_xy_um_s": [
+              47.504069711423796,
+              142.28987839722186
+            ],
+            "limited_xy_um_s": [
+              38.63564555927064,
+              142.4153977848981
+            ],
+            "next_reference_xy_um": [
+              115.85743620778115,
+              -31.258047511116594
+            ]
+          },
+          "unused_search_time_s": 0.5900000000172696
+        }
+      ]
+    },
+    {
+      "method": "S50",
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_neg_150.json.gz",
+      "sha256": "e043f85a4c37869e996aaba0777783027130dec03b63b0b3b4b4a4ce0dcce3d6",
+      "actor_sha256": "92c20b541e8daa86f739c242e91c3be498d1ed1b482d066d884e28a88460c3ab",
+      "outcome": "FULL_SUCCESS",
+      "task_end_time_s": 10.7600000000016,
+      "archive_cycles": 6260,
+      "segments": [
+        {
+          "start_cycle": 763,
+          "end_cycle_exclusive": 3432,
+          "cycles": 2669,
+          "duration_s": 5.3380000000057715,
+          "start_time_s": 1.5259999999998646,
+          "end_time_s": 6.864000000005636,
+          "entry": {
+            "time_s": 1.5259999999998646,
+            "actual_position_um": [
+              -0.019490133793158,
+              -149.3928135799534,
+              -3749.9972798268964
+            ],
+            "reference_position_um": [
+              -0.06535508959972902,
+              -149.3296855749602,
+              -3688.990641434439
+            ],
+            "roll_pitch_deg": [
+              2.133377676537963e-05,
+              2.5482789087232814e-07
+            ],
+            "velocity_world": [
+              -9.102985631371357e-11,
+              -5.634731240144273e-09,
+              -1.11354908987405e-08,
+              -1.4409747904022999e-06,
+              -7.052925217356833e-09,
+              9.986413770816661e-08
+            ],
+            "contact_wrench_M": [
+              4.5860872300727445e-06,
+              -6.337727255890166e-06,
+              -0.004982679148552321,
+              -1.3664595431754083e-07,
+              -1.0536901116652691e-07,
+              -7.144899208743135e-08
+            ]
+          },
+          "exit": {
+            "time_s": 6.864000000005636,
+            "actual_position_um": [
+              -61.416092871640984,
+              -81.53801615213628,
+              -3643.159368098556
+            ],
+            "reference_position_um": [
+              -96.10600740103595,
+              -148.20569402212743,
+              -3580.8646505357265
+            ],
+            "roll_pitch_deg": [
+              -0.010259335199109453,
+              0.034140808641059645
+            ],
+            "velocity_world": [
+              -2.270368689363178e-06,
+              -4.239691941425487e-05,
+              5.4218614886698045e-05,
+              -0.004652466062722032,
+              0.0019170585698948875,
+              0.0010716981605245737
+            ],
+            "contact_wrench_M": [
+              0.0035239182231387683,
+              0.0072811033406857024,
+              -0.0065609853209610495,
+              -2.0958795570841913e-05,
+              7.397356869788825e-06,
+              -8.322128411148725e-07
+            ]
+          },
+          "active_cycles": 2669,
+          "actual_xy_net_um": [
+            -61.39660273784782,
+            67.85479742781715
+          ],
+          "actual_xy_path_um": 164.47589572771727,
+          "reference_xy_net_um": [
+            -96.04065231143623,
+            1.123991552832743
+          ],
+          "reference_xy_path_um": 758.3260155405075,
+          "min_actual_global_xy_um": 90.41596577121184,
+          "end_actual_global_xy_um": 102.08028478430136,
+          "segment_z_net_um": 106.83791172834022,
+          "max_net_depth_beyond_frozen_peak_um": 100.02078859867783,
+          "end_net_depth_beyond_frozen_peak_um": 100.02078859867783,
+          "total_command_xy_integral_um": [
+            -96.04065231160034,
+            1.1239915529517603
+          ],
+          "request_xy_integral_um": [
+            -3.2674557567632934,
+            192.44741020816895
+          ],
+          "request_rotation_integral_mrad": [
+            0.9181731588845052,
+            -1.1388473257433034
+          ],
+          "total_command_rotation_integral_mrad": [
+            0.8141756400486113,
+            0.1321423239965489
+          ],
+          "mean_four_dimensional_action": [
+            -0.012242247121617882,
+            0.7210468722666201,
+            0.3440139223992175,
+            -0.42669438956240974
+          ],
+          "reference_filtered_cycles": 0,
+          "max_cycle_force_mN": 11.44782139307279,
+          "reference_theta_end_rad": 15.73936484216676,
+          "mean_radial_requested_um_s": -13.882847292136665,
+          "outward_request_fraction": 0.37055076807794957,
+          "exit_event": {
+            "time_s": 6.864000000005636,
+            "phase": "INSERT",
+            "reason": "SEARCH_ADVANCED",
+            "progress_origin_z_m": 0.0002568198433027663,
+            "observed_z_m": 0.0003568406319014441,
+            "net_advance_m": 0.00010002078859867782
+          }
+        }
+      ]
+    }
+  ],
+  "archive_count": 4,
+  "archive_cycles": 28465,
+  "search_segments": 5,
+  "search_cycles": 15626,
+  "active_command_prediction_checks": 20232,
+  "max_reference_integration_error_m": 5.787034974759787e-18,
+  "G_S_first_search_entry_position_delta_um": [
+    0.004114459718407478,
+    0.009405622660926816,
+    8.093832114947075e-05
+  ],
+  "G_S_first_different_trace_row": 176,
+  "costs": {
+    "new_dynamics": 0,
+    "new_physical_substeps": 0,
+    "new_policy_inferences": 0,
+    "new_optimizer_updates": 0,
+    "new_published_transitions": 0,
+    "cumulative_dynamic": 208
+  },
+  "state": {
+    "training_admission": false,
+    "automatic_tracking": "PAUSED",
+    "old_budgets": "closed"
+  },
+  "definitions": {
+    "actual_motion": "saved physical position, not integrated command",
+    "reference": "saved drive reference, not actual position",
+    "requests": "permission-applied XY/roll/pitch request; F12.5 already includes 0.25 deployment multiplier",
+    "mean_action": "time-weighted deployed normalized 4-vector",
+    "net_depth": "sensed Z beyond frozen historical peak; recovery retraction is not fresh progress"
+  }
+}

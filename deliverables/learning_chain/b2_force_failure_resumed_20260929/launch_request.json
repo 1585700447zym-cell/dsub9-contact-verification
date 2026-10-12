@@ -1,0 +1,7 @@
+{
+  "manual_resumption": true,
+  "retry_allowed": false,
+  "authorization_sha256": "a4be2e34446d55d84b8b87f7883f30c9ff5d60bcdb7f36936cec376f7b2d7b6d",
+  "candidate_sha256": "78c7f13fe1426fe18f29ceeeceaf71babfb70ebb9bf9a8ba42601cffcaa1a42b",
+  "requested_at": "2026-09-29T14:31:51.6632563+08:00"
+}

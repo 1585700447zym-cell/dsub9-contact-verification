@@ -1,0 +1,12 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_corrupt_archive_is_retained_and_does_not_abort_all_attempts (__main__.ReviewRegressions.test_corrupt_archive_is_retained_and_does_not_abort_all_attempts) ... ok
+test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics (__main__.ReviewRegressions.test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics) ... ok
+test_missing_receipt_and_unknown_go_do_not_become_zero_measurement (__main__.ReviewRegressions.test_missing_receipt_and_unknown_go_do_not_become_zero_measurement) ... ok
+test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail (__main__.ReviewRegressions.test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail) ... ok
+test_planned_success_quantiles_use_fixed_linear_interpolation (__main__.ReviewRegressions.test_planned_success_quantiles_use_fixed_linear_interpolation) ... ok
+test_pre_go_reservation_never_increments_actual_dynamic_total (__main__.ReviewRegressions.test_pre_go_reservation_never_increments_actual_dynamic_total) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.043s
+
+OK

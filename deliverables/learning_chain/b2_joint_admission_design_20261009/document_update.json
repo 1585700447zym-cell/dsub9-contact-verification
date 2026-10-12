@@ -1,0 +1,12 @@
+{
+  "stage_id": "B2-SCOPE-08",
+  "after_documents": {
+    "项目当前入口.md": "6492fb9cc2312fa6e257afe17fd2f0dd03d3d9a583382f8af0a20160c170927f",
+    "项目进度跟踪.md": "be3ebef4aa06cda532042900e8661f2d2ee8433349f9161e20ba91789967b35b",
+    "项目交付总览.md": "3f96ce6097ce90fb0505ef0af576b4dd6a286fcf1e846f45c6ed374ae846ed26",
+    "研究推进计划_当前版.md": "5a3e0c4891a1d820c4a3707cc21cc00e2db2aa1f8699f57e464d34654418e449",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "3fdbbcc6af5ef9d214ac16bf2a64b9678f97784a09134b37e8fd81cd3c446448",
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+  },
+  "rolling_documents_may_advance": true
+}

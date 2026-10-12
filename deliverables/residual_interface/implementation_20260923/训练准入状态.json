@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-23",
+  "scope": "partial_B1_compatibility_wrapper_and_pure_modules",
+  "training_admitted": false,
+  "sac_updates": 0,
+  "independent_test_used": false,
+  "orientation_guard_enabled": false,
+  "orientation_candidate_deg": 2.5,
+  "orientation_candidate_approved": false,
+  "passed_evidence": [
+    "runtime_path_version_DLL_checks",
+    "seven_development_cases_exact_zero_residual_compatibility",
+    "instance_local_cycle_and_stop_sampling",
+    "recovery_branch_tests",
+    "pure_action_reward_and_episode_quarantine_tests"
+  ],
+  "missing_required_gates": [
+    "approved_and_dynamically_validated_orientation_guard",
+    "v3_complete_substep_events_and_motion_guards",
+    "policy_observation_and_Gym_integration",
+    "physical_nonzero_residual_and_full_episode_data_integration",
+    "end_to_end_external_truncation_and_stop_audit",
+    "same_new_common_version_baseline_comparison",
+    "initialization_and_dynamic_exploration_domain_checks",
+    "training_cost_and_untrained_policy_serialization",
+    "complete_admission_verifier"
+  ],
+  "not_a_machine_admission_verifier": true
+}

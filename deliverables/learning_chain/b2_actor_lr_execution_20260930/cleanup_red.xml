@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.085" timestamp="2026-09-30T17:09:04.867377+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_lr_runner" name="test_cleanup_unconfirmed_preserves_ledger_and_reports_uncertainty" time="0.029"><failure message="ValueError: Budget authorization differs">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/cleanup_red_work/test_cleanup_unconfirmed_prese0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001CC9F8A90F0&gt;
+
+    def test_cleanup_unconfirmed_preserves_ledger_and_reports_uncertainty(tmp_path,monkeypatch):
+        import json
+        m=importlib.import_module('tools.validation.run_actor_lr_comparison')
+        monkeypatch.setattr(m,'DELIVERY',tmp_path)
+        (tmp_path/'run').mkdir();raw='{"untrusted_test_ledger":true}'
+        (tmp_path/'run/ledger.json').write_text(raw,encoding='utf-8')
+        (tmp_path/'process_exit.json').write_text(json.dumps(dict(status='supervisor_error',worker_stopped=False,cleanup_error='injected kill failure')),encoding='utf-8')
+&gt;       m.finalize_failure('a'*64,'b'*64,'supervisor failed')
+
+tests\learning\test_actor_lr_runner.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\validation\run_actor_lr_comparison.py:51: in finalize_failure
+    ledger=ComparisonLedger.load(run/'ledger.json',candidate_pin,authorization_pin)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+cls = &lt;class 'tools.learning.actor_lr_budget.ComparisonLedger'&gt;
+path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/cleanup_red_work/test_cleanup_unconfirmed_prese0/run/ledger.json')
+candidate_pin = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+authorization_pin = 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+
+    @classmethod
+    def load(cls,path,candidate_pin,authorization_pin):
+        valid_pin(candidate_pin);valid_pin(authorization_pin)
+        state=json.loads(Path(path).read_text(encoding='utf-8'))
+        result=cls(Path(path),state)
+        if state.get('candidate_sha256')!=candidate_pin or state.get('authorization_sha256')!=authorization_pin:
+&gt;           raise ValueError('Budget authorization differs')
+E           ValueError: Budget authorization differs
+
+tools\learning\actor_lr_budget.py:27: ValueError</failure></testcase></testsuite></testsuites>

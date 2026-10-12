@@ -1,0 +1,12 @@
+{
+  "documents_checked": 6,
+  "local_links_checked": 292,
+  "missing_links": [],
+  "tests": 375,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "added_source_snapshots": 7,
+  "rolling_documents_and_plan_snapshots": 4,
+  "original_b2_01_manifest_unchanged": true
+}

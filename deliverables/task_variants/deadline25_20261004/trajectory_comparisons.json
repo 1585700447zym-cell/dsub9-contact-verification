@@ -1,0 +1,17 @@
+{
+  "y_neg_150": {
+    "scope": "through old 20s deadline",
+    "before_time_s": 20.0,
+    "samples": 10001,
+    "old_samples": 11001,
+    "new_samples": 11271,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  }
+}

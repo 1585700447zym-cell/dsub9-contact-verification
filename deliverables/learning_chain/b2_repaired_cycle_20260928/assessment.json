@@ -1,0 +1,12 @@
+{
+  "status": "stopped_before_reset_runtime_path_mismatch",
+  "root_cause": "EpisodeSession constructor still used original hardcoded runtime path",
+  "new_recorded_start_attempts": 1,
+  "cumulative_recorded_starts": 9,
+  "control_cycles": 0,
+  "optimizer_updates": 0,
+  "replay_published": 0,
+  "native_crash": false,
+  "stage_complete": false,
+  "automatic_retry": false
+}

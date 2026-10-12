@@ -1,0 +1,19 @@
+......FFF                                                                [100%]
+================================== FAILURES ===================================
+_ test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_changed] _
+tests\task_variants\test_compliant_search_preflight.py:84: in test_postflight_input_failure_closes_budget_and_retains_completed_episode
+    with pytest.raises((OSError,RuntimeError)):runner.close_run(tmp_path,ledger,config)
+E   AttributeError: module 'tools.validation.run_compliant_search_preflight' has no attribute 'close_run'. Did you mean: 'claim_run'?
+_ test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_missing] _
+tests\task_variants\test_compliant_search_preflight.py:84: in test_postflight_input_failure_closes_budget_and_retains_completed_episode
+    with pytest.raises((OSError,RuntimeError)):runner.close_run(tmp_path,ledger,config)
+E   AttributeError: module 'tools.validation.run_compliant_search_preflight' has no attribute 'close_run'. Did you mean: 'claim_run'?
+_ test_postflight_input_failure_closes_budget_and_retains_completed_episode[source_changed] _
+tests\task_variants\test_compliant_search_preflight.py:84: in test_postflight_input_failure_closes_budget_and_retains_completed_episode
+    with pytest.raises((OSError,RuntimeError)):runner.close_run(tmp_path,ledger,config)
+E   AttributeError: module 'tools.validation.run_compliant_search_preflight' has no attribute 'close_run'. Did you mean: 'claim_run'?
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_compliant_search_preflight.py::test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_changed]
+FAILED tests/task_variants/test_compliant_search_preflight.py::test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_missing]
+FAILED tests/task_variants/test_compliant_search_preflight.py::test_postflight_input_failure_closes_budget_and_retains_completed_episode[source_changed]
+3 failed, 6 passed in 2.66s

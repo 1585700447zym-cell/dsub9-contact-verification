@@ -1,0 +1,7 @@
+Recorded summaries of observed test output (not a raw console transcript).
+Initial classification tests: 3 failed because versioned runner was absent; after implementation 3 passed in 0.02s.
+Actual-stop-window and nonfinite archive helpers: 2 failed before helper existed; 5 targeted tests passed after implementation.
+Latched STOPPING annotation regression: 1 failed, 2 passed before fix; 6 targeted tests passed in 1.92s after fix.
+Final readiness suite in formal MuJoCo 3.9.0: 40 passed, 1 skipped in 19.40s.
+The skipped archive-wiring test requires isolated 3.13.0 and was exercised in the previous capability. New matrix boundary tests are engine-independent audits, not extra physical episodes.
+Independent reviewer reran 6 targeted tests successfully after final stop-clock changes.

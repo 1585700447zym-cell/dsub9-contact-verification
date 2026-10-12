@@ -1,0 +1,70 @@
+{
+  "scope": "Frozen archived states, algebra only, no controller/physics/training calls; does not predict actual success",
+  "counterexamples": 642,
+  "new_positive_y": 633,
+  "new_negative_y": 9,
+  "max_target_radius_um": 120.00000000000003,
+  "representative": {
+    "time_s": 14.829999999992115,
+    "old_y_mm_s": -0.10601806627451683,
+    "new_y_mm_s": 0.3,
+    "target_norm_um": 120.0
+  },
+  "remaining_negative": [
+    {
+      "time_s": 10.788000000001535,
+      "old_y_mm_s": -0.13002900233190262,
+      "new_y_mm_s": -0.023825278130456706,
+      "target_norm_um": 43.05605893297594
+    },
+    {
+      "time_s": 10.79000000000153,
+      "old_y_mm_s": -0.1297244192648615,
+      "new_y_mm_s": -0.02106308944159016,
+      "target_norm_um": 43.55270875973801
+    },
+    {
+      "time_s": 10.792000000001526,
+      "old_y_mm_s": -0.1294169717995167,
+      "new_y_mm_s": -0.01828689657338984,
+      "target_norm_um": 44.05268657191521
+    },
+    {
+      "time_s": 10.794000000001521,
+      "old_y_mm_s": -0.12910665236650246,
+      "new_y_mm_s": -0.015496734052617967,
+      "target_norm_um": 44.55590089879377
+    },
+    {
+      "time_s": 10.796000000001516,
+      "old_y_mm_s": -0.12879316930854495,
+      "new_y_mm_s": -0.012692352293811684,
+      "target_norm_um": 45.06226315206896
+    },
+    {
+      "time_s": 10.798000000001512,
+      "old_y_mm_s": -0.12847684483235186,
+      "new_y_mm_s": -0.00987411270697149,
+      "target_norm_um": 45.57168393361128
+    },
+    {
+      "time_s": 10.800000000001507,
+      "old_y_mm_s": -0.12815950018291034,
+      "new_y_mm_s": -0.007043878934570477,
+      "target_norm_um": 46.08408121231561
+    },
+    {
+      "time_s": 10.802000000001502,
+      "old_y_mm_s": -0.1278387246611971,
+      "new_y_mm_s": -0.004199301031092419,
+      "target_norm_um": 46.599382989226235
+    },
+    {
+      "time_s": 10.804000000001498,
+      "old_y_mm_s": -0.12751665330175455,
+      "new_y_mm_s": -0.0013425512073255937,
+      "target_norm_um": 47.11750790777715
+    }
+  ],
+  "implemented_projection_exact": true
+}

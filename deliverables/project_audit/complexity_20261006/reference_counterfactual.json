@@ -1,0 +1,23 @@
+{
+  "scope": "100ms forced-zero drive-reference math only, no future physical/success guarantee",
+  "snapshots": 75,
+  "worst": {
+    "archive": "deliverables/paper_comparison/v4_learning_pilot_20261006/run/warmup_S50_y_neg_150.json.gz",
+    "cycle": 4377,
+    "steps": 50,
+    "peak_radius_um": 120.02914066812633,
+    "excess_nm": 29.14066812632649
+  },
+  "known_failure_reachability": {
+    "time_s": 8.75600000000627,
+    "current_radius_um": 119.97936698003271,
+    "previous_xy_m_s": [
+      8.962780032265731e-05,
+      0.00011967426982662896
+    ],
+    "minimum_next_radius_um": 120.00420995917656,
+    "minimum_excess_nm": 4.209959176559061,
+    "any_next_xy_velocity_in_full_speed_slew_box_can_keep_120um": false
+  },
+  "candidate_note": "虚拟参考半径/容差与物理安全边界应分开审核；本计算只能支持缓冲量级筛查，不能签发训练或证明新随机动作安全。"
+}

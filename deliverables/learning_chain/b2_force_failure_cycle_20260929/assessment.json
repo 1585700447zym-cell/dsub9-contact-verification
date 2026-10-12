@@ -1,0 +1,40 @@
+{
+  "status": "technical_preparation_passed_budget_pending",
+  "candidate_sha256": "1f892778e9b5b9c15d982c96a687321b26c018170d23f4f86068cb3a38277083",
+  "tests_passed": 187,
+  "source_count": 911,
+  "forbidden_call_counts": {
+    "optimizer": 0,
+    "physics": 0,
+    "prediction": 0
+  },
+  "independent_review_important_fixed": 3,
+  "unresolved_critical": 0,
+  "unresolved_important": 0,
+  "initial_learning_state_exact_except_binding_and_version": true,
+  "baseline_reused_successes": 3,
+  "baseline_reused_total": 4,
+  "new_dynamic_starts": 0,
+  "new_optimizer_batches": 0,
+  "new_policy_predictions": 0,
+  "proposed_new_dynamic_cap": 32,
+  "proposed_formal_optimizer_batches": 4500,
+  "previous_lineage_starts": 36,
+  "proposed_cumulative_cap": 68,
+  "old_unused_budget_retired": true,
+  "execution_authorized": false,
+  "execution_started": false,
+  "b2_complete": false,
+  "performance_improvement_established": false,
+  "automation_status": "PAUSED",
+  "evidence_sha256": {
+    "candidate.json": "1f892778e9b5b9c15d982c96a687321b26c018170d23f4f86068cb3a38277083",
+    "candidate_pin.json": "bf6d6160bd9dbb6692566ecf1912b9361cf75a3e36f1ae8238c31f35197215df",
+    "test_binding.json": "54fdc744073d528910782dc7a52650247e820adbbefbee1182d52dfb891da4e5",
+    "tests.xml": "c17bb6afa43292378ed75cda88086468abf033afba412502e43b479596fc05a0",
+    "initial_identity_preflight.json": "00477551eafa040bbbd7658ab8a433f0d2bb704e6ea26d8aee42b118fa10c37b",
+    "baseline_reuse.json": "a6e77a39376e80391605f2e9dd74dc8b7a175ccc6166be8b3a8acd582b922124",
+    "review.json": "d56b8fe7b27c846a41b76cdcd91777f1164125fd57f0e043dcf4df091139280d",
+    "entry_preflight.json": "085f7dd1fac60c50c752513f6f56eacb583bf6bbf66165bd059492f79892d2d6"
+  }
+}

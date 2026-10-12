@@ -1,0 +1,32 @@
+test_last_guard_or_incomplete_result_does_not_report_complete (test_scope_preflight.ExecutionTests.test_last_guard_or_incomplete_result_does_not_report_complete) ... 
+  test_last_guard_or_incomplete_result_does_not_report_complete (test_scope_preflight.ExecutionTests.test_last_guard_or_incomplete_result_does_not_report_complete) (damage='guard') ... FAIL
+  test_last_guard_or_incomplete_result_does_not_report_complete (test_scope_preflight.ExecutionTests.test_last_guard_or_incomplete_result_does_not_report_complete) (damage='unfinished') ... FAIL
+
+======================================================================
+FAIL: test_last_guard_or_incomplete_result_does_not_report_complete (test_scope_preflight.ExecutionTests.test_last_guard_or_incomplete_result_does_not_report_complete) (damage='guard')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 209, in test_last_guard_or_incomplete_result_does_not_report_complete
+    self.assertEqual(result['status'],'CLOSED_RULE')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CLOSED_COMPLETE' != 'CLOSED_RULE'
+- CLOSED_COMPLETE
++ CLOSED_RULE
+
+
+======================================================================
+FAIL: test_last_guard_or_incomplete_result_does_not_report_complete (test_scope_preflight.ExecutionTests.test_last_guard_or_incomplete_result_does_not_report_complete) (damage='unfinished')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_scope_preflight.py", line 209, in test_last_guard_or_incomplete_result_does_not_report_complete
+    self.assertEqual(result['status'],'CLOSED_RULE')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'CLOSED_COMPLETE' != 'CLOSED_RULE'
+- CLOSED_COMPLETE
++ CLOSED_RULE
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.247s
+
+FAILED (failures=2)

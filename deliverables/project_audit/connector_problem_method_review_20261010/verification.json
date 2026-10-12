@@ -1,0 +1,90 @@
+{
+  "bound_files": 215,
+  "unchanged_bound_files": 210,
+  "changed_bound_files": [
+    "项目当前入口.md",
+    "项目进度跟踪.md",
+    "研究推进计划_当前版.md",
+    "项目交付总览.md",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md"
+  ],
+  "only_allowed_documents_changed": true,
+  "original_plan_unchanged": true,
+  "branch_unchanged": true,
+  "head_unchanged": true,
+  "prior_dirty_entries": 224,
+  "current_dirty_entries": 224,
+  "prior_dirty_entries_preserved": true,
+  "missing_prior_entries": [],
+  "before_snapshots_match": true,
+  "after_snapshots_match": true,
+  "rolling_documents": {
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "unique": true,
+      "current_scenario_and_candidate": true,
+      "budget_kept": true,
+      "preview": "\n**2026-10-10｜当前阶段B.2第3项；任务：原规划评估与连接器问题/方法筛选，已完成研究建议；实现与实验待开始。**\n\n原规划v1.2评估与连接器补充调研已完成研究建议：对象仍为D-sub9，恢复位置—姿态联合误差的重点；优先检验多点接触时纠偏方向依据不明确导致的受阻/错误修正。首选候选为“接触响应预测引导的XY/roll/pitch协同纠偏”，阶段/进展门控建议降为对照或辅助，尚未实施路线变更。\n\n联合误差、多针、力历史、主动试探、平移转动原语和阶段门控均已有先例；任务对象不同不自动构成创新。需先证明本地同信息强传统方法存在有意义的不足，以及动作—响应序列确实有助决策；若局部有限差分/线性响应控制已解决，就不包装学习必要性。\n\nSCOPE20的2000批、F0/F2000功能各4/4、耗时改善2.77%未过原10%条件及SCOPE21附加精度4/4→0/4保持；F0不是纯B2。旧负Y零倾角长搜索只作开发线索，当前四个联合点不证明强基线缺陷或连续域。\n\n下一项（待开始）：计划第3项的具体场景/基线/指标设计。针对粗定位后的XY＋roll/pitch联合误差，登记纯B2、合理",
+      "other_marker_inventory_preserved": true
+    },
+    "研究推进计划_当前版.md": {
+      "unique": true,
+      "current_scenario_and_candidate": true,
+      "budget_kept": true,
+      "preview": "\n**2026-10-10｜当前阶段B.2第3项；任务：原规划评估与连接器问题/方法筛选，已完成研究建议；实现与实验待开始。**\n\n原规划v1.2评估与连接器补充调研已完成研究建议：对象仍为D-sub9，恢复位置—姿态联合误差的重点；优先检验多点接触时纠偏方向依据不明确导致的受阻/错误修正。首选候选为“接触响应预测引导的XY/roll/pitch协同纠偏”，阶段/进展门控建议降为对照或辅助，尚未实施路线变更。\n\n联合误差、多针、力历史、主动试探、平移转动原语和阶段门控均已有先例；任务对象不同不自动构成创新。需先证明本地同信息强传统方法存在有意义的不足，以及动作—响应序列确实有助决策；若局部有限差分/线性响应控制已解决，就不包装学习必要性。\n\nSCOPE20的2000批、F0/F2000功能各4/4、耗时改善2.77%未过原10%条件及SCOPE21附加精度4/4→0/4保持；F0不是纯B2。旧负Y零倾角长搜索只作开发线索，当前四个联合点不证明强基线缺陷或连续域。\n\n下一项（待开始）：计划第3项的具体场景/基线/指标设计。针对粗定位后的XY＋roll/pitch联合误差，登记纯B2、合理",
+      "other_marker_inventory_preserved": true
+    },
+    "项目交付总览.md": {
+      "unique": true,
+      "current_scenario_and_candidate": true,
+      "budget_kept": true,
+      "preview": "\n**2026-10-10｜当前阶段B.2第3项；任务：原规划评估与连接器问题/方法筛选，已完成研究建议；实现与实验待开始。**\n\n原规划v1.2评估与连接器补充调研已完成研究建议：对象仍为D-sub9，恢复位置—姿态联合误差的重点；优先检验多点接触时纠偏方向依据不明确导致的受阻/错误修正。首选候选为“接触响应预测引导的XY/roll/pitch协同纠偏”，阶段/进展门控建议降为对照或辅助，尚未实施路线变更。\n\n联合误差、多针、力历史、主动试探、平移转动原语和阶段门控均已有先例；任务对象不同不自动构成创新。需先证明本地同信息强传统方法存在有意义的不足，以及动作—响应序列确实有助决策；若局部有限差分/线性响应控制已解决，就不包装学习必要性。\n\nSCOPE20的2000批、F0/F2000功能各4/4、耗时改善2.77%未过原10%条件及SCOPE21附加精度4/4→0/4保持；F0不是纯B2。旧负Y零倾角长搜索只作开发线索，当前四个联合点不证明强基线缺陷或连续域。\n\n下一项（待开始）：计划第3项的具体场景/基线/指标设计。针对粗定位后的XY＋roll/pitch联合误差，登记纯B2、合理",
+      "other_marker_inventory_preserved": true
+    },
+    "项目当前入口.md": {
+      "unique": true,
+      "current_scenario_and_candidate": true,
+      "budget_kept": true,
+      "preview": "\n**2026-10-10｜当前阶段B.2第3项；任务：原规划评估与连接器问题/方法筛选，已完成研究建议；实现与实验待开始。**\n\n原规划v1.2评估与连接器补充调研已完成研究建议：对象仍为D-sub9，恢复位置—姿态联合误差的重点；优先检验多点接触时纠偏方向依据不明确导致的受阻/错误修正。首选候选为“接触响应预测引导的XY/roll/pitch协同纠偏”，阶段/进展门控建议降为对照或辅助，尚未实施路线变更。\n\n联合误差、多针、力历史、主动试探、平移转动原语和阶段门控均已有先例；任务对象不同不自动构成创新。需先证明本地同信息强传统方法存在有意义的不足，以及动作—响应序列确实有助决策；若局部有限差分/线性响应控制已解决，就不包装学习必要性。\n\nSCOPE20的2000批、F0/F2000功能各4/4、耗时改善2.77%未过原10%条件及SCOPE21附加精度4/4→0/4保持；F0不是纯B2。旧负Y零倾角长搜索只作开发线索，当前四个联合点不证明强基线缺陷或连续域。\n\n下一项（待开始）：计划第3项的具体场景/基线/指标设计。针对粗定位后的XY＋roll/pitch联合误差，登记纯B2、合理",
+      "other_marker_inventory_preserved": true
+    },
+    "项目进度跟踪.md": {
+      "unique": true,
+      "current_scenario_and_candidate": true,
+      "budget_kept": true,
+      "preview": "\n**2026-10-10｜当前阶段B.2第3项；任务：原规划评估与连接器问题/方法筛选，已完成研究建议；实现与实验待开始。**\n\n原规划v1.2评估与连接器补充调研已完成研究建议：对象仍为D-sub9，恢复位置—姿态联合误差的重点；优先检验多点接触时纠偏方向依据不明确导致的受阻/错误修正。首选候选为“接触响应预测引导的XY/roll/pitch协同纠偏”，阶段/进展门控建议降为对照或辅助，尚未实施路线变更。\n\n联合误差、多针、力历史、主动试探、平移转动原语和阶段门控均已有先例；任务对象不同不自动构成创新。需先证明本地同信息强传统方法存在有意义的不足，以及动作—响应序列确实有助决策；若局部有限差分/线性响应控制已解决，就不包装学习必要性。\n\nSCOPE20的2000批、F0/F2000功能各4/4、耗时改善2.77%未过原10%条件及SCOPE21附加精度4/4→0/4保持；F0不是纯B2。旧负Y零倾角长搜索只作开发线索，当前四个联合点不证明强基线缺陷或连续域。\n\n下一项（待开始）：计划第3项的具体场景/基线/指标设计。针对粗定位后的XY＋roll/pitch联合误差，登记纯B2、合理",
+      "other_marker_inventory_preserved": true
+    }
+  },
+  "links": {
+    "checked": 59,
+    "failures": [],
+    "pass": true
+  },
+  "historical_deliveries": [
+    {
+      "package": "SCOPE21",
+      "manifest": "deliverables/learning_chain/b2_joint_efficiency_diagnosis_20261010/delivery_manifest.json",
+      "manifest_sha256": "81d6ef9b411929e11fa5ffb6e86fad5fd440b0c28fb04692f1d11cca4c3c2aca",
+      "files_checked": 53,
+      "changed": [],
+      "pass": true
+    },
+    {
+      "package": "first_literature_package",
+      "manifest": "deliverables/project_audit/literature_applicability_20261010/delivery_manifest.json",
+      "manifest_sha256": "62287a1e740ff59aa14f19646eb6333c6803f680acf9420d94b32a4a4f244a7b",
+      "files_checked": 23,
+      "changed": [],
+      "pass": true
+    }
+  ],
+  "historical_packages_found": true,
+  "source_json_parse": true,
+  "report_required_sections": true,
+  "scientific_execution_added": 0,
+  "scope": "Static document, source, snapshot, branch, history and link verification only; no scientific imports, inference, rollout or training; no method efficacy or physical admission claim.",
+  "result": "PASS",
+  "checked_at_utc": "2026-10-10T07:04:58.033344+00:00",
+  "final_recheck": "PASS: bound files, original Word, Git state, six snapshot pairs and 76 historical package members rechecked; report attribution and novelty boundaries verified.",
+  "report_scope_and_novelty_qualified": true
+}

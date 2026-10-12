@@ -1,0 +1,45 @@
+{
+  "version": "b2_fixed_actor_value_target_probe_v2",
+  "authorization": "Pending approval for corrective repeat: first 2000 updates consumed and invalidated by shared optimizer tensors; request 2000 additional critic updates, no physics or actor/temperature updates",
+  "diagnostic_only": true,
+  "production_training_admitted": false,
+  "physical_episodes": 0,
+  "arms": [
+    "one_step",
+    "exact_inactive_suffix"
+  ],
+  "critic_updates_per_arm": 1000,
+  "total_critic_updates": 2000,
+  "actor_updates": 0,
+  "temperature_updates": 0,
+  "batch_size": 256,
+  "learning_rate": 0.0003,
+  "tau": 0.005,
+  "checkpoint_manifest_sha256": "c29d7837a12a842a0fe8281f47e42d4b22195fc091125e60eff5a60295d01ca1",
+  "data": "Only four B2-13 training episodes, fixed replay of 22722 rows; no publication or promotion of other archives",
+  "initialization": "Both critics, target critics and critic Adam moments restored from the same final checkpoint; actor, alpha and their optimizer states frozen",
+  "randomness": "Replay RNG copied from checkpoint; same batch indices and frozen-actor next-action samples for both arms",
+  "treatment": "Only replace targets at last active transition and its final wholly inactive suffix by realized discounted return; no replacement in an earlier inactive interval that later resumes actions",
+  "evaluation": "All four training trajectories and four archived B2-13 development evaluation trajectories; no test set, new physics, actor selection or deployment",
+  "measurement_steps": [
+    0,
+    100,
+    250,
+    500,
+    1000
+  ],
+  "primary_groups": [
+    "terminal",
+    "suffix_start",
+    "last_active"
+  ],
+  "diagnostic_threshold": {
+    "maximum_absolute_error_per_group": 1.0,
+    "relative_mae_reduction_from_initial": 0.8
+  },
+  "interpretation": "Threshold is an empirical value-fitting diagnostic, not a change to physical success criteria or a claim of policy improvement. Compare final train and development errors without selecting an intermediate checkpoint.",
+  "stopping": "Exactly 1000 critic updates per arm; stop on nonfinite values or source/frozen-state mismatch. No retry, automatic extension, policy updates or physical run.",
+  "prior_invalid_critic_updates": 2000,
+  "cumulative_critic_updates_if_approved": 4000,
+  "correction": "Independent deep copies of each optimizer state, verify tensor storage isolation before any update; retain all failed-attempt files; no scientific target or sampling changes"
+}

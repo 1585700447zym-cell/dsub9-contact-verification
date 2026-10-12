@@ -1,0 +1,1335 @@
+{
+  "diagnostic_only": true,
+  "mujoco_version": "3.9.0",
+  "sample_index": 20,
+  "time_s": 11.805999999999162,
+  "pose": [
+    -2.1396092504400512e-05,
+    -9.435759089799547e-05,
+    -0.003760328368027648,
+    0.999995699623487,
+    -0.0027279199255205258,
+    -2.1583604992066223e-05,
+    0.0010764392977542171
+  ],
+  "source_sha256": {
+    "tools/validation/check_stop_contact_geometry.py": "9912d27807525d40e7c1c550006a2177e246f8dc7a764cd31c05172f02b02967",
+    "deliverables/stop_reliability/冻结姿态核查协议.md": "13b9c2ca1e0e398c1918ce9e4b35a4f358862b923df9e7e54117b99cac414234",
+    "deliverables/stop_reliability/diagnosis_v1/baseline_0p2ms.json.gz": "6a1a626cd451fe06e24914f8e4501b9ff089bb4e17217ffdfaa72ea3e9c41d18"
+  },
+  "results": {
+    "original_mpr": {
+      "contact_count": 18,
+      "max_penetration_m": 3.5704866221214335e-06,
+      "pair_contacts": [
+        {
+          "hole": "hole_convex256_07_main_175",
+          "depth_m": 1.6207224144748073e-06,
+          "normal": [
+            -0.024908566383213118,
+            -0.9902615135947221,
+            -0.13697334782293646
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_176",
+          "depth_m": 1.8259127720149263e-06,
+          "normal": [
+            -0.4675301303726136,
+            -0.8777044425640962,
+            -0.10512130467710355
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_177",
+          "depth_m": 2.30197965060727e-06,
+          "normal": [
+            -0.717709769263707,
+            -0.6927031668794665,
+            -0.07109859139669705
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_178",
+          "depth_m": 2.907827901153223e-06,
+          "normal": [
+            -0.8382261213661977,
+            -0.5432779295766609,
+            -0.04718114765748171
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_179",
+          "depth_m": 3.5704866221214335e-06,
+          "normal": [
+            -0.8993443096643103,
+            -0.43610347091027035,
+            -0.03152103003457264
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_185",
+          "depth_m": 2.2785941875266002e-06,
+          "normal": [
+            -0.13004209816586612,
+            -0.991508036610115,
+            0.0009306138695679938
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_186",
+          "depth_m": 2.122139540730789e-06,
+          "normal": [
+            -0.12304518092442092,
+            -0.9923813724993596,
+            0.006252596865615666
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_187",
+          "depth_m": 1.809465863188505e-06,
+          "normal": [
+            -0.09849142898593342,
+            -0.9950655063693862,
+            0.012003185000083048
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_188",
+          "depth_m": 1.5615671311401646e-06,
+          "normal": [
+            -0.05166732714911652,
+            -0.9984958842001247,
+            0.01834275172043033
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 1.2092768018381976e-06,
+          "normal": [
+            -0.05746537878566044,
+            -0.9979727426703966,
+            0.02735205893433097
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 1.2092768018381976e-06,
+          "normal": [
+            0.8539987918481103,
+            -0.5202001985729329,
+            0.008821390290037461
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 2.934636362428007e-06,
+          "normal": [
+            0.892324019287525,
+            -0.45124805495001546,
+            0.011534188588041843
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 2.934636362428007e-06,
+          "normal": [
+            0.008598990635652275,
+            -0.9973295984079255,
+            0.07252399257855524
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 2.030931621371475e-06,
+          "normal": [
+            0.9124422005191081,
+            -0.40883030169353257,
+            0.01752184719209411
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 2.030931621371475e-06,
+          "normal": [
+            0.029019357144599366,
+            -0.9808180178281325,
+            0.19275345085006307
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 1.1161809853005747e-06,
+          "normal": [
+            0.9555475183965506,
+            -0.2931279426501174,
+            0.031700935694447145
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 1.1161809853005747e-06,
+          "normal": [
+            -0.0020696415014505834,
+            0.15830815339460355,
+            0.9873875860840292
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_193",
+          "depth_m": 3.180109978497135e-07,
+          "normal": [
+            0.8090162485395707,
+            0.5784135273176761,
+            0.1045490364129853
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        }
+      ],
+      "ccd_tolerance": 1e-09,
+      "ccd_iterations": 35,
+      "disableflags": 131072
+    },
+    "single_contact_mpr": {
+      "contact_count": 14,
+      "max_penetration_m": 3.5704866221214335e-06,
+      "pair_contacts": [
+        {
+          "hole": "hole_convex256_07_main_175",
+          "depth_m": 1.6207224144748073e-06,
+          "normal": [
+            -0.024908566383213118,
+            -0.9902615135947221,
+            -0.13697334782293646
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_176",
+          "depth_m": 1.8259127720149263e-06,
+          "normal": [
+            -0.4675301303726136,
+            -0.8777044425640962,
+            -0.10512130467710355
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_177",
+          "depth_m": 2.30197965060727e-06,
+          "normal": [
+            -0.717709769263707,
+            -0.6927031668794665,
+            -0.07109859139669705
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_178",
+          "depth_m": 2.907827901153223e-06,
+          "normal": [
+            -0.8382261213661977,
+            -0.5432779295766609,
+            -0.04718114765748171
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_179",
+          "depth_m": 3.5704866221214335e-06,
+          "normal": [
+            -0.8993443096643103,
+            -0.43610347091027035,
+            -0.03152103003457264
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_185",
+          "depth_m": 2.2785941875266002e-06,
+          "normal": [
+            -0.13004209816586612,
+            -0.991508036610115,
+            0.0009306138695679938
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_186",
+          "depth_m": 2.122139540730789e-06,
+          "normal": [
+            -0.12304518092442092,
+            -0.9923813724993596,
+            0.006252596865615666
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_187",
+          "depth_m": 1.809465863188505e-06,
+          "normal": [
+            -0.09849142898593342,
+            -0.9950655063693862,
+            0.012003185000083048
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_188",
+          "depth_m": 1.5615671311401646e-06,
+          "normal": [
+            -0.05166732714911652,
+            -0.9984958842001247,
+            0.01834275172043033
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 1.2092768018381976e-06,
+          "normal": [
+            -0.05746537878566044,
+            -0.9979727426703966,
+            0.02735205893433097
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 2.934636362428007e-06,
+          "normal": [
+            0.892324019287525,
+            -0.45124805495001546,
+            0.011534188588041843
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 2.030931621371475e-06,
+          "normal": [
+            0.9124422005191081,
+            -0.40883030169353257,
+            0.01752184719209411
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 1.1161809853005747e-06,
+          "normal": [
+            0.9555475183965506,
+            -0.2931279426501174,
+            0.031700935694447145
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_193",
+          "depth_m": 3.180109978497135e-07,
+          "normal": [
+            0.8090162485395707,
+            0.5784135273176761,
+            0.1045490364129853
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        }
+      ],
+      "ccd_tolerance": 1e-09,
+      "ccd_iterations": 35,
+      "disableflags": 655360
+    },
+    "tolerance_1e12": {
+      "contact_count": 22,
+      "max_penetration_m": 3.5704866221214335e-06,
+      "pair_contacts": [
+        {
+          "hole": "hole_convex256_07_main_175",
+          "depth_m": 1.6207224144748073e-06,
+          "normal": [
+            -0.024908566383213118,
+            -0.9902615135947221,
+            -0.13697334782293646
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_176",
+          "depth_m": 1.8259127720149263e-06,
+          "normal": [
+            -0.4675301303726136,
+            -0.8777044425640962,
+            -0.10512130467710355
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_177",
+          "depth_m": 2.30197965060727e-06,
+          "normal": [
+            -0.717709769263707,
+            -0.6927031668794665,
+            -0.07109859139669705
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_178",
+          "depth_m": 2.907827901153223e-06,
+          "normal": [
+            -0.8382261213661977,
+            -0.5432779295766609,
+            -0.04718114765748171
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_179",
+          "depth_m": 3.5704866221214335e-06,
+          "normal": [
+            -0.8993443096643103,
+            -0.43610347091027035,
+            -0.03152103003457264
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_185",
+          "depth_m": 2.2049798122270887e-08,
+          "normal": [
+            -0.9799462267210417,
+            0.1596336809064509,
+            0.11925804230931415
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_185",
+          "depth_m": 2.2049798122270887e-08,
+          "normal": [
+            0.9621571702458206,
+            -0.1791256192358871,
+            0.20534749153061285
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_186",
+          "depth_m": 1.2778258662274088e-07,
+          "normal": [
+            0.9852258267448459,
+            -0.13380968525971285,
+            0.10688797147308869
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_186",
+          "depth_m": 1.2778258662274088e-07,
+          "normal": [
+            -0.9809868900072579,
+            0.15917733342940532,
+            0.11102836644836328
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_187",
+          "depth_m": 7.559482315864182e-08,
+          "normal": [
+            0.9496276384587612,
+            -0.10369919560056155,
+            0.2957259290407807
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_187",
+          "depth_m": 7.559482315864182e-08,
+          "normal": [
+            0.6265738045549872,
+            -0.7792501579808221,
+            0.013208282717774921
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_188",
+          "depth_m": 2.293941035272684e-07,
+          "normal": [
+            -0.9883254939134086,
+            0.08636138571875952,
+            0.12551664884609015
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_188",
+          "depth_m": 2.293941035272684e-07,
+          "normal": [
+            0.5197861237665108,
+            -0.8540407508121295,
+            0.020899317980257386
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 3.0069202279199593e-07,
+          "normal": [
+            -0.9918974720405573,
+            0.06288619142047855,
+            0.11038447303936842
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 3.0069202279199593e-07,
+          "normal": [
+            0.2946494524482032,
+            -0.955035699612227,
+            0.03299261490331524
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 2.934636362428007e-06,
+          "normal": [
+            0.892324019287525,
+            -0.45124805495001546,
+            0.011534188588041843
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 2.934636362428007e-06,
+          "normal": [
+            -0.9400977626046836,
+            0.03561273524931701,
+            0.3390397171921457
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 2.030931621371475e-06,
+          "normal": [
+            0.9124422005191081,
+            -0.40883030169353257,
+            0.01752184719209411
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 2.030931621371475e-06,
+          "normal": [
+            -0.6883621133268643,
+            0.00815426214169181,
+            0.7253213832123646
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 1.1161809853005747e-06,
+          "normal": [
+            0.9555475183965506,
+            -0.2931279426501174,
+            0.031700935694447145
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 1.1161809853005747e-06,
+          "normal": [
+            0.0009104786278239464,
+            -0.09365798127984207,
+            0.9956040144411096
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_193",
+          "depth_m": 3.180109978497135e-07,
+          "normal": [
+            0.8090162485395707,
+            0.5784135273176761,
+            0.1045490364129853
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        }
+      ],
+      "ccd_tolerance": 1e-12,
+      "ccd_iterations": 35,
+      "disableflags": 131072
+    },
+    "iterations_350": {
+      "contact_count": 18,
+      "max_penetration_m": 3.5704866221214335e-06,
+      "pair_contacts": [
+        {
+          "hole": "hole_convex256_07_main_175",
+          "depth_m": 1.6207224144748073e-06,
+          "normal": [
+            -0.024908566383213118,
+            -0.9902615135947221,
+            -0.13697334782293646
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_176",
+          "depth_m": 1.8259127720149263e-06,
+          "normal": [
+            -0.4675301303726136,
+            -0.8777044425640962,
+            -0.10512130467710355
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_177",
+          "depth_m": 2.30197965060727e-06,
+          "normal": [
+            -0.717709769263707,
+            -0.6927031668794665,
+            -0.07109859139669705
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_178",
+          "depth_m": 2.907827901153223e-06,
+          "normal": [
+            -0.8382261213661977,
+            -0.5432779295766609,
+            -0.04718114765748171
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_179",
+          "depth_m": 3.5704866221214335e-06,
+          "normal": [
+            -0.8993443096643103,
+            -0.43610347091027035,
+            -0.03152103003457264
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_185",
+          "depth_m": 2.2785941875266002e-06,
+          "normal": [
+            -0.13004209816586612,
+            -0.991508036610115,
+            0.0009306138695679938
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_186",
+          "depth_m": 2.122139540730789e-06,
+          "normal": [
+            -0.12304518092442092,
+            -0.9923813724993596,
+            0.006252596865615666
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_187",
+          "depth_m": 1.809465863188505e-06,
+          "normal": [
+            -0.09849142898593342,
+            -0.9950655063693862,
+            0.012003185000083048
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_188",
+          "depth_m": 1.5615671311401646e-06,
+          "normal": [
+            -0.05166732714911652,
+            -0.9984958842001247,
+            0.01834275172043033
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 1.2092768018381976e-06,
+          "normal": [
+            -0.05746537878566044,
+            -0.9979727426703966,
+            0.02735205893433097
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 1.2092768018381976e-06,
+          "normal": [
+            0.8539987918481103,
+            -0.5202001985729329,
+            0.008821390290037461
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 2.934636362428007e-06,
+          "normal": [
+            0.892324019287525,
+            -0.45124805495001546,
+            0.011534188588041843
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 2.934636362428007e-06,
+          "normal": [
+            0.008598990635652275,
+            -0.9973295984079255,
+            0.07252399257855524
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 2.030931621371475e-06,
+          "normal": [
+            0.9124422005191081,
+            -0.40883030169353257,
+            0.01752184719209411
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 2.030931621371475e-06,
+          "normal": [
+            0.029019357144599366,
+            -0.9808180178281325,
+            0.19275345085006307
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 1.1161809853005747e-06,
+          "normal": [
+            0.9555475183965506,
+            -0.2931279426501174,
+            0.031700935694447145
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 1.1161809853005747e-06,
+          "normal": [
+            -0.0020696415014505834,
+            0.15830815339460355,
+            0.9873875860840292
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_193",
+          "depth_m": 3.180109978497135e-07,
+          "normal": [
+            0.8090162485395707,
+            0.5784135273176761,
+            0.1045490364129853
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        }
+      ],
+      "ccd_tolerance": 1e-09,
+      "ccd_iterations": 350,
+      "disableflags": 131072
+    },
+    "native_ccd": {
+      "contact_count": 18,
+      "max_penetration_m": 3.553644968744196e-08,
+      "pair_contacts": [
+        {
+          "hole": "hole_convex256_07_main_185",
+          "depth_m": 2.1240205345571774e-09,
+          "normal": [
+            -0.0008230573840591334,
+            0.000132263627451383,
+            0.9999996525413773
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_185",
+          "depth_m": 2.1240205345571774e-09,
+          "normal": [
+            -4.261186953843428e-05,
+            -0.00017825147156774596,
+            0.9999999832053207
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_186",
+          "depth_m": 1.3502492930253483e-08,
+          "normal": [
+            -0.0007545683956207358,
+            0.00010238580351033499,
+            0.9999997100717999
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_186",
+          "depth_m": 1.3502492930253483e-08,
+          "normal": [
+            -1.7460596819517942e-05,
+            -0.0001500559404200043,
+            0.9999999885891713
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_187",
+          "depth_m": 2.157169304473157e-08,
+          "normal": [
+            -0.0004068908423295096,
+            4.514428372604705e-05,
+            0.9999999162009146
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_187",
+          "depth_m": 2.157169304473157e-08,
+          "normal": [
+            0.00019603807620396677,
+            -0.00016244131749020826,
+            0.999999967590945
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_188",
+          "depth_m": 2.854885194709897e-08,
+          "normal": [
+            -0.0005921707746786928,
+            6.802071108476379e-05,
+            0.9999998223534626
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_188",
+          "depth_m": 2.854885194709897e-08,
+          "normal": [
+            0.0005686678539117756,
+            -0.00017396181468001126,
+            0.9999998231770638
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 3.246953928483874e-08,
+          "normal": [
+            -8.340454578835139e-05,
+            8.884373168905879e-07,
+            0.9999999965214462
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_189",
+          "depth_m": 3.246953928483874e-08,
+          "normal": [
+            0.0006411204264642868,
+            -0.0001422634162151133,
+            0.9999997843628363
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 3.5362966224840766e-08,
+          "normal": [
+            -0.0001740946324728999,
+            7.5377125578375025e-06,
+            0.9999999848171209
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 3.5362966224840766e-08,
+          "normal": [
+            0.0008776666422919108,
+            -0.00011677751180679585,
+            0.9999996080320622
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_190",
+          "depth_m": 3.5362966224840766e-08,
+          "normal": [
+            -0.0005669802619262842,
+            0.0010208828707323197,
+            0.9999993181655411
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.00025000002642627805,
+          "signed_axial_overlap_m": 3.573746730950499e-08,
+          "axial_separation_upper_bound_m": 3.573746730950499e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 3.553644968744196e-08,
+          "normal": [
+            -3.68712612724024e-05,
+            4.500285162329449e-07,
+            0.9999999993201538
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 3.553644968744196e-08,
+          "normal": [
+            -0.000813630164756725,
+            2.010372860743799e-05,
+            0.9999996688008427
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_191",
+          "depth_m": 3.553644968744196e-08,
+          "normal": [
+            0.0010191967221859857,
+            -7.562474609096209e-05,
+            0.9999994777593333
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262785,
+          "signed_axial_overlap_m": 3.573746730907131e-08,
+          "axial_separation_upper_bound_m": 3.573746730907131e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 3.521364308333794e-08,
+          "normal": [
+            0.00013228468960053166,
+            -2.570053805803021e-06,
+            0.9999999912470778
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        },
+        {
+          "hole": "hole_convex256_07_main_192",
+          "depth_m": 3.521364308333794e-08,
+          "normal": [
+            0.0009501848130511548,
+            -0.043224964354026806,
+            0.9990649126084923
+          ],
+          "margin": 0.0,
+          "cylinder_max_z_m": 0.00025003576389358756,
+          "mesh_min_z_m": 0.0002500000264262776,
+          "signed_axial_overlap_m": 3.573746730993867e-08,
+          "axial_separation_upper_bound_m": 3.573746730993867e-08
+        }
+      ],
+      "ccd_tolerance": 1e-09,
+      "ccd_iterations": 35,
+      "disableflags": 0
+    },
+    "original_mpr_retreat_0p1um": {
+      "contact_count": 0,
+      "max_penetration_m": 0.0,
+      "pair_contacts": [],
+      "ccd_tolerance": 1e-09,
+      "ccd_iterations": 35,
+      "disableflags": 131072
+    }
+  }
+}

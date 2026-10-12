@@ -1,0 +1,5228 @@
+{
+  "records": [
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_y_neg_150.json.gz",
+      "sha256": "62070fe63304b03bf8ce24b35f9f60c3fdf7d6e30af654567067959227ea4c67",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "dev_B2_y_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 20.779999999978248,
+      "actual_cycles": 11270,
+      "reported_peak_force_N": 0.024474139103047843,
+      "stages": {
+        "INSERT": {
+          "cycles": 3200,
+          "duration_s": 6.399999999986774,
+          "task_duration_s": 4.639999999990875,
+          "enabled_cycles": 2200,
+          "enabled_duration_s": 4.399999999991435,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 465,
+          "zero_measured_wrench_enabled_cycles": 1650,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 55.632736670778876,
+          "actual_rotation_path_mrad": 3.6340653405031134,
+          "actual_xy_net_um": [
+            7.403521946989443,
+            34.21977195233921
+          ],
+          "actual_z_net_um": 3883.9571945243333,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024474139103047843,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 390,
+          "duration_s": 0.7799999999999141,
+          "task_duration_s": 0.7799999999999141,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.004361479426492988,
+          "actual_rotation_path_mrad": 0.00026310763134795997,
+          "actual_xy_net_um": [
+            -4.413024154021173e-05,
+            -0.00436121511555301
+          ],
+          "actual_z_net_um": -0.008244986418864259,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442742016843082,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 7384,
+          "duration_s": 14.767999999988838,
+          "task_duration_s": 14.767999999988838,
+          "enabled_cycles": 7384,
+          "enabled_duration_s": 14.767999999988838,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 682,
+          "zero_measured_wrench_enabled_cycles": 229,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 684.5001805424771,
+          "actual_rotation_path_mrad": 34.77923538972313,
+          "actual_xy_net_um": [
+            37.15598793991771,
+            28.916853569756967
+          ],
+          "actual_z_net_um": 360.9596141078102,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.016574921910616932,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "WAIT_RECOVERY": {
+          "cycles": 296,
+          "duration_s": 0.5919999999986203,
+          "task_duration_s": 0.5919999999986203,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.2874866003934278,
+          "actual_rotation_path_mrad": 0.0600910136840652,
+          "actual_xy_net_um": [
+            0.9970579653624675,
+            0.5438015578153582
+          ],
+          "actual_z_net_um": -254.02474890252319,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.00012029765634778705,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 274,
+      "peak_cycle_interval_s": [
+        0.5479999999999723,
+        0.5499999999999721
+      ],
+      "peak_force_N": 0.024474139103047843,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 275,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {
+        "STOPPING->RETRACT": 1,
+        "RETRACT->RETRACT": 273,
+        "RETRACT->STOPPING": 1
+      }
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_y_neg_150.json.gz",
+      "sha256": "b1444d582abd86dc3737cfc538f163ad4e875bc35a6cfd9a2c9c42bf2e8afa42",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "dev_F0_y_neg_150",
+      "task_outcome": "TASK_FAILURE",
+      "task_end_time_s": 18.369999999983865,
+      "actual_cycles": 9685,
+      "reported_peak_force_N": 0.02447321960352781,
+      "stages": {
+        "INSERT": {
+          "cycles": 373,
+          "duration_s": 0.7459999999999505,
+          "task_duration_s": 0.7459999999999505,
+          "enabled_cycles": 373,
+          "enabled_duration_s": 0.7459999999999505,
+          "nonzero_command_cycles": 373,
+          "clipped_cycles": 2,
+          "total_target_limited_cycles": 99,
+          "zero_measured_wrench_enabled_cycles": 125,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 1.6304632221535298,
+          "effective_xy_integral_um": 1.628463173465345,
+          "requested_rotation_integral_mrad": 0.010786070382709135,
+          "effective_rotation_integral_mrad": 0.010786070382709135,
+          "actual_xy_path_um": 6.771227331651898,
+          "actual_rotation_path_mrad": 1.0510576416626434,
+          "actual_xy_net_um": [
+            1.0168650166130648,
+            0.7657220095183453
+          ],
+          "actual_z_net_um": 250.01095505316636,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02447321960352781,
+          "mean_abs_raw_action": [
+            0.03278149708346451,
+            0.02742098499558886,
+            0.028704891255969336,
+            0.0025764123683960126
+          ],
+          "xy_command_delivery_fraction": 0.9987733248680438
+        },
+        "UNLOAD": {
+          "cycles": 390,
+          "duration_s": 0.7799999999999141,
+          "task_duration_s": 0.7799999999999141,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.005057773211594233,
+          "actual_rotation_path_mrad": 0.00025076310522476123,
+          "actual_xy_net_um": [
+            0.0001693868331326372,
+            -0.005054543106085925
+          ],
+          "actual_z_net_um": -0.008241745303588788,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442744117526834,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 7626,
+          "duration_s": 15.25199999998771,
+          "task_duration_s": 15.25199999998771,
+          "enabled_cycles": 7626,
+          "enabled_duration_s": 15.25199999998771,
+          "nonzero_command_cycles": 7626,
+          "clipped_cycles": 37,
+          "total_target_limited_cycles": 628,
+          "zero_measured_wrench_enabled_cycles": 222,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 123.32015244472545,
+          "effective_xy_integral_um": 123.04095343544851,
+          "requested_rotation_integral_mrad": 0.612229045784279,
+          "effective_rotation_integral_mrad": 0.6121791945991896,
+          "actual_xy_path_um": 675.9370125973138,
+          "actual_rotation_path_mrad": 34.48333264244425,
+          "actual_xy_net_um": [
+            65.33903390709492,
+            3.2914901301850823
+          ],
+          "actual_z_net_um": 246.39178791898766,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.016686880792029086,
+          "mean_abs_raw_action": [
+            0.05552104678236528,
+            0.15082037401205595,
+            0.05208514534267202,
+            0.05971084719969787
+          ],
+          "xy_command_delivery_fraction": 0.9977359822888471
+        },
+        "WAIT_RECOVERY": {
+          "cycles": 296,
+          "duration_s": 0.5919999999986203,
+          "task_duration_s": 0.5919999999986203,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.204225523315593,
+          "actual_rotation_path_mrad": 0.05929158316232115,
+          "actual_xy_net_um": [
+            0.9385953848586249,
+            0.4957447398580685
+          ],
+          "actual_z_net_um": -254.07188134865618,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.0001233075521241263,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "FAILED": {
+          "cycles": 1000,
+          "duration_s": 1.9999999999953388,
+          "task_duration_s": 0.9999999999976694,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.8825062337379728,
+          "actual_rotation_path_mrad": 0.09293919736775447,
+          "actual_xy_net_um": [
+            -0.030062316845272163,
+            0.17442705698949157
+          ],
+          "actual_z_net_um": -0.011596763624908968,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 8.485237474250805e-05,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 274,
+      "peak_cycle_interval_s": [
+        0.5479999999999723,
+        0.5499999999999721
+      ],
+      "peak_force_N": 0.02447321960352781,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 275,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {
+        "STOPPING->RETRACT": 1,
+        "RETRACT->RETRACT": 273,
+        "RETRACT->STOPPING": 1
+      }
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_y_neg_150.json.gz",
+      "sha256": "b5f10fd5cf0f962bba241f7a406cc456439b4c3298bb3d6c944ba7b5b86513f9",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "dev_S0_y_neg_150",
+      "task_outcome": "TASK_FAILURE",
+      "task_end_time_s": 18.369999999983865,
+      "actual_cycles": 9685,
+      "reported_peak_force_N": 0.024474139103047843,
+      "stages": {
+        "INSERT": {
+          "cycles": 373,
+          "duration_s": 0.7459999999999505,
+          "task_duration_s": 0.7459999999999505,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 5.636264556686315,
+          "actual_rotation_path_mrad": 1.0203194629487176,
+          "actual_xy_net_um": [
+            -0.019446003551617855,
+            0.6115476351621251
+          ],
+          "actual_z_net_um": 250.0109651595229,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024474139103047843,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 390,
+          "duration_s": 0.7799999999999141,
+          "task_duration_s": 0.7799999999999141,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.004361479426492988,
+          "actual_rotation_path_mrad": 0.00026310763134795997,
+          "actual_xy_net_um": [
+            -4.413024154021173e-05,
+            -0.00436121511555301
+          ],
+          "actual_z_net_um": -0.008244986418864259,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442742016843082,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 7626,
+          "duration_s": 15.25199999998771,
+          "task_duration_s": 15.25199999998771,
+          "enabled_cycles": 7626,
+          "enabled_duration_s": 15.25199999998771,
+          "nonzero_command_cycles": 7626,
+          "clipped_cycles": 38,
+          "total_target_limited_cycles": 686,
+          "zero_measured_wrench_enabled_cycles": 228,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 123.24366074788189,
+          "effective_xy_integral_um": 122.96460603509479,
+          "requested_rotation_integral_mrad": 0.6135945258657352,
+          "effective_rotation_integral_mrad": 0.6135067828641622,
+          "actual_xy_path_um": 717.2287316203875,
+          "actual_rotation_path_mrad": 30.786100838028027,
+          "actual_xy_net_um": [
+            67.34246613686648,
+            6.484529790665086
+          ],
+          "actual_z_net_um": 245.6668929900195,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.016941291616523357,
+          "mean_abs_raw_action": [
+            0.05508510492900335,
+            0.15094720010459814,
+            0.052287913872568495,
+            0.05978106512912077
+          ],
+          "xy_command_delivery_fraction": 0.9977357479395393
+        },
+        "WAIT_RECOVERY": {
+          "cycles": 296,
+          "duration_s": 0.5919999999986203,
+          "task_duration_s": 0.5919999999986203,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.0356068502691442,
+          "actual_rotation_path_mrad": 0.06649632013067665,
+          "actual_xy_net_um": [
+            0.8425947664780624,
+            0.45055291942558784
+          ],
+          "actual_z_net_um": -254.03716377437186,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 4.5798203111656445e-05,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "FAILED": {
+          "cycles": 1000,
+          "duration_s": 1.9999999999953388,
+          "task_duration_s": 0.9999999999976694,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.19740415897497,
+          "actual_rotation_path_mrad": 0.09131842471225673,
+          "actual_xy_net_um": [
+            -0.10167139142622394,
+            0.49492814432447174
+          ],
+          "actual_z_net_um": -0.036262772160067236,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 9.640606450742442e-05,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 763,
+      "first_enabled_time_s": 1.5259999999998646,
+      "first_effect_cycle": 763,
+      "peak_cycle_index": 274,
+      "peak_cycle_interval_s": [
+        0.5479999999999723,
+        0.5499999999999721
+      ],
+      "peak_force_N": 0.024474139103047843,
+      "pre_enabled_peak_force_N": 0.024474139103047843,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 275,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {
+        "STOPPING->RETRACT": 1,
+        "RETRACT->RETRACT": 273,
+        "RETRACT->STOPPING": 1
+      }
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_y_pos_150.json.gz",
+      "sha256": "78778ded7ac0cfaedfa1feb97d47b2633e390cc20198f991be5c71efbf83afec",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "dev_B2_y_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 14.163999999993667,
+      "actual_cycles": 7962,
+      "reported_peak_force_N": 0.02431135669404151,
+      "stages": {
+        "INSERT": {
+          "cycles": 4160,
+          "duration_s": 8.31999999998687,
+          "task_duration_s": 6.55999999999097,
+          "enabled_cycles": 3160,
+          "enabled_duration_s": 6.31999999999153,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 253,
+          "zero_measured_wrench_enabled_cycles": 1838,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 115.3319299424107,
+          "actual_rotation_path_mrad": 27.639544920221425,
+          "actual_xy_net_um": [
+            6.058287430425443,
+            -104.18793184508444
+          ],
+          "actual_z_net_um": 3783.3134142149565,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02431135669404151,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 781,
+          "duration_s": 1.5620000000015422,
+          "task_duration_s": 1.5620000000015422,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 11.886638334852359,
+          "actual_rotation_path_mrad": 2.807720477069321,
+          "actual_xy_net_um": [
+            1.788160183706051,
+            -2.913834260142822
+          ],
+          "actual_z_net_um": 2.816560153106734,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024259315235875913,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3021,
+          "duration_s": 6.0420000000011544,
+          "task_duration_s": 6.0420000000011544,
+          "enabled_cycles": 3021,
+          "enabled_duration_s": 6.0420000000011544,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 161,
+          "zero_measured_wrench_enabled_cycles": 47,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 223.48047301070162,
+          "actual_rotation_path_mrad": 25.051484312825757,
+          "actual_xy_net_um": [
+            55.67108836787731,
+            -86.28408343259684
+          ],
+          "actual_z_net_um": 204.1233416218287,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.009940959266162064,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 462,
+      "peak_cycle_interval_s": [
+        0.9239999999999309,
+        0.9259999999999307
+      ],
+      "peak_force_N": 0.02431135669404151,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_y_pos_150.json.gz",
+      "sha256": "8978d23b8fee8a228bd9f865925b0b52165a1a71a410ac4b10e837f3d3a10a22",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "dev_F0_y_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 14.015999999994012,
+      "actual_cycles": 7888,
+      "reported_peak_force_N": 0.024307134637556793,
+      "stages": {
+        "INSERT": {
+          "cycles": 4161,
+          "duration_s": 8.321999999986865,
+          "task_duration_s": 6.561999999990966,
+          "enabled_cycles": 3161,
+          "enabled_duration_s": 6.321999999991525,
+          "nonzero_command_cycles": 3161,
+          "clipped_cycles": 43,
+          "total_target_limited_cycles": 249,
+          "zero_measured_wrench_enabled_cycles": 1851,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 13.21555557038555,
+          "effective_xy_integral_um": 13.159995024333822,
+          "requested_rotation_integral_mrad": 0.13785326588623745,
+          "effective_rotation_integral_mrad": 0.1378532658862374,
+          "actual_xy_path_um": 121.82152611273331,
+          "actual_rotation_path_mrad": 27.725271388822765,
+          "actual_xy_net_um": [
+            10.942710114238869,
+            -109.37692724916785
+          ],
+          "actual_z_net_um": 3785.297699841128,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024307134637556793,
+          "mean_abs_raw_action": [
+            0.02752554835265515,
+            0.030815646189068437,
+            0.04031076792560397,
+            0.01477262872715835
+          ],
+          "xy_command_delivery_fraction": 0.9957958221464233
+        },
+        "UNLOAD": {
+          "cycles": 781,
+          "duration_s": 1.5620000000015422,
+          "task_duration_s": 1.5620000000015422,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 11.426709144646313,
+          "actual_rotation_path_mrad": 2.8097951787849427,
+          "actual_xy_net_um": [
+            1.3098752833194172,
+            -2.8187830072781828
+          ],
+          "actual_z_net_um": 2.836463405414722,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02425770784609219,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2946,
+          "duration_s": 5.892000000001504,
+          "task_duration_s": 5.892000000001504,
+          "enabled_cycles": 2946,
+          "enabled_duration_s": 5.892000000001504,
+          "nonzero_command_cycles": 2946,
+          "clipped_cycles": 39,
+          "total_target_limited_cycles": 149,
+          "zero_measured_wrench_enabled_cycles": 48,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 32.30121828944199,
+          "effective_xy_integral_um": 32.183480280884545,
+          "requested_rotation_integral_mrad": 0.21434719933468782,
+          "effective_rotation_integral_mrad": 0.2143471993346879,
+          "actual_xy_path_um": 214.7520420192101,
+          "actual_rotation_path_mrad": 25.243058018465675,
+          "actual_xy_net_um": [
+            39.77921765760727,
+            -98.80407278646476
+          ],
+          "actual_z_net_um": 203.31148942287427,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.010281475631944434,
+          "mean_abs_raw_action": [
+            0.025494555632273357,
+            0.1059026076974953,
+            0.06340412347396053,
+            0.030689267058479325
+          ],
+          "xy_command_delivery_fraction": 0.9963549978981465
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 492,
+      "peak_cycle_interval_s": [
+        0.9839999999999243,
+        0.985999999999924
+      ],
+      "peak_force_N": 0.024307134637556793,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_y_pos_150.json.gz",
+      "sha256": "661b2cb24f84fca08ff66caae5e7ffdf0cd8c54709c69fc2422d4b3cfe1e2499",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "dev_S0_y_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 17.211999999986563,
+      "actual_cycles": 9486,
+      "reported_peak_force_N": 0.02431135669404151,
+      "stages": {
+        "INSERT": {
+          "cycles": 4161,
+          "duration_s": 8.321999999986865,
+          "task_duration_s": 6.561999999990966,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 113.97293362292542,
+          "actual_rotation_path_mrad": 27.70009976420391,
+          "actual_xy_net_um": [
+            3.1863274399157695,
+            -105.44427218357224
+          ],
+          "actual_z_net_um": 3783.68566292927,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02431135669404151,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 781,
+          "duration_s": 1.5620000000015422,
+          "task_duration_s": 1.5620000000015422,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 11.41325148070862,
+          "actual_rotation_path_mrad": 2.8039470524590318,
+          "actual_xy_net_um": [
+            1.2766292353623518,
+            -2.772609002546344
+          ],
+          "actual_z_net_um": 2.80729130419482,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024259315235875913,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 4544,
+          "duration_s": 9.087999999994055,
+          "task_duration_s": 9.087999999994055,
+          "enabled_cycles": 4544,
+          "enabled_duration_s": 9.087999999994055,
+          "nonzero_command_cycles": 4544,
+          "clipped_cycles": 39,
+          "total_target_limited_cycles": 256,
+          "zero_measured_wrench_enabled_cycles": 57,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 62.123288787483354,
+          "effective_xy_integral_um": 62.00692666929873,
+          "requested_rotation_integral_mrad": 0.35744700950679387,
+          "effective_rotation_integral_mrad": 0.3574470095067937,
+          "actual_xy_path_um": 413.69726848117114,
+          "actual_rotation_path_mrad": 36.52541315201202,
+          "actual_xy_net_um": [
+            -42.045720503756606,
+            -134.50298937515888
+          ],
+          "actual_z_net_um": 204.3060267545268,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.011673708478544867,
+          "mean_abs_raw_action": [
+            0.035291465432186364,
+            0.1313856966846006,
+            0.06458769638983297,
+            0.040804842932963034
+          ],
+          "xy_command_delivery_fraction": 0.9981269163230767
+        }
+      },
+      "first_enabled_cycle": 1615,
+      "first_enabled_time_s": 3.229999999999677,
+      "first_effect_cycle": 1615,
+      "peak_cycle_index": 462,
+      "peak_cycle_interval_s": [
+        0.9239999999999309,
+        0.9259999999999307
+      ],
+      "peak_force_N": 0.02431135669404151,
+      "pre_enabled_peak_force_N": 0.02431135669404151,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_x_pos_150.json.gz",
+      "sha256": "841f612ab3afe44826c30a822fe3a2181e3e50b24f2741f4faa3f3ac4bb463cf",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "dev_B2_x_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.340000000000249,
+      "actual_cycles": 6550,
+      "reported_peak_force_N": 0.02460243170623439,
+      "stages": {
+        "INSERT": {
+          "cycles": 3468,
+          "duration_s": 6.935999999989418,
+          "task_duration_s": 5.17599999999352,
+          "enabled_cycles": 2468,
+          "enabled_duration_s": 4.935999999994079,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 158,
+          "zero_measured_wrench_enabled_cycles": 1883,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 79.62856211988372,
+          "actual_rotation_path_mrad": 19.51131547642613,
+          "actual_xy_net_um": [
+            -75.12135507198515,
+            -9.449961537738666
+          ],
+          "actual_z_net_um": 3888.4568804636842,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02460243170623439,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.2439099932224997,
+          "actual_rotation_path_mrad": 0.906187493118235,
+          "actual_xy_net_um": [
+            -2.8086865044831995,
+            0.23752832312461342
+          ],
+          "actual_z_net_um": -5.005764606309458,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024456046432841556,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2683,
+          "duration_s": 5.366000000006816,
+          "task_duration_s": 5.366000000006816,
+          "enabled_cycles": 2683,
+          "enabled_duration_s": 5.366000000006816,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 116,
+          "zero_measured_wrench_enabled_cycles": 50,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 326.8186087851118,
+          "actual_rotation_path_mrad": 21.30257705156321,
+          "actual_xy_net_um": [
+            -97.71265830146304,
+            -6.185103107550289
+          ],
+          "actual_z_net_um": 107.40467693654084,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.01173713207950496,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 410,
+      "peak_cycle_interval_s": [
+        0.8199999999999423,
+        0.8219999999999421
+      ],
+      "peak_force_N": 0.02460243170623439,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_x_pos_150.json.gz",
+      "sha256": "1db3a90c8ad9ce88c669e1fb3ec4d98c6502ea1c0a4f6c4e94c261af77febf93",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "dev_F0_x_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.326000000000281,
+      "actual_cycles": 6543,
+      "reported_peak_force_N": 0.024606337780869347,
+      "stages": {
+        "INSERT": {
+          "cycles": 3469,
+          "duration_s": 6.937999999989485,
+          "task_duration_s": 5.177999999993586,
+          "enabled_cycles": 2469,
+          "enabled_duration_s": 4.937999999994146,
+          "nonzero_command_cycles": 2469,
+          "clipped_cycles": 15,
+          "total_target_limited_cycles": 158,
+          "zero_measured_wrench_enabled_cycles": 1884,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 11.029630597920356,
+          "effective_xy_integral_um": 11.015548873863498,
+          "requested_rotation_integral_mrad": 0.09461147463778533,
+          "effective_rotation_integral_mrad": 0.09461147463778534,
+          "actual_xy_path_um": 87.37152905249258,
+          "actual_rotation_path_mrad": 19.545186306391532,
+          "actual_xy_net_um": [
+            -70.02488052991967,
+            -15.74015168426085
+          ],
+          "actual_z_net_um": 3890.1588765993038,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024606337780869347,
+          "mean_abs_raw_action": [
+            0.026355199458484177,
+            0.035055965148953594,
+            0.03630097900242302,
+            0.010712361736498463
+          ],
+          "xy_command_delivery_fraction": 0.9987232823500442
+        },
+        "UNLOAD": {
+          "cycles": 398,
+          "duration_s": 0.7959999999999123,
+          "task_duration_s": 0.7959999999999123,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.2637282980695974,
+          "actual_rotation_path_mrad": 0.9043451779079279,
+          "actual_xy_net_um": [
+            -2.84440785856157,
+            0.18241531980757025
+          ],
+          "actual_z_net_um": -4.970715349104141,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024445701885985487,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2676,
+          "duration_s": 5.352000000006782,
+          "task_duration_s": 5.352000000006782,
+          "enabled_cycles": 2676,
+          "enabled_duration_s": 5.352000000006782,
+          "nonzero_command_cycles": 2676,
+          "clipped_cycles": 16,
+          "total_target_limited_cycles": 128,
+          "zero_measured_wrench_enabled_cycles": 50,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 37.66050255857255,
+          "effective_xy_integral_um": 37.61774267213496,
+          "requested_rotation_integral_mrad": 0.20790155510341346,
+          "effective_rotation_integral_mrad": 0.20790155510341352,
+          "actual_xy_path_um": 328.64169136687264,
+          "actual_rotation_path_mrad": 20.85264190266781,
+          "actual_xy_net_um": [
+            -98.39738851068132,
+            -5.948354944671587
+          ],
+          "actual_z_net_um": 106.78887061248275,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.011664476179959485,
+          "mean_abs_raw_action": [
+            0.036608444757882073,
+            0.13516053343567613,
+            0.05476481158993526,
+            0.05261983278086367
+          ],
+          "xy_command_delivery_fraction": 0.9988645959683865
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 411,
+      "peak_cycle_interval_s": [
+        0.8219999999999421,
+        0.8239999999999419
+      ],
+      "peak_force_N": 0.024606337780869347,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_x_pos_150.json.gz",
+      "sha256": "098cd21464686f45f5891b67f613b18443ee5837fb5fddd864ad4e20899f020a",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "dev_S0_x_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.326000000000281,
+      "actual_cycles": 6543,
+      "reported_peak_force_N": 0.02460243170623439,
+      "stages": {
+        "INSERT": {
+          "cycles": 3468,
+          "duration_s": 6.93599999998948,
+          "task_duration_s": 5.175999999993582,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 79.53579830590488,
+          "actual_rotation_path_mrad": 19.492693145248882,
+          "actual_xy_net_um": [
+            -75.07613152985904,
+            -9.324860733191235
+          ],
+          "actual_z_net_um": 3888.148408806458,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02460243170623439,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.2439099932224997,
+          "actual_rotation_path_mrad": 0.906187493118235,
+          "actual_xy_net_um": [
+            -2.8086865044831995,
+            0.23752832312461342
+          ],
+          "actual_z_net_um": -5.005764606309458,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024456046432841556,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2676,
+          "duration_s": 5.352000000006787,
+          "task_duration_s": 5.352000000006787,
+          "enabled_cycles": 2676,
+          "enabled_duration_s": 5.352000000006787,
+          "nonzero_command_cycles": 2676,
+          "clipped_cycles": 17,
+          "total_target_limited_cycles": 127,
+          "zero_measured_wrench_enabled_cycles": 51,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 37.661882951169105,
+          "effective_xy_integral_um": 37.61914629130769,
+          "requested_rotation_integral_mrad": 0.20792455251644634,
+          "effective_rotation_integral_mrad": 0.20792455251644643,
+          "actual_xy_path_um": 328.05458054826886,
+          "actual_rotation_path_mrad": 20.951757401398616,
+          "actual_xy_net_um": [
+            -98.37081108065098,
+            -5.916526649420795
+          ],
+          "actual_z_net_um": 107.70230539812032,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.011720427280865172,
+          "mean_abs_raw_action": [
+            0.036599407637956785,
+            0.13516844007199122,
+            0.05476712766249618,
+            0.05263781322581173
+          ],
+          "xy_command_delivery_fraction": 0.9988652542965836
+        }
+      },
+      "first_enabled_cycle": 985,
+      "first_enabled_time_s": 1.9699999999998157,
+      "first_effect_cycle": 985,
+      "peak_cycle_index": 410,
+      "peak_cycle_interval_s": [
+        0.8199999999999423,
+        0.8219999999999421
+      ],
+      "peak_force_N": 0.02460243170623439,
+      "pre_enabled_peak_force_N": 0.02460243170623439,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_x_neg_150.json.gz",
+      "sha256": "18390dadd4e1c4dea49ce4f3b3b76b8e43422277c40f6f78ea763c4f4e5d1a26",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "dev_B2_x_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.915999999996576,
+      "actual_cycles": 7338,
+      "reported_peak_force_N": 0.02461225485734939,
+      "stages": {
+        "INSERT": {
+          "cycles": 3464,
+          "duration_s": 6.9279999999864845,
+          "task_duration_s": 5.167999999990586,
+          "enabled_cycles": 2464,
+          "enabled_duration_s": 4.927999999991146,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 174,
+          "zero_measured_wrench_enabled_cycles": 1880,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 96.47351839378743,
+          "actual_rotation_path_mrad": 19.56398432014254,
+          "actual_xy_net_um": [
+            91.1895918739222,
+            -18.40540749805283
+          ],
+          "actual_z_net_um": 3887.743270409441,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02461225485734939,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 2.6871038617459746,
+          "actual_rotation_path_mrad": 0.9206132956817036,
+          "actual_xy_net_um": [
+            2.07794319723756,
+            0.4359490668184036
+          ],
+          "actual_z_net_um": -5.41316053653601,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024446939712753423,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3475,
+          "duration_s": 6.950000000006077,
+          "task_duration_s": 6.950000000006077,
+          "enabled_cycles": 3475,
+          "enabled_duration_s": 6.950000000006077,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 101,
+          "zero_measured_wrench_enabled_cycles": 22,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 359.1244712126547,
+          "actual_rotation_path_mrad": 24.647666668790905,
+          "actual_xy_net_um": [
+            56.54064038312515,
+            -73.95178190879301
+          ],
+          "actual_z_net_um": 107.912417301543,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.0140164456426485,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 409,
+      "peak_cycle_interval_s": [
+        0.8179999999999426,
+        0.8199999999999423
+      ],
+      "peak_force_N": 0.02461225485734939,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_x_neg_150.json.gz",
+      "sha256": "2be6b3fe3de90871316d750592479935c5842f91804fd691361c9efb7c0ad455",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "dev_F0_x_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.931999999996538,
+      "actual_cycles": 7346,
+      "reported_peak_force_N": 0.02462153310010805,
+      "stages": {
+        "INSERT": {
+          "cycles": 3464,
+          "duration_s": 6.9279999999864845,
+          "task_duration_s": 5.167999999990586,
+          "enabled_cycles": 2464,
+          "enabled_duration_s": 4.927999999991146,
+          "nonzero_command_cycles": 2464,
+          "clipped_cycles": 11,
+          "total_target_limited_cycles": 174,
+          "zero_measured_wrench_enabled_cycles": 1880,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 9.736865563898062,
+          "effective_xy_integral_um": 9.702504020918678,
+          "requested_rotation_integral_mrad": 0.10800162730749331,
+          "effective_rotation_integral_mrad": 0.10800162730749333,
+          "actual_xy_path_um": 104.00599011964721,
+          "actual_rotation_path_mrad": 19.627751340114145,
+          "actual_xy_net_um": [
+            95.91777590853168,
+            -24.06062465384814
+          ],
+          "actual_z_net_um": 3887.8479147282474,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02462153310010805,
+          "mean_abs_raw_action": [
+            0.023637066849253395,
+            0.030908655351052035,
+            0.03974839880481943,
+            0.01776749442343588
+          ],
+          "xy_command_delivery_fraction": 0.9964709851693148
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 2.7216363911691013,
+          "actual_rotation_path_mrad": 0.9254339654075521,
+          "actual_xy_net_um": [
+            2.160805389248193,
+            0.30297546852675883
+          ],
+          "actual_z_net_um": -5.343973495601508,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024440910093280224,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3483,
+          "duration_s": 6.96600000000604,
+          "task_duration_s": 6.96600000000604,
+          "enabled_cycles": 3483,
+          "enabled_duration_s": 6.96600000000604,
+          "nonzero_command_cycles": 3483,
+          "clipped_cycles": 37,
+          "total_target_limited_cycles": 95,
+          "zero_measured_wrench_enabled_cycles": 21,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 55.06980695780953,
+          "effective_xy_integral_um": 55.00841824803588,
+          "requested_rotation_integral_mrad": 0.28160288836446773,
+          "effective_rotation_integral_mrad": 0.28160288836446773,
+          "actual_xy_path_um": 363.0533370475663,
+          "actual_rotation_path_mrad": 24.55014278435718,
+          "actual_xy_net_um": [
+            57.78513480019457,
+            -74.70077501927278
+          ],
+          "actual_z_net_um": 108.03127083698494,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.014063385110255733,
+          "mean_abs_raw_action": [
+            0.04443984188432499,
+            0.15097316200282085,
+            0.057009058268358406,
+            0.05495831513247407
+          ],
+          "xy_command_delivery_fraction": 0.9988852564923519
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 410,
+      "peak_cycle_interval_s": [
+        0.8199999999999423,
+        0.8219999999999421
+      ],
+      "peak_force_N": 0.02462153310010805,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_x_neg_150.json.gz",
+      "sha256": "16d8a02d7cc643550036dc1d582795936ff6fdd4ccba68078b0928bb3b300b0e",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "dev_S0_x_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.957999999996478,
+      "actual_cycles": 7359,
+      "reported_peak_force_N": 0.02461225485734939,
+      "stages": {
+        "INSERT": {
+          "cycles": 3463,
+          "duration_s": 6.925999999986489,
+          "task_duration_s": 5.165999999990591,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 97.12822011279962,
+          "actual_rotation_path_mrad": 19.50692152018286,
+          "actual_xy_net_um": [
+            92.64067330362478,
+            -17.232531429394403
+          ],
+          "actual_z_net_um": 3887.5876852614724,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02461225485734939,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 2.6871038617459746,
+          "actual_rotation_path_mrad": 0.9206132956817036,
+          "actual_xy_net_um": [
+            2.07794319723756,
+            0.4359490668184036
+          ],
+          "actual_z_net_um": -5.41316053653601,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024446939712753423,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3497,
+          "duration_s": 6.9940000000059745,
+          "task_duration_s": 6.9940000000059745,
+          "enabled_cycles": 3497,
+          "enabled_duration_s": 6.9940000000059745,
+          "nonzero_command_cycles": 3497,
+          "clipped_cycles": 38,
+          "total_target_limited_cycles": 102,
+          "zero_measured_wrench_enabled_cycles": 21,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 55.33852868038934,
+          "effective_xy_integral_um": 55.27683720514778,
+          "requested_rotation_integral_mrad": 0.2828236773582835,
+          "effective_rotation_integral_mrad": 0.28282367735828323,
+          "actual_xy_path_um": 363.8356888767235,
+          "actual_rotation_path_mrad": 24.51054759242093,
+          "actual_xy_net_um": [
+            59.58997711635691,
+            -72.75500803460947
+          ],
+          "actual_z_net_um": 108.31789322213098,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.014070152180166653,
+          "mean_abs_raw_action": [
+            0.04445350413871964,
+            0.15111317858206466,
+            0.05703483699627321,
+            0.054977096879281144
+          ],
+          "xy_command_delivery_fraction": 0.9988851984916718
+        }
+      },
+      "first_enabled_cycle": 984,
+      "first_enabled_time_s": 1.967999999999816,
+      "first_effect_cycle": 984,
+      "peak_cycle_index": 409,
+      "peak_cycle_interval_s": [
+        0.8179999999999426,
+        0.8199999999999423
+      ],
+      "peak_force_N": 0.02461225485734939,
+      "pre_enabled_peak_force_N": 0.02461225485734939,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_aligned.json.gz",
+      "sha256": "38b7cd2e7027cede2a084773c60ce3d984471b73249f86d02da874194e5a23f8",
+      "provider": "B2",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "dev_B2_aligned",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 4.330000000000289,
+      "actual_cycles": 3045,
+      "reported_peak_force_N": 0.0,
+      "stages": {
+        "INSERT": {
+          "cycles": 3045,
+          "duration_s": 6.090000000004003,
+          "task_duration_s": 4.330000000000289,
+          "enabled_cycles": 2045,
+          "enabled_duration_s": 4.089999999999782,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 99,
+          "zero_measured_wrench_enabled_cycles": 2045,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.0,
+          "actual_rotation_path_mrad": 0.0,
+          "actual_xy_net_um": [
+            0.0,
+            0.0
+          ],
+          "actual_z_net_um": 3991.2000000006433,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.0,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 0,
+      "peak_cycle_interval_s": [
+        0.0,
+        0.0020000000000000005
+      ],
+      "peak_force_N": 0.0,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_F0_aligned.json.gz",
+      "sha256": "cfaea97f644a8e52fd14f26de1eb4918e86c46546cb8c5f69d63f2e4b79ea82d",
+      "provider": "F0",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "dev_F0_aligned",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 4.330000000000289,
+      "actual_cycles": 3045,
+      "reported_peak_force_N": 0.0,
+      "stages": {
+        "INSERT": {
+          "cycles": 3045,
+          "duration_s": 6.090000000004003,
+          "task_duration_s": 4.330000000000289,
+          "enabled_cycles": 2045,
+          "enabled_duration_s": 4.089999999999782,
+          "nonzero_command_cycles": 2045,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 99,
+          "zero_measured_wrench_enabled_cycles": 2045,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 7.770073478171905,
+          "effective_xy_integral_um": 7.770073478171905,
+          "requested_rotation_integral_mrad": 0.09655702257089183,
+          "effective_rotation_integral_mrad": 0.09655702257089183,
+          "actual_xy_path_um": 7.7929799023762785,
+          "actual_rotation_path_mrad": 0.07274134291469403,
+          "actual_xy_net_um": [
+            6.2958174421563005,
+            -4.3765067935462385
+          ],
+          "actual_z_net_um": 3991.2000000006433,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.0,
+          "mean_abs_raw_action": [
+            0.030784439807416176,
+            0.02140029560965839,
+            0.04694486806911478,
+            0.004848290888779321
+          ],
+          "xy_command_delivery_fraction": 1.0
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 0,
+      "peak_cycle_interval_s": [
+        0.0,
+        0.0020000000000000005
+      ],
+      "peak_force_N": 0.0,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_S0_aligned.json.gz",
+      "sha256": "3c454cd71cfaf8b7fbc961ae177c5d5e0c1253556289c39d8cfed588a8de2497",
+      "provider": "S0",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "dev_S0_aligned",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 4.330000000000289,
+      "actual_cycles": 3045,
+      "reported_peak_force_N": 0.0,
+      "stages": {
+        "INSERT": {
+          "cycles": 3045,
+          "duration_s": 6.090000000004003,
+          "task_duration_s": 4.330000000000289,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.0,
+          "actual_rotation_path_mrad": 0.0,
+          "actual_xy_net_um": [
+            0.0,
+            0.0
+          ],
+          "actual_z_net_um": 3991.2000000006433,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.0,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": null,
+      "first_enabled_time_s": null,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 0,
+      "peak_cycle_interval_s": [
+        0.0,
+        0.0020000000000000005
+      ],
+      "peak_force_N": 0.0,
+      "pre_enabled_peak_force_N": null,
+      "peak_before_first_enabled": null,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_01.json.gz",
+      "sha256": "30636e797a909d820ee026a1a5c0c938917be0198b467ddb6a4eb31acaf929f7",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_01",
+      "id": "test_B2_holdout_01",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.545999999999768,
+      "actual_cycles": 6653,
+      "reported_peak_force_N": 0.024675967475752254,
+      "stages": {
+        "INSERT": {
+          "cycles": 3408,
+          "duration_s": 6.815999999988472,
+          "task_duration_s": 5.055999999992574,
+          "enabled_cycles": 2408,
+          "enabled_duration_s": 4.815999999993133,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 170,
+          "zero_measured_wrench_enabled_cycles": 1873,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 93.04248153315169,
+          "actual_rotation_path_mrad": 20.547830989353127,
+          "actual_xy_net_um": [
+            -73.0796245450639,
+            -49.140848194663356
+          ],
+          "actual_z_net_um": 3890.3364527672024,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024675967475752254,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 392,
+          "duration_s": 0.7839999999999137,
+          "task_duration_s": 0.7839999999999137,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.5143015395604518,
+          "actual_rotation_path_mrad": 0.3410146416056623,
+          "actual_xy_net_um": [
+            0.5279072788269472,
+            -0.2711481854976838
+          ],
+          "actual_z_net_um": -0.5736911597806897,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442385951135446,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2853,
+          "duration_s": 5.706000000007281,
+          "task_duration_s": 5.706000000007281,
+          "enabled_cycles": 2853,
+          "enabled_duration_s": 5.706000000007281,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 100,
+          "zero_measured_wrench_enabled_cycles": 27,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 286.77645178563137,
+          "actual_rotation_path_mrad": 21.405088686842486,
+          "actual_xy_net_um": [
+            -77.86037706536655,
+            -44.35105449857739
+          ],
+          "actual_z_net_um": 100.99935565640801,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.011700354942826003,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 351,
+      "peak_cycle_interval_s": [
+        0.7019999999999553,
+        0.7039999999999551
+      ],
+      "peak_force_N": 0.024675967475752254,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_01.json.gz",
+      "sha256": "7499b4654fa99fa246dfbd43b520b9a6215f5f5ce1d09f7e57300fe186690568",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_01",
+      "id": "test_F2000_holdout_01",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.761999999999265,
+      "actual_cycles": 6761,
+      "reported_peak_force_N": 0.024659866721149025,
+      "stages": {
+        "INSERT": {
+          "cycles": 3422,
+          "duration_s": 6.843999999987523,
+          "task_duration_s": 5.083999999991625,
+          "enabled_cycles": 2422,
+          "enabled_duration_s": 4.843999999992184,
+          "nonzero_command_cycles": 2422,
+          "clipped_cycles": 2422,
+          "total_target_limited_cycles": 296,
+          "zero_measured_wrench_enabled_cycles": 1755,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 198.50510882502596,
+          "effective_xy_integral_um": 61.55193004187696,
+          "requested_rotation_integral_mrad": 1.925340607687525,
+          "effective_rotation_integral_mrad": 1.9253406076875255,
+          "actual_xy_path_um": 224.57684950172992,
+          "actual_rotation_path_mrad": 22.441117725186153,
+          "actual_xy_net_um": [
+            53.35948510826827,
+            -39.313064758191274
+          ],
+          "actual_z_net_um": 3889.357641735453,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024659866721149025,
+          "mean_abs_raw_action": [
+            0.7459301084255404,
+            0.24899396863877526,
+            0.5175990469439968,
+            0.47442817402515997
+          ],
+          "xy_command_delivery_fraction": 0.31007730937611505
+        },
+        "UNLOAD": {
+          "cycles": 392,
+          "duration_s": 0.7839999999999137,
+          "task_duration_s": 0.7839999999999137,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.8089315063328655,
+          "actual_rotation_path_mrad": 0.3335331131932366,
+          "actual_xy_net_um": [
+            0.6581252271264426,
+            0.3534730216346126
+          ],
+          "actual_z_net_um": -0.7454461497498686,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02443609534235158,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2947,
+          "duration_s": 5.894000000007726,
+          "task_duration_s": 5.894000000007726,
+          "enabled_cycles": 2947,
+          "enabled_duration_s": 5.894000000007726,
+          "nonzero_command_cycles": 2947,
+          "clipped_cycles": 2665,
+          "total_target_limited_cycles": 86,
+          "zero_measured_wrench_enabled_cycles": 25,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 125.75446529888337,
+          "effective_xy_integral_um": 67.01556404359144,
+          "requested_rotation_integral_mrad": 0.7253493122843188,
+          "effective_rotation_integral_mrad": 0.7253493122843189,
+          "actual_xy_path_um": 274.71896466395043,
+          "actual_rotation_path_mrad": 21.741744024168987,
+          "actual_xy_net_um": [
+            -63.627380280637745,
+            -56.411857365926885
+          ],
+          "actual_z_net_um": 102.93197455551059,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.011665569515142814,
+          "mean_abs_raw_action": [
+            0.12440351775269368,
+            0.383416057482468,
+            0.14613770839922866,
+            0.18357752283265885
+          ],
+          "xy_command_delivery_fraction": 0.5329080274351617
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 360,
+      "peak_cycle_interval_s": [
+        0.7199999999999533,
+        0.7219999999999531
+      ],
+      "peak_force_N": 0.024659866721149025,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_01.json.gz",
+      "sha256": "4e0882de784bea2687649e428d569d8b3f9c436ba6826040f9a57256bd1bdd9a",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_01",
+      "id": "test_S2000_holdout_01",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.715999999999372,
+      "actual_cycles": 6738,
+      "reported_peak_force_N": 0.024675967475752254,
+      "stages": {
+        "INSERT": {
+          "cycles": 3407,
+          "duration_s": 6.813999999987713,
+          "task_duration_s": 5.053999999991815,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 96.25163208757617,
+          "actual_rotation_path_mrad": 20.773181209023313,
+          "actual_xy_net_um": [
+            -69.66252324427079,
+            -54.391167783425615
+          ],
+          "actual_z_net_um": 3890.2708723826595,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024675967475752254,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 392,
+          "duration_s": 0.7839999999999137,
+          "task_duration_s": 0.7839999999999137,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.5143015395604518,
+          "actual_rotation_path_mrad": 0.3410146416056623,
+          "actual_xy_net_um": [
+            0.5279072788269472,
+            -0.2711481854976838
+          ],
+          "actual_z_net_um": -0.5736911597806897,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442385951135446,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2939,
+          "duration_s": 5.878000000007644,
+          "task_duration_s": 5.878000000007644,
+          "enabled_cycles": 2939,
+          "enabled_duration_s": 5.878000000007644,
+          "nonzero_command_cycles": 2939,
+          "clipped_cycles": 2939,
+          "total_target_limited_cycles": 83,
+          "zero_measured_wrench_enabled_cycles": 27,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 275.96830028780056,
+          "effective_xy_integral_um": 82.25723475594535,
+          "requested_rotation_integral_mrad": 2.1871919571576908,
+          "effective_rotation_integral_mrad": 2.186569663354087,
+          "actual_xy_path_um": 265.5442021307477,
+          "actual_rotation_path_mrad": 21.513335612385138,
+          "actual_xy_net_um": [
+            -66.27339552539168,
+            -58.68399439973975
+          ],
+          "actual_z_net_um": 101.11372923363129,
+          "saturated_components": [
+            305,
+            12,
+            0,
+            449
+          ],
+          "peak_force_N": 0.011980356726937928,
+          "mean_abs_raw_action": [
+            0.5691212053078297,
+            0.7212704559214548,
+            0.43033217361647486,
+            0.5849531441774852
+          ],
+          "xy_command_delivery_fraction": 0.2980676935364
+        }
+      },
+      "first_enabled_cycle": 928,
+      "first_enabled_time_s": 1.8559999999998282,
+      "first_effect_cycle": 928,
+      "peak_cycle_index": 351,
+      "peak_cycle_interval_s": [
+        0.7019999999999553,
+        0.7039999999999551
+      ],
+      "peak_force_N": 0.024675967475752254,
+      "pre_enabled_peak_force_N": 0.024675967475752254,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_02.json.gz",
+      "sha256": "ccf9e6ddef7fadae8df73414749f305f26b3a1f65412711fddb1257f57791635",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_02",
+      "id": "test_B2_holdout_02",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.207999999998226,
+      "actual_cycles": 6984,
+      "reported_peak_force_N": 0.024610171870214255,
+      "stages": {
+        "INSERT": {
+          "cycles": 3412,
+          "duration_s": 6.8239999999865315,
+          "task_duration_s": 5.063999999990633,
+          "enabled_cycles": 2412,
+          "enabled_duration_s": 4.823999999991193,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 172,
+          "zero_measured_wrench_enabled_cycles": 1872,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 97.03641398122295,
+          "actual_rotation_path_mrad": 20.78332207417317,
+          "actual_xy_net_um": [
+            73.248951474273,
+            -54.39218697717212
+          ],
+          "actual_z_net_um": 3889.4011638955853,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024610171870214255,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 392,
+          "duration_s": 0.7839999999999137,
+          "task_duration_s": 0.7839999999999137,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.4678113215390267,
+          "actual_rotation_path_mrad": 0.3527778960509883,
+          "actual_xy_net_um": [
+            -0.33156921061678934,
+            -0.6414269359533833
+          ],
+          "actual_z_net_um": -0.5542183023187625,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024423607500955964,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3180,
+          "duration_s": 6.360000000007679,
+          "task_duration_s": 6.360000000007679,
+          "enabled_cycles": 3180,
+          "enabled_duration_s": 6.360000000007679,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 132,
+          "zero_measured_wrench_enabled_cycles": 24,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 308.62335935026204,
+          "actual_rotation_path_mrad": 22.419743819692272,
+          "actual_xy_net_um": [
+            -16.094316071176582,
+            -92.58122352355122
+          ],
+          "actual_z_net_um": 101.83755067805536,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.012357105422118904,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 359,
+      "peak_cycle_interval_s": [
+        0.7179999999999536,
+        0.7199999999999533
+      ],
+      "peak_force_N": 0.024610171870214255,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_02.json.gz",
+      "sha256": "34ff240ab7f4638b8091552cb3ee5c58df536a3d69c326220a931a76cf78bd2a",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_02",
+      "id": "test_F2000_holdout_02",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.289999999998034,
+      "actual_cycles": 7025,
+      "reported_peak_force_N": 0.02464969475208451,
+      "stages": {
+        "INSERT": {
+          "cycles": 3413,
+          "duration_s": 6.825999999986496,
+          "task_duration_s": 5.065999999990598,
+          "enabled_cycles": 2413,
+          "enabled_duration_s": 4.825999999991157,
+          "nonzero_command_cycles": 2413,
+          "clipped_cycles": 2413,
+          "total_target_limited_cycles": 430,
+          "zero_measured_wrench_enabled_cycles": 1712,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 227.00608812045505,
+          "effective_xy_integral_um": 65.76724718798498,
+          "requested_rotation_integral_mrad": 1.7712330234745497,
+          "effective_rotation_integral_mrad": 1.77123302347455,
+          "actual_xy_path_um": 239.34862863752411,
+          "actual_rotation_path_mrad": 22.281216832055513,
+          "actual_xy_net_um": [
+            186.10882897225477,
+            -39.00356760265123
+          ],
+          "actual_z_net_um": 3889.9273507439593,
+          "saturated_components": [
+            633,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02464969475208451,
+          "mean_abs_raw_action": [
+            0.8081836931645203,
+            0.37125665013640935,
+            0.577687978225776,
+            0.36646615325095394
+          ],
+          "xy_command_delivery_fraction": 0.2897157857417782
+        },
+        "UNLOAD": {
+          "cycles": 392,
+          "duration_s": 0.7839999999999137,
+          "task_duration_s": 0.7839999999999137,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 2.214012818319735,
+          "actual_rotation_path_mrad": 0.37918369996669177,
+          "actual_xy_net_um": [
+            -0.18388085121139336,
+            1.3738277009948219
+          ],
+          "actual_z_net_um": -0.9436821604125697,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02444418785284177,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3220,
+          "duration_s": 6.440000000007523,
+          "task_duration_s": 6.440000000007523,
+          "enabled_cycles": 3220,
+          "enabled_duration_s": 6.440000000007523,
+          "nonzero_command_cycles": 3220,
+          "clipped_cycles": 1549,
+          "total_target_limited_cycles": 123,
+          "zero_measured_wrench_enabled_cycles": 27,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 100.66014387583152,
+          "effective_xy_integral_um": 59.89597738951054,
+          "requested_rotation_integral_mrad": 1.5788782406181385,
+          "effective_rotation_integral_mrad": 1.5788782406181388,
+          "actual_xy_path_um": 303.4024314400148,
+          "actual_rotation_path_mrad": 21.465000202358787,
+          "actual_xy_net_um": [
+            -5.225436829176045,
+            -98.80175009299282
+          ],
+          "actual_z_net_um": 102.9602962399285,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.012576440482018525,
+          "mean_abs_raw_action": [
+            0.1296198918397382,
+            0.2634869168634,
+            0.14713169499213652,
+            0.4645625457260179
+          ],
+          "xy_command_delivery_fraction": 0.5950317085121071
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 345,
+      "peak_cycle_interval_s": [
+        0.6899999999999566,
+        0.6919999999999564
+      ],
+      "peak_force_N": 0.02464969475208451,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_02.json.gz",
+      "sha256": "dfd076d720184a5137ac536e8b2b91631831ff58ce061a8972ff7af04d0f7a09",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_02",
+      "id": "test_S2000_holdout_02",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.285999999998044,
+      "actual_cycles": 7023,
+      "reported_peak_force_N": 0.024610171870214255,
+      "stages": {
+        "INSERT": {
+          "cycles": 3414,
+          "duration_s": 6.827999999986522,
+          "task_duration_s": 5.067999999990624,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 92.49259437191239,
+          "actual_rotation_path_mrad": 20.6068827042764,
+          "actual_xy_net_um": [
+            71.75495441723814,
+            -50.19872278024707
+          ],
+          "actual_z_net_um": 3890.412348348614,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024610171870214255,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 392,
+          "duration_s": 0.7839999999999137,
+          "task_duration_s": 0.7839999999999137,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 1.4678113215390267,
+          "actual_rotation_path_mrad": 0.3527778960509883,
+          "actual_xy_net_um": [
+            -0.33156921061678934,
+            -0.6414269359533833
+          ],
+          "actual_z_net_um": -0.5542183023187625,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024423607500955964,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3217,
+          "duration_s": 6.434000000007506,
+          "task_duration_s": 6.434000000007506,
+          "enabled_cycles": 3217,
+          "enabled_duration_s": 6.434000000007506,
+          "nonzero_command_cycles": 3217,
+          "clipped_cycles": 3217,
+          "total_target_limited_cycles": 105,
+          "zero_measured_wrench_enabled_cycles": 29,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 300.5945339642321,
+          "effective_xy_integral_um": 87.3131932736512,
+          "requested_rotation_integral_mrad": 2.7247865234892403,
+          "effective_rotation_integral_mrad": 2.7247803274854525,
+          "actual_xy_path_um": 269.9720217692127,
+          "actual_rotation_path_mrad": 19.48430938342257,
+          "actual_xy_net_um": [
+            -1.7697655842428,
+            -96.69434053441708
+          ],
+          "actual_z_net_um": 101.38656471960716,
+          "saturated_components": [
+            244,
+            156,
+            0,
+            961
+          ],
+          "peak_force_N": 0.012460894364680047,
+          "mean_abs_raw_action": [
+            0.659118299607279,
+            0.5789377153160633,
+            0.4942751696919817,
+            0.6283441172055216
+          ],
+          "xy_command_delivery_fraction": 0.29046833327994126
+        }
+      },
+      "first_enabled_cycle": 933,
+      "first_enabled_time_s": 1.8659999999998271,
+      "first_effect_cycle": 933,
+      "peak_cycle_index": 359,
+      "peak_cycle_interval_s": [
+        0.7179999999999536,
+        0.7199999999999533
+      ],
+      "peak_force_N": 0.024610171870214255,
+      "pre_enabled_peak_force_N": 0.024610171870214255,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_03.json.gz",
+      "sha256": "d487cb2fe014f6dc217e78e899e8065edb59bd6724fbd23428efcc9b06736902",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_03",
+      "id": "test_B2_holdout_03",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 9.512000000004509,
+      "actual_cycles": 5636,
+      "reported_peak_force_N": 0.024582272183269832,
+      "stages": {
+        "INSERT": {
+          "cycles": 3419,
+          "duration_s": 6.837999999997516,
+          "task_duration_s": 5.078000000001618,
+          "enabled_cycles": 2419,
+          "enabled_duration_s": 4.838000000002177,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 158,
+          "zero_measured_wrench_enabled_cycles": 1876,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 81.21154501838467,
+          "actual_rotation_path_mrad": 19.92209112282004,
+          "actual_xy_net_um": [
+            71.71267915902366,
+            -20.687826142904164
+          ],
+          "actual_z_net_um": 3889.8613323440486,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024582272183269832,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 398,
+          "duration_s": 0.7959999999999123,
+          "task_duration_s": 0.7959999999999123,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.618029924750973,
+          "actual_rotation_path_mrad": 0.9928060365845931,
+          "actual_xy_net_um": [
+            1.797491778925149,
+            0.21235767416612614
+          ],
+          "actual_z_net_um": -3.945517743592345,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024418038166677355,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 1819,
+          "duration_s": 3.638000000002979,
+          "task_duration_s": 3.638000000002979,
+          "enabled_cycles": 1819,
+          "enabled_duration_s": 3.638000000002979,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 81,
+          "zero_measured_wrench_enabled_cycles": 43,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 144.1526795892019,
+          "actual_rotation_path_mrad": 10.993042078640007,
+          "actual_xy_net_um": [
+            71.53089358418772,
+            29.025586788567747
+          ],
+          "actual_z_net_um": 104.62850456694488,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.01038193366610269,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 352,
+      "peak_cycle_interval_s": [
+        0.7039999999999551,
+        0.7059999999999549
+      ],
+      "peak_force_N": 0.024582272183269832,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_03.json.gz",
+      "sha256": "1ce5d1b49785950ff8778c5ae7909d2b1b7368638b067c185eb6489d5b14d3aa",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_03",
+      "id": "test_F2000_holdout_03",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 9.354000000004877,
+      "actual_cycles": 5557,
+      "reported_peak_force_N": 0.02460781514222511,
+      "stages": {
+        "INSERT": {
+          "cycles": 3424,
+          "duration_s": 6.847999999998265,
+          "task_duration_s": 5.088000000002367,
+          "enabled_cycles": 2424,
+          "enabled_duration_s": 4.848000000002926,
+          "nonzero_command_cycles": 2424,
+          "clipped_cycles": 2424,
+          "total_target_limited_cycles": 758,
+          "zero_measured_wrench_enabled_cycles": 1490,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 249.68466300971156,
+          "effective_xy_integral_um": 67.9437411998393,
+          "requested_rotation_integral_mrad": 1.9272339341733442,
+          "effective_rotation_integral_mrad": 1.9272339341733442,
+          "actual_xy_path_um": 211.85716233059605,
+          "actual_rotation_path_mrad": 22.205150314844694,
+          "actual_xy_net_um": [
+            121.1412457583728,
+            -25.689735200333157
+          ],
+          "actual_z_net_um": 3889.7666301866466,
+          "saturated_components": [
+            733,
+            0,
+            97,
+            0
+          ],
+          "peak_force_N": 0.02460781514222511,
+          "mean_abs_raw_action": [
+            0.8142469551893744,
+            0.5695687265384315,
+            0.6064100713767234,
+            0.3949766828380402
+          ],
+          "xy_command_delivery_fraction": 0.2721182005367971
+        },
+        "UNLOAD": {
+          "cycles": 396,
+          "duration_s": 0.7919999999999128,
+          "task_duration_s": 0.7919999999999128,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 4.310915210382144,
+          "actual_rotation_path_mrad": 0.9567418226148774,
+          "actual_xy_net_um": [
+            1.350776973019756,
+            3.277597294172687
+          ],
+          "actual_z_net_um": -2.143727234775894,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442773178260938,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 1737,
+          "duration_s": 3.4740000000025972,
+          "task_duration_s": 3.4740000000025972,
+          "enabled_cycles": 1737,
+          "enabled_duration_s": 3.4740000000025972,
+          "nonzero_command_cycles": 1737,
+          "clipped_cycles": 592,
+          "total_target_limited_cycles": 132,
+          "zero_measured_wrench_enabled_cycles": 60,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 43.6846513370634,
+          "effective_xy_integral_um": 29.867249424978976,
+          "requested_rotation_integral_mrad": 0.7123372435055728,
+          "effective_rotation_integral_mrad": 0.7123372435055729,
+          "actual_xy_path_um": 195.29229710868896,
+          "actual_rotation_path_mrad": 12.802772888090898,
+          "actual_xy_net_um": [
+            81.6201341106629,
+            0.4716198746172457
+          ],
+          "actual_z_net_um": 103.00193210982522,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.010027257956855374,
+          "mean_abs_raw_action": [
+            0.13820226084726187,
+            0.1856226297240183,
+            0.13546300802549274,
+            0.3792235198965276
+          ],
+          "xy_command_delivery_fraction": 0.6837012202415974
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 399,
+      "peak_cycle_interval_s": [
+        0.7979999999999448,
+        0.7999999999999445
+      ],
+      "peak_force_N": 0.02460781514222511,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_03.json.gz",
+      "sha256": "b787fbd1e7e5518dbef49966e70ac7ac7e155fde36b489efc07f2aab86d2229f",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_03",
+      "id": "test_S2000_holdout_03",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 9.384000000004807,
+      "actual_cycles": 5572,
+      "reported_peak_force_N": 0.024582272183269832,
+      "stages": {
+        "INSERT": {
+          "cycles": 3422,
+          "duration_s": 6.843999999998097,
+          "task_duration_s": 5.084000000002199,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 77.51953070451255,
+          "actual_rotation_path_mrad": 19.732428816972227,
+          "actual_xy_net_um": [
+            68.29391143924983,
+            -22.842896270877215
+          ],
+          "actual_z_net_um": 3890.421951381414,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024582272183269832,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 398,
+          "duration_s": 0.7959999999999123,
+          "task_duration_s": 0.7959999999999123,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.618029924750973,
+          "actual_rotation_path_mrad": 0.9928060365845931,
+          "actual_xy_net_um": [
+            1.797491778925149,
+            0.21235767416612614
+          ],
+          "actual_z_net_um": -3.945517743592345,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024418038166677355,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 1752,
+          "duration_s": 3.504000000002696,
+          "task_duration_s": 3.504000000002696,
+          "enabled_cycles": 1752,
+          "enabled_duration_s": 3.504000000002696,
+          "nonzero_command_cycles": 1752,
+          "clipped_cycles": 1752,
+          "total_target_limited_cycles": 106,
+          "zero_measured_wrench_enabled_cycles": 56,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 178.14401558730458,
+          "effective_xy_integral_um": 49.44097105201233,
+          "requested_rotation_integral_mrad": 1.6227970109480379,
+          "effective_rotation_integral_mrad": 1.6226596481535114,
+          "actual_xy_path_um": 176.5321314389921,
+          "actual_rotation_path_mrad": 11.948995942126773,
+          "actual_xy_net_um": [
+            72.89293288299561,
+            13.24333658805418
+          ],
+          "actual_z_net_um": 104.94667876234482,
+          "saturated_components": [
+            0,
+            150,
+            0,
+            664
+          ],
+          "peak_force_N": 0.00984496343480412,
+          "mean_abs_raw_action": [
+            0.6027315268845863,
+            0.7830470709904144,
+            0.6317571662196285,
+            0.6424978608137941
+          ],
+          "xy_command_delivery_fraction": 0.2775337183739544
+        }
+      },
+      "first_enabled_cycle": 942,
+      "first_enabled_time_s": 1.8839999999998251,
+      "first_effect_cycle": 942,
+      "peak_cycle_index": 352,
+      "peak_cycle_interval_s": [
+        0.7039999999999551,
+        0.7059999999999549
+      ],
+      "peak_force_N": 0.024582272183269832,
+      "pre_enabled_peak_force_N": 0.024582272183269832,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_B2_holdout_04.json.gz",
+      "sha256": "92d6f7b9915bfa006ad2303377671ac3601af32156d381af1cdf5d875a32af94",
+      "provider": "B2",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_04",
+      "id": "test_B2_holdout_04",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 10.534000000002127,
+      "actual_cycles": 6147,
+      "reported_peak_force_N": 0.024607384325298673,
+      "stages": {
+        "INSERT": {
+          "cycles": 3418,
+          "duration_s": 6.8359999999929775,
+          "task_duration_s": 5.075999999997079,
+          "enabled_cycles": 2418,
+          "enabled_duration_s": 4.835999999997639,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 171,
+          "zero_measured_wrench_enabled_cycles": 1876,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 92.08773661525211,
+          "actual_rotation_path_mrad": 20.087270494360062,
+          "actual_xy_net_um": [
+            -82.93717431158372,
+            -16.35622635083417
+          ],
+          "actual_z_net_um": 3889.686794289175,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024607384325298673,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.4319252850970345,
+          "actual_rotation_path_mrad": 1.0576509920830408,
+          "actual_xy_net_um": [
+            -1.6376848255369734,
+            0.04405238164375484
+          ],
+          "actual_z_net_um": -4.816094842814526,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442675127369445,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2330,
+          "duration_s": 4.660000000005136,
+          "task_duration_s": 4.660000000005136,
+          "enabled_cycles": 2330,
+          "enabled_duration_s": 4.660000000005136,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 148,
+          "zero_measured_wrench_enabled_cycles": 26,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 227.07709470069108,
+          "actual_rotation_path_mrad": 17.59851733362219,
+          "actual_xy_net_um": [
+            -34.5909974082692,
+            71.2232510805482
+          ],
+          "actual_z_net_um": 105.91065482731247,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.010834801190567322,
+          "mean_abs_raw_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 358,
+      "peak_cycle_interval_s": [
+        0.7159999999999538,
+        0.7179999999999536
+      ],
+      "peak_force_N": 0.024607384325298673,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_F2000_holdout_04.json.gz",
+      "sha256": "6bbcf6006df4035955535b1969454f78ae544187ffe7317bb83cfd038fcfcf58",
+      "provider": "F2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_04",
+      "id": "test_F2000_holdout_04",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.100000000000808,
+      "actual_cycles": 6430,
+      "reported_peak_force_N": 0.024619306045768032,
+      "stages": {
+        "INSERT": {
+          "cycles": 3437,
+          "duration_s": 6.873999999990491,
+          "task_duration_s": 5.113999999994593,
+          "enabled_cycles": 2437,
+          "enabled_duration_s": 4.873999999995152,
+          "nonzero_command_cycles": 2437,
+          "clipped_cycles": 2437,
+          "total_target_limited_cycles": 438,
+          "zero_measured_wrench_enabled_cycles": 1643,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 187.2672111623708,
+          "effective_xy_integral_um": 63.32824500652647,
+          "requested_rotation_integral_mrad": 2.249061928652351,
+          "effective_rotation_integral_mrad": 2.249061928652351,
+          "actual_xy_path_um": 185.1970079539742,
+          "actual_rotation_path_mrad": 21.939251450596252,
+          "actual_xy_net_um": [
+            -2.536898362630285,
+            11.988871523517478
+          ],
+          "actual_z_net_um": 3889.4136353377,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024619306045768032,
+          "mean_abs_raw_action": [
+            0.6357724678335397,
+            0.33974455008997895,
+            0.6617030010734076,
+            0.5420890630245404
+          ],
+          "xy_command_delivery_fraction": 0.33817049238597063
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.609052135328561,
+          "actual_rotation_path_mrad": 1.0778368629568154,
+          "actual_xy_net_um": [
+            -1.1540482028414272,
+            1.618826076901827
+          ],
+          "actual_z_net_um": -4.483351422053355,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024433812372536706,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2594,
+          "duration_s": 5.188000000006303,
+          "task_duration_s": 5.188000000006303,
+          "enabled_cycles": 2594,
+          "enabled_duration_s": 5.188000000006303,
+          "nonzero_command_cycles": 2594,
+          "clipped_cycles": 2201,
+          "total_target_limited_cycles": 155,
+          "zero_measured_wrench_enabled_cycles": 56,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 130.81337122610358,
+          "effective_xy_integral_um": 59.03179260044178,
+          "requested_rotation_integral_mrad": 0.5850299025983113,
+          "effective_rotation_integral_mrad": 0.5850299025983113,
+          "actual_xy_path_um": 364.7677241093349,
+          "actual_rotation_path_mrad": 23.648785551629217,
+          "actual_xy_net_um": [
+            -92.78879993583574,
+            25.821345207480785
+          ],
+          "actual_z_net_um": 105.59452242323277,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.010864998709190915,
+          "mean_abs_raw_action": [
+            0.17172157932173407,
+            0.4504007986167255,
+            0.1035436619771106,
+            0.16970103508063988
+          ],
+          "xy_command_delivery_fraction": 0.45126726761294633
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 363,
+      "peak_cycle_interval_s": [
+        0.7259999999999527,
+        0.7279999999999525
+      ],
+      "peak_force_N": 0.024619306045768032,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/frozen_comparison_20261007/run/test_S2000_holdout_04.json.gz",
+      "sha256": "a0d7f5e51fd1028d53ef87c05736300268b866f62b7ddee0bc590bc1aed86f9a",
+      "provider": "S2000",
+      "group": "first_use_frozen_position_test",
+      "case_id": "holdout_04",
+      "id": "test_S2000_holdout_04",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.018000000000999,
+      "actual_cycles": 6389,
+      "reported_peak_force_N": 0.024607384325298673,
+      "stages": {
+        "INSERT": {
+          "cycles": 3421,
+          "duration_s": 6.841999999990841,
+          "task_duration_s": 5.081999999994943,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 80.28916367717869,
+          "actual_rotation_path_mrad": 19.558091000584,
+          "actual_xy_net_um": [
+            -69.10614756543258,
+            -27.589071695448343
+          ],
+          "actual_z_net_um": 3889.750351744284,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024607384325298673,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.4319252850970345,
+          "actual_rotation_path_mrad": 1.0576509920830408,
+          "actual_xy_net_um": [
+            -1.6376848255369734,
+            0.04405238164375484
+          ],
+          "actual_z_net_um": -4.816094842814526,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442675127369445,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2569,
+          "duration_s": 5.138000000006144,
+          "task_duration_s": 5.138000000006144,
+          "enabled_cycles": 2569,
+          "enabled_duration_s": 5.138000000006144,
+          "nonzero_command_cycles": 2569,
+          "clipped_cycles": 2569,
+          "total_target_limited_cycles": 126,
+          "zero_measured_wrench_enabled_cycles": 55,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 252.8409918746646,
+          "effective_xy_integral_um": 70.869226861302,
+          "requested_rotation_integral_mrad": 1.8786713739320615,
+          "effective_rotation_integral_mrad": 1.8784188487609814,
+          "actual_xy_path_um": 355.91609347728985,
+          "actual_rotation_path_mrad": 21.184633683160172,
+          "actual_xy_net_um": [
+            -96.51532830509828,
+            27.000416635002487
+          ],
+          "actual_z_net_um": 105.56228302746042,
+          "saturated_components": [
+            321,
+            0,
+            0,
+            487
+          ],
+          "peak_force_N": 0.01036594667478994,
+          "mean_abs_raw_action": [
+            0.580757436793154,
+            0.7595544362077457,
+            0.4229045832328826,
+            0.5717365708551596
+          ],
+          "xy_command_delivery_fraction": 0.28029168188215486
+        }
+      },
+      "first_enabled_cycle": 942,
+      "first_enabled_time_s": 1.8839999999998251,
+      "first_effect_cycle": 942,
+      "peak_cycle_index": 358,
+      "peak_cycle_interval_s": [
+        0.7159999999999538,
+        0.7179999999999536
+      ],
+      "peak_force_N": 0.024607384325298673,
+      "pre_enabled_peak_force_N": 0.024607384325298673,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_y_neg_150.json.gz",
+      "sha256": "b06edc4b29df45373d731d48e2bb55c1fb105a68811bd2f25c4ce6aa3801c3f2",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "final_F50_y_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 10.236000000002822,
+      "actual_cycles": 5998,
+      "reported_peak_force_N": 0.024476199604575276,
+      "stages": {
+        "INSERT": {
+          "cycles": 3208,
+          "duration_s": 6.4159999999941695,
+          "task_duration_s": 4.655999999998271,
+          "enabled_cycles": 2208,
+          "enabled_duration_s": 4.415999999998831,
+          "nonzero_command_cycles": 2208,
+          "clipped_cycles": 2208,
+          "total_target_limited_cycles": 348,
+          "zero_measured_wrench_enabled_cycles": 1775,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 185.96987497506024,
+          "effective_xy_integral_um": 59.14515876160922,
+          "requested_rotation_integral_mrad": 2.18157088800454,
+          "effective_rotation_integral_mrad": 2.18157088800454,
+          "actual_xy_path_um": 162.40970664423392,
+          "actual_rotation_path_mrad": 3.1401633809510368,
+          "actual_xy_net_um": [
+            135.02731040834382,
+            13.647197513150449
+          ],
+          "actual_z_net_um": 3883.013828166561,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024476199604575276,
+          "mean_abs_raw_action": [
+            0.7724534574950087,
+            0.28545056809873687,
+            0.6919140083364387,
+            0.6010961263454047
+          ],
+          "xy_command_delivery_fraction": 0.3180362344683028
+        },
+        "UNLOAD": {
+          "cycles": 390,
+          "duration_s": 0.7799999999999141,
+          "task_duration_s": 0.7799999999999141,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.002789246109317067,
+          "actual_rotation_path_mrad": 0.0005662441253662109,
+          "actual_xy_net_um": [
+            0.0023582194407598678,
+            0.001325833962935322
+          ],
+          "actual_z_net_um": -0.008399550500449993,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024430717780080807,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2400,
+          "duration_s": 4.800000000004636,
+          "task_duration_s": 4.800000000004636,
+          "enabled_cycles": 2400,
+          "enabled_duration_s": 4.800000000004636,
+          "nonzero_command_cycles": 2400,
+          "clipped_cycles": 2230,
+          "total_target_limited_cycles": 175,
+          "zero_measured_wrench_enabled_cycles": 63,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 103.34072253164112,
+          "effective_xy_integral_um": 60.06913463167297,
+          "requested_rotation_integral_mrad": 0.5711445857253269,
+          "effective_rotation_integral_mrad": 0.5710934111816388,
+          "actual_xy_path_um": 166.45944278407256,
+          "actual_rotation_path_mrad": 6.344931351143851,
+          "actual_xy_net_um": [
+            -60.596924551704205,
+            69.12133686033164
+          ],
+          "actual_z_net_um": 107.24548288106641,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.011847491413581787,
+          "mean_abs_raw_action": [
+            0.24673067683974903,
+            0.32261216613153615,
+            0.15331438362598418,
+            0.16864662657181423
+          ],
+          "xy_command_delivery_fraction": 0.5812726402535153
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 274,
+      "peak_cycle_interval_s": [
+        0.5479999999999723,
+        0.5499999999999721
+      ],
+      "peak_force_N": 0.024476199604575276,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_neg_150.json.gz",
+      "sha256": "e043f85a4c37869e996aaba0777783027130dec03b63b0b3b4b4a4ce0dcce3d6",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "y_neg_150",
+      "id": "final_S50_y_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 10.7600000000016,
+      "actual_cycles": 6260,
+      "reported_peak_force_N": 0.024474139103047843,
+      "stages": {
+        "INSERT": {
+          "cycles": 3201,
+          "duration_s": 6.401999999991813,
+          "task_duration_s": 4.641999999995915,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 26.955506546389177,
+          "actual_rotation_path_mrad": 2.316950560081188,
+          "actual_xy_net_um": [
+            9.741749964744416,
+            -3.2844066760662938
+          ],
+          "actual_z_net_um": 3883.9943319829054,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024474139103047843,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 390,
+          "duration_s": 0.7799999999999141,
+          "task_duration_s": 0.7799999999999141,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.004361479426492988,
+          "actual_rotation_path_mrad": 0.00026310763134795997,
+          "actual_xy_net_um": [
+            -4.413024154021173e-05,
+            -0.00436121511555301
+          ],
+          "actual_z_net_um": -0.008244986418864259,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02442742016843082,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2669,
+          "duration_s": 5.3380000000057715,
+          "task_duration_s": 5.3380000000057715,
+          "enabled_cycles": 2669,
+          "enabled_duration_s": 5.3380000000057715,
+          "nonzero_command_cycles": 2669,
+          "clipped_cycles": 2661,
+          "total_target_limited_cycles": 203,
+          "zero_measured_wrench_enabled_cycles": 31,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 252.34955932282313,
+          "effective_xy_integral_um": 74.13949960270078,
+          "requested_rotation_integral_mrad": 1.9032368267058395,
+          "effective_rotation_integral_mrad": 1.9021184278300218,
+          "actual_xy_path_um": 164.47589572771744,
+          "actual_rotation_path_mrad": 9.052795451239694,
+          "actual_xy_net_um": [
+            -61.39660273784787,
+            67.8547974278171
+          ],
+          "actual_z_net_um": 106.83791172834017,
+          "saturated_components": [
+            125,
+            0,
+            0,
+            229
+          ],
+          "peak_force_N": 0.01144782139307279,
+          "mean_abs_raw_action": [
+            0.5698495251089949,
+            0.7215441652298331,
+            0.3917030338581781,
+            0.5418435235334362
+          ],
+          "xy_command_delivery_fraction": 0.2937968261234662
+        }
+      },
+      "first_enabled_cycle": 763,
+      "first_enabled_time_s": 1.5259999999998646,
+      "first_effect_cycle": 763,
+      "peak_cycle_index": 274,
+      "peak_cycle_interval_s": [
+        0.5479999999999723,
+        0.5499999999999721
+      ],
+      "peak_force_N": 0.024474139103047843,
+      "pre_enabled_peak_force_N": 0.024474139103047843,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_y_pos_150.json.gz",
+      "sha256": "6ba2d71616dcbe8b92ea48e145c49b22725fe3625a08232976dde38a97053f13",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "final_F50_y_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 13.927999999994217,
+      "actual_cycles": 7844,
+      "reported_peak_force_N": 0.02434466527188916,
+      "stages": {
+        "INSERT": {
+          "cycles": 4209,
+          "duration_s": 8.417999999986826,
+          "task_duration_s": 6.6579999999909285,
+          "enabled_cycles": 3209,
+          "enabled_duration_s": 6.417999999991488,
+          "nonzero_command_cycles": 3209,
+          "clipped_cycles": 3209,
+          "total_target_limited_cycles": 774,
+          "zero_measured_wrench_enabled_cycles": 1467,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 261.75190864976247,
+          "effective_xy_integral_um": 85.52948015939178,
+          "requested_rotation_integral_mrad": 2.3262099470699367,
+          "effective_rotation_integral_mrad": 2.326209947069937,
+          "actual_xy_path_um": 214.66586133091332,
+          "actual_rotation_path_mrad": 30.366514680450774,
+          "actual_xy_net_um": [
+            57.97469113781467,
+            -102.90462608208351
+          ],
+          "actual_z_net_um": 3785.17191194394,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02434466527188916,
+          "mean_abs_raw_action": [
+            0.6348813138263699,
+            0.37709229803783717,
+            0.3746543913364559,
+            0.5447893543160196
+          ],
+          "xy_command_delivery_fraction": 0.32675780895196693
+        },
+        "UNLOAD": {
+          "cycles": 783,
+          "duration_s": 1.5660000000015462,
+          "task_duration_s": 1.5660000000015462,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 11.689203322864497,
+          "actual_rotation_path_mrad": 2.87107865253902,
+          "actual_xy_net_um": [
+            0.9770417532994798,
+            -3.014446581938236
+          ],
+          "actual_z_net_um": 2.200925085993867,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024285233797572983,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2852,
+          "duration_s": 5.704000000001742,
+          "task_duration_s": 5.704000000001742,
+          "enabled_cycles": 2852,
+          "enabled_duration_s": 5.704000000001742,
+          "nonzero_command_cycles": 2852,
+          "clipped_cycles": 2160,
+          "total_target_limited_cycles": 171,
+          "zero_measured_wrench_enabled_cycles": 48,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 115.32884519615043,
+          "effective_xy_integral_um": 69.5134661891251,
+          "requested_rotation_integral_mrad": 1.6328211158270118,
+          "effective_rotation_integral_mrad": 1.6328211158270114,
+          "actual_xy_path_um": 206.16707751064683,
+          "actual_rotation_path_mrad": 24.661368662313347,
+          "actual_xy_net_um": [
+            24.45994714802976,
+            -106.10383427621375
+          ],
+          "actual_z_net_um": 204.3947647521941,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.010541566419763816,
+          "mean_abs_raw_action": [
+            0.22214424367706706,
+            0.3121783437225628,
+            0.19210130222883665,
+            0.5308784614689387
+          ],
+          "xy_command_delivery_fraction": 0.6027413703041691
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 355,
+      "peak_cycle_interval_s": [
+        0.7099999999999544,
+        0.7119999999999542
+      ],
+      "peak_force_N": 0.02434466527188916,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_pos_150.json.gz",
+      "sha256": "7b3aa929e3dbcf72401f7c7bb87e36b59c1fe4df216401f535341801c4302614",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "y_pos_150",
+      "id": "final_S50_y_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 13.195999999995923,
+      "actual_cycles": 7478,
+      "reported_peak_force_N": 0.02431135669404151,
+      "stages": {
+        "INSERT": {
+          "cycles": 4162,
+          "duration_s": 8.323999999986878,
+          "task_duration_s": 6.563999999990979,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 112.60289476701443,
+          "actual_rotation_path_mrad": 27.72413183118725,
+          "actual_xy_net_um": [
+            3.6992167037389385,
+            -105.78265756682207
+          ],
+          "actual_z_net_um": 3783.7276472262547,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02431135669404151,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 787,
+          "duration_s": 1.5740000000015675,
+          "task_duration_s": 1.5740000000015675,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 11.120169759227599,
+          "actual_rotation_path_mrad": 2.8457778440794304,
+          "actual_xy_net_um": [
+            0.3383714116456554,
+            -1.3558005672560454
+          ],
+          "actual_z_net_um": 2.8816241538372775,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024259315235875913,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2529,
+          "duration_s": 5.058000000003377,
+          "task_duration_s": 5.058000000003377,
+          "enabled_cycles": 2529,
+          "enabled_duration_s": 5.058000000003377,
+          "nonzero_command_cycles": 2529,
+          "clipped_cycles": 2529,
+          "total_target_limited_cycles": 188,
+          "zero_measured_wrench_enabled_cycles": 60,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 264.5861686178535,
+          "effective_xy_integral_um": 70.48985153916317,
+          "requested_rotation_integral_mrad": 2.597472825811618,
+          "effective_rotation_integral_mrad": 2.594098600267229,
+          "actual_xy_path_um": 202.66563760945544,
+          "actual_rotation_path_mrad": 18.183347646883245,
+          "actual_xy_net_um": [
+            -2.812704762599662,
+            -92.06007780357176
+          ],
+          "actual_z_net_um": 203.94137245722237,
+          "saturated_components": [
+            0,
+            401,
+            8,
+            1155
+          ],
+          "peak_force_N": 0.010385629932298749,
+          "mean_abs_raw_action": [
+            0.6462914429195505,
+            0.7663236969353513,
+            0.6027353747459493,
+            0.8106609842389787
+          ],
+          "xy_command_delivery_fraction": 0.26641548160808404
+        }
+      },
+      "first_enabled_cycle": 1615,
+      "first_enabled_time_s": 3.229999999999677,
+      "first_effect_cycle": 1615,
+      "peak_cycle_index": 462,
+      "peak_cycle_interval_s": [
+        0.9239999999999309,
+        0.9259999999999307
+      ],
+      "peak_force_N": 0.02431135669404151,
+      "pre_enabled_peak_force_N": 0.02431135669404151,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_x_pos_150.json.gz",
+      "sha256": "f819d500577bef17937e21226e1e94899bff24e4a2f580ba503cc555e176189d",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "final_F50_x_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.457999999999974,
+      "actual_cycles": 6608,
+      "reported_peak_force_N": 0.024650860225810464,
+      "stages": {
+        "INSERT": {
+          "cycles": 3484,
+          "duration_s": 6.967999999988917,
+          "task_duration_s": 5.209999999993014,
+          "enabled_cycles": 2484,
+          "enabled_duration_s": 4.967999999993578,
+          "nonzero_command_cycles": 2484,
+          "clipped_cycles": 2484,
+          "total_target_limited_cycles": 522,
+          "zero_measured_wrench_enabled_cycles": 1575,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 189.46540019131956,
+          "effective_xy_integral_um": 63.27232878191534,
+          "requested_rotation_integral_mrad": 2.2411043013768692,
+          "effective_rotation_integral_mrad": 2.2411043013768692,
+          "actual_xy_path_um": 172.77292740650998,
+          "actual_rotation_path_mrad": 22.168610152750936,
+          "actual_xy_net_um": [
+            -26.44807985839041,
+            39.5652561792461
+          ],
+          "actual_z_net_um": 3888.96922293987,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024650860225810464,
+          "mean_abs_raw_action": [
+            0.6143185302927107,
+            0.33653278183341984,
+            0.6582491128389002,
+            0.5074352955568624
+          ],
+          "xy_command_delivery_fraction": 0.3339518915750518
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.304246879420786,
+          "actual_rotation_path_mrad": 0.9290961281078773,
+          "actual_xy_net_um": [
+            -1.9778198012697814,
+            1.4347900171755372
+          ],
+          "actual_z_net_um": -5.26799984384117,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02445235829450505,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2725,
+          "duration_s": 5.450000000007047,
+          "task_duration_s": 5.450000000007047,
+          "enabled_cycles": 2725,
+          "enabled_duration_s": 5.450000000007047,
+          "nonzero_command_cycles": 2725,
+          "clipped_cycles": 2622,
+          "total_target_limited_cycles": 111,
+          "zero_measured_wrench_enabled_cycles": 49,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 157.56106652331744,
+          "effective_xy_integral_um": 69.96651961284743,
+          "requested_rotation_integral_mrad": 0.6734761606379769,
+          "effective_rotation_integral_mrad": 0.6734761606379769,
+          "actual_xy_path_um": 316.67937979116044,
+          "actual_rotation_path_mrad": 21.163733648088346,
+          "actual_xy_net_um": [
+            -95.12661142754807,
+            -12.055242600788612
+          ],
+          "actual_z_net_um": 107.36170475602553,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.011750020090396303,
+          "mean_abs_raw_action": [
+            0.2100356205669018,
+            0.522488817818668,
+            0.09979094920902078,
+            0.1924772580610503
+          ],
+          "xy_command_delivery_fraction": 0.44405969797426514
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 436,
+      "peak_cycle_interval_s": [
+        0.8719999999999366,
+        0.8739999999999364
+      ],
+      "peak_force_N": 0.024650860225810464,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_x_pos_150.json.gz",
+      "sha256": "ebf3a03c973c526c4497d8154b9d3860b1975540b79dc843b0479194026d7318",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "x_pos_150",
+      "id": "final_S50_x_pos_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 11.332000000000267,
+      "actual_cycles": 6546,
+      "reported_peak_force_N": 0.02460243170623439,
+      "stages": {
+        "INSERT": {
+          "cycles": 3468,
+          "duration_s": 6.935999999989454,
+          "task_duration_s": 5.1759999999935555,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 80.93738211130974,
+          "actual_rotation_path_mrad": 19.48818982981611,
+          "actual_xy_net_um": [
+            -74.8695620205339,
+            -10.331424630034693
+          ],
+          "actual_z_net_um": 3888.181813497295,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02460243170623439,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 3.2439099932224997,
+          "actual_rotation_path_mrad": 0.906187493118235,
+          "actual_xy_net_um": [
+            -2.8086865044831995,
+            0.23752832312461342
+          ],
+          "actual_z_net_um": -5.005764606309458,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024456046432841556,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 2679,
+          "duration_s": 5.3580000000067995,
+          "task_duration_s": 5.3580000000067995,
+          "enabled_cycles": 2679,
+          "enabled_duration_s": 5.3580000000067995,
+          "nonzero_command_cycles": 2679,
+          "clipped_cycles": 2679,
+          "total_target_limited_cycles": 113,
+          "zero_measured_wrench_enabled_cycles": 50,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 266.0865079157944,
+          "effective_xy_integral_um": 74.01137104906103,
+          "requested_rotation_integral_mrad": 1.9907256784271365,
+          "effective_rotation_integral_mrad": 1.9905913974828928,
+          "actual_xy_path_um": 323.79427801796726,
+          "actual_rotation_path_mrad": 20.203564901451113,
+          "actual_xy_net_um": [
+            -101.4270206934762,
+            -4.94050862792657
+          ],
+          "actual_z_net_um": 107.25142554402545,
+          "saturated_components": [
+            443,
+            0,
+            0,
+            578
+          ],
+          "peak_force_N": 0.01168982685683604,
+          "mean_abs_raw_action": [
+            0.5843451789574375,
+            0.7706317736969905,
+            0.447091316789689,
+            0.5704395198786424
+          ],
+          "xy_command_delivery_fraction": 0.27814777843784033
+        }
+      },
+      "first_enabled_cycle": 985,
+      "first_enabled_time_s": 1.9699999999998157,
+      "first_effect_cycle": 985,
+      "peak_cycle_index": 410,
+      "peak_cycle_interval_s": [
+        0.8199999999999423,
+        0.8219999999999421
+      ],
+      "peak_force_N": 0.02460243170623439,
+      "pre_enabled_peak_force_N": 0.02460243170623439,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_x_neg_150.json.gz",
+      "sha256": "45252569064e879ba039d453d805a03ac8e74bae73897db3eca644b013be78a5",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "final_F50_x_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.85799999999671,
+      "actual_cycles": 7309,
+      "reported_peak_force_N": 0.024607766668374293,
+      "stages": {
+        "INSERT": {
+          "cycles": 3461,
+          "duration_s": 6.921999999986463,
+          "task_duration_s": 5.161999999990565,
+          "enabled_cycles": 2461,
+          "enabled_duration_s": 4.921999999991124,
+          "nonzero_command_cycles": 2461,
+          "clipped_cycles": 2438,
+          "total_target_limited_cycles": 664,
+          "zero_measured_wrench_enabled_cycles": 1555,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 238.9826857522015,
+          "effective_xy_integral_um": 64.58716570477814,
+          "requested_rotation_integral_mrad": 1.8572216934958052,
+          "effective_rotation_integral_mrad": 1.8572216934958048,
+          "actual_xy_path_um": 218.20370124899003,
+          "actual_rotation_path_mrad": 21.391625447198614,
+          "actual_xy_net_um": [
+            172.2789849093151,
+            13.70409728655789
+          ],
+          "actual_z_net_um": 3886.5504890365314,
+          "saturated_components": [
+            966,
+            0,
+            136,
+            0
+          ],
+          "peak_force_N": 0.024607766668374293,
+          "mean_abs_raw_action": [
+            0.8069529033491932,
+            0.42176490380288334,
+            0.6168770115581871,
+            0.3542466708820363
+          ],
+          "xy_command_delivery_fraction": 0.2702587658243487
+        },
+        "UNLOAD": {
+          "cycles": 398,
+          "duration_s": 0.7959999999999123,
+          "task_duration_s": 0.7959999999999123,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 4.246481919801699,
+          "actual_rotation_path_mrad": 0.8923731033279986,
+          "actual_xy_net_um": [
+            2.972989143916443,
+            2.3269442188589293
+          ],
+          "actual_z_net_um": -4.514300415513815,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024449966677977844,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3450,
+          "duration_s": 6.900000000006234,
+          "task_duration_s": 6.900000000006234,
+          "enabled_cycles": 3450,
+          "enabled_duration_s": 6.900000000006234,
+          "nonzero_command_cycles": 3450,
+          "clipped_cycles": 2568,
+          "total_target_limited_cycles": 107,
+          "zero_measured_wrench_enabled_cycles": 24,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 131.15001895137192,
+          "effective_xy_integral_um": 80.70514993902194,
+          "requested_rotation_integral_mrad": 1.5996368171988633,
+          "effective_rotation_integral_mrad": 1.5996368171988633,
+          "actual_xy_path_um": 344.52501807668483,
+          "actual_rotation_path_mrad": 24.83914012638963,
+          "actual_xy_net_um": [
+            54.77601929348941,
+            -81.13697077861661
+          ],
+          "actual_z_net_um": 108.0301714230063,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.013785241844460998,
+          "mean_abs_raw_action": [
+            0.21154100627138994,
+            0.2965038384043652,
+            0.21688109924827798,
+            0.3998564338165781
+          ],
+          "xy_command_delivery_fraction": 0.6153651412657893
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 402,
+      "peak_cycle_interval_s": [
+        0.8039999999999441,
+        0.8059999999999439
+      ],
+      "peak_force_N": 0.024607766668374293,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_x_neg_150.json.gz",
+      "sha256": "c3dba141b25ab5f6dfb005a4930ba48a1512dc28c00d2ea7a5e08b58f198b226",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "x_neg_150",
+      "id": "final_S50_x_neg_150",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 12.995999999996389,
+      "actual_cycles": 7378,
+      "reported_peak_force_N": 0.02461225485734939,
+      "stages": {
+        "INSERT": {
+          "cycles": 3464,
+          "duration_s": 6.9279999999864845,
+          "task_duration_s": 5.167999999990586,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 95.36727977991669,
+          "actual_rotation_path_mrad": 19.76599734725114,
+          "actual_xy_net_um": [
+            90.7822776043981,
+            -17.28647838418466
+          ],
+          "actual_z_net_um": 3888.419700994749,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.02461225485734939,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "UNLOAD": {
+          "cycles": 399,
+          "duration_s": 0.7979999999999121,
+          "task_duration_s": 0.7979999999999121,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 2.6871038617459746,
+          "actual_rotation_path_mrad": 0.9206132956817036,
+          "actual_xy_net_um": [
+            2.07794319723756,
+            0.4359490668184036
+          ],
+          "actual_z_net_um": -5.41316053653601,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.024446939712753423,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        },
+        "SEARCH": {
+          "cycles": 3515,
+          "duration_s": 7.030000000005891,
+          "task_duration_s": 7.030000000005891,
+          "enabled_cycles": 3515,
+          "enabled_duration_s": 7.030000000005891,
+          "nonzero_command_cycles": 3515,
+          "clipped_cycles": 3515,
+          "total_target_limited_cycles": 83,
+          "zero_measured_wrench_enabled_cycles": 23,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 324.18898107388816,
+          "effective_xy_integral_um": 97.6526140248835,
+          "requested_rotation_integral_mrad": 2.9522645866012422,
+          "effective_rotation_integral_mrad": 2.9522645866012427,
+          "actual_xy_path_um": 321.5702130370986,
+          "actual_rotation_path_mrad": 23.159452766035617,
+          "actual_xy_net_um": [
+            59.40516761673897,
+            -64.31858025638432
+          ],
+          "actual_z_net_um": 107.37610092278338,
+          "saturated_components": [
+            0,
+            57,
+            0,
+            632
+          ],
+          "peak_force_N": 0.01346092444398247,
+          "mean_abs_raw_action": [
+            0.6423642822383647,
+            0.5847497700627464,
+            0.5706537240938645,
+            0.5591647663801527
+          ],
+          "xy_command_delivery_fraction": 0.30122126205957267
+        }
+      },
+      "first_enabled_cycle": 984,
+      "first_enabled_time_s": 1.967999999999816,
+      "first_effect_cycle": 984,
+      "peak_cycle_index": 409,
+      "peak_cycle_interval_s": [
+        0.8179999999999426,
+        0.8199999999999423
+      ],
+      "peak_force_N": 0.02461225485734939,
+      "pre_enabled_peak_force_N": 0.02461225485734939,
+      "peak_before_first_enabled": true,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_F50_aligned.json.gz",
+      "sha256": "8be0f0eb8f51775200479ebc83ef058841e390f92c47a9d71c830020d985f171",
+      "provider": "F2000",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "final_F50_aligned",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 4.34000000000031,
+      "actual_cycles": 3050,
+      "reported_peak_force_N": 0.005383435284668491,
+      "stages": {
+        "INSERT": {
+          "cycles": 3050,
+          "duration_s": 6.100000000004024,
+          "task_duration_s": 4.34000000000031,
+          "enabled_cycles": 2050,
+          "enabled_duration_s": 4.099999999999803,
+          "nonzero_command_cycles": 2050,
+          "clipped_cycles": 2050,
+          "total_target_limited_cycles": 378,
+          "zero_measured_wrench_enabled_cycles": 1859,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 169.30187015968056,
+          "effective_xy_integral_um": 58.84747807254417,
+          "requested_rotation_integral_mrad": 2.0813834718048674,
+          "effective_rotation_integral_mrad": 2.0813834718048674,
+          "actual_xy_path_um": 111.54676674595514,
+          "actual_rotation_path_mrad": 2.2937814790399846,
+          "actual_xy_net_um": [
+            93.79250839206479,
+            35.28424618618111
+          ],
+          "actual_z_net_um": 3991.593284924362,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.005383435284668491,
+          "mean_abs_raw_action": [
+            0.768702637451451,
+            0.29516647815704344,
+            0.5650449674303939,
+            0.7985094988055346
+          ],
+          "xy_command_delivery_fraction": 0.3475890609893497
+        }
+      },
+      "first_enabled_cycle": 0,
+      "first_enabled_time_s": 0.0,
+      "first_effect_cycle": 0,
+      "peak_cycle_index": 1912,
+      "peak_cycle_interval_s": [
+        3.8239999999996117,
+        3.8259999999996115
+      ],
+      "peak_force_N": 0.005383435284668491,
+      "pre_enabled_peak_force_N": 0.0,
+      "peak_before_first_enabled": false,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    },
+    {
+      "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_aligned.json.gz",
+      "sha256": "f4ad917085b21225c294f9ea47f878a772a4a77c0c9109a32deac9f84bf8d36b",
+      "provider": "S2000",
+      "group": "development",
+      "case_id": "aligned",
+      "id": "final_S50_aligned",
+      "task_outcome": "FULL_SUCCESS",
+      "task_end_time_s": 4.330000000000289,
+      "actual_cycles": 3045,
+      "reported_peak_force_N": 0.0,
+      "stages": {
+        "INSERT": {
+          "cycles": 3045,
+          "duration_s": 6.090000000004003,
+          "task_duration_s": 4.330000000000289,
+          "enabled_cycles": 0,
+          "enabled_duration_s": 0.0,
+          "nonzero_command_cycles": 0,
+          "clipped_cycles": 0,
+          "total_target_limited_cycles": 0,
+          "zero_measured_wrench_enabled_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "requested_xy_integral_um": 0.0,
+          "effective_xy_integral_um": 0.0,
+          "requested_rotation_integral_mrad": 0.0,
+          "effective_rotation_integral_mrad": 0.0,
+          "actual_xy_path_um": 0.0,
+          "actual_rotation_path_mrad": 0.0,
+          "actual_xy_net_um": [
+            0.0,
+            0.0
+          ],
+          "actual_z_net_um": 3991.2000000006433,
+          "saturated_components": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "peak_force_N": 0.0,
+          "mean_abs_raw_action": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "xy_command_delivery_fraction": null
+        }
+      },
+      "first_enabled_cycle": null,
+      "first_enabled_time_s": null,
+      "first_effect_cycle": null,
+      "peak_cycle_index": 0,
+      "peak_cycle_interval_s": [
+        0.0,
+        0.0020000000000000005
+      ],
+      "peak_force_N": 0.0,
+      "pre_enabled_peak_force_N": null,
+      "peak_before_first_enabled": null,
+      "predicted_end_command_mismatch_cycles": 0,
+      "active_predicted_end_command_mismatch_cycles": 0,
+      "command_mismatch_physical_phases": {}
+    }
+  ],
+  "prefixes": [
+    {
+      "candidate_id": "dev_S0_y_neg_150",
+      "baseline_id": "dev_B2_y_neg_150",
+      "prefix_rows": 764,
+      "compared_rows": 764,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 763
+    },
+    {
+      "candidate_id": "dev_S0_y_pos_150",
+      "baseline_id": "dev_B2_y_pos_150",
+      "prefix_rows": 1616,
+      "compared_rows": 1616,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 1615
+    },
+    {
+      "candidate_id": "dev_S0_x_pos_150",
+      "baseline_id": "dev_B2_x_pos_150",
+      "prefix_rows": 986,
+      "compared_rows": 986,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 985
+    },
+    {
+      "candidate_id": "dev_S0_x_neg_150",
+      "baseline_id": "dev_B2_x_neg_150",
+      "prefix_rows": 985,
+      "compared_rows": 985,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 984
+    },
+    {
+      "candidate_id": "dev_S0_aligned",
+      "baseline_id": "dev_B2_aligned",
+      "prefix_rows": 3046,
+      "compared_rows": 3046,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": null
+    },
+    {
+      "candidate_id": "test_S2000_holdout_01",
+      "baseline_id": "test_B2_holdout_01",
+      "prefix_rows": 929,
+      "compared_rows": 929,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 928
+    },
+    {
+      "candidate_id": "test_S2000_holdout_02",
+      "baseline_id": "test_B2_holdout_02",
+      "prefix_rows": 934,
+      "compared_rows": 934,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 933
+    },
+    {
+      "candidate_id": "test_S2000_holdout_03",
+      "baseline_id": "test_B2_holdout_03",
+      "prefix_rows": 943,
+      "compared_rows": 943,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 942
+    },
+    {
+      "candidate_id": "test_S2000_holdout_04",
+      "baseline_id": "test_B2_holdout_04",
+      "prefix_rows": 943,
+      "compared_rows": 943,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 942
+    },
+    {
+      "candidate_id": "final_S50_y_neg_150",
+      "baseline_id": "dev_B2_y_neg_150",
+      "prefix_rows": 764,
+      "compared_rows": 764,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 763
+    },
+    {
+      "candidate_id": "final_S50_y_pos_150",
+      "baseline_id": "dev_B2_y_pos_150",
+      "prefix_rows": 1616,
+      "compared_rows": 1616,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 1615
+    },
+    {
+      "candidate_id": "final_S50_x_pos_150",
+      "baseline_id": "dev_B2_x_pos_150",
+      "prefix_rows": 986,
+      "compared_rows": 986,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 985
+    },
+    {
+      "candidate_id": "final_S50_x_neg_150",
+      "baseline_id": "dev_B2_x_neg_150",
+      "prefix_rows": 985,
+      "compared_rows": 985,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": 984
+    },
+    {
+      "candidate_id": "final_S50_aligned",
+      "baseline_id": "dev_B2_aligned",
+      "prefix_rows": 3046,
+      "compared_rows": 3046,
+      "trace_prefix_exact": true,
+      "first_different_row": null,
+      "first_enabled_cycle": null
+    }
+  ],
+  "time_contributions": {
+    "development": {
+      "B2_to_F2000": {
+        "savings_s": {
+          "y_neg_150": 10.543999999975426,
+          "y_pos_150": 0.23599999999944998,
+          "x_pos_150": -0.11799999999972499,
+          "x_neg_150": 0.057999999999864826,
+          "aligned": -0.010000000000021103
+        },
+        "total_saved_s": 10.709999999974995,
+        "fractions": {
+          "y_neg_150": 0.9845004668534121,
+          "y_pos_150": 0.022035480859010362,
+          "x_pos_150": -0.011017740429505181,
+          "x_neg_150": 0.005415499533146614,
+          "aligned": -0.0009337068160639076
+        }
+      },
+      "B2_to_S2000": {
+        "savings_s": {
+          "y_neg_150": 10.019999999976648,
+          "y_pos_150": 0.967999999997744,
+          "x_pos_150": 0.007999999999981355,
+          "x_neg_150": -0.07999999999981355,
+          "aligned": 0.0
+        },
+        "total_saved_s": 10.91599999997456,
+        "fractions": {
+          "y_neg_150": 0.9179186515207035,
+          "y_pos_150": 0.0886771711249542,
+          "x_pos_150": 0.0007328691828508611,
+          "x_neg_150": -0.007328691828508612,
+          "aligned": 0.0
+        }
+      },
+      "F2000_to_S2000": {
+        "savings_s": {
+          "y_neg_150": -0.5239999999987788,
+          "y_pos_150": 0.731999999998294,
+          "x_pos_150": 0.12599999999970635,
+          "x_neg_150": -0.13799999999967838,
+          "aligned": 0.010000000000021103
+        },
+        "total_saved_s": 0.2059999999995643,
+        "fractions": {
+          "y_neg_150": -2.5436893203878013,
+          "y_pos_150": 3.5533980582516613,
+          "x_pos_150": 0.6116504854367614,
+          "x_neg_150": -0.6699029126212148,
+          "aligned": 0.04854368932059346
+        }
+      }
+    },
+    "first_use_frozen_position_test": {
+      "B2_to_F2000": {
+        "savings_s": {
+          "holdout_01": -0.2159999999994966,
+          "holdout_02": -0.08199999999980889,
+          "holdout_03": 0.15799999999963177,
+          "holdout_04": -0.5659999999986809
+        },
+        "total_saved_s": -0.7059999999983546,
+        "fractions": {
+          "holdout_01": 0.3059490084985836,
+          "holdout_02": 0.11614730878186968,
+          "holdout_03": -0.2237960339943343,
+          "holdout_04": 0.8016997167138811
+        }
+      },
+      "B2_to_S2000": {
+        "savings_s": {
+          "holdout_01": -0.1699999999996038,
+          "holdout_02": -0.07799999999981821,
+          "holdout_03": 0.12799999999970169,
+          "holdout_04": -0.483999999998872
+        },
+        "total_saved_s": -0.6039999999985923,
+        "fractions": {
+          "holdout_01": 0.2814569536423841,
+          "holdout_02": 0.1291390728476821,
+          "holdout_03": -0.2119205298013245,
+          "holdout_04": 0.8013245033112583
+        }
+      },
+      "F2000_to_S2000": {
+        "savings_s": {
+          "holdout_01": 0.04599999999989279,
+          "holdout_02": 0.003999999999990678,
+          "holdout_03": -0.029999999999930083,
+          "holdout_04": 0.08199999999980889
+        },
+        "total_saved_s": 0.10199999999976228,
+        "fractions": {
+          "holdout_01": 0.45098039215686275,
+          "holdout_02": 0.0392156862745098,
+          "holdout_03": -0.29411764705882354,
+          "holdout_04": 0.803921568627451
+        }
+      }
+    }
+  },
+  "archive_count": 37,
+  "cycle_rows": 245221,
+  "source_proof": {
+    "sealed_files": {
+      "frozen_comparison_20261007": 96,
+      "v4_learning_requalification_20261006": 457
+    },
+    "production_inputs_unchanged": 1057,
+    "seals": {
+      "frozen_comparison_20261007": "8c64d623247c31e217f71e90cbb473c3d21a05c49360f10872dab4eddd36596c",
+      "v4_learning_requalification_20261006": "fd98d247484e919c3c4e099d03575b1d4d40e977a5da939efc088759c84b9ed5"
+    }
+  },
+  "new_dynamic": 0,
+  "new_gradients": 0,
+  "new_policy_calls": 0,
+  "new_published_transitions": 0,
+  "scope": "description and command-level comparisons; not new causal physics or independent performance samples",
+  "metric_definitions": {
+    "clipped_cycles": "legacy request != instantaneous zero-alternative delta; not proof of undelivered residual",
+    "total_target_limited_cycles": "post-stage-limit total target != final predicted drive command on enabled cycles",
+    "xy_command_delivery_fraction": "instantaneous limiter-delta/request integral ratio; history-dependent, not a physical transmission fraction",
+    "actual_motion": "observed path in whole phase including stop tail; not caused displacement inferred from residual"
+  }
+}

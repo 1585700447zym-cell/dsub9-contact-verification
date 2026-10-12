@@ -1,0 +1,5 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+B2 {'outcome': 'FULL_SUCCESS', 'strict_precision_success': True, 'final_xy_um': 0.0, 'network_calls': 0, 'below_5mN_insert_active_cycles': 2045, 'insert_force_gate_switches': 0}
+F50 {'outcome': 'FULL_SUCCESS', 'strict_precision_success': False, 'final_xy_um': 100.2098431263247, 'network_calls': 2050, 'below_5mN_insert_active_cycles': 2050, 'insert_force_gate_switches': 0}
+F12.5 {'outcome': 'FULL_SUCCESS', 'strict_precision_success': True, 'final_xy_um': 42.09848499883748, 'network_calls': 2045, 'below_5mN_insert_active_cycles': 2045, 'insert_force_gate_switches': 0}
+G50 {'outcome': 'FULL_SUCCESS', 'strict_precision_success': True, 'final_xy_um': 0.0, 'network_calls': 0, 'below_5mN_insert_active_cycles': 0, 'insert_force_gate_switches': 0}

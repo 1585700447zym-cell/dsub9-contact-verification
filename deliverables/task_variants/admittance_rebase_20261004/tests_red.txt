@@ -1,0 +1,53 @@
+FFFFFFF                                                                  [100%]
+================================== FAILURES ===================================
+_ test_reference_and_admittance_xy_rebase_once_preserving_physics_and_angular_state _
+tests\task_variants\test_admittance_rebase.py:28: in test_reference_and_admittance_xy_rebase_once_preserving_physics_and_angular_state
+    s,snapshot=fixture();before=copy.deepcopy(s.env);a=s.controller.admittance
+tests\task_variants\test_admittance_rebase.py:15: in fixture
+    from tools.learning.rebase_session import RebasedLoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.rebase_session'
+_ test_rebased_saturated_state_can_respond_to_positive_force_with_same_limits _
+tests\task_variants\test_admittance_rebase.py:47: in test_rebased_saturated_state_can_respond_to_positive_force_with_same_limits
+    s,snapshot=fixture();a=s.controller.admittance
+tests\task_variants\test_admittance_rebase.py:15: in fixture
+    from tools.learning.rebase_session import RebasedLoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.rebase_session'
+_ test_invalid_rebase_fails_before_either_reference_or_integrator_changes[nan_offset] _
+tests\task_variants\test_admittance_rebase.py:58: in test_invalid_rebase_fails_before_either_reference_or_integrator_changes
+    s,snapshot=fixture();a=s.controller.admittance
+tests\task_variants\test_admittance_rebase.py:15: in fixture
+    from tools.learning.rebase_session import RebasedLoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.rebase_session'
+_ test_invalid_rebase_fails_before_either_reference_or_integrator_changes[bad_velocity_shape] _
+tests\task_variants\test_admittance_rebase.py:58: in test_invalid_rebase_fails_before_either_reference_or_integrator_changes
+    s,snapshot=fixture();a=s.controller.admittance
+tests\task_variants\test_admittance_rebase.py:15: in fixture
+    from tools.learning.rebase_session import RebasedLoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.rebase_session'
+_ test_invalid_rebase_fails_before_either_reference_or_integrator_changes[guard] _
+tests\task_variants\test_admittance_rebase.py:58: in test_invalid_rebase_fails_before_either_reference_or_integrator_changes
+    s,snapshot=fixture();a=s.controller.admittance
+tests\task_variants\test_admittance_rebase.py:15: in fixture
+    from tools.learning.rebase_session import RebasedLoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.rebase_session'
+_ test_invalid_rebase_fails_before_either_reference_or_integrator_changes[exhausted_budget] _
+tests\task_variants\test_admittance_rebase.py:58: in test_invalid_rebase_fails_before_either_reference_or_integrator_changes
+    s,snapshot=fixture();a=s.controller.admittance
+tests\task_variants\test_admittance_rebase.py:15: in fixture
+    from tools.learning.rebase_session import RebasedLoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.rebase_session'
+_________ test_no_release_request_retains_integral_even_if_saturated __________
+tests\task_variants\test_admittance_rebase.py:71: in test_no_release_request_retains_integral_even_if_saturated
+    s,snapshot=fixture();s.controller.reference_release_requested=False;a=s.controller.admittance
+tests\task_variants\test_admittance_rebase.py:15: in fixture
+    from tools.learning.rebase_session import RebasedLoadReliefSession
+E   ModuleNotFoundError: No module named 'tools.learning.rebase_session'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_admittance_rebase.py::test_reference_and_admittance_xy_rebase_once_preserving_physics_and_angular_state
+FAILED tests/task_variants/test_admittance_rebase.py::test_rebased_saturated_state_can_respond_to_positive_force_with_same_limits
+FAILED tests/task_variants/test_admittance_rebase.py::test_invalid_rebase_fails_before_either_reference_or_integrator_changes[nan_offset]
+FAILED tests/task_variants/test_admittance_rebase.py::test_invalid_rebase_fails_before_either_reference_or_integrator_changes[bad_velocity_shape]
+FAILED tests/task_variants/test_admittance_rebase.py::test_invalid_rebase_fails_before_either_reference_or_integrator_changes[guard]
+FAILED tests/task_variants/test_admittance_rebase.py::test_invalid_rebase_fails_before_either_reference_or_integrator_changes[exhausted_budget]
+FAILED tests/task_variants/test_admittance_rebase.py::test_no_release_request_retains_integral_even_if_saturated
+7 failed in 2.66s

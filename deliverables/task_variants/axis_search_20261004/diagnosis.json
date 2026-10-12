@@ -1,0 +1,55 @@
+{
+  "y_neg_150": {
+    "reconstructed_commands": 2675,
+    "max_command_error_m_s": 0.0,
+    "xy_offset_freeze_error_m": 0.0,
+    "xy_velocity_freeze_error_m_s": 0.0,
+    "max_target_radius_um": 70.60282181169721,
+    "stop_tail_composition_is_null": true,
+    "frozen_progress_origins_match_archived_peaks": true,
+    "searches": [
+      {
+        "search_number": 1,
+        "start_s": 1.5259999999998646,
+        "end_s": 4.189999999999993,
+        "end_reason": "SEARCH_LATERAL_LOAD",
+        "origin_xy_um": [
+          -0.019490133793158,
+          -149.3928135799534
+        ],
+        "start_z_mm": -3.7499972798268963,
+        "end_z_mm": -3.7570856882263883,
+        "progress_origin_z_mm": -3.7431801566972336,
+        "max_target_radius_um": 70.30578975905863,
+        "max_actual_xy_excursion_um": 66.01209451036914,
+        "max_total_force_mN": 22.65785116123038
+      },
+      {
+        "search_number": 2,
+        "start_s": 4.280000000000183,
+        "end_s": 6.9660000000058515,
+        "end_reason": "SEARCH_BUDGET_EXHAUSTED",
+        "origin_xy_um": [
+          -60.00505549522112,
+          -155.81936587162954
+        ],
+        "start_z_mm": -3.7538282206745888,
+        "end_z_mm": -3.7584314794829035,
+        "progress_origin_z_mm": -3.7431801566972336,
+        "max_target_radius_um": 70.60282181169721,
+        "max_actual_xy_excursion_um": 37.20786100439804,
+        "max_total_force_mN": 22.43747147293573
+      }
+    ],
+    "advances": [],
+    "environment_events": [
+      {
+        "time_s": 6.9660000000058515,
+        "reason": "SEARCH_BUDGET_EXHAUSTED",
+        "phase": "STOPPING"
+      }
+    ],
+    "final_advance_mm": 0.24147484733262528,
+    "scope": "Independent saved-cycle algebra and geometry; no new physics"
+  }
+}

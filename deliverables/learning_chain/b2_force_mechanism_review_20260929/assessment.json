@@ -1,0 +1,1110 @@
+{
+  "kind": "offline_force_mechanism_review",
+  "physics_starts": 0,
+  "optimizer_updates": 0,
+  "model_forward_calls": 0,
+  "episodes": [
+    {
+      "id": "x_pos_100",
+      "stage": "initial",
+      "updates_at_start": 0,
+      "outcome": "FULL_SUCCESS",
+      "return_": 13.417860902502403,
+      "stop_s": 10.590000000001996,
+      "cycle_peak_from_reward_N": 0.02447429866929598,
+      "sampled_peak_N": 0.02447429866929598,
+      "initial_force_margin_pct": 2.1028053228160815,
+      "active_rows": 4905,
+      "saturation_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "last_half_second_saturation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "boundary_index": 5294,
+      "exact_boundary_label": 8.018462386746462,
+      "boundary_draws": 0,
+      "boundary_batches": 0,
+      "boundary_update_range": null,
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 3460,
+          "time_s": 6.922000000005759,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "x_neg_100",
+      "stage": "initial",
+      "updates_at_start": 0,
+      "outcome": "FULL_SUCCESS",
+      "return_": 13.66572918911351,
+      "stop_s": 8.950000000005819,
+      "cycle_peak_from_reward_N": 0.024473365242894264,
+      "sampled_peak_N": 0.024473365242894264,
+      "initial_force_margin_pct": 2.106539028422949,
+      "active_rows": 4085,
+      "saturation_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "last_half_second_saturation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "boundary_index": 4474,
+      "exact_boundary_label": 8.018462386746462,
+      "boundary_draws": 0,
+      "boundary_batches": 0,
+      "boundary_update_range": null,
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 2640,
+          "time_s": 5.282000000002298,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "y_pos_100",
+      "stage": "initial",
+      "updates_at_start": 0,
+      "outcome": "FULL_SUCCESS",
+      "return_": 13.293829199835569,
+      "stop_s": 11.525999999999815,
+      "cycle_peak_from_reward_N": 0.02447438065017325,
+      "sampled_peak_N": 0.02447438065017325,
+      "initial_force_margin_pct": 2.1024773993070123,
+      "active_rows": 5373,
+      "saturation_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "last_half_second_saturation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "boundary_index": 5762,
+      "exact_boundary_label": 8.018462386746462,
+      "boundary_draws": 0,
+      "boundary_batches": 0,
+      "boundary_update_range": null,
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 3928,
+          "time_s": 7.858000000007734,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "y_neg_100",
+      "stage": "initial",
+      "updates_at_start": 0,
+      "outcome": "FULL_SUCCESS",
+      "return_": 13.545983142909334,
+      "stop_s": 9.794000000003852,
+      "cycle_peak_from_reward_N": 0.02447449513643259,
+      "sampled_peak_N": 0.02447449513643259,
+      "initial_force_margin_pct": 2.1020194542696435,
+      "active_rows": 4507,
+      "saturation_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "last_half_second_saturation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "boundary_index": 4896,
+      "exact_boundary_label": 8.01846238674646,
+      "boundary_draws": 0,
+      "boundary_batches": 0,
+      "boundary_update_range": null,
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 3061,
+          "time_s": 6.124000000004075,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "train_00",
+      "stage": "training",
+      "updates_at_start": 0,
+      "outcome": "FULL_SUCCESS",
+      "return_": 13.42333101588014,
+      "stop_s": 10.576000000002029,
+      "cycle_peak_from_reward_N": 0.024475394868318828,
+      "sampled_peak_N": 0.024475394868318828,
+      "initial_force_margin_pct": 2.098420526724698,
+      "active_rows": 4898,
+      "saturation_fraction": [
+        0.04634544712127399,
+        0.04777460187831768,
+        0.04899959167006942,
+        0.04797876684360964
+      ],
+      "last_half_second_saturation": [
+        0.06374501992031872,
+        0.05179282868525897,
+        0.0398406374501992,
+        0.05179282868525897
+      ],
+      "boundary_index": 5287,
+      "exact_boundary_label": 8.018462386746462,
+      "boundary_draws": 7198,
+      "boundary_batches": 2368,
+      "boundary_update_range": [
+        1,
+        2500
+      ],
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 3453,
+          "time_s": 6.908000000005729,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "train_01",
+      "stage": "training",
+      "updates_at_start": 0,
+      "outcome": "TASK_FAILURE",
+      "return_": 1.664321119087502,
+      "stop_s": 8.950000000005819,
+      "cycle_peak_from_reward_N": 0.02448452479913816,
+      "sampled_peak_N": 0.02448452479913816,
+      "initial_force_margin_pct": 2.0619008034473696,
+      "active_rows": 4085,
+      "saturation_fraction": [
+        0.05091799265605875,
+        0.04871481028151775,
+        0.05091799265605875,
+        0.04773561811505508
+      ],
+      "last_half_second_saturation": [
+        0.04780876494023904,
+        0.035856573705179286,
+        0.04780876494023904,
+        0.05179282868525897
+      ],
+      "boundary_index": 4474,
+      "exact_boundary_label": -1.8063066501937979,
+      "boundary_draws": 7053,
+      "boundary_batches": 2361,
+      "boundary_update_range": [
+        1,
+        2500
+      ],
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 2640,
+          "time_s": 5.282000000002298,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "train_02",
+      "stage": "training",
+      "updates_at_start": 0,
+      "outcome": "TASK_FAILURE",
+      "return_": 1.7638227675949076,
+      "stop_s": 8.248000000007455,
+      "cycle_peak_from_reward_N": 0.024477917003653312,
+      "sampled_peak_N": 0.024477917003653312,
+      "initial_force_margin_pct": 2.08833198538676,
+      "active_rows": 3734,
+      "saturation_fraction": [
+        0.05088377075522228,
+        0.05034815211569363,
+        0.05356186395286556,
+        0.04793786823781468
+      ],
+      "last_half_second_saturation": [
+        0.04780876494023904,
+        0.04780876494023904,
+        0.07569721115537849,
+        0.05976095617529881
+      ],
+      "boundary_index": 4123,
+      "exact_boundary_label": -1.8063066501937979,
+      "boundary_draws": 7191,
+      "boundary_batches": 2349,
+      "boundary_update_range": [
+        1,
+        2500
+      ],
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 2289,
+          "time_s": 4.580000000000816,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "train_03",
+      "stage": "training",
+      "updates_at_start": 0,
+      "outcome": "TASK_FAILURE",
+      "return_": 1.547258142272651,
+      "stop_s": 9.758000000003936,
+      "cycle_peak_from_reward_N": 0.02447734793577977,
+      "sampled_peak_N": 0.02447734793577977,
+      "initial_force_margin_pct": 2.0906082568809214,
+      "active_rows": 4489,
+      "saturation_fraction": [
+        0.05257295611494765,
+        0.04655825350857652,
+        0.05235018935174872,
+        0.04477611940298507
+      ],
+      "last_half_second_saturation": [
+        0.05976095617529881,
+        0.06772908366533864,
+        0.07569721115537849,
+        0.043824701195219126
+      ],
+      "boundary_index": 4878,
+      "exact_boundary_label": -1.8063066501937979,
+      "boundary_draws": 6971,
+      "boundary_batches": 2341,
+      "boundary_update_range": [
+        1,
+        2499
+      ],
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 373,
+          "time_s": 0.7479999999999503,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 763,
+          "time_s": 1.5279999999998644,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 3044,
+          "time_s": 6.090000000004003,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "train_04",
+      "stage": "training",
+      "updates_at_start": 500,
+      "outcome": "CONTACT_GUARD",
+      "return_": -11.706027472675954,
+      "stop_s": 10.586000000002006,
+      "cycle_peak_from_reward_N": 0.02500181759836208,
+      "sampled_peak_N": 0.02500181759836208,
+      "initial_force_margin_pct": -0.007270393448322032,
+      "active_rows": 4574,
+      "saturation_fraction": [
+        0.1733712286838653,
+        0.0,
+        0.08264101442938347,
+        0.0013117621337997377
+      ],
+      "last_half_second_saturation": [
+        0.12749003984063745,
+        0.0,
+        0.00398406374501992,
+        0.0
+      ],
+      "boundary_index": 5292,
+      "exact_boundary_label": -8.369161465682458,
+      "boundary_draws": 5116,
+      "boundary_batches": 1847,
+      "boundary_update_range": [
+        501,
+        2500
+      ],
+      "recovery_used": true,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 383,
+          "time_s": 0.7679999999999481,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 773,
+          "time_s": 1.5479999999998622,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 4586,
+          "time_s": 9.174000000005297,
+          "phase": "WAIT_RECOVERY"
+        },
+        {
+          "index": 4915,
+          "time_s": 9.832000000003763,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 5061,
+          "time_s": 10.124000000003083,
+          "phase": "INSERT"
+        }
+      ],
+      "force_event": [
+        {
+          "time_s": 10.58420000000201,
+          "reason": "FORCE_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "before_force_snapshots": [
+        {
+          "time_s": 10.086000000003171,
+          "phase": "SEARCH",
+          "force_vector_N": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sampled_norm_N": 0.0,
+          "cycle_peak_from_reward_N": 0.0,
+          "reference_error_um": [
+            0.39399586998065844,
+            -0.5839629766836278,
+            -0.05170969780924489
+          ],
+          "normalized_action": [
+            -0.3595850467681885,
+            0.30060482025146484,
+            -0.83814936876297,
+            -0.24970495700836182
+          ],
+          "limited_command": [
+            -8.044937679783306e-05,
+            -0.00012357783933829934,
+            0.0004,
+            -0.00041910516156356945,
+            -0.00012482500187508178,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.486000000002239,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -0.0037425911930298876,
+            -1.936097777925328e-05,
+            -0.020664592224811505
+          ],
+          "sampled_norm_N": 0.0210007794022828,
+          "cycle_peak_from_reward_N": 0.0210007794022828,
+          "reference_error_um": [
+            31.8230731247595,
+            0.16205821292660166,
+            158.1504317800489
+          ],
+          "normalized_action": [
+            0.966249942779541,
+            0.016608238220214844,
+            0.3128136396408081,
+            -0.5928661823272705
+          ],
+          "limited_command": [
+            0.00014425688982009887,
+            2.194266136833542e-06,
+            0.001,
+            0.0011228108222246654,
+            0.0038152711335201423,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.58400000000201,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -0.005091197372847248,
+            -0.00010613540995876851,
+            -0.024475165316853533
+          ],
+          "sampled_norm_N": 0.024999305444388727,
+          "cycle_peak_from_reward_N": 0.02499930544438873,
+          "reference_error_um": [
+            45.0035531195911,
+            1.4278551948049982,
+            200.00021785801817
+          ],
+          "normalized_action": [
+            0.8849108219146729,
+            -0.006633281707763672,
+            0.4851856231689453,
+            -0.47260695695877075
+          ],
+          "limited_command": [
+            0.00013273662328720093,
+            -8.382337970331346e-06,
+            0.001,
+            0.0010342101679012426,
+            0.003278256839758746,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.586000000002006,
+          "phase": "INSERT",
+          "force_vector_N": [
+            3.230647896221953e-05,
+            -3.835920389273751e-05,
+            -8.483993875118436e-05
+          ],
+          "sampled_norm_N": 9.855431149130744e-05,
+          "cycle_peak_from_reward_N": 0.02500181759836208,
+          "reference_error_um": [
+            -0.0014143298965118385,
+            0.0003829575476990612,
+            0.002066059818887911
+          ],
+          "normalized_action": [
+            0.8977482318878174,
+            0.07060515880584717,
+            0.4670743942260742,
+            -0.3921443223953247
+          ],
+          "limited_command": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "train_05",
+      "stage": "training",
+      "updates_at_start": 1000,
+      "outcome": "TASK_FAILURE",
+      "return_": 2.276676365312311,
+      "stop_s": 4.119999999999846,
+      "cycle_peak_from_reward_N": 0.009555320642998027,
+      "sampled_peak_N": 0.009555320642998027,
+      "initial_force_margin_pct": 61.77871742800789,
+      "active_rows": 2060,
+      "saturation_fraction": [
+        0.07330097087378641,
+        0.7635922330097087,
+        0.5436893203883495,
+        0.0
+      ],
+      "last_half_second_saturation": [
+        0.0,
+        0.336,
+        0.004,
+        0.0
+      ],
+      "boundary_index": 2059,
+      "exact_boundary_label": -1.805322118547958,
+      "boundary_draws": 3357,
+      "boundary_batches": 1366,
+      "boundary_update_range": [
+        1001,
+        2500
+      ],
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "train_06",
+      "stage": "training",
+      "updates_at_start": 1500,
+      "outcome": "CONTACT_GUARD",
+      "return_": -11.655670298961425,
+      "stop_s": 10.508000000002188,
+      "cycle_peak_from_reward_N": 0.025104987121222444,
+      "sampled_peak_N": 0.025104987121222444,
+      "initial_force_margin_pct": -0.4199484848897761,
+      "active_rows": 4553,
+      "saturation_fraction": [
+        0.13837030529321326,
+        0.1240940039534373,
+        0.3722820118603119,
+        0.5635844498133099
+      ],
+      "last_half_second_saturation": [
+        0.06374501992031872,
+        0.26294820717131473,
+        0.6892430278884463,
+        0.1553784860557769
+      ],
+      "boundary_index": 5253,
+      "exact_boundary_label": -8.3691623148728,
+      "boundary_draws": 2134,
+      "boundary_batches": 908,
+      "boundary_update_range": [
+        1501,
+        2500
+      ],
+      "recovery_used": true,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 382,
+          "time_s": 0.7659999999999483,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 772,
+          "time_s": 1.5459999999998624,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 4585,
+          "time_s": 9.172000000005301,
+          "phase": "WAIT_RECOVERY"
+        },
+        {
+          "index": 4896,
+          "time_s": 9.794000000003852,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 5049,
+          "time_s": 10.100000000003138,
+          "phase": "INSERT"
+        }
+      ],
+      "force_event": [
+        {
+          "time_s": 10.507400000002189,
+          "reason": "FORCE_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "before_force_snapshots": [
+        {
+          "time_s": 10.008000000003353,
+          "phase": "SEARCH",
+          "force_vector_N": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sampled_norm_N": 0.0,
+          "cycle_peak_from_reward_N": 0.0,
+          "reference_error_um": [
+            1.6121667476160175,
+            2.140395294606513,
+            3.208780122073915
+          ],
+          "normalized_action": [
+            -0.9653664231300354,
+            0.8616771697998047,
+            -0.5765998959541321,
+            -0.9924532771110535
+          ],
+          "limited_command": [
+            -0.00018295868604217803,
+            -5.531656123884118e-05,
+            0.0004,
+            -0.0002923701528867231,
+            -0.0004099572868099219,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.40800000000242,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -0.0004251729035697454,
+            -0.0020336513259735945,
+            -0.01629030817986702
+          ],
+          "sampled_norm_N": 0.016422260815996268,
+          "cycle_peak_from_reward_N": 0.016422260815996268,
+          "reference_error_um": [
+            5.103880309026245,
+            18.023392402745213,
+            118.53489019192885
+          ],
+          "normalized_action": [
+            -0.010792195796966553,
+            0.8077405691146851,
+            -0.9692844748497009,
+            0.957585334777832
+          ],
+          "limited_command": [
+            -1.684907340706134e-05,
+            1.4851659683790774e-05,
+            0.001,
+            -0.0024369580242485675,
+            0.00042556557391113724,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.506000000002192,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -0.00011437710545507759,
+            -0.0016927597888498542,
+            -0.024485109348500546
+          ],
+          "sampled_norm_N": 0.024543819947861173,
+          "cycle_peak_from_reward_N": 0.024543819947861173,
+          "reference_error_um": [
+            2.6040075668176734,
+            19.662227525798293,
+            199.99658274285704
+          ],
+          "normalized_action": [
+            -0.15998846292495728,
+            -0.17204833030700684,
+            -0.9976679682731628,
+            0.933280348777771
+          ],
+          "limited_command": [
+            -3.253993841125345e-05,
+            -5.515687666506381e-05,
+            0.001,
+            -0.00378771325666306,
+            0.00035878867271410135,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.508000000002188,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -3.6458679104316114e-10,
+            -3.804580127922708e-05,
+            -3.804522700001647e-05
+          ],
+          "sampled_norm_N": 5.38044820864781e-05,
+          "cycle_peak_from_reward_N": 0.025104987121222444,
+          "reference_error_um": [
+            -3.330833994578432e-05,
+            0.01953132689434811,
+            -0.008321788672223385
+          ],
+          "normalized_action": [
+            -0.30017346143722534,
+            0.34331440925598145,
+            -0.9700837135314941,
+            0.8885339498519897
+          ],
+          "limited_command": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "train_07",
+      "stage": "training",
+      "updates_at_start": 2000,
+      "outcome": "TASK_FAILURE",
+      "return_": 2.3178234543182774,
+      "stop_s": 4.10799999999982,
+      "cycle_peak_from_reward_N": 0.007710226100655725,
+      "sampled_peak_N": 0.007710226100655725,
+      "initial_force_margin_pct": 69.1590955973771,
+      "active_rows": 2054,
+      "saturation_fraction": [
+        0.06037000973709834,
+        0.39727361246348586,
+        0.13875365141187926,
+        0.24634858812074
+      ],
+      "last_half_second_saturation": [
+        0.0,
+        0.0,
+        0.0,
+        0.016
+      ],
+      "boundary_index": 2053,
+      "exact_boundary_label": -1.80587274892071,
+      "boundary_draws": 980,
+      "boundary_batches": 436,
+      "boundary_update_range": [
+        2001,
+        2500
+      ],
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        }
+      ]
+    },
+    {
+      "id": "train_08",
+      "stage": "training",
+      "updates_at_start": 2500,
+      "outcome": "CONTACT_GUARD",
+      "return_": -8.075475266563211,
+      "stop_s": 10.094000000003152,
+      "cycle_peak_from_reward_N": 0.025019905150191542,
+      "sampled_peak_N": 0.025019905150191542,
+      "initial_force_margin_pct": -0.07962060076616151,
+      "active_rows": 4657,
+      "saturation_fraction": [
+        0.3014816405411209,
+        0.34571612626154175,
+        0.24049817479063776,
+        0.350869658578484
+      ],
+      "last_half_second_saturation": [
+        0.0,
+        0.0,
+        0.7529880478087649,
+        0.9322709163346613
+      ],
+      "boundary_index": 5046,
+      "exact_boundary_label": -8.358676499183241,
+      "boundary_draws": 0,
+      "boundary_batches": 0,
+      "boundary_update_range": null,
+      "recovery_used": false,
+      "phase_transitions": [
+        {
+          "index": 0,
+          "time_s": 0.0020000000000000005,
+          "phase": "INSERT"
+        },
+        {
+          "index": 387,
+          "time_s": 0.7759999999999472,
+          "phase": "UNLOAD"
+        },
+        {
+          "index": 777,
+          "time_s": 1.5559999999998613,
+          "phase": "SEARCH"
+        },
+        {
+          "index": 3673,
+          "time_s": 7.348000000006658,
+          "phase": "INSERT"
+        }
+      ],
+      "force_event": [
+        {
+          "time_s": 10.092400000003156,
+          "reason": "FORCE_LIMIT",
+          "phase": "STOPPING"
+        }
+      ],
+      "before_force_snapshots": [
+        {
+          "time_s": 9.594000000004318,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -0.004030290209585524,
+            -0.011263919555666864,
+            -0.011963240486173273
+          ],
+          "sampled_norm_N": 0.016918576945477142,
+          "cycle_peak_from_reward_N": 0.01716463755096868,
+          "reference_error_um": [
+            32.55915804822378,
+            88.58244191746157,
+            94.26170409388476
+          ],
+          "normalized_action": [
+            0.8730967044830322,
+            0.8115880489349365,
+            -0.973777711391449,
+            -0.9848396182060242
+          ],
+          "limited_command": [
+            -4.545679409021446e-05,
+            0.00012173820734024047,
+            0.001,
+            0.0003068949249964157,
+            -0.00035645986111574387,
+            0.0
+          ]
+        },
+        {
+          "time_s": 9.994000000003386,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -0.0034599568914863723,
+            -0.016346520072592553,
+            -0.016709938875064435
+          ],
+          "sampled_norm_N": 0.02363053273591192,
+          "cycle_peak_from_reward_N": 0.02363053273591192,
+          "reference_error_um": [
+            30.434886568089667,
+            133.1767492679345,
+            136.4359264993953
+          ],
+          "normalized_action": [
+            0.8957140445709229,
+            0.7797513008117676,
+            -0.9814057946205139,
+            -0.994218111038208
+          ],
+          "limited_command": [
+            -3.818970578189118e-05,
+            0.00011696269512176513,
+            0.001,
+            0.00038329207925177054,
+            -0.0006864161449273085,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.092000000003157,
+          "phase": "INSERT",
+          "force_vector_N": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "sampled_norm_N": 0.0,
+          "cycle_peak_from_reward_N": 0.024683270866408195,
+          "reference_error_um": [
+            29.63901275905511,
+            144.5419613191569,
+            147.3787195697254
+          ],
+          "normalized_action": [
+            0.9290498495101929,
+            0.7960902452468872,
+            -0.9823033213615417,
+            -0.995669424533844
+          ],
+          "limited_command": [
+            -2.7288130256492374e-05,
+            0.00011941353678703307,
+            0.001,
+            0.0003480357708859291,
+            -0.0006191098223247656,
+            0.0
+          ]
+        },
+        {
+          "time_s": 10.094000000003152,
+          "phase": "INSERT",
+          "force_vector_N": [
+            -4.660174470284007e-05,
+            -0.00023905038202521624,
+            -0.00024357970344681946
+          ],
+          "sampled_norm_N": 0.00034445301520960884,
+          "cycle_peak_from_reward_N": 0.025019905150191542,
+          "reference_error_um": [
+            0.012306761214147014,
+            -0.11042043495355924,
+            -1.4179985189104356
+          ],
+          "normalized_action": [
+            0.8033620119094849,
+            0.6593409776687622,
+            -0.962354838848114,
+            -0.9910545349121094
+          ],
+          "limited_command": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "inputs_sha256": {
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/ledger.json": "ef467cf9714140a534d6934e30554086fa6302016b2549aa2d8ac12698b463fd",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training/updates.json": "cece9119b6924eb15e56cfcba60e77e60c0a2d81b44bde943c9eb568abb2f5f1",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/initial/episodes/x_pos_100/episode.json.gz": "a332016dfb0f02ff0676fa53e814da97f432c33992592eff970ab46627c067b0",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/initial/episodes/x_neg_100/episode.json.gz": "5c57b848a6015ac9d95196a3d6d04d03f2a7f1a8c64666ba1b822fc170258b83",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/initial/episodes/y_pos_100/episode.json.gz": "d7cd086175f966d61af89b76b6c592e28776c3aa47952b842b0da2ee0c525933",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/initial/episodes/y_neg_100/episode.json.gz": "b81213d4a38b77185ac9e573b51aa43f7d7954b48cc5afcde7d76c14129760a3",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_00/episode.json.gz": "3ca3fa4613ab5d421a9bf7dfd3f0c0c7bc1f17638d40844b5bbd63216d7fcb79",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_01/episode.json.gz": "9df8a492e8173c39dd81ded3a9428d60e7ef39082df9628ecac279064134f24a",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_02/episode.json.gz": "ea92d040563e5dd97afd9da1e7c56c319303e53225d3d390e39006f10813c91a",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_03/episode.json.gz": "f86383814e809a098ac013cbc0692f765d54d0eb1e318df1d7a7711eabaa8635",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_04/episode.json.gz": "0a41a4c81a98b0e673b31bab20ae3c1d9f73951fbe48f2830745cd8da66cdf51",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_05/episode.json.gz": "aa385c2f8284393b17625c3a006458efff7bece9805c1cd875782a94aceedf9d",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_06/episode.json.gz": "f6c174477e902acef66ecfe9ee16816f47bf883ce20f6c6b926baf0528fa71df",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_07/episode.json.gz": "708380e28823831ce0162c59c2db626217dffcf5cc76485e827617bbf6d5135b",
+    "deliverables/learning_chain/b2_atomic_repaired_cycle_20260929/run/training_episodes/train_08/episode.json.gz": "eea2728a45252170156d7a436e80cf33f988d0d87381eed0dd42f26f2003f590"
+  },
+  "conclusions": {
+    "real_force_limit": true,
+    "failure_boundary_samples_used": true,
+    "recovery_only_explanation_rejected": true,
+    "unique_learning_cause_established": false,
+    "code_bug_established": false,
+    "policy_improvement_established": false
+  }
+}

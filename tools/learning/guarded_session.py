@@ -5,11 +5,12 @@ from .action import normalized_action
 
 
 class CandidateEpisodeSession(EpisodeSession):
-    def __init__(self, *, environment, controller_factory=None):
+    def __init__(self, *, environment, controller_factory=None, finish_criteria=None, geometry_checker=None):
         from .guarded_environment import LearningEnvironment
         if not isinstance(environment, LearningEnvironment):
             raise TypeError('Candidate session requires the explicit candidate environment')
-        super().__init__(environment=environment, controller_factory=controller_factory)
+        super().__init__(environment=environment, controller_factory=controller_factory,
+                         finish_criteria=finish_criteria, geometry_checker=geometry_checker)
 
     def _post_task_cycle(self, row):
         facts = self.env.guard_facts

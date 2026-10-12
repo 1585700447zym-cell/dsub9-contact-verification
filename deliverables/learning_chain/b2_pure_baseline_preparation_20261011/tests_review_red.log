@@ -1,0 +1,69 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_actual_tilt_mismatch_rejected_despite_same_case_name (__main__.ContractTests.test_actual_tilt_mismatch_rejected_despite_same_case_name) ... ok
+test_duplicate_reordered_case_rejected (__main__.ContractTests.test_duplicate_reordered_case_rejected) ... ok
+test_guard_or_unstopped_closes_package (__main__.ContractTests.test_guard_or_unstopped_closes_package) ... ok
+test_incomplete_attempt_cannot_be_retried (__main__.ContractTests.test_incomplete_attempt_cannot_be_retried) ... ok
+test_invalid_outcome_is_not_reused (__main__.ContractTests.test_invalid_outcome_is_not_reused) ... ok
+test_known_development_archive_does_not_upgrade_scope (__main__.ContractTests.test_known_development_archive_does_not_upgrade_scope) ... ok
+test_metric_disagrees_with_accepted_score_rejected (__main__.ContractTests.test_metric_disagrees_with_accepted_score_rejected) ... ok
+test_old_training_grant_rejected (__main__.ContractTests.test_old_training_grant_rejected) ... ok
+test_only_exact_new_zero_learning_limits_allowed (__main__.ContractTests.test_only_exact_new_zero_learning_limits_allowed) ... ok
+test_ordinary_failure_consumes_case_and_allows_next (__main__.ContractTests.test_ordinary_failure_consumes_case_and_allows_next) ... ok
+test_simulation_case_does_not_match_registered_pose_rejected (__main__.ContractTests.test_simulation_case_does_not_match_registered_pose_rejected) ... ok
+test_task_key_mismatch_rejected (__main__.ContractTests.test_task_key_mismatch_rejected) ... ok
+test_unapproved_template_rejected (__main__.ContractTests.test_unapproved_template_rejected) ... ok
+test_updates_during_frozen_evaluation_rejected (__main__.ContractTests.test_updates_during_frozen_evaluation_rejected) ... ok
+test_STOP_prevents_first_cycle (__main__.EntryTests.test_STOP_prevents_first_cycle) ... ok
+test_cycle_ceiling_stops_before_an_extra_cycle (__main__.EntryTests.test_cycle_ceiling_stops_before_an_extra_cycle) ... ok
+test_failed_loop_keeps_all_partial_evidence (__main__.EntryTests.test_failed_loop_keeps_all_partial_evidence) ... ok
+test_nonfinite_zero_action_evidence_rejected (__main__.EntryTests.test_nonfinite_zero_action_evidence_rejected) ... ok
+test_nonzero_residual_cannot_be_labelled_pure_B2 (__main__.EntryTests.test_nonzero_residual_cannot_be_labelled_pure_B2) ... ok
+test_reference_progress_receives_pre_action_snapshot (__main__.EntryTests.test_reference_progress_receives_pre_action_snapshot) ... ok
+test_unauthorized_CLI_rejects_before_any_scientific_import (__main__.EntryTests.test_unauthorized_CLI_rejects_before_any_scientific_import) ... ok
+test_wall_deadline_prevents_cycle (__main__.EntryTests.test_wall_deadline_prevents_cycle) ... ok
+test_zero_residual_in_every_phase_preserves_baseline_commands (__main__.EntryTests.test_zero_residual_in_every_phase_preserves_baseline_commands) ... ok
+test_distinct_venv_worker_is_owned_before_GO (__main__.ReviewRegressionTests.test_distinct_venv_worker_is_owned_before_GO) ... ERROR
+test_error_receipt_is_preserved_in_claimed_cost_ledger (__main__.ReviewRegressionTests.test_error_receipt_is_preserved_in_claimed_cost_ledger) ... ERROR
+test_runtime_metadata_drift_rejected_without_numerical_import (__main__.ReviewRegressionTests.test_runtime_metadata_drift_rejected_without_numerical_import) ... ERROR
+test_unregistered_numerical_source_rejected (__main__.ReviewRegressionTests.test_unregistered_numerical_source_rejected) ... ERROR
+
+======================================================================
+ERROR: test_distinct_venv_worker_is_owned_before_GO (__main__.ReviewRegressionTests.test_distinct_venv_worker_is_owned_before_GO)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 277, in test_distinct_venv_worker_is_owned_before_GO
+    result = entry.supervise(['qualified-launcher.exe'], base, 10,
+             ^^^^^^^^^^^^^^^
+AttributeError: module 'baseline_entry' has no attribute 'supervise'
+
+======================================================================
+ERROR: test_error_receipt_is_preserved_in_claimed_cost_ledger (__main__.ReviewRegressionTests.test_error_receipt_is_preserved_in_claimed_cost_ledger)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 290, in test_error_receipt_is_preserved_in_claimed_cost_ledger
+    entry.collect_receipt(ledger, run)
+    ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'baseline_entry' has no attribute 'collect_receipt'
+
+======================================================================
+ERROR: test_runtime_metadata_drift_rejected_without_numerical_import (__main__.ReviewRegressionTests.test_runtime_metadata_drift_rejected_without_numerical_import)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 302, in test_runtime_metadata_drift_rejected_without_numerical_import
+    c.check_runtime(rt, check_interpreter=False)
+    ^^^^^^^^^^^^^^^
+AttributeError: module 'contract' has no attribute 'check_runtime'
+
+======================================================================
+ERROR: test_unregistered_numerical_source_rejected (__main__.ReviewRegressionTests.test_unregistered_numerical_source_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 312, in test_unregistered_numerical_source_rejected
+    c.check_runtime(rt, check_interpreter=False)
+    ^^^^^^^^^^^^^^^
+AttributeError: module 'contract' has no attribute 'check_runtime'
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.304s
+
+FAILED (errors=4)

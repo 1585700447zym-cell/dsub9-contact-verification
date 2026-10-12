@@ -1,0 +1,266 @@
+{
+  "stage_id": "B2-SCOPE-03",
+  "user_date": "2026-10-08",
+  "status": "CLOSED_AUDIT_ERROR",
+  "grant_sha256": "ccf21cb187103a504009cfa4ea9a3a73cc8b4b61869345e269321430847a698a",
+  "binding_sha256": "9c15895cf6c8bac905715275c65dead6a8a48be617a3c197839077c7acf673c6",
+  "bound_files_verified": 2167,
+  "actual": {
+    "engine_processes_with_runtime_proof": 10,
+    "case_environment_instances": 10,
+    "resets": 10,
+    "static_initializations": 9,
+    "dynamic_attempts": 1,
+    "control_cycles": 3045,
+    "physical_substeps": 30450,
+    "learner_constructions": 0,
+    "tensor_reads": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "replay_publications": 0
+  },
+  "cumulative_dynamic_before": 208,
+  "cumulative_dynamic_after": 209,
+  "unused_static_closed": 0,
+  "unused_dynamic_closed": 15,
+  "retry_allowed": false,
+  "original_ledger_status": "CLOSED_SUPERVISOR_ERROR",
+  "original_ledger_sha256": "dbd71ff12c965fe043777bafcb9361a092a536c4a842b0c7e7f28d7f20706b0d",
+  "original_ledger_step_bounds": [
+    0,
+    145000
+  ],
+  "reconciled_exact_substeps": 30450,
+  "exact_count_basis": "Complete archived raw, native-step counter, guard checked_substeps and 3045*10 agree; original conservative ledger is untouched.",
+  "registered_dynamic_audit_passes": 0,
+  "registered_static_audit_passes": 9,
+  "diagnostic_only_audit_passes": 1,
+  "accepted_dynamic_scope": false,
+  "original_assessment_route": "NO_SCOPE_QUALIFICATION",
+  "process_exit_confirmed": true,
+  "whole_supervised_wall_seconds": 260.7592978000175,
+  "deadline_hit": false,
+  "automatic_tracking": "PAUSED",
+  "training_admitted": false,
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "independent_tests": 0,
+  "old_budgets_reopened": false,
+  "actual_attempts": [
+    {
+      "id": "init_zero_sentinel",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "3fa8c5cabc0c18c2502efd6cfd85ee6a45813db61c11c6dda256d70be4628049",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 8.975299300043844,
+      "supervisor_wall_seconds": 12.403772500052582,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P01",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "33f12ba881060b238f4a115f3a386e5f5f55d146a306d02594345b1802fc57bd",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 7.949275899969507,
+      "supervisor_wall_seconds": 10.849224200006574,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P02",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "c0ae4f66e1938e89cca0c6d99a4a913cb650522ce9bcd783af8001cdb4579646",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 7.5866299999761395,
+      "supervisor_wall_seconds": 10.091212300001644,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P03",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "4a3359ac46de13086b343a5b988a75c967a75ba09ecd481d6d2655a920d582c6",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 7.488247999979649,
+      "supervisor_wall_seconds": 9.991431000002194,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_P04",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "865caf7a083c4c40d19b6b712e58d5459163a8e85b92769273e6c36edef929f2",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 7.100450700032525,
+      "supervisor_wall_seconds": 9.600759399996605,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J01",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "ef94798783bbc70fca0ab1a13531bc19f3ea48d1b127f2693a81415a3246ddea",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 7.105138699989766,
+      "supervisor_wall_seconds": 9.637470999965444,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J02",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "823f3cc9c61dd8d3fe5ef0114e6de0e684c532bc69f7760071dd1834572c05b6",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 6.990747999981977,
+      "supervisor_wall_seconds": 9.483714600035455,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J03",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "ad0fbe0dbbdf1eff461c60b4a3ef7c8f57df27955358d147e2661ad1c19ab7ad",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 7.047930499946233,
+      "supervisor_wall_seconds": 9.53473870002199,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "init_J04",
+      "kind": "static",
+      "registered_status": "finished",
+      "registered_audit_passed": true,
+      "archive_sha256": "dcf22f6423cc8ddf90f9aacff3d1a9f3d418dc9cf1c41edecb4794970b28c610",
+      "cycles": 0,
+      "physical_substeps": 0,
+      "wall_seconds": 7.4275784000055864,
+      "supervisor_wall_seconds": 9.988618200004566,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "initialization_valid": true,
+        "simulation_valid": true
+      }
+    },
+    {
+      "id": "P01_zero",
+      "kind": "dynamic",
+      "registered_status": "error",
+      "registered_audit_passed": false,
+      "archive_sha256": "38c98530f446de718a596156c78eae76e67aceb646d5d3978dda333fad865a6f",
+      "cycles": 3045,
+      "physical_substeps": 30450,
+      "wall_seconds": 146.9689642000012,
+      "supervisor_wall_seconds": 166.10037719999673,
+      "process_exit_confirmed": true,
+      "raw_reported_outcome": {
+        "guard_facts": {
+          "checked_substeps": 30450,
+          "contact_reasons": [],
+          "invalid_reasons": [],
+          "max_rotation_from_start_rad": 0.0,
+          "motion_reasons": [],
+          "simulation_valid": true
+        },
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      }
+    }
+  ],
+  "evidence_copies": {
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_preflight_20261008\\claims\\ccf21cb187103a504009cfa4ea9a3a73cc8b4b61869345e269321430847a698a\\closed.json": {
+      "copy": "execution_evidence/claim/closed.json",
+      "sha256": "abb91c6c09f4a86c97ff1a35a0677b18a8e269ac87016648a254402935fd0c46"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_preflight_20261008\\claims\\ccf21cb187103a504009cfa4ea9a3a73cc8b4b61869345e269321430847a698a\\identity.json": {
+      "copy": "execution_evidence/claim/identity.json",
+      "sha256": "74c40d1ed16403b56415a7c3ad0408c105f6170bc4c048b78d4ab7a2152f7e07"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\19fef991af4744b5b83ad90ca5ed0fbe\\outer.go.json": {
+      "copy": "execution_evidence/outer_supervisor/outer.go.json",
+      "sha256": "cea5ba67902c428f53b4038d1f6903247de5d877f2fc60ea5cfbef6a4321fa4c"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\19fef991af4744b5b83ad90ca5ed0fbe\\outer.log": {
+      "copy": "execution_evidence/outer_supervisor/outer.log",
+      "sha256": "4033c7975362b264a8c2780585819bfd9cdbbcc3594ab267719745364d9e65d4"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\19fef991af4744b5b83ad90ca5ed0fbe\\outer.ready.json": {
+      "copy": "execution_evidence/outer_supervisor/outer.ready.json",
+      "sha256": "09988617a0dfee5de7e9a4ed8b505739d0960ac4a0e0cb0ad546955da9cccf10"
+    },
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\b2_scope_supervisors\\19fef991af4744b5b83ad90ca5ed0fbe\\outer.supervisor.json": {
+      "copy": "execution_evidence/outer_supervisor/outer.supervisor.json",
+      "sha256": "18e8d1530f135254d2f6881c33134e8df56377d6e2ebbe1e837e14d02f83bcb6"
+    }
+  },
+  "consumed_claim_directories": [
+    "P01_zero.consumed",
+    "init_J01.consumed",
+    "init_J02.consumed",
+    "init_J03.consumed",
+    "init_J04.consumed",
+    "init_P01.consumed",
+    "init_P02.consumed",
+    "init_P03.consumed",
+    "init_P04.consumed",
+    "init_zero_sentinel.consumed"
+  ],
+  "next_route": "OFFLINE_COMPARATOR_REPAIR_AND_REAL_ARCHIVE_REGRESSION_BEFORE_ANY_FRESH_PHYSICAL_REGISTRATION"
+}

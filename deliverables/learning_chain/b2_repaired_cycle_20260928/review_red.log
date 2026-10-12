@@ -1,0 +1,34 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+__________ test_manifest_cannot_reauthorize_its_own_modified_payload __________
+tests\learning\test_repaired_cycle.py:58: in test_manifest_cannot_reauthorize_its_own_modified_payload
+    assert api().pinned_manifest(path,pin)=={'file':'old digest'}
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'pinned_manifest'
+__ test_native_repair_cannot_requalify_changed_learning_dependencies[python] __
+tests\learning\test_repaired_cycle.py:68: in test_native_repair_cannot_requalify_changed_learning_dependencies
+    api().require_learning_runtime_unchanged(parent,current)
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_learning_runtime_unchanged'
+_ test_native_repair_cannot_requalify_changed_learning_dependencies[versions] _
+tests\learning\test_repaired_cycle.py:68: in test_native_repair_cannot_requalify_changed_learning_dependencies
+    api().require_learning_runtime_unchanged(parent,current)
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_learning_runtime_unchanged'
+_ test_native_repair_cannot_requalify_changed_learning_dependencies[torch_dll_sha256] _
+tests\learning\test_repaired_cycle.py:68: in test_native_repair_cannot_requalify_changed_learning_dependencies
+    api().require_learning_runtime_unchanged(parent,current)
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_learning_runtime_unchanged'
+_ test_native_repair_cannot_requalify_changed_learning_dependencies[lock_sha256] _
+tests\learning\test_repaired_cycle.py:68: in test_native_repair_cannot_requalify_changed_learning_dependencies
+    api().require_learning_runtime_unchanged(parent,current)
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_learning_runtime_unchanged'
+_ test_native_repair_cannot_requalify_changed_learning_dependencies[executable] _
+tests\learning\test_repaired_cycle.py:68: in test_native_repair_cannot_requalify_changed_learning_dependencies
+    api().require_learning_runtime_unchanged(parent,current)
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_learning_runtime_unchanged'
+=========================== short test summary info ===========================
+FAILED tests/learning/test_repaired_cycle.py::test_manifest_cannot_reauthorize_its_own_modified_payload
+FAILED tests/learning/test_repaired_cycle.py::test_native_repair_cannot_requalify_changed_learning_dependencies[python]
+FAILED tests/learning/test_repaired_cycle.py::test_native_repair_cannot_requalify_changed_learning_dependencies[versions]
+FAILED tests/learning/test_repaired_cycle.py::test_native_repair_cannot_requalify_changed_learning_dependencies[torch_dll_sha256]
+FAILED tests/learning/test_repaired_cycle.py::test_native_repair_cannot_requalify_changed_learning_dependencies[lock_sha256]
+FAILED tests/learning/test_repaired_cycle.py::test_native_repair_cannot_requalify_changed_learning_dependencies[executable]
+6 failed, 5 deselected in 1.77s

@@ -1,0 +1,39 @@
+{
+  "status": "verified_stopped_evidence_not_B2_acceptance",
+  "audit_inputs_verified": 39,
+  "source_files_verified": 901,
+  "qualification_evidence_verified": 15,
+  "old_files_verified": 126,
+  "figure_outputs_verified": 6,
+  "all_stop_samples_finite": true,
+  "stop_sample_counts": {
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/run/baseline/episodes/x_neg_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/run/baseline/episodes/x_pos_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/run/baseline/episodes/y_neg_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_repaired_cycle_v2_20260928/run/baseline/episodes/y_pos_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/x_neg_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/x_pos_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/y_neg_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/initial/episodes/y_pos_100/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/training_episodes/train_00/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/training_episodes/train_01/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/training_episodes/train_02/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/training_episodes/train_03/episode.json.gz": 10000,
+    "deliverables/learning_chain/b2_fixed_rotation_cycle_20260928/run/training_episodes/train_04/episode.json.gz": 10554
+  },
+  "missing_final_stages_still_absent": true,
+  "additional_physical_starts": 0,
+  "additional_policy_inferences": 0,
+  "additional_state_restorations": 0,
+  "additional_optimizer_calls": 0,
+  "saved_report_sha256": {
+    "README.md": "2f28a0fc6406b58ce32fbbcf5f20e6477676651daf08176c00f83ba963504838",
+    "实施记录.md": "aa69d6097fc605746df5843e18db1f1532a82535226f1986527d55d311c6aab2",
+    "停止结果说明.md": "b7b2117427061d824ab361f19c3434c8b5353562066141f6c97c13e45e2bd3c9",
+    "audit_stopped_run.py": "ed31538f6f32813c24a221d23c225cb1e5c3288f0f2fbdee7e24adf2eced5002",
+    "verify_stopped_result.py": "dd0061aff5c8907c60ecd4a5c09044ff6df8cb2a7cccad1b445c0a9f96c95853",
+    "assessment.json": "0599cf48819b76f5847f17a618867f75cb724a7a6e7f4f4955416814a08f0170",
+    "figures/manifest.json": "19561c79c70df451f729f7523427ba3c284ee8dc5b7d03536a2963c05d71ad4b",
+    "plot_stopped_run.py": "b5691043e9c864d6328953bd1459871dae988dbd88747eadbc1c45a47da30ead"
+  }
+}

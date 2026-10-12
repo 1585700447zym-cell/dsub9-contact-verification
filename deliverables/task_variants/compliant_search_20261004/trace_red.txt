@@ -1,0 +1,9 @@
+...............F                                                         [100%]
+================================== FAILURES ===================================
+__________ test_trace_logs_only_active_composition_and_copies_arrays __________
+tests\task_variants\test_compliant_search.py:111: in test_trace_logs_only_active_composition_and_copies_arrays
+    assert s._trace_row({'phase':'STOPPING'})['search_composition'] is None
+E   AssertionError: assert {'correction_xy_m': [0.0, 0.0], 'feedforward_xy_m_s': [0.00015, 0.0], 'raw_target_xy_m': [0.0, 0.0], 'target_xy_m': [0.0, 0.0], ...} is None
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_compliant_search.py::test_trace_logs_only_active_composition_and_copies_arrays
+1 failed, 15 passed in 0.82s

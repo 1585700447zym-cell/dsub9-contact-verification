@@ -1,0 +1,33 @@
+{
+  "status": "CANDIDATE_NOT_ADMITTED",
+  "static_passed": true,
+  "strict_static_passed": true,
+  "stop_passes": [
+    true,
+    false
+  ],
+  "comparison": {
+    "common_time_s": 2.4299999999997652,
+    "common_samples": 1216,
+    "unmatched_samples": [
+      4610,
+      1
+    ],
+    "end_position_difference_um": 0.0027608560226066925,
+    "maximum_common_path_difference_um": 0.10558182592492263,
+    "end_angle_difference_deg": 1.0526028440638417e-05,
+    "full_episode_peak_force_relative_difference": 1.3291508029672538e-06,
+    "same_event_reasons": false,
+    "passed": false
+  },
+  "training_admitted": false,
+  "source_sha256": {
+    "tools/reporting/report_contact_candidate.py": "7fdcbe02abfb5f7f4d7da560da927f42d43e1b1ebe55f02fc36a6cdbee99e146",
+    "deliverables/contact_consistency_repair/时间步判读说明.md": "1f08f55694560112e6e008fa3b228a4f6cd2b3345a07e75fcfc93e3349c0b40a",
+    "deliverables/contact_consistency_repair/strict_static_audit.json": "c57de795e6d806cd89effbad3b7c742a138151d7e230e8c8ad2d83f528147c28",
+    "deliverables/contact_consistency_repair/核心依赖追溯核查.json": "197f285d50c89e5fe96d0549efcc08f78e1ca619ecaa03359c873d1131b39f92",
+    "deliverables/contact_consistency_repair/static_gate_v1/results.json": "40b4d5338c3db293ebf1b8a22800255d6800274883b84b1f227f859e14312d71",
+    "deliverables/contact_consistency_repair/stop_dt0p2_v1/results_index.json": "68db547177eb86f018ccf8fafec9e1062145f68c31bb028a04018f4d593759e5",
+    "deliverables/contact_consistency_repair/stop_dt0p1_v1/results_index.json": "6450b8616c04b9ce78e46ab993aa6ee149333ed91ec626d4924eba214d1ee6ba"
+  }
+}

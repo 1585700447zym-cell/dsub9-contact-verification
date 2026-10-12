@@ -1,0 +1,5 @@
+Windows fatal exception: access violation
+
+Current thread 0x00008338 (most recent call first):
+  File "D:\dsub9\u9879\u76ee\u8ba1\u5212\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_native_crash_20260928\replay.py", line 22 in worker
+  File "D:\dsub9\u9879\u76ee\u8ba1\u5212\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_native_crash_20260928\replay.py", line 31 in <module>

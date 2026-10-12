@@ -1,0 +1,17 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_changed_proposal_is_rejected_before_any_target_copy (__main__.PublicationGuardTests.test_changed_proposal_is_rejected_before_any_target_copy) ... FAIL
+Published five current documents; six snapshots preserved.
+
+======================================================================
+FAIL: test_changed_proposal_is_rejected_before_any_target_copy (__main__.PublicationGuardTests.test_changed_proposal_is_rejected_before_any_target_copy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_publish.py", line 23, in test_changed_proposal_is_rejected_before_any_target_copy
+    with self.assertRaises(PermissionError):p.publish()
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: PermissionError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.049s
+
+FAILED (failures=1)

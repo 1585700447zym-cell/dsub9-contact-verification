@@ -1,0 +1,23 @@
+{
+  "execution_complete": true,
+  "controlled_stop": false,
+  "returncode": 0,
+  "retry_allowed": false,
+  "b2_complete": false,
+  "accounting": {
+    "previous_dynamic": 60,
+    "new_dynamic_starts": 8,
+    "cumulative_dynamic": 68,
+    "cumulative_dynamic_cap": 68,
+    "unused_new_dynamic": 0,
+    "control_cycles_reserved": 104000,
+    "control_cycles_confirmed": 49186,
+    "random_draw_vectors_confirmed": 19177,
+    "training_batches": 0,
+    "model_forwards": 0,
+    "replay_committed": 0,
+    "independent_test": 0,
+    "old_unused_consumed": 0,
+    "status": "complete"
+  }
+}

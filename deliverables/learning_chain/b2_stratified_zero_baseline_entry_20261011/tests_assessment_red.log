@@ -1,0 +1,88 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_clearance_negative_infinity_retains_no_overlap_status (__main__.AssessmentTests.test_clearance_negative_infinity_retains_no_overlap_status) ... FAIL
+test_complete25_mean_and_valid_failure_penalty (__main__.AssessmentTests.test_complete25_mean_and_valid_failure_penalty) ... FAIL
+test_duplicate_unknown_cases_and_nan_time_rejected (__main__.AssessmentTests.test_duplicate_unknown_cases_and_nan_time_rejected) ... FAIL
+test_guard_does_not_receive_ordinary26s_penalty (__main__.AssessmentTests.test_guard_does_not_receive_ordinary26s_penalty) ... FAIL
+test_missing_invalid_unstopped_and_guard_never_make_complete_mean (__main__.AssessmentTests.test_missing_invalid_unstopped_and_guard_never_make_complete_mean) ... FAIL
+test_old_four_aliases_preserve_original_case_and_fingerprint (__main__.AssessmentTests.test_old_four_aliases_preserve_original_case_and_fingerprint) ... FAIL
+test_unfinished_ledger_refuses_result_assessment (__main__.AssessmentTests.test_unfinished_ledger_refuses_result_assessment) ... FAIL
+
+======================================================================
+FAIL: test_clearance_negative_infinity_retains_no_overlap_status (__main__.AssessmentTests.test_clearance_negative_infinity_retains_no_overlap_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 60, in test_clearance_negative_infinity_retains_no_overlap_status
+    self.assertTrue(callable(getattr(w,'serialize_clearance',None)),'Missing clearance serialization')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing clearance serialization
+
+======================================================================
+FAIL: test_complete25_mean_and_valid_failure_penalty (__main__.AssessmentTests.test_complete25_mean_and_valid_failure_penalty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 24, in test_complete25_mean_and_valid_failure_penalty
+    fn=self.api('summarize');rows=self.records();rows[0]['task_outcome']='TASK_FAILURE'
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 16, in api
+    self.assertTrue(callable(getattr(a,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: summarize
+
+======================================================================
+FAIL: test_duplicate_unknown_cases_and_nan_time_rejected (__main__.AssessmentTests.test_duplicate_unknown_cases_and_nan_time_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 37, in test_duplicate_unknown_cases_and_nan_time_rejected
+    fn=self.api('summarize');ids=[p['id'] for p in c.registered_cases()]
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 16, in api
+    self.assertTrue(callable(getattr(a,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: summarize
+
+======================================================================
+FAIL: test_guard_does_not_receive_ordinary26s_penalty (__main__.AssessmentTests.test_guard_does_not_receive_ordinary26s_penalty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 45, in test_guard_does_not_receive_ordinary26s_penalty
+    fn=self.api('summarize');rows=self.records();rows[0].update(guard=True,task_outcome='CONTACT_GUARD')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 16, in api
+    self.assertTrue(callable(getattr(a,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: summarize
+
+======================================================================
+FAIL: test_missing_invalid_unstopped_and_guard_never_make_complete_mean (__main__.AssessmentTests.test_missing_invalid_unstopped_and_guard_never_make_complete_mean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 30, in test_missing_invalid_unstopped_and_guard_never_make_complete_mean
+    fn=self.api('summarize');ids=[p['id'] for p in c.registered_cases()]
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 16, in api
+    self.assertTrue(callable(getattr(a,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: summarize
+
+======================================================================
+FAIL: test_old_four_aliases_preserve_original_case_and_fingerprint (__main__.AssessmentTests.test_old_four_aliases_preserve_original_case_and_fingerprint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 50, in test_old_four_aliases_preserve_original_case_and_fingerprint
+    fn=self.api('reused_records');rows=fn()
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 16, in api
+    self.assertTrue(callable(getattr(a,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: reused_records
+
+======================================================================
+FAIL: test_unfinished_ledger_refuses_result_assessment (__main__.AssessmentTests.test_unfinished_ledger_refuses_result_assessment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 56, in test_unfinished_ledger_refuses_result_assessment
+    fn=self.api('require_closed')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_assessment.py", line 16, in api
+    self.assertTrue(callable(getattr(a,name,None)),'Missing behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing behavior: require_closed
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+FAILED (failures=7)

@@ -1,0 +1,1 @@
+{"deadline_hit":false,"error":"RuntimeError('Guarded child returned failure; no retry')","go_issued":true,"owned_launcher_exit_confirmed":true,"process_exit_confirmed":true,"returncode":1,"wall_seconds":10.030457100001513}

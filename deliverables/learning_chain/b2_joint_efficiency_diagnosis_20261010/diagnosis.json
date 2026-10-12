@@ -1,0 +1,5240 @@
+{
+  "C_accepted": false,
+  "additional_precision_successes": {
+    "F0": 4,
+    "F2000": 0
+  },
+  "archive_count": 8,
+  "archive_cycles": 42171,
+  "automatic_tracking": "PAUSED",
+  "comparisons": [
+    {
+      "F0_precision": true,
+      "F0_task_s": 7.88000000000778,
+      "F0_xy_um": 49.1826464708869,
+      "F2000_precision": false,
+      "F2000_task_s": 10.976000000001097,
+      "F2000_xy_um": 100.48759132831933,
+      "case_id": "J01",
+      "phase_delta_s": {
+        "INSERT": 0.011999999987936327,
+        "SEARCH": 3.084000000006446,
+        "STOPPING": -1.0658141036401503e-12,
+        "UNLOAD": 0.0
+      },
+      "reward_delta": {
+        "force": -0.12632542798278223,
+        "progress": 0.0003621925580166163,
+        "terminal": 0.0,
+        "time": -0.30959999999927834,
+        "torque": -0.03376745761487346,
+        "total": -0.4693306930390797
+      },
+      "task_delta_s": 3.0959999999933165
+    },
+    {
+      "F0_precision": true,
+      "F0_task_s": 8.406000000007086,
+      "F0_xy_um": 25.310655155387572,
+      "F2000_precision": false,
+      "F2000_task_s": 4.338000000000306,
+      "F2000_xy_um": 84.23253641546816,
+      "case_id": "J02",
+      "phase_delta_s": {
+        "INSERT": -0.4720000000071458,
+        "SEARCH": -2.814000000000787,
+        "STOPPING": 1.0658141036401503e-12,
+        "UNLOAD": -0.7819999999999139
+      },
+      "reward_delta": {
+        "force": 0.2049314346531541,
+        "progress": -0.0008944954225444945,
+        "terminal": 0.0,
+        "time": 0.40679999999989636,
+        "torque": 0.009289925612758227,
+        "total": 0.6201268648431668
+      },
+      "task_delta_s": -4.068000000006781
+    },
+    {
+      "F0_precision": true,
+      "F0_task_s": 9.294000000005017,
+      "F0_xy_um": 28.42665159930926,
+      "F2000_precision": false,
+      "F2000_task_s": 9.266000000005082,
+      "F2000_xy_um": 98.08590960086703,
+      "case_id": "J03",
+      "phase_delta_s": {
+        "INSERT": -0.007999999999865892,
+        "SEARCH": -0.02000000000006885,
+        "STOPPING": 0.0,
+        "UNLOAD": 0.0
+      },
+      "reward_delta": {
+        "force": 0.0018491051886621035,
+        "progress": 0.0015606298979982114,
+        "terminal": 0.0,
+        "time": 0.0027999999999934744,
+        "torque": -0.0004120466352120593,
+        "total": 0.005797688451393057
+      },
+      "task_delta_s": -0.027999999999934744
+    },
+    {
+      "F0_precision": true,
+      "F0_task_s": 10.044000000003269,
+      "F0_xy_um": 39.48876934958825,
+      "F2000_precision": false,
+      "F2000_task_s": 10.058000000003236,
+      "F2000_xy_um": 100.21438920925675,
+      "case_id": "J04",
+      "phase_delta_s": {
+        "INSERT": -0.006000000000057071,
+        "SEARCH": 0.022000000000024222,
+        "STOPPING": 0.0,
+        "UNLOAD": -0.0019999999999997797
+      },
+      "reward_delta": {
+        "force": 0.0009287095126186973,
+        "progress": -0.0017032513325725418,
+        "terminal": 0.0,
+        "time": -0.0013999999999967372,
+        "torque": -0.0009370646691088877,
+        "total": -0.0031116064890852613
+      },
+      "task_delta_s": 0.013999999999967372
+    }
+  ],
+  "costs": {
+    "new_dynamic_episodes": 0,
+    "new_model_constructions": 0,
+    "new_optimizer_updates": 0,
+    "new_physical_substeps": 0,
+    "new_policy_inferences": 0,
+    "new_published_transitions": 0,
+    "new_tensor_loads": 0
+  },
+  "cumulative_dynamic": 254,
+  "definitions": {
+    "alignment": "nearest recorded SEARCH cycle by elapsed time or theta; entry states not counterfactually equal",
+    "displacement": "actual saved pose; command integral is not displacement or physical counterfactual",
+    "phases": "same-cycle input observation; physical stop overrides policy phase",
+    "precision": "additional 80um global carrier XY norm and 0.5deg identity quaternion angle, not historical functional outcome",
+    "reward": "rederived frozen maximum-progress/time/force/torque/terminal formula; no tensor scoring",
+    "time": "task_end includes stop confirmation; later audit tail separate"
+  },
+  "development_continue": false,
+  "full_B2_accepted": false,
+  "independent_tests": 0,
+  "initial_action_identical_within_each_actor": {
+    "F0": true,
+    "F2000": true
+  },
+  "initial_observation_identical_across_all_eight": true,
+  "mean_F0_s": 8.906000000005788,
+  "mean_F2000_s": 8.65950000000243,
+  "records": [
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.011755537753155292,
+        "pitch_deg": 0.0012008897645324713,
+        "position_um": [
+          49.17557719516852,
+          0.8338593420147651,
+          -8.594855369583629
+        ],
+        "roll_deg": 0.011687287012005535,
+        "time_s": 9.64000000000421,
+        "xy_um": 49.1826464708869
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J01.json.gz",
+      "audit_end_time_s": 9.64000000000421,
+      "audit_tail_s": 1.7599999999964302,
+      "case": {
+        "id": "J01",
+        "pitch_deg": 0.25,
+        "roll_deg": 0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": 75,
+        "y_um": 75,
+        "yaw_deg": 0
+      },
+      "case_id": "J01",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 4820,
+      "controller_events": [
+        {
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL",
+          "time_s": 0.8979999999999337
+        },
+        {
+          "phase": "SEARCH",
+          "progress_origin_z_m": 0.0002500169938357312,
+          "reason": "LOW_LOAD_SEARCH",
+          "time_s": 1.6799999999998476
+        },
+        {
+          "net_advance_m": 0.00010098434606980143,
+          "observed_z_m": 0.00035100133990553263,
+          "phase": "INSERT",
+          "progress_origin_z_m": 0.0002500169938357312,
+          "reason": "SEARCH_ADVANCED",
+          "time_s": 3.9699999999995956
+        }
+      ],
+      "enabled_command_prediction_checks": 3429,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 7.640000000007274
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.04379236698150635,
+          -0.02078908681869507,
+          0.034273386001586914,
+          -0.0012954473495483398
+        ],
+        "cycle": 158,
+        "end_time_s": 0.3179999999999976,
+        "start_time_s": 0.31599999999999784,
+        "state": {
+          "angle_to_identity_deg": 0.35371303663654835,
+          "pitch_deg": 0.24999799152193594,
+          "position_um": [
+            75.62327494478141,
+            74.64990692598087,
+            -3780.8777518788343
+          ],
+          "roll_deg": 0.250227929988991,
+          "time_s": 0.3179999999999976,
+          "xy_um": 106.26141499825611
+        }
+      },
+      "initial_action": [
+        0.03021109104156494,
+        -0.018009960651397705,
+        0.018926620483398438,
+        0.003921866416931152
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F0",
+      "peaks": {
+        "contact_count": 363.0,
+        "drive_force_components_N": [
+          0.0060109411872587195,
+          0.004838709247138834,
+          0.02444295616773113
+        ],
+        "drive_torque_components_Nm": [
+          4.17725082808989e-05,
+          9.087428092482511e-05,
+          5.02698144148544e-06
+        ],
+        "force_N": 0.024446210520017216,
+        "penetration_m": 6.305366958543365e-06,
+        "speed_m_s": 0.0017116566730352902,
+        "torque_G_Nm": 0.00011163515846424972
+      },
+      "permission_checks": 4820,
+      "phase_times_s": {
+        "INSERT": 4.568000000007612,
+        "SEARCH": 2.289999999999748,
+        "STOPPING": 0.24000000000050647,
+        "UNLOAD": 0.7819999999999139
+      },
+      "policy_sha256": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+      "reward_all": {
+        "force": -0.20292216264277496,
+        "progress": 4.999369782511623,
+        "terminal": 10.0,
+        "time": -0.9640000000004211,
+        "torque": -0.009401723437667297,
+        "total": 13.823045896430875
+      },
+      "reward_audit_tail": {
+        "force": 0.0,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17599999999964303,
+        "torque": 0.0,
+        "total": 9.824000000000357
+      },
+      "reward_cycle_checks": 4820,
+      "reward_task": {
+        "force": -0.20292216264277496,
+        "progress": 4.999369782511623,
+        "terminal": 0.0,
+        "time": -0.7880000000007781,
+        "torque": -0.009401723437667297,
+        "total": 3.999045896430518
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 449,
+          "actual_xy_net_um": [
+            14.468223353123253,
+            -18.448456118139877
+          ],
+          "actual_xy_path_um": 28.545972475393498,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.8979999999999337,
+          "effective_command_delta_xy_integral_um": [
+            1.312483847141184,
+            -1.2618725597857403
+          ],
+          "end_cycle_exclusive": 449,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": 0.25,
+            "position_um": [
+              75.0,
+              75.0,
+              -4000.0
+            ],
+            "roll_deg": 0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.029910327088105166,
+            "pitch_deg": 0.0007107655254676325,
+            "position_um": [
+              89.46822335312325,
+              56.55154388186012,
+              -3750.7596238839856
+            ],
+            "roll_deg": 0.029862134541793303,
+            "time_s": 0.8979999999999337,
+            "xy_um": 105.84252503311842
+          },
+          "max_cycle_force_mN": 24.446210520017218,
+          "mean_action": [
+            0.029231266083324735,
+            -0.028104065919506312,
+            0.023009810522032756,
+            0.0023216682181325583
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            12.993473703274782,
+            -14.522719026882598
+          ],
+          "reference_xy_path_um": 20.19953418168211,
+          "requested_rotation_integral_mrad": [
+            0.010331404924391946,
+            0.0010424290299414418
+          ],
+          "requested_xy_integral_um": [
+            1.312483847141184,
+            -1.2618725597857403
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            12.993473703272551,
+            -14.522719026882093
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -0.012325082536504745,
+            -1.096704124453477
+          ],
+          "actual_xy_path_um": 2.721412083367499,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.7819999999999139,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 840,
+          "entry": {
+            "angle_to_identity_deg": 0.029910327088105166,
+            "pitch_deg": 0.0007107655254676325,
+            "position_um": [
+              89.46822335312325,
+              56.55154388186012,
+              -3750.7596238839856
+            ],
+            "roll_deg": 0.029862134541793303,
+            "time_s": 0.8979999999999337,
+            "xy_um": 105.84252503311842
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.012902936246363897,
+            "pitch_deg": 0.00021155952721257364,
+            "position_um": [
+              89.45589827058674,
+              55.45483975740664,
+              -3750.350399288571
+            ],
+            "roll_deg": 0.012870841110323368,
+            "time_s": 1.6799999999998476,
+            "xy_um": 105.250163837959
+          },
+          "max_cycle_force_mN": 24.403393278573414,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "UNLOAD",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0,
+            -0.021495373025143934
+          ],
+          "reference_xy_path_um": 0.021495373025143934,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 449,
+          "total_command_xy_integral_um": [
+            0.0,
+            -0.02149537302514809
+          ]
+        },
+        {
+          "active_cycles": 1145,
+          "actual_xy_net_um": [
+            -43.47615378572526,
+            -46.385655164930704
+          ],
+          "actual_xy_path_um": 71.95216666668573,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 2.289999999999748,
+          "effective_command_delta_xy_integral_um": [
+            -1.7738031874771163,
+            -10.526371216772828
+          ],
+          "end_cycle_exclusive": 1985,
+          "entry": {
+            "angle_to_identity_deg": 0.012902936246363897,
+            "pitch_deg": 0.00021155952721257364,
+            "position_um": [
+              89.45589827058674,
+              55.45483975740664,
+              -3750.350399288571
+            ],
+            "roll_deg": 0.012870841110323368,
+            "time_s": 1.6799999999998476,
+            "xy_um": 105.250163837959
+          },
+          "entry_theta_rad": 0.0,
+          "exit": {
+            "angle_to_identity_deg": 0.004937486305275805,
+            "pitch_deg": -0.000701032411271507,
+            "position_um": [
+              45.979744484861484,
+              9.06918459247593,
+              -3648.9986600944676
+            ],
+            "roll_deg": 0.004485815024128648,
+            "time_s": 3.9699999999995956,
+            "xy_um": 46.86562719163751
+          },
+          "exit_theta_rad": 10.222751080711376,
+          "max_cycle_force_mN": 10.28390519481386,
+          "max_reference_integration_error_m": 2.18402151493601e-18,
+          "mean_action": [
+            -0.01536534098037986,
+            -0.09234281970944468,
+            0.05703102428319673,
+            -0.031415776550509526
+          ],
+          "mean_requested_radial_um_s": -0.18082236446759276,
+          "outward_requested_duration_fraction": 0.4742358078602621,
+          "phase": "SEARCH",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -44.38478875443098,
+            -52.981508864193934
+          ],
+          "reference_xy_path_um": 341.8219828328687,
+          "requested_rotation_integral_mrad": [
+            0.06530052280425307,
+            -0.03597106415032944
+          ],
+          "requested_xy_integral_um": [
+            -1.7593315422533007,
+            -10.573252856730251
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 840,
+          "total_command_xy_integral_um": [
+            -44.38478875442748,
+            -52.98150886418775
+          ]
+        },
+        {
+          "active_cycles": 1835,
+          "actual_xy_net_um": [
+            3.1958327103067203,
+            -8.23532525046116
+          ],
+          "actual_xy_path_um": 11.757111122723803,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.6700000000076782,
+          "effective_command_delta_xy_integral_um": [
+            4.718694651136788,
+            -5.398392760765006
+          ],
+          "end_cycle_exclusive": 3820,
+          "entry": {
+            "angle_to_identity_deg": 0.004937486305275805,
+            "pitch_deg": -0.000701032411271507,
+            "position_um": [
+              45.979744484861484,
+              9.06918459247593,
+              -3648.9986600944676
+            ],
+            "roll_deg": 0.004485815024128648,
+            "time_s": 3.9699999999995956,
+            "xy_um": 46.86562719163751
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.011755537629140642,
+            "pitch_deg": 0.0012008897645323805,
+            "position_um": [
+              49.1755771951682,
+              0.83385934201477,
+              -8.594855369583708
+            ],
+            "roll_deg": 0.011687287011890935,
+            "time_s": 7.640000000007274,
+            "xy_um": 49.18264647088658
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.025837003892384074,
+            -0.029531397936454776,
+            0.04521450158360921,
+            0.013474187863944801
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            5.566566192519918,
+            -6.64016663697527
+          ],
+          "reference_xy_path_um": 8.815812521094497,
+          "requested_rotation_integral_mrad": [
+            0.08296861040609647,
+            0.02472513473039044
+          ],
+          "requested_xy_integral_um": [
+            4.741090214262397,
+            -5.4190115213507895
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 1985,
+          "total_command_xy_integral_um": [
+            5.566566192528475,
+            -6.640166636986536
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            3.417073746083809e-06,
+            -1.0429896743755029e-05
+          ],
+          "actual_xy_path_um": 0.03183613270989495,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.24000000000050647,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 3940,
+          "entry": {
+            "angle_to_identity_deg": 0.011755537629140642,
+            "pitch_deg": 0.0012008897645323805,
+            "position_um": [
+              49.1755771951682,
+              0.83385934201477,
+              -8.594855369583708
+            ],
+            "roll_deg": 0.011687287011890935,
+            "time_s": 7.640000000007274,
+            "xy_um": 49.18264647088658
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.011755745971905845,
+            "pitch_deg": 0.0012009360064828582,
+            "position_um": [
+              49.17558061224195,
+              0.8338489121180263,
+              -8.5892788276871
+            ],
+            "roll_deg": 0.011687491792314113,
+            "time_s": 7.88000000000778,
+            "xy_um": 49.182649710638266
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.00032605380448667365,
+            -0.0002507569082762964
+          ],
+          "reference_xy_path_um": 0.00041132725471152646,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 3820,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "b792c230cc3b514e6eb70667152c38019f5091a0d860d231aaa221177f4592fd",
+      "task_cycles": 3940,
+      "task_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.011755745971905845,
+        "pitch_deg": 0.0012009360064828582,
+        "position_um": [
+          49.17558061224195,
+          0.8338489121180263,
+          -8.5892788276871
+        ],
+        "roll_deg": 0.011687491792314113,
+        "time_s": 7.88000000000778,
+        "xy_um": 49.182649710638266
+      },
+      "task_time_s": 7.88000000000778
+    },
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.1191646475424304,
+        "pitch_deg": -0.002777391490146619,
+        "position_um": [
+          42.27196583866152,
+          91.16379168892851,
+          -8.249756497983812
+        ],
+        "roll_deg": 0.11913227339572403,
+        "time_s": 12.735999999996995,
+        "xy_um": 100.48759132831933
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J01.json.gz",
+      "audit_end_time_s": 12.735999999996995,
+      "audit_tail_s": 1.7599999999958982,
+      "case": {
+        "id": "J01",
+        "pitch_deg": 0.25,
+        "roll_deg": 0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": 75,
+        "y_um": 75,
+        "yaw_deg": 0
+      },
+      "case_id": "J01",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 6368,
+      "controller_events": [
+        {
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL",
+          "time_s": 0.8999999999999335
+        },
+        {
+          "phase": "SEARCH",
+          "progress_origin_z_m": 0.0002496988540960903,
+          "reason": "LOW_LOAD_SEARCH",
+          "time_s": 1.6819999999998474
+        },
+        {
+          "net_advance_m": 0.00010063741231072917,
+          "observed_z_m": 0.0003503362664068195,
+          "phase": "INSERT",
+          "progress_origin_z_m": 0.0002496988540960903,
+          "reason": "SEARCH_ADVANCED",
+          "time_s": 7.056000000006041
+        }
+      ],
+      "enabled_command_prediction_checks": 4977,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 10.736000000001656
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.3080272674560547,
+          -0.05049413442611694,
+          0.945457935333252,
+          0.9381958246231079
+        ],
+        "cycle": 158,
+        "end_time_s": 0.3179999999999976,
+        "start_time_s": 0.31599999999999784,
+        "state": {
+          "angle_to_identity_deg": 0.365624563238505,
+          "pitch_deg": 0.25842798672850875,
+          "position_um": [
+            77.85116094528794,
+            71.71894776706336,
+            -3780.9336783928
+          ],
+          "roll_deg": 0.2586434877659556,
+          "time_s": 0.3179999999999976,
+          "xy_um": 105.85088912873566
+        }
+      },
+      "initial_action": [
+        -0.0971754789352417,
+        -0.4778866171836853,
+        0.9366180896759033,
+        0.8933365345001221
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F2000",
+      "peaks": {
+        "contact_count": 1190.0,
+        "drive_force_components_N": [
+          0.007017534358330673,
+          0.008727074382536516,
+          0.024444446840367104
+        ],
+        "drive_torque_components_Nm": [
+          4.261130363204409e-05,
+          9.293526064114603e-05,
+          1.8944994809427147e-05
+        ],
+        "force_N": 0.024446535866257824,
+        "penetration_m": 6.373395046043736e-06,
+        "speed_m_s": 0.0017524172742933459,
+        "torque_G_Nm": 0.00014880874849635897
+      },
+      "permission_checks": 6368,
+      "phase_times_s": {
+        "INSERT": 4.5799999999955485,
+        "SEARCH": 5.374000000006194,
+        "STOPPING": 0.23999999999944066,
+        "UNLOAD": 0.7819999999999139
+      },
+      "policy_sha256": "609a41d4538b75e847cc35866da204107fb3807efe1493a04636a8319256657c",
+      "reward_all": {
+        "force": -0.3292475906255572,
+        "progress": 4.99973197506964,
+        "terminal": 10.0,
+        "time": -1.2735999999996994,
+        "torque": -0.04316918105254076,
+        "total": 13.353715203391795
+      },
+      "reward_audit_tail": {
+        "force": -2.7871540742750237e-12,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17599999999958982,
+        "torque": -1.575736471129775e-12,
+        "total": 9.823999999996047
+      },
+      "reward_cycle_checks": 6368,
+      "reward_task": {
+        "force": -0.3292475906227695,
+        "progress": 4.99973197506964,
+        "terminal": 0.0,
+        "time": -1.0976000000001096,
+        "torque": -0.04316918105096506,
+        "total": 3.529715203395768
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 450,
+          "actual_xy_net_um": [
+            17.597509615898133,
+            -21.08714217012242
+          ],
+          "actual_xy_path_um": 33.31711299679724,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.8999999999999335,
+          "effective_command_delta_xy_integral_um": [
+            -0.5729766373880669,
+            -7.959864216301096
+          ],
+          "end_cycle_exclusive": 450,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": 0.25,
+            "position_um": [
+              75.0,
+              75.0,
+              -4000.0
+            ],
+            "roll_deg": 0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.04399175282855762,
+            "pitch_deg": 0.0007195335698825626,
+            "position_um": [
+              92.59750961589813,
+              53.912857829877574,
+              -3751.1752518813123
+            ],
+            "roll_deg": 0.043970691621138674,
+            "time_s": 0.8999999999999335,
+            "xy_um": 107.14893852227813
+          },
+          "max_cycle_force_mN": 24.446535866257825,
+          "mean_action": [
+            0.0028534644179929324,
+            -0.2952050830258243,
+            0.8484296621216705,
+            0.16953592075244686
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            14.478901943116309,
+            -19.963539473859218
+          ],
+          "reference_xy_path_um": 26.52436279940268,
+          "requested_rotation_integral_mrad": [
+            0.3817933479547235,
+            0.07629116433859544
+          ],
+          "requested_xy_integral_um": [
+            0.12840589880967246,
+            -13.284228736161113
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.1666666666666835,
+            0.0
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            14.47890194311543,
+            -19.96353947385748
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -0.044495920661525724,
+            -1.5149293491242608
+          ],
+          "actual_xy_path_um": 2.904658091680269,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.7819999999999139,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 841,
+          "entry": {
+            "angle_to_identity_deg": 0.04399175282855762,
+            "pitch_deg": 0.0007195335698825626,
+            "position_um": [
+              92.59750961589813,
+              53.912857829877574,
+              -3751.1752518813123
+            ],
+            "roll_deg": 0.043970691621138674,
+            "time_s": 0.8999999999999335,
+            "xy_um": 107.14893852227813
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.022058314390872334,
+            "pitch_deg": 0.00026237463919774547,
+            "position_um": [
+              92.5530136952366,
+              52.397928480753315,
+              -3750.623848627678
+            ],
+            "roll_deg": 0.022025021758369043,
+            "time_s": 1.6819999999998474,
+            "xy_um": 106.35602123596384
+          },
+          "max_cycle_force_mN": 24.401284832662004,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "UNLOAD",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0,
+            -0.026595606145569634
+          ],
+          "reference_xy_path_um": 0.026595606145569634,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 450,
+          "total_command_xy_integral_um": [
+            0.0,
+            -0.026595606145557848
+          ]
+        },
+        {
+          "active_cycles": 2687,
+          "actual_xy_net_um": [
+            -91.31047329819445,
+            -5.287863058140944
+          ],
+          "actual_xy_path_um": 200.06070723746433,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 5.374000000006194,
+          "effective_command_delta_xy_integral_um": [
+            47.48291479619977,
+            9.798050008127413
+          ],
+          "end_cycle_exclusive": 3528,
+          "entry": {
+            "angle_to_identity_deg": 0.022058314390872334,
+            "pitch_deg": 0.00026237463919774547,
+            "position_um": [
+              92.5530136952366,
+              52.397928480753315,
+              -3750.623848627678
+            ],
+            "roll_deg": 0.022025021758369043,
+            "time_s": 1.6819999999998474,
+            "xy_um": 106.35602123596384
+          },
+          "entry_theta_rad": 0.0,
+          "exit": {
+            "angle_to_identity_deg": 0.02454796010499681,
+            "pitch_deg": -0.0014390288248557596,
+            "position_um": [
+              1.2425403970421516,
+              47.11006542261237,
+              -3649.6637335931805
+            ],
+            "roll_deg": 0.023932498661563623,
+            "time_s": 7.056000000006041,
+            "xy_um": 47.12644873912206
+          },
+          "exit_theta_rad": 15.793062498580321,
+          "max_cycle_force_mN": 12.012213990378248,
+          "max_reference_integration_error_m": 3.8011662299220796e-18,
+          "mean_action": [
+            0.30182569076632115,
+            0.04284399703484798,
+            0.09228064371020855,
+            0.12645977287423943
+          ],
+          "mean_requested_radial_um_s": -7.085497949054474,
+          "outward_requested_duration_fraction": 0.3248976553777435,
+          "phase": "SEARCH",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -91.25507934058886,
+            -8.893824157401028
+          ],
+          "reference_xy_path_um": 788.9261781819536,
+          "requested_rotation_integral_mrad": [
+            0.2479580896496162,
+            0.33979740971347305
+          ],
+          "requested_xy_integral_um": [
+            81.10056310900397,
+            11.512182003276921
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 841,
+          "total_command_xy_integral_um": [
+            -91.25507934070666,
+            -8.893824157305216
+          ]
+        },
+        {
+          "active_cycles": 1840,
+          "actual_xy_net_um": [
+            41.02965354725873,
+            44.05420753336293
+          ],
+          "actual_xy_path_um": 83.28129172568146,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.679999999995615,
+          "effective_command_delta_xy_integral_um": [
+            36.718715921755944,
+            36.47415964449984
+          ],
+          "end_cycle_exclusive": 5368,
+          "entry": {
+            "angle_to_identity_deg": 0.02454796010499681,
+            "pitch_deg": -0.0014390288248557596,
+            "position_um": [
+              1.2425403970421516,
+              47.11006542261237,
+              -3649.6637335931805
+            ],
+            "roll_deg": 0.023932498661563623,
+            "time_s": 7.056000000006041,
+            "xy_um": 47.12644873912206
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.1191645928075453,
+            "pitch_deg": -0.0027773203555972745,
+            "position_um": [
+              42.27219394430088,
+              91.16427295597529,
+              -8.249788400545112
+            ],
+            "roll_deg": 0.11913222014397741,
+            "time_s": 10.736000000001656,
+            "xy_um": 100.48812389758382
+          },
+          "max_cycle_force_mN": 5.176324954195006,
+          "mean_action": [
+            0.4631169338590349,
+            0.7349964297985397,
+            0.917631265909799,
+            -0.05175605273687075
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            47.755123040197816,
+            52.87164973412805
+          ],
+          "reference_xy_path_um": 108.6597153113137,
+          "requested_rotation_integral_mrad": [
+            1.6884415292720183,
+            -0.09523113703572869
+          ],
+          "requested_xy_integral_um": [
+            85.21351582996088,
+            135.23934308277018
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.030978260869667505,
+            0.0
+          ],
+          "start_cycle": 3528,
+          "total_command_xy_integral_um": [
+            47.755123040206925,
+            52.871649734170894
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -0.0002630343675142266,
+            -0.0005822814672242589
+          ],
+          "actual_xy_path_um": 0.38276894159189745,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.23999999999944066,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 5488,
+          "entry": {
+            "angle_to_identity_deg": 0.1191645928075453,
+            "pitch_deg": -0.0027773203555972745,
+            "position_um": [
+              42.27219394430088,
+              91.16427295597529,
+              -8.249788400545112
+            ],
+            "roll_deg": 0.11913222014397741,
+            "time_s": 10.736000000001656,
+            "xy_um": 100.48812389758382
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.11916620075971501,
+            "pitch_deg": -0.0027825193399064517,
+            "position_um": [
+              42.27193090993337,
+              91.16369067450808,
+              -8.243637034917443
+            ],
+            "roll_deg": 0.11913370710913475,
+            "time_s": 10.976000000001097,
+            "xy_um": 100.48748499316504
+          },
+          "max_cycle_force_mN": 0.004798407762356726,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -3.7067516984243736,
+            -7.823417540746928
+          ],
+          "reference_xy_path_um": 8.657128286599354,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 5368,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "e1c719d830dc4a11ebb632359b6b8def12c875408a3e4bc21f550a699aa9855d",
+      "task_cycles": 5488,
+      "task_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.11916620075971501,
+        "pitch_deg": -0.0027825193399064517,
+        "position_um": [
+          42.27193090993337,
+          91.16369067450808,
+          -8.243637034917443
+        ],
+        "roll_deg": 0.11913370710913475,
+        "time_s": 10.976000000001097,
+        "xy_um": 100.48748499316504
+      },
+      "task_time_s": 10.976000000001097
+    },
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.055992108605034965,
+        "pitch_deg": 0.0011252856966438376,
+        "position_um": [
+          -23.66458856562404,
+          8.97866985776198,
+          -8.273220263074188
+        ],
+        "roll_deg": -0.05598020236989873,
+        "time_s": 10.166000000002985,
+        "xy_um": 25.310655155387572
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J02.json.gz",
+      "audit_end_time_s": 10.166000000002985,
+      "audit_tail_s": 1.7599999999958982,
+      "case": {
+        "id": "J02",
+        "pitch_deg": 0.25,
+        "roll_deg": -0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": -75,
+        "y_um": 75,
+        "yaw_deg": 0
+      },
+      "case_id": "J02",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 5083,
+      "controller_events": [
+        {
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL",
+          "time_s": 0.8979999999999337
+        },
+        {
+          "phase": "SEARCH",
+          "progress_origin_z_m": 0.00024838771015520643,
+          "reason": "LOW_LOAD_SEARCH",
+          "time_s": 1.6799999999998476
+        },
+        {
+          "net_advance_m": 0.00010081203463095526,
+          "observed_z_m": 0.0003491997447861617,
+          "phase": "INSERT",
+          "progress_origin_z_m": 0.00024838771015520643,
+          "reason": "SEARCH_ADVANCED",
+          "time_s": 4.494000000000635
+        }
+      ],
+      "enabled_command_prediction_checks": 3692,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 8.166000000007646
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.04386317729949951,
+          -0.020802855491638184,
+          0.03462564945220947,
+          -0.0013805627822875977
+        ],
+        "cycle": 162,
+        "end_time_s": 0.32599999999999674,
+        "start_time_s": 0.32399999999999696,
+        "state": {
+          "angle_to_identity_deg": 0.3532907276721147,
+          "pitch_deg": 0.24989042157355754,
+          "position_um": [
+            -74.3520712588837,
+            74.64339780346194,
+            -3773.027107703802
+          ],
+          "roll_deg": -0.2497382890291983,
+          "time_s": 0.32599999999999674,
+          "xy_um": 105.35590793179082
+        }
+      },
+      "initial_action": [
+        0.03021109104156494,
+        -0.018009960651397705,
+        0.018926620483398438,
+        0.003921866416931152
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F0",
+      "peaks": {
+        "contact_count": 468.0,
+        "drive_force_components_N": [
+          0.006079880119459825,
+          0.006287033560288832,
+          0.024470837182102148
+        ],
+        "drive_torque_components_Nm": [
+          2.5238269380646087e-05,
+          8.758820157059823e-05,
+          6.03512886126931e-06
+        ],
+        "force_N": 0.02452914123166908,
+        "penetration_m": 6.652686010335461e-06,
+        "speed_m_s": 0.0017498691972659042,
+        "torque_G_Nm": 0.00010929868845476856
+      },
+      "permission_checks": 5083,
+      "phase_times_s": {
+        "INSERT": 4.570000000006945,
+        "SEARCH": 2.814000000000787,
+        "STOPPING": 0.23999999999944066,
+        "UNLOAD": 0.7819999999999139
+      },
+      "policy_sha256": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+      "reward_all": {
+        "force": -0.21866486821543796,
+        "progress": 4.999771826394758,
+        "terminal": 10.0,
+        "time": -1.0166000000002984,
+        "torque": -0.013598282640570749,
+        "total": 13.750908675538566
+      },
+      "reward_audit_tail": {
+        "force": 0.0,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17599999999958982,
+        "torque": 0.0,
+        "total": 9.82400000000041
+      },
+      "reward_cycle_checks": 5083,
+      "reward_task": {
+        "force": -0.21866486821543796,
+        "progress": 4.999771826394758,
+        "terminal": 0.0,
+        "time": -0.8406000000007087,
+        "torque": -0.013598282640570749,
+        "total": 3.9269086755381557
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 449,
+          "actual_xy_net_um": [
+            19.4265661388789,
+            7.29303951695469
+          ],
+          "actual_xy_path_um": 25.20946243680548,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.8979999999999337,
+          "effective_command_delta_xy_integral_um": [
+            1.3470786809920408,
+            -1.1844428300856604
+          ],
+          "end_cycle_exclusive": 449,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": 0.25,
+            "position_um": [
+              -75.0,
+              75.0,
+              -4000.0
+            ],
+            "roll_deg": -0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.11510239241366606,
+            "pitch_deg": 0.0010649876327506356,
+            "position_um": [
+              -55.573433861121096,
+              82.29303951695468,
+              -3751.901490418839
+            ],
+            "roll_deg": -0.11509574825161616,
+            "time_s": 0.8979999999999337,
+            "xy_um": 99.30030666647241
+          },
+          "max_cycle_force_mN": 24.52914123166908,
+          "mean_action": [
+            0.03000175236062673,
+            -0.026379573053134694,
+            0.027285640914084246,
+            0.004526912900546442
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            17.337259041688245,
+            4.727377720949947
+          ],
+          "reference_xy_path_um": 18.756109040383915,
+          "requested_rotation_integral_mrad": [
+            0.012251252770422922,
+            0.0020325838923452026
+          ],
+          "requested_xy_integral_um": [
+            1.3470786809920408,
+            -1.1844428300856604
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            17.337259041687265,
+            4.727377720948505
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -0.016976977471681972,
+            0.7125977628505192
+          ],
+          "actual_xy_path_um": 1.9011150970325708,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.7819999999999139,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 840,
+          "entry": {
+            "angle_to_identity_deg": 0.11510239241366606,
+            "pitch_deg": 0.0010649876327506356,
+            "position_um": [
+              -55.573433861121096,
+              82.29303951695468,
+              -3751.901490418839
+            ],
+            "roll_deg": -0.11509574825161616,
+            "time_s": 0.8979999999999337,
+            "xy_um": 99.30030666647241
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.10309452191928983,
+            "pitch_deg": 0.0005144985881801045,
+            "position_um": [
+              -55.590410838592774,
+              83.0056372798052,
+              -3751.8456934488977
+            ],
+            "roll_deg": -0.10309277471109393,
+            "time_s": 1.6799999999998476,
+            "xy_um": 99.9010990801909
+          },
+          "max_cycle_force_mN": 24.4193233428694,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "UNLOAD",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0,
+            0.0020947806290689923
+          ],
+          "reference_xy_path_um": 0.0020947806290689923,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 449,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.002094780629048741
+          ]
+        },
+        {
+          "active_cycles": 1407,
+          "actual_xy_net_um": [
+            24.385264956037922,
+            -66.43898339883083
+          ],
+          "actual_xy_path_um": 105.14207123897364,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 2.814000000000787,
+          "effective_command_delta_xy_integral_um": [
+            -3.124643571886298,
+            -14.843062269695066
+          ],
+          "end_cycle_exclusive": 2247,
+          "entry": {
+            "angle_to_identity_deg": 0.10309452191928983,
+            "pitch_deg": 0.0005144985881801045,
+            "position_um": [
+              -55.590410838592774,
+              83.0056372798052,
+              -3751.8456934488977
+            ],
+            "roll_deg": -0.10309277471109393,
+            "time_s": 1.6799999999998476,
+            "xy_um": 99.9010990801909
+          },
+          "entry_theta_rad": 0.0,
+          "exit": {
+            "angle_to_identity_deg": 0.06736274869280919,
+            "pitch_deg": 0.0003667916048821347,
+            "position_um": [
+              -31.205145882554852,
+              16.566653880974386,
+              -3650.800255213838
+            ],
+            "roll_deg": -0.06733451319555837,
+            "time_s": 4.494000000000635,
+            "xy_um": 35.330088456774824
+          },
+          "exit_theta_rad": 11.362088544850492,
+          "max_cycle_force_mN": 10.392186988425763,
+          "max_reference_integration_error_m": 3.397766788792219e-18,
+          "mean_action": [
+            -0.022111937732004046,
+            -0.10593008660391294,
+            0.054095726446979756,
+            -0.03948866571191708
+          ],
+          "mean_requested_radial_um_s": 1.480071338883402,
+          "outward_requested_duration_fraction": 0.5884861407251072,
+          "phase": "SEARCH",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            27.491540669169137,
+            -65.93146196763021
+          ],
+          "reference_xy_path_um": 420.2713410688,
+          "requested_rotation_integral_mrad": [
+            0.0761126871109218,
+            -0.055560552656682874
+          ],
+          "requested_xy_integral_um": [
+            -3.1111496388938398,
+            -14.90436318517472
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 840,
+          "total_command_xy_integral_um": [
+            27.49154066932055,
+            -65.93146196766456
+          ]
+        },
+        {
+          "active_cycles": 1836,
+          "actual_xy_net_um": [
+            7.540557316930655,
+            -7.587984023212323
+          ],
+          "actual_xy_path_um": 12.258060336395282,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.672000000007011,
+          "effective_command_delta_xy_integral_um": [
+            4.551273202905271,
+            -5.003883838662844
+          ],
+          "end_cycle_exclusive": 4083,
+          "entry": {
+            "angle_to_identity_deg": 0.06736274869280919,
+            "pitch_deg": 0.0003667916048821347,
+            "position_um": [
+              -31.205145882554852,
+              16.566653880974386,
+              -3650.800255213838
+            ],
+            "roll_deg": -0.06733451319555837,
+            "time_s": 4.494000000000635,
+            "xy_um": 35.330088456774824
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.055992108605034965,
+            "pitch_deg": 0.0011252856966436973,
+            "position_um": [
+              -23.6645885656242,
+              8.97866985776206,
+              -8.273220263074268
+            ],
+            "roll_deg": -0.05598020237001332,
+            "time_s": 8.166000000007646,
+            "xy_um": 25.310655155387753
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.02495759693106531,
+            -0.02727602470933853,
+            0.044776987406160755,
+            0.015277713342429677
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            6.506241609721699,
+            -4.819118445223277
+          ],
+          "reference_xy_path_um": 8.846742989181296,
+          "requested_rotation_integral_mrad": [
+            0.0822105488778681,
+            0.02804988169675444
+          ],
+          "requested_xy_integral_um": [
+            4.58221479655234,
+            -5.007878136644115
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 2247,
+          "total_command_xy_integral_um": [
+            6.506241609734347,
+            -4.819118445231992
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            3.173461097177128e-06,
+            -9.784219544926713e-06
+          ],
+          "actual_xy_path_um": 0.029836437899320663,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.23999999999944066,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 4203,
+          "entry": {
+            "angle_to_identity_deg": 0.055992108605034965,
+            "pitch_deg": 0.0011252856966436973,
+            "position_um": [
+              -23.6645885656242,
+              8.97866985776206,
+              -8.273220263074268
+            ],
+            "roll_deg": -0.05598020237001332,
+            "time_s": 8.166000000007646,
+            "xy_um": 25.310655155387753
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.055991904267350734,
+            "pitch_deg": 0.0011253405515577004,
+            "position_um": [
+              -23.6645853921631,
+              8.978660073542516,
+              -8.26764372117766
+            ],
+            "roll_deg": -0.0559799968940315,
+            "time_s": 8.406000000007086,
+            "xy_um": 25.31064871747079
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.00037011379671361396,
+            -0.00022223096345760018
+          ],
+          "reference_xy_path_um": 0.0004317068723532897,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 4083,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "f1ba7544b8416d8e8d4ce37c32ebe18d5459942890cc7f0d6e12af4fa9c71ec9",
+      "task_cycles": 4203,
+      "task_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.055991904267350734,
+        "pitch_deg": 0.0011253405515577004,
+        "position_um": [
+          -23.6645853921631,
+          8.978660073542516,
+          -8.26764372117766
+        ],
+        "roll_deg": -0.0559799968940315,
+        "time_s": 8.406000000007086,
+        "xy_um": 25.31064871747079
+      },
+      "task_time_s": 8.406000000007086
+    },
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.3912570274378478,
+        "pitch_deg": 0.3283193540765141,
+        "position_um": [
+          -7.358516637781805,
+          83.91050246467756,
+          -8.965495348708412
+        ],
+        "roll_deg": -0.2128107691074847,
+        "time_s": 6.09800000000402,
+        "xy_um": 84.23253641546816
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J02.json.gz",
+      "audit_end_time_s": 6.09800000000402,
+      "audit_tail_s": 1.7600000000037141,
+      "case": {
+        "id": "J02",
+        "pitch_deg": 0.25,
+        "roll_deg": -0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": -75,
+        "y_um": 75,
+        "yaw_deg": 0
+      },
+      "case_id": "J02",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 3049,
+      "controller_events": [],
+      "enabled_command_prediction_checks": 2049,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 4.097999999999799
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.3088728189468384,
+          -0.0500025749206543,
+          0.9451907873153687,
+          0.938144326210022
+        ],
+        "cycle": 161,
+        "end_time_s": 0.32399999999999696,
+        "start_time_s": 0.3219999999999972,
+        "state": {
+          "angle_to_identity_deg": 0.3536346253868155,
+          "pitch_deg": 0.25863059881342404,
+          "position_um": [
+            -72.05773567238042,
+            71.70492254427633,
+            -3774.8621444787636
+          ],
+          "roll_deg": -0.24117984212868165,
+          "time_s": 0.32399999999999696,
+          "xy_um": 101.65585663065022
+        }
+      },
+      "initial_action": [
+        -0.0971754789352417,
+        -0.4778866171836853,
+        0.9366180896759033,
+        0.8933365345001221
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F2000",
+      "peaks": {
+        "contact_count": 68.0,
+        "drive_force_components_N": [
+          0.0011563887251448272,
+          0.0011526167812134498,
+          0.015726937650148202
+        ],
+        "drive_torque_components_Nm": [
+          6.754522330593899e-06,
+          4.432614825833159e-05,
+          5.130174601272117e-06
+        ],
+        "force_N": 0.015519578050099646,
+        "penetration_m": 3.6109990403286866e-06,
+        "speed_m_s": 0.002986343654280929,
+        "torque_G_Nm": 0.0001298669858146183
+      },
+      "permission_checks": 3049,
+      "phase_times_s": {
+        "INSERT": 4.097999999999799,
+        "STOPPING": 0.24000000000050647
+      },
+      "policy_sha256": "609a41d4538b75e847cc35866da204107fb3807efe1493a04636a8319256657c",
+      "reward_all": {
+        "force": -0.013733433562283853,
+        "progress": 4.998877330972213,
+        "terminal": 10.0,
+        "time": -0.609800000000402,
+        "torque": -0.004308357027812521,
+        "total": 14.371035540381733
+      },
+      "reward_audit_tail": {
+        "force": 0.0,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17600000000037141,
+        "torque": 0.0,
+        "total": 9.823999999999629
+      },
+      "reward_cycle_checks": 3049,
+      "reward_task": {
+        "force": -0.013733433562283853,
+        "progress": 4.998877330972213,
+        "terminal": 0.0,
+        "time": -0.4338000000000306,
+        "torque": -0.004308357027812521,
+        "total": 4.547035540382104
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 2049,
+          "actual_xy_net_um": [
+            67.64148336221815,
+            8.910502464678203
+          ],
+          "actual_xy_path_um": 90.7822148908243,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 4.097999999999799,
+          "effective_command_delta_xy_integral_um": [
+            37.80097825906786,
+            23.62012323299539
+          ],
+          "end_cycle_exclusive": 2049,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": 0.25,
+            "position_um": [
+              -75.0,
+              75.0,
+              -4000.0
+            ],
+            "roll_deg": -0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.3912570274341217,
+            "pitch_deg": 0.32831935407650215,
+            "position_um": [
+              -7.358516637781844,
+              83.9105024646782,
+              -8.96549534870849
+            ],
+            "roll_deg": -0.21281076910759866,
+            "time_s": 4.097999999999799,
+            "xy_um": 84.23253641546881
+          },
+          "max_cycle_force_mN": 15.519578050099646,
+          "mean_action": [
+            0.32591042182921887,
+            0.3674522731117028,
+            -0.07952164102616999,
+            0.910251621271472
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            68.83888688926946,
+            16.99673919113858
+          ],
+          "reference_xy_path_um": 92.67541062938497,
+          "requested_rotation_integral_mrad": [
+            -0.1629398424626143,
+            1.8651055719851548
+          ],
+          "requested_xy_integral_um": [
+            66.77904543280367,
+            75.29097076058422
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.3069790141532849,
+            0.03221083455343873
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            68.8388868892663,
+            16.996739191136
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            7.880604645615192e-05,
+            -4.753495437982008e-05
+          ],
+          "actual_xy_path_um": 0.26695695068950026,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.24000000000050647,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 2169,
+          "entry": {
+            "angle_to_identity_deg": 0.3912570274341217,
+            "pitch_deg": 0.32831935407650215,
+            "position_um": [
+              -7.358516637781844,
+              83.9105024646782,
+              -8.96549534870849
+            ],
+            "roll_deg": -0.21281076910759866,
+            "time_s": 4.097999999999799,
+            "xy_um": 84.23253641546881
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.39126016289508303,
+            "pitch_deg": 0.328323098904385,
+            "position_um": [
+              -7.3584378317353885,
+              83.91045492972381,
+              -8.959934881099727
+            ],
+            "roll_deg": -0.21281076018650033,
+            "time_s": 4.338000000000306,
+            "xy_um": 84.23248217781978
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -1.1974035270513026,
+            -8.086236726460378
+          ],
+          "reference_xy_path_um": 8.174411269501404,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 2049,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "d42f68b48c305b20c778cd245e1f79d414768344ee1414c2c0ec52b540d7cd87",
+      "task_cycles": 2169,
+      "task_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.39126016289508303,
+        "pitch_deg": 0.328323098904385,
+        "position_um": [
+          -7.3584378317353885,
+          83.91045492972381,
+          -8.959934881099727
+        ],
+        "roll_deg": -0.21281076018650033,
+        "time_s": 4.338000000000306,
+        "xy_um": 84.23248217781978
+      },
+      "task_time_s": 4.338000000000306
+    },
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.0005451730821236302,
+        "pitch_deg": 5.138405111787008e-06,
+        "position_um": [
+          -8.203184645078501,
+          -27.21731586375225,
+          -9.425302105448331
+        ],
+        "roll_deg": -0.00033356886497255676,
+        "time_s": 11.054000000000915,
+        "xy_um": 28.42665159930926
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J03.json.gz",
+      "audit_end_time_s": 11.054000000000915,
+      "audit_tail_s": 1.7599999999958982,
+      "case": {
+        "id": "J03",
+        "pitch_deg": -0.25,
+        "roll_deg": -0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": -75,
+        "y_um": -75,
+        "yaw_deg": 0
+      },
+      "case_id": "J03",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 5527,
+      "controller_events": [
+        {
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL",
+          "time_s": 0.9359999999999296
+        },
+        {
+          "phase": "SEARCH",
+          "progress_origin_z_m": 0.0002500152519809011,
+          "reason": "LOW_LOAD_SEARCH",
+          "time_s": 1.7179999999998434
+        },
+        {
+          "net_advance_m": 0.0001006745431710583,
+          "observed_z_m": 0.0003506897951519594,
+          "phase": "INSERT",
+          "progress_origin_z_m": 0.0002500152519809011,
+          "reason": "SEARCH_ADVANCED",
+          "time_s": 5.384000000002513
+        }
+      ],
+      "enabled_command_prediction_checks": 4136,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 9.054000000005576
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.043845176696777344,
+          -0.020799577236175537,
+          0.034537434577941895,
+          -0.0013593435287475586
+        ],
+        "cycle": 161,
+        "end_time_s": 0.32399999999999696,
+        "start_time_s": 0.3219999999999972,
+        "state": {
+          "angle_to_identity_deg": 0.3533894925546535,
+          "pitch_deg": -0.25000223035605446,
+          "position_um": [
+            -74.36357619477694,
+            -75.35633333970395,
+            -3774.8621444787636
+          ],
+          "roll_deg": -0.24976612286608274,
+          "time_s": 0.32399999999999696,
+          "xy_um": 105.87029063377967
+        }
+      },
+      "initial_action": [
+        0.03021109104156494,
+        -0.018009960651397705,
+        0.018926620483398438,
+        0.003921866416931152
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F0",
+      "peaks": {
+        "contact_count": 1221.0,
+        "drive_force_components_N": [
+          0.007185622103621676,
+          0.006262260460782092,
+          0.02444325142716544
+        ],
+        "drive_torque_components_Nm": [
+          4.1894852953669536e-05,
+          8.371018369744138e-05,
+          6.730520692126515e-06
+        ],
+        "force_N": 0.02445371424727366,
+        "penetration_m": 6.671860838900808e-06,
+        "speed_m_s": 0.001777274184378199,
+        "torque_G_Nm": 0.00015603050382161416
+      },
+      "permission_checks": 5527,
+      "phase_times_s": {
+        "INSERT": 4.606000000002993,
+        "SEARCH": 3.6660000000026693,
+        "STOPPING": 0.23999999999944066,
+        "UNLOAD": 0.7819999999999139
+      },
+      "policy_sha256": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+      "reward_all": {
+        "force": -0.25642228487876007,
+        "progress": 4.998331724091792,
+        "terminal": 10.0,
+        "time": -1.1054000000000914,
+        "torque": -0.01949795712253884,
+        "total": 13.617011482090515
+      },
+      "reward_audit_tail": {
+        "force": 0.0,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17599999999958982,
+        "torque": 0.0,
+        "total": 9.82400000000041
+      },
+      "reward_cycle_checks": 5527,
+      "reward_task": {
+        "force": -0.25642228487876007,
+        "progress": 4.998331724091792,
+        "terminal": 0.0,
+        "time": -0.9294000000005017,
+        "torque": -0.01949795712253884,
+        "total": 3.793011482090105
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 468,
+          "actual_xy_net_um": [
+            -15.286039385128069,
+            16.277906007972916
+          ],
+          "actual_xy_path_um": 26.944492820140162,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.9359999999999296,
+          "effective_command_delta_xy_integral_um": [
+            1.4704184770583113,
+            -1.3799561440943517
+          ],
+          "end_cycle_exclusive": 468,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": -0.25,
+            "position_um": [
+              -75.0,
+              -75.0,
+              -4000.0
+            ],
+            "roll_deg": -0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.018888052593585405,
+            "pitch_deg": -0.0010168528296178724,
+            "position_um": [
+              -90.28603938512806,
+              -58.72209399202708,
+              -3750.449479649252
+            ],
+            "roll_deg": -0.01886059837175022,
+            "time_s": 0.9359999999999296,
+            "xy_um": 107.70261478098551
+          },
+          "max_cycle_force_mN": 24.453714247273663,
+          "mean_action": [
+            0.031419198227744055,
+            -0.029486242395180672,
+            0.032860783939687284,
+            0.0022369925028237715
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -13.20958516777757,
+            12.046847018680223
+          ],
+          "reference_xy_path_um": 19.80169377899672,
+          "requested_rotation_integral_mrad": [
+            0.015378846883772494,
+            0.0010469124913214463
+          ],
+          "requested_xy_integral_um": [
+            1.4704184770583113,
+            -1.3799561440943517
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            -13.209585167776394,
+            12.046847018677889
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -0.009971649999682555,
+            0.7197637545907647
+          ],
+          "actual_xy_path_um": 1.652721454871967,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.7819999999999139,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 859,
+          "entry": {
+            "angle_to_identity_deg": 0.018888052593585405,
+            "pitch_deg": -0.0010168528296178724,
+            "position_um": [
+              -90.28603938512806,
+              -58.72209399202708,
+              -3750.449479649252
+            ],
+            "roll_deg": -0.01886059837175022,
+            "time_s": 0.9359999999999296,
+            "xy_um": 107.70261478098551
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.007764003108350988,
+            "pitch_deg": -0.0002934851539253129,
+            "position_um": [
+              -90.29601103512775,
+              -58.00233023743631,
+              -3750.2038771666957
+            ],
+            "roll_deg": -0.007758018679690949,
+            "time_s": 1.7179999999998434,
+            "xy_um": 107.3202679917849
+          },
+          "max_cycle_force_mN": 24.404989032690555,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "UNLOAD",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0,
+            0.01748995403109206
+          ],
+          "reference_xy_path_um": 0.01748995403109206,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 468,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0174899540310531
+          ]
+        },
+        {
+          "active_cycles": 1833,
+          "actual_xy_net_um": [
+            72.09828382122066,
+            31.972856526250986
+          ],
+          "actual_xy_path_um": 131.28119969279328,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.6660000000026693,
+          "effective_command_delta_xy_integral_um": [
+            -5.1386255742856255,
+            -22.238259357237908
+          ],
+          "end_cycle_exclusive": 2692,
+          "entry": {
+            "angle_to_identity_deg": 0.007764003108350988,
+            "pitch_deg": -0.0002934851539253129,
+            "position_um": [
+              -90.29601103512775,
+              -58.00233023743631,
+              -3750.2038771666957
+            ],
+            "roll_deg": -0.007758018679690949,
+            "time_s": 1.7179999999998434,
+            "xy_um": 107.3202679917849
+          },
+          "entry_theta_rad": 0.0,
+          "exit": {
+            "angle_to_identity_deg": 0.003455997681665427,
+            "pitch_deg": 0.00012502256978699937,
+            "position_um": [
+              -18.197727213907076,
+              -26.02947371118533,
+              -3649.3102048480405
+            ],
+            "roll_deg": -0.002722289559053654,
+            "time_s": 5.384000000002513,
+            "xy_um": 31.759892591648704
+          },
+          "exit_theta_rad": 13.004543154290216,
+          "max_cycle_force_mN": 11.456223699634258,
+          "max_reference_integration_error_m": 3.060435917548194e-18,
+          "mean_action": [
+            -0.0279671184950477,
+            -0.12167501293504979,
+            0.055727213637400796,
+            -0.047640751407131664
+          ],
+          "mean_requested_radial_um_s": 1.4185299485919347,
+          "outward_requested_duration_fraction": 0.5930169121659775,
+          "phase": "SEARCH",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            72.51890919394889,
+            38.293022541988314
+          ],
+          "reference_xy_path_um": 548.9429413980536,
+          "requested_rotation_integral_mrad": [
+            0.10214798259743003,
+            -0.08732549732933592
+          ],
+          "requested_xy_integral_um": [
+            -5.126372820145977,
+            -22.303029871010867
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 859,
+          "total_command_xy_integral_um": [
+            72.51890919420951,
+            38.29302254216329
+          ]
+        },
+        {
+          "active_cycles": 1835,
+          "actual_xy_net_um": [
+            9.994542568828495,
+            -1.1878421525667653
+          ],
+          "actual_xy_path_um": 14.514773900352091,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.6700000000030633,
+          "effective_command_delta_xy_integral_um": [
+            7.743219711256022,
+            -4.419106411936561
+          ],
+          "end_cycle_exclusive": 4527,
+          "entry": {
+            "angle_to_identity_deg": 0.003455997681665427,
+            "pitch_deg": 0.00012502256978699937,
+            "position_um": [
+              -18.197727213907076,
+              -26.02947371118533,
+              -3649.3102048480405
+            ],
+            "roll_deg": -0.002722289559053654,
+            "time_s": 5.384000000002513,
+            "xy_um": 31.759892591648704
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.0005451757562382379,
+            "pitch_deg": 5.13840511168669e-06,
+            "position_um": [
+              -8.203184645078581,
+              -27.21731586375209,
+              -9.425302105448411
+            ],
+            "roll_deg": -0.0003335688650871383,
+            "time_s": 9.054000000005576,
+            "xy_um": 28.426651599309128
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.042289544256257514,
+            -0.024189720101831777,
+            0.0396723077472447,
+            0.01331551607687885
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            7.487010241109275,
+            -2.574542619524806
+          ],
+          "reference_xy_path_um": 10.811976104652318,
+          "requested_rotation_integral_mrad": [
+            0.0727986847162548,
+            0.02443397200109309
+          ],
+          "requested_xy_integral_um": [
+            7.760131371029732,
+            -4.438813638689837
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 2692,
+          "total_command_xy_integral_um": [
+            7.4870102411174235,
+            -2.5745426195234273
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            8.250780111484102e-06,
+            -8.903072584585036e-06
+          ],
+          "actual_xy_path_um": 0.035209582143778846,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.23999999999944066,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 4647,
+          "entry": {
+            "angle_to_identity_deg": 0.0005451757562382379,
+            "pitch_deg": 5.13840511168669e-06,
+            "position_um": [
+              -8.203184645078581,
+              -27.21731586375209,
+              -9.425302105448411
+            ],
+            "roll_deg": -0.0003335688650871383,
+            "time_s": 9.054000000005576,
+            "xy_um": 28.426651599309128
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.0005450554080925241,
+            "pitch_deg": 5.189644460425891e-06,
+            "position_um": [
+              -8.203176394298469,
+              -27.217324766824678,
+              -9.419725563551802
+            ],
+            "roll_deg": -0.0003333702030594747,
+            "time_s": 9.294000000005017,
+            "xy_um": 28.426657742667945
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0004810876408176286,
+            -0.0001327589269257707
+          ],
+          "reference_xy_path_um": 0.0004990693847812684,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 4527,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "81c840265549d9ec7329a2fed99b74f6954f55dd739bd0071811e2d458f5911f",
+      "task_cycles": 4647,
+      "task_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.0005450554080925241,
+        "pitch_deg": 5.189644460425891e-06,
+        "position_um": [
+          -8.203176394298469,
+          -27.217324766824678,
+          -9.419725563551802
+        ],
+        "roll_deg": -0.0003333702030594747,
+        "time_s": 9.294000000005017,
+        "xy_um": 28.426657742667945
+      },
+      "task_time_s": 9.294000000005017
+    },
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.10893305574832736,
+        "pitch_deg": 0.07643867484098155,
+        "position_um": [
+          -53.49323912175643,
+          -82.21507787803918,
+          -8.145494614229587
+        ],
+        "roll_deg": 0.07761148092480763,
+        "time_s": 11.02600000000098,
+        "xy_um": 98.08590960086703
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J03.json.gz",
+      "audit_end_time_s": 11.02600000000098,
+      "audit_tail_s": 1.7599999999958982,
+      "case": {
+        "id": "J03",
+        "pitch_deg": -0.25,
+        "roll_deg": -0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": -75,
+        "y_um": -75,
+        "yaw_deg": 0
+      },
+      "case_id": "J03",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 5513,
+      "controller_events": [
+        {
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL",
+          "time_s": 0.9239999999999309
+        },
+        {
+          "phase": "SEARCH",
+          "progress_origin_z_m": 0.00025002625492188653,
+          "reason": "LOW_LOAD_SEARCH",
+          "time_s": 1.7059999999998448
+        },
+        {
+          "net_advance_m": 0.0001006951693343595,
+          "observed_z_m": 0.00035072142425624604,
+          "phase": "INSERT",
+          "progress_origin_z_m": 0.00025002625492188653,
+          "reason": "SEARCH_ADVANCED",
+          "time_s": 5.3520000000024455
+        }
+      ],
+      "enabled_command_prediction_checks": 4122,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 9.026000000005642
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.3091611862182617,
+          -0.04982936382293701,
+          0.9451011419296265,
+          0.9381277561187744
+        ],
+        "cycle": 162,
+        "end_time_s": 0.32599999999999674,
+        "start_time_s": 0.32399999999999696,
+        "state": {
+          "angle_to_identity_deg": 0.3410934941289752,
+          "pitch_deg": -0.24127340202067663,
+          "position_um": [
+            -72.03093320996142,
+            -78.29822765104757,
+            -3772.9376456360983
+          ],
+          "roll_deg": -0.2411057088892126,
+          "time_s": 0.32599999999999674,
+          "xy_um": 106.39110767537478
+        }
+      },
+      "initial_action": [
+        -0.0971754789352417,
+        -0.4778866171836853,
+        0.9366180896759033,
+        0.8933365345001221
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F2000",
+      "peaks": {
+        "contact_count": 1136.0,
+        "drive_force_components_N": [
+          0.0071425634945437326,
+          0.006334421071216407,
+          0.02444181066415342
+        ],
+        "drive_torque_components_Nm": [
+          3.9479205406767935e-05,
+          8.080020374460517e-05,
+          5.548442373097001e-06
+        ],
+        "force_N": 0.024481905871080244,
+        "penetration_m": 6.61288807655621e-06,
+        "speed_m_s": 0.001768765074092602,
+        "torque_G_Nm": 0.00015393472434064846
+      },
+      "permission_checks": 5513,
+      "phase_times_s": {
+        "INSERT": 4.598000000003127,
+        "SEARCH": 3.6460000000026005,
+        "STOPPING": 0.23999999999944066,
+        "UNLOAD": 0.7819999999999139
+      },
+      "policy_sha256": "609a41d4538b75e847cc35866da204107fb3807efe1493a04636a8319256657c",
+      "reward_all": {
+        "force": -0.25457317969009796,
+        "progress": 4.99989235398979,
+        "terminal": 10.0,
+        "time": -1.102600000000098,
+        "torque": -0.0199100037577509,
+        "total": 13.622809170541908
+      },
+      "reward_audit_tail": {
+        "force": 0.0,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17599999999958982,
+        "torque": 0.0,
+        "total": 9.82400000000041
+      },
+      "reward_cycle_checks": 5513,
+      "reward_task": {
+        "force": -0.25457317969009796,
+        "progress": 4.99989235398979,
+        "terminal": 0.0,
+        "time": -0.9266000000005082,
+        "torque": -0.0199100037577509,
+        "total": 3.7988091705414977
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 462,
+          "actual_xy_net_um": [
+            -11.185883767763787,
+            13.35719045070077
+          ],
+          "actual_xy_path_um": 30.91296446086538,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.9239999999999309,
+          "effective_command_delta_xy_integral_um": [
+            -3.691844185292012,
+            -8.07434247178463
+          ],
+          "end_cycle_exclusive": 462,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": -0.25,
+            "position_um": [
+              -75.0,
+              -75.0,
+              -4000.0
+            ],
+            "roll_deg": -0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.015004333596626299,
+            "pitch_deg": -0.0012434820829429366,
+            "position_um": [
+              -86.18588376776378,
+              -61.64280954929922,
+              -3750.255048233344
+            ],
+            "roll_deg": -0.013359151425153464,
+            "time_s": 0.9239999999999309,
+            "xy_um": 105.9615143812208
+          },
+          "max_cycle_force_mN": 24.481905871080244,
+          "mean_action": [
+            -0.4598912963103205,
+            -0.6211937548536107,
+            0.9486693038052811,
+            0.5515216876676206
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -16.974145923550022,
+            1.4607189067488584
+          ],
+          "reference_xy_path_um": 27.87800836991375,
+          "requested_rotation_integral_mrad": [
+            0.4382852183580071,
+            0.2548030197024216
+          ],
+          "requested_xy_integral_um": [
+            -21.24697788953522,
+            -28.69915147423467
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.41125541125541903,
+            0.0
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            -16.974145923546438,
+            1.4607189067486417
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -0.1320511517459704,
+            -0.20217354630998177
+          ],
+          "actual_xy_path_um": 1.6435037456370694,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.7819999999999139,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 853,
+          "entry": {
+            "angle_to_identity_deg": 0.015004333596626299,
+            "pitch_deg": -0.0012434820829429366,
+            "position_um": [
+              -86.18588376776378,
+              -61.64280954929922,
+              -3750.255048233344
+            ],
+            "roll_deg": -0.013359151425153464,
+            "time_s": 0.9239999999999309,
+            "xy_um": 105.9615143812208
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.014432478118985459,
+            "pitch_deg": -0.0002585584968532862,
+            "position_um": [
+              -86.31793491950975,
+              -61.8449830956092,
+              -3750.36236469661
+            ],
+            "roll_deg": -0.013250902264188543,
+            "time_s": 1.7059999999998448,
+            "xy_um": 106.18657082166703
+          },
+          "max_cycle_force_mN": 24.438259913727546,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "UNLOAD",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0,
+            0.013458247033893821
+          ],
+          "reference_xy_path_um": 0.013458247033893821,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 462,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.013458247033920808
+          ]
+        },
+        {
+          "active_cycles": 1823,
+          "actual_xy_net_um": [
+            73.70953514447483,
+            29.505786987136187
+          ],
+          "actual_xy_path_um": 124.22500394263007,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.6460000000026005,
+          "effective_command_delta_xy_integral_um": [
+            30.463352825775377,
+            -12.597711114609037
+          ],
+          "end_cycle_exclusive": 2676,
+          "entry": {
+            "angle_to_identity_deg": 0.014432478118985459,
+            "pitch_deg": -0.0002585584968532862,
+            "position_um": [
+              -86.31793491950975,
+              -61.8449830956092,
+              -3750.36236469661
+            ],
+            "roll_deg": -0.013250902264188543,
+            "time_s": 1.7059999999998448,
+            "xy_um": 106.18657082166703
+          },
+          "entry_theta_rad": 0.0,
+          "exit": {
+            "angle_to_identity_deg": 0.00803569470091606,
+            "pitch_deg": 0.005671869193652555,
+            "position_um": [
+              -12.608399775034913,
+              -32.33919610847302,
+              -3649.278575743754
+            ],
+            "roll_deg": -0.005267784602427025,
+            "time_s": 5.3520000000024455,
+            "xy_um": 34.71016205420794
+          },
+          "exit_theta_rad": 12.968358282641505,
+          "max_cycle_force_mN": 11.42240410636163,
+          "max_reference_integration_error_m": 3.715298264894175e-18,
+          "mean_action": [
+            0.23179086462453224,
+            -0.07429047740551599,
+            0.13062022259370606,
+            0.14593659674023324
+          ],
+          "mean_requested_radial_um_s": -4.953767564801379,
+          "outward_requested_duration_fraction": 0.3592978606693704,
+          "phase": "SEARCH",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            81.87250775889544,
+            42.440289057385236
+          ],
+          "reference_xy_path_um": 535.2977268801457,
+          "requested_rotation_integral_mrad": [
+            0.23812066578849597,
+            0.266042415857635
+          ],
+          "requested_xy_integral_um": [
+            42.255474621082364,
+            -13.543154031035225
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 853,
+          "total_command_xy_integral_um": [
+            81.87250775914943,
+            42.440289057555525
+          ]
+        },
+        {
+          "active_cycles": 1837,
+          "actual_xy_net_um": [
+            -40.8848393467212,
+            -49.8758817695668
+          ],
+          "actual_xy_path_um": 76.59898978887401,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.674000000003196,
+          "effective_command_delta_xy_integral_um": [
+            -34.69218934296874,
+            -36.06469465150112
+          ],
+          "end_cycle_exclusive": 4513,
+          "entry": {
+            "angle_to_identity_deg": 0.00803569470091606,
+            "pitch_deg": 0.005671869193652555,
+            "position_um": [
+              -12.608399775034913,
+              -32.33919610847302,
+              -3649.278575743754
+            ],
+            "roll_deg": -0.005267784602427025,
+            "time_s": 5.3520000000024455,
+            "xy_um": 34.71016205420794
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.10893305574832736,
+            "pitch_deg": 0.07643867484097823,
+            "position_um": [
+              -53.49323912175611,
+              -82.21507787803982,
+              -8.145494614229667
+            ],
+            "roll_deg": 0.07761148092469312,
+            "time_s": 9.026000000005642,
+            "xy_um": 98.0859096008674
+          },
+          "max_cycle_force_mN": 4.097939253214067,
+          "mean_action": [
+            -0.26527499714548475,
+            -0.3446142237408761,
+            0.8622500681655761,
+            0.635034438962712
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -44.62230116801446,
+            -53.45416166678448
+          ],
+          "reference_xy_path_um": 77.57554680833756,
+          "requested_rotation_integral_mrad": [
+            1.5839533752215416,
+            1.1665582643755166
+          ],
+          "requested_xy_integral_um": [
+            -48.73101697566794,
+            -63.30563290125401
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 2676,
+          "total_command_xy_integral_um": [
+            -44.622301168050235,
+            -53.45416166685814
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -8.948036335867417e-06,
+            2.2957175751874524e-05
+          ],
+          "actual_xy_path_um": 0.07147107021450476,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.23999999999944066,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 4633,
+          "entry": {
+            "angle_to_identity_deg": 0.10893305574832736,
+            "pitch_deg": 0.07643867484097823,
+            "position_um": [
+              -53.49323912175611,
+              -82.21507787803982,
+              -8.145494614229667
+            ],
+            "roll_deg": 0.07761148092469312,
+            "time_s": 9.026000000005642,
+            "xy_um": 98.0859096008674
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.10893689524431689,
+            "pitch_deg": 0.07644195267669386,
+            "position_um": [
+              -53.49324806979245,
+              -82.21505492086406,
+              -8.139939648474462
+            ],
+            "roll_deg": 0.07761364172425217,
+            "time_s": 9.266000000005082,
+            "xy_um": 98.08589523829126
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            1.23070021091292,
+            2.3246175775766704
+          ],
+          "reference_xy_path_um": 2.630298441454797,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 4513,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "d2b36fb7aec857a75173d618af389f12cf8af674b27069dfcd18bf3bdf0509ec",
+      "task_cycles": 4633,
+      "task_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.10893689524431689,
+        "pitch_deg": 0.07644195267669386,
+        "position_um": [
+          -53.49324806979245,
+          -82.21505492086406,
+          -8.139939648474462
+        ],
+        "roll_deg": 0.07761364172425217,
+        "time_s": 9.266000000005082,
+        "xy_um": 98.08589523829126
+      },
+      "task_time_s": 9.266000000005082
+    },
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.06957144841278805,
+        "pitch_deg": -0.003251022196657818,
+        "position_um": [
+          39.42736695494305,
+          -2.201281387111991,
+          -8.632731743534508
+        ],
+        "roll_deg": 0.06949500149253988,
+        "time_s": 11.803999999999167,
+        "xy_um": 39.48876934958825
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J04.json.gz",
+      "audit_end_time_s": 11.803999999999167,
+      "audit_tail_s": 1.7599999999958982,
+      "case": {
+        "id": "J04",
+        "pitch_deg": -0.25,
+        "roll_deg": 0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": 75,
+        "y_um": -75,
+        "yaw_deg": 0
+      },
+      "case_id": "J04",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 5902,
+      "controller_events": [
+        {
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL",
+          "time_s": 0.8719999999999366
+        },
+        {
+          "phase": "SEARCH",
+          "progress_origin_z_m": 0.0002483135755267725,
+          "reason": "LOW_LOAD_SEARCH",
+          "time_s": 1.6539999999998505
+        },
+        {
+          "net_advance_m": 0.00010052756953471886,
+          "observed_z_m": 0.00034884114506149137,
+          "phase": "INSERT",
+          "progress_origin_z_m": 0.0002483135755267725,
+          "reason": "SEARCH_ADVANCED",
+          "time_s": 6.1320000000040915
+        }
+      ],
+      "enabled_command_prediction_checks": 4511,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 9.804000000003828
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.04379236698150635,
+          -0.02078908681869507,
+          0.034273386001586914,
+          -0.0012954473495483398
+        ],
+        "cycle": 158,
+        "end_time_s": 0.3179999999999976,
+        "start_time_s": 0.31599999999999784,
+        "state": {
+          "angle_to_identity_deg": 0.3537158757515532,
+          "pitch_deg": -0.25000200847413073,
+          "position_um": [
+            75.62327494478141,
+            -75.35009307401911,
+            -3780.8777518788343
+          ],
+          "roll_deg": 0.25022792998906285,
+          "time_s": 0.3179999999999976,
+          "xy_um": 106.75446707111298
+        }
+      },
+      "initial_action": [
+        0.03021109104156494,
+        -0.018009960651397705,
+        0.018926620483398438,
+        0.003921866416931152
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F0",
+      "peaks": {
+        "contact_count": 1607.0,
+        "drive_force_components_N": [
+          0.0072150579463142505,
+          0.007117067418335783,
+          0.02447806168916245
+        ],
+        "drive_torque_components_Nm": [
+          2.611156904994299e-05,
+          9.441729066863776e-05,
+          1.890046502257165e-05
+        ],
+        "force_N": 0.02461075713238739,
+        "penetration_m": 6.727507522468255e-06,
+        "speed_m_s": 0.0017845895793087573,
+        "torque_G_Nm": 0.00015777788952935876
+      },
+      "permission_checks": 5902,
+      "phase_times_s": {
+        "INSERT": 4.543999999999674,
+        "SEARCH": 4.478000000004241,
+        "STOPPING": 0.23999999999944066,
+        "UNLOAD": 0.7819999999999139
+      },
+      "policy_sha256": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+      "reward_all": {
+        "force": -0.2705350609728597,
+        "progress": 4.999322437044181,
+        "terminal": 10.0,
+        "time": -1.1803999999999166,
+        "torque": -0.02734514517254181,
+        "total": 13.521042230898981
+      },
+      "reward_audit_tail": {
+        "force": 0.0,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17599999999958982,
+        "torque": 0.0,
+        "total": 9.82400000000041
+      },
+      "reward_cycle_checks": 5902,
+      "reward_task": {
+        "force": -0.2705350609728597,
+        "progress": 4.999322437044181,
+        "terminal": 0.0,
+        "time": -1.0044000000003268,
+        "torque": -0.02734514517254181,
+        "total": 3.69704223089857
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 436,
+          "actual_xy_net_um": [
+            -17.746706612710046,
+            -8.402836293744723
+          ],
+          "actual_xy_path_um": 25.67500646495546,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.8719999999999366,
+          "effective_command_delta_xy_integral_um": [
+            1.3534376502036183,
+            -1.3403509259222826
+          ],
+          "end_cycle_exclusive": 436,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": -0.25,
+            "position_um": [
+              75.0,
+              -75.0,
+              -4000.0
+            ],
+            "roll_deg": 0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.11546044180463433,
+            "pitch_deg": -0.0005232556172542508,
+            "position_um": [
+              57.25329338728995,
+              -83.40283629374471,
+              -3752.00530782501
+            ],
+            "roll_deg": 0.11544731749315003,
+            "time_s": 0.8719999999999366,
+            "xy_um": 101.16309952513456
+          },
+          "max_cycle_force_mN": 24.61075713238739,
+          "mean_action": [
+            0.031042147940452215,
+            -0.030741993713816057,
+            0.028341862039828337,
+            0.0014483616986405365
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -15.266956169605976,
+            -6.296793083728419
+          ],
+          "reference_xy_path_um": 18.24412577674481,
+          "requested_rotation_integral_mrad": [
+            0.012357051849364257,
+            0.000631485700607228
+          ],
+          "requested_xy_integral_um": [
+            1.3534376502036183,
+            -1.3403509259222826
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            -15.266956169603247,
+            -6.29679308372879
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            0.02779383269723394,
+            -0.7994786184097605
+          ],
+          "actual_xy_path_um": 1.9157908933245698,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.7819999999999139,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 827,
+          "entry": {
+            "angle_to_identity_deg": 0.11546044180463433,
+            "pitch_deg": -0.0005232556172542508,
+            "position_um": [
+              57.25329338728995,
+              -83.40283629374471,
+              -3752.00530782501
+            ],
+            "roll_deg": 0.11544731749315003,
+            "time_s": 0.8719999999999366,
+            "xy_um": 101.16309952513456
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.10278439905638558,
+            "pitch_deg": -0.00023926500610877213,
+            "position_um": [
+              57.281087219987185,
+              -84.20231491215448,
+              -3751.887345746989
+            ],
+            "roll_deg": 0.10277573157199364,
+            "time_s": 1.6539999999998505,
+            "xy_um": 101.83885697350208
+          },
+          "max_cycle_force_mN": 24.418384702487053,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "UNLOAD",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0,
+            -0.004022267564184794
+          ],
+          "reference_xy_path_um": 0.004022267564184794,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 436,
+          "total_command_xy_integral_um": [
+            0.0,
+            -0.004022267564137029
+          ]
+        },
+        {
+          "active_cycles": 2239,
+          "actual_xy_net_um": [
+            -21.964353357198462,
+            84.17209304147788
+          ],
+          "actual_xy_path_um": 191.63037823130907,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 4.478000000004241,
+          "effective_command_delta_xy_integral_um": [
+            -7.018093627266985,
+            -29.14597043723796
+          ],
+          "end_cycle_exclusive": 3066,
+          "entry": {
+            "angle_to_identity_deg": 0.10278439905638558,
+            "pitch_deg": -0.00023926500610877213,
+            "position_um": [
+              57.281087219987185,
+              -84.20231491215448,
+              -3751.887345746989
+            ],
+            "roll_deg": 0.10277573157199364,
+            "time_s": 1.6539999999998505,
+            "xy_um": 101.83885697350208
+          },
+          "entry_theta_rad": 0.0,
+          "exit": {
+            "angle_to_identity_deg": 0.07210395937105665,
+            "pitch_deg": -0.00941732438003395,
+            "position_um": [
+              35.316733862788716,
+              -0.030221870676602213,
+              -3651.1588549385087
+            ],
+            "roll_deg": 0.07128195580072723,
+            "time_s": 6.1320000000040915,
+            "xy_um": 35.31674679378771
+          },
+          "exit_theta_rad": 14.39742671982331,
+          "max_cycle_force_mN": 11.300654651968578,
+          "max_reference_integration_error_m": 3.4294246451958485e-18,
+          "mean_action": [
+            -0.03128551832531258,
+            -0.13038305982838597,
+            0.058669265384601495,
+            -0.04952243365791975
+          ],
+          "mean_requested_radial_um_s": -0.31121716404577426,
+          "outward_requested_duration_fraction": 0.4725323805270014,
+          "phase": "SEARCH",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -26.419237242744384,
+            83.98084598459006
+          ],
+          "reference_xy_path_um": 670.9911724418245,
+          "requested_rotation_integral_mrad": [
+            0.13136048519624716,
+            -0.11088072896018733
+          ],
+          "requested_xy_integral_um": [
+            -7.004827553044121,
+            -29.192767095603266
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 827,
+          "total_command_xy_integral_um": [
+            -26.41923724270478,
+            83.98084598489548
+          ]
+        },
+        {
+          "active_cycles": 1836,
+          "actual_xy_net_um": [
+            4.1106330921540115,
+            -2.1710595164353688
+          ],
+          "actual_xy_path_um": 15.637126141433809,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.671999999999737,
+          "effective_command_delta_xy_integral_um": [
+            8.142051005365001,
+            -4.766153955457335
+          ],
+          "end_cycle_exclusive": 4902,
+          "entry": {
+            "angle_to_identity_deg": 0.07210395937105665,
+            "pitch_deg": -0.00941732438003395,
+            "position_um": [
+              35.316733862788716,
+              -0.030221870676602213,
+              -3651.1588549385087
+            ],
+            "roll_deg": 0.07128195580072723,
+            "time_s": 6.1320000000040915,
+            "xy_um": 35.31674679378771
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.06957144841278805,
+            "pitch_deg": -0.0032510221966579257,
+            "position_um": [
+              39.427366954942734,
+              -2.201281387111971,
+              -8.632731743534588
+            ],
+            "roll_deg": 0.06949500149242535,
+            "time_s": 9.804000000003828,
+            "xy_um": 39.48876934958793
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.04467184104692109,
+            -0.025975825025614546,
+            0.03962517057367335,
+            0.013234059015911761
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            6.113109283278282,
+            -4.881140932858287
+          ],
+          "reference_xy_path_um": 11.561712762495,
+          "requested_rotation_integral_mrad": [
+            0.07275181317325906,
+            0.02429773235321225
+          ],
+          "requested_xy_integral_um": [
+            8.201750016214124,
+            -4.769161474702489
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 3066,
+          "total_command_xy_integral_um": [
+            6.11310928327636,
+            -4.881140932856219
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            9.40320771822354e-06,
+            -1.0672458233562134e-05
+          ],
+          "actual_xy_path_um": 0.04125927951651984,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.23999999999944066,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 5022,
+          "entry": {
+            "angle_to_identity_deg": 0.06957144841278805,
+            "pitch_deg": -0.0032510221966579257,
+            "position_um": [
+              39.427366954942734,
+              -2.201281387111971,
+              -8.632731743534588
+            ],
+            "roll_deg": 0.06949500149242535,
+            "time_s": 9.804000000003828,
+            "xy_um": 39.48876934958793
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.0695716355602634,
+            "pitch_deg": -0.0032509820470574486,
+            "position_um": [
+              39.42737635815045,
+              -2.201292059570205,
+              -8.62715520163798
+            ],
+            "roll_deg": 0.06949519072064991,
+            "time_s": 10.044000000003269,
+            "xy_um": 39.48877933310636
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0004510840148131724,
+            -0.00017108755114978697
+          ],
+          "reference_xy_path_um": 0.0004824393625922343,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 4902,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "f11c4613555c33bcfb6a26e9aabb6aa8cf81142cbc234e486ae19533e9a55dac",
+      "task_cycles": 5022,
+      "task_end_state": {
+        "additional_80um_0p5deg": true,
+        "angle_to_identity_deg": 0.0695716355602634,
+        "pitch_deg": -0.0032509820470574486,
+        "position_um": [
+          39.42737635815045,
+          -2.201292059570205,
+          -8.62715520163798
+        ],
+        "roll_deg": 0.06949519072064991,
+        "time_s": 10.044000000003269,
+        "xy_um": 39.48877933310636
+      },
+      "task_time_s": 10.044000000003269
+    },
+    {
+      "archive_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.16157106081014283,
+        "pitch_deg": -0.07438636038170147,
+        "position_um": [
+          98.85716468474,
+          -16.437298898498888,
+          -9.741933210758155
+        ],
+        "roll_deg": 0.14342901064069985,
+        "time_s": 11.817999999999135,
+        "xy_um": 100.21438920925675
+      },
+      "archive_path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J04.json.gz",
+      "audit_end_time_s": 11.817999999999135,
+      "audit_tail_s": 1.7599999999958982,
+      "case": {
+        "id": "J04",
+        "pitch_deg": -0.25,
+        "roll_deg": 0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": 75,
+        "y_um": -75,
+        "yaw_deg": 0
+      },
+      "case_id": "J04",
+      "comparison_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+      "control_cycles": 5909,
+      "controller_events": [
+        {
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL",
+          "time_s": 0.8639999999999375
+        },
+        {
+          "phase": "SEARCH",
+          "progress_origin_z_m": 0.00024825335429975006,
+          "reason": "LOW_LOAD_SEARCH",
+          "time_s": 1.6439999999998516
+        },
+        {
+          "net_advance_m": 0.0001010039786507595,
+          "observed_z_m": 0.00034925733295050956,
+          "phase": "INSERT",
+          "progress_origin_z_m": 0.00024825335429975006,
+          "reason": "SEARCH_ADVANCED",
+          "time_s": 6.144000000004117
+        }
+      ],
+      "enabled_command_prediction_checks": 4519,
+      "environment_events": [
+        {
+          "phase": "STOPPING",
+          "reason": "TARGET_PLANE_REACHED",
+          "time_s": 9.818000000003796
+        }
+      ],
+      "first_contact": {
+        "action": [
+          0.30830562114715576,
+          -0.050335049629211426,
+          0.9453692436218262,
+          0.938178300857544
+        ],
+        "cycle": 159,
+        "end_time_s": 0.3199999999999974,
+        "start_time_s": 0.3179999999999976,
+        "state": {
+          "angle_to_identity_deg": 0.35380777233035315,
+          "pitch_deg": -0.24136975754344817,
+          "position_um": [
+            77.87075153156881,
+            -78.28608990665703,
+            -3779.002862231397
+          ],
+          "roll_deg": 0.25869038873442585,
+          "time_s": 0.3199999999999974,
+          "xy_um": 110.41995207825673
+        }
+      },
+      "initial_action": [
+        -0.0971754789352417,
+        -0.4778866171836853,
+        0.9366180896759033,
+        0.8933365345001221
+      ],
+      "initial_observation": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "model": "F2000",
+      "peaks": {
+        "contact_count": 1698.0,
+        "drive_force_components_N": [
+          0.007119171444093306,
+          0.007234968550543861,
+          0.02446588409024956
+        ],
+        "drive_torque_components_Nm": [
+          2.9276878453050924e-05,
+          9.153462679949721e-05,
+          8.879994025930962e-06
+        ],
+        "force_N": 0.02446657749560455,
+        "penetration_m": 6.911086307781322e-06,
+        "speed_m_s": 0.001742837111218157,
+        "torque_G_Nm": 0.0001553321061933647
+      },
+      "permission_checks": 5909,
+      "phase_times_s": {
+        "INSERT": 4.537999999999617,
+        "SEARCH": 4.500000000004265,
+        "STOPPING": 0.23999999999944066,
+        "UNLOAD": 0.7799999999999141
+      },
+      "policy_sha256": "609a41d4538b75e847cc35866da204107fb3807efe1493a04636a8319256657c",
+      "reward_all": {
+        "force": -0.269606351460241,
+        "progress": 4.997619185711608,
+        "terminal": 10.0,
+        "time": -1.1817999999999134,
+        "torque": -0.028282209841650696,
+        "total": 13.517930624409896
+      },
+      "reward_audit_tail": {
+        "force": 0.0,
+        "progress": 0.0,
+        "terminal": 10.0,
+        "time": -0.17599999999958982,
+        "torque": 0.0,
+        "total": 9.82400000000041
+      },
+      "reward_cycle_checks": 5909,
+      "reward_task": {
+        "force": -0.269606351460241,
+        "progress": 4.997619185711608,
+        "terminal": 0.0,
+        "time": -1.0058000000003235,
+        "torque": -0.028282209841650696,
+        "total": 3.6939306244094867
+      },
+      "seed": 2026092716,
+      "segments": [
+        {
+          "active_cycles": 432,
+          "actual_xy_net_um": [
+            -14.227266156444593,
+            -13.02272627689851
+          ],
+          "actual_xy_path_um": 29.455153300416693,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.8639999999999375,
+          "effective_command_delta_xy_integral_um": [
+            -3.201079006387635,
+            -7.5768131617773795
+          ],
+          "end_cycle_exclusive": 432,
+          "entry": {
+            "angle_to_identity_deg": 0.35355325036063845,
+            "pitch_deg": -0.25,
+            "position_um": [
+              75.0,
+              -75.0,
+              -4000.0
+            ],
+            "roll_deg": 0.25000000000000006,
+            "time_s": 0.0,
+            "xy_um": 106.06601717798212
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.12180888685550958,
+            "pitch_deg": -0.0004287331584469133,
+            "position_um": [
+              60.7727338435554,
+              -88.02272627689851,
+              -3752.200271618
+            ],
+            "roll_deg": 0.1217038189561243,
+            "time_s": 0.8639999999999375,
+            "xy_um": 106.96413193233245
+          },
+          "max_cycle_force_mN": 24.46657749560455,
+          "mean_action": [
+            -0.35487161480164364,
+            -0.5295146441569926,
+            0.9291208736874447,
+            0.4510226808488549
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -17.931579120572312,
+            -16.76080090943469
+          ],
+          "reference_xy_path_um": 30.454961745266875,
+          "requested_rotation_integral_mrad": [
+            0.4013802174329471,
+            0.19484179812669122
+          ],
+          "requested_xy_integral_um": [
+            -15.330453759429895,
+            -22.87503262758042
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.3587962962963066,
+            0.0
+          ],
+          "start_cycle": 0,
+          "total_command_xy_integral_um": [
+            -17.93157912057024,
+            -16.760800909433804
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -0.13576381561242787,
+            -1.6055737755763768
+          ],
+          "actual_xy_path_um": 2.2012460075736198,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.7799999999999141,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 822,
+          "entry": {
+            "angle_to_identity_deg": 0.12180888685550958,
+            "pitch_deg": -0.0004287331584469133,
+            "position_um": [
+              60.7727338435554,
+              -88.02272627689851,
+              -3752.200271618
+            ],
+            "roll_deg": 0.1217038189561243,
+            "time_s": 0.8639999999999375,
+            "xy_um": 106.96413193233245
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.09916079449504725,
+            "pitch_deg": -0.0001718888760162533,
+            "position_um": [
+              60.63697002794297,
+              -89.62830005247488,
+              -3751.8848974683074
+            ],
+            "roll_deg": 0.09909512814233308,
+            "time_s": 1.6439999999998516,
+            "xy_um": 108.2130967326327
+          },
+          "max_cycle_force_mN": 24.41959330622807,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "UNLOAD",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            0.0,
+            -0.00859667505841914
+          ],
+          "reference_xy_path_um": 0.00859667505841914,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 432,
+          "total_command_xy_integral_um": [
+            0.0,
+            -0.008596675058441623
+          ]
+        },
+        {
+          "active_cycles": 2250,
+          "actual_xy_net_um": [
+            -23.003774364514015,
+            84.18261817549514
+          ],
+          "actual_xy_path_um": 183.29417894986108,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 4.500000000004265,
+          "effective_command_delta_xy_integral_um": [
+            37.15013970326166,
+            -2.7642235994299655
+          ],
+          "end_cycle_exclusive": 3072,
+          "entry": {
+            "angle_to_identity_deg": 0.09916079449504725,
+            "pitch_deg": -0.0001718888760162533,
+            "position_um": [
+              60.63697002794297,
+              -89.62830005247488,
+              -3751.8848974683074
+            ],
+            "roll_deg": 0.09909512814233308,
+            "time_s": 1.6439999999998516,
+            "xy_um": 108.2130967326327
+          },
+          "entry_theta_rad": 0.0,
+          "exit": {
+            "angle_to_identity_deg": 0.06649806517110156,
+            "pitch_deg": -0.0020625703073249885,
+            "position_um": [
+              37.63319566342896,
+              -5.445681876979733,
+              -3650.7426670494906
+            ],
+            "roll_deg": 0.06644672457261176,
+            "time_s": 6.144000000004117,
+            "xy_um": 38.02516097200897
+          },
+          "exit_theta_rad": 14.433303594576168,
+          "max_cycle_force_mN": 11.362275261863578,
+          "max_reference_integration_error_m": 3.3700264597696407e-18,
+          "mean_action": [
+            0.2506029018825264,
+            -0.01183757628332028,
+            0.06724717095146747,
+            0.060458377467220985
+          ],
+          "mean_requested_radial_um_s": -5.364219583335207,
+          "outward_requested_duration_fraction": 0.31377777777784255,
+          "phase": "SEARCH",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -21.082141194088845,
+            88.86512390994457
+          ],
+          "reference_xy_path_um": 662.0672324870183,
+          "requested_rotation_integral_mrad": [
+            0.15130613464094522,
+            0.13603134930137614
+          ],
+          "requested_xy_integral_um": [
+            56.385652923621876,
+            -2.6634546637495875
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 822,
+          "total_command_xy_integral_um": [
+            -21.08214119406598,
+            88.8651239102436
+          ]
+        },
+        {
+          "active_cycles": 1837,
+          "actual_xy_net_um": [
+            61.22396902131168,
+            -10.991617021518996
+          ],
+          "actual_xy_path_um": 86.35475403175211,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 3.673999999999679,
+          "effective_command_delta_xy_integral_um": [
+            36.45663523319646,
+            -3.1994811678803776
+          ],
+          "end_cycle_exclusive": 4909,
+          "entry": {
+            "angle_to_identity_deg": 0.06649806517110156,
+            "pitch_deg": -0.0020625703073249885,
+            "position_um": [
+              37.63319566342896,
+              -5.445681876979733,
+              -3650.7426670494906
+            ],
+            "roll_deg": 0.06644672457261176,
+            "time_s": 6.144000000004117,
+            "xy_um": 38.02516097200897
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.16157106081014283,
+            "pitch_deg": -0.07438636038169816,
+            "position_um": [
+              98.85716468474064,
+              -16.437298898498728,
+              -9.741933210758235
+            ],
+            "roll_deg": 0.1434290106405853,
+            "time_s": 9.818000000003796,
+            "xy_um": 100.21438920925736
+          },
+          "max_cycle_force_mN": 4.18022793288184,
+          "mean_action": [
+            0.3782642804608694,
+            -0.07785636634314592,
+            0.7737728245048249,
+            -0.7181278998651007
+          ],
+          "phase": "INSERT",
+          "policy_input_phase_differs_from_left_trace_cycles": 1,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            66.15832661608441,
+            -14.088968037868428
+          ],
+          "reference_xy_path_um": 83.72419158685202,
+          "requested_rotation_integral_mrad": [
+            1.4214206786152392,
+            -1.3192009520520747
+          ],
+          "requested_xy_integral_um": [
+            69.48714832065563,
+            -14.302214497234658
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.26782798040222994
+          ],
+          "start_cycle": 3072,
+          "total_command_xy_integral_um": [
+            66.15832661606431,
+            -14.088968037775635
+          ]
+        },
+        {
+          "active_cycles": 0,
+          "actual_xy_net_um": [
+            -6.868640431542585e-05,
+            -0.00011270891564615828
+          ],
+          "actual_xy_path_um": 0.38285867122168227,
+          "continuation_filtered_cycles": 0,
+          "duration_s": 0.23999999999944066,
+          "effective_command_delta_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "end_cycle_exclusive": 5029,
+          "entry": {
+            "angle_to_identity_deg": 0.16157106081014283,
+            "pitch_deg": -0.07438636038169816,
+            "position_um": [
+              98.85716468474064,
+              -16.437298898498728,
+              -9.741933210758235
+            ],
+            "roll_deg": 0.1434290106405853,
+            "time_s": 9.818000000003796,
+            "xy_um": 100.21438920925736
+          },
+          "exit": {
+            "angle_to_identity_deg": 0.16157468769976113,
+            "pitch_deg": -0.07438727593420479,
+            "position_um": [
+              98.85709599833632,
+              -16.437411607414372,
+              -9.736531325780287
+            ],
+            "roll_deg": 0.14343262145929753,
+            "time_s": 10.058000000003236,
+            "xy_um": 100.2143399398302
+          },
+          "max_cycle_force_mN": 0.0,
+          "mean_action": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "phase": "STOPPING",
+          "policy_input_phase_differs_from_left_trace_cycles": 0,
+          "reference_filtered_cycles": 0,
+          "reference_xy_net_um": [
+            -3.287441616682619,
+            0.5559428139182322
+          ],
+          "reference_xy_path_um": 3.334118293558906,
+          "requested_rotation_integral_mrad": [
+            0.0,
+            0.0
+          ],
+          "requested_xy_integral_um": [
+            0.0,
+            0.0
+          ],
+          "saturation_fraction_by_axis": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "start_cycle": 4909,
+          "total_command_xy_integral_um": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "sha256": "5caece1b32e2ff29aaf453e1870ea0bad772328752668ed734adca23cebe9b16",
+      "task_cycles": 5029,
+      "task_end_state": {
+        "additional_80um_0p5deg": false,
+        "angle_to_identity_deg": 0.16157468769976113,
+        "pitch_deg": -0.07438727593420479,
+        "position_um": [
+          98.85709599833632,
+          -16.437411607414372,
+          -9.736531325780287
+        ],
+        "roll_deg": 0.14343262145929753,
+        "time_s": 10.058000000003236,
+        "xy_um": 100.2143399398302
+      },
+      "task_time_s": 10.058000000003236
+    }
+  ],
+  "relative_improvement": 0.027677969908286304,
+  "source_code_count": 12,
+  "stage_id": "B2-SCOPE-21",
+  "training_admitted": false
+}

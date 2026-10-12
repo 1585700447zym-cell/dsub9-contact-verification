@@ -1,0 +1,11 @@
+{
+  "documents_checked": 6,
+  "local_links_checked": 274,
+  "missing_links": [],
+  "tests": 338,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "added_source_snapshots": 5,
+  "rolling_documents_and_plan_snapshots": 4
+}

@@ -1,0 +1,16 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_numeric_proof_cross_run_splice_refused (__main__.AdmissionTests.test_numeric_proof_cross_run_splice_refused) ... FAIL
+
+======================================================================
+FAIL: test_numeric_proof_cross_run_splice_refused (__main__.AdmissionTests.test_numeric_proof_cross_run_splice_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 91, in test_numeric_proof_cross_run_splice_refused
+    with self.assertRaises(PermissionError):self.c.check_numeric_result(result,ledger,proof)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: PermissionError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.027s
+
+FAILED (failures=1)

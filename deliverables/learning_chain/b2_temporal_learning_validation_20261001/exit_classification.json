@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "error": "RuntimeError('Validation worker failed: 1')",
+  "worker_stop_confirmed": true,
+  "ledger_preserved_pending_process_confirmation": false,
+  "retry_allowed": false,
+  "b2_complete": false
+}

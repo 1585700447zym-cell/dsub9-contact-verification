@@ -1,0 +1,4 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+........................................................................ [ 81%]
+................                                                         [100%]
+88 passed in 10.27s

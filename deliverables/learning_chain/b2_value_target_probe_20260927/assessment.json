@@ -1,0 +1,706 @@
+{
+  "version": "b2_fixed_actor_value_probe_assessment_v2",
+  "valid_comparison": true,
+  "corrected_critic_updates": 2000,
+  "invalid_first_attempt_critic_updates": 2000,
+  "cumulative_critic_updates": 4000,
+  "physical_episodes": 0,
+  "actor_updates": 0,
+  "temperature_updates": 0,
+  "summary": {
+    "one_step": {
+      "train": {
+        "terminal": {
+          "initial_mae": 5.462602019309998,
+          "final_mae": 5.306105136871338,
+          "final_maximum": 8.88159465789795,
+          "relative_mae_reduction": 0.028648779809594682,
+          "passed": false
+        },
+        "suffix_start": {
+          "initial_mae": 4.912320613861084,
+          "final_mae": 4.91022327542305,
+          "final_maximum": 8.031208992004395,
+          "relative_mae_reduction": 0.0004269547130364426,
+          "passed": false
+        },
+        "last_active": {
+          "initial_mae": 4.909897983074188,
+          "final_mae": 4.908362984657288,
+          "final_maximum": 7.640820026397705,
+          "relative_mae_reduction": 0.00031263346452248264,
+          "passed": false
+        }
+      },
+      "development": {
+        "terminal": {
+          "initial_mae": 7.295530736446381,
+          "final_mae": 7.072133094072342,
+          "final_maximum": 8.866092681884766,
+          "relative_mae_reduction": 0.03062116389394509,
+          "passed": false
+        },
+        "suffix_start": {
+          "initial_mae": 6.46950826048851,
+          "final_mae": 6.468275040388107,
+          "final_maximum": 8.026873588562012,
+          "relative_mae_reduction": 0.00019062037650285912,
+          "passed": false
+        },
+        "last_active": {
+          "initial_mae": 6.280591428279877,
+          "final_mae": 6.258403956890106,
+          "final_maximum": 7.608765602111816,
+          "relative_mae_reduction": 0.003532704147871546,
+          "passed": false
+        }
+      }
+    },
+    "exact_inactive_suffix": {
+      "train": {
+        "terminal": {
+          "initial_mae": 5.462602019309998,
+          "final_mae": 0.17388290166854858,
+          "final_maximum": 0.23264598846435547,
+          "relative_mae_reduction": 0.9681684843497875,
+          "passed": true
+        },
+        "suffix_start": {
+          "initial_mae": 4.912320613861084,
+          "final_mae": 2.4926540851593018,
+          "final_maximum": 6.154833793640137,
+          "relative_mae_reduction": 0.4925709697926097,
+          "passed": false
+        },
+        "last_active": {
+          "initial_mae": 4.909897983074188,
+          "final_mae": 4.738011002540588,
+          "final_maximum": 7.359146595001221,
+          "relative_mae_reduction": 0.03500825905673455,
+          "passed": false
+        }
+      },
+      "development": {
+        "terminal": {
+          "initial_mae": 7.295530736446381,
+          "final_mae": 0.1742836833000183,
+          "final_maximum": 0.4360208511352539,
+          "relative_mae_reduction": 0.9761108972607919,
+          "passed": true
+        },
+        "suffix_start": {
+          "initial_mae": 6.46950826048851,
+          "final_mae": 3.611257553100586,
+          "final_maximum": 5.5777459144592285,
+          "relative_mae_reduction": 0.4418033940607564,
+          "passed": false
+        },
+        "last_active": {
+          "initial_mae": 6.280591428279877,
+          "final_mae": 6.074493706226349,
+          "final_maximum": 7.4416022300720215,
+          "relative_mae_reduction": 0.0328150182044199,
+          "passed": false
+        }
+      }
+    }
+  },
+  "every_primary_group_passed": false,
+  "sampling": {
+    "batch_indices_reconstructed_exactly": true,
+    "last_active_row_draws": [
+      11,
+      11,
+      16,
+      7
+    ],
+    "terminal_row_draws": [
+      14,
+      11,
+      9,
+      7
+    ]
+  },
+  "decision_conditioned": {
+    "one_step": {
+      "train": [
+        {
+          "id": "contact_000000",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.634618282318115,
+              "maximum": 7.634618282318115
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 8.144017219543457,
+              "maximum": 8.26425552368164
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 8.911703109741211,
+              "maximum": 9.27200698852539
+            }
+          }
+        },
+        {
+          "id": "contact_000001",
+          "outcome": "TASK_FAILURE",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 501,
+              "label": "TARGET_POSE_NOT_SETTLED"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 2.168055534362793,
+              "maximum": 2.168055534362793
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 500,
+              "mae": 1.8506073951721191,
+              "maximum": 1.894817590713501
+            },
+            "TARGET_POSE_NOT_SETTLED": {
+              "n": 500,
+              "mae": 1.8290952444076538,
+              "maximum": 1.8796864748001099
+            }
+          }
+        },
+        {
+          "id": "contact_000002",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.640820026397705,
+              "maximum": 7.640820026397705
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 8.144392013549805,
+              "maximum": 8.26531982421875
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 8.931229591369629,
+              "maximum": 9.2944974899292
+            }
+          }
+        },
+        {
+          "id": "contact_000003",
+          "outcome": "TASK_FAILURE",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 501,
+              "label": "TARGET_POSE_NOT_SETTLED"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 2.189958095550537,
+              "maximum": 2.189958095550537
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 500,
+              "mae": 1.850439429283142,
+              "maximum": 1.8944144248962402
+            },
+            "TARGET_POSE_NOT_SETTLED": {
+              "n": 500,
+              "mae": 1.8292112350463867,
+              "maximum": 1.8799248933792114
+            }
+          }
+        }
+      ],
+      "development": [
+        {
+          "id": "x_neg_100",
+          "outcome": "TASK_FAILURE",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 501,
+              "label": "TARGET_POSE_NOT_SETTLED"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 2.2085139751434326,
+              "maximum": 2.2085139751434326
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 500,
+              "mae": 1.8509299755096436,
+              "maximum": 1.894647479057312
+            },
+            "TARGET_POSE_NOT_SETTLED": {
+              "n": 500,
+              "mae": 1.8292485475540161,
+              "maximum": 1.8798900842666626
+            }
+          }
+        },
+        {
+          "id": "x_pos_100",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.6081438064575195,
+              "maximum": 7.6081438064575195
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 8.14383602142334,
+              "maximum": 8.264022827148438
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 8.912763595581055,
+              "maximum": 9.27325439453125
+            }
+          }
+        },
+        {
+          "id": "y_neg_100",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.608765602111816,
+              "maximum": 7.608765602111816
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 8.144580841064453,
+              "maximum": 8.264891624450684
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 8.924708366394043,
+              "maximum": 9.287126541137695
+            }
+          }
+        },
+        {
+          "id": "y_pos_100",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.608192443847656,
+              "maximum": 7.608192443847656
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 8.144201278686523,
+              "maximum": 8.26449203491211
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 8.910354614257812,
+              "maximum": 9.270096778869629
+            }
+          }
+        }
+      ]
+    },
+    "exact_inactive_suffix": {
+      "train": [
+        {
+          "id": "contact_000000",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.166420936584473,
+              "maximum": 7.166420936584473
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 1.1426910161972046,
+              "maximum": 2.5949454307556152
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 0.10634741187095642,
+              "maximum": 0.3059968948364258
+            }
+          }
+        },
+        {
+          "id": "contact_000001",
+          "outcome": "TASK_FAILURE",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 501,
+              "label": "TARGET_POSE_NOT_SETTLED"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 2.2208549976348877,
+              "maximum": 2.2208549976348877
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 500,
+              "mae": 0.6810848116874695,
+              "maximum": 3.817211627960205
+            },
+            "TARGET_POSE_NOT_SETTLED": {
+              "n": 500,
+              "mae": 0.1724257469177246,
+              "maximum": 0.35310399532318115
+            }
+          }
+        },
+        {
+          "id": "contact_000002",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.359146595001221,
+              "maximum": 7.359146595001221
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 3.640108346939087,
+              "maximum": 7.252299785614014
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 0.14999684691429138,
+              "maximum": 0.23264598846435547
+            }
+          }
+        },
+        {
+          "id": "contact_000003",
+          "outcome": "TASK_FAILURE",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 501,
+              "label": "TARGET_POSE_NOT_SETTLED"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 2.2056214809417725,
+              "maximum": 2.2056214809417725
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 500,
+              "mae": 0.583038330078125,
+              "maximum": 3.56900691986084
+            },
+            "TARGET_POSE_NOT_SETTLED": {
+              "n": 500,
+              "mae": 0.12950824201107025,
+              "maximum": 0.2794538736343384
+            }
+          }
+        }
+      ],
+      "development": [
+        {
+          "id": "x_neg_100",
+          "outcome": "TASK_FAILURE",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 501,
+              "label": "TARGET_POSE_NOT_SETTLED"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 2.4045989513397217,
+              "maximum": 2.4045989513397217
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 500,
+              "mae": 0.8344359993934631,
+              "maximum": 4.1385650634765625
+            },
+            "TARGET_POSE_NOT_SETTLED": {
+              "n": 500,
+              "mae": 0.2638368308544159,
+              "maximum": 0.46373987197875977
+            }
+          }
+        },
+        {
+          "id": "x_pos_100",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.272205352783203,
+              "maximum": 7.272205352783203
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 1.505066156387329,
+              "maximum": 3.365678310394287
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 0.09867429733276367,
+              "maximum": 0.23086929321289062
+            }
+          }
+        },
+        {
+          "id": "y_neg_100",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.4416022300720215,
+              "maximum": 7.4416022300720215
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 3.1027090549468994,
+              "maximum": 6.2662787437438965
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 0.34065452218055725,
+              "maximum": 0.4360208511352539
+            }
+          }
+        },
+        {
+          "id": "y_pos_100",
+          "outcome": "FULL_SUCCESS",
+          "decision_changes": [
+            {
+              "offset_control_cycles": 0,
+              "label": null
+            },
+            {
+              "offset_control_cycles": 1,
+              "label": "TARGET_PLANE_REACHED"
+            },
+            {
+              "offset_control_cycles": 121,
+              "label": "GEOMETRIC_SUCCESS"
+            }
+          ],
+          "error_by_decision": {
+            "None": {
+              "n": 1,
+              "mae": 7.179568290710449,
+              "maximum": 7.179568290710449
+            },
+            "TARGET_PLANE_REACHED": {
+              "n": 120,
+              "mae": 1.4345990419387817,
+              "maximum": 3.0458340644836426
+            },
+            "GEOMETRIC_SUCCESS": {
+              "n": 880,
+              "mae": 0.17253275215625763,
+              "maximum": 0.43393421173095703
+            }
+          }
+        }
+      ]
+    }
+  },
+  "conclusion": "Exact inactive-tail targets improve terminal fit and mean inactive-tail error, but suffix-start and last-active groups fail preregistered thresholds. No policy-performance claim.",
+  "limitations": [
+    "One checkpoint, four training episodes, one diagnostic batch sequence; archived development data are not independent final tests.",
+    "Outcome decision appears only after action disablement; terminal accuracy does not establish useful pre-decision value or action ranking.",
+    "Direct exact targets change information delivery but keep the uniform sampler; this does not isolate all causes of boundary underfitting."
+  ],
+  "result_sha256": "502ec8680851e5bc7acaa4c7b2907e66f2c3d46da380b63588bd659ef7aa9e24",
+  "protocol_sha256": "16466b90a1a7f658d5d4057d295041c25cf038362e2d429316023fd15143988e"
+}

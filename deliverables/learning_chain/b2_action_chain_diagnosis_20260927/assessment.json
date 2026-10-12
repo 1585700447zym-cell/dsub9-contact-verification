@@ -1,0 +1,1814 @@
+{
+  "version": "b2_08_assessment_v1",
+  "archives": 11,
+  "new_physical_rollouts": 0,
+  "optimizer_updates": 0,
+  "independent_test_used": false,
+  "training_admitted": false,
+  "records": [
+    {
+      "id": "zero_x_neg_100",
+      "cycles": 5491,
+      "replay": {
+        "controller_cycles_replayed": 4491,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4491,
+        "reference_increment_max_abs_xyz_m": [
+          6.876848740520851e-19,
+          1.165623214540324e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.416853303457549e-18,
+          1.531435568635775e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.312000000002361
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007064800526169347,
+        0.005999601433723244,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        9.964229591908905e-06,
+        7.265724443483607e-06,
+        5.850127861324413e-06
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.004982114795954453,
+      "final_xy_um": 61.09917993189201
+    },
+    {
+      "id": "pulse_x_neg_100_neg",
+      "cycles": 5492,
+      "replay": {
+        "controller_cycles_replayed": 4492,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4492,
+        "reference_increment_max_abs_xyz_m": [
+          6.959963848470179e-19,
+          1.1839403020246983e-18,
+          2.0013484684994024e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.520614839496201e-18,
+          1.4603906801848206e-18,
+          4.683094801462785e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.314000000002365
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007053613348485615,
+        0.006008047136817005,
+        0.024475377365763606
+      ],
+      "drive_torque_peak_Nm": [
+        1.0001736233671204e-05,
+        7.479570537088034e-06,
+        5.947330286588419e-06
+      ],
+      "force_cap_utilization": 0.48950754731527213,
+      "torque_cap_utilization": 0.005000868116835602,
+      "final_xy_um": 61.27188442933977,
+      "paired": {
+        "trigger_cycle": 177,
+        "start_s": 0.35399999999999365,
+        "end_s": 0.5539999999999716,
+        "prefix_exact": true,
+        "axis6": 0,
+        "requested_integral_6d": [
+          -7.4999999999991676e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          -2.0089821324387683e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          -4.296260422589873e-06,
+          -4.69725350056127e-09,
+          0.0,
+          1.2152215698167355e-07,
+          -7.754751862508009e-07,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          -4.296260422590001e-06,
+          -4.697253500561883e-09,
+          -2.3174631918337907e-11,
+          1.2152215698170378e-07,
+          -7.754751862508648e-07,
+          1.2648041758479398e-13
+        ],
+        "reference_to_requested_axis_ratio": 0.5728347230120637,
+        "paired_reference_minus_command_integral_6d": [
+          -1.2790197503539935e-19,
+          -6.129408339017935e-22,
+          -2.3174631918337907e-11,
+          3.0228488305137843e-20,
+          -6.395098751769968e-20,
+          1.2648041758479398e-13
+        ],
+        "max_position_difference_m": 4.51103798284924e-09,
+        "max_rotation_difference_rad": 1.2830365207347258e-07,
+        "end_position_difference_m": [
+          -2.579093991663035e-09,
+          -3.7009723908014098e-09,
+          -2.326429457064072e-11
+        ],
+        "end_rotation_difference_rad": [
+          2.2343435504458696e-09,
+          7.622348168886849e-08,
+          -9.477882788265902e-08
+        ],
+        "force_delta_balance": {
+          "drive_rms": 0.0003565405448384504,
+          "contact_rms": 0.0003575150637771355,
+          "residual_rms": 6.217499575632352e-05,
+          "relative_rms_residual": 0.1743840824175977
+        },
+        "torque_delta_balance": {
+          "drive_rms": 1.9343565888516347e-08,
+          "contact_rms": 4.0771386156602227e-07,
+          "residual_rms": 4.080906925652624e-07,
+          "relative_rms_residual": 21.096973273554113
+        },
+        "max_contact_force_delta_N": 0.000490224338918157,
+        "max_contact_torque_delta_Nm": 3.7653641119914664e-06,
+        "later_common_time_max_position_difference_m": 1.0132486830298222e-05,
+        "later_common_time_cycles": 5214,
+        "actual_to_reference_axis_abs_ratio": 0.000600311372677038
+      }
+    },
+    {
+      "id": "pulse_x_neg_100_pos",
+      "cycles": 5459,
+      "replay": {
+        "controller_cycles_replayed": 4459,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4459,
+        "reference_increment_max_abs_xyz_m": [
+          6.932964673276448e-19,
+          1.0910843151819456e-18,
+          2.0013408280781207e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.434217478876262e-18,
+          1.3318534304389805e-18,
+          4.157023406174576e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.248000000002226
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007053922895792983,
+        0.00601274154454786,
+        0.024475359176435185
+      ],
+      "drive_torque_peak_Nm": [
+        1.0171095545080416e-05,
+        7.336054949894621e-06,
+        5.872871731776107e-06
+      ],
+      "force_cap_utilization": 0.48950718352870365,
+      "torque_cap_utilization": 0.005085547772540208,
+      "final_xy_um": 50.898206236910084,
+      "paired": {
+        "trigger_cycle": 177,
+        "start_s": 0.35399999999999365,
+        "end_s": 0.5539999999999716,
+        "prefix_exact": true,
+        "axis6": 0,
+        "requested_integral_6d": [
+          7.4999999999991676e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          2.006044145484442e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          4.2359860860121154e-06,
+          -2.111945136538707e-09,
+          0.0,
+          7.400782380769646e-08,
+          -6.800948768293738e-07,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          4.235986086012245e-06,
+          -2.1119451365390724e-09,
+          -4.918871993747631e-11,
+          7.400782380770839e-08,
+          -6.800948768294438e-07,
+          7.955327786492801e-14
+        ],
+        "reference_to_requested_axis_ratio": 0.5647981448016953,
+        "paired_reference_minus_command_integral_6d": [
+          1.2959604092990795e-19,
+          -3.652002404421617e-22,
+          -4.918871993747631e-11,
+          1.1924635710564447e-20,
+          -6.998609726688657e-20,
+          7.955327786492801e-14
+        ],
+        "max_position_difference_m": 6.128812335746201e-09,
+        "max_rotation_difference_rad": 4.347453295479876e-07,
+        "end_position_difference_m": [
+          6.0935265146168285e-09,
+          -6.549155593733231e-10,
+          -4.858881092612011e-11
+        ],
+        "end_rotation_difference_rad": [
+          -4.0543790576655625e-09,
+          -7.62016502132683e-08,
+          -4.027820213628065e-07
+        ],
+        "force_delta_balance": {
+          "drive_rms": 0.00035062279361284274,
+          "contact_rms": 0.00036050027438018473,
+          "residual_rms": 5.316556321286309e-05,
+          "relative_rms_residual": 0.15163179400015972
+        },
+        "torque_delta_balance": {
+          "drive_rms": 1.8909367852055325e-08,
+          "contact_rms": 3.8534451476387517e-07,
+          "residual_rms": 3.8551212155832397e-07,
+          "relative_rms_residual": 20.387361680968162
+        },
+        "max_contact_force_delta_N": 0.0008105169719016803,
+        "max_contact_torque_delta_Nm": 3.7624617793979174e-06,
+        "later_common_time_max_position_difference_m": 8.778993419579114e-05,
+        "later_common_time_cycles": 5182,
+        "actual_to_reference_axis_abs_ratio": 0.0014385142894445318
+      }
+    },
+    {
+      "id": "search_x_neg",
+      "cycles": 5468,
+      "replay": {
+        "controller_cycles_replayed": 4468,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4468,
+        "reference_increment_max_abs_xyz_m": [
+          7.327364389341732e-19,
+          1.1049544796932348e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.450311104874094e-18,
+          2.376562691758753e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.266000000002264
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007042037866969938,
+        0.005990749932575216,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        9.929092580109737e-06,
+        8.382078178282203e-06,
+        6.126093481440184e-06
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.004964546290054868,
+      "final_xy_um": 53.693186011669546,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 0,
+        "requested_integral_6d": [
+          -7.4999999999991676e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          -2.223933955938977e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          -4.06387030151131e-06,
+          2.0794224066980364e-13,
+          -1.52903032045345e-11,
+          4.4698294356216755e-10,
+          1.6808495656573665e-08,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          -4.063870301512502e-06,
+          2.0794218059147322e-13,
+          -1.5290290734937262e-11,
+          4.4698294356150224e-10,
+          1.680849565657545e-08,
+          2.072834422909869e-15
+        ],
+        "reference_to_requested_axis_ratio": 0.5418493735350605,
+        "paired_reference_minus_command_integral_6d": [
+          -1.1926223897340549e-18,
+          -6.007833041871976e-20,
+          1.2469597239064196e-17,
+          -6.653117064340571e-22,
+          1.7867101231145398e-21,
+          2.072834422909869e-15
+        ],
+        "max_position_difference_m": 1.7485278191119728e-09,
+        "max_rotation_difference_rad": 7.334855560319746e-08,
+        "end_position_difference_m": [
+          -1.7481595717593274e-09,
+          2.4323661835127014e-12,
+          -3.5801249551742353e-11
+        ],
+        "end_rotation_difference_rad": [
+          2.478699438887576e-09,
+          7.142251245983938e-08,
+          -1.651336949538452e-08
+        ],
+        "force_delta_balance": {
+          "drive_rms": 0.0003296947578832926,
+          "contact_rms": 0.00032969200844071473,
+          "residual_rms": 5.6134554234892865e-09,
+          "relative_rms_residual": 1.7026219826875052e-05
+        },
+        "torque_delta_balance": {
+          "drive_rms": 1.0481060956319522e-09,
+          "contact_rms": 1.0569001441163286e-09,
+          "residual_rms": 1.922238576529996e-10,
+          "relative_rms_residual": 0.1834011446494821
+        },
+        "max_contact_force_delta_N": 0.0004714316605366004,
+        "max_contact_torque_delta_Nm": 1.4040025431392092e-09,
+        "later_common_time_max_position_difference_m": 6.749899277697002e-05,
+        "later_common_time_cycles": 4605,
+        "actual_to_reference_axis_abs_ratio": 0.000430171103420474
+      }
+    },
+    {
+      "id": "search_x_pos",
+      "cycles": 5468,
+      "replay": {
+        "controller_cycles_replayed": 4468,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4468,
+        "reference_increment_max_abs_xyz_m": [
+          6.963140222022383e-19,
+          1.094366567852556e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.4740280273972144e-18,
+          2.6753535639027076e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.266000000002264
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007083103741036409,
+        0.005979598627343545,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        9.882427756388099e-06,
+        8.379087100707157e-06,
+        5.719932991819848e-06
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.0049412138781940495,
+      "final_xy_um": 53.681100509706816,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 0,
+        "requested_integral_6d": [
+          7.4999999999991676e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          1.4311652609526081e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          4.0196219660613115e-06,
+          1.6169933742404007e-12,
+          1.2217583598732792e-11,
+          8.187194745861781e-11,
+          -1.6282349470399445e-08,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          4.019621966061353e-06,
+          1.6169933993263061e-12,
+          1.2217579378748233e-11,
+          8.187194745627317e-11,
+          -1.6282349470400798e-08,
+          -1.9879341169508735e-15
+        ],
+        "reference_to_requested_axis_ratio": 0.5359495954749065,
+        "paired_reference_minus_command_integral_6d": [
+          4.1504614415460717e-20,
+          2.5085905427153712e-20,
+          -4.2199845583924115e-18,
+          -2.344643446281557e-21,
+          -1.3532674821367533e-21,
+          -1.9879341169508735e-15
+        ],
+        "max_position_difference_m": 1.6931903697361091e-09,
+        "max_rotation_difference_rad": 7.111217050829651e-08,
+        "end_position_difference_m": [
+          1.6928784144084556e-09,
+          8.504464665677645e-12,
+          3.1368396161829404e-11
+        ],
+        "end_rotation_difference_rad": [
+          1.2676154019536557e-11,
+          -6.962761605536724e-08,
+          1.4454608820805972e-08
+        ],
+        "force_delta_balance": {
+          "drive_rms": 0.00032471820379738,
+          "contact_rms": 0.0003247158196814663,
+          "residual_rms": 5.690487497872855e-09,
+          "relative_rms_residual": 1.7524387088023087e-05
+        },
+        "torque_delta_balance": {
+          "drive_rms": 1.0181720220682844e-09,
+          "contact_rms": 1.0255515696159196e-09,
+          "residual_rms": 1.9789005577877257e-10,
+          "relative_rms_residual": 0.19435817473827713
+        },
+        "max_contact_force_delta_N": 0.00046785608807510786,
+        "max_contact_torque_delta_Nm": 1.2893045841502602e-09,
+        "later_common_time_max_position_difference_m": 7.140745486212322e-05,
+        "later_common_time_cycles": 4605,
+        "actual_to_reference_axis_abs_ratio": 0.0004211536380042303
+      }
+    },
+    {
+      "id": "search_y_neg",
+      "cycles": 5459,
+      "replay": {
+        "controller_cycles_replayed": 4459,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4459,
+        "reference_increment_max_abs_xyz_m": [
+          6.881613300849156e-19,
+          1.0890726119322167e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          5.4163521812176235e-18,
+          6.322253918306098e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.248000000002226
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007052746081856503,
+        0.006009875655636979,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        1.4463560609941553e-05,
+        1.6376316060680005e-05,
+        5.87296931171085e-06
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.008188158030340002,
+      "final_xy_um": 50.86862931211328,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 1,
+        "requested_integral_6d": [
+          0.0,
+          -7.4999999999991676e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          0.0,
+          -2.1798460264415127e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          -8.83689441032892e-13,
+          -4.263288659148253e-06,
+          2.8609337963730092e-11,
+          -1.1502532206015884e-07,
+          9.343260139113836e-12,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          -8.836900937565784e-13,
+          -4.263288659148716e-06,
+          2.860933712156566e-11,
+          -1.1502532206017537e-07,
+          9.34326013363287e-12,
+          3.861932953982277e-15
+        ],
+        "reference_to_requested_axis_ratio": 0.5684384878865586,
+        "paired_reference_minus_command_integral_6d": [
+          -6.527236864125093e-19,
+          -4.633270221481023e-19,
+          -8.421644335874517e-19,
+          -1.6530377361259705e-20,
+          -5.480966593435985e-21,
+          3.861932953982277e-15
+        ],
+        "max_position_difference_m": 3.4956470838370396e-09,
+        "max_rotation_difference_rad": 4.659421544351266e-07,
+        "end_position_difference_m": [
+          -7.684332581055567e-12,
+          -3.4948717037864917e-09,
+          7.322062444206634e-11
+        ],
+        "end_rotation_difference_rad": [
+          -4.633626240924509e-07,
+          -1.5197732107399272e-11,
+          -4.8960899121996754e-08
+        ],
+        "force_delta_balance": {
+          "drive_rms": 0.00035324310849037445,
+          "contact_rms": 0.00035324131032890956,
+          "residual_rms": 1.3482032784831926e-08,
+          "relative_rms_residual": 3.816644248899565e-05
+        },
+        "torque_delta_balance": {
+          "drive_rms": 6.6661617689243e-09,
+          "contact_rms": 6.6557227749826514e-09,
+          "residual_rms": 1.0703921952177135e-09,
+          "relative_rms_residual": 0.1605709900722136
+        },
+        "max_contact_force_delta_N": 0.00048739451481925503,
+        "max_contact_torque_delta_Nm": 7.831671350890967e-09,
+        "later_common_time_max_position_difference_m": 8.701148564814756e-05,
+        "later_common_time_cycles": 4596,
+        "actual_to_reference_axis_abs_ratio": 0.0008197595760462393
+      }
+    },
+    {
+      "id": "search_y_pos",
+      "cycles": 5490,
+      "replay": {
+        "controller_cycles_replayed": 4490,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4490,
+        "reference_increment_max_abs_xyz_m": [
+          6.943023189525093e-19,
+          1.136718215215271e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.539673080809423e-18,
+          1.5383177113322162e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.310000000002357
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007047596235704977,
+        0.006038915957100559,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        1.0121565925589245e-05,
+        5.402862091294028e-06,
+        6.150952642138687e-06
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.0050607829627946225,
+      "final_xy_um": 60.63434294482235,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 1,
+        "requested_integral_6d": [
+          0.0,
+          7.4999999999991676e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          0.0,
+          1.4264842724035866e-06,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          -1.3785592328927636e-12,
+          4.02768738658627e-06,
+          -4.257150725889549e-11,
+          1.1013247117819046e-07,
+          4.1147410084375565e-10,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          -1.3785598097088014e-12,
+          4.027687386586713e-06,
+          -4.257152356329508e-11,
+          1.101324711782034e-07,
+          4.1147410084172606e-10,
+          -3.69874623433107e-15
+        ],
+        "reference_to_requested_axis_ratio": 0.537024984878288,
+        "paired_reference_minus_command_integral_6d": [
+          -5.768160378043868e-19,
+          4.429982314139991e-19,
+          -1.6304399585985962e-17,
+          1.2930487335428929e-20,
+          -2.0295910304754225e-21,
+          -3.69874623433107e-15
+        ],
+        "max_position_difference_m": 3.4636030658493985e-09,
+        "max_rotation_difference_rad": 4.50417547332058e-07,
+        "end_position_difference_m": [
+          -1.0578537584749956e-11,
+          3.4626006194541666e-09,
+          -8.265133065801789e-11
+        ],
+        "end_rotation_difference_rad": [
+          4.479100420909208e-07,
+          1.925568944185192e-09,
+          4.74220763250349e-08
+        ],
+        "force_delta_balance": {
+          "drive_rms": 0.00032432878403348595,
+          "contact_rms": 0.0003243257326330146,
+          "residual_rms": 1.779441733403831e-08,
+          "relative_rms_residual": 5.486536567226512e-05
+        },
+        "torque_delta_balance": {
+          "drive_rms": 6.560143962694142e-09,
+          "contact_rms": 6.55309420462118e-09,
+          "residual_rms": 9.275058929351108e-10,
+          "relative_rms_residual": 0.14138499066630233
+        },
+        "max_contact_force_delta_N": 0.00046831628778298514,
+        "max_contact_torque_delta_Nm": 7.566349765326358e-09,
+        "later_common_time_max_position_difference_m": 3.97285583155529e-06,
+        "later_common_time_cycles": 4627,
+        "actual_to_reference_axis_abs_ratio": 0.0008596994471282856
+      }
+    },
+    {
+      "id": "search_roll_neg",
+      "cycles": 5489,
+      "replay": {
+        "controller_cycles_replayed": 4489,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4489,
+        "reference_increment_max_abs_xyz_m": [
+          6.856731708023561e-19,
+          1.1313183801765249e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.564237036279797e-18,
+          1.7207474323471111e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.306000000002348
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007077212642021005,
+        0.0060346361629708516,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        1.0104424282353185e-05,
+        6.296852331981984e-06,
+        6.472798609511453e-06
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.0050522121411765925,
+      "final_xy_um": 59.96474371045192,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 3,
+        "requested_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0002499999999999729,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0001203941451252393,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          -7.71709436603884e-12,
+          -3.9581060798609886e-10,
+          6.292952926281272e-11,
+          -0.000192837457572233,
+          2.577072424788598e-10,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          -7.7170947854633e-12,
+          -3.9581060801366775e-10,
+          6.292953571435111e-11,
+          -0.0001928374575722516,
+          2.5770738966302165e-10,
+          7.435821519419662e-12
+        ],
+        "reference_to_requested_axis_ratio": 0.7713498302890901,
+        "paired_reference_minus_command_integral_6d": [
+          -4.1942445960446436e-19,
+          -2.756889584062672e-20,
+          6.451538396488409e-18,
+          -1.862117231243854e-17,
+          1.4718416185098973e-16,
+          7.435821519419662e-12
+        ],
+        "max_position_difference_m": 4.537121282568933e-09,
+        "max_rotation_difference_rad": 1.133970080223572e-06,
+        "end_position_difference_m": [
+          -2.5402363941712594e-11,
+          -4.533842267543837e-09,
+          1.7058295834898596e-10
+        ],
+        "end_rotation_difference_rad": [
+          -1.133965878596609e-06,
+          2.6486835598847544e-09,
+          1.5854009821426411e-09
+        ],
+        "force_delta_balance": {
+          "drive_rms": 3.388924545125681e-07,
+          "contact_rms": 3.386617789837367e-07,
+          "residual_rms": 2.8327721141077765e-08,
+          "relative_rms_residual": 0.08358911732579519
+        },
+        "torque_delta_balance": {
+          "drive_rms": 3.4110048396437593e-06,
+          "contact_rms": 3.410999144731825e-06,
+          "residual_rms": 2.812684004688887e-09,
+          "relative_rms_residual": 0.000824591033116986
+        },
+        "max_contact_force_delta_N": 4.942000034887929e-07,
+        "max_contact_torque_delta_Nm": 4.835869300380423e-06,
+        "later_common_time_max_position_difference_m": 9.37512124563474e-06,
+        "later_common_time_cycles": 4626,
+        "actual_to_reference_axis_abs_ratio": 0.005880423299875435
+      }
+    },
+    {
+      "id": "search_roll_pos",
+      "cycles": 5487,
+      "replay": {
+        "controller_cycles_replayed": 4487,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4487,
+        "reference_increment_max_abs_xyz_m": [
+          6.88214269644119e-19,
+          1.1577881597782218e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          7.97142706661022e-18,
+          2.8837236689272655e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.304000000002344
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.0070553619050577766,
+        0.0060221703763714005,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        2.2115522462971396e-05,
+        7.32468047664833e-06,
+        1.5239347766239254e-05
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.011057761231485698,
+      "final_xy_um": 59.818001012680384,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 3,
+        "requested_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0002499999999999729,
+          0.0,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          0.00012039331970504999,
+          0.0,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          -1.471691092576788e-10,
+          5.531682239777297e-10,
+          -1.5833359262812075e-10,
+          0.00019287671062046097,
+          1.0899778468091054e-09,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          -1.4716911066539606e-10,
+          5.531682240444421e-10,
+          -1.583335936319874e-10,
+          0.0001928767106204796,
+          1.0899779957070137e-09,
+          -7.580346019596011e-12
+        ],
+        "reference_to_requested_axis_ratio": 0.771506842482002,
+        "paired_reference_minus_command_integral_6d": [
+          -1.4077172663435157e-18,
+          6.671242659513139e-20,
+          -1.0038666498882958e-18,
+          1.862117231243854e-17,
+          1.4889790823342735e-16,
+          -7.580346019596011e-12
+        ],
+        "max_position_difference_m": 5.998150454262354e-09,
+        "max_rotation_difference_rad": 1.2144691784195604e-06,
+        "end_position_difference_m": [
+          -1.1258176299034934e-09,
+          5.884057373318089e-09,
+          -2.9700566268539563e-10
+        ],
+        "end_rotation_difference_rad": [
+          1.2069907697207104e-06,
+          9.026299768954241e-09,
+          -1.342653829271348e-07
+        ],
+        "force_delta_balance": {
+          "drive_rms": 4.5602499649467766e-07,
+          "contact_rms": 4.5953745626063567e-07,
+          "residual_rms": 3.973777088276426e-08,
+          "relative_rms_residual": 0.0871394576793293
+        },
+        "torque_delta_balance": {
+          "drive_rms": 3.409566758378978e-06,
+          "contact_rms": 3.4093648888113534e-06,
+          "residual_rms": 3.270203785910849e-09,
+          "relative_rms_residual": 0.0009591259000500149
+        },
+        "max_contact_force_delta_N": 6.27383489382561e-07,
+        "max_contact_torque_delta_Nm": 4.8369770756005264e-06,
+        "later_common_time_max_position_difference_m": 8.972826091960103e-06,
+        "later_common_time_cycles": 4624,
+        "actual_to_reference_axis_abs_ratio": 0.006257835722300795
+      }
+    },
+    {
+      "id": "search_pitch_neg",
+      "cycles": 5508,
+      "replay": {
+        "controller_cycles_replayed": 4508,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4508,
+        "reference_increment_max_abs_xyz_m": [
+          6.961552035246281e-19,
+          1.1531294785683231e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          1.0106797126638312e-17,
+          3.3358275045242483e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.346000000002433
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007081313702494848,
+        0.0060299665268221,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        2.7669223256298098e-05,
+        6.846172972989686e-06,
+        1.696643831858468e-05
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.013834611628149049,
+      "final_xy_um": 66.31158756242053,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 4,
+        "requested_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0002499999999999729,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.00012038961288908847,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          6.419618591285663e-11,
+          3.79554379843264e-12,
+          3.0931571538789435e-11,
+          6.017930120510259e-10,
+          -0.00019260318819060311,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          6.419618580211922e-11,
+          3.7955438014010585e-12,
+          3.093155072353415e-11,
+          6.017943470288069e-10,
+          -0.00019260318819061897,
+          -3.5581651950464475e-11
+        ],
+        "reference_to_requested_axis_ratio": 0.7704127527625594,
+        "paired_reference_minus_command_integral_6d": [
+          -1.107374086382529e-19,
+          2.9684184075032344e-21,
+          -2.0815255283991777e-17,
+          1.334977781051497e-15,
+          -1.5856456772600502e-17,
+          -3.5581651950464475e-11
+        ],
+        "max_position_difference_m": 7.228268393782528e-10,
+        "max_rotation_difference_rad": 1.7985241093968537e-07,
+        "end_position_difference_m": [
+          7.181019556659445e-10,
+          1.6726270481967055e-11,
+          8.079884200942744e-11
+        ],
+        "end_rotation_difference_rad": [
+          1.8208331753651222e-10,
+          -1.7978246544744524e-07,
+          -5.012153641010299e-09
+        ],
+        "force_delta_balance": {
+          "drive_rms": 5.391148022430225e-08,
+          "contact_rms": 5.388365820002896e-08,
+          "residual_rms": 6.185907137970344e-09,
+          "relative_rms_residual": 0.1147419271782832
+        },
+        "torque_delta_balance": {
+          "drive_rms": 3.4244013915886145e-06,
+          "contact_rms": 3.4244072492053218e-06,
+          "residual_rms": 4.534295294755653e-10,
+          "relative_rms_residual": 0.00013241132613405894
+        },
+        "max_contact_force_delta_N": 7.631296903193724e-08,
+        "max_contact_torque_delta_Nm": 4.8535766316928925e-06,
+        "later_common_time_max_position_difference_m": 6.548082631838817e-05,
+        "later_common_time_cycles": 4628,
+        "actual_to_reference_axis_abs_ratio": 0.0009334345248195731
+      }
+    },
+    {
+      "id": "search_pitch_pos",
+      "cycles": 5459,
+      "replay": {
+        "controller_cycles_replayed": 4459,
+        "stop_tail_cycles_excluded": 1000,
+        "max_abs_command_errors": {
+          "stage_limited_total": 0.0,
+          "predicted_limited_command": 0.0,
+          "zero_residual_limited_command": 0.0,
+          "effective_command_delta": 0.0,
+          "applied_residual": 0.0,
+          "requested_residual": 0.0,
+          "actual_command": 0.0
+        },
+        "reference_cycles_checked": 4459,
+        "reference_increment_max_abs_xyz_m": [
+          6.920788574659668e-19,
+          1.0561442061077057e-18,
+          2.0013474934946033e-06
+        ],
+        "reference_increment_max_abs_rotation_rad": [
+          4.407535941037752e-18,
+          1.2834666733270786e-18,
+          4.106971645864142e-21
+        ],
+        "reference_nonintegrating_cycles_1pm_or_1nrad": 199
+      },
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.246000000002222
+        }
+      ],
+      "outcome": "TASK_FAILURE",
+      "drive_force_peak_N": [
+        0.007070866573413597,
+        0.005997384466106214,
+        0.024475375070335675
+      ],
+      "drive_torque_peak_Nm": [
+        9.952562678719638e-06,
+        7.234126563626887e-06,
+        5.834941870732293e-06
+      ],
+      "force_cap_utilization": 0.4895075014067135,
+      "torque_cap_utilization": 0.004976281339359819,
+      "final_xy_um": 50.48846364671501,
+      "paired": {
+        "trigger_cycle": 763,
+        "start_s": 1.5259999999998646,
+        "end_s": 1.7259999999998425,
+        "prefix_exact": true,
+        "axis6": 4,
+        "requested_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0002499999999999729,
+          0.0
+        ],
+        "same_state_limiter_integral_6d": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00012039132775682463,
+          0.0
+        ],
+        "paired_command_integral_6d": [
+          -6.784014283365648e-11,
+          3.0012756909713287e-12,
+          -3.515029408707663e-11,
+          7.917143730476935e-10,
+          0.00019260331343606048,
+          0.0
+        ],
+        "end_reference_difference_6d": [
+          -6.78401430897254e-11,
+          3.001275675535331e-12,
+          -3.515030280731857e-11,
+          7.9171571017041e-10,
+          0.0001926033134360765,
+          3.563306254942929e-11
+        ],
+        "reference_to_requested_axis_ratio": 0.7704132537443895,
+        "paired_reference_minus_command_integral_6d": [
+          -2.5606891928545417e-19,
+          -1.543599761990966e-20,
+          -8.720241938560818e-18,
+          1.337122716524731e-15,
+          1.6019087098473328e-17,
+          3.563306254942929e-11
+        ],
+        "max_position_difference_m": 7.42067402395559e-10,
+        "max_rotation_difference_rad": 1.8123874064384013e-07,
+        "end_position_difference_m": [
+          -7.36661888716024e-10,
+          2.2879771663881905e-11,
+          -8.642804787822866e-11
+        ],
+        "end_rotation_difference_rad": [
+          2.5575725576388313e-09,
+          1.8120665909404448e-07,
+          2.2553564579269554e-09
+        ],
+        "force_delta_balance": {
+          "drive_rms": 5.466080022125e-08,
+          "contact_rms": 5.500076561552175e-08,
+          "residual_rms": 4.735318803620034e-09,
+          "relative_rms_residual": 0.08663098206489714
+        },
+        "torque_delta_balance": {
+          "drive_rms": 3.4243852036378094e-06,
+          "contact_rms": 3.424383143246611e-06,
+          "residual_rms": 4.5252288370305414e-10,
+          "relative_rms_residual": 0.00013214719045694036
+        },
+        "max_contact_force_delta_N": 8.640409449026437e-08,
+        "max_contact_torque_delta_Nm": 4.853380503703361e-06,
+        "later_common_time_max_position_difference_m": 9.040070926940757e-05,
+        "later_common_time_cycles": 4596,
+        "actual_to_reference_axis_abs_ratio": 0.0009408283578370811
+      }
+    }
+  ],
+  "baseline_search_windows": [
+    {
+      "start_cycle": 763,
+      "end_cycle_exclusive": 863,
+      "cycles": 100,
+      "start_s": 1.5259999999998646,
+      "end_s": 1.7259999999998425,
+      "actual_xy_max_displacement_um": 0.008372151039549384,
+      "reference_xy_max_displacement_um": 15.642018587106572,
+      "actual_xy_path_um": 0.011290837972678727,
+      "contact_count_min": 1638,
+      "contact_count_max": 1638,
+      "sampled_force_rms_N": 0.006272328602684047,
+      "xy_balance": {
+        "drive_rms": 0.001379131347764933,
+        "contact_rms": 0.0013791321804411945,
+        "residual_rms": 5.7497542034347784e-08,
+        "relative_rms_residual": 4.169112835229962e-05
+      }
+    },
+    {
+      "start_cycle": 863,
+      "end_cycle_exclusive": 963,
+      "cycles": 100,
+      "start_s": 1.7259999999998425,
+      "end_s": 1.9259999999998205,
+      "actual_xy_max_displacement_um": 0.021900762368150795,
+      "reference_xy_max_displacement_um": 24.407055483578546,
+      "actual_xy_path_um": 0.02232055589129852,
+      "contact_count_min": 1211,
+      "contact_count_max": 1638,
+      "sampled_force_rms_N": 0.007565688897614858,
+      "xy_balance": {
+        "drive_rms": 0.0022473800151167986,
+        "contact_rms": 0.0022473636496617997,
+        "residual_rms": 3.42673135937365e-08,
+        "relative_rms_residual": 1.5247672117416954e-05
+      }
+    },
+    {
+      "start_cycle": 963,
+      "end_cycle_exclusive": 1063,
+      "cycles": 100,
+      "start_s": 1.9259999999998205,
+      "end_s": 2.1259999999997987,
+      "actual_xy_max_displacement_um": 0.06882629925070773,
+      "reference_xy_max_displacement_um": 26.07881616699128,
+      "actual_xy_path_um": 0.07216107233599739,
+      "contact_count_min": 728,
+      "contact_count_max": 1195,
+      "sampled_force_rms_N": 0.008173450280380502,
+      "xy_balance": {
+        "drive_rms": 0.0028567865001341082,
+        "contact_rms": 0.0028568453767964627,
+        "residual_rms": 4.928495078013584e-07,
+        "relative_rms_residual": 0.00017251884513533726
+      }
+    },
+    {
+      "start_cycle": 1063,
+      "end_cycle_exclusive": 1163,
+      "cycles": 100,
+      "start_s": 2.1259999999997987,
+      "end_s": 2.3259999999997767,
+      "actual_xy_max_displacement_um": 0.030954195655077274,
+      "reference_xy_max_displacement_um": 26.77809473569774,
+      "actual_xy_path_um": 0.04911077693998634,
+      "contact_count_min": 728,
+      "contact_count_max": 1155,
+      "sampled_force_rms_N": 0.008549606272892587,
+      "xy_balance": {
+        "drive_rms": 0.003390272898723022,
+        "contact_rms": 0.0033902001254159948,
+        "residual_rms": 9.998938184699116e-07,
+        "relative_rms_residual": 0.0002949301865482661
+      }
+    },
+    {
+      "start_cycle": 1163,
+      "end_cycle_exclusive": 1263,
+      "cycles": 100,
+      "start_s": 2.3259999999997767,
+      "end_s": 2.5259999999997547,
+      "actual_xy_max_displacement_um": 0.033625698612561615,
+      "reference_xy_max_displacement_um": 27.226318738596333,
+      "actual_xy_path_um": 0.033976645073169914,
+      "contact_count_min": 1163,
+      "contact_count_max": 1456,
+      "sampled_force_rms_N": 0.00882676134845769,
+      "xy_balance": {
+        "drive_rms": 0.003869682561772507,
+        "contact_rms": 0.0038696674403997785,
+        "residual_rms": 4.503173391445283e-08,
+        "relative_rms_residual": 1.1637061489050424e-05
+      }
+    },
+    {
+      "start_cycle": 1263,
+      "end_cycle_exclusive": 1363,
+      "cycles": 100,
+      "start_s": 2.5259999999997547,
+      "end_s": 2.7259999999997326,
+      "actual_xy_max_displacement_um": 0.36582043292692795,
+      "reference_xy_max_displacement_um": 27.61329108759947,
+      "actual_xy_path_um": 0.3705798430766506,
+      "contact_count_min": 423,
+      "contact_count_max": 1258,
+      "sampled_force_rms_N": 0.009056528575557754,
+      "xy_balance": {
+        "drive_rms": 0.004293594704074062,
+        "contact_rms": 0.004292470742212631,
+        "residual_rms": 1.8615390497807886e-06,
+        "relative_rms_residual": 0.00043356189349088556
+      }
+    },
+    {
+      "start_cycle": 1363,
+      "end_cycle_exclusive": 1463,
+      "cycles": 100,
+      "start_s": 2.7259999999997326,
+      "end_s": 2.9259999999997106,
+      "actual_xy_max_displacement_um": 1.226401280209828,
+      "reference_xy_max_displacement_um": 27.8927999705852,
+      "actual_xy_path_um": 1.2266926265613431,
+      "contact_count_min": 220,
+      "contact_count_max": 417,
+      "sampled_force_rms_N": 0.009236108821237769,
+      "xy_balance": {
+        "drive_rms": 0.0045963051384829215,
+        "contact_rms": 0.004596540348637871,
+        "residual_rms": 8.378101229887025e-07,
+        "relative_rms_residual": 0.00018227904757107447
+      }
+    },
+    {
+      "start_cycle": 1463,
+      "end_cycle_exclusive": 1563,
+      "cycles": 100,
+      "start_s": 2.9259999999997106,
+      "end_s": 3.1259999999996886,
+      "actual_xy_max_displacement_um": 0.36530714386044366,
+      "reference_xy_max_displacement_um": 28.101931834583695,
+      "actual_xy_path_um": 0.4490403853363159,
+      "contact_count_min": 203,
+      "contact_count_max": 220,
+      "sampled_force_rms_N": 0.009404065394627091,
+      "xy_balance": {
+        "drive_rms": 0.004922044326025343,
+        "contact_rms": 0.004923432016180203,
+        "residual_rms": 1.6657513983211022e-06,
+        "relative_rms_residual": 0.0003384267365316948
+      }
+    },
+    {
+      "start_cycle": 1563,
+      "end_cycle_exclusive": 1663,
+      "cycles": 100,
+      "start_s": 3.1259999999996886,
+      "end_s": 3.3259999999996666,
+      "actual_xy_max_displacement_um": 1.18899063900549,
+      "reference_xy_max_displacement_um": 28.389018269855253,
+      "actual_xy_path_um": 1.1913944896316897,
+      "contact_count_min": 210,
+      "contact_count_max": 609,
+      "sampled_force_rms_N": 0.009610330432356219,
+      "xy_balance": {
+        "drive_rms": 0.005351062417003772,
+        "contact_rms": 0.005351917167873632,
+        "residual_rms": 1.7535268290760708e-06,
+        "relative_rms_residual": 0.0003276969492084388
+      }
+    },
+    {
+      "start_cycle": 1663,
+      "end_cycle_exclusive": 1763,
+      "cycles": 100,
+      "start_s": 3.3259999999996666,
+      "end_s": 3.5259999999996445,
+      "actual_xy_max_displacement_um": 0.17674143295750327,
+      "reference_xy_max_displacement_um": 28.377690005248493,
+      "actual_xy_path_um": 0.25327706969676755,
+      "contact_count_min": 635,
+      "contact_count_max": 1552,
+      "sampled_force_rms_N": 0.009826342211308903,
+      "xy_balance": {
+        "drive_rms": 0.005733763068143917,
+        "contact_rms": 0.005731552740204538,
+        "residual_rms": 8.702398907345665e-06,
+        "relative_rms_residual": 0.001517746513750302
+      }
+    },
+    {
+      "start_cycle": 1763,
+      "end_cycle_exclusive": 1863,
+      "cycles": 100,
+      "start_s": 3.5259999999996445,
+      "end_s": 3.7259999999996225,
+      "actual_xy_max_displacement_um": 3.5926207800010768,
+      "reference_xy_max_displacement_um": 28.532007213250388,
+      "actual_xy_path_um": 3.605778685470363,
+      "contact_count_min": 184,
+      "contact_count_max": 1890,
+      "sampled_force_rms_N": 0.010018698619771848,
+      "xy_balance": {
+        "drive_rms": 0.005926685744533414,
+        "contact_rms": 0.005969845167943023,
+        "residual_rms": 0.00015083590111991807,
+        "relative_rms_residual": 0.025450295092673724
+      }
+    },
+    {
+      "start_cycle": 1863,
+      "end_cycle_exclusive": 1963,
+      "cycles": 100,
+      "start_s": 3.7259999999996225,
+      "end_s": 3.9259999999996005,
+      "actual_xy_max_displacement_um": 5.181601570703807,
+      "reference_xy_max_displacement_um": 28.829801814949153,
+      "actual_xy_path_um": 5.33731360479394,
+      "contact_count_min": 0,
+      "contact_count_max": 1971,
+      "sampled_force_rms_N": 0.009736420888404302,
+      "xy_balance": {
+        "drive_rms": 0.005662233138153245,
+        "contact_rms": 0.005645696337169115,
+        "residual_rms": 0.0008098523394168238,
+        "relative_rms_residual": 0.1430270212577223
+      }
+    },
+    {
+      "start_cycle": 1963,
+      "end_cycle_exclusive": 2063,
+      "cycles": 100,
+      "start_s": 3.9259999999996005,
+      "end_s": 4.125999999999858,
+      "actual_xy_max_displacement_um": 1.9714341527934727,
+      "reference_xy_max_displacement_um": 28.95627846645485,
+      "actual_xy_path_um": 1.9720219406856934,
+      "contact_count_min": 129,
+      "contact_count_max": 212,
+      "sampled_force_rms_N": 0.009923118056085799,
+      "xy_balance": {
+        "drive_rms": 0.0058430396777633675,
+        "contact_rms": 0.005843120404015882,
+        "residual_rms": 5.571157350272601e-07,
+        "relative_rms_residual": 9.534690259719682e-05
+      }
+    },
+    {
+      "start_cycle": 2063,
+      "end_cycle_exclusive": 2163,
+      "cycles": 100,
+      "start_s": 4.125999999999858,
+      "end_s": 4.32600000000028,
+      "actual_xy_max_displacement_um": 4.280415059106892,
+      "reference_xy_max_displacement_um": 29.175966050195573,
+      "actual_xy_path_um": 4.369505896810343,
+      "contact_count_min": 4,
+      "contact_count_max": 129,
+      "sampled_force_rms_N": 0.010082639478313808,
+      "xy_balance": {
+        "drive_rms": 0.006113377290723559,
+        "contact_rms": 0.006095312288865181,
+        "residual_rms": 7.400700859559243e-05,
+        "relative_rms_residual": 0.012105748602804329
+      }
+    },
+    {
+      "start_cycle": 2163,
+      "end_cycle_exclusive": 2263,
+      "cycles": 100,
+      "start_s": 4.32600000000028,
+      "end_s": 4.526000000000702,
+      "actual_xy_max_displacement_um": 11.730805422800287,
+      "reference_xy_max_displacement_um": 29.448794798027365,
+      "actual_xy_path_um": 11.925486297526408,
+      "contact_count_min": 3,
+      "contact_count_max": 33,
+      "sampled_force_rms_N": 0.009828403217860297,
+      "xy_balance": {
+        "drive_rms": 0.00570049591208554,
+        "contact_rms": 0.005716461520225466,
+        "residual_rms": 6.855343953599846e-05,
+        "relative_rms_residual": 0.012025872940397923
+      }
+    },
+    {
+      "start_cycle": 2263,
+      "end_cycle_exclusive": 2363,
+      "cycles": 100,
+      "start_s": 4.526000000000702,
+      "end_s": 4.726000000001124,
+      "actual_xy_max_displacement_um": 3.086612948205219,
+      "reference_xy_max_displacement_um": 29.383214324347442,
+      "actual_xy_path_um": 3.4293773187377457,
+      "contact_count_min": 9,
+      "contact_count_max": 1600,
+      "sampled_force_rms_N": 0.010017789162480445,
+      "xy_balance": {
+        "drive_rms": 0.0060835103326915855,
+        "contact_rms": 0.006089523190674227,
+        "residual_rms": 2.138334535052739e-05,
+        "relative_rms_residual": 0.003514968197821167
+      }
+    },
+    {
+      "start_cycle": 2363,
+      "end_cycle_exclusive": 2463,
+      "cycles": 100,
+      "start_s": 4.726000000001124,
+      "end_s": 4.9260000000015465,
+      "actual_xy_max_displacement_um": 2.267139274590843,
+      "reference_xy_max_displacement_um": 29.17361062321831,
+      "actual_xy_path_um": 2.4100037666719887,
+      "contact_count_min": 362,
+      "contact_count_max": 1647,
+      "sampled_force_rms_N": 0.010561705857018166,
+      "xy_balance": {
+        "drive_rms": 0.006866554609161701,
+        "contact_rms": 0.006880156842990107,
+        "residual_rms": 7.63331350584083e-05,
+        "relative_rms_residual": 0.011116657392713487
+      }
+    },
+    {
+      "start_cycle": 2463,
+      "end_cycle_exclusive": 2563,
+      "cycles": 100,
+      "start_s": 4.9260000000015465,
+      "end_s": 5.1260000000019685,
+      "actual_xy_max_displacement_um": 13.24426917966394,
+      "reference_xy_max_displacement_um": 29.678564543926413,
+      "actual_xy_path_um": 13.274733979832545,
+      "contact_count_min": 0,
+      "contact_count_max": 1598,
+      "sampled_force_rms_N": 0.010485163900922436,
+      "xy_balance": {
+        "drive_rms": 0.006775821135172239,
+        "contact_rms": 0.006858023794382953,
+        "residual_rms": 0.0011766551769436895,
+        "relative_rms_residual": 0.17365499375948024
+      }
+    },
+    {
+      "start_cycle": 2563,
+      "end_cycle_exclusive": 2656,
+      "cycles": 93,
+      "start_s": 5.1260000000019685,
+      "end_s": 5.312000000002361,
+      "actual_xy_max_displacement_um": 82.61090533490173,
+      "reference_xy_max_displacement_um": 32.42336352974049,
+      "actual_xy_path_um": 84.28939820646771,
+      "contact_count_min": 0,
+      "contact_count_max": 497,
+      "sampled_force_rms_N": 0.006380023267772843,
+      "xy_balance": {
+        "drive_rms": 0.004289695191455105,
+        "contact_rms": 0.004019123143621792,
+        "residual_rms": 0.0015188812594862176,
+        "relative_rms_residual": 0.3540767331235483
+      }
+    }
+  ]
+}

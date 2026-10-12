@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "at": "2026-10-07T14:27:33.915347+08:00",
+  "source_files": 1057,
+  "production_source_unchanged": true,
+  "prior_pc06_files_checked": 457,
+  "prior_seal": "fd98d247484e919c3c4e099d03575b1d4d40e977a5da939efc088759c84b9ed5",
+  "actual_new_attempts": 27,
+  "whole_matrix_eligible": true,
+  "new_gradient_batches": 0,
+  "published_transitions": 0,
+  "first_use_positions": 4,
+  "first_use_actual_attempts": 12,
+  "positions_consumed_after_execution": true,
+  "inherited_archives_unchanged": 10,
+  "independent_reward_rows_new": 183705,
+  "json_write_recoveries": [],
+  "optimizer_or_physical_retries": 0,
+  "network_calls": 76257,
+  "scope": "closure/provenance; matrix success, learning benefit and paper superiority are separate"
+}

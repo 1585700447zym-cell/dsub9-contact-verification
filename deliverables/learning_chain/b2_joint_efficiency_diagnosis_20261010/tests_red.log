@@ -1,0 +1,88 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_archive_action_transition_trace_alignment_rejected (__main__.ArchiveBoundaryTests.test_archive_action_transition_trace_alignment_rejected) ... FAIL
+test_bad_time_sequence_is_rejected (__main__.ArchiveBoundaryTests.test_bad_time_sequence_is_rejected) ... FAIL
+test_fixed_real_pose_has_zero_path_despite_nonzero_command (__main__.ArchiveBoundaryTests.test_fixed_real_pose_has_zero_path_despite_nonzero_command) ... FAIL
+test_forward_back_forward_does_not_duplicate_progress_reward (__main__.ArchiveBoundaryTests.test_forward_back_forward_does_not_duplicate_progress_reward) ... FAIL
+test_input_phase_defines_cycle_not_stale_left_trace (__main__.ArchiveBoundaryTests.test_input_phase_defines_cycle_not_stale_left_trace) ... FAIL
+test_invalid_onehot_is_rejected (__main__.ArchiveBoundaryTests.test_invalid_onehot_is_rejected) ... FAIL
+test_physical_stop_overrides_latched_policy_phase (__main__.ArchiveBoundaryTests.test_physical_stop_overrides_latched_policy_phase) ... FAIL
+test_task_cut_keeps_stop_confirmation_and_excludes_audit_tail (__main__.ArchiveBoundaryTests.test_task_cut_keeps_stop_confirmation_and_excludes_audit_tail) ... FAIL
+
+======================================================================
+FAIL: test_archive_action_transition_trace_alignment_rejected (__main__.ArchiveBoundaryTests.test_archive_action_transition_trace_alignment_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 36, in test_archive_action_transition_trace_alignment_rejected
+    with self.assertRaises(ValueError):a.validate_alignment({'control_cycles':2,'actions':[{}],'transitions':[{'dt':1.}]*2,'trace':[{'time_s':0.},{'time_s':1.},{'time_s':2.}]})
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_bad_time_sequence_is_rejected (__main__.ArchiveBoundaryTests.test_bad_time_sequence_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 21, in test_bad_time_sequence_is_rejected
+    with self.assertRaises(ValueError):a.time_parts([0.,1.,.9],['INSERT','SEARCH'],.8)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_fixed_real_pose_has_zero_path_despite_nonzero_command (__main__.ArchiveBoundaryTests.test_fixed_real_pose_has_zero_path_despite_nonzero_command)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 31, in test_fixed_real_pose_has_zero_path_despite_nonzero_command
+    self.assertIsNotNone(result)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_forward_back_forward_does_not_duplicate_progress_reward (__main__.ArchiveBoundaryTests.test_forward_back_forward_does_not_duplicate_progress_reward)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 24, in test_forward_back_forward_does_not_duplicate_progress_reward
+    self.assertEqual(first,{'maximum':.001,'terms':{'progress':1.25,'time':-.0002,'force':-.0004,'torque':-.0004,'terminal':0.,'total':1.249}})
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != {'maximum': 0.001, 'terms': {'progress': [88 chars]249}}
+
+======================================================================
+FAIL: test_input_phase_defines_cycle_not_stale_left_trace (__main__.ArchiveBoundaryTests.test_input_phase_defines_cycle_not_stale_left_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 11, in test_input_phase_defines_cycle_not_stale_left_trace
+    self.assertEqual(a.phase_of(ob(2),SCHEMA),'SEARCH')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'SEARCH'
+
+======================================================================
+FAIL: test_invalid_onehot_is_rejected (__main__.ArchiveBoundaryTests.test_invalid_onehot_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 16, in test_invalid_onehot_is_rejected
+    with self.assertRaises(ValueError):a.phase_of(x,SCHEMA)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_physical_stop_overrides_latched_policy_phase (__main__.ArchiveBoundaryTests.test_physical_stop_overrides_latched_policy_phase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 13, in test_physical_stop_overrides_latched_policy_phase
+    self.assertEqual(a.phase_of(ob(2,1),SCHEMA),'STOPPING')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != 'STOPPING'
+
+======================================================================
+FAIL: test_task_cut_keeps_stop_confirmation_and_excludes_audit_tail (__main__.ArchiveBoundaryTests.test_task_cut_keeps_stop_confirmation_and_excludes_audit_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_efficiency_diagnosis_20261010\test_analysis.py", line 18, in test_task_cut_keeps_stop_confirmation_and_excludes_audit_tail
+    self.assertEqual(a.time_parts([0.,1.,2.,3.,4.],['INSERT','SEARCH','STOPPING','STOPPING'],2.5),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     {'INSERT':1.,'SEARCH':1.,'STOPPING':.5})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None != {'INSERT': 1.0, 'SEARCH': 1.0, 'STOPPING': 0.5}
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+FAILED (failures=8)

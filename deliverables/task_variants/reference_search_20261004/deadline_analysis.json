@@ -1,0 +1,16 @@
+{
+  "search_advanced_time_s": 16.885999999987323,
+  "search_advanced_z_mm": -3.6430624146216086,
+  "insertion_time_available_s": 3.1139999999927426,
+  "insertion_advance_mm": 3.093900914985584,
+  "average_actual_z_speed_mm_s": 0.9935455732154126,
+  "pre_stop_z_mm": -0.5511511297484764,
+  "pre_stop_z_speed_mm_s": 0.9909264881934525,
+  "max_insertion_force_mN": 15.040951618181875,
+  "minimum_insertion_step_advance_um": 0.16006308740804456,
+  "remaining_to_zero_mm": 0.5491614996360249,
+  "estimated_seconds_to_zero_at_recent_rate": 0.552729048813305,
+  "final_pin_clearance_um": -4.160479622981536,
+  "proposed_next_total_action_time_s": 25.0,
+  "scope": "Time-budget candidate only. Extrapolation does not verify full geometry, success hold or safe continuation. Old 20s failure remains unchanged."
+}

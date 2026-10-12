@@ -1,0 +1,121 @@
+{
+  "checks": {
+    "learning_full_20260924.xml": {
+      "tests": 163,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 445.655
+    },
+    "learning_full_final_20260924.xml": {
+      "tests": 165,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 395.115
+    },
+    "learning_increment_isolated_recheck_20260924.xml": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 0.417
+    },
+    "learning_increment_legacy_20260924.xml": {
+      "tests": 430,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "wall_seconds": 190.089
+    },
+    "learning_runtime_qualification_20260924.xml": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 44.286
+    },
+    "learning_runtime_recheck_20260924.xml": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 0.599
+    },
+    "learning_tensor_final_20260924.xml": {
+      "tests": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 52.212
+    },
+    "tensor_gradient_mutation_red_20260924.xml": {
+      "tests": 2,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 1.628
+    },
+    "tensor_masks_green_20260924.xml": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 2.28
+    },
+    "tensor_masks_red_20260924.xml": {
+      "tests": 18,
+      "failures": 18,
+      "errors": 0,
+      "skipped": 0,
+      "wall_seconds": 1.963
+    }
+  },
+  "previous_archive_files_verified": 50,
+  "previous_dynamic_inputs_unchanged": 809,
+  "date": "2026-09-24",
+  "delivery": "B1-04",
+  "status": "PASS_LIMITED_INCREMENT",
+  "training_admitted": false,
+  "sac_updates": 0,
+  "simulation_replay_committed": 0,
+  "untrained_serialization": {
+    "case": "aligned development",
+    "traces": 2,
+    "control_cycles_per_trace": 8,
+    "exact": true,
+    "physical_tail_audited": true
+  },
+  "dependencies": {
+    "pinned_distributions": 37,
+    "torch_dlls": 9,
+    "matches": true,
+    "system_user_site_inherited": false
+  },
+  "historical_documents": {
+    "old_docs_checked": 838,
+    "old_docs_changed": []
+  },
+  "native_baseline_archive": {
+    "verified_files": 112,
+    "verified_episodes": 14,
+    "passed": true
+  },
+  "remaining": [
+    "SAC collector and audited atomic replay publication",
+    "full learning-loop integration and trainer-state restoration",
+    "pose/exploration-domain qualification and freeze",
+    "sampling/update cost and explicit training configuration"
+  ],
+  "not_rerun": [
+    "seven-case full dynamic matrix",
+    "23 legacy plugin compilation tests"
+  ],
+  "review": {
+    "critical": 0,
+    "important": 1,
+    "minor": 0,
+    "important_resolved": "Added direct canonical gradient and Q-only actor gradient probes; intentional detach failed both, correct implementation passed.",
+    "runtime_test_fix": "Explicit archived MuJoCo3.9 negative child instead of implicit global import; production runtime unchanged."
+  }
+}

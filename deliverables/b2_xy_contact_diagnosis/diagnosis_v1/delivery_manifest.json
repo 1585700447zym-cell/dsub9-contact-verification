@@ -1,0 +1,23 @@
+{
+  "inputs_sha256": {
+    "deliverables/b2_xy_probe/first_frozen_x100/results_index.json": "213bc748f26174440a1994ad893d3667f99a5b20d5342179282ebba4da66c6b8",
+    "deliverables/b2_xy_probe/first_frozen_x100/runs/x_offset_pos_100um_xy_probe.json.gz": "6909763d55d6d91e627cd746dda9a5e875ef31efb1479f8d08d0efe1b62db18d",
+    "deliverables/b2_exit_gate_v2/verified_frozen_x100/runs/x_offset_pos_100um_b2_v2.json.gz": "78b4c342264f2630d0c57573467f34c3a82f8f6b2bca80868f4216c26dfc63b8",
+    "deliverables/b2_exit_gate_v2/verified_frozen_x100/results_index.json": "3909f623a2d51a0d889ced4419ee8176bd2dafefaf646cfa01b2230406b70489",
+    "deliverables/b2_xy_probe/delivery_manifest.json": "b70c73d987c14dfa4ee85ce6093777dcb0294e72a50b0f01b62625687b30381d",
+    "deliverables/b2_y_probe/first_frozen_y100/results_index.json": "41f413ac5163b61dd5901f1e543d202f3ecab9b803b141fe247acaf4066f82e9",
+    "deliverables/b2_y_probe/first_frozen_y100/runs/y_offset_neg_100um_xy_probe.json.gz": "46d28f9e09acf2c78a5f8479482b6ebc5578f3efe42f496a5f892379912b56e2",
+    "deliverables/b2_exit_gate_v2/verified_frozen_y100/runs/y_offset_neg_100um_b2_v2.json.gz": "405ef32977b8f0f8cca26703d16ba487735e8d1d8a2b64beda9513aacc481fa8",
+    "deliverables/b2_exit_gate_v2/verified_frozen_y100/results_index.json": "b90cd061658e3b98f5318a4feb7f2de63a56ca701b373fe37d43034277c42375",
+    "deliverables/b2_y_probe/delivery_manifest.json": "a6e7c95b5959ff5299162cfddf80c060b7c6d637418fb623c2b34fb24a650463"
+  },
+  "outputs_sha256": {
+    "deliverables/b2_xy_contact_diagnosis/diagnosis_v1/01_月报受阻差异.png": "0343a3280ef0978e074125aae615c3fb5b2e0c22ca49f9e8e844304e3a2b8198",
+    "deliverables/b2_xy_contact_diagnosis/diagnosis_v1/02_Y逐针接触与修正.png": "ac9a27573c15b58fbb993253156447a4f25d4db3738ece1935c29f75bf10dc9c",
+    "deliverables/b2_xy_contact_diagnosis/diagnosis_v1/B2-5.5受阻差异诊断报告.md": "2846c5fe80a8503d1ae7d43d6fa906b793a56db887f69253519b729149e74ba3",
+    "deliverables/b2_xy_contact_diagnosis/diagnosis_v1/diagnose_b2_xy_contacts.py": "6b6e706d89474f960ab8e9c479eb616cc69e501937d493bf2d201b5c2cc5b17e",
+    "deliverables/b2_xy_contact_diagnosis/diagnosis_v1/diagnosis.json": "6fe335daceb074358e19df958d78018cfe9d4b77a14349145297b7d6fac07a72",
+    "deliverables/b2_xy_contact_diagnosis/diagnosis_v1/月报小结.md": "e5d3226b403d81de3cb6338b6ee8cafbad72ed452da5751fb65e775e6e5ce6dc"
+  },
+  "script_sha256": "6b6e706d89474f960ab8e9c479eb616cc69e501937d493bf2d201b5c2cc5b17e"
+}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "pytest_exit_code": 0,
+  "passed_checks": 88,
+  "new_checks": 38,
+  "related_checks": 50,
+  "input_sha256": {
+    "docs/superpowers/plans/2026-10-07-contact-gate-probe.md": "6729713a89d5e9b51084210f64e68739a0223cf60c0120d0207b5ae98224bb60",
+    "deliverables/paper_comparison/contact_gate_probe_20261007/deployment_profile.py": "619254724b9c12e5224fbad413f5d8348a0aa2d1d81f840031b90cf081d0f71b",
+    "deliverables/paper_comparison/contact_gate_probe_20261007/run_probe.py": "9b72d5cb06d78648112b47db3efff57f1d181890b2db71401f2d22ea9d95fa72",
+    "deliverables/paper_comparison/contact_gate_probe_20261007/test_profile.py": "9c7efe517ba8553ef4507bfad1dee036502c2a3b0c09b61c2cc9fd30d893c52d",
+    "deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py": "0a447777f5a1da81fc54a6d56218ffef5e05ebb6b3ce58d52ddae6a912b92451"
+  },
+  "log_sha256": "bdf414940b6c085a47dd72f1560d700c9c697f3bec667f7e823365a96ffcd10d",
+  "scope": "profile/execution and related offline action/comparison checks; not entire repository",
+  "new_dynamics": 0,
+  "new_predictions": 0,
+  "new_optimizer_updates": 0
+}

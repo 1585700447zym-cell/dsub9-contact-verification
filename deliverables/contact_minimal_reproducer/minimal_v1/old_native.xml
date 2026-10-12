@@ -1,0 +1,42 @@
+<mujoco model="dsub9_convex128_contact_dev_v1">
+  <compiler angle="radian" />
+  <option gravity="0 0 0" ccd_tolerance="1.0000000000000001e-09" timestep="0.0002">
+    <flag nativeccd="enable" />
+  </option>
+  <default>
+    <default class="visual">
+      <geom contype="0" conaffinity="0" group="2" />
+    </default>
+    <default class="pin_collision">
+      <geom contype="1" conaffinity="2" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" />
+    </default>
+    <default class="hole_sdf_collision">
+      <geom contype="2" conaffinity="1" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" />
+    </default>
+    <default class="male_guide_collision">
+      <geom contype="4" conaffinity="8" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" />
+    </default>
+    <default class="female_socket_collision">
+      <geom contype="8" conaffinity="4" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" />
+    </default>
+    <default class="hole_convex_collision">
+      <geom contype="2" conaffinity="1" friction="1 0.005 0.0001" solref="0.02 1" solimp="0.9 0.95 0.001 0.5 2" margin="0" />
+    </default>
+  </default>
+  <asset>
+    <mesh name="convex128_main_013" vertex="0.0004702528989433782 0.0003311894581380665 0.00025 0.0008178311285971793 0.0005759816663270721 0.00025 0.0007885839343641103 0.0006154169426577945 0.00025 0.0004534357622593635 0.0003538647420282318 0.00025 0.0004702528989433782 0.0003311894581380665 0.0045 0.0008178311285971793 0.0005759816663270721 0.0045 0.0007885839343641103 0.0006154169426577945 0.0045 0.0004534357622593635 0.0003538647420282318 0.0045" />
+  </asset>
+  <worldbody>
+    <body name="female">
+      <geom name="hole_convex128_05_main_013" type="mesh" mesh="convex128_main_013" pos="0.00554 0.00142 0" class="hole_convex_collision" />
+    </body>
+    <body name="male">
+      <inertial pos="0 0 0" mass="0.05" diaginertia="0.00002 0.00002 0.00002" />
+      <freejoint name="male_freejoint" />
+      <geom name="pin_05" class="pin_collision" type="cylinder" size="0.0005 0.002" pos="0.00554 0.00142 0.002" />
+    </body>
+  </worldbody>
+  <keyframe>
+    <key name="failure" qpos="9.8299550113326625e-05 2.0580398068480773e-07 -0.0037499967260307219 0.99999999999295852 -4.878936777829016e-07 1.3155261512590427e-07 3.71851351932903e-06" />
+  </keyframe>
+</mujoco>

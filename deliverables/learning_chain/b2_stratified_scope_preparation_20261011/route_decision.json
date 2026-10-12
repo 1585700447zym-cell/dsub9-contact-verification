@@ -1,0 +1,19 @@
+{
+  "C_accepted": false,
+  "automatic_tracking": "PAUSED",
+  "cumulative_dynamic": 258,
+  "current_new_model_constructions": 0,
+  "current_new_physical_episodes": 0,
+  "current_new_policy_calls": 0,
+  "current_new_replay_publications": 0,
+  "current_new_tensors": 0,
+  "current_new_updates": 0,
+  "full_B2_accepted": false,
+  "independent_tests": 0,
+  "main_method_requires_RL": true,
+  "next": "implement_separate_21_case_zero_B2_entry_and_verify_offline",
+  "no_control_reward_or_threshold_change": true,
+  "no_separate_21_reset_only_physics_package": true,
+  "rationale": "obtain_new_init_dynamic_and_traditional_baseline_data_in_one_attempt_per_case",
+  "status": "OFFLINE_PREPARATION_COMPLETE_EXECUTION_PENDING"
+}

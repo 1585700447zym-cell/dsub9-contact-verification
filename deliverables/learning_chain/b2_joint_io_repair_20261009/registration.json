@@ -1,0 +1,25 @@
+{
+  "stage_id": "B2-SCOPE-14",
+  "scope": "offline_io_repair_and_recovery_evidence",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "before_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "项目当前入口.md": "ce080d95208efb12f8de90fe87627cb2630058ac378bd76bb92e51e12c51349f",
+    "项目进度跟踪.md": "5429a7d4bbd8b441a9346b6e968e1f8d9c73325148a6f3997b4c76bd785fc4e4",
+    "研究推进计划_当前版.md": "7a3e86b8db33da7bfb972ea0f25e1b82c1c7736cfc73880d21389f9a7a78dfb8",
+    "项目交付总览.md": "57184635c9182f3db66239043cc3cb993206c3b8fab3450f0a4829d8c26731a7",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "402871bdcd090c804dbfab2b24c7d4264662c0a0b7f3a87dcf96c5e3a438335c"
+  },
+  "old_manifest_sha256": "748081e028c4a0e30a3a99efa3eb8cbfc15d09857988d7ac004b8d9fed9d3ff0",
+  "base_sources": {
+    "joint_contract.py": "1e2269d8af278bd7a44e51113b73842a4db13bb2793efb8af87207ef93604509",
+    "supervised.py": "49a06b5573b9aa84ea18552f19e882611df9072f2382daf508c4b0c4b6e87696",
+    "windows_job.py": "4929fe110b9558510d99fdfbdaa3ce77b48e0dfd353932216e4d6fa87de11c08"
+  },
+  "physics": 0,
+  "learning": 0,
+  "checkpoint_loads": 0,
+  "restart_authorized": false,
+  "cumulative_dynamic": 245
+}

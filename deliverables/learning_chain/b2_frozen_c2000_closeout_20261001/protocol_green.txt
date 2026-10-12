@@ -1,0 +1,20 @@
+...E........
+======================================================================
+ERROR: test_invalid_stop_not_guard_success (__main__.NightProtocol.test_invalid_stop_not_guard_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 49, in test_invalid_stop_not_guard_success
+    r=self.row();r['physical_stopped']=False;l.finish(r);self.assertEqual(l.state['status'],'failed')
+                                             ~~~~~~~~^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\night_contract.py", line 118, in finish
+    validate_result(result)
+    ~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\night_contract.py", line 70, in validate_result
+    (r['success'] and (r['guard_hit'] or not r['simulation_valid'] or not r['physical_stopped']))):raise ValueError('Complete physical result required')
+                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Complete physical result required
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.822s
+
+FAILED (errors=1)

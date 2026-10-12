@@ -1,0 +1,427 @@
+{
+  "version": "static_model_applicability_audit_v1",
+  "date": "2026-10-10",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "read_only_scientific_work": true,
+  "new_physics": 0,
+  "new_model_loads": 0,
+  "new_inference": 0,
+  "new_updates": 0,
+  "scientific_modules_loaded": [],
+  "configuration": {
+    "file": "deliverables/learning_chain/b2_joint_sac_continuation_execution_20261009/configuration.json",
+    "sha256": "b61faac57a12248bfe239464eb80f86583fb74b1612f46b7226a279503337d02",
+    "common_key": "d06ace1359de0434e2393d968b26b0cae5abb4e34f5d25e7396e474735cdadfd",
+    "parent_common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+    "canonical_model_sha256": "dbb662662dffc48d002e4bc26963d5192f13ff3be20764eac821f8fd10e861cf",
+    "cases": [
+      {
+        "id": "J01",
+        "pitch_deg": 0.25,
+        "roll_deg": 0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": 75,
+        "y_um": 75,
+        "yaw_deg": 0
+      },
+      {
+        "id": "J02",
+        "pitch_deg": 0.25,
+        "roll_deg": -0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": -75,
+        "y_um": 75,
+        "yaw_deg": 0
+      },
+      {
+        "id": "J03",
+        "pitch_deg": -0.25,
+        "roll_deg": -0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": -75,
+        "y_um": -75,
+        "yaw_deg": 0
+      },
+      {
+        "id": "J04",
+        "pitch_deg": -0.25,
+        "roll_deg": 0.25,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004,
+        "x_um": 75,
+        "y_um": -75,
+        "yaw_deg": 0
+      }
+    ],
+    "geometry_referee": {
+      "id": "clipped_cylinder_convex256_v1",
+      "layers": [
+        {
+          "name": "entry",
+          "radius_m": 0.000675,
+          "z0_m": 0.0,
+          "z1_m": 0.00025
+        },
+        {
+          "name": "main",
+          "radius_m": 0.0006,
+          "z0_m": 0.00025,
+          "z1_m": 0.0045
+        }
+      ],
+      "minimum_axis_z": 0.99,
+      "requires_all_nine_main_overlaps": true,
+      "segments": 256,
+      "tolerance_m": 1e-09
+    },
+    "dynamic_config": {
+      "actual_angular_speed_limit": 0.5,
+      "actual_speed_limit": 0.02,
+      "angular_acceleration": 0.3,
+      "angular_speed": 0.03,
+      "collision_backend": "native",
+      "control_period": 0.002,
+      "force_limit_N": 0.05,
+      "invalid_penetration_m": 8e-05,
+      "linear_acceleration": 0.005,
+      "linear_speed": 0.001,
+      "recovery_distance_m": 0.00025,
+      "recovery_force_N": 0.01,
+      "recovery_speed": 0.0005,
+      "recovery_time_limit_s": 1.0,
+      "reference_lead_m": 0.0002,
+      "reference_lead_rad": 0.03,
+      "rotational_stiffness": 0.02,
+      "stop_force_N": 0.025,
+      "stop_penetration_m": 3e-05,
+      "stop_torque_Nm": 0.0005,
+      "stopped_angular_speed": 0.001,
+      "stopped_speed": 1e-05,
+      "timestep": 0.0002,
+      "torque_limit_Nm": 0.002,
+      "translational_stiffness": 100.0,
+      "travel_limit_m": 0.006
+    },
+    "guard_config": {
+      "initial_roll_pitch_limit_rad": 0.008726646259971648,
+      "max_rotation_from_start_rad": 0.04363323129985824
+    }
+  },
+  "model": {
+    "file": "deliverables/learning_chain/b2_joint_sac_continuation_execution_20261009/model.xml",
+    "sha256": "dbb662662dffc48d002e4bc26963d5192f13ff3be20764eac821f8fd10e861cf",
+    "option": {
+      "gravity": "0 0 0",
+      "ccd_tolerance": "1e-12",
+      "timestep": "0.0002"
+    },
+    "geom_class_counts": {
+      "female_socket_collision": 42,
+      "hole_convex_collision": 4608,
+      "visual": 1,
+      "male_guide_collision": 78,
+      "pin_collision": 9
+    },
+    "pin_geometries": [
+      {
+        "name": "pin_01",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "-0.00554 0.00142 0.002"
+      },
+      {
+        "name": "pin_02",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "-0.00277 0.00142 0.002"
+      },
+      {
+        "name": "pin_03",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "0 0.00142 0.002"
+      },
+      {
+        "name": "pin_04",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "0.00277 0.00142 0.002"
+      },
+      {
+        "name": "pin_05",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "0.00554 0.00142 0.002"
+      },
+      {
+        "name": "pin_06",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "-0.004155 -0.00142 0.002"
+      },
+      {
+        "name": "pin_07",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "-0.001385 -0.00142 0.002"
+      },
+      {
+        "name": "pin_08",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "0.001385 -0.00142 0.002"
+      },
+      {
+        "name": "pin_09",
+        "class": "pin_collision",
+        "type": "cylinder",
+        "size": "0.0005 0.002",
+        "pos": "0.004155 -0.00142 0.002"
+      }
+    ],
+    "male_inertial": {
+      "pos": "0 0 0",
+      "mass": "0.05",
+      "diaginertia": "0.00002 0.00002 0.00002"
+    }
+  },
+  "bound_core_source_checks": [
+    {
+      "file": "tools/model/layered_task.py",
+      "sha256": "d1d73f139199ebf705d539fa73caddeb42a0b473f5e132fbda3501cc33f3d56b",
+      "bound_sha256": "d1d73f139199ebf705d539fa73caddeb42a0b473f5e132fbda3501cc33f3d56b",
+      "matched": true
+    },
+    {
+      "file": "tools/learning/observation.py",
+      "sha256": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+      "bound_sha256": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+      "matched": true
+    },
+    {
+      "file": "tools/learning/v4_observation.py",
+      "sha256": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+      "bound_sha256": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+      "matched": true
+    },
+    {
+      "file": "tools/learning/v4_action.py",
+      "sha256": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+      "bound_sha256": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+      "matched": true
+    },
+    {
+      "file": "tools/learning/v4_session.py",
+      "sha256": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+      "bound_sha256": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+      "matched": true
+    },
+    {
+      "file": "tools/dynamics/cartesian.py",
+      "sha256": "bc06000c5ce82de6fdb2d3cee111131481ec58d6ac3d038e73c23c75b38db935",
+      "bound_sha256": "bc06000c5ce82de6fdb2d3cee111131481ec58d6ac3d038e73c23c75b38db935",
+      "matched": true
+    },
+    {
+      "file": "tools/control/reference_search.py",
+      "sha256": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+      "bound_sha256": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+      "matched": true
+    }
+  ],
+  "S20": {
+    "file": "deliverables/learning_chain/b2_joint_sac_continuation_execution_20261009/assessment.json",
+    "sha256": "cbd1f2ec4579a711120ba66a5cbfeabb19e4b308c794a9999254cf18c4ce3c8a",
+    "fields": {
+      "C_accepted": false,
+      "baseline_inherited": true,
+      "development_continue": false,
+      "full_B2_accepted": false,
+      "independent_tests": 0,
+      "relative_improvement": 0.027677969908286304,
+      "restore_exact": true
+    }
+  },
+  "S21": {
+    "file": "deliverables/learning_chain/b2_joint_efficiency_diagnosis_20261010/diagnosis.json",
+    "sha256": "5c80aee126a00359b1ed7024d5b45091a99cb14e2b7e4fe54a23dafdba1aa160",
+    "fields": {
+      "C_accepted": false,
+      "archive_count": 8,
+      "archive_cycles": 42171,
+      "automatic_tracking": "PAUSED",
+      "cumulative_dynamic": 254,
+      "development_continue": false,
+      "full_B2_accepted": false,
+      "independent_tests": 0,
+      "initial_observation_identical_across_all_eight": true,
+      "mean_F0_s": 8.906000000005788,
+      "mean_F2000_s": 8.65950000000243,
+      "relative_improvement": 0.027677969908286304,
+      "source_code_count": 12,
+      "stage_id": "B2-SCOPE-21",
+      "training_admitted": false
+    },
+    "additional_precision_successes": {
+      "F0": 4,
+      "F2000": 0
+    }
+  },
+  "negative_y_pure_B2": {
+    "file": "deliverables/paper_comparison/frozen_comparison_20261007/run/dev_B2_y_neg_150.json.gz",
+    "archive_sha256": "62070fe63304b03bf8ce24b35f9f60c3fdf7d6e30af654567067959227ea4c67",
+    "comparison_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+    "case": {
+      "id": "y_neg_150",
+      "x_um": 0,
+      "y_um": -150
+    },
+    "outcome": {
+      "simulation_valid": true,
+      "task_outcome": "FULL_SUCCESS",
+      "guard_violations": {
+        "contact": false,
+        "motion": false
+      },
+      "physical_stopped": true,
+      "valid_for_learning": true
+    },
+    "task_end_time_s": 20.779999999978248,
+    "peaks": {
+      "force_N": 0.024474139103047843,
+      "torque_G_Nm": 0.00025797003248999523,
+      "penetration_m": 7.106486275531079e-06,
+      "speed_m_s": 0.0013342605510384554,
+      "drive_force_components_N": [
+        0.012487272015023539,
+        0.01353967913412075,
+        0.02447555455653372
+      ],
+      "drive_torque_components_Nm": [
+        4.198871357969457e-05,
+        4.788403262109566e-05,
+        2.888253449139219e-05
+      ],
+      "contact_count": 2189.0
+    },
+    "controller_events": [
+      {
+        "time_s": 0.7459999999999505,
+        "phase": "UNLOAD",
+        "reason": "AXIAL_STALL"
+      },
+      {
+        "time_s": 1.5259999999998646,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.0002568198433027663
+      },
+      {
+        "time_s": 9.150000000005353,
+        "phase": "WAIT_RECOVERY",
+        "reason": "SEARCH_EXHAUSTED",
+        "reference_boundary_end": true,
+        "reference_boundary_final_segment": true,
+        "reference_xy_m": [
+          0.00011999581848163143,
+          -7.833507843310757e-08
+        ],
+        "predicted_reference_xy_m": [
+          0.00011999999999999968,
+          2.0123250220403783e-07
+        ],
+        "radius_limit_m": 0.00012
+      },
+      {
+        "time_s": 9.742000000003973,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.0002568198433027663
+      },
+      {
+        "time_s": 16.885999999987323,
+        "phase": "INSERT",
+        "reason": "SEARCH_ADVANCED",
+        "progress_origin_z_m": 0.0002568198433027663,
+        "observed_z_m": 0.00035693758537839147,
+        "net_advance_m": 0.00010011774207562517
+      }
+    ],
+    "events": [
+      {
+        "time_s": 9.150000000005353,
+        "reason": "B2_SEARCH_EXHAUSTED",
+        "phase": "STOPPING"
+      },
+      {
+        "time_s": 9.170000000005306,
+        "reason": "RECOVERY_ACCEPTED",
+        "phase": "RETRACT"
+      },
+      {
+        "time_s": 9.719000000004026,
+        "reason": "RECOVERY_DISTANCE_REACHED",
+        "phase": "STOPPING"
+      },
+      {
+        "time_s": 9.742000000003973,
+        "phase": "RUNNING",
+        "reason": "B2_RECOVERY_RESUMED"
+      },
+      {
+        "time_s": 20.539999999978807,
+        "reason": "TARGET_PLANE_REACHED",
+        "phase": "STOPPING"
+      }
+    ],
+    "network_policy_calls": 0,
+    "independent_new_sample": false
+  },
+  "joint_baseline_reuse": {
+    "file": "deliverables/learning_chain/b2_joint_sac_preparation_20261009/baseline_equivalence.json",
+    "baseline_reuse": "ACCEPTED_FOR_DEVELOPMENT_CONTEXT",
+    "comparison_limit": "Different archive layout/session wrappers are not claimed byte-identical; same preserved controller factory, environment, finish criteria, pose and runtime sources. Old B2 references are contextual, not independent tests.",
+    "primary_comparison": "new matched F2000 versus new F0",
+    "rows": [
+      {
+        "case_id": "J01",
+        "archive": "deliverables\\learning_chain\\b2_rebound_execution_20261008\\run\\J01_zero.json.gz",
+        "task_time_s": 7.920000000007865,
+        "role": "reused_development_zero_residual_reference_not_F0",
+        "common_parameters_equal": true
+      },
+      {
+        "case_id": "J02",
+        "archive": "deliverables\\learning_chain\\b2_rebound_execution_20261008\\run\\J02_zero.json.gz",
+        "task_time_s": 8.436000000007017,
+        "role": "reused_development_zero_residual_reference_not_F0",
+        "common_parameters_equal": true
+      },
+      {
+        "case_id": "J03",
+        "archive": "deliverables\\learning_chain\\b2_rebound_execution_20261008\\run\\J03_zero.json.gz",
+        "task_time_s": 9.242000000005138,
+        "role": "reused_development_zero_residual_reference_not_F0",
+        "common_parameters_equal": true
+      },
+      {
+        "case_id": "J04",
+        "archive": "deliverables\\learning_chain\\b2_rebound_execution_20261008\\run\\J04_zero.json.gz",
+        "task_time_s": 10.010000000003348,
+        "role": "reused_development_zero_residual_reference_not_F0",
+        "common_parameters_equal": true
+      }
+    ]
+  }
+}

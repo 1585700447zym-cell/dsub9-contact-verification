@@ -57,10 +57,10 @@ class DynamicConfig:
 
 
 class CartesianEnvironment:
-    def __init__(self, config=None, segments=128, contacts_enabled=True):
+    def __init__(self, config=None, segments=128, contacts_enabled=True, *, model_xml=None):
         self.config=config or DynamicConfig()
         with _project_root_cwd():
-            self.model=mujoco.MjModel.from_xml_string(build_xml(segments))
+            self.model=mujoco.MjModel.from_xml_string(build_xml(segments) if model_xml is None else model_xml)
         self.model.opt.timestep=self.config.timestep
         if self.config.collision_backend=='mpr':
             self.model.opt.disableflags |= int(mujoco.mjtDisableBit.mjDSBL_NATIVECCD)

@@ -1,0 +1,20 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_invalid_metadata_rejected (__main__.PhaseTests.test_invalid_metadata_rejected) ... ok
+test_locked_read_respects_last_phase_deadline (__main__.PhaseTests.test_locked_read_respects_last_phase_deadline) ... ok
+test_missing_file_is_allowed_only_before_first_phase (__main__.PhaseTests.test_missing_file_is_allowed_only_before_first_phase) ... ok
+test_new_record_does_not_rescue_expired_old_phase (__main__.PhaseTests.test_new_record_does_not_rescue_expired_old_phase) ... ok
+test_overflow_json_number_rejected (__main__.PhaseTests.test_overflow_json_number_rejected) ... ok
+test_repeated_reads_and_backward_clock_do_not_extend_deadline (__main__.PhaseTests.test_repeated_reads_and_backward_clock_do_not_extend_deadline) ... ok
+test_child_error_stops_and_records_owned_exit (__main__.ProcessTests.test_child_error_stops_and_records_owned_exit) ... ok
+test_corrupt_phase_stops_child (__main__.ProcessTests.test_corrupt_phase_stops_child) ... ok
+test_expired_phase_stops_child (__main__.ProcessTests.test_expired_phase_stops_child) ... ok
+test_future_phase_cannot_grant_extra_time (__main__.ProcessTests.test_future_phase_cannot_grant_extra_time) ... ok
+test_normal_child_exits_with_success_receipt (__main__.ProcessTests.test_normal_child_exits_with_success_receipt) ... ok
+test_permanent_phase_lock_fails_closed (__main__.ProcessTests.test_permanent_phase_lock_fails_closed) ... ok
+test_unknown_phase_stops_instead_of_allowing_child_success (__main__.ProcessTests.test_unknown_phase_stops_instead_of_allowing_child_success) ... ok
+test_whole_deadline_stops_descendant_tree (__main__.ProcessTests.test_whole_deadline_stops_descendant_tree) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 4.091s
+
+OK

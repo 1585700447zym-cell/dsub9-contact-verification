@@ -1,0 +1,15 @@
+{
+  "tests": 39,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "forbidden_imports": [],
+  "wall_s": 6.002738600000157,
+  "physics": 0,
+  "learner_constructions": 0,
+  "checkpoint_loads": 0,
+  "network_forwards": 0,
+  "updates": 0,
+  "replay_publications": 0
+}

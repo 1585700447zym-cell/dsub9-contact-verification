@@ -1,0 +1,49 @@
+FFFFFFFFF                                                                [100%]
+================================== FAILURES ===================================
+__________ test_schedule_stops_on_failed_target_and_all_protections ___________
+tests\task_variants\test_axis_search_preflight.py:9: in test_schedule_stops_on_failed_target_and_all_protections
+    from tools.validation.run_axis_search_preflight import next_case,case_specs
+E   ModuleNotFoundError: No module named 'tools.validation.run_axis_search_preflight'
+_________________ test_new_budget_is_separate_and_claim_once __________________
+tests\task_variants\test_axis_search_preflight.py:20: in test_new_budget_is_separate_and_claim_once
+    from tools.validation.run_axis_search_preflight import claim_run
+E   ModuleNotFoundError: No module named 'tools.validation.run_axis_search_preflight'
+___________ test_prepare_and_execute_use_same_explicit_new_session ____________
+tests\task_variants\test_axis_search_preflight.py:29: in test_prepare_and_execute_use_same_explicit_new_session
+    from tools.validation.run_axis_search_preflight import make_session
+E   ModuleNotFoundError: No module named 'tools.validation.run_axis_search_preflight'
+_ test_prepared_configuration_and_model_cannot_change_unnoticed[configuration.json] _
+tests\task_variants\test_axis_search_preflight.py:47: in test_prepared_configuration_and_model_cannot_change_unnoticed
+    from tools.validation.run_axis_search_preflight import verify_prepared_files
+E   ModuleNotFoundError: No module named 'tools.validation.run_axis_search_preflight'
+__ test_prepared_configuration_and_model_cannot_change_unnoticed[model.xml] ___
+tests\task_variants\test_axis_search_preflight.py:47: in test_prepared_configuration_and_model_cannot_change_unnoticed
+    from tools.validation.run_axis_search_preflight import verify_prepared_files
+E   ModuleNotFoundError: No module named 'tools.validation.run_axis_search_preflight'
+______ test_changed_preparation_closes_unused_budget_before_any_episode _______
+tests\task_variants\test_axis_search_preflight.py:60: in test_changed_preparation_closes_unused_budget_before_any_episode
+    from tools.validation.run_axis_search_preflight import execute
+E   ModuleNotFoundError: No module named 'tools.validation.run_axis_search_preflight'
+_ test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_changed] _
+tests\task_variants\test_axis_search_preflight.py:74: in test_postflight_input_failure_closes_budget_and_retains_completed_episode
+    from tools.validation import run_axis_search_preflight as runner
+E   ImportError: cannot import name 'run_axis_search_preflight' from 'tools.validation' (unknown location)
+_ test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_missing] _
+tests\task_variants\test_axis_search_preflight.py:74: in test_postflight_input_failure_closes_budget_and_retains_completed_episode
+    from tools.validation import run_axis_search_preflight as runner
+E   ImportError: cannot import name 'run_axis_search_preflight' from 'tools.validation' (unknown location)
+_ test_postflight_input_failure_closes_budget_and_retains_completed_episode[source_changed] _
+tests\task_variants\test_axis_search_preflight.py:74: in test_postflight_input_failure_closes_budget_and_retains_completed_episode
+    from tools.validation import run_axis_search_preflight as runner
+E   ImportError: cannot import name 'run_axis_search_preflight' from 'tools.validation' (unknown location)
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_axis_search_preflight.py::test_schedule_stops_on_failed_target_and_all_protections
+FAILED tests/task_variants/test_axis_search_preflight.py::test_new_budget_is_separate_and_claim_once
+FAILED tests/task_variants/test_axis_search_preflight.py::test_prepare_and_execute_use_same_explicit_new_session
+FAILED tests/task_variants/test_axis_search_preflight.py::test_prepared_configuration_and_model_cannot_change_unnoticed[configuration.json]
+FAILED tests/task_variants/test_axis_search_preflight.py::test_prepared_configuration_and_model_cannot_change_unnoticed[model.xml]
+FAILED tests/task_variants/test_axis_search_preflight.py::test_changed_preparation_closes_unused_budget_before_any_episode
+FAILED tests/task_variants/test_axis_search_preflight.py::test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_changed]
+FAILED tests/task_variants/test_axis_search_preflight.py::test_postflight_input_failure_closes_budget_and_retains_completed_episode[model_missing]
+FAILED tests/task_variants/test_axis_search_preflight.py::test_postflight_input_failure_closes_budget_and_retains_completed_episode[source_changed]
+9 failed in 0.90s

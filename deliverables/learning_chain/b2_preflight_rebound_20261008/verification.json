@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED_PREPARED_REBOUND_CANDIDATE",
+  "user_date": "2026-10-08",
+  "assertions": 348,
+  "bound_files": 2173,
+  "offline_tests": 41,
+  "old_scope_members": 243,
+  "historical_members": 950,
+  "shared_inputs": 1057,
+  "binding_sha256": "b7746e0cfaf29317c1ae692f6ed03c685d0d1a3398965c3fa36fc012b8ed3952",
+  "proposal_sha256": "56b1af5518ddf81573995e31585873e1a46188dba88c2fe77a1f4982ca630d0e",
+  "scope_key": "8b577330f6d3f418185ca0e70ca6f4a2722df0e1dd21a87522994e38dab70ff6",
+  "actual_new": {
+    "engine_loads": 0,
+    "static_initializations": 0,
+    "dynamic_attempts": 0,
+    "physical_substeps": 0,
+    "learner_constructions": 0,
+    "tensor_reads": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "replay_publications": 0
+  },
+  "cumulative_dynamic": 209,
+  "automatic_tracking": "PAUSED",
+  "physical_execution_authorized": false,
+  "training_admitted": false,
+  "full_B2_accepted": false,
+  "C_accepted": false
+}

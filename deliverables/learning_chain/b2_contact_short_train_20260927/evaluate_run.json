@@ -1,0 +1,31 @@
+{
+  "mode": "evaluate",
+  "status": "completed",
+  "started_utc": "2026-09-27T10:37:40.942866+00:00",
+  "command": [
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-u",
+    "-m",
+    "tools.validation.run_contact_training",
+    "--admission",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_contact_execution_20260927\\admission.json",
+    "--sha256",
+    "3c2f8d1153cfad7cdbb570d198c22d42c7b5041ad421d229114815f5b09be985",
+    "--authorize-physical-run",
+    "--evaluate",
+    "--checkpoint",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_contact_short_train_20260927\\run\\training\\checkpoints\\contact_000003",
+    "--checkpoint-sha256",
+    "c29d7837a12a842a0fe8281f47e42d4b22195fc091125e60eff5a60295d01ca1",
+    "--output",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_contact_short_train_20260927\\evaluation_run"
+  ],
+  "protocol_sha256": "4c4e634161247a76d4a6fc57f60e0eee559f73b3bbc39d79dd4740af3651fe36",
+  "exit_code": 0,
+  "wall_s": 1048.9459312000545,
+  "finished_utc": "2026-09-27T10:55:09.890539+00:00",
+  "sources_unchanged": true
+}

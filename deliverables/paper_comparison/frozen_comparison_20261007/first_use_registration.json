@@ -1,0 +1,53 @@
+{
+  "registered_at": "2026-10-07T12:17:27.726860",
+  "qualification_sha256": "63d184c03658d91980799cba71f8f54ccde4b01ef816df9143be69e1974ac819",
+  "position_sampling_seed": 2026100701,
+  "positions": [
+    {
+      "id": "holdout_01",
+      "x_um": 72.199490668416,
+      "y_um": 110.16091384637778
+    },
+    {
+      "id": "holdout_02",
+      "x_um": -81.00634530576173,
+      "y_um": 113.36589217486193
+    },
+    {
+      "id": "holdout_03",
+      "x_um": -120.25298159936679,
+      "y_um": -40.4509150025434
+    },
+    {
+      "id": "holdout_04",
+      "x_um": 120.13977198565823,
+      "y_um": -43.40297118393552
+    }
+  ],
+  "evaluation_set_sha256": "eca7825a6d818e8f65e31f368a1982e1881823bb6f9aa1c673ce80e0930189ce",
+  "frozen_checkpoints": {
+    "F0": {
+      "label": "F50_zero",
+      "pin": "1c70cf5148700be89646ae22280cbd6838ba7bb01a4defa11d7a2879e2063a82",
+      "state_sha256": "7f50f7bbacea089c581b419db69f023deafe0f9099bedad0f39ae8094dc798fa"
+    },
+    "S0": {
+      "label": "S50_zero",
+      "pin": "f50f98d73d6a8dd51384fbcc8f722207ecec47c1b2d8132118d8ebdc629f043b",
+      "state_sha256": "2ec46034143b40f652b58df1d9adf03dc9b836486066a81fd0c48e2a3afed828"
+    },
+    "F2000": {
+      "label": "F50_online_3",
+      "pin": "00a908bf4edd81fb18bb6d664e0240c582a17f71cdaf4745b76ba343b6454986",
+      "state_sha256": "ec21bdce7e0aa903c2f1ab6fec32fe03146983bacb7a344a0064775f075f8960"
+    },
+    "S2000": {
+      "label": "S50_online_3",
+      "pin": "247c66f824fd5a0c949adf4417c971b90b397eb38be7ccfe980f1c74e1a99326",
+      "state_sha256": "a4b3039cfd6e3ba98c6f96281b93fff2e3bf1d17a4216495f9e760ac69b663dc"
+    }
+  },
+  "purpose": "first use after method/checkpoint freeze; no tuning from these results",
+  "first_use_status": "not started at registration; only development B2 first case currently running",
+  "formal_new_updates": 0
+}

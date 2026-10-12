@@ -1,0 +1,19 @@
+{
+  "purpose": "three_boundary_development_rollouts_no_learning",
+  "authorization": "继续修复",
+  "configuration_sha256": "94fc990a0467d7b77a6313f2068cbd84d778b3a59b244ca6b92326308a56f8e9",
+  "verification_sha256": "51dc2d1430fe5c12e995bb8f9198b80ac6da6d503bd416db4b41be1b04a06104",
+  "review_sha256": "3a9067f3e4833b978a73072b59500f46fec034409fba291dacf95c1c82417c56",
+  "max_new_episodes": 3,
+  "max_formal_batches": 0,
+  "max_policy_calls": 0,
+  "training_admitted": false,
+  "tests_passed": true,
+  "review_critical": 0,
+  "review_important": 0,
+  "review_important_found": 1,
+  "author_closed_important": 1,
+  "prior_cumulative": 142,
+  "cumulative_limit": 145,
+  "retry_allowed": false
+}

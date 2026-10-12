@@ -1,0 +1,35 @@
+{
+  "verified_before": {
+    "deliverables/b2_search_recovery/delivery_manifest.json": {
+      "entries": 148,
+      "preexisting_mismatches": []
+    },
+    "deliverables/b2_exit_gate_v2/delivery_manifest.json": {
+      "entries": 66,
+      "preexisting_mismatches": []
+    },
+    "deliverables/reproduction_guide/说明与导出清单.json": {
+      "entries": 9,
+      "preexisting_mismatches": []
+    },
+    "deliverables/visual_usage/delivery_manifest.json": {
+      "entries": 39,
+      "preexisting_mismatches": [
+        ".vscode/settings.json"
+      ]
+    }
+  },
+  "updated_navigation_only": [
+    "报告总索引.md",
+    "deliverables/reproduction_guide/说明与导出清单.json",
+    "deliverables/b2_exit_gate_v2/delivery_manifest.json"
+  ],
+  "v2_manifest_changed_entries": [
+    "deliverables/reproduction_guide/说明与导出清单.json",
+    "报告总索引.md"
+  ],
+  "old_experiment_outputs_unchanged": true,
+  "preexisting_external_settings_sha256_preserved": {
+    ".vscode/settings.json": "e8a18f2fbbb734665a9860cd81eb5cea40ce0d15f03395dc90ed45fbf4924691"
+  }
+}

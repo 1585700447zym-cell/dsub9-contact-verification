@@ -1,0 +1,19 @@
+{
+  "offline": true,
+  "source": "existing zero_x_neg_100",
+  "new_physical_rollouts": 0,
+  "pulse": {
+    "search_entry_cycle": 763,
+    "origin_xy_m": [
+      5.144240567460656e-07,
+      -1.5943458492984064e-08
+    ],
+    "trigger_cycle": 1880,
+    "trigger_time_s": 3.7599999999996188,
+    "trigger_motion_m": 5.020803052215879e-06,
+    "request_cycles": 100,
+    "requested_duration_s": 0.2,
+    "end_reason": "duration_completed"
+  },
+  "nonzero_requests": 100
+}

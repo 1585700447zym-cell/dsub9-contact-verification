@@ -1,0 +1,10 @@
+{
+  "completed": true,
+  "blocked_by": null,
+  "recorded": 26,
+  "unexecuted": [],
+  "wall_seconds": 3523.4785280999495,
+  "source_unchanged": true,
+  "training_admitted": false,
+  "optimizer_updates": 0
+}

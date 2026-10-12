@@ -1,0 +1,104 @@
+{
+  "full_checkpoint_verified": true,
+  "initial_checkpoint_reproduced": true,
+  "new_process_verified": true,
+  "next_batch_equal": true,
+  "next_updates_equal": true,
+  "next_initialization_equal": true,
+  "physical_cut_archive_equal": true,
+  "full_continued_state_equal": true,
+  "warmup_attempts": [
+    {
+      "id": "warmup_0",
+      "transitions": 3045,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 0
+    },
+    {
+      "id": "warmup_1",
+      "transitions": 3045,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 0
+    }
+  ],
+  "unique_transitions": 6098,
+  "actual_native_attempts": 4,
+  "actual_native_transitions": 6106,
+  "checkpoint_update_counts": {
+    "critic": 8,
+    "actor": 8,
+    "temperature": 8,
+    "target": 8
+  },
+  "final_update_counts": {
+    "critic": 16,
+    "actor": 16,
+    "temperature": 16,
+    "target": 16
+  },
+  "credit_remaining": 258,
+  "sampler_count": 3,
+  "checkpoint_sha256": "217b1e8ea5534446ae6dac3cbaf07f493c6a9370eb9941e286aeb5544c18bf9b",
+  "final_state_sha256": "618bd27609613899e90c0c61998b02f5b2d644db05a412b13faf6ef42b08001b",
+  "first_engineering_short_train": false,
+  "runnable_trainer": false,
+  "probe_wall_s": 384.8792504000012,
+  "tests": {
+    "passed": 421,
+    "modules": [
+      "test_action",
+      "test_admission",
+      "test_admitted_collection",
+      "test_audited_replay",
+      "test_b2_admission",
+      "test_b2_checkpoint_admission",
+      "test_b2_sac_admission",
+      "test_candidate_collector",
+      "test_cycle_statistics",
+      "test_engineering_domain",
+      "test_episode_buffer",
+      "test_guard_baseline",
+      "test_guard_events",
+      "test_guard_probe",
+      "test_guarded_session",
+      "test_gym_env",
+      "test_learning_masks",
+      "test_observation",
+      "test_orientation_evidence",
+      "test_outcome",
+      "test_recovery",
+      "test_residual_recovery",
+      "test_residual_regression",
+      "test_residual_session",
+      "test_reward",
+      "test_runtime",
+      "test_sac_checkpoint",
+      "test_sac_collection",
+      "test_sac_update",
+      "test_scheduled_boundary",
+      "test_session",
+      "test_tensor_masks",
+      "test_untrained_policy_runtime",
+      "test_zero_residual"
+    ],
+    "sha256": "c08993a86fde17f8f95482598257c01c88faa795f1145046f623a662784d29d9"
+  }
+}

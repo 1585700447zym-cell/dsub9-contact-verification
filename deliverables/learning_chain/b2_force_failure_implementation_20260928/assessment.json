@@ -1,0 +1,78 @@
+{
+  "status": "implementation_protocol_verification_passed",
+  "tests_passed": 149,
+  "source_count": 906,
+  "forbidden_call_counts": {
+    "optimizer": 0,
+    "physics": 0,
+    "prediction": 0
+  },
+  "review": {
+    "reviewer": "GPT-6 Astra",
+    "reviews": 1,
+    "critical": 0,
+    "important": 3,
+    "important_resolved": 3,
+    "minor": 0,
+    "declined_to_judge": [],
+    "fixes": [
+      {
+        "issue": "per_cycle_event_consistency",
+        "verification": "test_review_event_and_frozen_clock_counterexamples"
+      },
+      {
+        "issue": "frozen_physical_clock",
+        "verification": "test_review_event_and_frozen_clock_counterexamples"
+      },
+      {
+        "issue": "administrative_frequency_stop",
+        "verification": [
+          "test_review_frequency_stop_finishes_run_ledger_without_runtime_fault",
+          "test_controlled_stop_propagates_through_outer_runner"
+        ]
+      }
+    ]
+  },
+  "review_red": {
+    "tests": 10,
+    "failed": 9,
+    "already_passed": 1
+  },
+  "archived_guard_clear_compatibility": [
+    {
+      "episode": "train_00",
+      "task_outcome": "FULL_SUCCESS",
+      "archive_sha256": "fec6dc38aaa6b6017d90e1c76c9172269489e503431fc918768b396130f8a0bc"
+    },
+    {
+      "episode": "train_01",
+      "task_outcome": "TASK_FAILURE",
+      "archive_sha256": "a277e4294232c6b3ef298c7cc2378b3d4c11902c7feced959b842cb65058670f"
+    }
+  ],
+  "history": {
+    "parent_sources": 901,
+    "shared_source_snapshots": 5,
+    "closed_fixed_cycle_files": 100,
+    "prior_repaired_cycle_files": 126,
+    "unchanged": true
+  },
+  "synthetic_checkpoint": {
+    "independent_process": true,
+    "optimizer_updates": 0,
+    "recorded_transition_fixture": true,
+    "actual_trained_state_restore": false,
+    "physical_replay": false
+  },
+  "execution_admitted": false,
+  "training_budget_granted": false,
+  "b2_complete": false,
+  "performance_improvement_demonstrated": false,
+  "restrictions": [
+    "Preparation admission refuses execution.",
+    "Archived failure data is not imported into an actual training replay.",
+    "Old unused 23 starts and 4000 updates remain closed.",
+    "Future execution entry/supervisor must preserve the typed controlled-stop result and receive new qualification.",
+    "All historic entry points remain bound to their original strict rule."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "completed_runs": 14,
+  "fresh_paired_cases": 7,
+  "source_and_config_frozen": true,
+  "all_claimed_successes_rechecked_including_hold": true,
+  "paired_conditions_equal": true,
+  "time_and_budget_checks": true,
+  "historical_B1_verified": true,
+  "B1_prefix_matches_original_6s_runs": true,
+  "X_B2_matches_pilot_except_wall_timing": true,
+  "phase": "B2-4_COMPLETE"
+}

@@ -1,0 +1,15 @@
+{
+  "exit_code": 1,
+  "output_created": false,
+  "claim_created": false,
+  "grant_gate_reached": true,
+  "supervisor": {
+    "deadline_hit": false,
+    "error": "RuntimeError('Guarded child returned failure; no retry')",
+    "go_issued": true,
+    "owned_launcher_exit_confirmed": true,
+    "process_exit_confirmed": true,
+    "returncode": 1,
+    "wall_seconds": 1.5143406999995932
+  }
+}

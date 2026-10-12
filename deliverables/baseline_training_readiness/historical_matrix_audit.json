@@ -1,0 +1,593 @@
+{
+  "scope": "read-only audit of frozen fourteen development runs; not new dynamics",
+  "verified_source_hashes": {
+    "tools/control/fixed_admittance.py": "a283521de6eec6191e4e7db578426f2999ddc89fd7648476f4d8c165dd7aee67",
+    "tools/validation/run_b1_baseline.py": "2c527aea16353a506137569f90de9d60ccb43a8d5ebd5104ee90e371f297e3cc",
+    "tools/model/contact_development.py": "db348846da55935e1886318f53492da3edebd506e7c0663a9fdbc1414ef65bf2",
+    "tools/dynamics/cartesian.py": "6fb2fd4d4e38a45dd0aa0fa1501a1aad45fda18ea3be983b22c949e3bb9da786",
+    "tools/dynamics/safety.py": "76dc145098f09867cbea9699e53a7f32624a3208f5ae781d5913a3ebac95354f",
+    "tools/control/search_recovery.py": "e757eaf145c05f403c96786f9353eb5a4c2e0eeb06d8f90de8269bc928f63b40",
+    "tools/validation/run_b2_search.py": "a7e87404c3ede4967672da1fd57eecc99a3a11e09ae59afc2a2e80d1b71df415"
+  },
+  "runs": [
+    {
+      "case": "aligned",
+      "policy": "B1",
+      "advance_mm": 3.991205576542506,
+      "z_error_um": 8.794423457493899,
+      "xy_error_um": 0.0,
+      "angle_deg": 0.0,
+      "peak_force_mN": 0.0,
+      "peak_torque_mNm": 0.0,
+      "peak_penetration_um": 0.0,
+      "termination": "GEOMETRIC_SUCCESS",
+      "success": true,
+      "stop_time_s": 4.089999999999782,
+      "success_time_s": 4.330000000000289,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [],
+      "final_linear_um_s": 0.2216571572635304,
+      "final_angular_rad_s": 0.0,
+      "events": [
+        {
+          "time_s": 4.089999999999782,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "aligned",
+      "policy": "B2",
+      "advance_mm": 3.991205576542506,
+      "z_error_um": 8.794423457493899,
+      "xy_error_um": 0.0,
+      "angle_deg": 0.0,
+      "peak_force_mN": 0.0,
+      "peak_torque_mNm": 0.0,
+      "peak_penetration_um": 0.0,
+      "termination": "GEOMETRIC_SUCCESS",
+      "success": true,
+      "stop_time_s": 4.089999999999782,
+      "success_time_s": 4.330000000000289,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [],
+      "final_linear_um_s": 0.2216571572635304,
+      "final_angular_rad_s": 0.0,
+      "events": [
+        {
+          "time_s": 4.089999999999782,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "policy": "B1",
+      "advance_mm": 0.24999786865147633,
+      "z_error_um": 3750.0021313485236,
+      "xy_error_um": 97.07053044374034,
+      "angle_deg": 8.325059222812245e-05,
+      "peak_force_mN": 24.4773781682511,
+      "peak_torque_mNm": 0.008798516968341547,
+      "peak_penetration_um": 6.394593478866072,
+      "termination": "NO_PROGRESS",
+      "success": false,
+      "stop_time_s": 1.339999999999885,
+      "success_time_s": null,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度"
+      ],
+      "final_linear_um_s": 0.488023224338914,
+      "final_angular_rad_s": 7.706289407701685e-06,
+      "events": [
+        {
+          "time_s": 1.339999999999885,
+          "reason": "NO_PROGRESS",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "policy": "B2",
+      "advance_mm": 3.9908100901253145,
+      "z_error_um": 9.18990987468548,
+      "xy_error_um": 63.978838240532504,
+      "angle_deg": 0.22636902865890857,
+      "peak_force_mN": 24.4773781682511,
+      "peak_torque_mNm": 0.2965289468386507,
+      "peak_penetration_um": 15.12477199387784,
+      "termination": "TARGET_POSE_NOT_SETTLED",
+      "success": false,
+      "stop_time_s": 14.719999999992371,
+      "success_time_s": null,
+      "searches": 2,
+      "recoveries": 1,
+      "unmet": [
+        "XY 精度"
+      ],
+      "final_linear_um_s": 8.527144781087507e-12,
+      "final_angular_rad_s": 8.022871074591932e-16,
+      "events": [
+        {
+          "time_s": 9.152000000005348,
+          "reason": "B2_SEARCH_EXHAUSTED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 9.912000000003577,
+          "reason": "RECOVERY_ACCEPTED",
+          "phase": "RETRACT"
+        },
+        {
+          "time_s": 10.461000000002297,
+          "reason": "RECOVERY_DISTANCE_REACHED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 10.484000000002244,
+          "phase": "RUNNING",
+          "reason": "B2_RECOVERY_RESUMED"
+        },
+        {
+          "time_s": 14.719999999992371,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "policy": "B1",
+      "advance_mm": 0.24999745644280505,
+      "z_error_um": 3750.002543557195,
+      "xy_error_um": 97.2680422251343,
+      "angle_deg": 0.00016499714145716858,
+      "peak_force_mN": 24.500692193138438,
+      "peak_torque_mNm": 0.012447998155849887,
+      "peak_penetration_um": 6.476312020981531,
+      "termination": "NO_PROGRESS",
+      "success": false,
+      "stop_time_s": 1.339999999999885,
+      "success_time_s": null,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度"
+      ],
+      "final_linear_um_s": 0.007417920280732433,
+      "final_angular_rad_s": 8.930842343463166e-08,
+      "events": [
+        {
+          "time_s": 1.339999999999885,
+          "reason": "NO_PROGRESS",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "policy": "B2",
+      "advance_mm": 0.23959290605434033,
+      "z_error_um": 3760.4070939456597,
+      "xy_error_um": 96.35708550548141,
+      "angle_deg": 0.3364767470725161,
+      "peak_force_mN": 24.55785478949424,
+      "peak_torque_mNm": 0.3562759071608909,
+      "peak_penetration_um": 12.74065630774243,
+      "termination": "SEARCH_BUDGET_EXHAUSTED",
+      "success": false,
+      "stop_time_s": 10.766000000001586,
+      "success_time_s": null,
+      "searches": 2,
+      "recoveries": 1,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度",
+        "线速度未稳定"
+      ],
+      "final_linear_um_s": 13.365385417958276,
+      "final_angular_rad_s": 0.00020134595298796403,
+      "events": [
+        {
+          "time_s": 9.152000000005348,
+          "reason": "B2_SEARCH_EXHAUSTED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 9.184000000005273,
+          "reason": "RECOVERY_ACCEPTED",
+          "phase": "RETRACT"
+        },
+        {
+          "time_s": 9.733000000003994,
+          "reason": "RECOVERY_DISTANCE_REACHED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 9.75600000000394,
+          "phase": "RUNNING",
+          "reason": "B2_RECOVERY_RESUMED"
+        },
+        {
+          "time_s": 10.766000000001586,
+          "reason": "SEARCH_BUDGET_EXHAUSTED",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "roll_pos_1.5deg",
+      "policy": "B1",
+      "advance_mm": 0.24997152462983901,
+      "z_error_um": 3750.0284753701612,
+      "xy_error_um": 75.7603167800598,
+      "angle_deg": 0.002007583329023466,
+      "peak_force_mN": 24.522128310579216,
+      "peak_torque_mNm": 0.028958694952087062,
+      "peak_penetration_um": 7.612493082762522,
+      "termination": "NO_PROGRESS",
+      "success": false,
+      "stop_time_s": 12.635999999997228,
+      "success_time_s": null,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度"
+      ],
+      "final_linear_um_s": 0.012510829136679447,
+      "final_angular_rad_s": 9.484332359532661e-07,
+      "events": [
+        {
+          "time_s": 12.635999999997228,
+          "reason": "NO_PROGRESS",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "roll_pos_1.5deg",
+      "policy": "B2",
+      "advance_mm": 0.23820586938528426,
+      "z_error_um": 3761.794130614716,
+      "xy_error_um": 24.144051904779307,
+      "angle_deg": 0.7454665383629844,
+      "peak_force_mN": 24.47716410132445,
+      "peak_torque_mNm": 0.21059190566790617,
+      "peak_penetration_um": 7.612493082762522,
+      "termination": "SEARCH_BUDGET_EXHAUSTED",
+      "success": false,
+      "stop_time_s": 10.66600000000182,
+      "success_time_s": null,
+      "searches": 2,
+      "recoveries": 1,
+      "unmet": [
+        "Z 未到位",
+        "姿态精度"
+      ],
+      "final_linear_um_s": 0.034478579844227634,
+      "final_angular_rad_s": 2.6648176309197595e-07,
+      "events": [
+        {
+          "time_s": 9.128000000005404,
+          "reason": "B2_SEARCH_EXHAUSTED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 9.214000000005203,
+          "reason": "RECOVERY_ACCEPTED",
+          "phase": "RETRACT"
+        },
+        {
+          "time_s": 9.763000000003924,
+          "reason": "RECOVERY_DISTANCE_REACHED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 9.78600000000387,
+          "phase": "RUNNING",
+          "reason": "B2_RECOVERY_RESUMED"
+        },
+        {
+          "time_s": 10.66600000000182,
+          "reason": "SEARCH_BUDGET_EXHAUSTED",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "combined_a_scale_0.75",
+      "policy": "B1",
+      "advance_mm": 0.24998230025614737,
+      "z_error_um": 3750.0176997438525,
+      "xy_error_um": 75.8376820676007,
+      "angle_deg": 0.001051915657898491,
+      "peak_force_mN": 24.53280981945847,
+      "peak_torque_mNm": 0.11082980530426327,
+      "peak_penetration_um": 7.542967359477618,
+      "termination": "NO_PROGRESS",
+      "success": false,
+      "stop_time_s": 7.862000000007742,
+      "success_time_s": null,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度"
+      ],
+      "final_linear_um_s": 0.006102812223726528,
+      "final_angular_rad_s": 1.664765796520969e-07,
+      "events": [
+        {
+          "time_s": 7.862000000007742,
+          "reason": "NO_PROGRESS",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "combined_a_scale_0.75",
+      "policy": "B2",
+      "advance_mm": 0.245314894090408,
+      "z_error_um": 3754.685105909592,
+      "xy_error_um": 97.83062081951,
+      "angle_deg": 0.21999993938591259,
+      "peak_force_mN": 24.474237231876227,
+      "peak_torque_mNm": 0.25984098860036897,
+      "peak_penetration_um": 11.569765027706651,
+      "termination": "SEARCH_BUDGET_EXHAUSTED",
+      "success": false,
+      "stop_time_s": 11.635999999999559,
+      "success_time_s": null,
+      "searches": 2,
+      "recoveries": 1,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度"
+      ],
+      "final_linear_um_s": 0.0761694376170876,
+      "final_angular_rad_s": 1.7310027696364769e-06,
+      "events": [
+        {
+          "time_s": 10.148000000003027,
+          "reason": "B2_SEARCH_EXHAUSTED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 10.184000000002943,
+          "reason": "RECOVERY_ACCEPTED",
+          "phase": "RETRACT"
+        },
+        {
+          "time_s": 10.733000000001663,
+          "reason": "RECOVERY_DISTANCE_REACHED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 10.75600000000161,
+          "phase": "RUNNING",
+          "reason": "B2_RECOVERY_RESUMED"
+        },
+        {
+          "time_s": 11.635999999999559,
+          "reason": "SEARCH_BUDGET_EXHAUSTED",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "combined_b_scale_0.75",
+      "policy": "B1",
+      "advance_mm": 0.24997603224046405,
+      "z_error_um": 3750.023967759536,
+      "xy_error_um": 75.68852066289588,
+      "angle_deg": 0.0013898438506468457,
+      "peak_force_mN": 24.55082492761805,
+      "peak_torque_mNm": 0.08698102707806092,
+      "peak_penetration_um": 7.538923524374558,
+      "termination": "NO_PROGRESS",
+      "success": false,
+      "stop_time_s": 7.916000000007856,
+      "success_time_s": null,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度"
+      ],
+      "final_linear_um_s": 0.007628657256937189,
+      "final_angular_rad_s": 8.131326384703525e-08,
+      "events": [
+        {
+          "time_s": 7.916000000007856,
+          "reason": "NO_PROGRESS",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "combined_b_scale_0.75",
+      "policy": "B2",
+      "advance_mm": 3.990277332625755,
+      "z_error_um": 9.722667374245084,
+      "xy_error_um": 76.50657066495607,
+      "angle_deg": 0.5400156425248579,
+      "peak_force_mN": 24.4679431781661,
+      "peak_torque_mNm": 0.168041040706419,
+      "peak_penetration_um": 7.538923524374558,
+      "termination": "TARGET_POSE_NOT_SETTLED",
+      "success": false,
+      "stop_time_s": 13.317999999995639,
+      "success_time_s": null,
+      "searches": 1,
+      "recoveries": 0,
+      "unmet": [
+        "XY 精度",
+        "姿态精度"
+      ],
+      "final_linear_um_s": 1.0227515533654697e-11,
+      "final_angular_rad_s": 4.76444019840757e-15,
+      "events": [
+        {
+          "time_s": 13.317999999995639,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "combined_a",
+      "policy": "B1",
+      "advance_mm": 0.24996132095084395,
+      "z_error_um": 3750.038679049156,
+      "xy_error_um": 75.79848163861715,
+      "angle_deg": 0.0006293927595587709,
+      "peak_force_mN": 24.586904880679505,
+      "peak_torque_mNm": 0.11492042161875991,
+      "peak_penetration_um": 7.104460013426887,
+      "termination": "NO_PROGRESS",
+      "success": false,
+      "stop_time_s": 9.622000000004252,
+      "success_time_s": null,
+      "searches": 0,
+      "recoveries": 0,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度"
+      ],
+      "final_linear_um_s": 0.08645786981776313,
+      "final_angular_rad_s": 1.6826958512387882e-06,
+      "events": [
+        {
+          "time_s": 9.622000000004252,
+          "reason": "NO_PROGRESS",
+          "phase": "STOPPING"
+        }
+      ]
+    },
+    {
+      "case": "combined_a",
+      "policy": "B2",
+      "advance_mm": 0.239497890197411,
+      "z_error_um": 3760.502109802589,
+      "xy_error_um": 92.39437293621937,
+      "angle_deg": 0.5050473037682146,
+      "peak_force_mN": 24.470800879291314,
+      "peak_torque_mNm": 0.25352054278359815,
+      "peak_penetration_um": 14.528525912401207,
+      "termination": "SEARCH_BUDGET_EXHAUSTED",
+      "success": false,
+      "stop_time_s": 12.08599999999851,
+      "success_time_s": null,
+      "searches": 2,
+      "recoveries": 1,
+      "unmet": [
+        "Z 未到位",
+        "XY 精度",
+        "姿态精度"
+      ],
+      "final_linear_um_s": 0.4603074294763232,
+      "final_angular_rad_s": 6.775962097351626e-05,
+      "events": [
+        {
+          "time_s": 10.60600000000196,
+          "reason": "B2_SEARCH_EXHAUSTED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 10.634000000001894,
+          "reason": "RECOVERY_ACCEPTED",
+          "phase": "RETRACT"
+        },
+        {
+          "time_s": 11.183000000000614,
+          "reason": "RECOVERY_DISTANCE_REACHED",
+          "phase": "STOPPING"
+        },
+        {
+          "time_s": 11.20600000000056,
+          "phase": "RUNNING",
+          "reason": "B2_RECOVERY_RESUMED"
+        },
+        {
+          "time_s": 12.08599999999851,
+          "reason": "SEARCH_BUDGET_EXHAUSTED",
+          "phase": "STOPPING"
+        }
+      ]
+    }
+  ],
+  "reference_index": {
+    "file": "deliverables/b2_search_recovery/matrix_v1_7cases/results_index.json",
+    "sha256": "d80fbf8ba4708c95976aa951fcf426def80f968caca361e02a1ac95b007fb98a"
+  },
+  "reference_runs": [
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_01/runs/aligned_b1.json.gz",
+      "sha256": "470a98a5b2d214a2d6fb66030a073a76144fc4bfc610ac4c92c3394222771782"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_01/runs/aligned_b2.json.gz",
+      "sha256": "ae72b0e61e063ec1d0570f4066b462763343b949d0fbcdaca96bafd599aed9a3"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_02/runs/x_offset_pos_100um_b1.json.gz",
+      "sha256": "d2778a530ea265e820282cd6f6fd5438d84e0a3c2ff914bd852effebd9890afb"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_02/runs/x_offset_pos_100um_b2.json.gz",
+      "sha256": "0941fefcd5722af1527520b3e6a6b5f4d7138607878d421205b7a1a846bb4a4a"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_03/runs/y_offset_neg_100um_b1.json.gz",
+      "sha256": "f1ba040b70981bd37a8708695ec917490c1789d76c8752d80441af19494fae68"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_03/runs/y_offset_neg_100um_b2.json.gz",
+      "sha256": "797ac37a825555fe8ea57ac6ab15381a01e7e498aaca6599fe91d61f4aa812c4"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_04/runs/roll_pos_1.5deg_b1.json.gz",
+      "sha256": "4585b1166d93fe0be14dd46fa80e5ef99a282110624df0ddeff0b28bf35b19e5"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_04/runs/roll_pos_1.5deg_b2.json.gz",
+      "sha256": "6d25456c45f4ebb25239f5a05f9059cfc7cd7c3365773624b45714e70572e205"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_05/runs/combined_a_scale_0.75_b1.json.gz",
+      "sha256": "1392b9ba69b534a7a814d6d8aac05223f9b16d6d59534665a892436ab41df594"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_05/runs/combined_a_scale_0.75_b2.json.gz",
+      "sha256": "0467532a94902b7bacd4bdf3063d55bb9f65b26416cb51d0f810ffd26d47f62c"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_06/runs/combined_b_scale_0.75_b1.json.gz",
+      "sha256": "c284f44c1af56941d5bc308d41573d9df2e95b208a1494179f0b7ec72a651e1a"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_06/runs/combined_b_scale_0.75_b2.json.gz",
+      "sha256": "e92b8725ec7a3101776593740ad297271f9daac7bc86b1a88d81a426e3a3c754"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_07/runs/combined_a_b1.json.gz",
+      "sha256": "42f1d9099b40a8ccb9aecadce612b6be8e3d27e11c4208d40e784750b258b659"
+    },
+    {
+      "file": "deliverables/b2_search_recovery/matrix_v1_case_07/runs/combined_a_b2.json.gz",
+      "sha256": "052ad1da6fa00114b0e6c3abeff3081ef036929eb43b7a3f13cdfc12990f4b02"
+    }
+  ],
+  "all_final_stopped": false,
+  "old_mujoco_version": "3.9.0"
+}

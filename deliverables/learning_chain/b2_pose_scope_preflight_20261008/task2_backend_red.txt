@@ -1,0 +1,25 @@
+test_reset_failure_retains_attempt_and_error_archive (test_physical_interface.BackendTests.test_reset_failure_retains_attempt_and_error_archive) ... FAIL
+test_static_uses_registered_angle_and_never_steps (test_physical_interface.BackendTests.test_static_uses_registered_angle_and_never_steps) ... FAIL
+
+======================================================================
+FAIL: test_reset_failure_retains_attempt_and_error_archive (test_physical_interface.BackendTests.test_reset_failure_retains_attempt_and_error_archive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_physical_interface.py", line 13, in setUp
+    self.assertIsNotNone(self.api,'Missing archive-producing backend')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing archive-producing backend
+
+======================================================================
+FAIL: test_static_uses_registered_angle_and_never_steps (test_physical_interface.BackendTests.test_static_uses_registered_angle_and_never_steps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_physical_interface.py", line 13, in setUp
+    self.assertIsNotNone(self.api,'Missing archive-producing backend')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing archive-producing backend
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+FAILED (failures=2)

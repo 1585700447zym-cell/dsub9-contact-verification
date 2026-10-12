@@ -1,0 +1,39 @@
+{
+  "version": "b2_warm_reconstruction_inputs_v1",
+  "source_grant_sha256": "5695229b17e5009bc58674d556a5f8aa1ac2ef91a46e2c87db887ee67a2ec7ed",
+  "zero_manifest": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\checkpoints\\zero\\manifest.json",
+  "zero_state": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\checkpoints\\zero\\state.pt",
+  "zero_manifest_sha256": "c8f36c8bdf5c874ddf4e42199af4728fbdeb0ddb63785826b33ed38314ec1d86",
+  "zero_state_sha256": "2884d346e614697e93c48440f3cf9f27a3eab4166a63fd1aea6d27dc49dd8834",
+  "source_closure": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\authorization_closure.json",
+  "source_summary": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution_summary.json",
+  "probe_archive": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J01.json.gz",
+  "warmup": [
+    {
+      "id": "warmup_F50_J01",
+      "archive": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J01\\episode.json.gz",
+      "receipt": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J01\\status.json"
+    },
+    {
+      "id": "warmup_F50_J02",
+      "archive": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J02\\episode.json.gz",
+      "receipt": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J02\\status.json"
+    },
+    {
+      "id": "warmup_F50_J03",
+      "archive": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J03\\episode.json.gz",
+      "receipt": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J03\\status.json"
+    },
+    {
+      "id": "warmup_F50_J04",
+      "archive": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J04\\episode.json.gz",
+      "receipt": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\chain\\warmup_F50_J04\\status.json"
+    }
+  ],
+  "actor_sha256": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+  "source_boundary": "after_four_complete_warmup_publications_before_online_J01",
+  "expected_replay_rows": 19300,
+  "expected_active_rows": 14127,
+  "expected_warm_draws": 388,
+  "source_cumulative_dynamic": 245
+}

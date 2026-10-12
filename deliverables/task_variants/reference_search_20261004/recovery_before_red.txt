@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____ test_recovery_first_command_observes_reset_reference_without_physics _____
+tests\task_variants\test_reference_search.py:139: in test_recovery_first_command_observes_reset_reference_without_physics
+    assert composition['reference_xy_m']==[0.,0.] and snap.base_command[0]>0
+E   assert ([5e-05, 0.0] == [0.0, 0.0]
+E     
+E     At index 0 diff: 5e-05 != 0.0
+E     Use -v to get more diff)
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_reference_search.py::test_recovery_first_command_observes_reset_reference_without_physics
+1 failed, 19 deselected in 1.20s

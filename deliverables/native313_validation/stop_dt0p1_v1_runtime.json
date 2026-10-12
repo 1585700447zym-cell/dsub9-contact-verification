@@ -1,0 +1,9 @@
+{
+  "mujoco_version": "3.13.0",
+  "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+  "timestep": 0.0001,
+  "source_sha256": {
+    "deliverables/native313_validation/static_extended.json": "65449c2b2fe4ac701390b75bb6a9bd6128de6ce2eec0cd9d648e01ffca00d486",
+    "tools/validation/run_native313_validation.py": "4b0a1a12894e56666b6422aada221c4a4685419352dfda18202bf2c21ff31889"
+  }
+}

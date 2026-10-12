@@ -1,0 +1,101 @@
+EEEEEEEEEEEE
+======================================================================
+ERROR: test_conditional_small_gate (__main__.NightProtocol.test_conditional_small_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_fault_retains_started_cost (__main__.NightProtocol.test_fault_retains_started_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_guard_closes_candidate (__main__.NightProtocol.test_guard_closes_candidate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_invalid_stop_not_guard_success (__main__.NightProtocol.test_invalid_stop_not_guard_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_mutated_scope_refused (__main__.NightProtocol.test_mutated_scope_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_no_early_restore (__main__.NightProtocol.test_no_early_restore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_order_and_no_duplicate (__main__.NightProtocol.test_order_and_no_duplicate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_ordinary_failure_continues (__main__.NightProtocol.test_ordinary_failure_continues)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_restore_only_after_four_and_fifth_cap (__main__.NightProtocol.test_restore_only_after_four_and_fifth_cap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_result_cycle_substep_consistency (__main__.NightProtocol.test_result_cycle_substep_consistency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_scope_and_small_scale (__main__.NightProtocol.test_scope_and_small_scale)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+======================================================================
+ERROR: test_tampered_ledger_rejected (__main__.NightProtocol.test_tampered_ledger_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 7, in setUp
+    import night_contract as N
+ModuleNotFoundError: No module named 'night_contract'
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+FAILED (errors=12)

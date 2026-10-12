@@ -1,0 +1,11 @@
+{
+  "posthoc": true,
+  "threshold_m": 5e-06,
+  "trigger_cycle": 1880,
+  "time_s": 3.7599999999996188,
+  "observed_xy_motion_m": 5.020803052215879e-06,
+  "window_end_s": 3.9599999999995967,
+  "all_window_search": true,
+  "baseline_self_xy_max_um": 3.877271761565473,
+  "note": "Feasibility preview only, no pulse outcome forecast or physical rollout. Trigger uses existing float32 whitelist relative XY and phase plus permission."
+}

@@ -1,0 +1,101 @@
+{
+  "baseline_reuse_candidates": [
+    {
+      "archive_sha256": "5ee0bece351b57d7079fa23e40d4af48ebb6177f50f186230ab101e813009f82",
+      "file": "deliverables/learning_chain/b2_rebound_execution_20261008/run/J01_zero.audit.json",
+      "outcome": {
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      },
+      "reuse_status": "CANDIDATE_SUBJECT_TO_PILOT_COMMON_SOURCE_EQUIVALENCE",
+      "sha256": "28cd49db367cc0883fb57598279873493bdf46e3cb69d9b6404ceefa6772c335",
+      "task_time_s": 7.920000000007865
+    },
+    {
+      "archive_sha256": "05ff4de62c06c5b89e696ba57cc6ab61344f4e5a3c3968ae4e7ce7857c46a47f",
+      "file": "deliverables/learning_chain/b2_rebound_execution_20261008/run/J02_zero.audit.json",
+      "outcome": {
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      },
+      "reuse_status": "CANDIDATE_SUBJECT_TO_PILOT_COMMON_SOURCE_EQUIVALENCE",
+      "sha256": "0728678a3242212d157a80138352b83110aaa1b772cd7682fb8887177d15c402",
+      "task_time_s": 8.436000000007017
+    },
+    {
+      "archive_sha256": "7c1c5561b2fe199e05e76607fd3575a6e35d5e88b94bb2a61f3aaee2cc8284af",
+      "file": "deliverables/learning_chain/b2_rebound_execution_20261008/run/J03_zero.audit.json",
+      "outcome": {
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      },
+      "reuse_status": "CANDIDATE_SUBJECT_TO_PILOT_COMMON_SOURCE_EQUIVALENCE",
+      "sha256": "72dc097bbbb339f376a8e453f42f7183d4984fd770308ae2c3c5c9c3701c5457",
+      "task_time_s": 9.242000000005138
+    },
+    {
+      "archive_sha256": "dae3f9a7ff02bc5a46e03b0e98d1a32607fb1adad5af223dd633027a6f9a9692",
+      "file": "deliverables/learning_chain/b2_rebound_execution_20261008/run/J04_zero.audit.json",
+      "outcome": {
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "model_scope_qualified": false,
+        "physical_stopped": true,
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "training_admitted": false,
+        "valid_for_learning": false
+      },
+      "reuse_status": "CANDIDATE_SUBJECT_TO_PILOT_COMMON_SOURCE_EQUIVALENCE",
+      "sha256": "511b60efdb5764ba652a58c836a93a2e67e7ec2234b1a040dbef00976d673b39",
+      "task_time_s": 10.010000000003348
+    }
+  ],
+  "execution_authorized": false,
+  "later_B2_requirements": [
+    "repeatable small-scale learning and matched task evaluation",
+    "frozen independent evaluation",
+    "formal treatment of original wider range"
+  ],
+  "metric_status": "suggestion for next registration, no new effect threshold chosen from pilot outcomes",
+  "new_case_matched_training": true,
+  "new_coverage_preflight_recommended": 0,
+  "old_weights_not_automatically_inherited": true,
+  "ordinary_SAC_only": true,
+  "required_before_execution": [
+    "bind common physical/control/observation/reward/runtime sources and check affected baseline equivalence",
+    "specify zero-start learner or explicitly justified origin, matched collection/replay, and all learning hyperparameters",
+    "freeze exact counts of environments/resets/steps/updates/forwards/loads, wall limit and closed no-retry exits",
+    "verify joint-case mapping, masks, terminal/replay boundaries, complete checkpoint and independent-process resume using existing code",
+    "declare development use; freeze main metric and failure accounting before seeing pilot results; no reuse of untouched final tests"
+  ],
+  "scope": "four fixed discrete J cases only",
+  "stage_id": "B2-SCOPE-11",
+  "suggested_primary_metric": "failure-penalized task time, conditional on reporting functional success and guard failures; loads also reported"
+}

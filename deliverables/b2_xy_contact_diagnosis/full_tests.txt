@@ -1,0 +1,444 @@
+........................................................................ [ 17%]
+........................................................................ [ 34%]
+........................................................................ [ 52%]
+........................................................................ [ 69%]
+.............................................FFFFFFFFFFFFFFFFFFFFFFF.... [ 87%]
+....................................................                     [100%]
+================================== FAILURES ===================================
+____________________ test_plugin_library_exists_and_loads _____________________
+tests\sdf\test_plugin_build.py:231: in test_plugin_library_exists_and_loads
+    ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+_______________ test_plugin_registers_exact_name_and_attributes _______________
+tests\sdf\test_plugin_build.py:235: in test_plugin_registers_exact_name_and_attributes
+    output = run_mujoco_probe("registration")
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+___________________ test_minimal_mjcf_plugin_instance_loads ___________________
+tests\sdf\test_plugin_build.py:241: in test_minimal_mjcf_plugin_instance_loads
+    assert "valid model nplugin=1" in run_mujoco_probe("valid_mjcf", minimal_mjcf())
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point0] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point1] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point2] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point3] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point4] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point5] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point6] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_cpp_distance_and_gradient_match_python_reference[point7] ________
+tests\sdf\test_plugin_build.py:258: in test_cpp_distance_and_gradient_match_python_reference
+    library = loaded_plugin()
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________________ test_cpp_rejects_invalid_parameters[values0] _________________
+tests\sdf\test_plugin_build.py:284: in test_cpp_rejects_invalid_parameters
+    assert loaded_plugin().dsub9_hole_validate(params) == 0
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________________ test_cpp_rejects_invalid_parameters[values1] _________________
+tests\sdf\test_plugin_build.py:284: in test_cpp_rejects_invalid_parameters
+    assert loaded_plugin().dsub9_hole_validate(params) == 0
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________________ test_cpp_rejects_invalid_parameters[values2] _________________
+tests\sdf\test_plugin_build.py:284: in test_cpp_rejects_invalid_parameters
+    assert loaded_plugin().dsub9_hole_validate(params) == 0
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________________ test_cpp_rejects_invalid_parameters[values3] _________________
+tests\sdf\test_plugin_build.py:284: in test_cpp_rejects_invalid_parameters
+    assert loaded_plugin().dsub9_hole_validate(params) == 0
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________________ test_cpp_rejects_invalid_parameters[values4] _________________
+tests\sdf\test_plugin_build.py:284: in test_cpp_rejects_invalid_parameters
+    assert loaded_plugin().dsub9_hole_validate(params) == 0
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________________ test_cpp_rejects_invalid_parameters[values5] _________________
+tests\sdf\test_plugin_build.py:284: in test_cpp_rejects_invalid_parameters
+    assert loaded_plugin().dsub9_hole_validate(params) == 0
+tests\sdf\test_plugin_build.py:196: in loaded_plugin
+    library = ctypes.WinDLL(str(plugin_library_path()))
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_mujoco_instance_rejects_invalid_plugin_config[changes0] _________
+tests\sdf\test_plugin_build.py:305: in test_mujoco_instance_rejects_invalid_plugin_config
+    assert "mj_initPlugin: plugin->init failed for plugin id 0" in run_mujoco_probe(
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_mujoco_instance_rejects_invalid_plugin_config[changes1] _________
+tests\sdf\test_plugin_build.py:305: in test_mujoco_instance_rejects_invalid_plugin_config
+    assert "mj_initPlugin: plugin->init failed for plugin id 0" in run_mujoco_probe(
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_mujoco_instance_rejects_invalid_plugin_config[changes2] _________
+tests\sdf\test_plugin_build.py:305: in test_mujoco_instance_rejects_invalid_plugin_config
+    assert "mj_initPlugin: plugin->init failed for plugin id 0" in run_mujoco_probe(
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_mujoco_instance_rejects_invalid_plugin_config[changes3] _________
+tests\sdf\test_plugin_build.py:305: in test_mujoco_instance_rejects_invalid_plugin_config
+    assert "mj_initPlugin: plugin->init failed for plugin id 0" in run_mujoco_probe(
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_mujoco_instance_rejects_invalid_plugin_config[changes4] _________
+tests\sdf\test_plugin_build.py:305: in test_mujoco_instance_rejects_invalid_plugin_config
+    assert "mj_initPlugin: plugin->init failed for plugin id 0" in run_mujoco_probe(
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+________ test_mujoco_instance_rejects_invalid_plugin_config[changes5] _________
+tests\sdf\test_plugin_build.py:305: in test_mujoco_instance_rejects_invalid_plugin_config
+    assert "mj_initPlugin: plugin->init failed for plugin id 0" in run_mujoco_probe(
+tests\sdf\test_plugin_build.py:214: in run_mujoco_probe
+    plugin_library_path()
+tests\sdf\test_plugin_build.py:184: in plugin_library_path
+    subprocess.run(
+D:\KEYANRUJIAN\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['cmake', '--build', 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\build\\dsub9_hole_sdf', '--config', 'Release']' returned non-zero exit status 1.
+---------------------------- Captured stdout call -----------------------------
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/build/dsub9_hole_sdf
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+D:\software\vs chanpin\MSBuild\Microsoft\VC\v180\Microsoft.Cpp.WindowsSDK.props(113,5): error MSB4184: 无法计算表达式“[Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion(Windows, 10.0)”。对路径“C:\Users\ok everything\AppData\Local\Microsoft SDKs”的访问被拒绝。 [D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\build\dsub9_hole_sdf\ALL_BUILD.vcxproj]
+=========================== short test summary info ===========================
+FAILED tests/sdf/test_plugin_build.py::test_plugin_library_exists_and_loads
+FAILED tests/sdf/test_plugin_build.py::test_plugin_registers_exact_name_and_attributes
+FAILED tests/sdf/test_plugin_build.py::test_minimal_mjcf_plugin_instance_loads
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point0]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point1]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point2]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point3]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point4]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point5]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point6]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point7]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values0]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values1]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values2]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values3]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values4]
+FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values5]
+FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes0]
+FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes1]
+FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes2]
+FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes3]
+FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes4]
+FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes5]
+23 failed, 389 passed in 138.87s (0:02:18)

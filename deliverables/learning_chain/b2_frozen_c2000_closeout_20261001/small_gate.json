@@ -1,0 +1,5 @@
+{
+  "base_assessment_sha256": "b6b4a3f94e0ca47dcd3148e3601c1c7f88bd50cec3acb8db8e14cec6b3fef269",
+  "condition": "Four ordinary failures, complete independent physical replay, all records valid/stopped, no operational fault",
+  "allowed": true
+}

@@ -1,0 +1,74 @@
+test_any_guard_stops_whole_stage (test_protocol.ContractTests.test_any_guard_stops_whole_stage) ... ok
+test_credit_500_after_four_and_no_duplicate_credit (test_protocol.ContractTests.test_credit_500_after_four_and_no_duplicate_credit) ... ok
+test_cross_binding_or_auth_restore_refused (test_protocol.ContractTests.test_cross_binding_or_auth_restore_refused) ... ok
+test_data_id_duplicates_refused (test_protocol.ContractTests.test_data_id_duplicates_refused) ... ok
+test_exact_scope_and_candidate_first (test_protocol.ContractTests.test_exact_scope_and_candidate_first) ... ok
+test_fault_attempt_not_refunded (test_protocol.ContractTests.test_fault_attempt_not_refunded) ... ok
+test_forged_guard_history_cannot_resume (test_protocol.ContractTests.test_forged_guard_history_cannot_resume) ... FAIL
+test_forged_update_lease_rejected (test_protocol.ContractTests.test_forged_update_lease_rejected) ... FAIL
+test_inactive_or_stale_update_token_refused (test_protocol.ContractTests.test_inactive_or_stale_update_token_refused) ... ok
+test_initial_not_four_successes_closes_after_four (test_protocol.ContractTests.test_initial_not_four_successes_closes_after_four) ... ok
+test_new_authorization_scope_not_old_eight_zero (test_protocol.ContractTests.test_new_authorization_scope_not_old_eight_zero) ... ok
+test_online_requires_exact_preceding_updates (test_protocol.ContractTests.test_online_requires_exact_preceding_updates) ... ok
+test_reserve_before_physics_and_no_second_active (test_protocol.ContractTests.test_reserve_before_physics_and_no_second_active) ... ok
+test_stale_ledger_cannot_write (test_protocol.ContractTests.test_stale_ledger_cannot_write) ... ok
+test_update_requires_current_dataset_and_initial_pass (test_protocol.ContractTests.test_update_requires_current_dataset_and_initial_pass) ... ok
+test_write_fault_poison (test_protocol.ContractTests.test_write_fault_poison) ... ok
+test_wrong_identity_or_impossible_result_rejected (test_protocol.ContractTests.test_wrong_identity_or_impossible_result_rejected) ... ok
+test_authorization_precedes_runtime (test_protocol.RuntimeTests.test_authorization_precedes_runtime) ... ok
+test_complete_preflight_requalification_is_separate (test_protocol.RuntimeTests.test_complete_preflight_requalification_is_separate) ... ERROR
+test_counts_and_history_must_agree (test_protocol.RuntimeTests.test_counts_and_history_must_agree) ... ok
+test_cross_arm_snapshot_rejected (test_protocol.RuntimeTests.test_cross_arm_snapshot_rejected) ... ok
+test_historical_permission_preserved (test_protocol.RuntimeTests.test_historical_permission_preserved) ... ok
+test_invalid_source_rejected (test_protocol.RuntimeTests.test_invalid_source_rejected) ... ok
+test_model_and_optimizer_without_lease_refused (test_protocol.RuntimeTests.test_model_and_optimizer_without_lease_refused) ... ok
+test_module_failure_charge_and_local_cap (test_protocol.RuntimeTests.test_module_failure_charge_and_local_cap) ... ok
+test_new_meter_reuses_live_checked_fault_tail (test_protocol.RuntimeTests.test_new_meter_reuses_live_checked_fault_tail) ... FAIL
+test_physics_failure_is_charged (test_protocol.RuntimeTests.test_physics_failure_is_charged) ... ok
+test_physics_unreserved_refused (test_protocol.RuntimeTests.test_physics_unreserved_refused) ... ok
+test_previously_published_rejected (test_protocol.RuntimeTests.test_previously_published_rejected) ... ok
+test_stopped_ledger_refuses_model (test_protocol.RuntimeTests.test_stopped_ledger_refuses_model) ... ok
+
+======================================================================
+ERROR: test_complete_preflight_requalification_is_separate (test_protocol.RuntimeTests.test_complete_preflight_requalification_is_separate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 67, in test_complete_preflight_requalification_is_separate
+    m,pin=R.qualify_dataset('C',ledger,Path(tmp))
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\learning_runtime.py", line 46, in qualify_dataset
+    if raw['sampling_final']['hold_cycles']!=(50 if arm=='C' else 1):raise ValueError('Wrong temporal treatment')
+       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'hold_cycles'
+
+======================================================================
+FAIL: test_forged_guard_history_cannot_resume (test_protocol.ContractTests.test_forged_guard_history_cannot_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 92, in test_forged_guard_history_cannot_resume
+    with self.assertRaises(ValueError):C.Ledger(self.path,s)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_forged_update_lease_rejected (test_protocol.ContractTests.test_forged_update_lease_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 95, in test_forged_update_lease_rejected
+    with self.assertRaises(ValueError):C.Ledger(self.path,s)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_new_meter_reuses_live_checked_fault_tail (test_protocol.RuntimeTests.test_new_meter_reuses_live_checked_fault_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 81, in test_new_meter_reuses_live_checked_fault_tail
+    self.assertIs(V.collector_type()._stop_tail,old_type()._stop_tail)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: <function collector_type.<locals>.PreflightCollector._stop_tail at 0x000001ACDDDC4D60> is not <function collector_type.<locals>.PreflightCollector._stop_tail at 0x000001ACDDDC5120>
+
+----------------------------------------------------------------------
+Ran 30 tests in 13.878s
+
+FAILED (failures=3, errors=1)

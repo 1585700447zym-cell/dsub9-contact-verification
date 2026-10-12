@@ -1,0 +1,42 @@
+{
+  "exit_code": 1,
+  "tests": 28,
+  "failures": 28,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "12c9b84667a8869eb8f8c992a0048495aa0e84973bcae0686f1f46177e8ad247",
+  "test_ids": [
+    "tests.learning.test_actor_lr_origin::test_branch_forks_only_change_actor_rate_and_identity_and_are_isolated",
+    "tests.learning.test_actor_lr_origin::test_nonzero_counts_cannot_be_relabelled_as_origin[actor]",
+    "tests.learning.test_actor_lr_origin::test_nonzero_counts_cannot_be_relabelled_as_origin[critic]",
+    "tests.learning.test_actor_lr_origin::test_nonzero_counts_cannot_be_relabelled_as_origin[temperature]",
+    "tests.learning.test_actor_lr_origin::test_nonzero_counts_cannot_be_relabelled_as_origin[target]",
+    "tests.learning.test_actor_lr_origin::test_nonempty_adam_state_rejected_as_origin[actor]",
+    "tests.learning.test_actor_lr_origin::test_nonempty_adam_state_rejected_as_origin[critic]",
+    "tests.learning.test_actor_lr_origin::test_nonempty_adam_state_rejected_as_origin[temperature]",
+    "tests.learning.test_actor_lr_origin::test_nonzero_or_malformed_update_attempts_rejected[-1]",
+    "tests.learning.test_actor_lr_origin::test_nonzero_or_malformed_update_attempts_rejected[True]",
+    "tests.learning.test_actor_lr_origin::test_nonzero_or_malformed_update_attempts_rejected[1]",
+    "tests.learning.test_actor_lr_origin::test_nonzero_or_malformed_update_attempts_rejected[500]",
+    "tests.learning.test_actor_lr_origin::test_draw_plan_matches_both_rng_streams_without_mutating_source",
+    "tests.learning.test_actor_lr_origin::test_draw_plan_refuses_unregistered_lengths_boundaries_or_budget[lengths0-bounds0-500]",
+    "tests.learning.test_actor_lr_origin::test_draw_plan_refuses_unregistered_lengths_boundaries_or_budget[lengths1-bounds1-500]",
+    "tests.learning.test_actor_lr_origin::test_draw_plan_refuses_unregistered_lengths_boundaries_or_budget[lengths2-bounds2-500]",
+    "tests.learning.test_actor_lr_origin::test_draw_plan_refuses_unregistered_lengths_boundaries_or_budget[lengths3-bounds3-500]",
+    "tests.learning.test_actor_lr_origin::test_draw_plan_refuses_unregistered_lengths_boundaries_or_budget[lengths4-bounds4-501]",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_accepts_matching_registered_zero_update_receipt",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_rejects_relabelled_or_wrong_origin[optimizer_steps-500]",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_rejects_relabelled_or_wrong_origin[optimizer_steps_start-1]",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_rejects_relabelled_or_wrong_origin[sampling_mode-sac_policy]",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_rejects_relabelled_or_wrong_origin[qualification_sha256-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc]",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_rejects_relabelled_or_wrong_origin[policy_sha256-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc]",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_rejects_relabelled_or_wrong_origin[seed-0]",
+    "tests.learning.test_actor_lr_origin::test_warmup_metadata_rejects_relabelled_or_wrong_origin[episode_id-train_04]",
+    "tests.learning.test_actor_lr_origin::test_warmup_receipt_mismatch_rejected_even_if_raw_is_valid",
+    "tests.learning.test_actor_lr_origin::test_checkpoint_pin_failure_precedes_deserialization"
+  ]
+}

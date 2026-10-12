@@ -1,0 +1,99 @@
+FFFFFFFFFFFFFFF                                                          [100%]
+================================== FAILURES ===================================
+__________ test_accumulated_compliance_is_retained_in_search_target ___________
+tests\task_variants\test_compliant_search.py:20: in test_accumulated_compliance_is_retained_in_search_target
+    new=controller();new.admittance.offset[1]=80e-6
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_____ test_no_feedback_and_no_integral_change_matches_old_search_formula ______
+tests\task_variants\test_compliant_search.py:29: in test_no_feedback_and_no_integral_change_matches_old_search_formula
+    old=LoadSearchRecovery();old._start_search(obs());new=controller()
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+____ test_admittance_integrates_once_and_target_uses_preintegration_offset ____
+tests\task_variants\test_compliant_search.py:37: in test_admittance_integrates_once_and_target_uses_preintegration_offset
+    c=controller();c.admittance.offset[:2]=[10e-6,20e-6]
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+____ test_each_search_anchors_integral_to_current_state_including_recovery ____
+tests\task_variants\test_compliant_search.py:47: in test_each_search_anchors_integral_to_current_state_including_recovery
+    c=controller();c.admittance.offset[:2]=[.0003,-.0002];c.phase='WAIT_RECOVERY'
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_bounded_target_and_consistent_feedforward[point0-velocity0-expected_point0-expected_velocity0] _
+tests\task_variants\test_compliant_search.py:63: in test_bounded_target_and_consistent_feedforward
+    from tools.control.compliant_search import bounded_target
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_bounded_target_and_consistent_feedforward[point1-velocity1-expected_point1-expected_velocity1] _
+tests\task_variants\test_compliant_search.py:63: in test_bounded_target_and_consistent_feedforward
+    from tools.control.compliant_search import bounded_target
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_bounded_target_and_consistent_feedforward[point2-velocity2-expected_point2-expected_velocity2] _
+tests\task_variants\test_compliant_search.py:63: in test_bounded_target_and_consistent_feedforward
+    from tools.control.compliant_search import bounded_target
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_bounded_target_and_consistent_feedforward[point3-velocity3-expected_point3-expected_velocity3] _
+tests\task_variants\test_compliant_search.py:63: in test_bounded_target_and_consistent_feedforward
+    from tools.control.compliant_search import bounded_target
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_bounded_target_and_consistent_feedforward[point4-velocity4-expected_point4-expected_velocity4] _
+tests\task_variants\test_compliant_search.py:63: in test_bounded_target_and_consistent_feedforward
+    from tools.control.compliant_search import bounded_target
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_original_boundaries_win_before_composition_and_load_relief[excursion-FAILED-SEARCH_EXCURSION_LIMIT] _
+tests\task_variants\test_compliant_search.py:73: in test_original_boundaries_win_before_composition_and_load_relief
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_original_boundaries_win_before_composition_and_load_relief[advance-INSERT-SEARCH_ADVANCED] _
+tests\task_variants\test_compliant_search.py:73: in test_original_boundaries_win_before_composition_and_load_relief
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_original_boundaries_win_before_composition_and_load_relief[timeout-WAIT_RECOVERY-SEARCH_EXHAUSTED] _
+tests\task_variants\test_compliant_search.py:73: in test_original_boundaries_win_before_composition_and_load_relief
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+_ test_original_boundaries_win_before_composition_and_load_relief[radius-WAIT_RECOVERY-SEARCH_EXHAUSTED] _
+tests\task_variants\test_compliant_search.py:73: in test_original_boundaries_win_before_composition_and_load_relief
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+______________ test_load_relief_and_nonsearch_behavior_preserved ______________
+tests\task_variants\test_compliant_search.py:84: in test_load_relief_and_nonsearch_behavior_preserved
+    c=controller();c.load_since=.1;before=c.admittance.offset.copy()
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+________ test_invalid_observation_does_not_integrate_or_change_target _________
+tests\task_variants\test_compliant_search.py:96: in test_invalid_observation_does_not_integrate_or_change_target
+    c=controller();before=c.admittance.offset.copy()
+tests\task_variants\test_compliant_search.py:13: in controller
+    from tools.control.compliant_search import CompliantSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.compliant_search'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_compliant_search.py::test_accumulated_compliance_is_retained_in_search_target
+FAILED tests/task_variants/test_compliant_search.py::test_no_feedback_and_no_integral_change_matches_old_search_formula
+FAILED tests/task_variants/test_compliant_search.py::test_admittance_integrates_once_and_target_uses_preintegration_offset
+FAILED tests/task_variants/test_compliant_search.py::test_each_search_anchors_integral_to_current_state_including_recovery
+FAILED tests/task_variants/test_compliant_search.py::test_bounded_target_and_consistent_feedforward[point0-velocity0-expected_point0-expected_velocity0]
+FAILED tests/task_variants/test_compliant_search.py::test_bounded_target_and_consistent_feedforward[point1-velocity1-expected_point1-expected_velocity1]
+FAILED tests/task_variants/test_compliant_search.py::test_bounded_target_and_consistent_feedforward[point2-velocity2-expected_point2-expected_velocity2]
+FAILED tests/task_variants/test_compliant_search.py::test_bounded_target_and_consistent_feedforward[point3-velocity3-expected_point3-expected_velocity3]
+FAILED tests/task_variants/test_compliant_search.py::test_bounded_target_and_consistent_feedforward[point4-velocity4-expected_point4-expected_velocity4]
+FAILED tests/task_variants/test_compliant_search.py::test_original_boundaries_win_before_composition_and_load_relief[excursion-FAILED-SEARCH_EXCURSION_LIMIT]
+FAILED tests/task_variants/test_compliant_search.py::test_original_boundaries_win_before_composition_and_load_relief[advance-INSERT-SEARCH_ADVANCED]
+FAILED tests/task_variants/test_compliant_search.py::test_original_boundaries_win_before_composition_and_load_relief[timeout-WAIT_RECOVERY-SEARCH_EXHAUSTED]
+FAILED tests/task_variants/test_compliant_search.py::test_original_boundaries_win_before_composition_and_load_relief[radius-WAIT_RECOVERY-SEARCH_EXHAUSTED]
+FAILED tests/task_variants/test_compliant_search.py::test_load_relief_and_nonsearch_behavior_preserved
+FAILED tests/task_variants/test_compliant_search.py::test_invalid_observation_does_not_integrate_or_change_target
+15 failed in 0.18s

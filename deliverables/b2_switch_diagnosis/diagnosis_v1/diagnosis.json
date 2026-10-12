@@ -1,0 +1,488 @@
+{
+  "method": "offline recorded-state command reconstruction; no dynamics steps",
+  "tags": [
+    "verified_frozen_x100",
+    "verified_frozen_y100"
+  ],
+  "provenance_audit": [
+    {
+      "case": "x_offset_pos_100um",
+      "old_reference": {
+        "file": "deliverables/b2_search_recovery/matrix_v1_case_02/runs/x_offset_pos_100um_b2.json.gz",
+        "sha256": "0941fefcd5722af1527520b3e6a6b5f4d7138607878d421205b7a1a846bb4a4a",
+        "execution": "preserved_previous_V1_run_not_rerun"
+      },
+      "new_index": "deliverables/b2_exit_gate_v2/verified_frozen_x100/results_index.json",
+      "identical_trace_prefix_samples": 5388,
+      "identical_through_s": 10.774000000001568,
+      "old_recovery_exit_s": 10.774000000001568,
+      "verified_new_exit_events": [],
+      "new_recovery_progress": {
+        "blocked_z_m": 0.0002500129658939321,
+        "exit_threshold_z_m": 0.0003500129658939321,
+        "maximum_second_search_z_m": 0.00025037368728920723
+      },
+      "old_metrics": {
+        "case": "x_offset_pos_100um",
+        "policy": "B2",
+        "advance_mm": 3.9908100901253145,
+        "z_error_um": 9.18990987468548,
+        "xy_error_um": 63.978838240532504,
+        "angle_deg": 0.22636902865890857,
+        "peak_force_mN": 24.4773781682511,
+        "peak_torque_mNm": 0.2965289468386507,
+        "peak_penetration_um": 15.12477199387784,
+        "termination": "TARGET_POSE_NOT_SETTLED",
+        "success": false,
+        "stop_time_s": 14.719999999992371,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "XY 精度"
+        ]
+      },
+      "new_metrics": {
+        "case": "x_offset_pos_100um",
+        "policy": "B2",
+        "advance_mm": 0.24558399969829176,
+        "z_error_um": 3754.416000301708,
+        "xy_error_um": 78.05837233957403,
+        "angle_deg": 0.05062295176978701,
+        "peak_force_mN": 24.4773781682511,
+        "peak_torque_mNm": 0.2965289468386507,
+        "peak_penetration_um": 15.14721501654894,
+        "termination": "SEARCH_BUDGET_EXHAUSTED",
+        "success": false,
+        "stop_time_s": 18.10999999998447,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "Z 未到位",
+          "XY 精度"
+        ]
+      }
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "old_reference": {
+        "file": "deliverables/b2_search_recovery/matrix_v1_case_03/runs/y_offset_neg_100um_b2.json.gz",
+        "sha256": "797ac37a825555fe8ea57ac6ab15381a01e7e498aaca6599fe91d61f4aa812c4",
+        "execution": "preserved_previous_V1_run_not_rerun"
+      },
+      "new_index": "deliverables/b2_exit_gate_v2/verified_frozen_y100/results_index.json",
+      "identical_trace_prefix_samples": 5024,
+      "identical_through_s": 10.046000000003264,
+      "old_recovery_exit_s": 10.046000000003264,
+      "verified_new_exit_events": [],
+      "new_recovery_progress": {
+        "blocked_z_m": 0.00025001327885191627,
+        "exit_threshold_z_m": 0.00035001327885191626,
+        "maximum_second_search_z_m": 0.00024888766014266855
+      },
+      "old_metrics": {
+        "case": "y_offset_neg_100um",
+        "policy": "B2",
+        "advance_mm": 0.23959290605434033,
+        "z_error_um": 3760.4070939456597,
+        "xy_error_um": 96.35708550548141,
+        "angle_deg": 0.3364767470725161,
+        "peak_force_mN": 24.55785478949424,
+        "peak_torque_mNm": 0.3562759071608909,
+        "peak_penetration_um": 12.74065630774243,
+        "termination": "SEARCH_BUDGET_EXHAUSTED",
+        "success": false,
+        "stop_time_s": 10.766000000001586,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "Z 未到位",
+          "XY 精度",
+          "线速度未稳定"
+        ]
+      },
+      "new_metrics": {
+        "case": "y_offset_neg_100um",
+        "policy": "B2",
+        "advance_mm": 0.21714245279515557,
+        "z_error_um": 3782.8575472048446,
+        "xy_error_um": 171.67767832342724,
+        "angle_deg": 0.6692640433418369,
+        "peak_force_mN": 24.500692193138438,
+        "peak_torque_mNm": 0.3965024686582396,
+        "peak_penetration_um": 16.501973013997382,
+        "termination": "SEARCH_BUDGET_EXHAUSTED",
+        "success": false,
+        "stop_time_s": 17.381999999986167,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "Z 未到位",
+          "XY 精度",
+          "姿态精度"
+        ]
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "case": "x_offset_pos_100um",
+      "label": "X +100 μm",
+      "fork_time_s": 10.774000000001568,
+      "advance_at_fork_mm": 0.08008795180013736,
+      "fork_state": {
+        "time_s": 10.774000000001568,
+        "position_m": [
+          5.800900180207227e-05,
+          2.8139076323101037e-05,
+          -0.003919912048199863
+        ],
+        "quaternion_wxyz": [
+          0.9999980487633657,
+          -0.0014197741597809465,
+          -0.0013581206422864326,
+          -0.00020547291115632254
+        ],
+        "velocity_world": [
+          -4.7480548494103455e-06,
+          -0.00015463281162717175,
+          0.0004000847443378346,
+          -7.837748413816497e-07,
+          2.8040325878680583e-06,
+          -2.083696348253192e-13
+        ],
+        "contact_wrench_M": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_wrench_G": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "penetration_m": 0.0,
+        "contact_count": 0,
+        "phase": "RUNNING",
+        "reference_qpos": [
+          5.8528369109999e-05,
+          2.7929036562031326e-05,
+          -0.00391998990987526,
+          0.9999980488142388,
+          -0.0014197889177793807,
+          -0.0013580677697123008,
+          -0.000205472816060489
+        ],
+        "raw_command_world": [
+          -5.13490209150196e-06,
+          -0.00014959728665836294,
+          0.0004,
+          4.2897001055475226e-10,
+          -1.6392290086084116e-09,
+          0.0
+        ],
+        "limited_command_world": [
+          -5.13490209150196e-06,
+          -0.00014959728665836294,
+          0.0004,
+          4.2897001055475226e-10,
+          -1.6392290086084116e-09,
+          0.0
+        ],
+        "drive_wrench_M": [
+          5.102449006159428e-05,
+          -1.6058055980130241e-06,
+          -1.6643819005749035e-07,
+          4.040371819933219e-10,
+          -1.4409070885251144e-09,
+          9.77417875770321e-17
+        ],
+        "policy_phase": "SEARCH",
+        "search_count": 2,
+        "spiral_theta_rad": 3.362798969269824,
+        "admittance_velocity": [
+          -1.2197274440461925e-16,
+          5.421010862427522e-17,
+          4.2897001055475226e-10,
+          -1.6392290086084116e-09
+        ],
+        "commanded_correction": [
+          -0.0002307595343845735,
+          0.0004828723909044199,
+          -0.002682077316358332,
+          -0.001045286218808773
+        ],
+        "recovery_state": null
+      },
+      "commands": {
+        "old": {
+          "raw_command_world": [
+            -9.486769009248164e-17,
+            5.421010862427522e-17,
+            0.001,
+            3.8814806403719704e-10,
+            -1.4832357347546732e-09,
+            0.0
+          ],
+          "limited_command_world": [
+            -9.486769009248164e-17,
+            -0.00013959728665836294,
+            0.00041000000000000005,
+            3.8814806403719704e-10,
+            -1.4832357347546732e-09,
+            0.0
+          ],
+          "phase": "INSERT",
+          "reconstruction_max_error": 0.0
+        },
+        "new": {
+          "raw_command_world": [
+            -3.0096024850537302e-06,
+            -0.00014971399250543374,
+            0.0004,
+            3.8814806403719704e-10,
+            -1.4832357347546732e-09,
+            0.0
+          ],
+          "limited_command_world": [
+            -3.0096024850537302e-06,
+            -0.00014971399250543374,
+            0.0004,
+            3.8814806403719704e-10,
+            -1.4832357347546732e-09,
+            0.0
+          ],
+          "phase": "SEARCH",
+          "reconstruction_max_error": 0.0
+        }
+      },
+      "windows": {
+        "0.3": {
+          "old": {
+            "duration_s": 0.3,
+            "advance_um": 264.714940006881,
+            "xy_path_um": 4.524312696793386,
+            "endpoint_advance_mm": 0.3448028918070184
+          },
+          "new": {
+            "duration_s": 0.3,
+            "advance_um": 120.00213831294109,
+            "xy_path_um": 46.18093504029402,
+            "endpoint_advance_mm": 0.20009009011307843
+          }
+        },
+        "0.6": {
+          "old": {
+            "duration_s": 0.6,
+            "advance_um": 564.7221382838285,
+            "xy_path_um": 4.5244527665079435,
+            "endpoint_advance_mm": 0.644810090083966
+          },
+          "new": {
+            "duration_s": 0.6,
+            "advance_um": 157.40771481663518,
+            "xy_path_um": 72.60657701630835,
+            "endpoint_advance_mm": 0.23749566661677252
+          }
+        }
+      },
+      "search_law": {
+        "checked_command_count": 3668,
+        "max_error_m_s": 0.0,
+        "fraction_nonpositive_z_commands": 0.4064885496183206,
+        "fraction_abs_z_at_most_10um_s": 0.7748091603053435,
+        "second_search_duration_s": 7.625999999982227,
+        "radius_at_stop_m": 0.00012,
+        "binding_budget": "spiral_radius",
+        "note": "Fractions cover post-fork SEARCH commands; force input is the preceding trace row."
+      }
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "label": "Y −100 μm",
+      "fork_time_s": 10.046000000003264,
+      "advance_at_fork_mm": 0.07258430022879461,
+      "fork_state": {
+        "time_s": 10.046000000003264,
+        "position_m": [
+          -1.4184087704154564e-05,
+          -0.0001218407237990662,
+          -0.0039274156997712055
+        ],
+        "quaternion_wxyz": [
+          0.9999895678720174,
+          -0.004427600631996283,
+          -0.0008519602181520785,
+          0.0007312069255095766
+        ],
+        "velocity_world": [
+          -4.7480548494071056e-06,
+          -0.0001542358765132502,
+          0.0004000847443378346,
+          2.9623272475934133e-06,
+          1.7223162633880252e-06,
+          -4.061770899131998e-13
+        ],
+        "contact_wrench_M": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_wrench_G": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "penetration_m": 0.0,
+        "contact_count": 0,
+        "phase": "RUNNING",
+        "reference_qpos": [
+          -1.3664720396227897e-05,
+          -0.00012205210951324144,
+          -0.0039274935614466025,
+          0.9999895681470136,
+          -0.004427544740872229,
+          -0.0008519278180053378,
+          0.0007312070215417235
+        ],
+        "raw_command_world": [
+          -5.1349020914978265e-06,
+          -0.00014919182807794824,
+          0.0004,
+          -1.7384566008971092e-09,
+          -9.737512987779973e-10,
+          0.0
+        ],
+        "limited_command_world": [
+          -5.1349020914978265e-06,
+          -0.00014919182807794824,
+          0.0004,
+          -1.7384566008971092e-09,
+          -9.737512987779973e-10,
+          0.0
+        ],
+        "drive_wrench_M": [
+          5.1024490061591965e-05,
+          -1.6959567786673782e-06,
+          -1.6643819005749035e-07,
+          -1.5219622422208571e-09,
+          -8.864790651813433e-10,
+          2.0150534857545732e-16
+        ],
+        "policy_phase": "SEARCH",
+        "search_count": 2,
+        "spiral_theta_rad": 3.362798969269824,
+        "admittance_velocity": [
+          -1.2197274440461925e-16,
+          0.0,
+          -1.7384566008971092e-09,
+          -9.737512987779973e-10
+        ],
+        "commanded_correction": [
+          -0.00015730746061892931,
+          0.0005,
+          -0.0069558206460719795,
+          -0.0007470219759558212
+        ],
+        "recovery_state": null
+      },
+      "commands": {
+        "old": {
+          "raw_command_world": [
+            -9.486769009248164e-17,
+            0.0,
+            0.001,
+            -1.57302079348276e-09,
+            -8.810865990797889e-10,
+            0.0
+          ],
+          "limited_command_world": [
+            -9.486769009248164e-17,
+            -0.00013919182807794824,
+            0.00041000000000000005,
+            -1.57302079348276e-09,
+            -8.810865990797889e-10,
+            0.0
+          ],
+          "phase": "INSERT",
+          "reconstruction_max_error": 0.0
+        },
+        "new": {
+          "raw_command_world": [
+            -3.0096024850495967e-06,
+            -0.00014931252039303855,
+            0.0004,
+            -1.57302079348276e-09,
+            -8.810865990797889e-10,
+            0.0
+          ],
+          "limited_command_world": [
+            -3.0096024850495967e-06,
+            -0.00014931252039303855,
+            0.0004,
+            -1.57302079348276e-09,
+            -8.810865990797889e-10,
+            0.0
+          ],
+          "phase": "SEARCH",
+          "reconstruction_max_error": 0.0
+        }
+      },
+      "windows": {
+        "0.3": {
+          "old": {
+            "duration_s": 0.3,
+            "advance_um": 162.2697463439077,
+            "xy_path_um": 14.46762330469326,
+            "endpoint_advance_mm": 0.23485404657270234
+          },
+          "new": {
+            "duration_s": 0.3,
+            "advance_um": 120.0021383129823,
+            "xy_path_um": 46.137450778719256,
+            "endpoint_advance_mm": 0.1925864385417769
+          }
+        },
+        "0.6": {
+          "old": {
+            "duration_s": 0.6,
+            "advance_um": 166.7498778588866,
+            "xy_path_um": 27.037225067748263,
+            "endpoint_advance_mm": 0.23933417808768123
+          },
+          "new": {
+            "duration_s": 0.6,
+            "advance_um": 158.4295051581092,
+            "xy_path_um": 65.79763101581776,
+            "endpoint_advance_mm": 0.23101380538690383
+          }
+        }
+      },
+      "search_law": {
+        "checked_command_count": 3668,
+        "max_error_m_s": 0.0,
+        "fraction_nonpositive_z_commands": 0.5283533260632497,
+        "fraction_abs_z_at_most_10um_s": 0.5719738276990185,
+        "second_search_duration_s": 7.625999999982227,
+        "radius_at_stop_m": 0.00012,
+        "binding_budget": "spiral_radius",
+        "note": "Fractions cover post-fork SEARCH commands; force input is the preceding trace row."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="16" time="0.058" timestamp="2026-09-30T11:30:44.514453+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[0.0]" time="0.001" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[-1.0]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[True]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[inf]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[nan]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[None]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[0.0003]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_invalid_public_rate_cannot_initialize_any_optimizer[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000]" time="0.000"><failure message="OverflowError: int too large to convert to float">bad = 100000000000000000...0000000000000000000
+
+    @pytest.mark.parametrize('bad', [0., -1., True, float('inf'), float('nan'), None, '0.0003', 10**400])
+    def test_invalid_public_rate_cannot_initialize_any_optimizer(bad):
+        with pytest.raises(ValueError, match='learning rate'):
+&gt;           optimizer_learning_rates(dict(learning_rate=bad, actor_learning_rate=3e-5))
+
+tests\learning\test_learning_rate_validation.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\learning_rates.py:12: in optimizer_learning_rates
+    base = _rate(settings['learning_rate'])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+value = 100000000000000000...0000000000000000000
+
+    def _rate(value):
+&gt;       if type(value) not in (int, float) or not math.isfinite(value) or value &lt;= 0:
+E       OverflowError: int too large to convert to float
+
+tools\learning\learning_rates.py:6: OverflowError</failure></testcase><testcase classname="tests.learning.test_learning_rate_validation" name="test_every_group_must_match_and_guard_does_not_repair_saved_rates" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[missing]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[empty]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[nonlist]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[nondict]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[missing_lr]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_incomplete_or_non_numeric_saved_groups_are_rejected[bool_lr]" time="0.000" /><testcase classname="tests.learning.test_learning_rate_validation" name="test_matching_multiple_groups_are_accepted_without_state_changes" time="0.000" /></testsuite></testsuites>

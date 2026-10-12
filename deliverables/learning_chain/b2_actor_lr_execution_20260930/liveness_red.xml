@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="0.104" timestamp="2026-09-30T17:08:14.597570+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_lr_budget" name="test_finished_formal_cannot_revert_to_validation" time="0.034"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/liveness_red_work/test_finished_formal_cannot_re0')
+
+    def test_finished_formal_cannot_revert_to_validation(tmp_path):
+        l=ledger(tmp_path);l.complete_validation('c'*64);finish_update(l,'A',0)
+        raw=deepcopy(l.state);raw['phase']='validation';l.path.write_text(json.dumps(raw),encoding='utf-8')
+&gt;       with pytest.raises(ValueError):module().ComparisonLedger.load(l.path,'a'*64,'b'*64)
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_lr_budget.py:106: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_dead_supervisor_guard_prevents_reservation" time="0.003"><failure message="AttributeError: 'ComparisonLedger' object has no attribute 'set_execution_guard'">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/liveness_red_work/test_dead_supervisor_guard_pre0')
+
+    def test_dead_supervisor_guard_prevents_reservation(tmp_path):
+        l=ledger(tmp_path)
+        def dead():raise RuntimeError('supervisor gone')
+&gt;       l.set_execution_guard(dead)
+E       AttributeError: 'ComparisonLedger' object has no attribute 'set_execution_guard'
+
+tests\learning\test_actor_lr_budget.py:112: AttributeError</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_external_ledger_write_prevents_stale_owner_overwrite" time="0.002"><failure message="AttributeError: 'ComparisonLedger' object has no attribute 'set_execution_guard'">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/liveness_red_work/test_external_ledger_write_pre0')
+
+    def test_external_ledger_write_prevents_stale_owner_overwrite(tmp_path):
+&gt;       l=ledger(tmp_path);l.set_execution_guard(lambda:None)
+E       AttributeError: 'ComparisonLedger' object has no attribute 'set_execution_guard'
+
+tests\learning\test_actor_lr_budget.py:118: AttributeError</failure></testcase></testsuite></testsuites>

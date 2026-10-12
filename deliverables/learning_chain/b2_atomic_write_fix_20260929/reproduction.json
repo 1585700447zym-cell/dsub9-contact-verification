@@ -1,0 +1,15 @@
+{
+  "held_reader": {
+    "type": "PermissionError",
+    "winerror": 5,
+    "errno": 13,
+    "message": "[WinError 5] 拒绝访问。: 'D:\\\\dsub9项目计划\\\\first_stage_sim\\\\.worktrees\\\\dsub9-v1-contact-validation\\\\deliverables\\\\learning_chain\\\\b2_atomic_write_fix_20260929\\\\lock_reproducer.json.tmp' -> 'D:\\\\dsub9项目计划\\\\first_stage_sim\\\\.worktrees\\\\dsub9-v1-contact-validation\\\\deliverables\\\\learning_chain\\\\b2_atomic_write_fix_20260929\\\\lock_reproducer.json'",
+    "old_content_preserved": true
+  },
+  "after_reader_close_succeeded": true,
+  "same_directory": true,
+  "physics": 0,
+  "optimizer": 0,
+  "prediction": 0,
+  "production_lock_owner": "not recorded at failure; cannot recover retrospectively"
+}

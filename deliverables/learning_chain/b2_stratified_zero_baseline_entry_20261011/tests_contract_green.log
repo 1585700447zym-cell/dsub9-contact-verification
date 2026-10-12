@@ -1,0 +1,20 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_case_units_and_registered_off_diagonal_orientation (__main__.ContractTests.test_case_units_and_registered_off_diagonal_orientation) ... ok
+test_claim_or_wrong_order_cannot_be_retried (__main__.ContractTests.test_claim_or_wrong_order_cannot_be_retried) ... ok
+test_draft_wrong_pin_and_changed_limits_rejected (__main__.ContractTests.test_draft_wrong_pin_and_changed_limits_rejected) ... ok
+test_exact_pose_and_quaternion_sign_equivalence (__main__.ContractTests.test_exact_pose_and_quaternion_sign_equivalence) ... ok
+test_guard_invalid_unstopped_missing_receipt_never_advances (__main__.ContractTests.test_guard_invalid_unstopped_missing_receipt_never_advances) ... ok
+test_initial_audit_retains_ordinary_no_contact_reset_rule (__main__.ContractTests.test_initial_audit_retains_ordinary_no_contact_reset_rule) ... ok
+test_initial_guard_latch_rejected (__main__.ContractTests.test_initial_guard_latch_rejected) ... ok
+test_new_order_excludes_the_four_consumed_cases (__main__.ContractTests.test_new_order_excludes_the_four_consumed_cases) ... ok
+test_nonfinite_incomplete_and_bool_pose_rejected (__main__.ContractTests.test_nonfinite_incomplete_and_bool_pose_rejected) ... ok
+test_nonzero_cost_overrun_and_second_reset_cannot_advance (__main__.ContractTests.test_nonzero_cost_overrun_and_second_reset_cannot_advance) ... ok
+test_old_grant_version_and_old_total_rejected (__main__.ContractTests.test_old_grant_version_and_old_total_rejected) ... ok
+test_registered_registry_rejects_duplicate_missing_reorder_pose_and_bool (__main__.ContractTests.test_registered_registry_rejects_duplicate_missing_reorder_pose_and_bool) ... ok
+test_unregistered_or_extra_case_parameters_rejected (__main__.ContractTests.test_unregistered_or_extra_case_parameters_rejected) ... ok
+test_valid_stopped_task_failure_advances (__main__.ContractTests.test_valid_stopped_task_failure_advances) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.061s
+
+OK

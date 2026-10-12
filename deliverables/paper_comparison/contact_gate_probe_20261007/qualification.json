@@ -1,0 +1,19 @@
+{
+  "version": "pc09_deployment_qualification_v1",
+  "evaluation_admitted": true,
+  "training_admitted": false,
+  "max_new_episodes": 8,
+  "formal_updates": 0,
+  "published_transitions": 0,
+  "prior_cumulative": 200,
+  "cumulative_limit": 208,
+  "created_at": "2026-10-07T16:04:56.409738+08:00",
+  "evidence_sha256": {
+    "configuration.json": "aac13697b69afc4847d4d1a697f5a3ce42e42f010e561b274323e20295ba5e27",
+    "model.xml": "dbb662662dffc48d002e4bc26963d5192f13ff3be20764eac821f8fd10e861cf",
+    "verification.json": "5d52c2b871f72b0bfe5411158d615d649c41b3227c042afeb5b83340161f5845",
+    "verification.txt": "bdf414940b6c085a47dd72f1560d700c9c697f3bec667f7e823365a96ffcd10d",
+    "review.json": "1448eb198ea7a4c62ca4a2eee7dcdf5d07166771218595b2c273a9dda981d742",
+    "checkpoint_read_gate.json": "e2d993735db123067524a0c869a1f9e8f2f300765e91f5d74bf047727a93a831"
+  }
+}

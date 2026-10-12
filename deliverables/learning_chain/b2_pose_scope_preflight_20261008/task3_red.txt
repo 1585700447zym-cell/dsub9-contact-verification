@@ -1,0 +1,35 @@
+test_missing_context_and_bad_reward_command_or_stop_rejected (test_assess.AssessmentTests.test_missing_context_and_bad_reward_command_or_stop_rejected) ... FAIL
+test_partial_and_missing_attempts_remain_in_denominator (test_assess.AssessmentTests.test_partial_and_missing_attempts_remain_in_denominator) ... FAIL
+test_success_and_failure_keep_separate_metrics (test_assess.AssessmentTests.test_success_and_failure_keep_separate_metrics) ... FAIL
+
+======================================================================
+FAIL: test_missing_context_and_bad_reward_command_or_stop_rejected (test_assess.AssessmentTests.test_missing_context_and_bad_reward_command_or_stop_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_assess.py", line 11, in setUp
+    self.assertIsNotNone(self.api,'Missing read-only archive assessor')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing read-only archive assessor
+
+======================================================================
+FAIL: test_partial_and_missing_attempts_remain_in_denominator (test_assess.AssessmentTests.test_partial_and_missing_attempts_remain_in_denominator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_assess.py", line 11, in setUp
+    self.assertIsNotNone(self.api,'Missing read-only archive assessor')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing read-only archive assessor
+
+======================================================================
+FAIL: test_success_and_failure_keep_separate_metrics (test_assess.AssessmentTests.test_success_and_failure_keep_separate_metrics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_assess.py", line 11, in setUp
+    self.assertIsNotNone(self.api,'Missing read-only archive assessor')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing read-only archive assessor
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.006s
+
+FAILED (failures=3)

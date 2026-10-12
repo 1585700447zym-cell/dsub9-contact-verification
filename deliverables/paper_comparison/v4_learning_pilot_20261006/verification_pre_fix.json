@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "exit_code": 0,
+  "command": [
+    "tests/task_variants",
+    "tests/control",
+    "tests/learning/test_action.py",
+    "tests/learning/test_reward.py",
+    "tests/learning/test_v4_learning.py",
+    "tests/learning/test_v4_checkpoint.py",
+    "tests/learning/test_sac_update.py",
+    "tests/learning/test_audited_replay.py",
+    "tests/learning/test_boundary_targets.py",
+    "tests/learning/test_learning_masks.py",
+    "tests/learning/test_tensor_masks.py"
+  ],
+  "physics_episodes": 0,
+  "formal_updates": 0
+}

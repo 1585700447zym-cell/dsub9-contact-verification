@@ -1,0 +1,46 @@
+{
+  "stage_id": "B2-SCOPE-06",
+  "status": "REGISTERED_ONCE_NOT_YET_EXECUTED",
+  "grant_sha256": "5bddc98560ee56993427b5007f7a86bf5fcdccf2f7f31e01af4b3a464d6f39f5",
+  "grant_validated": true,
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "runner_pins": {
+    "delivery_manifest.json": "d373a6071a4967743b7d960b89bdb82cb2b366a85b49b7cdb933ecd416edc876",
+    "candidate_binding.json": "b7746e0cfaf29317c1ae692f6ed03c685d0d1a3398965c3fa36fc012b8ed3952",
+    "candidate.json": "56b1af5518ddf81573995e31585873e1a46188dba88c2fe77a1f4982ca630d0e"
+  },
+  "sealed_runner_members": 61,
+  "before_documents": {
+    "项目当前入口.md": "d4c0b8aef2abf1abef918d43014bce3ded1972bc3f8f3fed4a9e7de8a30e69c1",
+    "项目进度跟踪.md": "fed91941d56c4314b9ce43a6fc8404a5f3a5ff6093adc52d59a8117f99bb8152",
+    "项目交付总览.md": "e8deb18aa90bbb88aae2b3d6c64d009ab69cecebb25e28d0e4c163cea542fac4",
+    "研究推进计划_当前版.md": "08b0123debd7d8582a93bd5c7da69da00d6a7b9a3df7559a1bd7a8c26499f142",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "72accecf8a594cc648a20f88dc4a1b575e4f571311821bfbc8dad88b85d3c973",
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+  },
+  "limits": {
+    "case_environment_instances": 25,
+    "control_cycles_per_episode": 14500,
+    "cumulative_dynamic_if_all_run": 225,
+    "dynamic_attempts": 16,
+    "learner_constructions": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "per_episode_wall_s": 1200,
+    "per_static_wall_s": 60,
+    "physical_substeps_per_episode": 145000,
+    "replay_publications": 0,
+    "static_batch_wall_s": 600,
+    "static_initializations": 9,
+    "tensor_reads": 0,
+    "total_physical_substeps": 2320000,
+    "total_resets": 25,
+    "total_supervised_wall_s": 21600
+  },
+  "user_message": "批准继续",
+  "authorization_provenance": "本会话最新人类消息原文：“批准继续”。承接上一轮已提交的具体新运行方案：9次无积分静态初始化全部通过后，8点按zero/script固定顺序最多16个动态回合；环境/复位各25次、训练/网络推理0、不重试、整轮监督硬限6小时；累计动态209至最多225。旧15回合继续关闭。",
+  "no_retries": true,
+  "no_training": true,
+  "cumulative_before": 209
+}

@@ -4,7 +4,7 @@ No policy updates, no model-domain certification and no learning permission.
 """
 from copy import deepcopy
 import numpy as np
-from .action import compose_command, normalized_action
+from .action import compose_command, normalized_action, DEFAULT_ACTION_SCALE, validated_action_scale
 from .guarded_session import CandidateEpisodeSession
 from .observation import ObservationBuilder
 from .reward import EpisodeReward
@@ -12,10 +12,13 @@ from .episode_buffer import _safe_error_archive
 
 
 class ResidualSession(CandidateEpisodeSession):
-    def __init__(self, *, environment, controller_factory=None):
+    def __init__(self, *, environment, controller_factory=None, action_scale=DEFAULT_ACTION_SCALE,
+                 finish_criteria=None, geometry_checker=None):
+        self._action_scale = validated_action_scale(action_scale)
         self._features_ready = False
         self._decorated_cache = None
-        super().__init__(environment=environment, controller_factory=controller_factory)
+        super().__init__(environment=environment, controller_factory=controller_factory,
+                         finish_criteria=finish_criteria, geometry_checker=geometry_checker)
 
     def reset(self, case, seed=None):
         self.interface_fault = None
@@ -75,7 +78,8 @@ class ResidualSession(CandidateEpisodeSession):
     def _command_for_action(self, snapshot, action):
         command, log = compose_command(snapshot.base_command, action,
             phase=snapshot.controller_state['phase'], enabled=snapshot.residual_enabled,
-            previous_limited=self.env.command.copy(), dt=self.env.config.control_period)
+            previous_limited=self.env.command.copy(), dt=self.env.config.control_period,
+            action_scale=self._action_scale)
         self.last_action_log = log
         self.previous_residual = np.asarray(log['applied_residual'])[[0, 1, 3, 4]].tolist()
         return command

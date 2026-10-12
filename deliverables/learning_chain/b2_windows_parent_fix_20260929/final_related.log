@@ -1,0 +1,4 @@
+.........................................................                [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_windows_parent_fix_20260929\final_related.xml -
+57 passed in 15.53s
+{"exit_code": 0, "tests": 57, "tests_with_failure_or_error": 0, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "f839b1cf9905167583a9f629af4933da7e8aec9c01b3d28f4c4d53c644fe19ec", "runner_sha256": "1dca3f817ff4455a6c793ac62097af8dfbea6630ba855f01ac51e3f7a8982779"}

@@ -1,0 +1,24 @@
+test_advance_stops_at_first_unhealthy_episode (test_adapter_sources.SourceTests.test_advance_stops_at_first_unhealthy_episode) ... ok
+test_archive_rebuild_is_reserved_before_numeric_audit (test_adapter_sources.SourceTests.test_archive_rebuild_is_reserved_before_numeric_audit) ... ok
+test_candidate_budget_and_operation_breakdown (test_adapter_sources.SourceTests.test_candidate_budget_and_operation_breakdown) ... ok
+test_inherited_baseline_is_exact_four_case_reference (test_adapter_sources.SourceTests.test_inherited_baseline_is_exact_four_case_reference) ... ok
+test_new_grant_is_specific_to_this_candidate (test_adapter_sources.SourceTests.test_new_grant_is_specific_to_this_candidate) ... ok
+test_physical_restore_requires_all_fields_and_state (test_adapter_sources.SourceTests.test_physical_restore_requires_all_fields_and_state) ... ok
+test_physical_rollout_and_updater_metering_are_unchanged (test_adapter_sources.SourceTests.test_physical_rollout_and_updater_metering_are_unchanged) ... ok
+test_private_audited_rng_is_restored_in_common_install_path (test_adapter_sources.SourceTests.test_private_audited_rng_is_restored_in_common_install_path) ... ok
+test_typed_digest_is_identical_to_passed_restore_gate (test_adapter_sources.SourceTests.test_typed_digest_is_identical_to_passed_restore_gate) ... ok
+test_worker_has_no_eager_numerical_adapter_import (test_adapter_sources.SourceTests.test_worker_has_no_eager_numerical_adapter_import) ... ok
+test_counter_refuses_overrun_and_closed_reuse (test_continuation.ContinuationTests.test_counter_refuses_overrun_and_closed_reuse) ... ok
+test_legacy_grant_never_becomes_new_admission (test_continuation.ContinuationTests.test_legacy_grant_never_becomes_new_admission) ... ok
+test_migration_only_changes_binding_and_preserves_source (test_continuation.ContinuationTests.test_migration_only_changes_binding_and_preserves_source) ... ok
+test_old_actual_grants_cannot_start_new_candidate (test_continuation.ContinuationTests.test_old_actual_grants_cannot_start_new_candidate) ... ok
+test_online_archive_must_use_new_qualification (test_continuation.ContinuationTests.test_online_archive_must_use_new_qualification) ... ok
+test_only_pinned_old_warm_archive_uses_legacy_binding (test_continuation.ContinuationTests.test_only_pinned_old_warm_archive_uses_legacy_binding) ... ok
+test_remaining_schedule_has_no_repeat_of_initial_or_warmup (test_continuation.ContinuationTests.test_remaining_schedule_has_no_repeat_of_initial_or_warmup) ... ok
+test_role_claim_cannot_repeat_even_before_runtime (test_continuation.ContinuationTests.test_role_claim_cannot_repeat_even_before_runtime) ... ok
+test_wrong_warm_case_or_id_is_refused (test_continuation.ContinuationTests.test_wrong_warm_case_or_id_is_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.389s
+
+OK

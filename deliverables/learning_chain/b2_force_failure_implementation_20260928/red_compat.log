@@ -1,0 +1,31 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_______ test_strict_overlength_rejection_preserves_old_guard_clear_flag _______
+
+    def test_strict_overlength_rejection_preserves_old_guard_clear_flag():
+        from tools.learning.episode_rules import STRICT,stamp_pending
+        raw=dict(guard_facts=dict(simulation_valid=True,contact_reasons=[],motion_reasons=[],invalid_reasons=[]),
+            outcome=dict(simulation_valid=True,physical_stopped=True,valid_for_learning=True,
+            guard_violations=dict(contact=False,motion=False),task_outcome='TASK_FAILURE'),
+            transitions=[{}]*13001,fault=None)
+        record={}
+        assert not stamp_pending(raw,record,STRICT)
+>       assert raw['guard_clear'] is False and record['guard_clear'] is False
+E       assert (True is False)
+
+tests\learning\test_force_failure_regressions.py:10: AssertionError
+____ test_preparation_config_names_only_unqualified_contact_as_a_hard_stop ____
+
+    def test_preparation_config_names_only_unqualified_contact_as_a_hard_stop():
+        from tools.learning.force_failure_preparation import force_config
+        config=force_config()['execution']
+>       assert 'contact_guard' not in config['stop_on']
+E       AssertionError: assert 'contact_guard' not in ['invalid', 'unstopped', 'contact_guard', 'motion_violation', 'input_changed', 'archive_error', ...]
+
+tests\learning\test_force_failure_regressions.py:17: AssertionError
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_force_failure_implementation_20260928\red_compat.xml -
+=========================== short test summary info ===========================
+FAILED tests/learning/test_force_failure_regressions.py::test_strict_overlength_rejection_preserves_old_guard_clear_flag
+FAILED tests/learning/test_force_failure_regressions.py::test_preparation_config_names_only_unqualified_contact_as_a_hard_stop
+2 failed in 0.13s
+{"exit_code": 1, "tests": 2, "tests_with_failure_or_error": 2, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "f4e44cd4b13d357e8b514f9450a4540d70fa8880bf2aacd70cb777cc006f8abb", "runner_sha256": "56fba0245eac9deb4dfdd35c63f696bad7003a6a9b88a99a4eb1fa54e4cda75c"}

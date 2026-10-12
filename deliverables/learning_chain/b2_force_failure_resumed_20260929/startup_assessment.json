@@ -1,0 +1,31 @@
+{
+  "status": "authorized_cycle_running_initial_evaluation",
+  "recorded_at": "2026-09-29T14:35:09.183948+08:00",
+  "tests": 212,
+  "source_count": 917,
+  "candidate_sha256": "78c7f13fe1426fe18f29ceeeceaf71babfb70ebb9bf9a8ba42601cffcaa1a42b",
+  "authorization_sha256": "a4be2e34446d55d84b8b87f7883f30c9ff5d60bcdb7f36936cec376f7b2d7b6d",
+  "prior_failed_formal_attempts": 1,
+  "prior_failed_attempt_physical_starts": 0,
+  "new_dynamic_starts": 1,
+  "progress": {
+    "stage": "initial",
+    "case": "x_pos_100",
+    "cycles": 3000,
+    "wall_timestamp": 1790663697.8379135
+  },
+  "formal_optimizer_batches_at_snapshot": 0,
+  "process": {
+    "supervisor_pid": 38848,
+    "worker_pid": 24624,
+    "wall_timestamp": 1790663515.8175216
+  },
+  "worker_identity": {
+    "pid": 37196,
+    "parent_pid": 24624,
+    "wall_timestamp": 1790663519.912218
+  },
+  "automation_status": "ACTIVE",
+  "b2_complete": false,
+  "performance_gain_established": false
+}

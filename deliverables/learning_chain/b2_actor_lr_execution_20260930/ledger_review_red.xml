@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="8" time="0.163" timestamp="2026-09-30T16:58:33.209389+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_lr_budget" name="test_b_and_evaluation_cannot_bypass_exact_a_reproduction_gate" time="0.029" /><testcase classname="tests.learning.test_actor_lr_budget" name="test_failed_attempt_remains_charged_and_cannot_retry" time="0.006" /><testcase classname="tests.learning.test_actor_lr_budget" name="test_empty_ledger_cannot_claim_later_phase[A_training]" time="0.008"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ledger_review_red_work/test_empty_ledger_cannot_claim0')
+phase = 'A_training'
+
+    @pytest.mark.parametrize('phase',['A_training','B_training','diagnostic','evaluation','complete'])
+    def test_empty_ledger_cannot_claim_later_phase(tmp_path,phase):
+        l=ledger(tmp_path);raw=deepcopy(l.state);raw['phase']=phase
+        if phase=='complete':raw['status']='complete'
+        l.path.write_text(json.dumps(raw),encoding='utf-8')
+&gt;       with pytest.raises(ValueError):module().ComparisonLedger.load(l.path,'a'*64,'b'*64)
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_lr_budget.py:92: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_empty_ledger_cannot_claim_later_phase[B_training]" time="0.009"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ledger_review_red_work/test_empty_ledger_cannot_claim1')
+phase = 'B_training'
+
+    @pytest.mark.parametrize('phase',['A_training','B_training','diagnostic','evaluation','complete'])
+    def test_empty_ledger_cannot_claim_later_phase(tmp_path,phase):
+        l=ledger(tmp_path);raw=deepcopy(l.state);raw['phase']=phase
+        if phase=='complete':raw['status']='complete'
+        l.path.write_text(json.dumps(raw),encoding='utf-8')
+&gt;       with pytest.raises(ValueError):module().ComparisonLedger.load(l.path,'a'*64,'b'*64)
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_lr_budget.py:92: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_empty_ledger_cannot_claim_later_phase[diagnostic]" time="0.009"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ledger_review_red_work/test_empty_ledger_cannot_claim2')
+phase = 'diagnostic'
+
+    @pytest.mark.parametrize('phase',['A_training','B_training','diagnostic','evaluation','complete'])
+    def test_empty_ledger_cannot_claim_later_phase(tmp_path,phase):
+        l=ledger(tmp_path);raw=deepcopy(l.state);raw['phase']=phase
+        if phase=='complete':raw['status']='complete'
+        l.path.write_text(json.dumps(raw),encoding='utf-8')
+&gt;       with pytest.raises(ValueError):module().ComparisonLedger.load(l.path,'a'*64,'b'*64)
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_lr_budget.py:92: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_empty_ledger_cannot_claim_later_phase[evaluation]" time="0.008"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ledger_review_red_work/test_empty_ledger_cannot_claim3')
+phase = 'evaluation'
+
+    @pytest.mark.parametrize('phase',['A_training','B_training','diagnostic','evaluation','complete'])
+    def test_empty_ledger_cannot_claim_later_phase(tmp_path,phase):
+        l=ledger(tmp_path);raw=deepcopy(l.state);raw['phase']=phase
+        if phase=='complete':raw['status']='complete'
+        l.path.write_text(json.dumps(raw),encoding='utf-8')
+&gt;       with pytest.raises(ValueError):module().ComparisonLedger.load(l.path,'a'*64,'b'*64)
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_lr_budget.py:92: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_empty_ledger_cannot_claim_later_phase[complete]" time="0.007"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ledger_review_red_work/test_empty_ledger_cannot_claim4')
+phase = 'complete'
+
+    @pytest.mark.parametrize('phase',['A_training','B_training','diagnostic','evaluation','complete'])
+    def test_empty_ledger_cannot_claim_later_phase(tmp_path,phase):
+        l=ledger(tmp_path);raw=deepcopy(l.state);raw['phase']=phase
+        if phase=='complete':raw['status']='complete'
+        l.path.write_text(json.dumps(raw),encoding='utf-8')
+&gt;       with pytest.raises(ValueError):module().ComparisonLedger.load(l.path,'a'*64,'b'*64)
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_lr_budget.py:92: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_formal_bulk_row_cannot_replace_500_transactions" time="0.008"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ledger_review_red_work/test_formal_bulk_row_cannot_re0')
+
+    def test_formal_bulk_row_cannot_replace_500_transactions(tmp_path):
+        l=ledger(tmp_path);raw=deepcopy(l.state)
+        raw.update(phase='A_training',gates=dict(real_validation='c'*64),attempts=[
+            dict(kind='formal',branch='A',identity='batch_000',units=500,status='finished',result=dict(completed=True))])
+        l.path.write_text(json.dumps(raw),encoding='utf-8')
+&gt;       with pytest.raises(ValueError):module().ComparisonLedger.load(l.path,'a'*64,'b'*64)
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_lr_budget.py:100: Failed</failure></testcase></testsuite></testsuites>

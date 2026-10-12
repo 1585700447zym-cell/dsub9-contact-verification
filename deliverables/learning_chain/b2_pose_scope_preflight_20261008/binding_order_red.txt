@@ -1,0 +1,22 @@
+test_prepared_runtime_inventory_has_canonical_order (test_review_regressions.ReviewRegressions.test_prepared_runtime_inventory_has_canonical_order) ... 
+  test_prepared_runtime_inventory_has_canonical_order (test_review_regressions.ReviewRegressions.test_prepared_runtime_inventory_has_canonical_order) (directory='D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Lib\\site-packages\\numpy') ... FAIL
+
+======================================================================
+FAIL: test_prepared_runtime_inventory_has_canonical_order (test_review_regressions.ReviewRegressions.test_prepared_runtime_inventory_has_canonical_order) (directory='D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Lib\\site-packages\\numpy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 17, in test_prepared_runtime_inventory_has_canonical_order
+    with self.subTest(directory=name):self.assertEqual(inventory,sorted(inventory))
+                                      ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['__c[2490 chars]ndom/bitgen.h', '_core/include/numpy/random/di[25429 chars]pyi'] != ['__c[2490 chars]ndom/LICENSE.txt', '_core/include/numpy/random[25429 chars]pyi']
+
+First differing element 77:
+'_core/include/numpy/random/bitgen.h'
+'_core/include/numpy/random/LICENSE.txt'
+
+Diff is 30651 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.013s
+
+FAILED (failures=1)

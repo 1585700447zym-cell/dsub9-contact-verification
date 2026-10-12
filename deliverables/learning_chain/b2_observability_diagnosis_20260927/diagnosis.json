@@ -1,0 +1,1873 @@
+{
+  "version": "b2_05_offline_diagnosis_v1",
+  "parent_manifest_sha256": "7441f3efec534b57abab0610a1e6b09db86c03b6f32633cb27c2cd48ef287449",
+  "parent_files_verified": 114,
+  "sources_verified": 872,
+  "native_rollouts": 0,
+  "optimizer_updates": 0,
+  "independent_test_used": false,
+  "episodes": [
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/episodes/train_000000/episode.json.gz",
+      "case": {
+        "name": "engineering_000000",
+        "x_offset_m": -2.212110375882579e-06,
+        "y_offset_m": 2.2075390201548117e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -2.2121103758825793,
+        22.075390201548117
+      ],
+      "final_xy_um": [
+        -3.2934242506429414,
+        15.278857512316034
+      ],
+      "final_xy_norm_um": 15.629783433444596,
+      "shift_xy_um": [
+        -1.0813138747603623,
+        -6.796532689232084
+      ],
+      "command_integral_xy_um": [
+        -1.0345492845676902,
+        -7.0147862476158584
+      ],
+      "applied_residual_integral_xy_um": [
+        4.9466406585210745,
+        -2.8230583769431896
+      ],
+      "limiter_delta_integral_xy_um": [
+        -0.1326265745732709,
+        -1.9995948491933222
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 15.59774830775414,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 15.629783433444443,
+      "max_angle_deg": 0.023357732940028342,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/episodes/train_000001/episode.json.gz",
+      "case": {
+        "name": "engineering_000001",
+        "x_offset_m": 7.878300661108716e-06,
+        "y_offset_m": -1.0010655152970497e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        7.878300661108716,
+        -10.010655152970497
+      ],
+      "final_xy_um": [
+        -3.006107456195256,
+        -6.7096424855076675
+      ],
+      "final_xy_norm_um": 7.352277492146378,
+      "shift_xy_um": [
+        -10.884408117303972,
+        3.3010126674628295
+      ],
+      "command_integral_xy_um": [
+        -10.872831347921663,
+        3.2722014875258587
+      ],
+      "applied_residual_integral_xy_um": [
+        -5.596118617383781,
+        4.238354838044268
+      ],
+      "limiter_delta_integral_xy_um": [
+        -2.498719664070466,
+        1.5522210646226
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 7.274399892799863,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 7.352277492146422,
+      "max_angle_deg": 0.052037535787686426,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/episodes/train_000002/episode.json.gz",
+      "case": {
+        "name": "engineering_000002",
+        "x_offset_m": 1.4985787889564178e-05,
+        "y_offset_m": 4.585425611731245e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        14.985787889564179,
+        45.85425611731245
+      ],
+      "final_xy_um": [
+        -2.419308028619412,
+        39.20584585105806
+      ],
+      "final_xy_norm_um": 39.280420061835756,
+      "shift_xy_um": [
+        -17.40509591818359,
+        -6.6484102662543885
+      ],
+      "command_integral_xy_um": [
+        -17.644185956710977,
+        -6.9656686735111455
+      ],
+      "applied_residual_integral_xy_um": [
+        -13.502841532229446,
+        -1.9109753251060906
+      ],
+      "limiter_delta_integral_xy_um": [
+        -3.736190992592551,
+        -3.2250221443164855
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 39.1680527954103,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 39.280420061836075,
+      "max_angle_deg": 0.051316370233248206,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/episodes/train_000003/episode.json.gz",
+      "case": {
+        "name": "engineering_000003",
+        "x_offset_m": -1.2401587734787412e-06,
+        "y_offset_m": 1.9279650333574356e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -1.2401587734787411,
+        19.279650333574356
+      ],
+      "final_xy_um": [
+        -15.470306196044966,
+        26.17165886695636
+      ],
+      "final_xy_norm_um": 30.402073969512717,
+      "shift_xy_um": [
+        -14.230147422566224,
+        6.892008533382003
+      ],
+      "command_integral_xy_um": [
+        -14.408407316208674,
+        6.771335620869191
+      ],
+      "applied_residual_integral_xy_um": [
+        -10.517725610734718,
+        10.591917318096167
+      ],
+      "limiter_delta_integral_xy_um": [
+        -4.94538534879733,
+        4.312803660628661
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 30.097107501468308,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 30.402073969512774,
+      "max_angle_deg": 0.03932316573937305,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/episodes/train_000004/episode.json.gz",
+      "case": {
+        "name": "engineering_000004",
+        "x_offset_m": -4.441226095261083e-05,
+        "y_offset_m": -3.078371994841479e-06,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -44.41226095261083,
+        -3.0783719948414787
+      ],
+      "final_xy_um": [
+        -42.65062156372261,
+        -8.661942369581666
+      ],
+      "final_xy_norm_um": 43.52131392071975,
+      "shift_xy_um": [
+        1.761639388888222,
+        -5.583570374740188
+      ],
+      "command_integral_xy_um": [
+        1.7260939598115228,
+        -6.110053404570241
+      ],
+      "applied_residual_integral_xy_um": [
+        10.860093194247554,
+        -10.176871186497923
+      ],
+      "limiter_delta_integral_xy_um": [
+        1.6172457265865767,
+        -1.3460523211956241
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 43.52131392071975,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 43.52131392072004,
+      "max_angle_deg": 0.02356757154604513,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/episodes/train_000005/episode.json.gz",
+      "case": {
+        "name": "engineering_000005",
+        "x_offset_m": 4.504514658490443e-05,
+        "y_offset_m": -3.4957311256938e-06,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        45.04514658490443,
+        -3.4957311256938
+      ],
+      "final_xy_um": [
+        69.87455761625519,
+        -6.47279122222284
+      ],
+      "final_xy_norm_um": 70.17371892862634,
+      "shift_xy_um": [
+        24.829411031350755,
+        -2.9770600965290397
+      ],
+      "command_integral_xy_um": [
+        24.684891017674,
+        -2.7913906204663994
+      ],
+      "applied_residual_integral_xy_um": [
+        12.993512356282043,
+        -2.2522996902430275
+      ],
+      "limiter_delta_integral_xy_um": [
+        6.282537741660771,
+        0.9930509412299916
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": -2.0,
+        "total": 2.3901133517240414
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": false,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 70.15094946384076,
+      "task_settle_xy_all_failed": true,
+      "last_active_xy_norm_um": 70.17371892862698,
+      "max_angle_deg": 0.041775199776152204,
+      "final_reason": "TARGET_POSE_NOT_SETTLED",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/episodes/train_000006/episode.json.gz",
+      "case": {
+        "name": "engineering_000006",
+        "x_offset_m": 1.736355295314582e-05,
+        "y_offset_m": -1.6301685183926786e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        17.36355295314582,
+        -16.301685183926786
+      ],
+      "final_xy_um": [
+        47.0953127940474,
+        22.47620184183996
+      ],
+      "final_xy_norm_um": 52.18379189369334,
+      "shift_xy_um": [
+        29.73175984090158,
+        38.777887025766745
+      ],
+      "command_integral_xy_um": [
+        29.722319151170748,
+        38.98065597056895
+      ],
+      "applied_residual_integral_xy_um": [
+        12.763886779551607,
+        21.03046699762028
+      ],
+      "limiter_delta_integral_xy_um": [
+        9.533814620972715,
+        7.722481911181238
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": -2.0,
+        "total": 2.3901133517240414
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": false,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 52.183791893692984,
+      "task_settle_xy_all_failed": true,
+      "last_active_xy_norm_um": 52.183791893692984,
+      "max_angle_deg": 0.02214696773939178,
+      "final_reason": "TARGET_POSE_NOT_SETTLED",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_00/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_00",
+        "x_offset_m": -1.4049548190230155e-05,
+        "y_offset_m": -2.001182670777668e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -14.049548190230155,
+        -20.01182670777668
+      ],
+      "final_xy_um": [
+        -14.049548190230155,
+        -20.01182670777668
+      ],
+      "final_xy_norm_um": 24.451237443771298,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 24.451237443771298,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 24.451237443771298,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_01/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_01",
+        "x_offset_m": 1.908719409409605e-05,
+        "y_offset_m": 3.558172886073183e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        19.08719409409605,
+        35.58172886073183
+      ],
+      "final_xy_um": [
+        19.08719409409605,
+        35.58172886073183
+      ],
+      "final_xy_norm_um": 40.37796932863677,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 40.37796932863677,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 40.37796932863677,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_02/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_02",
+        "x_offset_m": -3.123371363894405e-05,
+        "y_offset_m": -3.7255774606427735e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -31.233713638944053,
+        -37.255774606427735
+      ],
+      "final_xy_um": [
+        -31.233713638944053,
+        -37.255774606427735
+      ],
+      "final_xy_norm_um": 48.61622783808412,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 48.61622783808412,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 48.61622783808412,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_03/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_03",
+        "x_offset_m": 9.563927578890365e-06,
+        "y_offset_m": 1.1928789732113727e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        9.563927578890365,
+        11.928789732113728
+      ],
+      "final_xy_um": [
+        9.563927578890365,
+        11.928789732113728
+      ],
+      "final_xy_norm_um": 15.289366736632411,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 15.289366736632411,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 15.289366736632411,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_04/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_04",
+        "x_offset_m": -1.5925513882001395e-05,
+        "y_offset_m": -4.439587383370755e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -15.925513882001395,
+        -44.395873833707554
+      ],
+      "final_xy_um": [
+        -15.925513882001395,
+        -44.395873833707554
+      ],
+      "final_xy_norm_um": 47.165830914596405,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 47.165830914596405,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 47.165830914596405,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_05/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_05",
+        "x_offset_m": -4.246572196502751e-05,
+        "y_offset_m": 2.63019112657593e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -42.46572196502751,
+        26.3019112657593
+      ],
+      "final_xy_um": [
+        -42.46572196502751,
+        26.3019112657593
+      ],
+      "final_xy_norm_um": 49.95125702365152,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 49.95125702365152,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 49.95125702365152,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_06/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_06",
+        "x_offset_m": 2.7187208967864577e-05,
+        "y_offset_m": 1.1205757315899987e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        27.187208967864578,
+        11.205757315899987
+      ],
+      "final_xy_um": [
+        27.187208967864578,
+        11.205757315899987
+      ],
+      "final_xy_norm_um": 29.406008373888188,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 29.406008373888188,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 29.406008373888188,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/zero_b2/validation_small_xy_07/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_07",
+        "x_offset_m": -2.697140208587918e-05,
+        "y_offset_m": -3.707450862534396e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -26.97140208587918,
+        -37.07450862534396
+      ],
+      "final_xy_um": [
+        -26.97140208587918,
+        -37.07450862534396
+      ],
+      "final_xy_norm_um": 45.84730875731826,
+      "shift_xy_um": [
+        0.0,
+        0.0
+      ],
+      "command_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "applied_residual_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "limiter_delta_integral_xy_um": [
+        0.0,
+        0.0
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 45.84730875731826,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 45.84730875731826,
+      "max_angle_deg": 0.0,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_00/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_00",
+        "x_offset_m": -1.4049548190230155e-05,
+        "y_offset_m": -2.001182670777668e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -14.049548190230155,
+        -20.01182670777668
+      ],
+      "final_xy_um": [
+        0.8642255654177269,
+        -4.649043138041155
+      ],
+      "final_xy_norm_um": 4.728687759546949,
+      "shift_xy_um": [
+        14.913773755647883,
+        15.362783569735525
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 4.728687759546908,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 4.728687759546908,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_01/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_01",
+        "x_offset_m": 1.908719409409605e-05,
+        "y_offset_m": 3.558172886073183e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        19.08719409409605,
+        35.58172886073183
+      ],
+      "final_xy_um": [
+        34.00096784974426,
+        50.94451243046687
+      ],
+      "final_xy_norm_um": 61.24874824433015,
+      "shift_xy_um": [
+        14.913773755648208,
+        15.362783569735043
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": -2.0,
+        "total": 2.3901133517240414
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": false,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 61.24874824433015,
+      "task_settle_xy_all_failed": true,
+      "last_active_xy_norm_um": 61.248748244330244,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "TARGET_POSE_NOT_SETTLED",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_02/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_02",
+        "x_offset_m": -3.123371363894405e-05,
+        "y_offset_m": -3.7255774606427735e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -31.233713638944053,
+        -37.255774606427735
+      ],
+      "final_xy_um": [
+        -16.319939883295536,
+        -21.89299103669352
+      ],
+      "final_xy_norm_um": 27.306473487565597,
+      "shift_xy_um": [
+        14.913773755648517,
+        15.362783569734216
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 27.237571290198197,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 27.30647348756557,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_03/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_03",
+        "x_offset_m": 9.563927578890365e-06,
+        "y_offset_m": 1.1928789732113727e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        9.563927578890365,
+        11.928789732113728
+      ],
+      "final_xy_um": [
+        24.477701334538555,
+        27.29157330184864
+      ],
+      "final_xy_norm_um": 36.66043965793438,
+      "shift_xy_um": [
+        14.913773755648188,
+        15.362783569734914
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 36.66043965793438,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 36.66043965793439,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_04/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_04",
+        "x_offset_m": -1.5925513882001395e-05,
+        "y_offset_m": -4.439587383370755e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -15.925513882001395,
+        -44.395873833707554
+      ],
+      "final_xy_um": [
+        -1.0117401263533188,
+        -29.033090263973236
+      ],
+      "final_xy_norm_um": 29.050713388130262,
+      "shift_xy_um": [
+        14.913773755648077,
+        15.362783569734319
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 29.050713388130106,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 29.050713388130106,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_05/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_05",
+        "x_offset_m": -4.246572196502751e-05,
+        "y_offset_m": 2.63019112657593e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -42.46572196502751,
+        26.3019112657593
+      ],
+      "final_xy_um": [
+        -27.551948209379333,
+        41.66469483549484
+      ],
+      "final_xy_norm_um": 49.95054199773243,
+      "shift_xy_um": [
+        14.913773755648178,
+        15.362783569735537
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 49.86491853667981,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 49.950541997732785,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_06/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_06",
+        "x_offset_m": 2.7187208967864577e-05,
+        "y_offset_m": 1.1205757315899987e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        27.187208967864578,
+        11.205757315899987
+      ],
+      "final_xy_um": [
+        42.100982723512224,
+        26.56854088563494
+      ],
+      "final_xy_norm_um": 49.78333165907169,
+      "shift_xy_um": [
+        14.913773755647648,
+        15.362783569734955
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 49.783331659071514,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 49.783331659071514,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    },
+    {
+      "path": "deliverables/learning_chain/b2_engineering_short_train_20260926/evaluation/sac/validation_small_xy_07/episode.json.gz",
+      "case": {
+        "name": "validation_small_xy_07",
+        "x_offset_m": -2.697140208587918e-05,
+        "y_offset_m": -3.707450862534396e-05,
+        "roll_rad": 0.0,
+        "pitch_rad": 0.0,
+        "start_origin_z_m": -0.004,
+        "target_depth_m": 0.004
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "rows": 3045,
+      "active_rows": 2045,
+      "inactive_rows": 1000,
+      "initial_xy_um": [
+        -26.97140208587918,
+        -37.07450862534396
+      ],
+      "final_xy_um": [
+        -12.05762833023108,
+        -21.711725055609758
+      ],
+      "final_xy_norm_um": 24.835164703306955,
+      "shift_xy_um": [
+        14.9137737556481,
+        15.362783569734203
+      ],
+      "command_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "applied_residual_integral_xy_um": [
+        14.913232308627716,
+        15.3623379528505
+      ],
+      "limiter_delta_integral_xy_um": [
+        11.373420127630917,
+        15.3623379528505
+      ],
+      "last_active_time_s": 4.089999999999782,
+      "stop_time_s": 4.089999999999782,
+      "final_reward_time_s": 6.090000000004003,
+      "inactive_tail_s": 2.0000000000042206,
+      "tail_discount": 0.8187307530776363,
+      "reward_sum": {
+        "progress": 4.999113351724442,
+        "time": -0.6090000000004003,
+        "force": 0.0,
+        "torque": 0.0,
+        "terminal": 10.0,
+        "total": 14.390113351724043
+      },
+      "final_100ms_all_pass": {
+        "z": true,
+        "xy": true,
+        "angle": true,
+        "linear_speed": true,
+        "angular_speed": true
+      },
+      "task_settle_xy_min_um": 24.782406376981506,
+      "task_settle_xy_all_failed": false,
+      "last_active_xy_norm_um": 24.835164703306855,
+      "max_angle_deg": 0.045836033811859786,
+      "final_reason": "GEOMETRIC_SUCCESS",
+      "contact_rows": 0
+    }
+  ],
+  "numeric": {
+    "seed": 2026092705,
+    "scope": "final_checkpoint_offline_training_rows_one_draw_per_row",
+    "alpha": 0.002943233121186495,
+    "active_rows": 14315,
+    "inactive_rows": 7000,
+    "active_reward_abs": {
+      "n": 14315,
+      "mean": 0.002240969813199623,
+      "min": 9.956224999996266e-08,
+      "median": 0.002300000051036477,
+      "max": 0.002402837621048093
+    },
+    "active_entropy_abs": {
+      "n": 14315,
+      "mean": 0.007997151944230705,
+      "min": 0.004388142377138138,
+      "median": 0.008024037815630436,
+      "max": 0.015269875526428223
+    },
+    "active_entropy_signed": {
+      "n": 14315,
+      "mean": 0.007997151944230705,
+      "min": 0.004388142377138138,
+      "median": 0.008024037815630436,
+      "max": 0.015269875526428223
+    },
+    "active_q_pi": {
+      "n": 14315,
+      "mean": 0.41198329649686066,
+      "min": 0.32217860221862793,
+      "median": 0.41393962502479553,
+      "max": 0.43017229437828064
+    },
+    "deterministic_minus_zero_q": {
+      "n": 14315,
+      "mean": 9.258189611071855e-05,
+      "min": -0.0005041062831878662,
+      "median": 0.00013387203216552734,
+      "max": 0.0005736052989959717
+    },
+    "fraction_q_deterministic_gt_zero": 0.7326580286026001,
+    "active_sampled_action_mean": [
+      0.018522700294852257,
+      0.020925341174006462,
+      -0.016733963042497635,
+      0.0020376311149448156
+    ],
+    "active_deterministic_action_mean": [
+      0.02342953160405159,
+      0.025585845112800598,
+      -0.0378827340900898,
+      -0.010318215936422348
+    ],
+    "all_reward_abs": {
+      "n": 21315,
+      "mean": 0.004106037104308592,
+      "min": 9.956224999996266e-08,
+      "median": 0.002300000051036477,
+      "max": 9.999799728393555
+    },
+    "inactive_reward_abs": {
+      "n": 7000,
+      "mean": 0.007920099714626433,
+      "min": 4.686824104283005e-05,
+      "median": 0.00019999999494757503,
+      "max": 9.999799728393555
+    },
+    "all_target": {
+      "n": 21315,
+      "mean": 0.333557410425998,
+      "min": -2.000200033187866,
+      "median": 0.39701712131500244,
+      "max": 9.999799728393555
+    },
+    "next_active_target": {
+      "n": 14308,
+      "mean": 0.3989109992647691,
+      "min": 0.3255378007888794,
+      "median": 0.40075308084487915,
+      "max": 0.41924628615379333
+    },
+    "next_active_reward_abs": {
+      "n": 14308,
+      "mean": 0.0022409409334355145,
+      "min": 9.956224999996266e-08,
+      "median": 0.002300000051036477,
+      "max": 0.002402837621048093
+    },
+    "next_active_discounted_entropy_abs": {
+      "n": 14308,
+      "mean": 0.007980499466482018,
+      "min": 0.004582582041621208,
+      "median": 0.007998253684490919,
+      "max": 0.01884647086262703
+    },
+    "terminal_reward_rows": 7,
+    "terminal_row_fraction": 0.0003284072249589491,
+    "final_checkpoint_counts": {
+      "critic": 4078,
+      "actor": 4078,
+      "temperature": 4078,
+      "target": 4078
+    }
+  },
+  "max_active_observation_delta": 5.684341886080802e-14,
+  "max_active_action_delta": 0.0,
+  "max_evaluation_continuous_reward_delta": 0.0,
+  "geometry_only": {
+    "assumption": "uniform square +/-50um, zero XY shift, no contact; NOT measured success",
+    "disk_area_fraction": 0.7853981633974483,
+    "square_outside_disk_fraction": 0.21460183660255172
+  },
+  "in_memory_policy_rng_counts_unchanged": true
+}

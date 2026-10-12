@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_repaired_contact_cycle.py", line 109, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_repaired_contact_cycle.py", line 86, in main
+    worker(permit,restore=args.restore);return 0
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_repaired_contact_cycle.py", line 48, in worker
+    evaluate_baseline(chain,ledger=ledger,output=RUN/'baseline',checkpoint_sha256=initial_pin)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\repaired_cycle.py", line 147, in evaluate_baseline
+    collector.start(case['name'],case=case,seed=SEED)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_cycle.py", line 73, in start
+    super().start(episode_id,case=case,seed=seed);self._start_count=deepcopy(self.updater.counts)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\contact_execution.py", line 43, in start
+    return super().start(episode_id,case=case,seed=seed)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\sac_collection.py", line 86, in start
+    super().start(episode_id, case=case, seed=seed)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\admitted_collection.py", line 141, in start
+    self.session = _new_session(self.admission.config)
+                   ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\admitted_collection.py", line 76, in _new_session
+    return ResidualSession(environment=LearningEnvironment(
+        guard_config=GuardCandidateConfig(**config['guard'])))
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\residual_session.py", line 18, in __init__
+    super().__init__(environment=environment, controller_factory=controller_factory)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\guarded_session.py", line 12, in __init__
+    super().__init__(environment=environment, controller_factory=controller_factory)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\session.py", line 16, in __init__
+    verify_runtime(ROOT / 'tmp/mujoco_3_13_probe')
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\runtime.py", line 72, in verify_runtime
+    raise RuntimeError('Use the explicitly selected package path')
+RuntimeError: Use the explicitly selected package path

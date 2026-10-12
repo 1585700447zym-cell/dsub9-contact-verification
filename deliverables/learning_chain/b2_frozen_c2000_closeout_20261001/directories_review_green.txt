@@ -1,0 +1,6 @@
+test_five_actual_collector_constructors_have_exclusive_directories (test_protocol.ReviewRegressions.test_five_actual_collector_constructors_have_exclusive_directories) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.795s
+
+OK

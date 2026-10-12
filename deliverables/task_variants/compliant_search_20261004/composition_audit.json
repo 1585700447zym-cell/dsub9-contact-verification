@@ -1,0 +1,12 @@
+{
+  "y_neg_150": {
+    "reconstructed_commands": 3975,
+    "max_command_error_m_s": 0.0,
+    "max_offset_origin_error_m": 0.0,
+    "max_target_radius_um": 22.402681060619056,
+    "strong_positive_y_admittance_but_negative_command": 0,
+    "example_opposed": null,
+    "stop_tail_composition_is_null": true,
+    "scope": "Saved-cycle algebra only; no physics or controller calls"
+  }
+}

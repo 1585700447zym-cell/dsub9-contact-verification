@@ -1,0 +1,47 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) ... 
+  test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='np.uint64(9223372036854775809)') ... FAIL
+  test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='9.223372036854776e+18') ... FAIL
+  test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='9007199254740993') ... FAIL
+  test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='np.float64(9007199254740992.0)') ... FAIL
+
+======================================================================
+FAIL: test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='np.uint64(9223372036854775809)')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 78, in test_large_integer_float_comparison_keeps_exact_difference
+    with self.subTest(left=repr(left)), self.assertRaises(ValueError):
+                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='9.223372036854776e+18')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 78, in test_large_integer_float_comparison_keeps_exact_difference
+    with self.subTest(left=repr(left)), self.assertRaises(ValueError):
+                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='9007199254740993')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 78, in test_large_integer_float_comparison_keeps_exact_difference
+    with self.subTest(left=repr(left)), self.assertRaises(ValueError):
+                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_large_integer_float_comparison_keeps_exact_difference (__main__.ScalarTests.test_large_integer_float_comparison_keeps_exact_difference) (left='np.float64(9007199254740992.0)')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 78, in test_large_integer_float_comparison_keeps_exact_difference
+    with self.subTest(left=repr(left)), self.assertRaises(ValueError):
+                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=4)

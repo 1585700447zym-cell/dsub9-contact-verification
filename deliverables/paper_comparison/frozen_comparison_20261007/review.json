@@ -1,0 +1,30 @@
+{
+  "critical": 0,
+  "important": 0,
+  "minor_deferred": 0,
+  "reported_critical": 0,
+  "reported_important": 1,
+  "reviewer": "/root/frozen_comparison_review",
+  "fresh_context": true,
+  "second_review": false,
+  "fix_passes": 1,
+  "reviewed_input_sha256": {
+    "docs/superpowers/plans/2026-10-07-v4-frozen-comparison.md": "63a0315efd5c18114e47426056dcd226668e05c843229c070c21196522f79748",
+    "deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py": "2371a774d1edfb92e499209de7e1ffe85880fd3d2da6a0efc657c40d003ec8af",
+    "deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py": "78f9c3cac20f2753d81f594a203d2a484b279faa920719345e7ee32c132afefe"
+  },
+  "evaluation_input_sha256": {
+    "docs/superpowers/plans/2026-10-07-v4-frozen-comparison.md": "63a0315efd5c18114e47426056dcd226668e05c843229c070c21196522f79748",
+    "deliverables/paper_comparison/frozen_comparison_20261007/run_evaluation.py": "04a83583c1ffe942aa2e5a13f24c8a74d74ddf0ae5da41f18c7ebfa37537b0b5",
+    "deliverables/paper_comparison/frozen_comparison_20261007/test_evaluation.py": "47d123d2931862957ae8d9706788977fee1987cbd9f586bb4b2ce5f5dd55f3d5"
+  },
+  "fix": "Network calls now derived once from all durable entries on success/error/finally; 2 actual exception-path tests RED 0 vs7 then GREEN",
+  "scope": "pre-execution evaluation adapter, source/case/state/cost binding; not physics outcomes or future analysis",
+  "declined_to_judge": [
+    "63-test execution evidence and1057-source proof provided by author checks",
+    "Unexecuted27 physical results and actual state/stop",
+    "Task2 analysis, missing-denominator reporting and seal",
+    "Historical211 dirty entries, learner superiority/generalization"
+  ],
+  "at": "2026-10-07T12:13:19.621604"
+}

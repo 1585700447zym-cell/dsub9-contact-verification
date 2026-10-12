@@ -1,0 +1,7 @@
+{
+  "error": "RuntimeError('Paired worker failed')",
+  "worker_stop_confirmed": true,
+  "reconciliation_error": null,
+  "retry_allowed": false,
+  "unknown_costs_use_reserved_upper_bound": true
+}

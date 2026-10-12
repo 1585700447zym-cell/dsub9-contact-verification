@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-04T00:56:21.856730+08:00",
+  "tests_passed": 81,
+  "tests_command": "python -X utf8 -B -m pytest tests/task_variants tests/learning/test_action.py tests/learning/test_reward.py -q --tb=short",
+  "full_project_suite": false,
+  "review": {
+    "critical": 0,
+    "important": 1,
+    "important_fixed": true,
+    "fix": "Original SEARCH boundary priority, four RED-to-GREEN counterexamples"
+  },
+  "prior_sealed_files_verified": {
+    "clearance120_20261003": 210,
+    "functional_b2_20261003": 216
+  },
+  "execution_input_hashes_verified": 876,
+  "source_snapshots": 186,
+  "document_snapshots": 6,
+  "input_sources_unchanged_during_execution": true,
+  "live_plan_after_execution": "Checkbox/closeout only; execution original in source_snapshot",
+  "archive_hash_verified": true,
+  "stop_independently_rechecked": true,
+  "figures_visually_checked": true,
+  "new_links_checked": true,
+  "implementation_complete": true,
+  "bounded_verification_complete": true,
+  "repair_performance_accepted": false,
+  "stage_B2_complete": false,
+  "training_admitted": false,
+  "episodes": 1,
+  "unused_closed": 4,
+  "cumulative_episodes": 120,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "automatic_tracking": "PAUSED"
+}

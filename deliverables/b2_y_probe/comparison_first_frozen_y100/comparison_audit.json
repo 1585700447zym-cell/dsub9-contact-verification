@@ -1,0 +1,150 @@
+{
+  "identical_prefix_samples": 5024,
+  "identical_through_s": 10.046000000003264,
+  "checked_probe_commands": 3668,
+  "probe_execution": {
+    "triggered": true,
+    "zero_gain_command_duration_s": 1.002,
+    "resume_ramp_command_duration_s": 0.098,
+    "resume_ramp_executed": true,
+    "full_search_restored": true,
+    "ended_by_parent": null
+  },
+  "probe_events": [
+    {
+      "time_s": 10.046000000003264,
+      "event": "XY_PROBE_START",
+      "relative_search_advance_m": 0.00010047786167579828,
+      "episode_advance_m": 7.258430022879462e-05
+    },
+    {
+      "time_s": 11.1460000000007,
+      "event": "XY_SEARCH_FULLY_RESTORED"
+    }
+  ],
+  "verified_exit_events": [],
+  "reference_metrics": {
+    "case": "y_offset_neg_100um",
+    "policy": "B2",
+    "advance_mm": 0.21714245279515557,
+    "z_error_um": 3782.8575472048446,
+    "xy_error_um": 171.67767832342724,
+    "angle_deg": 0.6692640433418369,
+    "peak_force_mN": 24.500692193138438,
+    "peak_torque_mNm": 0.3965024686582396,
+    "peak_penetration_um": 16.501973013997382,
+    "termination": "SEARCH_BUDGET_EXHAUSTED",
+    "success": false,
+    "stop_time_s": 17.381999999986167,
+    "success_time_s": null,
+    "searches": 2,
+    "recoveries": 1,
+    "unmet": [
+      "Z 未到位",
+      "XY 精度",
+      "姿态精度"
+    ]
+  },
+  "candidate_metrics": {
+    "case": "y_offset_neg_100um",
+    "policy": "B2",
+    "advance_mm": 0.20245469381868125,
+    "z_error_um": 3797.5453061813187,
+    "xy_error_um": 162.39765368876036,
+    "angle_deg": 1.128897492407561,
+    "peak_force_mN": 24.500692193138438,
+    "peak_torque_mNm": 0.3941595097394471,
+    "peak_penetration_um": 12.74065630774243,
+    "termination": "SEARCH_BUDGET_EXHAUSTED",
+    "success": false,
+    "stop_time_s": 17.381999999986167,
+    "success_time_s": null,
+    "searches": 2,
+    "recoveries": 1,
+    "unmet": [
+      "Z 未到位",
+      "XY 精度",
+      "姿态精度"
+    ]
+  },
+  "historical_v1_metrics": {
+    "case": "y_offset_neg_100um",
+    "policy": "B2",
+    "advance_mm": 0.23959290605434033,
+    "z_error_um": 3760.4070939456597,
+    "xy_error_um": 96.35708550548141,
+    "angle_deg": 0.3364767470725161,
+    "peak_force_mN": 24.55785478949424,
+    "peak_torque_mNm": 0.3562759071608909,
+    "peak_penetration_um": 12.74065630774243,
+    "termination": "SEARCH_BUDGET_EXHAUSTED",
+    "success": false,
+    "stop_time_s": 10.766000000001586,
+    "success_time_s": null,
+    "searches": 2,
+    "recoveries": 1,
+    "unmet": [
+      "Z 未到位",
+      "XY 精度",
+      "线速度未稳定"
+    ]
+  },
+  "windows": {
+    "0.6": {
+      "reference": {
+        "requested_duration_s": 0.6,
+        "available_duration_s": 0.5999999999986017,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "SEARCH"
+        ],
+        "advance_um": 158.4295051581092,
+        "xy_path_um": 65.79763101581776,
+        "observed_advance_um": 158.4295051581092,
+        "observed_xy_path_um": 65.79763101581776
+      },
+      "candidate": {
+        "requested_duration_s": 0.6,
+        "available_duration_s": 0.5999999999986017,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "SEARCH"
+        ],
+        "advance_um": 159.09689513003875,
+        "xy_path_um": 14.973929881557474,
+        "observed_advance_um": 159.09689513003875,
+        "observed_xy_path_um": 14.973929881557474
+      }
+    },
+    "1.0": {
+      "reference": {
+        "requested_duration_s": 1.0,
+        "available_duration_s": 0.9999999999976694,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "SEARCH"
+        ],
+        "advance_um": 166.24481316265556,
+        "xy_path_um": 79.94385411968155,
+        "observed_advance_um": 166.24481316265556,
+        "observed_xy_path_um": 79.94385411968155
+      },
+      "candidate": {
+        "requested_duration_s": 1.0,
+        "available_duration_s": 0.9999999999976694,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "SEARCH"
+        ],
+        "advance_um": 161.97306785320887,
+        "xy_path_um": 24.48944381932984,
+        "observed_advance_um": 161.97306785320887,
+        "observed_xy_path_um": 24.48944381932984
+      }
+    }
+  }
+}

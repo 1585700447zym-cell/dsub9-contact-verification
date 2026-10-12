@@ -1,0 +1,15 @@
+{
+  "allowed_scope": "one_continuation_boundary_development_episode_only",
+  "max_new_episodes": 1,
+  "prior_cumulative": 139,
+  "cumulative_limit": 140,
+  "training_admitted": false,
+  "formal_updates": 0,
+  "policy_calls": 0,
+  "replay_published": 0,
+  "tests_passed": 310,
+  "review_critical": 0,
+  "review_important": 0,
+  "review_minor_deferred": 2,
+  "configuration_sha256": "d7064e298cd8ef84d4c40bd9708525b637fb80533a2a269c56643eba544b0142"
+}

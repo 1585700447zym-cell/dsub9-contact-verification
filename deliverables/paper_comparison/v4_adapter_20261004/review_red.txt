@@ -1,0 +1,44 @@
+F...................FFFFF                                                [100%]
+================================== FAILURES ===================================
+__ test_all_six_archived_counterexamples_are_filtered_without_breaking_slew ___
+tests\task_variants\test_v4_adapter.py:25: in test_all_six_archived_counterexamples_are_filtered_without_breaking_slew
+    assert np.linalg.norm(np.array(e['reference_xy_m'])+actual[:2]*.002)<.00012
+E   AssertionError: assert np.float64(0.000120000001) < 0.00012
+E    +  where np.float64(0.000120000001) = <function norm at 0x000001E1E6380BB0>((array([ 1.19962138e-04, -6.77428075e-07]) + (array([1.86029670e-05, 1.40107563e-04]) * 0.002)))
+E    +    where <function norm at 0x000001E1E6380BB0> = <module 'numpy.linalg' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Lib\\site-packages\\numpy\\linalg\\__init__.py'>.norm
+E    +      where <module 'numpy.linalg' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Lib\\site-packages\\numpy\\linalg\\__init__.py'> = np.linalg
+E    +    and   array([ 1.19962138e-04, -6.77428075e-07]) = <built-in function array>([0.00011996213765537058, -6.774280751303092e-07])
+E    +      where <built-in function array> = np.array
+__________ test_review_error_outside_episode_try_still_closes_budget __________
+tests\task_variants\test_v4_adapter_preflight.py:68: in test_review_error_outside_episode_try_still_closes_budget
+    assert ledger['status']=='error' and ledger['unused_closed']==9 and ledger['ended_at']
+E   AssertionError: assert ('running' == 'error'
+E     
+E     - error
+E     + running)
+_________ test_review_existing_stop_does_not_claim_or_construct_model _________
+tests\task_variants\test_v4_adapter_preflight.py:77: in test_review_existing_stop_does_not_claim_or_construct_model
+    ledger=runner.execute(tmp_path)
+tools\validation\run_v4_adapter_preflight.py:128: in execute
+    env=LearningEnvironment(guard_config=GuardCandidateConfig(**config['common']['guard_config']),model_xml=(folder/'model.xml').read_text(encoding='utf-8'))
+E   KeyError: 'common'
+_______ test_review_actual_reference_is_checked_using_preaction_origin ________
+tests\task_variants\test_v4_adapter_preflight.py:81: in test_review_actual_reference_is_checked_using_preaction_origin
+    from tools.validation.run_v4_adapter_preflight import actual_reference_radius
+E   ImportError: cannot import name 'actual_reference_radius' from 'tools.validation.run_v4_adapter_preflight' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_v4_adapter_preflight.py)
+________ test_review_execution_hashes_include_all_runtime_foundations _________
+tests\task_variants\test_v4_adapter_preflight.py:95: in test_review_execution_hashes_include_all_runtime_foundations
+    assert p in h
+E   AssertionError: assert 'deliverables/b2_search_recovery/matrix_v1_7cases/results_index.json' in {'assets/collision/d_guide_male_seg_000.stl': '0a512270efb181247d3eff14e8cb197029f0a71100428c695bd36252c60bae35', 'ass..., 'assets/collision/d_guide_male_seg_003.stl': 'd7329b3970ee7e87087d65d766b0ede762162c47831f31e32c186c7a902720e6', ...}
+__________ test_review_verify_inputs_rechecks_frozen_common_sources ___________
+tests\task_variants\test_v4_adapter_preflight.py:107: in test_review_verify_inputs_rechecks_frozen_common_sources
+    with pytest.raises(RuntimeError):runner.verify_inputs(tmp_path)
+E   Failed: DID NOT RAISE <class 'RuntimeError'>
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_v4_adapter.py::test_all_six_archived_counterexamples_are_filtered_without_breaking_slew
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_review_error_outside_episode_try_still_closes_budget
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_review_existing_stop_does_not_claim_or_construct_model
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_review_actual_reference_is_checked_using_preaction_origin
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_review_execution_hashes_include_all_runtime_foundations
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_review_verify_inputs_rechecks_frozen_common_sources
+6 failed, 19 passed in 4.75s

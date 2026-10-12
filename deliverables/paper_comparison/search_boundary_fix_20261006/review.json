@@ -1,0 +1,29 @@
+{
+  "review_type": "one independent read-only review then author fixes",
+  "critical_found": 0,
+  "important_found": 1,
+  "minor_found": 0,
+  "unresolved_critical": 0,
+  "unresolved_important": 0,
+  "reviewed_source_sha256": {
+    "tools/control/reference_search.py": "7c31925aaab1f9f7e6648432550b34c7589274dd71fd362751744455577deaea",
+    "tools/learning/v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219"
+  },
+  "validated_source_sha256": {
+    "tools/control/reference_search.py": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+    "tools/learning/v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219"
+  },
+  "fix_delta": {
+    "tools/control/reference_search.py": {
+      "before": "7c31925aaab1f9f7e6648432550b34c7589274dd71fd362751744455577deaea",
+      "after": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c"
+    }
+  },
+  "ruling": "Confirmed the inherited phase-priority bypass with three failing branch tests; moved current-reference gate before transitions after full sensor/dt validation. Three branch and six invalid-input tests pass.",
+  "second_independent_review": false,
+  "declined_to_judge": [
+    "physical stop/recovery and dynamic regressions: delegated to this bounded execution and independent archive audit",
+    "test pass count: author verified 311 related offline tests, no full project/dynamics tests",
+    "B2/learning or paper superiority: no claim"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "G_archive_sha256": "a8d47576247bfc635dce783413e641aca00e6bc4f1758b9547791ccf27bb3563",
+  "search_end_events": [
+    {
+      "time_s": 8.996000000005711,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED",
+      "reference_boundary_end": true,
+      "reference_boundary_final_segment": false,
+      "reference_xy_m": [
+        0.00011787346910878921,
+        -2.2490999094289488e-05
+      ],
+      "predicted_reference_xy_m": [
+        0.00011793325115650892,
+        -2.220394847969081e-05
+      ],
+      "radius_limit_m": 0.00012
+    },
+    {
+      "time_s": 16.999999999987057,
+      "phase": "FAILED",
+      "reason": "SEARCH_BUDGET_EXHAUSTED",
+      "reference_boundary_end": true,
+      "reference_boundary_final_segment": false,
+      "reference_xy_m": [
+        0.00011578016491666278,
+        -3.1542878306685726e-05
+      ],
+      "predicted_reference_xy_m": [
+        0.00011585743620778136,
+        -3.1258047511115794e-05
+      ],
+      "radius_limit_m": 0.00012
+    }
+  ],
+  "simulation_valid": true,
+  "physical_stopped": true,
+  "guard_violations": {
+    "contact": false,
+    "motion": false
+  },
+  "source_fault": null,
+  "G_insert_active_cycles": 198,
+  "G_search_active_cycles": 7440,
+  "G_insert_threshold_crossings": 1,
+  "G_active_predicted_actual_command_mismatch_cycles": 0,
+  "G_reference_filtered_cycles": 15,
+  "G_search_actual_xy_net_um": [
+    22.58941919982236,
+    -3.5857652178805934
+  ],
+  "matched_trained_S_reference": {
+    "path": "deliverables/paper_comparison/v4_learning_requalification_20261006/run/final_S50_y_neg_150.json.gz",
+    "sha256": "e043f85a4c37869e996aaba0777783027130dec03b63b0b3b4b4a4ce0dcce3d6",
+    "outcome": "FULL_SUCCESS",
+    "task_end_time_s": 10.7600000000016,
+    "new_episode": false
+  },
+  "interpretation": "The fixed F actor under the new G permission fails two searches. This does not isolate training-permission mismatch as unique cause and does not prove G is intrinsically unlearnable. One threshold crossing does not support hysteresis as current priority. Active commands are executed, so do not blame residual nonexecution.",
+  "new_dynamics": 0,
+  "new_optimizer_updates": 0,
+  "new_predictions": 0
+}

@@ -1,0 +1,4 @@
+......................................                                   [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_force_failure_cycle_20260929\green_review.xml -
+38 passed in 6.60s
+{"exit_code": 0, "tests": 38, "tests_with_failure_or_error": 0, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "4725095e68aa374981dabae6f8aea43091c19b88408aa01fb480086b3b176d5d", "runner_sha256": "4b75b427bcfcc3c97848df7f8f958b8d9486d286bc12b7d56df4e503238fdc52"}

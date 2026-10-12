@@ -1,0 +1,57 @@
+test_any_valid_guard_stops_remainder (test_protocol.ContractTests.test_any_valid_guard_stops_remainder) ... ok
+test_authorization_scope_must_be_exact (test_protocol.ContractTests.test_authorization_scope_must_be_exact) ... ok
+test_complete_needs_all_eight (test_protocol.ContractTests.test_complete_needs_all_eight) ... ok
+test_cross_authorization_restore_refused (test_protocol.ContractTests.test_cross_authorization_restore_refused) ... ok
+test_duplicate_finish_rejected (test_protocol.ContractTests.test_duplicate_finish_rejected) ... ok
+test_fault_charged_and_active_cleared (test_protocol.ContractTests.test_fault_charged_and_active_cleared) ... ok
+test_finish_cannot_forge_another_identity (test_protocol.ContractTests.test_finish_cannot_forge_another_identity) ... ok
+test_invalid_or_unstopped_is_failed (test_protocol.ContractTests.test_invalid_or_unstopped_is_failed) ... ERROR
+test_ordinary_failure_allows_next (test_protocol.ContractTests.test_ordinary_failure_allows_next) ... ok
+test_pair_order_exact (test_protocol.ContractTests.test_pair_order_exact) ... ok
+test_reserve_before_first_start (test_protocol.ContractTests.test_reserve_before_first_start) ... ok
+test_result_rejects_invalid_accounting (test_protocol.ContractTests.test_result_rejects_invalid_accounting) ... ok
+test_scope_zero_learning_and_eight_new_starts (test_protocol.ContractTests.test_scope_zero_learning_and_eight_new_starts) ... ok
+test_stale_ledger_cannot_mutate (test_protocol.ContractTests.test_stale_ledger_cannot_mutate) ... ok
+test_write_fault_poisoned_without_budget_reuse (test_protocol.ContractTests.test_write_fault_poisoned_without_budget_reuse) ... ok
+test_wrong_order_or_second_active_start_refused (test_protocol.ContractTests.test_wrong_order_or_second_active_start_refused) ... ok
+test_50_cycle_hold_in_live_context (test_protocol.SamplingTests.test_50_cycle_hold_in_live_context) ... ok
+test_cached_context_taken_before_action (test_protocol.SamplingTests.test_cached_context_taken_before_action) ... ok
+test_complete_sampler_rng_restoration (test_protocol.SamplingTests.test_complete_sampler_rng_restoration) ... ok
+test_cross_case_or_hold_identity_refused (test_protocol.SamplingTests.test_cross_case_or_hold_identity_refused) ... ok
+test_current_permission_closes_old_hold (test_protocol.SamplingTests.test_current_permission_closes_old_hold) ... ok
+test_metadata_before_and_after_cycle_is_explicit (test_protocol.SamplingTests.test_metadata_before_and_after_cycle_is_explicit) ... ok
+test_observation_and_permission_disagreement_refused (test_protocol.SamplingTests.test_observation_and_permission_disagreement_refused) ... ok
+test_paired_initial_rng_equal (test_protocol.SamplingTests.test_paired_initial_rng_equal) ... ok
+test_stage_change_redraws (test_protocol.SamplingTests.test_stage_change_redraws) ... ok
+test_supervision_checked_before_random_draw (test_protocol.SamplingTests.test_supervision_checked_before_random_draw) ... ok
+test_training_style_or_truncation_entry_refused (test_protocol.SamplingTests.test_training_style_or_truncation_entry_refused) ... ok
+test_wrong_rng_draw_count_refused (test_protocol.SamplingTests.test_wrong_rng_draw_count_refused) ... ok
+
+======================================================================
+ERROR: test_invalid_or_unstopped_is_failed (test_protocol.ContractTests.test_invalid_or_unstopped_is_failed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\test_protocol.py", line 50, in test_invalid_or_unstopped_is_failed
+    l.start(C.attempts()[0]['id']);l.finish(self.row(**kw));self.assertEqual(l.state['status'],'failed')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\execution_contract.py", line 146, in start
+    r=deepcopy(s);r['attempts'].append(dict(identity=attempts()[i],cycles_reserved=13000,status='started'));r['active']=i;self.commit(r)
+                                                                                                                          ~~~~~~~~~~~^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\execution_contract.py", line 139, in commit
+    try:write(self.path,r)
+        ~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_execution_20261001\execution_contract.py", line 22, in write
+    _write_json(path,value)
+    ~~~~~~~~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\admitted_collection.py", line 83, in _write_json
+    _replace_json(temporary, path)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\admitted_collection.py", line 60, in _replace_json
+    os.replace(temporary, path)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+OSError: [WinError 87] 参数错误。: "C:\\Users\\OKEVER~1\\AppData\\Local\\Temp\\tmpru6mqgj3\\other1{'simulation_valid': False}.json.tmp" -> "C:\\Users\\OKEVER~1\\AppData\\Local\\Temp\\tmpru6mqgj3\\other1{'simulation_valid': False}.json"
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.283s
+
+FAILED (errors=1)

@@ -1,0 +1,9 @@
+{
+  "status": "REJECTED_BEFORE_CLAIM_OR_RUNTIME",
+  "exit_code": 1,
+  "request_sha256": "9952b7846f0b7514a64ea040bbb1ab10190831e8006529c499c9429da7d6ef3f",
+  "output_created": false,
+  "claims_created": false,
+  "new_physics": 0,
+  "new_training": 0
+}

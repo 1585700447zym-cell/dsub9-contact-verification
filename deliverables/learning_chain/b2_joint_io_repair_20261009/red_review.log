@@ -1,0 +1,36 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_first_null_phase_is_invalid (__main__.PhaseTests.test_first_null_phase_is_invalid) ... FAIL
+test_equal_value_with_invalid_type_does_not_bypass_validation (__main__.PhaseTests.test_equal_value_with_invalid_type_does_not_bypass_validation) ... FAIL
+test_final_phase_is_checked_after_fast_child_exit (__main__.ProcessTests.test_final_phase_is_checked_after_fast_child_exit) ... FAIL
+
+======================================================================
+FAIL: test_first_null_phase_is_invalid (__main__.PhaseTests.test_first_null_phase_is_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_io_repair_20261009\test_supervisor.py", line 108, in test_first_null_phase_is_invalid
+    with self.assertRaises(ValueError):self.monitor.read_phase(self.path)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_equal_value_with_invalid_type_does_not_bypass_validation (__main__.PhaseTests.test_equal_value_with_invalid_type_does_not_bypass_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_io_repair_20261009\test_supervisor.py", line 113, in test_equal_value_with_invalid_type_does_not_bypass_validation
+    with self.assertRaises(ValueError):self.monitor.read_phase(self.path)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_final_phase_is_checked_after_fast_child_exit (__main__.ProcessTests.test_final_phase_is_checked_after_fast_child_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_io_repair_20261009\test_supervisor.py", line 59, in test_final_phase_is_checked_after_fast_child_exit
+    with self.assertRaises(json.JSONDecodeError):self.run_child('fast_corrupt')
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: JSONDecodeError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.350s
+
+FAILED (failures=3)

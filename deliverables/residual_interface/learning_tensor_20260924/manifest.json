@@ -1,0 +1,32 @@
+{
+  "hash_algorithm": "SHA256",
+  "scope": "B1-04 limited dependency/tensor qualification, no training admission",
+  "files": {
+    "deliverables/residual_interface/learning_tensor_20260924/assessment.json": "b0dd62ea787d19dfa764ec058135b854c73740c39f5ea26126088c74509b8491",
+    "deliverables/residual_interface/learning_tensor_20260924/environment.json": "f5f4622bc8d625e744938283ea386d30ccd80d24ecad54439089e7725734a888",
+    "deliverables/residual_interface/learning_tensor_20260924/README.md": "ad45bf572ee8afaafa00be2a5b4ed1dfb3755d8bbff867b0dd6cb4a61557adf0",
+    "deliverables/residual_interface/learning_tensor_20260924/requirements.lock.txt": "852036de5bea59f296aa6883553c696a7c525d3374adf55298038bd416639f2f",
+    "deliverables/residual_interface/learning_tensor_20260924/验收记录.md": "3f64d7b1e6554f6ae715e473e0f51c78efd1aef6beb1345cd30af3c87b11ab23",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/learning_full_20260924.xml": "b16ebb0ce79b63be77453cf3ce5caa23287a2a5db4fd3c3309ba72a662b18330",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/learning_full_final_20260924.xml": "b4800ca1011d482376b60990dfcfafda3ba7e63d4032c48a7350e5d8ee6148fb",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/learning_increment_isolated_recheck_20260924.xml": "050e8442941c4ffe4e83bef5a07e001a721b32cf6f03f983666fc7086c829a9f",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/learning_increment_legacy_20260924.xml": "63e6f9e9d8f830084bbff95d742b718f24a601033235f16148d7c88dbee52e1b",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/learning_runtime_qualification_20260924.xml": "c2d4d15edc353245ad3e582c32c09e4ea5fc14c6554ab9a5be2082ef7417536e",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/learning_runtime_recheck_20260924.xml": "f31875413d0567364a259b50fbf4a83f0fe376531d669b546e1c683a6dbc85f5",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/learning_tensor_final_20260924.xml": "641bcb72a80788f5cf5b020a7bc09036b7a57836485c4179ed6424e393c71e82",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/tensor_gradient_mutation_red_20260924.xml": "788b36f4e24696345a57b5b22af88e3bcb21ae9205d8be2d7042935d80099fb4",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/tensor_masks_green_20260924.xml": "360b0300397adce109c6f0663b39d70eb6ea7c884f1f98de26c82c008131f84e",
+    "deliverables/residual_interface/learning_tensor_20260924/checks/tensor_masks_red_20260924.xml": "7d524b59fd3b3f752f017d1cfca9e395b0aaeb58114cc5c390193a81644dd3ca",
+    "deliverables/residual_interface/learning_tensor_20260924/document_snapshot/月报素材_2026-09.md": "c71475a6ddd2786d6f17ecc0e6500cd0878ac3bc2a4bcb5a1c6cff714b9f361a",
+    "deliverables/residual_interface/learning_tensor_20260924/document_snapshot/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+    "deliverables/residual_interface/learning_tensor_20260924/document_snapshot/项目交付总览.md": "7a5481dc420bb8dea49c63cea4c70f5c8c6b6a87583735b683be43069afcea49",
+    "deliverables/residual_interface/learning_tensor_20260924/document_snapshot/项目进度跟踪.md": "eadf74d433d384691700cd852140af039e80288d899d167561aeffca2db6f39f",
+    "deliverables/residual_interface/learning_tensor_20260924/source_snapshot/tensor_masks.py": "f0cd803819d0c1c2ead2af607b7577f8d6fd212d50afd485ac01fd620f04a83c",
+    "deliverables/residual_interface/learning_tensor_20260924/source_snapshot/test_runtime.py": "4cd792c7191fc6be8498cf2d9e951f30c0272a8211906f1acd24951dd6fcdb02",
+    "deliverables/residual_interface/learning_tensor_20260924/source_snapshot/test_tensor_masks.py": "66c8494e545f340b47bc0cb071cb78d63517601cc5de1b6b10eeb82d77e58387",
+    "deliverables/residual_interface/learning_tensor_20260924/source_snapshot/test_untrained_policy_runtime.py": "e5aa2a874fdaa54bd38a26a08e2f4dae4e62366f846e32e58b4ff7958912ae46",
+    "deliverables/residual_interface/observation_integration_20260924/manifest.json": "76cf6b9eefecbc34da88d9430ca75c96fc4d5dbae4304cc35a85b44d30d0d2c5",
+    "deliverables/residual_interface/residual_observation_regression_20260924/protocol.json": "f534085b76b2082bd5acec9f4b390aea52d28377a69c221aaa02ab74900ecc5c"
+  },
+  "note": "Rolling documents are bound via dated copies only. Four modified source/test files are snapshotted here; preceding 809 dynamic inputs remain unchanged and transitively bound via original protocol. Prior source_snapshot remains original. No trained weights."
+}

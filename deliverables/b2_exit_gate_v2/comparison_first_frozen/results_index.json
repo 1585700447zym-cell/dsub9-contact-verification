@@ -1,0 +1,131 @@
+{
+  "status": "COMPLETE",
+  "comparisons": [
+    {
+      "case": "x_offset_pos_100um",
+      "old_reference": {
+        "file": "deliverables/b2_search_recovery/matrix_v1_case_02/runs/x_offset_pos_100um_b2.json.gz",
+        "sha256": "0941fefcd5722af1527520b3e6a6b5f4d7138607878d421205b7a1a846bb4a4a",
+        "execution": "preserved_previous_V1_run_not_rerun"
+      },
+      "new_index": "deliverables/b2_exit_gate_v2/verified_frozen_x100/results_index.json",
+      "identical_trace_prefix_samples": 5388,
+      "identical_through_s": 10.774000000001568,
+      "old_recovery_exit_s": 10.774000000001568,
+      "verified_new_exit_events": [],
+      "new_recovery_progress": {
+        "blocked_z_m": 0.0002500129658939321,
+        "exit_threshold_z_m": 0.0003500129658939321,
+        "maximum_second_search_z_m": 0.00025037368728920723
+      },
+      "old_metrics": {
+        "case": "x_offset_pos_100um",
+        "policy": "B2",
+        "advance_mm": 3.9908100901253145,
+        "z_error_um": 9.18990987468548,
+        "xy_error_um": 63.978838240532504,
+        "angle_deg": 0.22636902865890857,
+        "peak_force_mN": 24.4773781682511,
+        "peak_torque_mNm": 0.2965289468386507,
+        "peak_penetration_um": 15.12477199387784,
+        "termination": "TARGET_POSE_NOT_SETTLED",
+        "success": false,
+        "stop_time_s": 14.719999999992371,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "XY 精度"
+        ]
+      },
+      "new_metrics": {
+        "case": "x_offset_pos_100um",
+        "policy": "B2",
+        "advance_mm": 0.24558399969829176,
+        "z_error_um": 3754.416000301708,
+        "xy_error_um": 78.05837233957403,
+        "angle_deg": 0.05062295176978701,
+        "peak_force_mN": 24.4773781682511,
+        "peak_torque_mNm": 0.2965289468386507,
+        "peak_penetration_um": 15.14721501654894,
+        "termination": "SEARCH_BUDGET_EXHAUSTED",
+        "success": false,
+        "stop_time_s": 18.10999999998447,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "Z 未到位",
+          "XY 精度"
+        ]
+      }
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "old_reference": {
+        "file": "deliverables/b2_search_recovery/matrix_v1_case_03/runs/y_offset_neg_100um_b2.json.gz",
+        "sha256": "797ac37a825555fe8ea57ac6ab15381a01e7e498aaca6599fe91d61f4aa812c4",
+        "execution": "preserved_previous_V1_run_not_rerun"
+      },
+      "new_index": "deliverables/b2_exit_gate_v2/verified_frozen_y100/results_index.json",
+      "identical_trace_prefix_samples": 5024,
+      "identical_through_s": 10.046000000003264,
+      "old_recovery_exit_s": 10.046000000003264,
+      "verified_new_exit_events": [],
+      "new_recovery_progress": {
+        "blocked_z_m": 0.00025001327885191627,
+        "exit_threshold_z_m": 0.00035001327885191626,
+        "maximum_second_search_z_m": 0.00024888766014266855
+      },
+      "old_metrics": {
+        "case": "y_offset_neg_100um",
+        "policy": "B2",
+        "advance_mm": 0.23959290605434033,
+        "z_error_um": 3760.4070939456597,
+        "xy_error_um": 96.35708550548141,
+        "angle_deg": 0.3364767470725161,
+        "peak_force_mN": 24.55785478949424,
+        "peak_torque_mNm": 0.3562759071608909,
+        "peak_penetration_um": 12.74065630774243,
+        "termination": "SEARCH_BUDGET_EXHAUSTED",
+        "success": false,
+        "stop_time_s": 10.766000000001586,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "Z 未到位",
+          "XY 精度",
+          "线速度未稳定"
+        ]
+      },
+      "new_metrics": {
+        "case": "y_offset_neg_100um",
+        "policy": "B2",
+        "advance_mm": 0.21714245279515557,
+        "z_error_um": 3782.8575472048446,
+        "xy_error_um": 171.67767832342724,
+        "angle_deg": 0.6692640433418369,
+        "peak_force_mN": 24.500692193138438,
+        "peak_torque_mNm": 0.3965024686582396,
+        "peak_penetration_um": 16.501973013997382,
+        "termination": "SEARCH_BUDGET_EXHAUSTED",
+        "success": false,
+        "stop_time_s": 17.381999999986167,
+        "success_time_s": null,
+        "searches": 2,
+        "recoveries": 1,
+        "unmet": [
+          "Z 未到位",
+          "XY 精度",
+          "姿态精度"
+        ]
+      }
+    }
+  ],
+  "input_tags": [
+    "verified_frozen_x100",
+    "verified_frozen_y100"
+  ],
+  "method": "two new V2 dynamics runs vs preserved V1 records"
+}

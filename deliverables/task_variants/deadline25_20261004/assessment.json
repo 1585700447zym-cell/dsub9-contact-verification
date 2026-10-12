@@ -1,0 +1,81 @@
+{
+  "status": "controlled_stop",
+  "episodes": 1,
+  "unused_closed": 4,
+  "cumulative": 125,
+  "functional_success": 0,
+  "strict_precision_success": 0,
+  "control_cycles": 11270,
+  "physical_substeps": 112700,
+  "wall_seconds": 427.9053611999989,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "inputs_unchanged": true,
+  "rows": [
+    {
+      "id": "y_neg_150",
+      "outcome": "TASK_FAILURE",
+      "reason": "TARGET_POSE_NOT_SETTLED",
+      "functional_success": false,
+      "strict_precision_success": false,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "xy_um": 97.60747132374003,
+      "z_um": -9.1161852567936,
+      "angle_deg": 0.4102504859232651,
+      "pin_clearance_um": -1.4293528886850189,
+      "peak_force_mN": 24.474139103047843,
+      "peak_penetration_um": 7.106486275531078,
+      "control_cycles": 11270,
+      "physical_substeps": 112700,
+      "wall_seconds": 427.9053611999989,
+      "stop_time_s": 20.539999999978807,
+      "task_end_time_s": 21.539999999976477,
+      "end_time_s": 22.539999999974146,
+      "contact_cycles": 8109,
+      "search_cycles": 7384,
+      "controller_events": [
+        {
+          "time_s": 0.7459999999999505,
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL"
+        },
+        {
+          "time_s": 1.5259999999998646,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.0002568198433027663
+        },
+        {
+          "time_s": 9.150000000005353,
+          "phase": "WAIT_RECOVERY",
+          "reason": "SEARCH_EXHAUSTED",
+          "reference_boundary_final_segment": true
+        },
+        {
+          "time_s": 9.742000000003973,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH",
+          "progress_origin_z_m": 0.0002568198433027663
+        },
+        {
+          "time_s": 16.885999999987323,
+          "phase": "INSERT",
+          "reason": "SEARCH_ADVANCED",
+          "progress_origin_z_m": 0.0002568198433027663,
+          "observed_z_m": 0.00035693758537839147,
+          "net_advance_m": 0.00010011774207562517
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.007323737775633605,
+        "checked_substeps": 112700
+      }
+    }
+  ]
+}

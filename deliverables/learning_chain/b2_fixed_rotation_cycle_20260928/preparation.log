@@ -1,0 +1,1 @@
+{"zero_command_comparisons": 24429, "initial_identity": {"initial_state_exact_except_binding": true, "old_initial_manifest_sha256": "e5a7524a128124cd33b414dbfd0ae62a5d8e5a7947ed5bde18dfd07f261605d7", "optimizer_calls": 0, "physical_starts": 0, "forbidden_call_counts": {"physics": 0, "optimizer": 0}}, "forbidden_call_counts": {"physics": 0, "optimizer": 0}}

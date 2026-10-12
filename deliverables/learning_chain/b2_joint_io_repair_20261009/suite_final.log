@@ -1,0 +1,44 @@
+test_concurrent_replacement_yields_only_complete_json (test_io_repair.IOTests.test_concurrent_replacement_yields_only_complete_json) ... ok
+test_default_permanent_denial_is_bounded (test_io_repair.IOTests.test_default_permanent_denial_is_bounded) ... ok
+test_delayed_success_is_not_accepted_after_deadline (test_io_repair.IOTests.test_delayed_success_is_not_accepted_after_deadline) ... ok
+test_expired_write_does_not_modify_destination (test_io_repair.IOTests.test_expired_write_does_not_modify_destination) ... ok
+test_failed_replace_keeps_old_value_and_staged_new_value (test_io_repair.IOTests.test_failed_replace_keeps_old_value_and_staged_new_value) ... ok
+test_invalid_json_and_non_permission_errors_fail_immediately (test_io_repair.IOTests.test_invalid_json_and_non_permission_errors_fail_immediately) ... ok
+test_nonfinite_or_invalid_deadline_rejected (test_io_repair.IOTests.test_nonfinite_or_invalid_deadline_rejected) ... ok
+test_persistent_lock_obeys_external_deadline (test_io_repair.IOTests.test_persistent_lock_obeys_external_deadline) ... ok
+test_read_recovers_after_temporary_windows_lock (test_io_repair.IOTests.test_read_recovers_after_temporary_windows_lock) ... ok
+test_replace_recovers_after_temporary_windows_lock (test_io_repair.IOTests.test_replace_recovers_after_temporary_windows_lock) ... ok
+test_complete_fixture_preserves_boundary_and_draws (test_recovery_audit.RecoveryTests.test_complete_fixture_preserves_boundary_and_draws) ... ok
+test_discontinuous_or_nonfinite_observation_rejected (test_recovery_audit.RecoveryTests.test_discontinuous_or_nonfinite_observation_rejected) ... ok
+test_held_request_mutation_rejected (test_recovery_audit.RecoveryTests.test_held_request_mutation_rejected) ... ok
+test_missing_or_truncated_terminal_rejected (test_recovery_audit.RecoveryTests.test_missing_or_truncated_terminal_rejected) ... ok
+test_receipt_or_draw_count_conflict_rejected (test_recovery_audit.RecoveryTests.test_receipt_or_draw_count_conflict_rejected) ... ok
+test_unpermitted_nonzero_action_rejected (test_recovery_audit.RecoveryTests.test_unpermitted_nonzero_action_rejected) ... ok
+test_wrong_episode_or_nonzero_update_rejected (test_recovery_audit.RecoveryTests.test_wrong_episode_or_nonzero_update_rejected) ... ok
+test_failure_closes_sequence_and_cannot_skip_to_next_case (test_related_contract.JointContractTests.test_failure_closes_sequence_and_cannot_skip_to_next_case) ... ok
+test_failure_penalty_cannot_reward_fast_failure_or_missing_case (test_related_contract.JointContractTests.test_failure_penalty_cannot_reward_fast_failure_or_missing_case) ... ok
+test_four_signed_tilts_reach_constructor_and_reset_check (test_related_contract.JointContractTests.test_four_signed_tilts_reach_constructor_and_reset_check) ... ok
+test_joint_config_rejects_old_task_and_wrong_method (test_related_contract.JointContractTests.test_joint_config_rejects_old_task_and_wrong_method) ... ok
+test_old_case_or_zero_angle_transcript_never_reaches_replay (test_related_contract.JointContractTests.test_old_case_or_zero_angle_transcript_never_reaches_replay) ... ok
+test_equal_value_with_invalid_type_does_not_bypass_validation (test_supervisor.PhaseTests.test_equal_value_with_invalid_type_does_not_bypass_validation) ... ok
+test_first_null_phase_is_invalid (test_supervisor.PhaseTests.test_first_null_phase_is_invalid) ... ok
+test_invalid_metadata_rejected (test_supervisor.PhaseTests.test_invalid_metadata_rejected) ... ok
+test_locked_read_respects_last_phase_deadline (test_supervisor.PhaseTests.test_locked_read_respects_last_phase_deadline) ... ok
+test_missing_file_is_allowed_only_before_first_phase (test_supervisor.PhaseTests.test_missing_file_is_allowed_only_before_first_phase) ... ok
+test_new_record_does_not_rescue_expired_old_phase (test_supervisor.PhaseTests.test_new_record_does_not_rescue_expired_old_phase) ... ok
+test_overflow_json_number_rejected (test_supervisor.PhaseTests.test_overflow_json_number_rejected) ... ok
+test_repeated_reads_and_backward_clock_do_not_extend_deadline (test_supervisor.PhaseTests.test_repeated_reads_and_backward_clock_do_not_extend_deadline) ... ok
+test_child_error_stops_and_records_owned_exit (test_supervisor.ProcessTests.test_child_error_stops_and_records_owned_exit) ... ok
+test_corrupt_phase_stops_child (test_supervisor.ProcessTests.test_corrupt_phase_stops_child) ... ok
+test_expired_phase_stops_child (test_supervisor.ProcessTests.test_expired_phase_stops_child) ... ok
+test_final_phase_is_checked_after_fast_child_exit (test_supervisor.ProcessTests.test_final_phase_is_checked_after_fast_child_exit) ... ok
+test_future_phase_cannot_grant_extra_time (test_supervisor.ProcessTests.test_future_phase_cannot_grant_extra_time) ... ok
+test_normal_child_exits_with_success_receipt (test_supervisor.ProcessTests.test_normal_child_exits_with_success_receipt) ... ok
+test_permanent_phase_lock_fails_closed (test_supervisor.ProcessTests.test_permanent_phase_lock_fails_closed) ... ok
+test_unknown_phase_stops_instead_of_allowing_child_success (test_supervisor.ProcessTests.test_unknown_phase_stops_instead_of_allowing_child_success) ... ok
+test_whole_deadline_stops_descendant_tree (test_supervisor.ProcessTests.test_whole_deadline_stops_descendant_tree) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 5.870s
+
+OK

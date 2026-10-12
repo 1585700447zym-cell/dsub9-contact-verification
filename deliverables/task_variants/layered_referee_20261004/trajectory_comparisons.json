@@ -1,0 +1,77 @@
+{
+  "y_neg_150": {
+    "scope": "entire saved old 25s trajectory; referee-only change",
+    "before_time_s": 22.539999999974146,
+    "samples": 11271,
+    "old_samples": 11271,
+    "new_samples": 11271,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  },
+  "y_pos_150": {
+    "scope": "before first search; historical other-controller reference only",
+    "before_time_s": 3.229999999999677,
+    "samples": 1616,
+    "old_samples": 7918,
+    "new_samples": 7963,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  },
+  "x_pos_150": {
+    "scope": "before first search; historical other-controller reference only",
+    "before_time_s": 1.9699999999998157,
+    "samples": 986,
+    "old_samples": 6557,
+    "new_samples": 6551,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  },
+  "x_neg_150": {
+    "scope": "before first search; historical other-controller reference only",
+    "before_time_s": 1.967999999999816,
+    "samples": 985,
+    "old_samples": 7536,
+    "new_samples": 7339,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  },
+  "aligned": {
+    "scope": "full archived trajectory comparison",
+    "before_time_s": null,
+    "samples": 3046,
+    "old_samples": 3046,
+    "new_samples": 3046,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  }
+}

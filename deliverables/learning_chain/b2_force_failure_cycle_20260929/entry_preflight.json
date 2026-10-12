@@ -1,0 +1,8 @@
+{
+  "candidate_sha256": "1f892778e9b5b9c15d982c96a687321b26c018170d23f4f86068cb3a38277083",
+  "technical_verify_exit": 0,
+  "missing_authorization_exit": 1,
+  "missing_authorization_rejected_before_start": true,
+  "no_run_or_start_or_authorization": true,
+  "execution_authorized": false
+}

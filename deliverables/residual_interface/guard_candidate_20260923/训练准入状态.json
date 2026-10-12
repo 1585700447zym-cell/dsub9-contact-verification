@@ -1,0 +1,29 @@
+{
+  "stage": "B.1_partial_guard_candidate",
+  "training_admitted": false,
+  "sac_updates": 0,
+  "independent_test_used": false,
+  "candidate_parameter_frozen": false,
+  "model_scope_qualified": false,
+  "candidate_episode_learning_enabled": false,
+  "candidate_max_rotation_from_start_rad": 0.04363323129985824,
+  "guard_threshold_is_hard_pose_cap": false,
+  "unit_and_integration_tests": {"passed": 94, "failed": 0, "errors": 0, "skipped": 0},
+  "dynamic_probes": {"total": 6, "simulation_valid": 6, "physical_stopped": 6, "expected_trigger_observed": 5},
+  "evidence": {
+    "tests": "tests_final.xml",
+    "dynamic_probes": "../guard_boundary_dynamics_v2_review_fixes/assessment.json",
+    "b2_regression": "../guard_b2_regression_v3_review_fixes/assessment.json"
+  },
+  "missing_gates": [
+    "explicit_orientation_model_scope_and_parameter_freeze",
+    "whitelisted_policy_observation",
+    "nonzero_residual_and_gym_integration",
+    "dedicated_same_version_B2_zero_residual_comparison",
+    "end_to_end_reward_quarantine_and_external_truncation",
+    "actual_learning_domain_and_residual_action_effect_preflight",
+    "sampling_and_learning_cost_measurement",
+    "untrained_policy_serialization_check"
+  ],
+  "note": "Delivery status summary, not the complete automated B.1 admission verifier. A passing guard test does not grant training permission."
+}

@@ -1,0 +1,55 @@
+{
+  "scope": "read_only_real_counterexample_no_physics_no_training",
+  "archive_sha256": "265392f565464dff7ed60c330d721caed0056fde67c406547ff97df60c3e88a4",
+  "event": {
+    "time_s": 8.75600000000627,
+    "phase": "FAILED",
+    "reason": "SEARCH_REFERENCE_LIMIT",
+    "reference_xy_m": [
+      0.00010695684626314158,
+      -5.436250121519483e-05
+    ],
+    "predicted_reference_xy_m": [
+      0.00010711610186378689,
+      -5.4122590344158264e-05
+    ],
+    "radius_limit_m": 0.00012
+  },
+  "preceding_command_time_s": 8.754000000006275,
+  "preceding_request": [
+    0.9319671315580378,
+    -0.28301155396304334,
+    -0.6803605077699353,
+    -0.47961777742423695
+  ],
+  "preceding_filter_fraction": 0.0,
+  "preceding_continuation_fraction": 0.0,
+  "preceding_baseline_next_zero_feasible": false,
+  "recomputed_next_zero": {
+    "reference_feasible": false,
+    "controlled_search_end": false,
+    "base_xy_m_s": [
+      5.677484847952653e-05,
+      0.00011995543551828134
+    ],
+    "limited_xy_m_s": [
+      7.962780032265731e-05,
+      0.00011995543551828134
+    ],
+    "predicted_reference_xy_m": [
+      0.00010711610186378693,
+      -5.412259034415828e-05
+    ]
+  },
+  "current_reference_radius_um": 119.97936698003271,
+  "predicted_reference_radius_um": 120.0129745654808,
+  "predicted_excess_nm": 12.974565480805209,
+  "prior_lookahead_matches_actual_next_zero": true,
+  "prediction_error_m": 4.0657581468206416e-20,
+  "explanation": "有限一零步检查预测正确，但下一状态的零残差基线再下一步已不可行；滤波归零仍返回该基线，随后控制器按预测触发SEARCH_REFERENCE_LIMIT。不是本例预测计算偏差，也不是训练后失效。",
+  "formal_updates": 0,
+  "policy_calls": 0,
+  "new_dynamic_episodes": 0,
+  "reference_actual_outside": false,
+  "next_proposal": "为共同SEARCH基线定义边界可行性回退：接近不可继续状态时，提前制动/投影或按受控搜索结束进入既有恢复；不能只把残差归零。用本反例离线重放参考和加速度，再为B2/F/S重登记有限共同动态；不改成功/力保护，不补本轮26/4000余量。"
+}

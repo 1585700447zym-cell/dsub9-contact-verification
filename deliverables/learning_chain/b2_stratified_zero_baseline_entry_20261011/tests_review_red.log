@@ -1,0 +1,76 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_corrupt_archive_is_retained_and_does_not_abort_all_attempts (__main__.ReviewRegressions.test_corrupt_archive_is_retained_and_does_not_abort_all_attempts) ... FAIL
+test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics (__main__.ReviewRegressions.test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics) ... FAIL
+test_missing_receipt_and_unknown_go_do_not_become_zero_measurement (__main__.ReviewRegressions.test_missing_receipt_and_unknown_go_do_not_become_zero_measurement) ... FAIL
+test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail (__main__.ReviewRegressions.test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail) ... FAIL
+test_planned_success_quantiles_use_fixed_linear_interpolation (__main__.ReviewRegressions.test_planned_success_quantiles_use_fixed_linear_interpolation) ... FAIL
+test_pre_go_reservation_never_increments_actual_dynamic_total (__main__.ReviewRegressions.test_pre_go_reservation_never_increments_actual_dynamic_total) ... FAIL
+
+======================================================================
+FAIL: test_corrupt_archive_is_retained_and_does_not_abort_all_attempts (__main__.ReviewRegressions.test_corrupt_archive_is_retained_and_does_not_abort_all_attempts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 66, in test_corrupt_archive_is_retained_and_does_not_abort_all_attempts
+    fn=self.api(a,'assess_entry')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 19, in api
+    self.assertTrue(callable(getattr(module,name,None)),'Missing reviewed behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing reviewed behavior: assess_entry
+
+======================================================================
+FAIL: test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics (__main__.ReviewRegressions.test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 54, in test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics
+    fn=self.api(a,'assess_entry')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 19, in api
+    self.assertTrue(callable(getattr(module,name,None)),'Missing reviewed behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing reviewed behavior: assess_entry
+
+======================================================================
+FAIL: test_missing_receipt_and_unknown_go_do_not_become_zero_measurement (__main__.ReviewRegressions.test_missing_receipt_and_unknown_go_do_not_become_zero_measurement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 45, in test_missing_receipt_and_unknown_go_do_not_become_zero_measurement
+    reconcile=self.api(entry,'reconcile_attempts');costs=self.api(a,'cost_summary')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 19, in api
+    self.assertTrue(callable(getattr(module,name,None)),'Missing reviewed behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing reviewed behavior: reconcile_attempts
+
+======================================================================
+FAIL: test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail (__main__.ReviewRegressions.test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 23, in test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail
+    fn=self.api(entry,'reconcile_attempts')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 19, in api
+    self.assertTrue(callable(getattr(module,name,None)),'Missing reviewed behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing reviewed behavior: reconcile_attempts
+
+======================================================================
+FAIL: test_planned_success_quantiles_use_fixed_linear_interpolation (__main__.ReviewRegressions.test_planned_success_quantiles_use_fixed_linear_interpolation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 77, in test_planned_success_quantiles_use_fixed_linear_interpolation
+    self.assertIn('success_p50_s',out,'Missing planned quantiles')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'success_p50_s' not found in {'available': 3, 'expected': 3, 'missing': [], 'functional_successes': 3, 'ordinary_failures': 0, 'guards': 0, 'invalid': 0, 'unstopped': 0, 'complete_valid_stopped_matrix': True, 'mean_penalized_time_s': 5.0, 'success_conditioned_mean_s': 5.0, 'success_min_s': 1.0, 'success_max_s': 9.0, 'additional_precision': 0} : Missing planned quantiles
+
+======================================================================
+FAIL: test_pre_go_reservation_never_increments_actual_dynamic_total (__main__.ReviewRegressions.test_pre_go_reservation_never_increments_actual_dynamic_total)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 37, in test_pre_go_reservation_never_increments_actual_dynamic_total
+    fn=self.api(a,'cost_summary')
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_zero_baseline_entry_20261011\test_review_regressions.py", line 19, in api
+    self.assertTrue(callable(getattr(module,name,None)),'Missing reviewed behavior: '+name)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Missing reviewed behavior: cost_summary
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+FAILED (failures=6)

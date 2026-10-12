@@ -1,0 +1,198 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+FFFFFFFFFFFFFFFFF                                                        [100%]
+================================== FAILURES ===================================
+____________ test_stage_uses_pre_action_observation_at_transition _____________
+
+    def test_stage_uses_pre_action_observation_at_transition():
+        # Wrong break: assigning the SEARCH cycle from its preceding trace INSERT.
+>       r=d.diagnose_episode(fixture())
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:24: AttributeError
+________ test_clipped_requests_are_not_reported_as_delivered_commands _________
+
+    def test_clipped_requests_are_not_reported_as_delivered_commands():
+        # Wrong break: summing applied request instead of effective limiter delta.
+>       r=d.diagnose_episode(fixture())['stages']['SEARCH']
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:31: AttributeError
+_______________ test_rotation_is_not_combined_with_translation ________________
+
+    def test_rotation_is_not_combined_with_translation():
+>       r=d.diagnose_episode(fixture())['stages']['SEARCH']
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:37: AttributeError
+____________ test_actual_motion_is_not_replaced_with_command_delta ____________
+
+    def test_actual_motion_is_not_replaced_with_command_delta():
+>       r=d.diagnose_episode(fixture())['stages']['SEARCH']
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:42: AttributeError
+________________ test_cycle_peak_precedes_first_enabled_cycle _________________
+
+    def test_cycle_peak_precedes_first_enabled_cycle():
+>       r=d.diagnose_episode(fixture())
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:47: AttributeError
+____________ test_peak_in_enabled_cycle_has_no_proven_prior_order _____________
+
+    def test_peak_in_enabled_cycle_has_no_proven_prior_order():
+        raw=fixture();raw['transitions'][1]['cycle_force_N']=.03
+>       r=d.diagnose_episode(raw)
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:54: AttributeError
+______________ test_no_enabled_action_has_no_invented_timestamp _______________
+
+    def test_no_enabled_action_has_no_invented_timestamp():
+        raw=fixture()
+        for a,t in zip(raw['actions'],raw['transitions']):
+            a.update(enabled=False,raw_action=[0.]*4,applied_residual=[0.]*6,effective_command_delta=[0.]*6)
+            t['action_active']=False
+>       r=d.diagnose_episode(raw)
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:62: AttributeError
+________ test_malformed_data_cannot_become_a_successful_diagnosis[nan] ________
+
+error = 'nan'
+
+    @pytest.mark.parametrize('error', ['nan','dt','length','phase','permission'])
+    def test_malformed_data_cannot_become_a_successful_diagnosis(error):
+        raw=fixture()
+        if error=='nan':raw['actions'][0]['effective_command_delta'][0]=float('nan')
+        if error=='dt':raw['transitions'][0]['dt']=0
+        if error=='length':raw['trace'].pop()
+        if error=='phase':raw['transitions'][0]['observation'][53:58]=[0.]*5
+        if error=='permission':raw['transitions'][0]['action_active']=True
+>       with pytest.raises(ValueError):d.diagnose_episode(raw)
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:74: AttributeError
+________ test_malformed_data_cannot_become_a_successful_diagnosis[dt] _________
+
+error = 'dt'
+
+    @pytest.mark.parametrize('error', ['nan','dt','length','phase','permission'])
+    def test_malformed_data_cannot_become_a_successful_diagnosis(error):
+        raw=fixture()
+        if error=='nan':raw['actions'][0]['effective_command_delta'][0]=float('nan')
+        if error=='dt':raw['transitions'][0]['dt']=0
+        if error=='length':raw['trace'].pop()
+        if error=='phase':raw['transitions'][0]['observation'][53:58]=[0.]*5
+        if error=='permission':raw['transitions'][0]['action_active']=True
+>       with pytest.raises(ValueError):d.diagnose_episode(raw)
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:74: AttributeError
+______ test_malformed_data_cannot_become_a_successful_diagnosis[length] _______
+
+error = 'length'
+
+    @pytest.mark.parametrize('error', ['nan','dt','length','phase','permission'])
+    def test_malformed_data_cannot_become_a_successful_diagnosis(error):
+        raw=fixture()
+        if error=='nan':raw['actions'][0]['effective_command_delta'][0]=float('nan')
+        if error=='dt':raw['transitions'][0]['dt']=0
+        if error=='length':raw['trace'].pop()
+        if error=='phase':raw['transitions'][0]['observation'][53:58]=[0.]*5
+        if error=='permission':raw['transitions'][0]['action_active']=True
+>       with pytest.raises(ValueError):d.diagnose_episode(raw)
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:74: AttributeError
+_______ test_malformed_data_cannot_become_a_successful_diagnosis[phase] _______
+
+error = 'phase'
+
+    @pytest.mark.parametrize('error', ['nan','dt','length','phase','permission'])
+    def test_malformed_data_cannot_become_a_successful_diagnosis(error):
+        raw=fixture()
+        if error=='nan':raw['actions'][0]['effective_command_delta'][0]=float('nan')
+        if error=='dt':raw['transitions'][0]['dt']=0
+        if error=='length':raw['trace'].pop()
+        if error=='phase':raw['transitions'][0]['observation'][53:58]=[0.]*5
+        if error=='permission':raw['transitions'][0]['action_active']=True
+>       with pytest.raises(ValueError):d.diagnose_episode(raw)
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:74: AttributeError
+____ test_malformed_data_cannot_become_a_successful_diagnosis[permission] _____
+
+error = 'permission'
+
+    @pytest.mark.parametrize('error', ['nan','dt','length','phase','permission'])
+    def test_malformed_data_cannot_become_a_successful_diagnosis(error):
+        raw=fixture()
+        if error=='nan':raw['actions'][0]['effective_command_delta'][0]=float('nan')
+        if error=='dt':raw['transitions'][0]['dt']=0
+        if error=='length':raw['trace'].pop()
+        if error=='phase':raw['transitions'][0]['observation'][53:58]=[0.]*5
+        if error=='permission':raw['transitions'][0]['action_active']=True
+>       with pytest.raises(ValueError):d.diagnose_episode(raw)
+E       AttributeError: module 'diagnose' has no attribute 'diagnose_episode'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:74: AttributeError
+____________ test_prefix_stops_before_first_enabled_action_effect _____________
+
+    def test_prefix_stops_before_first_enabled_action_effect():
+        a=fixture();b=deepcopy(a);b['trace'][2]['position_m'][0]=1e-4
+>       r=d.pair_prefix(a,b)
+E       AttributeError: module 'diagnose' has no attribute 'pair_prefix'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:78: AttributeError
+_______________ test_short_baseline_does_not_prove_whole_prefix _______________
+
+    def test_short_baseline_does_not_prove_whole_prefix():
+        a=fixture();b=deepcopy(a);a['trace']=a['trace'][:1]
+>       assert d.pair_prefix(a,b)['trace_prefix_exact'] is False
+E       AttributeError: module 'diagnose' has no attribute 'pair_prefix'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:85: AttributeError
+_____________ test_time_contribution_keeps_negative_contributors ______________
+
+    def test_time_contribution_keeps_negative_contributors():
+        b=[dict(case_id='y',outcome='FULL_SUCCESS',task_end_time_s=20),dict(case_id='x',outcome='FULL_SUCCESS',task_end_time_s=10)]
+        s=[dict(case_id='y',outcome='FULL_SUCCESS',task_end_time_s=10),dict(case_id='x',outcome='FULL_SUCCESS',task_end_time_s=11)]
+>       r=d.time_contributions(b,s)
+E       AttributeError: module 'diagnose' has no attribute 'time_contributions'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:90: AttributeError
+__________________ test_failed_task_uses_registered_penalty ___________________
+
+    def test_failed_task_uses_registered_penalty():
+>       r=d.time_contributions([dict(case_id='a',outcome='TASK_FAILURE',task_end_time_s=8)],
+                              [dict(case_id='a',outcome='FULL_SUCCESS',task_end_time_s=10)])
+E       AttributeError: module 'diagnose' has no attribute 'time_contributions'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:96: AttributeError
+_____________________ test_missing_matched_case_rejected ______________________
+
+    def test_missing_matched_case_rejected():
+>       with pytest.raises(ValueError):d.time_contributions([dict(case_id='a',outcome='FULL_SUCCESS',task_end_time_s=10)],[])
+E       AttributeError: module 'diagnose' has no attribute 'time_contributions'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:101: AttributeError
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_stage_uses_pre_action_observation_at_transition
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_clipped_requests_are_not_reported_as_delivered_commands
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_rotation_is_not_combined_with_translation
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_actual_motion_is_not_replaced_with_command_delta
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_cycle_peak_precedes_first_enabled_cycle
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_peak_in_enabled_cycle_has_no_proven_prior_order
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_no_enabled_action_has_no_invented_timestamp
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_malformed_data_cannot_become_a_successful_diagnosis[nan]
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_malformed_data_cannot_become_a_successful_diagnosis[dt]
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_malformed_data_cannot_become_a_successful_diagnosis[length]
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_malformed_data_cannot_become_a_successful_diagnosis[phase]
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_malformed_data_cannot_become_a_successful_diagnosis[permission]
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_prefix_stops_before_first_enabled_action_effect
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_short_baseline_does_not_prove_whole_prefix
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_time_contribution_keeps_negative_contributors
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_failed_task_uses_registered_penalty
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_missing_matched_case_rejected
+17 failed in 0.53s

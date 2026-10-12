@@ -1,0 +1,32 @@
+{
+  "stage_id": "B2-SCOPE-04",
+  "status": "OFFLINE_AUDITOR_REVISION",
+  "producer_binding_sha256": "9c15895cf6c8bac905715275c65dead6a8a48be617a3c197839077c7acf673c6",
+  "producer_manifest_sha256": "dee846ade20816e11f5487c7968c0067bcd40c3b59d8e9e180f9138f505962fc",
+  "files": {
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_scope_auditor_fix_20261008\\repaired_assess.py": "46a8f34ab233908630dc7a5d807b3b0a5c8ed0705f3b799231401234836f7082",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_scope_auditor_fix_20261008\\audit_existing.py": "04bece06a8ef83c9aa9b0f019348ea794c8afeecae56c8bce40b739e8b256ff5",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_scope_auditor_fix_20261008\\test_audit_fix.py": "e0c06a06c9358780b85ed13f2a438b6d7f2290063d82ba1935d37268df22cb5e",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_scope_auditor_fix_20261008\\run_inherited_tests.py": "3a21f4bb1846e0870db53ab5cbd4cd3f053ee7409ce8b26a60a71d3c625a23d0",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\delivery_manifest.json": "dee846ade20816e11f5487c7968c0067bcd40c3b59d8e9e180f9138f505962fc",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\authorization_closure.json": "e6a67aa0137b3bb39ca663e023a62e14235c606a85e258a6f4c3d605fe38c858",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\ledger.json": "dbd71ff12c965fe043777bafcb9361a092a536c4a842b0c7e7f28d7f20706b0d",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\assessment.json": "66f640ed7338dd6b9b23ec9c7261e7ce6d3bc0323a574dda45e025e519ccb09e",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_zero_sentinel.json.gz": "3fa8c5cabc0c18c2502efd6cfd85ee6a45813db61c11c6dda256d70be4628049",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_P01.json.gz": "33f12ba881060b238f4a115f3a386e5f5f55d146a306d02594345b1802fc57bd",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_P02.json.gz": "c0ae4f66e1938e89cca0c6d99a4a913cb650522ce9bcd783af8001cdb4579646",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_P03.json.gz": "4a3359ac46de13086b343a5b988a75c967a75ba09ecd481d6d2655a920d582c6",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_P04.json.gz": "865caf7a083c4c40d19b6b712e58d5459163a8e85b92769273e6c36edef929f2",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_J01.json.gz": "ef94798783bbc70fca0ab1a13531bc19f3ea48d1b127f2693a81415a3246ddea",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_J02.json.gz": "823f3cc9c61dd8d3fe5ef0114e6de0e684c532bc69f7760071dd1834572c05b6",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_J03.json.gz": "ad0fbe0dbbdf1eff461c60b4a3ef7c8f57df27955358d147e2661ad1c19ab7ad",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\init_J04.json.gz": "dcf22f6423cc8ddf90f9aacff3d1a9f3d418dc9cf1c41edecb4794970b28c610",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_execution_20261008\\run\\P01_zero.json.gz": "38c98530f446de718a596156c78eae76e67aceb646d5d3978dda333fad865a6f",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_preflight_20261008\\candidate_binding.json": "9c15895cf6c8bac905715275c65dead6a8a48be617a3c197839077c7acf673c6",
+    "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_pose_scope_preflight_20261008\\delivery_manifest.json": "178bf8cab98360b75148b4a587838e1a3493a4739576e4b713ef08a30f00a693"
+  },
+  "new_simulation_authorized": false,
+  "new_training_authorized": false,
+  "physical_runner_rebound": false,
+  "cumulative_dynamic": 209
+}

@@ -1,0 +1,326 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_all_42_closes (__main__.AdmissionTests.test_all_42_closes) ... ERROR
+test_cost_caps (__main__.AdmissionTests.test_cost_caps) ... ERROR
+test_exit_or_identity_failure_closes (__main__.AdmissionTests.test_exit_or_identity_failure_closes) ... ERROR
+test_first_12_then_next (__main__.AdmissionTests.test_first_12_then_next) ... ERROR
+test_grant_draft_refused (__main__.AdmissionTests.test_grant_draft_refused) ... ERROR
+test_import_isolation_check (__main__.AdmissionTests.test_import_isolation_check) ... ERROR
+test_invalid_guard_unstopped_close (__main__.AdmissionTests.test_invalid_guard_unstopped_close) ... ERROR
+test_missing_or_reordered_precheck_refused (__main__.AdmissionTests.test_missing_or_reordered_precheck_refused) ... ERROR
+test_no_nonzero_evidence_closes_first_12 (__main__.AdmissionTests.test_no_nonzero_evidence_closes_first_12) ... ERROR
+test_numeric_certificate_requires_closed_proof (__main__.AdmissionTests.test_numeric_certificate_requires_closed_proof) ... ERROR
+test_open_exact_grant (__main__.AdmissionTests.test_open_exact_grant) ... ERROR
+test_ordinary_failure_is_scored_and_continues (__main__.AdmissionTests.test_ordinary_failure_is_scored_and_continues) ... ERROR
+test_schedule (__main__.AdmissionTests.test_schedule) ... ERROR
+test_active_predict_and_command_audit (__main__.DriverTests.test_active_predict_and_command_audit) ... ERROR
+test_command_drift_refused (__main__.DriverTests.test_command_drift_refused) ... ERROR
+test_cycle_stop_before_predict (__main__.DriverTests.test_cycle_stop_before_predict) ... ERROR
+test_failed_prediction_charged (__main__.DriverTests.test_failed_prediction_charged) ... ERROR
+test_inactive_never_predicts (__main__.DriverTests.test_inactive_never_predicts) ... ERROR
+test_out_of_range_action_refused (__main__.DriverTests.test_out_of_range_action_refused) ... ERROR
+test_permission_mismatch_before_predict (__main__.DriverTests.test_permission_mismatch_before_predict) ... ERROR
+
+======================================================================
+ERROR: test_all_42_closes (__main__.AdmissionTests.test_all_42_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_cost_caps (__main__.AdmissionTests.test_cost_caps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_exit_or_identity_failure_closes (__main__.AdmissionTests.test_exit_or_identity_failure_closes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_first_12_then_next (__main__.AdmissionTests.test_first_12_then_next)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_grant_draft_refused (__main__.AdmissionTests.test_grant_draft_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_import_isolation_check (__main__.AdmissionTests.test_import_isolation_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_invalid_guard_unstopped_close (__main__.AdmissionTests.test_invalid_guard_unstopped_close)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_missing_or_reordered_precheck_refused (__main__.AdmissionTests.test_missing_or_reordered_precheck_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_no_nonzero_evidence_closes_first_12 (__main__.AdmissionTests.test_no_nonzero_evidence_closes_first_12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_numeric_certificate_requires_closed_proof (__main__.AdmissionTests.test_numeric_certificate_requires_closed_proof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_open_exact_grant (__main__.AdmissionTests.test_open_exact_grant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_ordinary_failure_is_scored_and_continues (__main__.AdmissionTests.test_ordinary_failure_is_scored_and_continues)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_schedule (__main__.AdmissionTests.test_schedule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 8, in setUp
+    def setUp(self):self.c=importlib.import_module('sac_scope')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_scope'
+
+======================================================================
+ERROR: test_active_predict_and_command_audit (__main__.DriverTests.test_active_predict_and_command_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 82, in setUp
+    def setUp(self):self.d=importlib.import_module('sac_rollout')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_rollout'
+
+======================================================================
+ERROR: test_command_drift_refused (__main__.DriverTests.test_command_drift_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 82, in setUp
+    def setUp(self):self.d=importlib.import_module('sac_rollout')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_rollout'
+
+======================================================================
+ERROR: test_cycle_stop_before_predict (__main__.DriverTests.test_cycle_stop_before_predict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 82, in setUp
+    def setUp(self):self.d=importlib.import_module('sac_rollout')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_rollout'
+
+======================================================================
+ERROR: test_failed_prediction_charged (__main__.DriverTests.test_failed_prediction_charged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 82, in setUp
+    def setUp(self):self.d=importlib.import_module('sac_rollout')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_rollout'
+
+======================================================================
+ERROR: test_inactive_never_predicts (__main__.DriverTests.test_inactive_never_predicts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 82, in setUp
+    def setUp(self):self.d=importlib.import_module('sac_rollout')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_rollout'
+
+======================================================================
+ERROR: test_out_of_range_action_refused (__main__.DriverTests.test_out_of_range_action_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 82, in setUp
+    def setUp(self):self.d=importlib.import_module('sac_rollout')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_rollout'
+
+======================================================================
+ERROR: test_permission_mismatch_before_predict (__main__.DriverTests.test_permission_mismatch_before_predict)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 82, in setUp
+    def setUp(self):self.d=importlib.import_module('sac_rollout')
+                           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'sac_rollout'
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.034s
+
+FAILED (errors=20)

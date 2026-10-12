@@ -1,0 +1,33 @@
+FFFFF                                                                    [100%]
+================================== FAILURES ===================================
+__ test_recovery_rejects_invalid_observation_before_consuming_retry[wrench] ___
+tests\task_variants\test_axis_search.py:127: in test_recovery_rejects_invalid_observation_before_consuming_retry
+    with pytest.raises(ValueError):c.start_recovered_search(sample)
+E   Failed: DID NOT RAISE <class 'ValueError'>
+_ test_recovery_rejects_invalid_observation_before_consuming_retry[position] __
+tests\task_variants\test_axis_search.py:127: in test_recovery_rejects_invalid_observation_before_consuming_retry
+    with pytest.raises(ValueError):c.start_recovered_search(sample)
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_recovery_rejects_invalid_observation_before_consuming_retry[time] ____
+tests\task_variants\test_axis_search.py:127: in test_recovery_rejects_invalid_observation_before_consuming_retry
+    with pytest.raises(ValueError):c.start_recovered_search(sample)
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_recovery_rejects_invalid_observation_before_consuming_retry[angle] ___
+tests\task_variants\test_axis_search.py:127: in test_recovery_rejects_invalid_observation_before_consuming_retry
+    with pytest.raises(ValueError):c.start_recovered_search(sample)
+E   Failed: DID NOT RAISE <class 'ValueError'>
+___ test_recovery_rejects_invalid_observation_before_consuming_retry[type] ____
+tests\task_variants\test_axis_search.py:127: in test_recovery_rejects_invalid_observation_before_consuming_retry
+    with pytest.raises(ValueError):c.start_recovered_search(sample)
+tools\control\search_recovery.py:72: in start_recovered_search
+    self._start_search(obs)
+tools\control\axis_search.py:31: in _start_search
+    z=float(obs.displacement_m[2])
+E   AttributeError: 'object' object has no attribute 'displacement_m'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_axis_search.py::test_recovery_rejects_invalid_observation_before_consuming_retry[wrench]
+FAILED tests/task_variants/test_axis_search.py::test_recovery_rejects_invalid_observation_before_consuming_retry[position]
+FAILED tests/task_variants/test_axis_search.py::test_recovery_rejects_invalid_observation_before_consuming_retry[time]
+FAILED tests/task_variants/test_axis_search.py::test_recovery_rejects_invalid_observation_before_consuming_retry[angle]
+FAILED tests/task_variants/test_axis_search.py::test_recovery_rejects_invalid_observation_before_consuming_retry[type]
+5 failed, 13 deselected in 0.16s

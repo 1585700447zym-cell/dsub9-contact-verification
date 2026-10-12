@@ -1,0 +1,18 @@
+{
+  "guard_time_s": 8.609800000006611,
+  "physical_peak_force_N": 0.025000156277660297,
+  "preceding_control_sample_time_s": 8.608000000006616,
+  "preceding_force_M_N": [
+    -0.015727980875129187,
+    0.01747679336513118,
+    -0.008409277176814556
+  ],
+  "preceding_lateral_force_mN": 23.511862723653408,
+  "preceding_axial_force_mN": 8.409277176814555,
+  "preceding_total_force_mN": 24.97045516950816,
+  "loaded_rotation_events": 0,
+  "old_new_controller_commands_equal_on_saved_observations": true,
+  "compared_samples": 4305,
+  "scope": "offline input replay, not an additional old-controller dynamic experiment",
+  "finding": "Search regulates axial load but spiral/tracking can build lateral load; small rotation does not activate INSERT-only rotation trigger"
+}

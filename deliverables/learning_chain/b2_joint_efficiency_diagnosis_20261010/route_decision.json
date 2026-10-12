@@ -1,0 +1,21 @@
+{
+  "C_accepted": false,
+  "basis": [
+    "J01 extra SEARCH duration",
+    "J02 avoids unload and search",
+    "2.77 percent below 10 percent",
+    "additional precision F0 4/4 versus F2000 0/4",
+    "post-search INSERT drift",
+    "existing reward omits terminal precision"
+  ],
+  "candidate_implemented": false,
+  "decision": "prepare_common_precision_reward_candidate_offline",
+  "full_B2_accepted": false,
+  "independent_tests": 0,
+  "new_scientific_execution_authorized": false,
+  "next_task_started": false,
+  "old_outcomes_changed": false,
+  "only_learning_cause_identified": false,
+  "primary_threshold_changed": false,
+  "stage_id": "B2-SCOPE-21"
+}

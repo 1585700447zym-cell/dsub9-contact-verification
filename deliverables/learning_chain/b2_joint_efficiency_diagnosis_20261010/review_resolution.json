@@ -1,0 +1,31 @@
+{
+  "stage_id": "B2-SCOPE-21",
+  "status": "RESOLVED",
+  "reviewer": "/root/b2_efficiency_diagnosis_review",
+  "reviewer_model": "gpt-6-astra",
+  "first_assessment": "With fixes",
+  "final_assessment": "May enter agreed publication and sealing steps",
+  "open_critical": 0,
+  "open_important": 0,
+  "open_minor": 0,
+  "resolved_important": 1,
+  "first_document_proposal_sha256": "b37b18296954070243ca01326ae85a81af5c06a511779b05cb8326b0f0137f5d",
+  "document_proposal_sha256": "7e0f77da806dfdb0c24caf37335b18c3a3dae93c5cbad30948ccd25ee153af1e",
+  "publisher_sha256": "5233f34da2f2e978a3d10de1d938b6398d005994297d281a304f8ab7b4d5f1bd",
+  "repair": "Bind reviewed proposal identity before any project-document copy",
+  "regression_red_observed": true,
+  "regression_green_observed": true,
+  "stage_standard_library_tests_passed": 9,
+  "focused_reviewer_reran_tests": false,
+  "root_documents_unchanged_at_focused_review": true,
+  "publication_and_sealing_reviewed_as_executed": false,
+  "declined_to_judge": [
+    "policy generalization and independent test success",
+    "unique causal learning mechanism",
+    "new precision reward efficacy",
+    "full PC09 continuous-hold and layered-geometry protocol replay",
+    "historical dirty changes outside this stage",
+    "publication and sealing not yet executed at review"
+  ],
+  "new_scientific_operations": 0
+}

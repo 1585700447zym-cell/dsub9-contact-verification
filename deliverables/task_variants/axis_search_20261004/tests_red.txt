@@ -1,0 +1,89 @@
+FFFFFFFFFFFFF                                                            [100%]
+================================== FAILURES ===================================
+_______ test_xy_force_cannot_cancel_spiral_or_accumulate_hidden_offsets _______
+tests\task_variants\test_axis_search.py:18: in test_xy_force_cannot_cancel_spiral_or_accumulate_hidden_offsets
+    a=controller();a.theta=8.;a.admittance.offset[:2]=[.0002,-.0003]
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+________ test_angles_integrate_once_and_axial_force_control_unchanged _________
+tests\task_variants\test_axis_search.py:30: in test_angles_integrate_once_and_axial_force_control_unchanged
+    c=controller();expected=copy.deepcopy(c.admittance)
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+_____ test_recovery_return_is_not_new_progress_and_baseline_stays_frozen ______
+tests\task_variants\test_axis_search.py:40: in test_recovery_return_is_not_new_progress_and_baseline_stays_frozen
+    c=controller();c.command(obs(.1,(0.,0.,250e-6)),.002)
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+_________ test_initial_unload_uses_previous_peak_not_retracted_start __________
+tests\task_variants\test_axis_search.py:53: in test_initial_unload_uses_previous_peak_not_retracted_start
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+__________ test_return_progress_cannot_bypass_sustained_load_relief ___________
+tests\task_variants\test_axis_search.py:63: in test_return_progress_cannot_bypass_sustained_load_relief
+    c=controller();c.episode_peak_z_m=250e-6;c.phase='WAIT_RECOVERY'
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+_ test_gates_still_precede_search_and_load[excursion-FAILED-SEARCH_EXCURSION_LIMIT] _
+tests\task_variants\test_axis_search.py:73: in test_gates_still_precede_search_and_load
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+__ test_gates_still_precede_search_and_load[advance-INSERT-SEARCH_ADVANCED] ___
+tests\task_variants\test_axis_search.py:73: in test_gates_still_precede_search_and_load
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+_ test_gates_still_precede_search_and_load[timeout-WAIT_RECOVERY-SEARCH_EXHAUSTED] _
+tests\task_variants\test_axis_search.py:73: in test_gates_still_precede_search_and_load
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+_ test_gates_still_precede_search_and_load[radius-WAIT_RECOVERY-SEARCH_EXHAUSTED] _
+tests\task_variants\test_axis_search.py:73: in test_gates_still_precede_search_and_load
+    c=controller();c.load_since=.1;sample=obs(.12,w=(.022,0.,-.008,0.,0.,0.))
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+___ test_rejected_command_cannot_update_highwater_or_search_state[invalid] ____
+tests\task_variants\test_axis_search.py:85: in test_rejected_command_cannot_update_highwater_or_search_state
+    c=controller();c.episode_peak_z_m=10e-6;sample=obs(.2,(0.,0.,.001))
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+_ test_rejected_command_cannot_update_highwater_or_search_state[pending_release] _
+tests\task_variants\test_axis_search.py:85: in test_rejected_command_cannot_update_highwater_or_search_state
+    c=controller();c.episode_peak_z_m=10e-6;sample=obs(.2,(0.,0.,.001))
+tests\task_variants\test_axis_search.py:13: in controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+______________ test_insert_and_unload_match_previous_controller _______________
+tests\task_variants\test_axis_search.py:96: in test_insert_and_unload_match_previous_controller
+    from tools.control.axis_search import AxisSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.axis_search'
+____________ test_trace_copies_active_fields_and_stops_composition ____________
+tests\task_variants\test_axis_search.py:108: in test_trace_copies_active_fields_and_stops_composition
+    from tools.learning.axis_session import AxisSearchSession
+E   ModuleNotFoundError: No module named 'tools.learning.axis_session'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_axis_search.py::test_xy_force_cannot_cancel_spiral_or_accumulate_hidden_offsets
+FAILED tests/task_variants/test_axis_search.py::test_angles_integrate_once_and_axial_force_control_unchanged
+FAILED tests/task_variants/test_axis_search.py::test_recovery_return_is_not_new_progress_and_baseline_stays_frozen
+FAILED tests/task_variants/test_axis_search.py::test_initial_unload_uses_previous_peak_not_retracted_start
+FAILED tests/task_variants/test_axis_search.py::test_return_progress_cannot_bypass_sustained_load_relief
+FAILED tests/task_variants/test_axis_search.py::test_gates_still_precede_search_and_load[excursion-FAILED-SEARCH_EXCURSION_LIMIT]
+FAILED tests/task_variants/test_axis_search.py::test_gates_still_precede_search_and_load[advance-INSERT-SEARCH_ADVANCED]
+FAILED tests/task_variants/test_axis_search.py::test_gates_still_precede_search_and_load[timeout-WAIT_RECOVERY-SEARCH_EXHAUSTED]
+FAILED tests/task_variants/test_axis_search.py::test_gates_still_precede_search_and_load[radius-WAIT_RECOVERY-SEARCH_EXHAUSTED]
+FAILED tests/task_variants/test_axis_search.py::test_rejected_command_cannot_update_highwater_or_search_state[invalid]
+FAILED tests/task_variants/test_axis_search.py::test_rejected_command_cannot_update_highwater_or_search_state[pending_release]
+FAILED tests/task_variants/test_axis_search.py::test_insert_and_unload_match_previous_controller
+FAILED tests/task_variants/test_axis_search.py::test_trace_copies_active_fields_and_stops_composition
+13 failed in 0.64s

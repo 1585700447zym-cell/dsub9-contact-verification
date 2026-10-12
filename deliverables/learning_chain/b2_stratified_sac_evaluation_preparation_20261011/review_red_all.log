@@ -1,0 +1,56 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_numeric_proof_cross_run_splice_refused (__main__.AdmissionTests.test_numeric_proof_cross_run_splice_refused) ... FAIL
+test_first_cycle_failure_preserves_latest_physical_facts (__main__.DriverTests.test_first_cycle_failure_preserves_latest_physical_facts) ... ERROR
+test_late_failure_uses_current_not_partial_snapshot (__main__.DriverTests.test_late_failure_uses_current_not_partial_snapshot) ... ERROR
+test_unconstructed_failure_explicitly_marks_missing (__main__.DriverTests.test_unconstructed_failure_explicitly_marks_missing) ... ERROR
+test_changed_binding_invalidates_old_pass_flags (__main__.RebindingTests.test_changed_binding_invalidates_old_pass_flags) ... ERROR
+
+======================================================================
+ERROR: test_first_cycle_failure_preserves_latest_physical_facts (__main__.DriverTests.test_first_cycle_failure_preserves_latest_physical_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 202, in test_first_cycle_failure_preserves_latest_physical_facts
+    raw=self.d.failure_archive(dict(trace=[{}],actions=[],transitions=[]),env,session,{},RuntimeError('fault'))
+        ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'sac_rollout' has no attribute 'failure_archive'
+
+======================================================================
+ERROR: test_late_failure_uses_current_not_partial_snapshot (__main__.DriverTests.test_late_failure_uses_current_not_partial_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 211, in test_late_failure_uses_current_not_partial_snapshot
+    raw=self.d.failure_archive(dict(trace=[],actions=[],transitions=[],events=[{'cycle':500}]),env,session,{},ValueError('bad'))
+        ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'sac_rollout' has no attribute 'failure_archive'
+
+======================================================================
+ERROR: test_unconstructed_failure_explicitly_marks_missing (__main__.DriverTests.test_unconstructed_failure_explicitly_marks_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 214, in test_unconstructed_failure_explicitly_marks_missing
+    raw=self.d.failure_archive({},None,None,{},ValueError('init'))
+        ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'sac_rollout' has no attribute 'failure_archive'
+
+======================================================================
+ERROR: test_changed_binding_invalidates_old_pass_flags (__main__.RebindingTests.test_changed_binding_invalidates_old_pass_flags)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 221, in test_changed_binding_invalidates_old_pass_flags
+    self.assertEqual(f.retained_checks(previous,'b'*64),dict(offline_checks_passed=False,fresh_review_completed=False))
+                     ^^^^^^^^^^^^^^^^^
+AttributeError: module 'finalize_sources' has no attribute 'retained_checks'
+
+======================================================================
+FAIL: test_numeric_proof_cross_run_splice_refused (__main__.AdmissionTests.test_numeric_proof_cross_run_splice_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_stratified_sac_evaluation_preparation_20261011\test_entry.py", line 91, in test_numeric_proof_cross_run_splice_refused
+    with self.assertRaises(PermissionError):self.c.check_numeric_result(result,ledger,proof)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: PermissionError not raised
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.031s
+
+FAILED (failures=1, errors=4)

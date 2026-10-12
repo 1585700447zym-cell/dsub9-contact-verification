@@ -1,0 +1,10 @@
+{
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/01_月报Y工况对照.png": "a1545ac71a60074a865182eb87e40d324859afd1a23967be57b29c2319937411",
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/02_Y工况完整轨迹与增益.png": "de7b9c5ac000a320bd6f46bf5340d3f49607c8e43b3853dc29b0ae62f49b8a11",
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/B2-5.4同参数Y工况报告.md": "8c6a4c351259fd165d7dea003c6b026f54561a6f5ebe02e389f4cc30ff0feda5",
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/comparison_audit.json": "e268b0a981ded89398be07bacccbc5358898e1f12ebb1fe925c29363b8b3923c",
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/replay_manifest.json": "6a018980541db3ea4fb3bd22af7013edc45a2ea9ebaa11e31295707aa0ae10e1",
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/results_index.json": "7239a736f8d16aaa946fe66c2ce85aae819200c17c4d3f235c984bdd713c17fc",
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/真实轨迹回放.gif": "ecb5e4f0e32a78702188626970d51399dc18ca0af6d4060c3ce13cb79b06b668",
+  "deliverables/b2_y_probe/comparison_first_frozen_y100/真实轨迹终态.png": "772ff714570b7ea161dfcdc5dc03b574124194009f95ff65d91c87c91325f0d7"
+}

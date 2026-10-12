@@ -1,0 +1,22 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_numerical_pin_table_bound_and_missing_or_wrong_pin_rejected (__main__.IntegrationTests.test_numerical_pin_table_bound_and_missing_or_wrong_pin_rejected) ... ERROR
+
+======================================================================
+ERROR: test_numerical_pin_table_bound_and_missing_or_wrong_pin_rejected (__main__.IntegrationTests.test_numerical_pin_table_bound_and_missing_or_wrong_pin_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 97, in test_numerical_pin_table_bound_and_missing_or_wrong_pin_rejected
+    _,binding=runner.check_binding()
+              ~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\run_preflight.py", line 67, in check_binding
+    verify_files(binding['files'])
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\execution_contract.py", line 26, in verify_files
+    if sha(Path(name))!=pin:raise ValueError('Bound source/runtime changed: '+name)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Bound source/runtime changed: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py
+
+----------------------------------------------------------------------
+Ran 1 test in 0.404s
+
+FAILED (errors=1)

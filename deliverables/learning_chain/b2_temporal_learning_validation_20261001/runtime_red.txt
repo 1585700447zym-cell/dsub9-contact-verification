@@ -1,0 +1,120 @@
+test_any_guard_stops_whole_stage (test_protocol.ContractTests.test_any_guard_stops_whole_stage) ... ok
+test_credit_500_after_four_and_no_duplicate_credit (test_protocol.ContractTests.test_credit_500_after_four_and_no_duplicate_credit) ... ok
+test_cross_binding_or_auth_restore_refused (test_protocol.ContractTests.test_cross_binding_or_auth_restore_refused) ... ok
+test_data_id_duplicates_refused (test_protocol.ContractTests.test_data_id_duplicates_refused) ... ok
+test_exact_scope_and_candidate_first (test_protocol.ContractTests.test_exact_scope_and_candidate_first) ... ok
+test_fault_attempt_not_refunded (test_protocol.ContractTests.test_fault_attempt_not_refunded) ... ok
+test_inactive_or_stale_update_token_refused (test_protocol.ContractTests.test_inactive_or_stale_update_token_refused) ... ok
+test_initial_not_four_successes_closes_after_four (test_protocol.ContractTests.test_initial_not_four_successes_closes_after_four) ... ok
+test_new_authorization_scope_not_old_eight_zero (test_protocol.ContractTests.test_new_authorization_scope_not_old_eight_zero) ... ok
+test_online_requires_exact_preceding_updates (test_protocol.ContractTests.test_online_requires_exact_preceding_updates) ... ok
+test_reserve_before_physics_and_no_second_active (test_protocol.ContractTests.test_reserve_before_physics_and_no_second_active) ... ok
+test_stale_ledger_cannot_write (test_protocol.ContractTests.test_stale_ledger_cannot_write) ... ok
+test_update_requires_current_dataset_and_initial_pass (test_protocol.ContractTests.test_update_requires_current_dataset_and_initial_pass) ... ok
+test_write_fault_poison (test_protocol.ContractTests.test_write_fault_poison) ... ok
+test_wrong_identity_or_impossible_result_rejected (test_protocol.ContractTests.test_wrong_identity_or_impossible_result_rejected) ... ok
+test_authorization_precedes_runtime (test_protocol.RuntimeTests.test_authorization_precedes_runtime) ... FAIL
+test_counts_and_history_must_agree (test_protocol.RuntimeTests.test_counts_and_history_must_agree) ... FAIL
+test_cross_arm_snapshot_rejected (test_protocol.RuntimeTests.test_cross_arm_snapshot_rejected) ... FAIL
+test_historical_permission_preserved (test_protocol.RuntimeTests.test_historical_permission_preserved) ... FAIL
+test_invalid_source_rejected (test_protocol.RuntimeTests.test_invalid_source_rejected) ... FAIL
+test_model_and_optimizer_without_lease_refused (test_protocol.RuntimeTests.test_model_and_optimizer_without_lease_refused) ... FAIL
+test_physics_failure_is_charged (test_protocol.RuntimeTests.test_physics_failure_is_charged) ... FAIL
+test_physics_unreserved_refused (test_protocol.RuntimeTests.test_physics_unreserved_refused) ... FAIL
+test_previously_published_rejected (test_protocol.RuntimeTests.test_previously_published_rejected) ... FAIL
+test_stopped_ledger_refuses_model (test_protocol.RuntimeTests.test_stopped_ledger_refuses_model) ... FAIL
+
+======================================================================
+FAIL: test_authorization_precedes_runtime (test_protocol.RuntimeTests.test_authorization_precedes_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_counts_and_history_must_agree (test_protocol.RuntimeTests.test_counts_and_history_must_agree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_cross_arm_snapshot_rejected (test_protocol.RuntimeTests.test_cross_arm_snapshot_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_historical_permission_preserved (test_protocol.RuntimeTests.test_historical_permission_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_invalid_source_rejected (test_protocol.RuntimeTests.test_invalid_source_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_model_and_optimizer_without_lease_refused (test_protocol.RuntimeTests.test_model_and_optimizer_without_lease_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_physics_failure_is_charged (test_protocol.RuntimeTests.test_physics_failure_is_charged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_physics_unreserved_refused (test_protocol.RuntimeTests.test_physics_unreserved_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_previously_published_rejected (test_protocol.RuntimeTests.test_previously_published_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+======================================================================
+FAIL: test_stopped_ledger_refuses_model (test_protocol.RuntimeTests.test_stopped_ledger_refuses_model)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\test_protocol.py", line 14, in setUp
+    def setUp(self):self.assertIsNotNone(R,'Missing current learning runtime');self.assertIsNotNone(V,'Missing supervised validation runner')
+                    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing current learning runtime
+
+----------------------------------------------------------------------
+Ran 25 tests in 9.994s
+
+FAILED (failures=10)

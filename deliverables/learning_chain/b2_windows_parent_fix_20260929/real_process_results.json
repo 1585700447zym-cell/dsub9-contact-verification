@@ -1,0 +1,135 @@
+{
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "worker_exit": 0,
+      "forbidden_call_counts": {
+        "physics": 0,
+        "optimizer": 0,
+        "prediction": 0
+      },
+      "evidence_directory": "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0",
+      "worker_identity": {
+        "route": "windows_venv_launcher",
+        "pid": 14280,
+        "parent_pid": 22008,
+        "registered_parent_pid": 15296,
+        "child": {
+          "pid": 14280,
+          "parent_pid": 22008,
+          "image": "D:\\KEYANRUJIAN\\python.exe",
+          "created_at": 1790662285.7417824,
+          "alive": true
+        },
+        "parent": {
+          "pid": 22008,
+          "parent_pid": 15296,
+          "image": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Scripts\\python.exe",
+          "created_at": 1790662285.7314987,
+          "alive": true
+        },
+        "registered": {
+          "pid": 15296,
+          "parent_pid": 4164,
+          "image": "D:\\KEYANRUJIAN\\python.exe",
+          "created_at": 1790662285.6836953,
+          "alive": true
+        }
+      },
+      "restore_identity": {
+        "route": "windows_venv_launcher",
+        "pid": 29660,
+        "parent_pid": 36772,
+        "registered_parent_pid": 14280,
+        "child": {
+          "pid": 29660,
+          "parent_pid": 36772,
+          "image": "D:\\KEYANRUJIAN\\python.exe",
+          "created_at": 1790662287.601388,
+          "alive": true
+        },
+        "parent": {
+          "pid": 36772,
+          "parent_pid": 14280,
+          "image": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\learning_cpu_20260924\\Scripts\\python.exe",
+          "created_at": 1790662287.5919042,
+          "alive": true
+        },
+        "registered": {
+          "pid": 14280,
+          "parent_pid": 22008,
+          "image": "D:\\KEYANRUJIAN\\python.exe",
+          "created_at": 1790662285.7417824,
+          "alive": true
+        }
+      }
+    },
+    {
+      "scenario": "wrong_parent",
+      "worker_exit": 1,
+      "forbidden_call_counts": {
+        "physics": 0,
+        "optimizer": 0,
+        "prediction": 0
+      },
+      "evidence_directory": "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1"
+    },
+    {
+      "scenario": "stale_registration",
+      "worker_exit": 1,
+      "forbidden_call_counts": {
+        "physics": 0,
+        "optimizer": 0,
+        "prediction": 0
+      },
+      "evidence_directory": "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2"
+    },
+    {
+      "scenario": "duplicate_claim",
+      "worker_exit": 1,
+      "forbidden_call_counts": {
+        "physics": 0,
+        "optimizer": 0,
+        "prediction": 0
+      },
+      "evidence_directory": "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3"
+    }
+  ],
+  "files_sha256": {
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/execution.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/fault.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/probe_report.json": "6751677390719cc166b779c151a323d6eb11d54120abac0e511657260154a949",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/process.json": "c98121abc108993ffa8b55793de3125624d142988ad094c411d00632c7ac22eb",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/process_exit.json": "52464388bf9b43daf213fe9d71769d26dd883d6658aa09b315c9d90f2384e29b",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/restore_calls.json": "0a760615860e75d32938a15dd714acb3bf5204a7e6d8a8bb21bf34333d74c22c",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/restore_claim.json": "47d3e81ffd8c8f3a72192c82f83fc15a8bf74064d6b4f56c118d41193d3f542c",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/restore_identity.json": "5b1024e630bcd642a5e15dff93b2024d467fa267e51326765d3b0eb9091eb277",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/started.json": "7847092b2124dae074b42965272f4c19e350607fae6f725228873263d5c3b04f",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/worker_calls.json": "0a760615860e75d32938a15dd714acb3bf5204a7e6d8a8bb21bf34333d74c22c",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/worker_claim.json": "e1d175309ca6151bce2df6fb793c282086fcc4b61a54dc7ac1ecfdce2cef3fcd",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re0/worker_identity.json": "e0ccd2561eb8747cfa45854e07f5a2e5f987431685b0d050939c26bf3dbcdef2",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1/execution.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1/fault.log": "ec21f37524c7e48e636626703e86a759a0a687469aa78101290e819078f42a8e",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1/probe_report.json": "dcb29532e0e51e0c4ab7b2b5058d072c69287e33e4b350ede706653531db58dd",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1/process.json": "355837205fc76fd94844ae06a377af0381c60e6e97a9ce5f7683d60aaa299e9a",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1/process_exit.json": "0f8fcd3b4a92f0d11e2bbbecdf95be1b7502868bf54dea0d853d3f9ff4090471",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1/started.json": "2534c3a190249e9617272944babab763daad762d20c73c6d52d305ec60d7f81c",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re1/worker_calls.json": "0a760615860e75d32938a15dd714acb3bf5204a7e6d8a8bb21bf34333d74c22c",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2/execution.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2/fault.log": "ec21f37524c7e48e636626703e86a759a0a687469aa78101290e819078f42a8e",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2/probe_report.json": "29feb0295158517558cdccda91957ed44e3d200da9d609c269a68309d9e4dd10",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2/process.json": "7b36eaaf9c5eda537b67fa3e0ddf8b10c03ee7f0f4bbbd6b802846576a68c2df",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2/process_exit.json": "160776ae57dc78727b4170d8f47d34ccb7e9768c61175c35be39cf2ad1db6809",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2/started.json": "bbe277126cd54019929c7e29464b777793945474520eb63de6ddbdb0d2ebcd9f",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re2/worker_calls.json": "0a760615860e75d32938a15dd714acb3bf5204a7e6d8a8bb21bf34333d74c22c",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/execution.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/fault.log": "db5e6a36559d9014efc20fa7164ae7eb11680510b332138e8f4a9afcc9037b8e",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/probe_report.json": "0fd5aecf8e0318621ee1d878d1adc72809f2898b0a6e4a40a326bbc75b088e86",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/process.json": "a25f6ab534874d2b3fced5d01a8dd5a49dc0ed693bb8d3e0a74593e06227bfeb",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/process_exit.json": "fe1248167f1079719bc35f15a6661851a4c1ccf3e4fa65a6decba74bb20e2955",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/started.json": "3160854fccefe9ed1fa7d4b1846f863375b8c798a71b36229caef539f54c5532",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/worker_calls.json": "0a760615860e75d32938a15dd714acb3bf5204a7e6d8a8bb21bf34333d74c22c",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/worker_claim.json": "4a20a87aaff4330fad25a9357adf52a98feb0097497cbfa0e252b9ee2168a704",
+    "deliverables/learning_chain/b2_windows_parent_fix_20260929/final_related_work/test_real_supervisor_worker_re3/worker_identity.json": "a4b1a28ff33568291168ab62b8cd265bd058f38a6605843a02217e02ebf2d6f5"
+  }
+}

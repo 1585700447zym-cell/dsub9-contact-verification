@@ -1,0 +1,78 @@
+test_confirmed_dead_worker_finalizes_reserved_attempt_without_refund (test_protocol.ReviewRegressions.test_confirmed_dead_worker_finalizes_reserved_attempt_without_refund) ... ERROR
+test_five_actual_collector_constructors_have_exclusive_directories (test_protocol.ReviewRegressions.test_five_actual_collector_constructors_have_exclusive_directories) ... ERROR
+test_report_refuses_started_candidate_missing_assessment (test_protocol.ReviewRegressions.test_report_refuses_started_candidate_missing_assessment) ... ERROR
+test_small_nonzero_action_publishes_through_actual_collector (test_protocol.ReviewRegressions.test_small_nonzero_action_publishes_through_actual_collector) ... ERROR
+test_unconfirmed_worker_cannot_finalize_or_refund (test_protocol.ReviewRegressions.test_unconfirmed_worker_cannot_finalize_or_refund) ... ERROR
+
+======================================================================
+ERROR: test_confirmed_dead_worker_finalizes_reserved_attempt_without_refund (test_protocol.ReviewRegressions.test_confirmed_dead_worker_finalizes_reserved_attempt_without_refund)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 101, in test_confirmed_dead_worker_finalizes_reserved_attempt_without_refund
+    N.finalize_failed_exit(f,'a'*64,'b'*64,'base','native exit')
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'night_contract' has no attribute 'finalize_failed_exit'
+
+======================================================================
+ERROR: test_five_actual_collector_constructors_have_exclusive_directories (test_protocol.ReviewRegressions.test_five_actual_collector_constructors_have_exclusive_directories)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 68, in test_five_actual_collector_constructors_have_exclusive_directories
+    collector_type()(admission=permit,output=collector_output(Path(t),i),updater=object(),method='sac',checkpoint_sha256='c'*64)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_cycle.py", line 70, in __init__
+    super().__init__(admission=admission,output=output,updater=updater,replay=AuditedReplay(capacity=156000))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\sac_collection.py", line 74, in __init__
+    super().__init__(**kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\admitted_collection.py", line 138, in __init__
+    self.output.mkdir(parents=True, exist_ok=False)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\pathlib\_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\tmpiagg5uq6\\episodes'
+
+======================================================================
+ERROR: test_report_refuses_started_candidate_missing_assessment (test_protocol.ReviewRegressions.test_report_refuses_started_candidate_missing_assessment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 114, in test_report_refuses_started_candidate_missing_assessment
+    from report_result import load_assessments
+ImportError: cannot import name 'load_assessments' from 'report_result' (D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\report_result.py)
+
+======================================================================
+ERROR: test_small_nonzero_action_publishes_through_actual_collector (test_protocol.ReviewRegressions.test_small_nonzero_action_publishes_through_actual_collector)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 93, in test_small_nonzero_action_publishes_through_actual_collector
+    c.retry_publication()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_cycle.py", line 83, in retry_publication
+    stamp_pending(self._pending,self._record,rules)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\episode_rules.py", line 164, in stamp_pending
+    stamp = rules.classify(raw)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\episode_rules.py", line 58, in classify
+    _audit_physics(raw)  # Recompute outcome and both stopping windows.
+    ~~~~~~~~~~~~~~^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\sac_checkpoint.py", line 51, in _audit_physics
+    from tools.validation.run_contact_candidate_stop import physical_tail_pass
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_contact_candidate_stop.py", line 5, in <module>
+    import mujoco
+ModuleNotFoundError: No module named 'mujoco'
+
+======================================================================
+ERROR: test_unconfirmed_worker_cannot_finalize_or_refund (test_protocol.ReviewRegressions.test_unconfirmed_worker_cannot_finalize_or_refund)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_frozen_c2000_closeout_20261001\test_protocol.py", line 110, in test_unconfirmed_worker_cannot_finalize_or_refund
+    with self.assertRaises(RuntimeError):N.finalize_failed_exit(f,'a'*64,'b'*64,'base','uncertain')
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'night_contract' has no attribute 'finalize_failed_exit'
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.436s
+
+FAILED (errors=5)

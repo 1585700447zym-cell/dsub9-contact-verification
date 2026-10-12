@@ -1,0 +1,6 @@
+........................................................................ [ 40%]
+........................................................................ [ 80%]
+..................................                                       [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_restart_20261001\restart_green.xml -
+178 passed in 180.49s (0:03:00)
+{"tests": 178, "exit_code": 0, "failures": 0, "errors": 0, "actual_calls": {"model_forward": 0, "optimizer": 0, "physics": 0}}

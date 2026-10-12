@@ -1,0 +1,79 @@
+{
+  "status": "READY_FOR_RESIDUAL_INTERFACE_IMPLEMENTATION",
+  "environment": {
+    "config": {
+      "collision_backend": "native",
+      "timestep": 0.0002,
+      "control_period": 0.002,
+      "linear_speed": 0.001,
+      "angular_speed": 0.03,
+      "linear_acceleration": 0.005,
+      "angular_acceleration": 0.3,
+      "translational_stiffness": 100.0,
+      "rotational_stiffness": 0.02,
+      "force_limit_N": 0.05,
+      "torque_limit_Nm": 0.002,
+      "reference_lead_m": 0.0002,
+      "reference_lead_rad": 0.03,
+      "stop_force_N": 0.025,
+      "stop_torque_Nm": 0.0005,
+      "stop_penetration_m": 3e-05,
+      "invalid_penetration_m": 8e-05,
+      "actual_speed_limit": 0.02,
+      "actual_angular_speed_limit": 0.5,
+      "travel_limit_m": 0.006,
+      "recovery_distance_m": 0.00025,
+      "recovery_speed": 0.0005,
+      "recovery_time_limit_s": 1.0,
+      "recovery_force_N": 0.01,
+      "stopped_speed": 1e-05,
+      "stopped_angular_speed": 0.001
+    },
+    "segments": 256,
+    "contacts_enabled": true,
+    "effective_options": {
+      "timestep": 0.0002,
+      "disableflags": 0,
+      "ccd_tolerance": 1e-12,
+      "ccd_iterations": 35,
+      "integrator": 0
+    },
+    "mass_kg": 0.05,
+    "inertia_kg_m2": [
+      2e-05,
+      2e-05,
+      2e-05
+    ],
+    "grasp_local_m": [
+      0.0,
+      0.0,
+      -0.0145
+    ],
+    "measurement": "simulation_contact_wrench",
+    "calibrated": false,
+    "drive": "bounded_cartesian_PD_at_M_equivalent_wrench_applied_at_G",
+    "contact_candidate": "native_tight_v1",
+    "candidate_only": true
+  },
+  "baseline_roles": {
+    "b1": "simple_fixed_admittance_comparator",
+    "b2": "original_fixed_search_recovery_residual_candidate"
+  },
+  "interface_implementation_admitted": true,
+  "training_admitted": false,
+  "evaluation_budget": {
+    "action_time_s": 20,
+    "original_settle_time_s": 1,
+    "safety_stop_observation_s": 2
+  },
+  "assessment_sha256": "aac3eee052a206919b108c7a315d2fd711a4f79ca25b486a7152131b42f593a0",
+  "source_sha256": {
+    "deliverables/native313_baseline_matrix/b1_v1/results_index.json": "7d67049ec0cf994c29c2b98e405b066d5a098e598c1ffebd8eefcc7a7c5b00bd",
+    "deliverables/native313_baseline_matrix/b2_v1/results_index.json": "69d6e23d21b5e603016f579d05b19b088cb1e265d69c340847a098eee0e80d44",
+    "tools/reporting/report_native313_matrix.py": "472ac82e9aa6bccdfc605239a501fcf8705831a19fa878b57cad727746ad871a",
+    "tools/validation/run_native313_matrix.py": "d720d0a525f76ef365b723f9cb56bf9eda1eaa9a49c10caf5a0c28c579dbd42b",
+    "tools/validation/native313_matrix_audit.py": "4d346aa2f26f360bf96bb675ad519a5c4575c9e9245bb82a51b2503bdeab3073"
+  },
+  "selected_residual_base": "b2",
+  "selection_reason": "Retain prespecified original B2; paired development success 3/7 versus B1 1/7, all 14 stops valid; no controller retuning"
+}

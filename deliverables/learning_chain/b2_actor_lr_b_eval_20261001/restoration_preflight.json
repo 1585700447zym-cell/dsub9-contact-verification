@@ -1,0 +1,17 @@
+{
+  "status": "complete_frozen_B_restoration_verified",
+  "manifest_sha256": "4030ec22b8e78bcc9b255fdbade03184068b6cc59befddbf00a7462040fa3a04",
+  "state_sha256": "9bc6f5cfb3eb91da0e23aaa3048612b7a840fa0ba6b6c9e2e3401d1ef0084059",
+  "optimizer_counts": {
+    "critic": 500,
+    "actor": 500,
+    "temperature": 500,
+    "target": 500
+  },
+  "complete_state_equal": true,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "execution_complete": false,
+  "controlled_stop": true,
+  "status": "stopped",
+  "returncode": 20,
+  "accounting": {
+    "previous_dynamic": 72,
+    "new_dynamic_starts": 8,
+    "cumulative_dynamic": 80,
+    "cumulative_dynamic_cap": 96,
+    "unused_dynamic": 16,
+    "previous_temporal_batches": 500,
+    "cumulative_temporal_batches_attempted": 2500,
+    "cumulative_temporal_batches_completed": 2500,
+    "control_cycles_reserved": 104000,
+    "control_cycles_confirmed": 42796,
+    "formal_batches_attempted": 2000,
+    "formal_batches_completed": 2000,
+    "updates": {
+      "A": {
+        "attempted": 0,
+        "completed": 0
+      },
+      "C": {
+        "attempted": 2000,
+        "completed": 2000
+      }
+    },
+    "independent_test": 0,
+    "old_unused_consumed": 0,
+    "status": "stopped"
+  },
+  "retry_allowed": false,
+  "b2_complete": false
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "manifest": "deliverables/dynamic_actuator_v1/delivery_manifest.json",
+    "entries": 23,
+    "mismatches": []
+  },
+  {
+    "manifest": "deliverables/b2_search_recovery/delivery_manifest.json",
+    "entries": 148,
+    "mismatches": []
+  },
+  {
+    "manifest": "deliverables/b2_exit_gate_v2/delivery_manifest.json",
+    "entries": 66,
+    "mismatches": []
+  },
+  {
+    "manifest": "deliverables/b2_switch_diagnosis/delivery_manifest.json",
+    "entries": 15,
+    "mismatches": []
+  },
+  {
+    "manifest": "deliverables/b2_xy_probe/delivery_manifest.json",
+    "entries": 36,
+    "mismatches": []
+  },
+  {
+    "manifest": "deliverables/b2_y_probe/delivery_manifest.json",
+    "entries": 38,
+    "mismatches": []
+  },
+  {
+    "manifest": "deliverables/b2_xy_contact_diagnosis/delivery_manifest.json",
+    "entries": 23,
+    "mismatches": []
+  }
+]

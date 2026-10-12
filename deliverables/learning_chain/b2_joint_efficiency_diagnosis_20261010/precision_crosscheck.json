@@ -1,0 +1,135 @@
+{
+  "criteria": {
+    "angle_tolerance_rad": 0.008726646259971648,
+    "angular_speed_rad_s": 0.001,
+    "force_N": 0.025,
+    "hold_s": 0.1,
+    "linear_speed_m_s": 1e-05,
+    "penetration_m": 3e-05,
+    "torque_Nm": 0.0005,
+    "xy_tolerance_m": 8e-05,
+    "z_tolerance_m": 2e-05
+  },
+  "interpretation": "Only the archived terminal row predicate is checked. This is not a replay of the PC09 hold plus layered geometry protocol; the first snapshot used an imprecise field name.",
+  "layered_geometry_recomputed": false,
+  "pc09_continuous_hold_replayed": false,
+  "rows": [
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J01",
+      "geometric_finish_at_archive_end": true,
+      "model": "F0",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    },
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J01",
+      "geometric_finish_at_archive_end": false,
+      "model": "F2000",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    },
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J02",
+      "geometric_finish_at_archive_end": true,
+      "model": "F0",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    },
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J02",
+      "geometric_finish_at_archive_end": false,
+      "model": "F2000",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    },
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J03",
+      "geometric_finish_at_archive_end": true,
+      "model": "F0",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    },
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J03",
+      "geometric_finish_at_archive_end": false,
+      "model": "F2000",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    },
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J04",
+      "geometric_finish_at_archive_end": true,
+      "model": "F0",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    },
+    {
+      "all_other_conditions_pass": true,
+      "case_id": "J04",
+      "geometric_finish_at_archive_end": false,
+      "model": "F2000",
+      "non_xy_angle_conditions": {
+        "angular_speed": true,
+        "force": true,
+        "linear_speed": true,
+        "penetration": true,
+        "torque": true,
+        "z": true
+      }
+    }
+  ],
+  "scientific_operations": 0,
+  "source_pins": {
+    "deliverables/paper_comparison/contact_gate_probe_20261007/analyze_results.py": "650e29c9ddcd6373c35df864726992a319c5829f69b890e0ce5e9790c787703b",
+    "tools/validation/run_b1_baseline.py": "6e9c7d83db0af1e28b0cf80b58aa1d36d835cc8c4812791cc240441ab68370d4"
+  }
+}

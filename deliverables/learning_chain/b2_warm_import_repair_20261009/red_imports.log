@@ -1,0 +1,88 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_class_body_import_and_conditional_import_are_conservative (test_import_graph.ImportGraphTests.test_class_body_import_and_conditional_import_are_conservative) ... FAIL
+test_deferred_backend_import_is_recorded_without_being_executed (test_import_graph.ImportGraphTests.test_deferred_backend_import_is_recorded_without_being_executed) ... FAIL
+test_literal_dynamic_eager_backend_import_is_rejected (test_import_graph.ImportGraphTests.test_literal_dynamic_eager_backend_import_is_rejected) ... FAIL
+test_missing_repository_module_is_an_error (test_import_graph.ImportGraphTests.test_missing_repository_module_is_an_error) ... FAIL
+test_real_entry_graph_includes_actual_failure_chain (test_import_graph.ImportGraphTests.test_real_entry_graph_includes_actual_failure_chain) ... FAIL
+test_relative_from_imports_and_parent_initializer_are_included (test_import_graph.ImportGraphTests.test_relative_from_imports_and_parent_initializer_are_included) ... FAIL
+test_required_pure_helper_is_allowed_but_neighbors_are_denied (test_import_graph.ImportGraphTests.test_required_pure_helper_is_allowed_but_neighbors_are_denied) ... ERROR
+test_unknown_dynamic_eager_import_fails_closed (test_import_graph.ImportGraphTests.test_unknown_dynamic_eager_import_fails_closed) ... FAIL
+
+======================================================================
+ERROR: test_required_pure_helper_is_allowed_but_neighbors_are_denied (test_import_graph.ImportGraphTests.test_required_pure_helper_is_allowed_but_neighbors_are_denied)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 15, in test_required_pure_helper_is_allowed_but_neighbors_are_denied
+    guard=NoPhysics();self.assertIsNone(guard.find_spec('tools.dynamics.safety'))
+                                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\gate_worker.py", line 13, in find_spec
+    raise PermissionError('Physical backend forbidden in restore gate')
+PermissionError: Physical backend forbidden in restore gate
+
+======================================================================
+FAIL: test_class_body_import_and_conditional_import_are_conservative (test_import_graph.ImportGraphTests.test_class_body_import_and_conditional_import_are_conservative)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 52, in test_class_body_import_and_conditional_import_are_conservative
+    self.assertTrue({'mujoco','tools.learning.environment'}.issubset({e['target'] for e in graph['eager_edges']}))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_deferred_backend_import_is_recorded_without_being_executed (test_import_graph.ImportGraphTests.test_deferred_backend_import_is_recorded_without_being_executed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 38, in test_deferred_backend_import_is_recorded_without_being_executed
+    self.assertTrue(any(e['target']=='mujoco' for e in graph['deferred_edges']))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_literal_dynamic_eager_backend_import_is_rejected (test_import_graph.ImportGraphTests.test_literal_dynamic_eager_backend_import_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 42, in test_literal_dynamic_eager_backend_import_is_rejected
+    with self.assertRaises(PermissionError):check_guard(collect_graph(root,local,['entry']),NoPhysics())
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: PermissionError not raised
+
+======================================================================
+FAIL: test_missing_repository_module_is_an_error (test_import_graph.ImportGraphTests.test_missing_repository_module_is_an_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 57, in test_missing_repository_module_is_an_error
+    with self.assertRaises(ValueError):collect_graph(root,local,['entry'])
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_real_entry_graph_includes_actual_failure_chain (test_import_graph.ImportGraphTests.test_real_entry_graph_includes_actual_failure_chain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 23, in test_real_entry_graph_includes_actual_failure_chain
+    self.assertTrue(set(zip(chain,chain[1:])).issubset(edges));check_guard(graph,NoPhysics())
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_relative_from_imports_and_parent_initializer_are_included (test_import_graph.ImportGraphTests.test_relative_from_imports_and_parent_initializer_are_included)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 32, in test_relative_from_imports_and_parent_initializer_are_included
+    self.assertTrue({'tools.pkg','tools.pkg.helper','tools.shared','tools.dynamics.cartesian'}.issubset(graph['modules']))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_unknown_dynamic_eager_import_fails_closed (test_import_graph.ImportGraphTests.test_unknown_dynamic_eager_import_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_import_repair_20261009\test_import_graph.py", line 46, in test_unknown_dynamic_eager_import_fails_closed
+    with self.assertRaises(ValueError):collect_graph(root,local,['entry'])
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.016s
+
+FAILED (failures=7, errors=1)

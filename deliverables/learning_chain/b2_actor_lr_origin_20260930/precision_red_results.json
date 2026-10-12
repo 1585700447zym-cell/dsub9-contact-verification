@@ -1,0 +1,18 @@
+{
+  "exit_code": 1,
+  "tests": 4,
+  "failures": 4,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "0f6a5020f9dab7607690e6a9d0fcfc616b646300dccdcdaf067641b7bff9f3c8",
+  "test_ids": [
+    "tests.learning.test_actor_lr_origin_precision::test_exact_float32_requests_match_archived_json_numbers",
+    "tests.learning.test_actor_lr_origin_precision::test_rounding_collision_does_not_hide_archived_number_difference",
+    "tests.learning.test_actor_lr_origin_precision::test_nonfinite_or_wrong_shape_requests_rejected[archived0]",
+    "tests.learning.test_actor_lr_origin_precision::test_nonfinite_or_wrong_shape_requests_rejected[archived1]"
+  ]
+}

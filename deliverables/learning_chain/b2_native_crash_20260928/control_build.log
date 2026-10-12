@@ -1,0 +1,10 @@
+适用于 .NET Framework MSBuild 版本 18.8.2+ce25c0108
+
+  Checking File Globs
+  lodepng.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\_deps\lodepng-build\lodepng.dir\Release\lodepng.lib
+  ccd.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\ccd.lib
+  qhullstatic_r.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\qhullstatic_r.lib
+  tinyobjloader.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\tinyobjloader.lib
+  miniz.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\miniz.lib
+  tinyxml2.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\lib\Release\tinyxml2.lib
+  mujoco.vcxproj -> D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tmp\mujoco_3_13_horizon_build\bin\Release\mujoco.dll

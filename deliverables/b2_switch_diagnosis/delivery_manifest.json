@@ -1,0 +1,17 @@
+{
+  "deliverables/b2_switch_diagnosis/navigation_audit.json": "4cf8a1089b3bf2f97748268d3a6616b3b9ca3b26b235132d37b660016dd73713",
+  "deliverables/b2_switch_diagnosis/README.md": "794c470ce1ba814032e41c8050bf2a06802931c82676451d43f75b2c37224449",
+  "deliverables/b2_switch_diagnosis/交付核验.md": "270ffcc906efea30837755206d123a3a5c10e0e83ea5e6d60cd2aa2164d7ce96",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/01_月报诊断进展.png": "59344dd9ef0a4418bd222ee01aabda0fe4c52f5078a6afa7d3a8349235956f53",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/B2-5.2切换诊断报告.md": "9428116f1c3d85b5d39f6997a5d133b1009954ad89d438a5e96b595fc73f3c0b",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/delivery_manifest.json": "23fa22bca0e69be28b30d8e99ae346a5d90b807cdbc4db323f7246236b7481a8",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/diagnose_b2_switch.py": "306361549bd988f2872e4862eddf53dfa9c26bf0139b866b871ad98d4da2e5b7",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/diagnosis.json": "574651294e75b1d242c3fc6ba1e7a7211971096af8b8fe072186888b4e4ca97e",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/x_offset_pos_100um_切换诊断.png": "05e9f6f2ac607fbc5b1f23c6648e3cdd5fb8a4c3f9d2b2e334450c7d6128216c",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/y_offset_neg_100um_切换诊断.png": "1717a3813f3781de85e32df203a24afc4d2efbca5a992f639a5b2cdc8a3f8862",
+  "deliverables/b2_switch_diagnosis/diagnosis_v1/月报小结.md": "baae206b64d710c3d6507b61f8c17e2a9f8fcf5ab8603bfe20d6c21121c70e8c",
+  "deliverables/b2_switch_diagnosis/navigation_before/delivery_manifest.json": "c819ccfd0cbabfb91ae783b1bc8a440de6fc0d6efc645445fc520c1f4d18cc59",
+  "deliverables/b2_switch_diagnosis/navigation_before/报告总索引.md": "fa53a030952c89ff261625ea3cb71b3fc1ded5299886b1c422dc610fd35e28aa",
+  "deliverables/b2_switch_diagnosis/navigation_before/说明与导出清单.json": "f27a41559a13abd51c779da9aa0a55a940fcd6c1ac2948c0412c5326fcf0b0ce",
+  "tools/validation/diagnose_b2_switch.py": "306361549bd988f2872e4862eddf53dfa9c26bf0139b866b871ad98d4da2e5b7"
+}

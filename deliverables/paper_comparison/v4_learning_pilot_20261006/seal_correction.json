@@ -1,0 +1,20 @@
+{
+  "first_candidate_sha256": "d9fa50e53ad91673ace54b32bb6c4e6b8d88db1b90363a8065e394251fab33cb",
+  "first_candidate_retained": true,
+  "only_mismatch": [
+    "seal.log"
+  ],
+  "original_log_record": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "final_log_record": {
+    "sha256": "9d7787a52d212c7b792a1e5279822cca9e4319fec58b393e9cadcb753efb49c1",
+    "bytes": 761
+  },
+  "verified_other_original_files": 1194,
+  "cause": "封存控制台输出重定向到交付目录内，旧清单读取该日志为空后，退出时stdout才写入。只有控制台日志摘要失配；执行源、原始档案、资格与既有材料未变化。",
+  "fix": "新版本清单绑定稳定最终日志和原清单，并重新核验全目录；原清单/日志/材料原样保留。",
+  "new_physics": 0,
+  "new_updates": 0
+}

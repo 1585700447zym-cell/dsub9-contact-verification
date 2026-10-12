@@ -1,0 +1,99 @@
+{
+  "C_accepted": false,
+  "archives": [
+    {
+      "case_id": "J01",
+      "model": "F0",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J01.json.gz",
+      "sha256": "b792c230cc3b514e6eb70667152c38019f5091a0d860d231aaa221177f4592fd"
+    },
+    {
+      "case_id": "J01",
+      "model": "F2000",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J01.json.gz",
+      "sha256": "e1c719d830dc4a11ebb632359b6b8def12c875408a3e4bc21f550a699aa9855d"
+    },
+    {
+      "case_id": "J02",
+      "model": "F0",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J02.json.gz",
+      "sha256": "f1ba7544b8416d8e8d4ce37c32ebe18d5459942890cc7f0d6e12af4fa9c71ec9"
+    },
+    {
+      "case_id": "J02",
+      "model": "F2000",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J02.json.gz",
+      "sha256": "d42f68b48c305b20c778cd245e1f79d414768344ee1414c2c0ec52b540d7cd87"
+    },
+    {
+      "case_id": "J03",
+      "model": "F0",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J03.json.gz",
+      "sha256": "81c840265549d9ec7329a2fed99b74f6954f55dd739bd0071811e2d458f5911f"
+    },
+    {
+      "case_id": "J03",
+      "model": "F2000",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J03.json.gz",
+      "sha256": "d2b36fb7aec857a75173d618af389f12cf8af674b27069dfcd18bf3bdf0509ec"
+    },
+    {
+      "case_id": "J04",
+      "model": "F0",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_execution_20261009\\execution\\run\\zero_F50_J04.json.gz",
+      "sha256": "f11c4613555c33bcfb6a26e9aabb6aa8cf81142cbc234e486ae19533e9a55dac"
+    },
+    {
+      "case_id": "J04",
+      "model": "F2000",
+      "path": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009\\run\\final_F50_J04.json.gz",
+      "sha256": "5caece1b32e2ff29aaf453e1870ea0bad772328752668ed734adca23cebe9b16"
+    }
+  ],
+  "automatic_tracking": "PAUSED",
+  "before_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "27d522ea4704b450b7beb91d3145f413f2f50659f651301efa529066f2955578",
+    "研究推进计划_当前版.md": "9407f4d2961190471215d8123bac689742c1989ea5d883e70be85e8f16efc171",
+    "项目交付总览.md": "90494ce7ade2e657565a9713cbd1e9c158ff08daf396fd6d0d922763bce23b98",
+    "项目当前入口.md": "7a00c009067f9d23f5eac92431fc849a989959601aa3ef31ea00673150334b92",
+    "项目进度跟踪.md": "4c17419cabe2a828441e5f8d1cd573c561d615f05f1c03fc1f4d03f74095a259"
+  },
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "costs": {
+    "new_dynamic_episodes": 0,
+    "new_model_constructions": 0,
+    "new_optimizer_updates": 0,
+    "new_physical_substeps": 0,
+    "new_policy_inferences": 0,
+    "new_published_transitions": 0,
+    "new_tensor_loads": 0
+  },
+  "cumulative_dynamic": 254,
+  "date": "2026-10-10",
+  "full_B2_accepted": false,
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "independent_tests": 0,
+  "old_sealed_members": 3685,
+  "plan": "docs/superpowers/plans/2026-10-10-b2-joint-efficiency-diagnosis.md",
+  "plan_sha256": "afd3406be27cff2a9b234e58a942b7702103f1fc30008ad766d8fc4fb8d8bf07",
+  "prior_directory": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_joint_sac_continuation_execution_20261009",
+  "prior_manifest_sha256": "3fc16b55a67430b889caa1598ce96eb47f7dca92f7ac7f93358f3598c17e65b4",
+  "source_code_sha256": {
+    "tools/control/compliant_search.py": "661b5bfab94099bb31bbed910b6dcd14c447a40e75836cf0ddfc7b20d7e116ea",
+    "tools/control/reference_search.py": "f52b64547bada5b86116033850a895154fd64328ce5aaadffc110fbfba79c04c",
+    "tools/learning/action.py": "a635df5e9231aed6f77b7684c47d6ce3a219b53034db9ddf067431a906c577af",
+    "tools/learning/observation.py": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+    "tools/learning/reward.py": "511a008eb8261e39f261a707644de742faefbbc9dc670f44ca44e6c59e81ba5b",
+    "tools/learning/session.py": "9318d696b38a252368b98e1a6ae52b5b6f5043a6368c701e79376f41077b2be3",
+    "tools/learning/v4_action.py": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+    "tools/learning/v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219",
+    "tools/learning/v4_observation.py": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+    "tools/learning/v4_session.py": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+    "tools/model/layered_task.py": "d1d73f139199ebf705d539fa73caddeb42a0b473f5e132fbda3501cc33f3d56b",
+    "tools/validation/run_v4_adapter_preflight.py": "762af4b6bb5e212d65efd08a57865908d777a0a55d74de40cef3e91c93f8babe"
+  },
+  "stage_id": "B2-SCOPE-21",
+  "task": "Existing F0/F2000 archive efficiency and precision diagnosis",
+  "training_admitted": false
+}

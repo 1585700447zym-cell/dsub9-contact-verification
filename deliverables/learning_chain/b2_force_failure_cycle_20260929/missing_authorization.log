@@ -1,0 +1,19 @@
+Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\ok everything\\.matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_force_failure_cycle.py", line 261, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_force_failure_cycle.py", line 244, in main
+    permit=ForceAdmission(DELIVERY/'candidate.json',expected_digest=args.candidate_sha256,
+        authorization_digest=args.authorization_sha256)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\force_failure_cycle.py", line 99, in __init__
+    super().__init__(path,expected_digest=expected_digest)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_contact.py", line 64, in __init__
+    self.path=Path(path); self.expected_digest=expected_digest; self.verify()
+                                                                ~~~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\force_failure_cycle.py", line 103, in verify
+    raise ValueError('Missing explicit user budget authorization')
+ValueError: Missing explicit user budget authorization

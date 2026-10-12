@@ -1,0 +1,58 @@
+{
+  "source_sha256": {
+    "tools/control/fixed_admittance.py": "a283521de6eec6191e4e7db578426f2999ddc89fd7648476f4d8c165dd7aee67",
+    "tools/validation/run_b1_baseline.py": "2c527aea16353a506137569f90de9d60ccb43a8d5ebd5104ee90e371f297e3cc",
+    "tools/model/contact_development.py": "db348846da55935e1886318f53492da3edebd506e7c0663a9fdbc1414ef65bf2",
+    "tools/dynamics/cartesian.py": "6fb2fd4d4e38a45dd0aa0fa1501a1aad45fda18ea3be983b22c949e3bb9da786",
+    "tools/dynamics/safety.py": "76dc145098f09867cbea9699e53a7f32624a3208f5ae781d5913a3ebac95354f",
+    "tools/control/search_recovery.py": "e757eaf145c05f403c96786f9353eb5a4c2e0eeb06d8f90de8269bc928f63b40",
+    "tools/validation/run_b2_search.py": "a7e87404c3ede4967672da1fd57eecc99a3a11e09ae59afc2a2e80d1b71df415"
+  },
+  "config": {
+    "stall_window_s": 0.4,
+    "stall_earliest_s": 0.6,
+    "stall_advance_m": 5e-06,
+    "stall_axial_force_N": 0.005,
+    "unload_speed_m_s": 0.00025,
+    "unload_time_s": 1.0,
+    "unload_axial_force_N": 0.005,
+    "unload_total_force_N": 0.01,
+    "search_force_N": 0.008,
+    "axial_gain_m_s_N": 0.05,
+    "search_forward_speed_m_s": 0.0005,
+    "spiral_pitch_m": 4e-05,
+    "spiral_radius_m": 0.00012,
+    "spiral_speed_m_s": 0.00015,
+    "search_tracking_gain_s": 5.0,
+    "search_xy_component_speed_m_s": 0.0003,
+    "search_time_s": 8.0,
+    "search_exit_advance_m": 0.0001,
+    "max_searches": 2,
+    "search_actual_xy_limit_m": 0.0002,
+    "wait_stable_s": 1.0,
+    "recovery_min_actual_m": 0.0002,
+    "total_action_time_s": 20.0,
+    "settle_time_s": 1.0
+  },
+  "case_names": [
+    "aligned",
+    "x_offset_pos_100um",
+    "y_offset_neg_100um",
+    "roll_pos_1.5deg",
+    "combined_a_scale_0.75",
+    "combined_b_scale_0.75",
+    "combined_a"
+  ],
+  "paired": true,
+  "fresh_runs": 14,
+  "execution": "Three independent process queues; unchanged episode runner; no reuse of pilot records",
+  "workers": [
+    "matrix_v1_case_01",
+    "matrix_v1_case_02",
+    "matrix_v1_case_03",
+    "matrix_v1_case_04",
+    "matrix_v1_case_05",
+    "matrix_v1_case_06",
+    "matrix_v1_case_07"
+  ]
+}

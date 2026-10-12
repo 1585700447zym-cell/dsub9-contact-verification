@@ -1,0 +1,6 @@
+{
+  "execution_inputs": 878,
+  "input_source_snapshots": 180,
+  "assets": "STL originals remain in place and hash-bound; no copies",
+  "dynamic_episodes_before_execute": 0
+}

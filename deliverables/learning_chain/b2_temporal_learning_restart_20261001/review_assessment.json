@@ -1,0 +1,21 @@
+{
+  "ready": true,
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "original_important": 2,
+  "reviewer": "/root/restart_validation_review",
+  "author_fix_passes": 1,
+  "rereview_performed": false,
+  "tests": 181,
+  "actual_calls": {
+    "model_forward": 0,
+    "optimizer": 0,
+    "physics": 0
+  },
+  "effect_verified": false,
+  "fixes": [
+    "real_reader_worker_and_supervisor_chain_red_to_green",
+    "started_fault_evidence_and_plot_status_red_to_green"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "status": "DELIVERY_VERIFIED_TRAINING_BLOCKED",
+  "selected_baseline": "B2_original",
+  "candidate_episodes": 7,
+  "reused_comparison_episodes": 14,
+  "new_dynamics_episodes_total": 17,
+  "numerical_pair_comparisons": 8,
+  "related_tests_passed": 145,
+  "not_claiming_full_repository_tests_pass": true,
+  "legacy_manifests_verified": [
+    {
+      "path": "deliverables/dynamic_actuator_v1/delivery_manifest.json",
+      "entries": 23
+    },
+    {
+      "path": "deliverables/b2_search_recovery/delivery_manifest.json",
+      "entries": 148
+    },
+    {
+      "path": "deliverables/b2_exit_gate_v2/delivery_manifest.json",
+      "entries": 66
+    },
+    {
+      "path": "deliverables/b2_switch_diagnosis/delivery_manifest.json",
+      "entries": 15
+    },
+    {
+      "path": "deliverables/b2_xy_probe/delivery_manifest.json",
+      "entries": 36
+    },
+    {
+      "path": "deliverables/b2_y_probe/delivery_manifest.json",
+      "entries": 38
+    },
+    {
+      "path": "deliverables/b2_xy_contact_diagnosis/delivery_manifest.json",
+      "entries": 23
+    }
+  ],
+  "legacy_visual_usage_preexisting_mismatch": [
+    ".vscode/settings.json"
+  ],
+  "settings_preflight_and_final_sha256": "e8a18f2fbbb734665a9860cd81eb5cea40ce0d15f03395dc90ed45fbf4924691",
+  "navigation_manifests_updated_with_backups": true,
+  "workspace_settings_unchanged": true,
+  "checked_links": 25,
+  "no_training_no_physics_parameter_change": true
+}

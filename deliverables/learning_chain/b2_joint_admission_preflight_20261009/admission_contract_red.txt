@@ -1,0 +1,39 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_fixed_12_and_reservation_before_invoke (__main__.AdmissionTests.test_fixed_12_and_reservation_before_invoke) ... FAIL
+test_guard_error_and_no_retry (__main__.AdmissionTests.test_guard_error_and_no_retry) ... FAIL
+test_new_grant_and_reject_old_or_request (__main__.AdmissionTests.test_new_grant_and_reject_old_or_request) ... ERROR
+test_single_claim_and_existing_output_rejected (__main__.AdmissionTests.test_single_claim_and_existing_output_rejected) ... ok
+
+======================================================================
+ERROR: test_new_grant_and_reject_old_or_request (__main__.AdmissionTests.test_new_grant_and_reject_old_or_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 25, in test_new_grant_and_reject_old_or_request
+    g=self.grant();validate_grant(g,'a'*64,proposal())
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\execution_contract.py", line 34, in validate_grant
+    raise ValueError('Explicit new scope grant, binding and exact ceilings required')
+ValueError: Explicit new scope grant, binding and exact ceilings required
+
+======================================================================
+FAIL: test_fixed_12_and_reservation_before_invoke (__main__.AdmissionTests.test_fixed_12_and_reservation_before_invoke)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 43, in test_fixed_12_and_reservation_before_invoke
+    self.assertEqual(len(seen),12);self.assertEqual(ledger['status'],'CLOSED_COMPLETE')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+AssertionError: 1 != 12
+
+======================================================================
+FAIL: test_guard_error_and_no_retry (__main__.AdmissionTests.test_guard_error_and_no_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 52, in test_guard_error_and_no_retry
+    self.assertEqual(ledger['dynamic_attempts'],1);self.assertEqual(ledger['unused_dynamic_closed'],11)
+                                                   ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 15 != 11
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.043s
+
+FAILED (failures=2, errors=1)

@@ -1,0 +1,104 @@
+[
+  {
+    "name": "bisect_00_a",
+    "pairs": 538,
+    "returncode": 0,
+    "hex": "0x0"
+  },
+  {
+    "name": "bisect_00_b",
+    "pairs": 539,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_01_a",
+    "pairs": 269,
+    "returncode": 0,
+    "hex": "0x0"
+  },
+  {
+    "name": "bisect_01_b",
+    "pairs": 270,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_02_a",
+    "pairs": 135,
+    "returncode": 0,
+    "hex": "0x0"
+  },
+  {
+    "name": "bisect_02_b",
+    "pairs": 135,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_03_a",
+    "pairs": 67,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_04_a",
+    "pairs": 33,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_05_a",
+    "pairs": 16,
+    "returncode": 0,
+    "hex": "0x0"
+  },
+  {
+    "name": "bisect_05_b",
+    "pairs": 17,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_06_a",
+    "pairs": 8,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_07_a",
+    "pairs": 4,
+    "returncode": 0,
+    "hex": "0x0"
+  },
+  {
+    "name": "bisect_07_b",
+    "pairs": 4,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_08_a",
+    "pairs": 2,
+    "returncode": 0,
+    "hex": "0x0"
+  },
+  {
+    "name": "bisect_08_b",
+    "pairs": 2,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  },
+  {
+    "name": "bisect_09_a",
+    "pairs": 1,
+    "returncode": 0,
+    "hex": "0x0"
+  },
+  {
+    "name": "bisect_09_b",
+    "pairs": 1,
+    "returncode": 3221225477,
+    "hex": "0xc0000005"
+  }
+]

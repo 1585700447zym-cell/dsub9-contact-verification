@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="40" skipped="0" tests="40" time="0.430" timestamp="2026-09-30T16:48:05.200101+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_single_variable_execution_configs_and_exact_scope" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_single_variable_execution_configs_and_exact_scope():
+&gt;       m=module();a=m.execution_config('A');b=m.execution_config('B')
+
+tests\learning\test_actor_lr_execution_contract.py:14: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_config_changes_rejected[actor_learning_rate-3e-06]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'actor_learning_rate', value = 3e-06
+
+    @pytest.mark.parametrize('field,value',[('actor_learning_rate',3e-6),('learning_rate',3e-5),('batch_size',128),('max_gradient_batches',501)])
+    def test_unregistered_config_changes_rejected(field,value):
+&gt;       m=module();c=m.execution_config('B');c['learning'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_config_changes_rejected[learning_rate-3e-05]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'learning_rate', value = 3e-05
+
+    @pytest.mark.parametrize('field,value',[('actor_learning_rate',3e-6),('learning_rate',3e-5),('batch_size',128),('max_gradient_batches',501)])
+    def test_unregistered_config_changes_rejected(field,value):
+&gt;       m=module();c=m.execution_config('B');c['learning'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_config_changes_rejected[batch_size-128]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'batch_size', value = 128
+
+    @pytest.mark.parametrize('field,value',[('actor_learning_rate',3e-6),('learning_rate',3e-5),('batch_size',128),('max_gradient_batches',501)])
+    def test_unregistered_config_changes_rejected(field,value):
+&gt;       m=module();c=m.execution_config('B');c['learning'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_config_changes_rejected[max_gradient_batches-501]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'max_gradient_batches', value = 501
+
+    @pytest.mark.parametrize('field,value',[('actor_learning_rate',3e-6),('learning_rate',3e-5),('batch_size',128),('max_gradient_batches',501)])
+    def test_unregistered_config_changes_rejected(field,value):
+&gt;       m=module();c=m.execution_config('B');c['learning'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_authorization_requires_exact_new_budget_and_candidate" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_authorization_requires_exact_new_budget_and_candidate():
+&gt;       m=module();r=authorization();m.validate_authorization(r,'a'*64)
+
+tests\learning\test_actor_lr_execution_contract.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_incomplete_or_cross_cycle_authorization_rejected[approved-False]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'approved', value = False
+
+    @pytest.mark.parametrize('field,value',[('approved',False),('approved',1),('candidate_sha256','b'*64),
+        ('scope','continue_old_cycle'),('user_confirmation',''),('version','force_cycle_user_authorization_v1')])
+    def test_incomplete_or_cross_cycle_authorization_rejected(field,value):
+&gt;       m=module();r=authorization();r[field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_incomplete_or_cross_cycle_authorization_rejected[approved-1]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'approved', value = 1
+
+    @pytest.mark.parametrize('field,value',[('approved',False),('approved',1),('candidate_sha256','b'*64),
+        ('scope','continue_old_cycle'),('user_confirmation',''),('version','force_cycle_user_authorization_v1')])
+    def test_incomplete_or_cross_cycle_authorization_rejected(field,value):
+&gt;       m=module();r=authorization();r[field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_incomplete_or_cross_cycle_authorization_rejected[candidate_sha256-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'candidate_sha256'
+value = 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+
+    @pytest.mark.parametrize('field,value',[('approved',False),('approved',1),('candidate_sha256','b'*64),
+        ('scope','continue_old_cycle'),('user_confirmation',''),('version','force_cycle_user_authorization_v1')])
+    def test_incomplete_or_cross_cycle_authorization_rejected(field,value):
+&gt;       m=module();r=authorization();r[field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_incomplete_or_cross_cycle_authorization_rejected[scope-continue_old_cycle]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'scope', value = 'continue_old_cycle'
+
+    @pytest.mark.parametrize('field,value',[('approved',False),('approved',1),('candidate_sha256','b'*64),
+        ('scope','continue_old_cycle'),('user_confirmation',''),('version','force_cycle_user_authorization_v1')])
+    def test_incomplete_or_cross_cycle_authorization_rejected(field,value):
+&gt;       m=module();r=authorization();r[field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_incomplete_or_cross_cycle_authorization_rejected[user_confirmation-]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'user_confirmation', value = ''
+
+    @pytest.mark.parametrize('field,value',[('approved',False),('approved',1),('candidate_sha256','b'*64),
+        ('scope','continue_old_cycle'),('user_confirmation',''),('version','force_cycle_user_authorization_v1')])
+    def test_incomplete_or_cross_cycle_authorization_rejected(field,value):
+&gt;       m=module();r=authorization();r[field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_incomplete_or_cross_cycle_authorization_rejected[version-force_cycle_user_authorization_v1]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'version', value = 'force_cycle_user_authorization_v1'
+
+    @pytest.mark.parametrize('field,value',[('approved',False),('approved',1),('candidate_sha256','b'*64),
+        ('scope','continue_old_cycle'),('user_confirmation',''),('version','force_cycle_user_authorization_v1')])
+    def test_incomplete_or_cross_cycle_authorization_rejected(field,value):
+&gt;       m=module();r=authorization();r[field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_budget_cannot_extend_or_consume_old_remaining[synthetic-17]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'synthetic', value = 17
+
+    @pytest.mark.parametrize('field,value',[('synthetic',17),('test_forward',129),('old_unused_consumed',19),
+        ('automatic_tracking',True),('previous_dynamic',0)])
+    def test_budget_cannot_extend_or_consume_old_remaining(field,value):
+&gt;       m=module();r=authorization();r['budget'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_budget_cannot_extend_or_consume_old_remaining[test_forward-129]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'test_forward', value = 129
+
+    @pytest.mark.parametrize('field,value',[('synthetic',17),('test_forward',129),('old_unused_consumed',19),
+        ('automatic_tracking',True),('previous_dynamic',0)])
+    def test_budget_cannot_extend_or_consume_old_remaining(field,value):
+&gt;       m=module();r=authorization();r['budget'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_budget_cannot_extend_or_consume_old_remaining[old_unused_consumed-19]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'old_unused_consumed', value = 19
+
+    @pytest.mark.parametrize('field,value',[('synthetic',17),('test_forward',129),('old_unused_consumed',19),
+        ('automatic_tracking',True),('previous_dynamic',0)])
+    def test_budget_cannot_extend_or_consume_old_remaining(field,value):
+&gt;       m=module();r=authorization();r['budget'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_budget_cannot_extend_or_consume_old_remaining[automatic_tracking-True]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'automatic_tracking', value = True
+
+    @pytest.mark.parametrize('field,value',[('synthetic',17),('test_forward',129),('old_unused_consumed',19),
+        ('automatic_tracking',True),('previous_dynamic',0)])
+    def test_budget_cannot_extend_or_consume_old_remaining(field,value):
+&gt;       m=module();r=authorization();r['budget'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_budget_cannot_extend_or_consume_old_remaining[previous_dynamic-0]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+field = 'previous_dynamic', value = 0
+
+    @pytest.mark.parametrize('field,value',[('synthetic',17),('test_forward',129),('old_unused_consumed',19),
+        ('automatic_tracking',True),('previous_dynamic',0)])
+    def test_budget_cannot_extend_or_consume_old_remaining(field,value):
+&gt;       m=module();r=authorization();r['budget'][field]=value
+
+tests\learning\test_actor_lr_execution_contract.py:57: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_preparation_configuration_cannot_be_executed" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+    def test_preparation_configuration_cannot_be_executed():
+&gt;       m=module()
+
+tests\learning\test_actor_lr_execution_contract.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_execution_branch_rejected[initial]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+branch = 'initial'
+
+    @pytest.mark.parametrize('branch',['initial','C',None,True])
+    def test_unregistered_execution_branch_rejected(branch):
+&gt;       with pytest.raises(ValueError):module().execution_config(branch)
+
+tests\learning\test_actor_lr_execution_contract.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_execution_branch_rejected[C]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+branch = 'C'
+
+    @pytest.mark.parametrize('branch',['initial','C',None,True])
+    def test_unregistered_execution_branch_rejected(branch):
+&gt;       with pytest.raises(ValueError):module().execution_config(branch)
+
+tests\learning\test_actor_lr_execution_contract.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_execution_branch_rejected[None]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+branch = None
+
+    @pytest.mark.parametrize('branch',['initial','C',None,True])
+    def test_unregistered_execution_branch_rejected(branch):
+&gt;       with pytest.raises(ValueError):module().execution_config(branch)
+
+tests\learning\test_actor_lr_execution_contract.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_execution_contract" name="test_unregistered_execution_branch_rejected[True]" time="0.001"><failure message="Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'">def module():
+        try:
+&gt;           return importlib.import_module('tools.learning.actor_lr_contract')
+
+tests\learning\test_actor_lr_execution_contract.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_contract'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_contract'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+branch = True
+
+    @pytest.mark.parametrize('branch',['initial','C',None,True])
+    def test_unregistered_execution_branch_rejected(branch):
+&gt;       with pytest.raises(ValueError):module().execution_config(branch)
+
+tests\learning\test_actor_lr_execution_contract.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:
+            return importlib.import_module('tools.learning.actor_lr_contract')
+        except ModuleNotFoundError as exc:
+&gt;           pytest.fail('Comparison contract missing: '+str(exc))
+E           Failed: Comparison contract missing: No module named 'tools.learning.actor_lr_contract'
+
+tests\learning\test_actor_lr_execution_contract.py:10: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_creation_is_exclusive_and_authorization_bound" time="0.002"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_creation_is_exclusive_and0')
+
+    def test_creation_is_exclusive_and_authorization_bound(tmp_path):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_real_work_gates_closed_before_validation[formal-A-batch_000]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_real_work_gates_closed_be0')
+kind = 'formal', branch = 'A', identity = 'batch_000'
+
+    @pytest.mark.parametrize('kind,branch,identity',[('formal','A','batch_000'),('formal','B','batch_000'),
+        ('diagnostic','initial','states'),('physical','A','x_pos_100')])
+    def test_real_work_gates_closed_before_validation(tmp_path,kind,branch,identity):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_real_work_gates_closed_before_validation[formal-B-batch_000]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_real_work_gates_closed_be1')
+kind = 'formal', branch = 'B', identity = 'batch_000'
+
+    @pytest.mark.parametrize('kind,branch,identity',[('formal','A','batch_000'),('formal','B','batch_000'),
+        ('diagnostic','initial','states'),('physical','A','x_pos_100')])
+    def test_real_work_gates_closed_before_validation(tmp_path,kind,branch,identity):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_real_work_gates_closed_before_validation[diagnostic-initial-states]" time="0.003"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_real_work_gates_closed_be2')
+kind = 'diagnostic', branch = 'initial', identity = 'states'
+
+    @pytest.mark.parametrize('kind,branch,identity',[('formal','A','batch_000'),('formal','B','batch_000'),
+        ('diagnostic','initial','states'),('physical','A','x_pos_100')])
+    def test_real_work_gates_closed_before_validation(tmp_path,kind,branch,identity):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_real_work_gates_closed_before_validation[physical-A-x_pos_100]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_real_work_gates_closed_be3')
+kind = 'physical', branch = 'A', identity = 'x_pos_100'
+
+    @pytest.mark.parametrize('kind,branch,identity',[('formal','A','batch_000'),('formal','B','batch_000'),
+        ('diagnostic','initial','states'),('physical','A','x_pos_100')])
+    def test_real_work_gates_closed_before_validation(tmp_path,kind,branch,identity):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:39: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_reservation_is_durable_before_work_and_blocks_reentry" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_reservation_is_durable_be0')
+
+    def test_reservation_is_durable_before_work_and_blocks_reentry(tmp_path):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_validation_caps_and_invalid_counts_are_refused[synthetic-16]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_validation_caps_and_inval0')
+kind = 'synthetic', cap = 16
+
+    @pytest.mark.parametrize('kind,cap',[('synthetic',16),('test_forward',128)])
+    def test_validation_caps_and_invalid_counts_are_refused(tmp_path,kind,cap):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_validation_caps_and_invalid_counts_are_refused[test_forward-128]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_validation_caps_and_inval1')
+kind = 'test_forward', cap = 128
+
+    @pytest.mark.parametrize('kind,cap',[('synthetic',16),('test_forward',128)])
+    def test_validation_caps_and_invalid_counts_are_refused(tmp_path,kind,cap):
+&gt;       l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_b_and_evaluation_cannot_bypass_exact_a_reproduction_gate" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_b_and_evaluation_cannot_b0')
+
+    def test_b_and_evaluation_cannot_bypass_exact_a_reproduction_gate(tmp_path):
+&gt;       l=ledger(tmp_path);l.complete_validation('c'*64)
+
+tests\learning\test_actor_lr_budget.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_failed_attempt_remains_charged_and_cannot_retry" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_failed_attempt_remains_ch0')
+
+    def test_failed_attempt_remains_charged_and_cannot_retry(tmp_path):
+&gt;       l=ledger(tmp_path);l.reserve('synthetic','shared','failure')
+
+tests\learning\test_actor_lr_budget.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_write_failure_prevents_any_further_reservation" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_write_failure_prevents_an0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000028CBD2AE8B0&gt;
+
+    def test_write_failure_prevents_any_further_reservation(tmp_path,monkeypatch):
+&gt;       m=module();l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_corrupt_active_state_rejected_on_load[True]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_corrupt_active_state_reje0')
+bad_value = True
+
+    @pytest.mark.parametrize('bad_value',[True,-1,1])
+    def test_corrupt_active_state_rejected_on_load(tmp_path,bad_value):
+&gt;       l=ledger(tmp_path);raw=deepcopy(l.state);raw['active']=bad_value
+
+tests\learning\test_actor_lr_budget.py:89: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_corrupt_active_state_rejected_on_load[-1]" time="0.003"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_corrupt_active_state_reje1')
+bad_value = -1
+
+    @pytest.mark.parametrize('bad_value',[True,-1,1])
+    def test_corrupt_active_state_rejected_on_load(tmp_path,bad_value):
+&gt;       l=ledger(tmp_path);raw=deepcopy(l.state);raw['active']=bad_value
+
+tests\learning\test_actor_lr_budget.py:89: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_corrupt_active_state_rejected_on_load[1]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_corrupt_active_state_reje2')
+bad_value = 1
+
+    @pytest.mark.parametrize('bad_value',[True,-1,1])
+    def test_corrupt_active_state_rejected_on_load(tmp_path,bad_value):
+&gt;       l=ledger(tmp_path);raw=deepcopy(l.state);raw['active']=bad_value
+
+tests\learning\test_actor_lr_budget.py:89: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_budget.py:13: in ledger
+    return module().ComparisonLedger.create(tmp_path/'ledger.json','a'*64,'b'*64)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison[contact]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_any_evaluation_guard_or_i0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000028CBD2AD6E0&gt;
+cause = 'contact'
+
+    @pytest.mark.parametrize('cause',['contact','motion','invalid','unstopped'])
+    def test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison(tmp_path,monkeypatch,cause):
+&gt;       m=module();l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison[motion]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_any_evaluation_guard_or_i1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000028CBD2FF890&gt;
+cause = 'motion'
+
+    @pytest.mark.parametrize('cause',['contact','motion','invalid','unstopped'])
+    def test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison(tmp_path,monkeypatch,cause):
+&gt;       m=module();l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison[invalid]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_any_evaluation_guard_or_i2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000028CBD30CAF0&gt;
+cause = 'invalid'
+
+    @pytest.mark.parametrize('cause',['contact','motion','invalid','unstopped'])
+    def test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison(tmp_path,monkeypatch,cause):
+&gt;       m=module();l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_budget" name="test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison[unstopped]" time="0.001"><failure message="Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'">def module():
+&gt;       try:return importlib.import_module('tools.learning.actor_lr_budget')
+
+tests\learning\test_actor_lr_budget.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_budget'
+import_ = &lt;function _gcd_import at 0x0000028C92A504A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_budget'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/contract_budget_red_work/test_any_evaluation_guard_or_i3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000028CBD30E140&gt;
+cause = 'unstopped'
+
+    @pytest.mark.parametrize('cause',['contact','motion','invalid','unstopped'])
+    def test_any_evaluation_guard_or_invalid_outcome_stops_whole_comparison(tmp_path,monkeypatch,cause):
+&gt;       m=module();l=ledger(tmp_path)
+
+tests\learning\test_actor_lr_budget.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def module():
+        try:return importlib.import_module('tools.learning.actor_lr_budget')
+&gt;       except ModuleNotFoundError as exc:pytest.fail('Comparison budget missing: '+str(exc))
+E       Failed: Comparison budget missing: No module named 'tools.learning.actor_lr_budget'
+
+tests\learning\test_actor_lr_budget.py:9: Failed</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-10-03T19:48:02.488031+08:00",
+  "status": "verified_controlled_stop",
+  "related_tests_passed": 44,
+  "source_python_files_parsed": 164,
+  "new_dynamic_attempts": 8,
+  "all_completed_valid_stopped": true,
+  "training_updates": 0,
+  "policy_calls": 0,
+  "independent_tests": 0,
+  "unused_closed": 1,
+  "full_project_tests": false,
+  "source_snapshots_verified": true,
+  "documents_snapshotted": 6
+}

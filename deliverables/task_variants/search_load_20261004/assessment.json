@@ -1,0 +1,97 @@
+{
+  "status": "controlled_stop",
+  "episodes": 1,
+  "unused_closed": 4,
+  "cumulative": 120,
+  "functional_success": 0,
+  "strict_precision_success": 0,
+  "control_cycles": 6718,
+  "physical_substeps": 67180,
+  "wall_seconds": 278.65939389999403,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "inputs_unchanged": true,
+  "rows": [
+    {
+      "id": "y_neg_150",
+      "outcome": "TASK_FAILURE",
+      "reason": "SEARCH_BUDGET_EXHAUSTED",
+      "functional_success": false,
+      "strict_precision_success": false,
+      "simulation_valid": true,
+      "physical_stopped": true,
+      "xy_um": 173.91429586339146,
+      "z_um": -3760.2450769684206,
+      "angle_deg": 0.3011283291548767,
+      "pin_clearance_um": -76.07641284816918,
+      "peak_force_mN": 24.474139103047843,
+      "peak_penetration_um": 7.106486275531078,
+      "control_cycles": 6718,
+      "physical_substeps": 67180,
+      "wall_seconds": 278.65939389999403,
+      "stop_time_s": 11.436000000000025,
+      "task_end_time_s": 12.435999999997694,
+      "end_time_s": 13.435999999995364,
+      "contact_cycles": 6584,
+      "search_cycles": 4913,
+      "controller_events": [
+        {
+          "time_s": 0.7459999999999505,
+          "phase": "UNLOAD",
+          "reason": "AXIAL_STALL"
+        },
+        {
+          "time_s": 1.5259999999998646,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH"
+        },
+        {
+          "time_s": 8.4860000000069,
+          "phase": "UNLOAD",
+          "reason": "SEARCH_LATERAL_LOAD",
+          "lateral_force_N": 0.020910377255716803,
+          "total_force_N": 0.022509564646576725,
+          "load_since_s": 8.466000000006947,
+          "search_count": 1,
+          "paused_theta_rad": 18.000964367107034
+        },
+        {
+          "time_s": 8.4860000000069,
+          "phase": "UNLOAD",
+          "reason": "XY_REFERENCE_RELEASED",
+          "reference_before_m": [
+            8.470991953773338e-05,
+            -0.0003140747201393661
+          ],
+          "reference_after_m": [
+            -4.495770573471763e-05,
+            -0.00016581738494950005
+          ],
+          "released_error_m": [
+            0.000129667625272451,
+            -0.00014825733518986607
+          ]
+        },
+        {
+          "time_s": 8.570000000006704,
+          "phase": "SEARCH",
+          "reason": "LOW_LOAD_SEARCH"
+        },
+        {
+          "time_s": 11.436000000000025,
+          "phase": "FAILED",
+          "reason": "SEARCH_BUDGET_EXHAUSTED"
+        }
+      ],
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.005336812102822622,
+        "checked_substeps": 67180
+      }
+    }
+  ]
+}

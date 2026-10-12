@@ -1,0 +1,28 @@
+{
+  "extra_files": {
+    "deliverables\\learning_chain\\b2_joint_coverage_review_20261009\\recommended_gate_v2.json": "737f4cb92293a1c53e810107b11cd46b2cdaeebed887ea16703d11bd76558570",
+    "deliverables\\learning_chain\\b2_joint_coverage_review_20261009\\结果说明.md": "4bf2f015af79bc504a3b62e29f961041c000b5d0ee77890465b962d232f54e9e",
+    "deliverables\\learning_chain\\b2_joint_preflight_execution_20261009\\结果说明.md": "f062ab570689d244c1d042d82b58918d1ad753854a73e324f3f96504913da076",
+    "deliverables\\learning_chain\\b2_pure_baseline_execution_20261011\\assessment.json": "9839542cc0519b34e67052f13836f96204b515c56b18dd4ccd39891edaf60c5c",
+    "deliverables\\learning_chain\\b2_pure_baseline_execution_20261011\\authorization_closure.json": "ad04b0dabea57288878386934526c14776d8d45e42c9ac95a28b90c30422afcd",
+    "deliverables\\learning_chain\\b2_pure_baseline_execution_20261011\\delivery_manifest.json": "4e88d5805373901e0ea3236962a4211e2d3c4897660cc7872facfe19f61fe5e4",
+    "deliverables\\learning_chain\\b2_pure_baseline_execution_20261011\\route_decision.json": "fb2f1cd5bfe016ee7ec0c39d2ef6e267621529215600799a7e1b9cb5204d68bf",
+    "deliverables\\learning_chain\\b2_pure_baseline_execution_20261011\\verification.json": "3538ba1d1c00f33dde3ed96c4eedca738565dd74e6ce26a6573ee3c1202a8249",
+    "deliverables\\learning_chain\\b2_pure_baseline_preparation_20261011\\baseline_entry.py": "674fa779c56b2d5683b1db871a9f6d8e944f0d3a0a52c27c4ccdbd4fa63e4232",
+    "deliverables\\learning_chain\\b2_pure_baseline_preparation_20261011\\baseline_rollout.py": "e2490a2a93fbf1f5cce9364d1c739ccb24d92e7e0a3f0316acac37ecb0bdf786",
+    "deliverables\\learning_chain\\b2_pure_baseline_preparation_20261011\\configuration.json": "b61faac57a12248bfe239464eb80f86583fb74b1612f46b7226a279503337d02",
+    "deliverables\\learning_chain\\b2_pure_baseline_preparation_20261011\\contract.py": "7d2cc53d795006b3f3413d14016c90e3ea706a536c4180aa5cdf44a4c9e2627a",
+    "deliverables\\learning_chain\\b2_pure_baseline_preparation_20261011\\model.xml": "dbb662662dffc48d002e4bc26963d5192f13ff3be20764eac821f8fd10e861cf",
+    "deliverables\\learning_chain\\b2_pure_baseline_preparation_20261011\\reuse_assessment.json": "9690b5d89e2566bfe8fe730d624c63a2fa9ab0fb6e1585ebf2e6840c31ac2d56",
+    "deliverables\\learning_chain\\b2_pure_baseline_preparation_20261011\\source_binding.json": "3371ab244886365cee0701236b832c63c529d616b0ee8a7f0ac0b436315d3f69",
+    "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md": "3dd2c3a9f048c4661e0ee5ced70d2c48d8933958083ceb813a64083ac4d35ca3",
+    "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\evaluation_candidate.json": "8b31f94cff0667658be2ea4c2ed4338d5195ec9d124985797c1e9bda20b2adcf",
+    "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\scenario_matrix.csv": "b624210b8885e66c34eb7f44f2597c44cf74ec58ab593c9c086b1eb018a580b6"
+  },
+  "inherited_binding": "deliverables/learning_chain/b2_pure_baseline_preparation_20261011/source_binding.json",
+  "inherited_file_count": 2254,
+  "preparation_only": true,
+  "prior_seal": "deliverables/learning_chain/b2_pure_baseline_execution_20261011/delivery_manifest.json",
+  "prior_sealed_file_count": 77,
+  "version": "b2_stratified_scope_offline_sources_v1"
+}

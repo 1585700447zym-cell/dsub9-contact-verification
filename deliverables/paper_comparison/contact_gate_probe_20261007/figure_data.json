@@ -1,0 +1,95 @@
+{
+  "time": [
+    {
+      "profile": "B2",
+      "case": "aligned",
+      "penalized_time_s": 4.330000000000289,
+      "outcome": "FULL_SUCCESS"
+    },
+    {
+      "profile": "F50",
+      "case": "aligned",
+      "penalized_time_s": 4.34000000000031,
+      "outcome": "FULL_SUCCESS"
+    },
+    {
+      "profile": "F12.5",
+      "case": "aligned",
+      "penalized_time_s": 4.330000000000289,
+      "outcome": "FULL_SUCCESS"
+    },
+    {
+      "profile": "G50",
+      "case": "aligned",
+      "penalized_time_s": 4.330000000000289,
+      "outcome": "FULL_SUCCESS"
+    },
+    {
+      "profile": "B2",
+      "case": "y_neg_150",
+      "penalized_time_s": 20.779999999978248,
+      "outcome": "FULL_SUCCESS"
+    },
+    {
+      "profile": "F50",
+      "case": "y_neg_150",
+      "penalized_time_s": 10.236000000002822,
+      "outcome": "FULL_SUCCESS"
+    },
+    {
+      "profile": "F12.5",
+      "case": "y_neg_150",
+      "penalized_time_s": 11.653999999999517,
+      "outcome": "FULL_SUCCESS"
+    },
+    {
+      "profile": "G50",
+      "case": "y_neg_150",
+      "penalized_time_s": 26.0,
+      "outcome": "TASK_FAILURE"
+    }
+  ],
+  "load": [
+    {
+      "profile": "B2",
+      "case": "aligned",
+      "peak_force_mN": 0.0
+    },
+    {
+      "profile": "B2",
+      "case": "y_neg_150",
+      "peak_force_mN": 24.474139103047843
+    },
+    {
+      "profile": "F50",
+      "case": "aligned",
+      "peak_force_mN": 5.383435284668491
+    },
+    {
+      "profile": "F50",
+      "case": "y_neg_150",
+      "peak_force_mN": 24.476199604575275
+    },
+    {
+      "profile": "F12.5",
+      "case": "aligned",
+      "peak_force_mN": 0.0
+    },
+    {
+      "profile": "F12.5",
+      "case": "y_neg_150",
+      "peak_force_mN": 24.474125336492335
+    },
+    {
+      "profile": "G50",
+      "case": "aligned",
+      "peak_force_mN": 0.0
+    },
+    {
+      "profile": "G50",
+      "case": "y_neg_150",
+      "peak_force_mN": 24.47617066908936
+    }
+  ],
+  "assessment_sha256": "4229d935823102f7028a3f90986da2e53eab898745a522ca779babe8dec02603"
+}

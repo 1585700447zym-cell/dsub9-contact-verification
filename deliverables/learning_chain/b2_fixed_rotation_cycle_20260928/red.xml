@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="13" time="0.451" timestamp="2026-09-28T20:07:26.718870+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_config_has_only_version_and_rotation_difference" time="0.001" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_unapproved_configuration_changes_rejected[scale]" time="0.002" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_unapproved_configuration_changes_rejected[seed]" time="0.001" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_unapproved_configuration_changes_rejected[reward]" time="0.001" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_unapproved_configuration_changes_rejected[batches]" time="0.001" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_32_starts_and_59_lineage_cap_in_order" time="0.179" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_failed_start_consumes_budget_and_prevents_reopening" time="0.009" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_changed_parent_source_is_not_accepted_as_new_evidence" time="0.004" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_qualification_rejects_wrong_capability_and_profile" time="0.002" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_one_shot_claim_does_not_allow_automatic_retry" time="0.004" /><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_reused_supervisor_and_its_test_are_in_current_source_binding" time="0.102"><failure message="AssertionError: assert 'deliverables/learning_chain/b2_bounded_cycle_20260927/retry_01/driver.py' in {'assets/collision/d_guide_male_seg_000.stl': '0a512270efb181247d3eff14e8cb197029f0a71100428c695bd36252c60bae35', 'ass..., 'assets/collision/d_guide_male_seg_003.stl': 'd7329b3970ee7e87087d65d766b0ede762162c47831f31e32c186c7a902720e6', ...}">def test_reused_supervisor_and_its_test_are_in_current_source_binding():
+        sources=api().fixed_sources()
+        for name in ('driver.py','test_driver.py'):
+            key='deliverables/learning_chain/b2_bounded_cycle_20260927/retry_01/'+name
+&gt;           assert key in sources
+E           AssertionError: assert 'deliverables/learning_chain/b2_bounded_cycle_20260927/retry_01/driver.py' in {'assets/collision/d_guide_male_seg_000.stl': '0a512270efb181247d3eff14e8cb197029f0a71100428c695bd36252c60bae35', 'ass..., 'assets/collision/d_guide_male_seg_003.stl': 'd7329b3970ee7e87087d65d766b0ede762162c47831f31e32c186c7a902720e6', ...}
+
+tests\learning\test_fixed_rotation_cycle.py:75: AssertionError</failure></testcase><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_supervisor_tampering_is_rejected_against_trusted_old_binding[driver.py]" time="0.011"><failure message="AttributeError: &lt;module 'tools.learning.fixed_rotation_cycle' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\fixed_rotation_cycle.py'&gt; has no attribute 'RETRY_BINDING_PIN'">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-332/test_supervisor_tampering_is_r0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000023C03771EB0&gt;
+changed = 'driver.py'
+
+    @pytest.mark.parametrize('changed',['driver.py','test_driver.py'])
+    def test_supervisor_tampering_is_rejected_against_trusted_old_binding(tmp_path,monkeypatch,changed):
+        import json
+        m=api();old=tmp_path/'old';folder=old/'retry_01';folder.mkdir(parents=True)
+        for name in ('driver.py','test_driver.py'):(folder/name).write_text('original')
+        binding=folder/'binding.json'
+        binding.write_text(json.dumps(dict(files={f'old/retry_01/{n}':m.digest(folder/n) for n in ('driver.py','test_driver.py')})))
+        monkeypatch.setattr(m,'ROOT',tmp_path);monkeypatch.setattr(m,'OLD',old)
+&gt;       monkeypatch.setattr(m,'RETRY_BINDING_PIN',m.digest(binding))
+E       AttributeError: &lt;module 'tools.learning.fixed_rotation_cycle' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\fixed_rotation_cycle.py'&gt; has no attribute 'RETRY_BINDING_PIN'
+
+tests\learning\test_fixed_rotation_cycle.py:86: AttributeError</failure></testcase><testcase classname="tests.learning.test_fixed_rotation_cycle" name="test_supervisor_tampering_is_rejected_against_trusted_old_binding[test_driver.py]" time="0.006"><failure message="AttributeError: &lt;module 'tools.learning.fixed_rotation_cycle' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\fixed_rotation_cycle.py'&gt; has no attribute 'RETRY_BINDING_PIN'">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-332/test_supervisor_tampering_is_r1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000023C038D99D0&gt;
+changed = 'test_driver.py'
+
+    @pytest.mark.parametrize('changed',['driver.py','test_driver.py'])
+    def test_supervisor_tampering_is_rejected_against_trusted_old_binding(tmp_path,monkeypatch,changed):
+        import json
+        m=api();old=tmp_path/'old';folder=old/'retry_01';folder.mkdir(parents=True)
+        for name in ('driver.py','test_driver.py'):(folder/name).write_text('original')
+        binding=folder/'binding.json'
+        binding.write_text(json.dumps(dict(files={f'old/retry_01/{n}':m.digest(folder/n) for n in ('driver.py','test_driver.py')})))
+        monkeypatch.setattr(m,'ROOT',tmp_path);monkeypatch.setattr(m,'OLD',old)
+&gt;       monkeypatch.setattr(m,'RETRY_BINDING_PIN',m.digest(binding))
+E       AttributeError: &lt;module 'tools.learning.fixed_rotation_cycle' from 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tools\\learning\\fixed_rotation_cycle.py'&gt; has no attribute 'RETRY_BINDING_PIN'
+
+tests\learning\test_fixed_rotation_cycle.py:86: AttributeError</failure></testcase></testsuite></testsuites>

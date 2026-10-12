@@ -1,0 +1,55 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_close_expires_every_remaining_operation (test_gate_contract.GateTests.test_close_expires_every_remaining_operation) ... ok
+test_complete_accounting_requires_both_roles (test_gate_contract.GateTests.test_complete_accounting_requires_both_roles) ... ERROR
+test_corrupt_negative_counter_refused (test_gate_contract.GateTests.test_corrupt_negative_counter_refused) ... FAIL
+test_exact_grant_allowed (test_gate_contract.GateTests.test_exact_grant_allowed) ... ok
+test_expanded_wall_refused (test_gate_contract.GateTests.test_expanded_wall_refused) ... FAIL
+test_incomplete_accounting_cannot_complete (test_gate_contract.GateTests.test_incomplete_accounting_cannot_complete) ... ERROR
+test_reader_mismatch_never_qualifies (test_gate_contract.GateTests.test_reader_mismatch_never_qualifies) ... ok
+test_restored_boundary_cannot_claim_online_or_updates (test_gate_contract.GateTests.test_restored_boundary_cannot_claim_online_or_updates) ... ok
+test_roles_share_bounds_and_cannot_restart (test_gate_contract.GateTests.test_roles_share_bounds_and_cannot_restart) ... ok
+test_training_allowance_or_wrong_source_refused (test_gate_contract.GateTests.test_training_allowance_or_wrong_source_refused) ... ok
+test_unsigned_grant_refused (test_gate_contract.GateTests.test_unsigned_grant_refused) ... ok
+test_zero_checkpoint_with_history_is_rejected (test_gate_contract.GateTests.test_zero_checkpoint_with_history_is_rejected) ... ok
+test_zero_limits_and_unclaimed_role_refused (test_gate_contract.GateTests.test_zero_limits_and_unclaimed_role_refused) ... ok
+
+======================================================================
+ERROR: test_complete_accounting_requires_both_roles (test_gate_contract.GateTests.test_complete_accounting_requires_both_roles)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_gate_contract.py", line 52, in test_complete_accounting_requires_both_roles
+    c.require_complete()
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Counter' object has no attribute 'require_complete'
+
+======================================================================
+ERROR: test_incomplete_accounting_cannot_complete (test_gate_contract.GateTests.test_incomplete_accounting_cannot_complete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_gate_contract.py", line 43, in test_incomplete_accounting_cannot_complete
+    with self.assertRaises(ValueError):c.require_complete()
+                                       ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Counter' object has no attribute 'require_complete'
+
+======================================================================
+FAIL: test_corrupt_negative_counter_refused (test_gate_contract.GateTests.test_corrupt_negative_counter_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_gate_contract.py", line 39, in test_corrupt_negative_counter_refused
+    with self.assertRaises(ValueError):c.take('parent','tensor_loads')
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_expanded_wall_refused (test_gate_contract.GateTests.test_expanded_wall_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\test_gate_contract.py", line 34, in test_expanded_wall_refused
+    with self.assertRaises(ValueError):verify_grant(self.candidate,self.grant,digest(self.grant),'a'*64)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.265s
+
+FAILED (failures=2, errors=2)

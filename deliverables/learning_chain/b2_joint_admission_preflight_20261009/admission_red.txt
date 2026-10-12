@@ -1,0 +1,187 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_fixed_12_and_reservation_before_invoke (__main__.AdmissionTests.test_fixed_12_and_reservation_before_invoke) ... ERROR
+test_guard_error_and_no_retry (__main__.AdmissionTests.test_guard_error_and_no_retry) ... ERROR
+test_new_grant_and_reject_old_or_request (__main__.AdmissionTests.test_new_grant_and_reject_old_or_request) ... ERROR
+test_single_claim_and_existing_output_rejected (__main__.AdmissionTests.test_single_claim_and_existing_output_rejected) ... ERROR
+
+======================================================================
+ERROR: test_fixed_12_and_reservation_before_invoke (__main__.AdmissionTests.test_fixed_12_and_reservation_before_invoke)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 35, in test_fixed_12_and_reservation_before_invoke
+    ledger=execute_matrix(proposal(),t,invoke)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\execution_contract.py", line 72, in execute_matrix
+    write(folder/'ledger.json',ledger)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\execution_contract.py", line 14, in write
+    with temp.open('x',encoding='utf-8',newline='\n') as stream:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpx4cahrwp\\ledger.json.1b5a30e92fc543d1b462959ac93e4bbe.tmp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 631, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpx4cahrwp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 29, in test_fixed_12_and_reservation_before_invoke
+    with tempfile.TemporaryDirectory() as t:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 275, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpx4cahrwp'
+
+======================================================================
+ERROR: test_guard_error_and_no_retry (__main__.AdmissionTests.test_guard_error_and_no_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 44, in test_guard_error_and_no_retry
+    ledger=execute_matrix(proposal(),t,invoke)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\execution_contract.py", line 72, in execute_matrix
+    write(folder/'ledger.json',ledger)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\execution_contract.py", line 14, in write
+    with temp.open('x',encoding='utf-8',newline='\n') as stream:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpsz8_jlqz\\ledger.json.052e6b0155284b3389243fa36ebb948e.tmp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 631, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpsz8_jlqz'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 40, in test_guard_error_and_no_retry
+    with tempfile.TemporaryDirectory() as t:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 275, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpsz8_jlqz'
+
+======================================================================
+ERROR: test_new_grant_and_reject_old_or_request (__main__.AdmissionTests.test_new_grant_and_reject_old_or_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 18, in test_new_grant_and_reject_old_or_request
+    g=self.grant();validate_grant(g,'a'*64,proposal())
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\execution_contract.py", line 34, in validate_grant
+    raise ValueError('Explicit new scope grant, binding and exact ceilings required')
+ValueError: Explicit new scope grant, binding and exact ceilings required
+
+======================================================================
+ERROR: test_single_claim_and_existing_output_rejected (__main__.AdmissionTests.test_single_claim_and_existing_output_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 49, in test_single_claim_and_existing_output_rejected
+    p=Path(t);claim_once(p/'claims','a'*64,p/'one',{'binding_sha256':'x'})
+              ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\execution_contract.py", line 43, in claim_once
+    claims.mkdir(parents=True,exist_ok=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\pathlib\_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpmzcqlnc4\\claims'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 631, in _rmtree_unsafe
+    os.rmdir(path)
+    ~~~~~~~~^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpmzcqlnc4'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_joint_admission_preflight_20261009\test_admission.py", line 48, in test_single_claim_and_existing_output_rejected
+    with tempfile.TemporaryDirectory() as t:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 950, in __exit__
+    self.cleanup()
+    ~~~~~~~~~~~~^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 954, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 934, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 790, in rmtree
+    return _rmtree_unsafe(path, onexc)
+  File "D:\KEYANRUJIAN\Lib\shutil.py", line 635, in _rmtree_unsafe
+    onexc(os.rmdir, path, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 906, in onexc
+    _resetperms(path)
+    ~~~~~~~~~~~^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\KEYANRUJIAN\Lib\tempfile.py", line 275, in _dont_follow_symlinks
+    func(path, *args, follow_symlinks=False)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\ok everything\\AppData\\Local\\Packages\\sandbox.{0b7914be-e887-4ed0-9fd1-673313b7d9a7}\\AC\\Temp\\tmpmzcqlnc4'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.046s
+
+FAILED (errors=4)

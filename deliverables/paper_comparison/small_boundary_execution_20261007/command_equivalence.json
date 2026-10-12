@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "matched_command_states": 9750,
+  "active_command_states": 7362,
+  "zero_residual_command_checks": 9750,
+  "sources": [
+    {
+      "path": "deliverables/paper_comparison/contact_gate_probe_20261007/run/probe_F12p5_aligned.json.gz",
+      "sha256": "afa62cd173c6d4b12b9f644c026ce51ea51e0b7eaae7e2f8bb6f9d2c437d5295",
+      "stored_cycles": 3045,
+      "matched_command_states": 3044,
+      "skipped_states": [
+        {
+          "cycle": 2045,
+          "reason": "unlogged pre-stage-limit base not recoverable"
+        }
+      ]
+    },
+    {
+      "path": "deliverables/paper_comparison/contact_gate_probe_20261007/run/probe_F12p5_y_neg_150.json.gz",
+      "sha256": "05672e155e7b5e8875bf73c6e6f6f5ff6857f833978131ec7649676a9f4e58b2",
+      "stored_cycles": 6707,
+      "matched_command_states": 6706,
+      "skipped_states": [
+        {
+          "cycle": 5707,
+          "reason": "unlogged pre-stage-limit base not recoverable"
+        }
+      ]
+    }
+  ],
+  "new_dynamics": 0,
+  "new_network_predictions": 0,
+  "new_optimizer_batches": 0,
+  "new_published_transitions": 0,
+  "scope": "stored command states only; reconstructed representative stage-limited base, not hidden controller provenance or B2 physical trajectory equivalence",
+  "learning_semantics": "unscaled a verified in memory only; historical PC09 actions/files untouched, no converted training archives emitted"
+}

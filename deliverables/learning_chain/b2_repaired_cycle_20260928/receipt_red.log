@@ -1,0 +1,24 @@
+FFFF                                                                     [100%]
+================================== FAILURES ===================================
+_____ test_empty_partial_or_duplicated_test_receipt_is_rejected[actual0] ______
+tests\learning\test_repaired_cycle.py:75: in test_empty_partial_or_duplicated_test_receipt_is_rejected
+    with pytest.raises(ValueError):api().require_complete_tests(actual,['module::one','module::two'])
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_complete_tests'
+_____ test_empty_partial_or_duplicated_test_receipt_is_rejected[actual1] ______
+tests\learning\test_repaired_cycle.py:75: in test_empty_partial_or_duplicated_test_receipt_is_rejected
+    with pytest.raises(ValueError):api().require_complete_tests(actual,['module::one','module::two'])
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_complete_tests'
+_____ test_empty_partial_or_duplicated_test_receipt_is_rejected[actual2] ______
+tests\learning\test_repaired_cycle.py:75: in test_empty_partial_or_duplicated_test_receipt_is_rejected
+    with pytest.raises(ValueError):api().require_complete_tests(actual,['module::one','module::two'])
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_complete_tests'
+________________ test_exact_complete_test_receipt_is_accepted _________________
+tests\learning\test_repaired_cycle.py:79: in test_exact_complete_test_receipt_is_accepted
+    api().require_complete_tests(['module::two','module::one'],['module::one','module::two'])
+E   AttributeError: module 'tools.learning.repaired_cycle' has no attribute 'require_complete_tests'
+=========================== short test summary info ===========================
+FAILED tests/learning/test_repaired_cycle.py::test_empty_partial_or_duplicated_test_receipt_is_rejected[actual0]
+FAILED tests/learning/test_repaired_cycle.py::test_empty_partial_or_duplicated_test_receipt_is_rejected[actual1]
+FAILED tests/learning/test_repaired_cycle.py::test_empty_partial_or_duplicated_test_receipt_is_rejected[actual2]
+FAILED tests/learning/test_repaired_cycle.py::test_exact_complete_test_receipt_is_accepted
+4 failed, 11 deselected in 1.77s

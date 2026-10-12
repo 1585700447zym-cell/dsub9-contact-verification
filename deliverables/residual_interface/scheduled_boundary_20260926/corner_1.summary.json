@@ -1,0 +1,327 @@
+{
+  "id": "corner_1",
+  "spec": {
+    "id": "corner_1",
+    "family": "corner_coupled_rotation",
+    "case": {
+      "name": "corner_1",
+      "x_offset_m": -5e-05,
+      "y_offset_m": 5e-05,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    "schedule": [
+      {
+        "start_cycle": 0,
+        "action": [
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "start_cycle": 250,
+        "action": [
+          1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      {
+        "start_cycle": 500,
+        "action": [
+          -1,
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "start_cycle": 1000,
+        "action": [
+          0,
+          0,
+          -1,
+          1
+        ]
+      }
+    ]
+  },
+  "initialization_valid": true,
+  "simulation_valid": true,
+  "physical_stopped": true,
+  "completed": true,
+  "observation_valid": true,
+  "masking_valid": true,
+  "schedule_valid": true,
+  "error": null,
+  "active_cycles": 2841,
+  "masked_cycles": 1391,
+  "contact_cycles": 4079,
+  "command_effect_cycles": 2841,
+  "rotation_guard_observations": [],
+  "diagnostic_failures": [],
+  "adjudication_status": "available",
+  "training_admitted": false,
+  "model_scope_qualified": false,
+  "valid_for_learning": false,
+  "initial_state": {
+    "time_s": 0.0,
+    "position_m": [
+      -5e-05,
+      5e-05,
+      -0.004
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "velocity_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "contact_wrench_M": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "contact_wrench_G": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "penetration_m": 0.0,
+    "contact_count": 0,
+    "phase": "RUNNING",
+    "reference_qpos": [
+      -5e-05,
+      5e-05,
+      -0.004,
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "raw_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "limited_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "drive_wrench_M": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "outcome": {
+    "simulation_valid": true,
+    "task_outcome": "CONTACT_GUARD",
+    "guard_violations": {
+      "contact": true,
+      "motion": false
+    },
+    "physical_stopped": true,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "training_admitted": false,
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [
+        "FORCE_LIMIT"
+      ],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.01274897364909741,
+      "checked_substeps": 42320
+    }
+  },
+  "task_outcome": "CONTACT_GUARD",
+  "interface_fault": null,
+  "guard_facts": {
+    "simulation_valid": true,
+    "invalid_reasons": [],
+    "contact_reasons": [
+      "FORCE_LIMIT"
+    ],
+    "motion_reasons": [],
+    "max_rotation_from_start_rad": 0.01274897364909741,
+    "checked_substeps": 42320
+  },
+  "events": [
+    {
+      "time_s": 6.464000000004792,
+      "reason": "FORCE_LIMIT",
+      "phase": "STOPPING"
+    }
+  ],
+  "physical_steps": 42320,
+  "peaks": {
+    "force_N": 0.025001242370413516,
+    "torque_G_Nm": 0.0003896951930906344,
+    "penetration_m": 6.158253681383067e-06,
+    "speed_m_s": 0.0010625756745659292,
+    "drive_force_components_N": [
+      0.011845501179109619,
+      0.020530451624943866,
+      0.024491033851214726
+    ],
+    "drive_torque_components_Nm": [
+      6.698799230907237e-05,
+      6.23364528183719e-05,
+      3.118417092662766e-05
+    ],
+    "contact_count": 762.0
+  },
+  "end_time_s": 8.464000000006951,
+  "final_phase": "STOPPING",
+  "max_rotation_deg": 0.7304623832167818,
+  "boundary_observations": [
+    {
+      "time_s": 6.464000000004792,
+      "rotation_trigger": false,
+      "contact_at_trigger": true,
+      "rotation_deg": 0.6846327676343966,
+      "physical": {
+        "time_s": 6.464000000004792,
+        "position_m": [
+          -4.560370593559904e-05,
+          0.00010015985870385585,
+          -0.0037868373623514417
+        ],
+        "quaternion_wxyz": [
+          0.9999821524412997,
+          -0.005365835953236806,
+          0.0025904589339757547,
+          0.0004383216842257436
+        ],
+        "velocity_world": [
+          -1.747017629995113e-05,
+          1.0630275240155908e-05,
+          -8.335340632741734e-06,
+          0.003023500926848527,
+          0.00263535046486952,
+          0.0002532894942541781
+        ],
+        "contact_wrench_M": [
+          0.011844603730797282,
+          -0.020445936385045826,
+          -0.008168914729828086,
+          6.689532862214389e-05,
+          -2.8968469028365382e-05,
+          1.7897815838482174e-05
+        ],
+        "contact_wrench_G": [
+          0.011844603730797282,
+          -0.020445936385045826,
+          -0.008168914729828086,
+          0.0003620689505942032,
+          0.0001433791979076379,
+          1.4519784465400387e-05
+        ],
+        "penetration_m": 2.799841352412349e-06,
+        "contact_count": 28,
+        "phase": "RUNNING",
+        "reference_qpos": [
+          -0.0001579467295732205,
+          0.00030015773264880784,
+          -0.003705144917139577,
+          0.99996996474738,
+          -0.0069957133174880165,
+          0.0033361047528457,
+          -1.8386356757570327e-06
+        ],
+        "raw_command_world": [
+          -0.00015405653641906158,
+          0.00010999983221820172,
+          -8.444162114986787e-06,
+          0.0016450356137589052,
+          0.002077965125727439,
+          0.0
+        ],
+        "limited_command_world": [
+          -0.00015405653641906158,
+          0.00010999983221820172,
+          -8.444162114986787e-06,
+          0.0016450356137589052,
+          0.002077965125727439,
+          0.0
+        ],
+        "drive_wrench_M": [
+          -0.011845501179109619,
+          0.020444365655983295,
+          0.008168585120069917,
+          -6.698799230907237e-05,
+          2.9009555633175964e-05,
+          -1.7916695943154572e-05
+        ]
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [
+          "FORCE_LIMIT"
+        ],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.01274897364909741,
+        "checked_substeps": 32320
+      }
+    }
+  ],
+  "segments": [
+    {
+      "start_cycle": 0,
+      "requested_cycles": 250,
+      "enabled_cycles": 250,
+      "effect_cycles": 250
+    },
+    {
+      "start_cycle": 250,
+      "requested_cycles": 250,
+      "enabled_cycles": 131,
+      "effect_cycles": 131
+    },
+    {
+      "start_cycle": 500,
+      "requested_cycles": 500,
+      "enabled_cycles": 228,
+      "effect_cycles": 228
+    },
+    {
+      "start_cycle": 1000,
+      "requested_cycles": 3232,
+      "enabled_cycles": 2232,
+      "effect_cycles": 2232
+    }
+  ],
+  "wall_seconds": 111.69732260005549
+}

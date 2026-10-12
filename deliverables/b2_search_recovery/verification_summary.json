@@ -1,0 +1,26 @@
+{
+  "status": "B2_4_COMPLETE",
+  "tests": {
+    "passed": 113,
+    "b2_tests": 17
+  },
+  "verified_trial_folders": [
+    "pilot_v1_x100",
+    "pilot_v1_reviewfix_x100",
+    "matrix_v1_7cases"
+  ],
+  "source_snapshots_verified": true,
+  "historical_B1_verified": true,
+  "local_markdown_links_checked": 39,
+  "matrix_started": true,
+  "training_started": false,
+  "matrix_completed": true,
+  "matrix_runs": 14,
+  "last_controller_test_result": {
+    "passed": 113,
+    "b2_tests": 17,
+    "note": "B2-3 verification; frozen simulation code unchanged in B2-4"
+  },
+  "matrix_verification": "matrix_v1_7cases/verification_summary.json",
+  "archived_date": "2026-09-18"
+}

@@ -1,0 +1,74 @@
+{
+  "files": {
+    "before_documents/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "before_documents/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 159637,
+      "sha256": "45f75f2e8bf26efb16390d6ecc01d2f93e96eca177caa91a990b37ec341a54d2"
+    },
+    "before_documents/研究推进计划_当前版.md": {
+      "bytes": 61743,
+      "sha256": "64b276ba29df2e9b7aec4114f7de565cd66009ef2294b092b590730c1bf36366"
+    },
+    "before_documents/项目交付总览.md": {
+      "bytes": 177861,
+      "sha256": "cb5bf37ea5059e3bbd191c227c09592a2e503ea85caa9730f4233ecaa0034693"
+    },
+    "before_documents/项目当前入口.md": {
+      "bytes": 40751,
+      "sha256": "34b1645ca60847f11af64896684fa2a4b527f8033cc335672077fa60e10fdbd9"
+    },
+    "before_documents/项目进度跟踪.md": {
+      "bytes": 212778,
+      "sha256": "339d38a2b570f253f93c19bfe90844045221318bce3812ecc064f2908d0ae5c6"
+    },
+    "clarify.py": {
+      "bytes": 9280,
+      "sha256": "7d83d16a06a3b6872718264dfe53b9b42009270dd52f09b0ffbac99554a75aab"
+    },
+    "contact_time_evidence.json": {
+      "bytes": 4791,
+      "sha256": "2949e4f291d4732f1bb96835156cb13acddf2a74b13cb77ce23e0a531fb759c1"
+    },
+    "document_snapshots/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "document_snapshots/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 161812,
+      "sha256": "56757eb432faa666a61c5a766c2accd6a756535baf9d0cc8e54049a8a445460c"
+    },
+    "document_snapshots/研究推进计划_当前版.md": {
+      "bytes": 62467,
+      "sha256": "a301ba4ac35d712da33aeb5b968bcd225cff8c43d95d53a7bb9350dd0bcfda0a"
+    },
+    "document_snapshots/项目交付总览.md": {
+      "bytes": 178796,
+      "sha256": "d2dae9276f62193a214c166874191416f2f76c6db1b2047995bf493162580851"
+    },
+    "document_snapshots/项目当前入口.md": {
+      "bytes": 41264,
+      "sha256": "ab74f68f64c5b630f4e98a780a439c6dd21cb2294ae1181e56dab8e35823c37f"
+    },
+    "document_snapshots/项目进度跟踪.md": {
+      "bytes": 214756,
+      "sha256": "158934715b3e79ff7aaf138cfbeb1fce427e13931507f931c1888c354870cad1"
+    },
+    "document_update.json": {
+      "bytes": 1358,
+      "sha256": "6156d3cd0a4ce3ca252f4d5149107ed6c429143a62679f6f2758deddfd313011"
+    },
+    "verification.json": {
+      "bytes": 1169,
+      "sha256": "03fca2a8ad965b820b0043088b325da13dc470771df705a35a36e91d20ebd628"
+    },
+    "更正说明.md": {
+      "bytes": 2791,
+      "sha256": "01d88a1df8e304eac1a820966ae146a655178ed28f3174d952739a8025f447fe"
+    }
+  },
+  "rolling_documents_may_advance": true,
+  "stage_id": "B2-SCOPE-10-CORR01"
+}

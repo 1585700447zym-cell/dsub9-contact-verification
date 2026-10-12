@@ -1,0 +1,18 @@
+{
+  "changed_paths": [
+    "b2_config.total_action_time_s",
+    "common_task_change",
+    "input_sha256.docs/superpowers/plans/2026-10-04-deadline25-preflight.md",
+    "input_sha256.docs/superpowers/plans/2026-10-04-reference-search.md",
+    "input_sha256.tools/validation/run_deadline25_preflight.py",
+    "parent_task_id",
+    "search_composition.config.total_action_time_s",
+    "task_id"
+  ],
+  "unexpected_paths": [],
+  "old_total_s": 20.0,
+  "new_total_s": 25.0,
+  "model_equal": true,
+  "controller_id_equal": true,
+  "rule": "Version/ledger/source-binding metadata differences permitted; physical task only deadline changes"
+}

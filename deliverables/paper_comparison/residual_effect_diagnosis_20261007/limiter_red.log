@@ -1,0 +1,30 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+....FF.............                                                      [100%]
+================================== FAILURES ===================================
+________ test_persistent_residual_is_not_called_total_command_clipping ________
+
+    def test_persistent_residual_is_not_called_total_command_clipping():
+        # A 40um/s target is reached. The zero alternative can only slew down to
+        # 30um/s, so the 10um/s delta is not evidence that 75% was swallowed.
+        raw=fixture();log=raw['actions'][2]
+        log.update(applied_residual=[4e-5,0,0,0,0,0],effective_command_delta=[1e-5,0,0,0,0,0],
+                   predicted_limited_command=[4e-5,0,0,0,0,0],actual_end_limited_command=[4e-5,0,0,0,0,0],
+                   unfiltered_stage_limited_total=[4e-5,0,0,0,0,0])
+        r=d.diagnose_episode(raw)['stages']['INSERT']
+        assert r['clipped_cycles']==1
+>       assert r['total_target_limited_cycles']==0
+E       KeyError: 'total_target_limited_cycles'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:56: KeyError
+___________________ test_true_drive_target_limit_is_counted ___________________
+
+    def test_true_drive_target_limit_is_counted():
+        r=d.diagnose_episode(fixture())['stages']['SEARCH']
+>       assert r['total_target_limited_cycles']==1
+E       KeyError: 'total_target_limited_cycles'
+
+deliverables\paper_comparison\residual_effect_diagnosis_20261007\test_diagnose.py:60: KeyError
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_persistent_residual_is_not_called_total_command_clipping
+FAILED deliverables/paper_comparison/residual_effect_diagnosis_20261007/test_diagnose.py::test_true_drive_target_limit_is_counted
+2 failed, 17 passed in 0.71s

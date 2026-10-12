@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="25" skipped="0" tests="25" time="0.290" timestamp="2026-10-01T13:24:39.184118+08:00" hostname="laptopzym"><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_four_ordered_attempts_complete_without_training" time="0.003"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC63620&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_four_ordered_attempts_com0')
+
+    def test_four_ordered_attempts_complete_without_training(api,tmp_path):
+&gt;       ledger=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH)
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC63620&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_stop_outcome_prevents_remaining_points[changes0-stopped]" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEDADA90&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_stop_outcome_prevents_rem0')
+changes = {'guard_hit': True}, status = 'stopped'
+
+    @pytest.mark.parametrize('changes,status',[
+        ({'guard_hit':True},'stopped'),({'simulation_valid':False},'failed'),
+        ({'physical_stopped':False},'failed')])
+    def test_stop_outcome_prevents_remaining_points(api,tmp_path,changes,status):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result(**changes))
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEDADA90&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_stop_outcome_prevents_remaining_points[changes1-failed]" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEDADF90&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_stop_outcome_prevents_rem1')
+changes = {'simulation_valid': False}, status = 'failed'
+
+    @pytest.mark.parametrize('changes,status',[
+        ({'guard_hit':True},'stopped'),({'simulation_valid':False},'failed'),
+        ({'physical_stopped':False},'failed')])
+    def test_stop_outcome_prevents_remaining_points(api,tmp_path,changes,status):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result(**changes))
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEDADF90&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_stop_outcome_prevents_remaining_points[changes2-failed]" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC97820&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_stop_outcome_prevents_rem2')
+changes = {'physical_stopped': False}, status = 'failed'
+
+    @pytest.mark.parametrize('changes,status',[
+        ({'guard_hit':True},'stopped'),({'simulation_valid':False},'failed'),
+        ({'physical_stopped':False},'failed')])
+    def test_stop_outcome_prevents_remaining_points(api,tmp_path,changes,status):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result(**changes))
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC97820&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_stale_writer_and_failed_write_cannot_reset_budget" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC97BB0&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_stale_writer_and_failed_w0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001CBDEDA4050&gt;
+
+    def test_stale_writer_and_failed_write_cannot_reset_budget(api,tmp_path,monkeypatch):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);stale=api.Ledger.load(l.path,PIN,AUTH)
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:55: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC97BB0&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_active_failed_start_is_charged_and_not_retryable" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDECE5370&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_active_failed_start_is_ch0')
+
+    def test_active_failed_start_is_charged_and_not_retryable(api,tmp_path):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.fail('reset failure')
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:66: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDECE5370&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_malformed_restored_budget_rejected[&lt;lambda&gt;0]" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDED18490&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_malformed_restored_budget0')
+mutation = &lt;function &lt;lambda&gt; at 0x000001CBDEC8BBA0&gt;
+
+    @pytest.mark.parametrize('mutation',[
+        lambda s:s.update(status='complete'),
+        lambda s:s['attempts'][0].update(case='y_pos_100'),
+        lambda s:s['attempts'][0].update(actor_states_reserved=13001),
+        lambda s:s['attempts'][0]['result'].update(actor_states=13001),
+        lambda s:s.update(active=0),
+        lambda s:s.update(candidate_sha256='z'*64),
+    ])
+    def test_malformed_restored_budget_rejected(api,tmp_path,mutation):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result())
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDED18490&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_malformed_restored_budget_rejected[&lt;lambda&gt;1]" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDED19040&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_malformed_restored_budget1')
+mutation = &lt;function &lt;lambda&gt; at 0x000001CBDEC8BC40&gt;
+
+    @pytest.mark.parametrize('mutation',[
+        lambda s:s.update(status='complete'),
+        lambda s:s['attempts'][0].update(case='y_pos_100'),
+        lambda s:s['attempts'][0].update(actor_states_reserved=13001),
+        lambda s:s['attempts'][0]['result'].update(actor_states=13001),
+        lambda s:s.update(active=0),
+        lambda s:s.update(candidate_sha256='z'*64),
+    ])
+    def test_malformed_restored_budget_rejected(api,tmp_path,mutation):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result())
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDED19040&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_malformed_restored_budget_rejected[&lt;lambda&gt;2]" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC7F350&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_malformed_restored_budget2')
+mutation = &lt;function &lt;lambda&gt; at 0x000001CBDEC8BCE0&gt;
+
+    @pytest.mark.parametrize('mutation',[
+        lambda s:s.update(status='complete'),
+        lambda s:s['attempts'][0].update(case='y_pos_100'),
+        lambda s:s['attempts'][0].update(actor_states_reserved=13001),
+        lambda s:s['attempts'][0]['result'].update(actor_states=13001),
+        lambda s:s.update(active=0),
+        lambda s:s.update(candidate_sha256='z'*64),
+    ])
+    def test_malformed_restored_budget_rejected(api,tmp_path,mutation):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result())
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC7F350&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_malformed_restored_budget_rejected[&lt;lambda&gt;3]" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC7EF50&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_malformed_restored_budget3')
+mutation = &lt;function &lt;lambda&gt; at 0x000001CBDEC8BD80&gt;
+
+    @pytest.mark.parametrize('mutation',[
+        lambda s:s.update(status='complete'),
+        lambda s:s['attempts'][0].update(case='y_pos_100'),
+        lambda s:s['attempts'][0].update(actor_states_reserved=13001),
+        lambda s:s['attempts'][0]['result'].update(actor_states=13001),
+        lambda s:s.update(active=0),
+        lambda s:s.update(candidate_sha256='z'*64),
+    ])
+    def test_malformed_restored_budget_rejected(api,tmp_path,mutation):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result())
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC7EF50&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_malformed_restored_budget_rejected[&lt;lambda&gt;4]" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC2B110&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_malformed_restored_budget4')
+mutation = &lt;function &lt;lambda&gt; at 0x000001CBDEC8BE20&gt;
+
+    @pytest.mark.parametrize('mutation',[
+        lambda s:s.update(status='complete'),
+        lambda s:s['attempts'][0].update(case='y_pos_100'),
+        lambda s:s['attempts'][0].update(actor_states_reserved=13001),
+        lambda s:s['attempts'][0]['result'].update(actor_states=13001),
+        lambda s:s.update(active=0),
+        lambda s:s.update(candidate_sha256='z'*64),
+    ])
+    def test_malformed_restored_budget_rejected(api,tmp_path,mutation):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result())
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC2B110&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_malformed_restored_budget_rejected[&lt;lambda&gt;5]" time="0.003"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC2A4E0&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_malformed_restored_budget5')
+mutation = &lt;function &lt;lambda&gt; at 0x000001CBDEC8BEC0&gt;
+
+    @pytest.mark.parametrize('mutation',[
+        lambda s:s.update(status='complete'),
+        lambda s:s['attempts'][0].update(case='y_pos_100'),
+        lambda s:s['attempts'][0].update(actor_states_reserved=13001),
+        lambda s:s['attempts'][0]['result'].update(actor_states=13001),
+        lambda s:s.update(active=0),
+        lambda s:s.update(candidate_sha256='z'*64),
+    ])
+    def test_malformed_restored_budget_rejected(api,tmp_path,mutation):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0]);l.finish(result())
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC2A4E0&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_incomplete_or_inconsistent_outcome_refused[changes0]" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDECE0D70&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_incomplete_or_inconsisten0')
+changes = {'completed': False}
+
+    @pytest.mark.parametrize('changes',[
+        {'completed':False},{'success':1},{'cycles':13001},{'actor_states':9},
+        {'cycles':0},{'success':True,'guard_hit':True},
+    ])
+    def test_incomplete_or_inconsistent_outcome_refused(api,tmp_path,changes):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0])
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDECE0D70&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_incomplete_or_inconsistent_outcome_refused[changes1]" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDED41390&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_incomplete_or_inconsisten1')
+changes = {'success': 1}
+
+    @pytest.mark.parametrize('changes',[
+        {'completed':False},{'success':1},{'cycles':13001},{'actor_states':9},
+        {'cycles':0},{'success':True,'guard_hit':True},
+    ])
+    def test_incomplete_or_inconsistent_outcome_refused(api,tmp_path,changes):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0])
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDED41390&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_incomplete_or_inconsistent_outcome_refused[changes2]" time="0.003"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDECFFEE0&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_incomplete_or_inconsisten2')
+changes = {'cycles': 13001}
+
+    @pytest.mark.parametrize('changes',[
+        {'completed':False},{'success':1},{'cycles':13001},{'actor_states':9},
+        {'cycles':0},{'success':True,'guard_hit':True},
+    ])
+    def test_incomplete_or_inconsistent_outcome_refused(api,tmp_path,changes):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0])
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDECFFEE0&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_incomplete_or_inconsistent_outcome_refused[changes3]" time="0.004"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDED0D250&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_incomplete_or_inconsisten3')
+changes = {'actor_states': 9}
+
+    @pytest.mark.parametrize('changes',[
+        {'completed':False},{'success':1},{'cycles':13001},{'actor_states':9},
+        {'cycles':0},{'success':True,'guard_hit':True},
+    ])
+    def test_incomplete_or_inconsistent_outcome_refused(api,tmp_path,changes):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0])
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDED0D250&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_incomplete_or_inconsistent_outcome_refused[changes4]" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDED0D490&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_incomplete_or_inconsisten4')
+changes = {'cycles': 0}
+
+    @pytest.mark.parametrize('changes',[
+        {'completed':False},{'success':1},{'cycles':13001},{'actor_states':9},
+        {'cycles':0},{'success':True,'guard_hit':True},
+    ])
+    def test_incomplete_or_inconsistent_outcome_refused(api,tmp_path,changes):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0])
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDED0D490&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_incomplete_or_inconsistent_outcome_refused[changes5]" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC65D30&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_incomplete_or_inconsisten5')
+changes = {'guard_hit': True, 'success': True}
+
+    @pytest.mark.parametrize('changes',[
+        {'completed':False},{'success':1},{'cycles':13001},{'actor_states':9},
+        {'cycles':0},{'success':True,'guard_hit':True},
+    ])
+    def test_incomplete_or_inconsistent_outcome_refused(api,tmp_path,changes):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH);l.start(NAMES[0])
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:91: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC65D30&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_live_guard_blocks_before_reservation" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC664C0&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_live_guard_blocks_before_0')
+
+    def test_live_guard_blocks_before_reservation(api,tmp_path):
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH)
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC664C0&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_authorization_requires_exact_scope_and_binding" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: scope">api = &lt;test_protocol.MissingImplementation object at 0x000001CBDED28550&gt;
+
+    def test_authorization_requires_exact_scope_and_binding(api):
+        r=dict(version='frozen_B_evaluation_authorization_v1',approved=True,user_confirmation='继续',
+&gt;              binding_sha256=PIN,scope=api.scope())
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDED28550&gt;
+name = 'scope'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: scope
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_missing_authorization_stops_before_runtime" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: HERE">runner = &lt;test_protocol.MissingImplementation object at 0x000001CBDECF9D10&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001CBDEC963F0&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_missing_authorization_sto0')
+
+    def test_missing_authorization_stops_before_runtime(runner,monkeypatch,tmp_path):
+&gt;       monkeypatch.setattr(runner,'HERE',tmp_path)
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDECF9D10&gt;
+name = 'HERE'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: HERE
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_stop_marker_blocks_before_parent_probe" time="0.003"><failure message="AssertionError: Missing independent evaluation implementation: HERE">runner = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC22210&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001CBDEB46E70&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_stop_marker_blocks_before0')
+
+    def test_stop_marker_blocks_before_parent_probe(runner,monkeypatch,tmp_path):
+        (tmp_path/'started.json').write_text(json.dumps(dict(supervisor_pid=123,wall_timestamp=1)))
+        (tmp_path/'stop_requested.json').write_text('{}')
+&gt;       monkeypatch.setattr(runner,'HERE',tmp_path)
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC22210&gt;
+name = 'HERE'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: HERE
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_predict_reservation_precedes_single_state_inference" time="0.003"><failure message="AssertionError: Missing independent evaluation implementation: Ledger">runner = &lt;test_protocol.MissingImplementation object at 0x000001CBDECBDA50&gt;
+api = &lt;test_protocol.MissingImplementation object at 0x000001CBDECBD950&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_predict_reservation_prece0')
+
+    def test_predict_reservation_precedes_single_state_inference(runner,api,tmp_path):
+        import numpy as np
+&gt;       l=api.Ledger.create(tmp_path/'ledger.json',PIN,AUTH)
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDECBD950&gt;
+name = 'Ledger'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: Ledger
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_aborted_tail_cannot_exceed_registered_cycle_limit" time="0.001"><failure message="AssertionError: Missing independent evaluation implementation: collector_type">runner = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC85240&gt;
+
+    def test_aborted_tail_cannot_exceed_registered_cycle_limit(runner):
+&gt;       cls=runner.collector_type()
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:149: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC85240&gt;
+name = 'collector_type'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: collector_type
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase><testcase classname="deliverables.learning_chain.b2_actor_lr_b_eval_20261001.test_protocol" name="test_unconfirmed_cleanup_preserves_ledger" time="0.002"><failure message="AssertionError: Missing independent evaluation implementation: HERE">runner = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC84830&gt;
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001CBDECA4050&gt;
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_work/test_unconfirmed_cleanup_prese0')
+
+    def test_unconfirmed_cleanup_preserves_ledger(runner,monkeypatch,tmp_path):
+&gt;       monkeypatch.setattr(runner,'HERE',tmp_path);(tmp_path/'run').mkdir()
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:163: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;test_protocol.MissingImplementation object at 0x000001CBDEC84830&gt;
+name = 'HERE'
+
+    def __getattr__(self,name):
+&gt;       raise AssertionError('Missing independent evaluation implementation: '+name)
+E       AssertionError: Missing independent evaluation implementation: HERE
+
+deliverables\learning_chain\b2_actor_lr_b_eval_20261001\test_protocol.py:16: AssertionError</failure></testcase></testsuite></testsuites>

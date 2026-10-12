@@ -1,0 +1,13 @@
+﻿case_id,x_um,y_um,roll_deg,pitch_deg,method,status,task_outcome,task_time_s,peak_force_N,peak_torque_G_Nm,simulation_valid,physical_stopped,source
+J01,75,75,0.25,0.25,pure_B2,pending_current_version_paired_evaluation,,,,,,,not_run
+J01,75,75,0.25,0.25,F0,existing_development_result,FULL_SUCCESS,7.88000000000778,0.024446210520017216,0.00011163515846424972,True,True,scope20_assessment_scores_zero
+J01,75,75,0.25,0.25,F2000,existing_development_result,FULL_SUCCESS,10.976000000001097,0.024446535866257824,0.00014880874849635897,True,True,scope20_assessment_scores_final
+J02,-75,75,-0.25,0.25,pure_B2,pending_current_version_paired_evaluation,,,,,,,not_run
+J02,-75,75,-0.25,0.25,F0,existing_development_result,FULL_SUCCESS,8.406000000007086,0.02452914123166908,0.00010929868845476856,True,True,scope20_assessment_scores_zero
+J02,-75,75,-0.25,0.25,F2000,existing_development_result,FULL_SUCCESS,4.338000000000306,0.015519578050099646,0.0001298669858146183,True,True,scope20_assessment_scores_final
+J03,-75,-75,-0.25,-0.25,pure_B2,pending_current_version_paired_evaluation,,,,,,,not_run
+J03,-75,-75,-0.25,-0.25,F0,existing_development_result,FULL_SUCCESS,9.294000000005017,0.02445371424727366,0.00015603050382161416,True,True,scope20_assessment_scores_zero
+J03,-75,-75,-0.25,-0.25,F2000,existing_development_result,FULL_SUCCESS,9.266000000005082,0.024481905871080244,0.00015393472434064846,True,True,scope20_assessment_scores_final
+J04,75,-75,0.25,-0.25,pure_B2,pending_current_version_paired_evaluation,,,,,,,not_run
+J04,75,-75,0.25,-0.25,F0,existing_development_result,FULL_SUCCESS,10.044000000003269,0.02461075713238739,0.00015777788952935876,True,True,scope20_assessment_scores_zero
+J04,75,-75,0.25,-0.25,F2000,existing_development_result,FULL_SUCCESS,10.058000000003236,0.02446657749560455,0.0001553321061933647,True,True,scope20_assessment_scores_final

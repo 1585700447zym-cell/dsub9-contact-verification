@@ -1,0 +1,196 @@
+{
+  "no_new_physics": true,
+  "recorded_verdict_unchanged": "TASK_FAILURE",
+  "angles_per_dense_circle": 65536,
+  "dense_final_layers_checked": 18,
+  "max_dense_vs_analytic_difference_um": 9.084746821486078e-08,
+  "settling_samples_checked": 501,
+  "minimum_polygon_layer_margin_um": -0.0006619986365726319,
+  "minimum_circular_layer_margin_um": -0.0007479763783173332,
+  "diagnostic_ready_first_s": 20.561999999978756,
+  "diagnostic_longest_hold_s": 0.8599999999979957,
+  "required_hold_s": 0.1,
+  "scope": "Read-only counterfactual geometry diagnostic, not new runtime acceptance or robust margin proof",
+  "dense_checks": [
+    {
+      "pin": 0,
+      "layer": "entry",
+      "dense_polygon_margin_um": 80.26047131507103,
+      "dense_circular_margin_um": 80.2602717422129,
+      "analytic_minus_dense_error_um": [
+        -1.2169948604423553e-08,
+        -8.670234308283398e-08
+      ]
+    },
+    {
+      "pin": 0,
+      "layer": "main",
+      "dense_polygon_margin_um": 6.510146814043606,
+      "dense_circular_margin_um": 6.5039548394255595,
+      "analytic_minus_dense_error_um": [
+        -1.2169843799370028e-08,
+        -2.3949997540739787e-10
+      ]
+    },
+    {
+      "pin": 1,
+      "layer": "entry",
+      "dense_polygon_margin_um": 78.64302474294303,
+      "dense_circular_margin_um": 78.63668395130975,
+      "analytic_minus_dense_error_um": [
+        -1.2169735441602825e-08,
+        -2.6556890020401624e-08
+      ]
+    },
+    {
+      "pin": 1,
+      "layer": "main",
+      "dense_polygon_margin_um": 4.8927002419153895,
+      "dense_circular_margin_um": 4.892556984820618,
+      "analytic_minus_dense_error_um": [
+        -1.2169302010534011e-08,
+        -3.4770408774420503e-10
+      ]
+    },
+    {
+      "pin": 2,
+      "layer": "entry",
+      "dense_polygon_margin_um": 77.0056013733991,
+      "dense_circular_margin_um": 77.00483104985348,
+      "analytic_minus_dense_error_um": [
+        -1.2152170825174835e-08,
+        -3.080857879922405e-08
+      ]
+    },
+    {
+      "pin": 2,
+      "layer": "main",
+      "dense_polygon_margin_um": 3.2752536697874985,
+      "dense_circular_margin_um": 3.2723779303516376,
+      "analytic_minus_dense_error_um": [
+        -1.2169627083835621e-08,
+        -9.084746821486078e-08
+      ]
+    },
+    {
+      "pin": 3,
+      "layer": "entry",
+      "dense_polygon_margin_um": 75.36628698466151,
+      "dense_circular_margin_um": 75.36511916827061,
+      "analytic_minus_dense_error_um": [
+        -1.2152170825174835e-08,
+        -6.8647892703666e-08
+      ]
+    },
+    {
+      "pin": 3,
+      "layer": "main",
+      "dense_polygon_margin_um": 1.6467649143222076,
+      "dense_circular_margin_um": 1.6438514320589286,
+      "analytic_minus_dense_error_um": [
+        -1.2152280071120458e-08,
+        -1.703053942314625e-08
+      ]
+    },
+    {
+      "pin": 4,
+      "layer": "entry",
+      "dense_polygon_margin_um": 73.72425979823029,
+      "dense_circular_margin_um": 73.71792999515722,
+      "analytic_minus_dense_error_um": [
+        -1.2028579021716723e-08,
+        -8.05630548939007e-08
+      ]
+    },
+    {
+      "pin": 4,
+      "layer": "main",
+      "dense_polygon_margin_um": 0.007450525584830857,
+      "dense_circular_margin_um": 0.007385607649220381,
+      "analytic_minus_dense_error_um": [
+        -1.215195478965203e-08,
+        -6.956241138666996e-10
+      ]
+    },
+    {
+      "pin": 5,
+      "layer": "entry",
+      "dense_polygon_margin_um": 80.37926771996544,
+      "dense_circular_margin_um": 80.37926549816349,
+      "analytic_minus_dense_error_um": [
+        -8.482450652991247e-08,
+        -7.283929903678654e-08
+      ]
+    },
+    {
+      "pin": 5,
+      "layer": "main",
+      "dense_polygon_margin_um": 6.600791366332325,
+      "dense_circular_margin_um": 6.5943001776960255,
+      "analytic_minus_dense_error_um": [
+        -1.2169735441602825e-08,
+        -7.366072196646201e-10
+      ]
+    },
+    {
+      "pin": 6,
+      "layer": "entry",
+      "dense_polygon_margin_um": 78.71224298556818,
+      "dense_circular_margin_um": 78.70824642609581,
+      "analytic_minus_dense_error_um": [
+        -8.482440705392946e-08,
+        -1.0062152000500646e-08
+      ]
+    },
+    {
+      "pin": 6,
+      "layer": "main",
+      "dense_polygon_margin_um": 4.9625819438401875,
+      "dense_circular_margin_um": 4.962042394551476,
+      "analytic_minus_dense_error_um": [
+        -1.2152388428887662e-08,
+        -2.037974233815021e-09
+      ]
+    },
+    {
+      "pin": 7,
+      "layer": "entry",
+      "dense_polygon_margin_um": 77.03115925946388,
+      "dense_circular_margin_um": 77.02913682356836,
+      "analytic_minus_dense_error_um": [
+        -8.44963210511196e-08,
+        -1.6463175711578515e-08
+      ]
+    },
+    {
+      "pin": 7,
+      "layer": "main",
+      "dense_polygon_margin_um": 3.323267555102377,
+      "dense_circular_margin_um": 3.3216989821393446,
+      "analytic_minus_dense_error_um": [
+        -1.2152171713353255e-08,
+        -9.0075299663539e-08
+      ]
+    },
+    {
+      "pin": 8,
+      "layer": "entry",
+      "dense_polygon_margin_um": 75.36816409287181,
+      "dense_circular_margin_um": 75.36792956057815,
+      "analytic_minus_dense_error_um": [
+        -1.2028252172058274e-08,
+        -3.3104583962995093e-08
+      ]
+    },
+    {
+      "pin": 8,
+      "layer": "main",
+      "dense_polygon_margin_um": 1.6786731411955278,
+      "dense_circular_margin_um": 1.6736744035283522,
+      "analytic_minus_dense_error_um": [
+        -1.2028247287076965e-08,
+        -4.162685751651907e-09
+      ]
+    }
+  ]
+}

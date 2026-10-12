@@ -1,0 +1,1 @@
+{"status": "controlled_stop", "episodes": 1, "unused_closed": 4, "cumulative": 125, "functional_success": 0, "strict_precision_success": 0, "control_cycles": 11270, "physical_substeps": 112700, "wall_seconds": 427.9053611999989, "training_updates": 0, "network_calls": 0, "independent_tests": 0, "inputs_unchanged": true}

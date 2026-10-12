@@ -1,0 +1,17 @@
+{
+  "version": "pure_b2_four_case_route_v1",
+  "stage": "B.2 item 3",
+  "decision": "prepare_21_new_stratified_cases_offline",
+  "basis": [
+    "pure B2 functional and precision 4/4",
+    "F2000 time improvement over pure B2 2.7241 percent, driven by J02",
+    "F2000 supplementary precision 0/4 and tiny geometry margin",
+    "four-point traditional failure premise not established"
+  ],
+  "next_physics_admitted": false,
+  "next_training_admitted": false,
+  "RL_main_required": true,
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "summary_before_C_required": true
+}

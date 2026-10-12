@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "archive_sha256": "baf203af5da2c5ff8424802a06305b5277bab8196a3ab207967475ddf39234d5",
+  "full_trace_rows": 3046,
+  "reward_rows": 3045,
+  "trace_outcome_controller_exact": true,
+  "network_calls": 0,
+  "new_dynamics": 0,
+  "provisional_only": true
+}

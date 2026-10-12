@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.134" timestamp="2026-09-28T21:57:27.355073+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_force_failure_regressions" name="test_strict_overlength_rejection_preserves_old_guard_clear_flag" time="0.003"><failure message="assert (True is False)">def test_strict_overlength_rejection_preserves_old_guard_clear_flag():
+        from tools.learning.episode_rules import STRICT,stamp_pending
+        raw=dict(guard_facts=dict(simulation_valid=True,contact_reasons=[],motion_reasons=[],invalid_reasons=[]),
+            outcome=dict(simulation_valid=True,physical_stopped=True,valid_for_learning=True,
+            guard_violations=dict(contact=False,motion=False),task_outcome='TASK_FAILURE'),
+            transitions=[{}]*13001,fault=None)
+        record={}
+        assert not stamp_pending(raw,record,STRICT)
+&gt;       assert raw['guard_clear'] is False and record['guard_clear'] is False
+E       assert (True is False)
+
+tests\learning\test_force_failure_regressions.py:10: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_regressions" name="test_preparation_config_names_only_unqualified_contact_as_a_hard_stop" time="0.027"><failure message="AssertionError: assert 'contact_guard' not in ['invalid', 'unstopped', 'contact_guard', 'motion_violation', 'input_changed', 'archive_error', ...]">def test_preparation_config_names_only_unqualified_contact_as_a_hard_stop():
+        from tools.learning.force_failure_preparation import force_config
+        config=force_config()['execution']
+&gt;       assert 'contact_guard' not in config['stop_on']
+E       AssertionError: assert 'contact_guard' not in ['invalid', 'unstopped', 'contact_guard', 'motion_violation', 'input_changed', 'archive_error', ...]
+
+tests\learning\test_force_failure_regressions.py:17: AssertionError</failure></testcase></testsuite></testsuites>

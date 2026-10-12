@@ -1,0 +1,21 @@
+{
+  "inputs_sha256": {
+    "deliverables/b2_exit_gate_v2/verified_frozen_x100/results_index.json": "3909f623a2d51a0d889ced4419ee8176bd2dafefaf646cfa01b2230406b70489",
+    "deliverables/b2_search_recovery/matrix_v1_case_02/runs/x_offset_pos_100um_b2.json.gz": "0941fefcd5722af1527520b3e6a6b5f4d7138607878d421205b7a1a846bb4a4a",
+    "deliverables/b2_exit_gate_v2/verified_frozen_x100/runs/x_offset_pos_100um_b2_v2.json.gz": "78b4c342264f2630d0c57573467f34c3a82f8f6b2bca80868f4216c26dfc63b8",
+    "deliverables/b2_exit_gate_v2/verified_frozen_y100/results_index.json": "b90cd061658e3b98f5318a4feb7f2de63a56ca701b373fe37d43034277c42375",
+    "deliverables/b2_search_recovery/matrix_v1_case_03/runs/y_offset_neg_100um_b2.json.gz": "797ac37a825555fe8ea57ac6ab15381a01e7e498aaca6599fe91d61f4aa812c4",
+    "deliverables/b2_exit_gate_v2/verified_frozen_y100/runs/y_offset_neg_100um_b2_v2.json.gz": "405ef32977b8f0f8cca26703d16ba487735e8d1d8a2b64beda9513aacc481fa8"
+  },
+  "outputs_sha256": {
+    "deliverables/b2_switch_diagnosis/diagnosis_v1/01_月报诊断进展.png": "59344dd9ef0a4418bd222ee01aabda0fe4c52f5078a6afa7d3a8349235956f53",
+    "deliverables/b2_switch_diagnosis/diagnosis_v1/B2-5.2切换诊断报告.md": "9428116f1c3d85b5d39f6997a5d133b1009954ad89d438a5e96b595fc73f3c0b",
+    "deliverables/b2_switch_diagnosis/diagnosis_v1/diagnose_b2_switch.py": "306361549bd988f2872e4862eddf53dfa9c26bf0139b866b871ad98d4da2e5b7",
+    "deliverables/b2_switch_diagnosis/diagnosis_v1/diagnosis.json": "574651294e75b1d242c3fc6ba1e7a7211971096af8b8fe072186888b4e4ca97e",
+    "deliverables/b2_switch_diagnosis/diagnosis_v1/x_offset_pos_100um_切换诊断.png": "05e9f6f2ac607fbc5b1f23c6648e3cdd5fb8a4c3f9d2b2e334450c7d6128216c",
+    "deliverables/b2_switch_diagnosis/diagnosis_v1/y_offset_neg_100um_切换诊断.png": "1717a3813f3781de85e32df203a24afc4d2efbca5a992f639a5b2cdc8a3f8862",
+    "deliverables/b2_switch_diagnosis/diagnosis_v1/月报小结.md": "baae206b64d710c3d6507b61f8c17e2a9f8fcf5ab8603bfe20d6c21121c70e8c"
+  },
+  "script_sha256": "306361549bd988f2872e4862eddf53dfa9c26bf0139b866b871ad98d4da2e5b7",
+  "validation": "All assertions passed; frozen inputs verified by collect()"
+}

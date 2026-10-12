@@ -1,0 +1,16 @@
+{
+  "first_related_run": "related.xml",
+  "passed": 112,
+  "blocked": 2,
+  "actual_physics_calls": 0,
+  "actual_optimizer_calls": 0,
+  "actual_policy_predictions": 0,
+  "blocked_prediction_attempts": 2,
+  "reason": "Two legacy contact-evaluation tests request SACUpdater.predict; the offline verification guard raised before any forward pass. The second subsequently fails its expected-three-transitions assertion because prediction was denied at the first step.",
+  "excluded_tests": [
+    "tests.learning.test_contact_execution::test_evaluation_uses_four_points_without_training_state_change",
+    "tests.learning.test_contact_execution::test_evaluation_audit_interrupt_retains_diagnostic_raw"
+  ],
+  "production_code_changed_after_review": false,
+  "action": "Rerun the same related protocol suite with only these two real-inference tests deselected; no guard relaxation or historical test edits."
+}

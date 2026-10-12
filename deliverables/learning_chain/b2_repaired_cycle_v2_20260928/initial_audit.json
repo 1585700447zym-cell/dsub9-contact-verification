@@ -1,0 +1,21 @@
+{
+  "stage": "initial",
+  "completed": 4,
+  "successes": 4,
+  "all_physical_audits_passed": true,
+  "all_guards_clear": true,
+  "all_metrics_recomputed_exactly": true,
+  "training_state_unchanged_receipt": {
+    "training_state_unchanged": true,
+    "wall_s": 1185.8483458
+  },
+  "archive_sha256": {
+    "x_pos_100": "1101469410a7b0dc26d3bfc5905e9a0c237e0d3b0c4605604b43e742ab36fc14",
+    "x_neg_100": "25c0fd9080867921354abf79f7d9c0582b03da6da3e06f4ee4bdbbc67886a85e",
+    "y_pos_100": "b3c7fab72763845053878d14898fce12c3a431ff97680dd6a0cec3e3c3662dfd",
+    "y_neg_100": "14961cfc3f2835952cb6215727d27352356fb913f5bc006486010f64ff463194"
+  },
+  "total_control_cycles": 24318,
+  "additional_physical_starts": 0,
+  "additional_optimizer_calls": 0
+}

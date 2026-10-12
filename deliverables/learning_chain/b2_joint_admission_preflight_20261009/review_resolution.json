@@ -1,0 +1,21 @@
+{
+  "status": "PASS_READ_ONLY_REVIEW",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "open_important_findings": 0,
+  "reviewed_core": {
+    "scope_contract.py": "bda43edc70520ecf244c4d79ffd669aa9c67db3ae30ace73374bc8de37c415e8",
+    "recovery_fixture.py": "e22d1ff0cd921475d942a7022cd7e881433a257c343bd2ed38d15c138d80d91a",
+    "coverage_checks.py": "65855bb729a0a68b96757bb8419a304455c29a253f1b229a58e0b43ee34a4f25",
+    "execution_contract.py": "ea9ebfca510d6eab66dbc39e50c99fc90d33124ef1a68f78e2566e66d6ba68ff",
+    "physical_worker.py": "b84ec4ab3d72e62ffbb6543da723e57ecadb5eba90c813d8d5c581c0e6293012",
+    "run_preflight.py": "2a82137483694ef38dc91e1ce22d6516967c616190e1493b2002c7172ed7e031",
+    "assess.py": "24a46f3b799385c1c9e22e8bf3985e3e8d7294ab324d21fe7ea1244d352d7b38",
+    "prepare_binding.py": "5d6010b71ec77c9ed9308a640a12f507c9836cce694a94a08fa0cfa88dbdc41d"
+  },
+  "rulings": [
+    "New physical behavior/coverage/timing remains unverified until a separate grant.",
+    "Final bindings and seals are verified by parent before completion."
+  ]
+}

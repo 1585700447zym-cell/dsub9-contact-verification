@@ -1,0 +1,33 @@
+{
+  "hash_algorithm": "SHA256",
+  "scope": "B1-05 limited candidate collection/replay protocol; training admission remains false",
+  "note": "Four new sources/tests and four rolling-document/contract snapshots bound directly; previous dynamic sources and dependency qualification transitively bound via unchanged manifests/protocol. Historical-document digests stored for reproduction; no old manifest refresh.",
+  "files": {
+    "deliverables/residual_interface/collection_replay_20260924/document_snapshot/月报素材_2026-09.md": "f2db31db0f0f2b38035828f605870396042d022e11072e12f2744b7f156edf94",
+    "deliverables/residual_interface/collection_replay_20260924/document_snapshot/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_green2_20260924.xml": "43de374277677655312e29c1a3710f68751e37f2c4e857eec89f8d5b47973a40",
+    "deliverables/residual_interface/learning_tensor_20260924/manifest.json": "e646a7abea57f97ade07084d51f1295a2fe387ef13cf318105109652cc507cdc",
+    "deliverables/residual_interface/collection_replay_20260924/document_snapshot/项目进度跟踪.md": "8bfb40d410710aaa0363c10c62026b1b56b79dc8288f592a03cc75f4133dadda",
+    "deliverables/residual_interface/collection_replay_20260924/README.md": "f3c436b54b4cbde73e7520c5214337ed80de36db4af65530f3c36014b549ec56",
+    "deliverables/residual_interface/learning_tensor_20260924/requirements.lock.txt": "852036de5bea59f296aa6883553c696a7c525d3374adf55298038bd416639f2f",
+    "deliverables/residual_interface/collection_replay_20260924/document_snapshot/项目交付总览.md": "9cfcd4ba925f99a4cc6e0aad9e8202de0f3e8627c033bfd5a35b4e909ac819d2",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_isolated_smoke_20260924.xml": "4b2ee97f18e5c881370d2a00c7304f5c4f95f9e56a2673b17c417694e61eb035",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_review_red_20260924.xml": "08b0032614c29f5379b0d8f2a4a2ee7d1febe2ca250ce3b42e11aad1e4770aa1",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_legacy_20260924.xml": "eeeddf8771222acf420da7db5460c41e5d609638178cb18cc9ef25211056c41e",
+    "deliverables/residual_interface/learning_tensor_20260924/environment.json": "f5f4622bc8d625e744938283ea386d30ccd80d24ecad54439089e7725734a888",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_green1_20260924.xml": "7e2f886c24eb46c215e968e7f6a036a721b7ac130a7546dd37909ac944ecdc96",
+    "deliverables/residual_interface/observation_integration_20260924/manifest.json": "76cf6b9eefecbc34da88d9430ca75c96fc4d5dbae4304cc35a85b44d30d0d2c5",
+    "deliverables/residual_interface/residual_observation_regression_20260924/protocol.json": "f534085b76b2082bd5acec9f4b390aea52d28377a69c221aaa02ab74900ecc5c",
+    "deliverables/residual_interface/collection_replay_20260924/source_snapshot/tools/learning/candidate_collector.py": "31cea80f18643eac01a480f9e15e952df03c6b9220ef586a4409acc3b97a1898",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_review_green_20260924.xml": "b6d403fd3bfed660ef6f968af15c5123a25f35e9d1d8c3d37e66388e7f511212",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_full_20260924.xml": "8872d5dc47202e730a20edd46841994d42d0dfefb16ff5b418f65159e4ba8810",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_red_20260924.xml": "9a0f9304797766f1f52c98b3be1a73d245eb37698100364a8987ed297fe9dce0",
+    "deliverables/residual_interface/collection_replay_20260924/source_snapshot/tests/learning/test_candidate_collector.py": "bab108b929e4d3530f91a731ca2658a1c6ee563032f3beabd3c44a4636dcfebf",
+    "deliverables/residual_interface/collection_replay_20260924/assessment.json": "7b0cc678b69f539a08968907d640083f917359af812c9ebc29c2b11517606114",
+    "deliverables/residual_interface/collection_replay_20260924/source_snapshot/tools/learning/audited_replay.py": "c77136a07b74a097fab5cd7ab0bef6e3a9d9b811757a6e7d6d74ce14c8bc927c",
+    "deliverables/residual_interface/collection_replay_20260924/验收记录.md": "6c761644adf68e0c6cf2f23c6fd567898ebf62acc87c1b2d9e64962cb0e76e41",
+    "deliverables/residual_interface/collection_replay_20260924/source_snapshot/tests/learning/test_audited_replay.py": "1d9d9ec61a901c39ee599fd8a9625cb32630178b3e2241c63a34e527e3921936",
+    "deliverables/residual_interface/collection_replay_20260924/checks/collector_full_final_20260924.xml": "4cb197dbb695c9420cab23cda8b62abcf39e92888e96390a333932b712d3bdb1",
+    "deliverables/residual_interface/collection_replay_20260924/checks/historical_document_digests.json": "d7db4a80598b96281a97b7a27564aa7a0f82243d13553fcf61585664ab74c5a6"
+  }
+}

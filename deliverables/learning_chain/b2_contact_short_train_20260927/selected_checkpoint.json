@@ -1,0 +1,8 @@
+{
+  "path": "checkpoints/contact_000003",
+  "sha256": "c29d7837a12a842a0fe8281f47e42d4b22195fc091125e60eff5a60295d01ca1",
+  "audited_total": 22722,
+  "updates": 4430,
+  "selection": "final after target and all earned updates",
+  "path_relative_to_root": "deliverables/learning_chain/b2_contact_short_train_20260927/run/training/checkpoints/contact_000003"
+}

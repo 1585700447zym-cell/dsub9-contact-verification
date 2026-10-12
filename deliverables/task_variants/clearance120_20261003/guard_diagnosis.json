@@ -1,0 +1,24 @@
+{
+  "case": "y_pos_150",
+  "guard_events": [
+    {
+      "time_s": 4.138199999999884,
+      "reason": "ROTATION_LIMIT",
+      "phase": "STOPPING"
+    }
+  ],
+  "max_rotation_deg": 2.5072797117867163,
+  "final_angle_deg": 2.502704034723368,
+  "final_z_mm": -3.8191852636361645,
+  "observed_INSERT_stall_triggers": [],
+  "eligible_window_count": 1769,
+  "min_eligible_window_advance_um": 16.311654958786615,
+  "stall_advance_threshold_um": 5.0,
+  "last_eligible_window": {
+    "time_s": 4.1379999999998835,
+    "window_advance_um": 17.097099167211105,
+    "axial_force_N": -0.024280239957405653
+  },
+  "source_sha256": "eacc9f4b949046a1377860bec7dd605f06abd530e363735eb32f008f9db420bb",
+  "analysis_dynamic_calls": 0
+}

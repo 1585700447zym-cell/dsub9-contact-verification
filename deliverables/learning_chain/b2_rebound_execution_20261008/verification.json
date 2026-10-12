@@ -1,0 +1,30 @@
+{
+  "status": "VERIFIED_CLOSED_REBOUND_EXECUTION",
+  "stage_id": "B2-SCOPE-06",
+  "assertions": 1659,
+  "bound_inputs": 2173,
+  "parent_members": 304,
+  "historical_members": 950,
+  "actual": {
+    "case_environment_instances_attempted": 25,
+    "case_environment_instances_completed": 25,
+    "reset_attempts": 25,
+    "resets_completed": 25,
+    "control_cycles": 67016,
+    "physical_substeps": 670160,
+    "engine_processes_with_runtime_proof": 25,
+    "learner_constructions": 0,
+    "tensor_reads": 0,
+    "network_forwards": 0,
+    "optimizer_updates": 0,
+    "replay_publications": 0,
+    "static_initializations": 9,
+    "dynamic_attempts": 16
+  },
+  "cumulative_dynamic": 225,
+  "route": "INSUFFICIENT_COVERAGE_NO_EXTRA_ATTEMPTS",
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "training_admitted": false,
+  "automatic_tracking": "PAUSED"
+}

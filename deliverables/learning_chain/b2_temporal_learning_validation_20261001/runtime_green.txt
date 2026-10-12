@@ -1,0 +1,30 @@
+test_any_guard_stops_whole_stage (test_protocol.ContractTests.test_any_guard_stops_whole_stage) ... ok
+test_credit_500_after_four_and_no_duplicate_credit (test_protocol.ContractTests.test_credit_500_after_four_and_no_duplicate_credit) ... ok
+test_cross_binding_or_auth_restore_refused (test_protocol.ContractTests.test_cross_binding_or_auth_restore_refused) ... ok
+test_data_id_duplicates_refused (test_protocol.ContractTests.test_data_id_duplicates_refused) ... ok
+test_exact_scope_and_candidate_first (test_protocol.ContractTests.test_exact_scope_and_candidate_first) ... ok
+test_fault_attempt_not_refunded (test_protocol.ContractTests.test_fault_attempt_not_refunded) ... ok
+test_inactive_or_stale_update_token_refused (test_protocol.ContractTests.test_inactive_or_stale_update_token_refused) ... ok
+test_initial_not_four_successes_closes_after_four (test_protocol.ContractTests.test_initial_not_four_successes_closes_after_four) ... ok
+test_new_authorization_scope_not_old_eight_zero (test_protocol.ContractTests.test_new_authorization_scope_not_old_eight_zero) ... ok
+test_online_requires_exact_preceding_updates (test_protocol.ContractTests.test_online_requires_exact_preceding_updates) ... ok
+test_reserve_before_physics_and_no_second_active (test_protocol.ContractTests.test_reserve_before_physics_and_no_second_active) ... ok
+test_stale_ledger_cannot_write (test_protocol.ContractTests.test_stale_ledger_cannot_write) ... ok
+test_update_requires_current_dataset_and_initial_pass (test_protocol.ContractTests.test_update_requires_current_dataset_and_initial_pass) ... ok
+test_write_fault_poison (test_protocol.ContractTests.test_write_fault_poison) ... ok
+test_wrong_identity_or_impossible_result_rejected (test_protocol.ContractTests.test_wrong_identity_or_impossible_result_rejected) ... ok
+test_authorization_precedes_runtime (test_protocol.RuntimeTests.test_authorization_precedes_runtime) ... ok
+test_counts_and_history_must_agree (test_protocol.RuntimeTests.test_counts_and_history_must_agree) ... ok
+test_cross_arm_snapshot_rejected (test_protocol.RuntimeTests.test_cross_arm_snapshot_rejected) ... ok
+test_historical_permission_preserved (test_protocol.RuntimeTests.test_historical_permission_preserved) ... ok
+test_invalid_source_rejected (test_protocol.RuntimeTests.test_invalid_source_rejected) ... ok
+test_model_and_optimizer_without_lease_refused (test_protocol.RuntimeTests.test_model_and_optimizer_without_lease_refused) ... ok
+test_physics_failure_is_charged (test_protocol.RuntimeTests.test_physics_failure_is_charged) ... ok
+test_physics_unreserved_refused (test_protocol.RuntimeTests.test_physics_unreserved_refused) ... ok
+test_previously_published_rejected (test_protocol.RuntimeTests.test_previously_published_rejected) ... ok
+test_stopped_ledger_refuses_model (test_protocol.RuntimeTests.test_stopped_ledger_refuses_model) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 10.055s
+
+OK

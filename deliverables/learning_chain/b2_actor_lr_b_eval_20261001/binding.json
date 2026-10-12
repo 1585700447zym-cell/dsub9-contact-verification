@@ -1,0 +1,238 @@
+{
+  "version": "frozen_B_evaluation_binding_v1",
+  "scope": {
+    "branch": "B",
+    "checkpoint_manifest_sha256": "4030ec22b8e78bcc9b255fdbade03184068b6cc59befddbf00a7462040fa3a04",
+    "checkpoint_state_sha256": "9bc6f5cfb3eb91da0e23aaa3048612b7a840fa0ba6b6c9e2e3401d1ef0084059",
+    "cases": [
+      "x_pos_100",
+      "x_neg_100",
+      "y_pos_100",
+      "y_neg_100"
+    ],
+    "dynamic_cap": 4,
+    "previous_dynamic": 58,
+    "cumulative_dynamic_cap": 62,
+    "cycles_per_start": 13000,
+    "actor_state_cap": 52000,
+    "training_batches": 0,
+    "synthetic_transactions": 0,
+    "extra_diagnostic_states": 0,
+    "extra_critic_states": 0,
+    "independent_test": 0,
+    "old_unused_dynamic": 19,
+    "old_unused_batches": 2000,
+    "comparison_unused_dynamic": 7,
+    "old_unused_consumed": 0,
+    "stop_on_any_guard": true,
+    "automatic_retry": false,
+    "automatic_tracking": false
+  },
+  "config": {
+    "version": "actor_lr_comparison_execution_v1",
+    "scope": "four_development_contact_points_only",
+    "physics": {
+      "backend": "native",
+      "segments": 256,
+      "ccd_tolerance": 1e-12,
+      "timestep_s": 0.0002,
+      "control_period_s": 0.002,
+      "policy_period_s": 0.002
+    },
+    "guard": {
+      "max_rotation_from_start_rad": 0.04363323129985824,
+      "initial_roll_pitch_limit_rad": 0.026179938779914945
+    },
+    "domain": {
+      "distribution": "balanced_three_rounds",
+      "points_xy_m": [
+        [
+          0.0001,
+          0.0
+        ],
+        [
+          -0.0001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0001
+        ],
+        [
+          0.0,
+          -0.0001
+        ]
+      ],
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    "action": {
+      "scale": [
+        0.00015,
+        0.00015,
+        0.0005,
+        0.0005
+      ],
+      "enabled_stages": [
+        "INSERT",
+        "SEARCH"
+      ]
+    },
+    "sampling": {
+      "stop_at": "no_new_training_collection",
+      "watchdog_cycles": 13000,
+      "workers": 1,
+      "seed": 2026092716,
+      "rng": "PCG64",
+      "initial_resampling": false,
+      "max_attempts": 0,
+      "rng_streams": {
+        "warmup": 1,
+        "replay": 2,
+        "boundary": 3
+      },
+      "seed_rule": "PCG64/SeedSequence([seed,stream])",
+      "total_audited_cycles_upper_bound": 156000
+    },
+    "learning": {
+      "learning_rate": 0.0003,
+      "batch_size": 256,
+      "replay_capacity": 156000,
+      "max_gradient_batches": 500,
+      "discount_time_constant_s": 10.0,
+      "gamma_nominal": 0.9998000199986667,
+      "discount": "exp(-actual_dt_s/10)",
+      "entropy_initial": 0.01,
+      "target_entropy": -4.0,
+      "entropy_learned": true,
+      "tau": 0.005,
+      "network": [
+        256,
+        256
+      ],
+      "activation": "ReLU",
+      "seed": 2026092716,
+      "device": "cpu",
+      "torch_threads": 1,
+      "replay_publish": "whole_episode_after_audit",
+      "permission_masks": "tensor_masks_v3",
+      "reward": "contract_v3_unchanged",
+      "warmup_episodes": 4,
+      "batches_per_boundary": 500,
+      "critic_boundary_rows": 16,
+      "exact_terminal_tail": true,
+      "actor_learning_rate": 3e-05
+    },
+    "versions": {
+      "python": "3.13.5",
+      "mujoco": "3.13.0",
+      "torch": "2.12.1+cpu",
+      "numpy": "2.1.3",
+      "gymnasium": "1.2.3",
+      "stable-baselines3": "2.8.0"
+    },
+    "execution": {
+      "fresh_initialization": true,
+      "mode_selected_at_episode_start": true,
+      "freeze_actor_within_episode": true,
+      "stop_on": [
+        "invalid",
+        "unstopped",
+        "motion_violation",
+        "input_changed",
+        "archive_error",
+        "operator_interrupt",
+        "unqualified_contact_guard",
+        "force_failure_frequency"
+      ],
+      "publication": "whole_eligible_guard_clear_or_force_only",
+      "updates": "only_after_publication_before_next_episode",
+      "checkpoint": "every_healthy_audited_episode_boundary",
+      "resume": "only_verified_boundary_no_physics_resume",
+      "evaluate": "fixed_four_development_points_once_per_branch",
+      "baseline": "historical_context_only",
+      "independent_test_used": false,
+      "preparation_only": false,
+      "episode_rules": "force_only_v1",
+      "force_failure_stop": {
+        "consecutive": 2,
+        "total": 3
+      },
+      "requires_separate_user_authorization": true,
+      "new_training_collection": 0,
+      "authorized_dynamic_starts": 4,
+      "authorized_optimizer_calls": 500,
+      "stop_on_any_evaluation_guard": true
+    },
+    "comparison": {
+      "branch": "B",
+      "parent_config_sha256": "18b43f1c27e7a5c33a26ae2127efbf4a48dd5da18cf4bbb3b7fa6d0e60a2b85b",
+      "origin_manifest_sha256": "d31f696ae82c7e3f992afa27bcd68ab222a4ea8dbc965f29cbd26c5f1f0cde5f",
+      "data_source": "train_00_through_train_03_only",
+      "a_reproduction_required": true,
+      "condition": "validation_then_exact_A_then_B",
+      "automatic_retry": false
+    }
+  },
+  "parent_candidate_sha256": "79a9bd0084f871e2ab6c6b24ff96ac69a772aa0e9e53003205866a31c11d2fba",
+  "parent_authorization_sha256": "3b2fc9f34643df5385158dc498f996535497afa93ed50082b8a9da94c40d6a1f",
+  "protocol_passed": true,
+  "protocol_tests": 149,
+  "inputs_sha256": {
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/accounting.json": "cef6e0f0f9018481ed51f9f9e0803a19e7668f753af6afb55923db4642e539c7",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/a_reproduction.json": "f3516066273c93c96be60b819e4d0360163d12cc7d8f971579397845a856272d",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/diagnostics.json": "a57ddcc13f788ea401a27e4bd0ea086b1e222b28464136014f362fcb42a60c20",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/frozen.json": "5d535dc33119c1578b2d18762a6374dd5187e17bae2c55573720decbbe11ead6",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/ledger.json": "78ca26c56640ecd028dc82d2dcd14fad13652e026da801777c290857d839b378",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/progress.json": "54315b5d7a6e9b0905801f9d8ec7b1efebfd8f4af0d6feba587cbe8205f7bda0",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/real_validation.json": "db07c6630ae5960e11ca02ddb213f2ac2168c4b9ba289c5ae88bd2ab1b5a7ffe",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/checkpoint_A/manifest.json": "af5c4b85d90ba6b664a4944a2068b303e07f9c4cb9b0b01fd296a6061520d5fc",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/checkpoint_A/state.pt": "bb9c0570336f199bf81ef6fde9047798863c1834438950dcc3625f479709594b",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/checkpoint_B/manifest.json": "4030ec22b8e78bcc9b255fdbade03184068b6cc59befddbf00a7462040fa3a04",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/checkpoint_B/state.pt": "9bc6f5cfb3eb91da0e23aaa3048612b7a840fa0ba6b6c9e2e3401d1ef0084059",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/evaluation_A/attempts.json": "725df0320d374df838b3a27ccc896d419552053db9076e3b933a9a9272e65712",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/evaluation_A/results.json": "a9b9895731cc0940f01fa5cda1ae97b76a7cada025d562901e00d72402d55dc6",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/evaluation_A/verification.json": "c91faf71599b955b9a61e02e0f565268ce2fa570aa3bd106f8ba77b560de72df",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/eval_process_A/claim.json": "219b1a92365e709d823fdeb7c8c3cbc82bf0b0ea4889655720e56a33ed9c8708",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/eval_process_A/execution.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/eval_process_A/fault.log": "a14b86d36f7cc3d0ca7cdee4850abfd1017df1f055d951a089f1eff21b7c86fa",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/eval_process_A/process.json": "ffcb3f5533a9456eb87d66e6b38e54690d5422380af3ae0dc19c0a7ab64c814d",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/eval_process_A/process_exit.json": "cd9c50cdf5b6181227c7e123b7d07b0795398d1c2b38b5747a127311b0cfa552",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/eval_process_A/started.json": "a1da6d2a1aa908dadc687ad7edfb13d3445d7403c314592ed83573f424b62600",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/evaluation_A/episodes/x_pos_100/episode.json.gz": "a4a37e1fbcf76427bf3faa8f01d9cfe6bf7abc715acce04d3bb4e947a746210f",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run/evaluation_A/episodes/x_pos_100/status.json": "1363bc4fb332b1d296acbf7e69a00e75293499746c5a66c54f8b4077d0f76382",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/assessment.json": "6eb950d59631f9d7b85ed9cd5a0753894b66a60253bdc111be037022660e029e",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/distribution_summary.json": "0075390b47a65d4382f5e42109d69cf08bb54b598969c6cf695ec5ffa7538571",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/document_check_red.json": "814929a3d42a6e36608ee4fd17ab127eb8b95506e465b9854c8395b2335ae1b4",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/execution_audit.json": "c3df068d16196cd33c7b51a61a09012c64a7ca2d1d6690a73fa9f7809e9cc376",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/fixed_state_distribution_comparison.pdf": "41a628df81fbda4cc0c9ea4bf72cb589eb2f3eb869545130dd1f8c3acd11e4b0",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/fixed_state_distribution_comparison.png": "7558d35a029c18a495084f6d0f48355e63125e6d3a0f20e589b523e947782202",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/停止结果说明.md": "af01015f5aca1a8202c828a3e6d626a8c671df2dd0f06de6694408c49a33d790",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/独立结果审查.md": "f3344e2414a98df4f68b5c0eea22ced722bb37a8071ed2e6cecfcdec82e25dec",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/document_snapshot/项目交付总览.md": "3b34fd22551ebae98eb7f7c61c9ec2c1f04b97df337418f913dee4210061c19a",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/document_snapshot/项目当前入口.md": "6aa0d2b59025e72219b8a386d3d03934984c0b43ce45cffbab6dfd7eed3b8e1f",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/document_snapshot/项目进度跟踪.md": "d0c5cdaf036a3ec0849d9ea559bedc2d2a871ae293044eb90da2312e77c64b2d",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/document_snapshot/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "2865e2cbabb8455d8a42f5fd6c0fbb41d6a1850709aa39e433651bb42ed23f40",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/evaluation_contract.py": "00f9a83f8191268b3a31f041ffe86a6a522f02f95c3d1c428e30464f1fccb3f7",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/first_green.xml": "b65d10ef203f2498c2339f096f6a52d251b3a65108846bc90fc7b2c7cdd5b6c1",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/first_green_results.json": "92df0ebedce1c51a88b593655b22d53a907383d34e9f7bb94fbd0a7a46a5d98e",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/initial_red.xml": "94493844a57b6f76cda0e8f0091bce3d8d219dc49fe9575ee4c18e3baf7e53f7",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/initial_red_results.json": "642990a6b87f281da6ee959c47d6fa43feb78098b1dd4c6775fd65fea369d7e9",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red.xml": "79954d618d7285d22f35864bac7790410c291f1cbb11da18a0c13ec25702d07c",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/missing_behavior_red_results.json": "fbd6799cdb2222a1a2288811407090cfc47fdcf1917ee7f63749f9d8a9a566eb",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/protocol_runner.py": "c362a1f0342c9147e9867bb6475a8fb253c74930bdd7d5008a642364ba582e42",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/README.md": "327de3dea27d9611154ec39424c591981d7b55faba8412e859ec55e59c281b7e",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/related_green.xml": "6c6e409066545ccbadf7ed3f00f7530e3aaa9faec8452bee453b4da224830887",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/related_green_results.json": "b4eb5eb82f548d8957e60bd27ea5af26505c3b407904da5f95128b08711b6a6d",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/restoration_preflight.json": "bdaf45365b870fb64099aacaddacb608a8810d563bd9e07d41986c65b8d70b5e",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/review.md": "5d7c978fe296071e5e51750dd012193ea17c534a988ba8627c7ba2d18a00d145",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/run_evaluation.py": "6aa50be374dc9ac468e6c3900ee956a1de8bc596972515b79d6b519c4eb45f60",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/seal_execution.py": "f21d48011cd97a953b3d61b5adea2a65db6d7ce932832ba16ca303049834d8b9",
+    "deliverables/learning_chain/b2_actor_lr_b_eval_20261001/test_protocol.py": "f97bf44d41b66da4736e38c40225d79dd1ca34b0674431876ca7954df2bfacb6",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/run_analysis/delivery_verification.json": "bd25ae6cfcf71b7aba5fa341ed9480f100229e292e07f61910f6f162f93a0854",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/authorization.json": "3b2fc9f34643df5385158dc498f996535497afa93ed50082b8a9da94c40d6a1f",
+    "deliverables/learning_chain/b2_actor_lr_execution_20260930/candidate.json": "79a9bd0084f871e2ab6c6b24ff96ac69a772aa0e9e53003205866a31c11d2fba"
+  }
+}

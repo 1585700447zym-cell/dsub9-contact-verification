@@ -1,0 +1,1140 @@
+{
+  "status": "REPAIRED_OFFLINE_AUDIT_PASSED",
+  "revision_sha256": "2c3e947665d3162dfb532ebef6a34fcf8899537913e34f365058af69f793b9f9",
+  "producer_binding_sha256": "9c15895cf6c8bac905715275c65dead6a8a48be617a3c197839077c7acf673c6",
+  "archived_attempts": [
+    {
+      "id": "init_zero_sentinel",
+      "archive_sha256": "3fa8c5cabc0c18c2502efd6cfd85ee6a45813db61c11c6dda256d70be4628049",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            0.0,
+            0.0,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            0.0,
+            0.0,
+            -0.004,
+            1.0,
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_P01",
+      "archive_sha256": "33f12ba881060b238f4a115f3a386e5f5f55d146a306d02594345b1802fc57bd",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            0.0,
+            0.0,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999976201773518,
+            0.0021816598343367697,
+            0.0,
+            -0.0
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            0.0,
+            0.0,
+            -0.004,
+            0.9999976201773518,
+            0.0021816598343367697,
+            0.0,
+            -0.0
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_P02",
+      "archive_sha256": "c0ae4f66e1938e89cca0c6d99a4a913cb650522ce9bcd783af8001cdb4579646",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            0.0,
+            0.0,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999976201773518,
+            -0.0021816598343367697,
+            0.0,
+            0.0
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            0.0,
+            0.0,
+            -0.004,
+            0.9999976201773518,
+            -0.0021816598343367697,
+            0.0,
+            0.0
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_P03",
+      "archive_sha256": "4a3359ac46de13086b343a5b988a75c967a75ba09ecd481d6d2655a920d582c6",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            0.0,
+            0.0,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999976201773518,
+            0.0,
+            0.0021816598343367697,
+            -0.0
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            0.0,
+            0.0,
+            -0.004,
+            0.9999976201773518,
+            0.0,
+            0.0021816598343367697,
+            -0.0
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_P04",
+      "archive_sha256": "865caf7a083c4c40d19b6b712e58d5459163a8e85b92769273e6c36edef929f2",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            0.0,
+            0.0,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999976201773518,
+            0.0,
+            -0.0021816598343367697,
+            0.0
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            0.0,
+            0.0,
+            -0.004,
+            0.9999976201773518,
+            0.0,
+            -0.0021816598343367697,
+            0.0
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_J01",
+      "archive_sha256": "ef94798783bbc70fca0ab1a13531bc19f3ea48d1b127f2693a81415a3246ddea",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            7.5e-05,
+            7.5e-05,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999952403603672,
+            0.0021816546423732855,
+            0.0021816546423732855,
+            -4.759639632758341e-06
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            7.5e-05,
+            7.5e-05,
+            -0.004,
+            0.9999952403603672,
+            0.0021816546423732855,
+            0.0021816546423732855,
+            -4.759639632758341e-06
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_J02",
+      "archive_sha256": "823f3cc9c61dd8d3fe5ef0114e6de0e684c532bc69f7760071dd1834572c05b6",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            -7.5e-05,
+            7.5e-05,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999952403603672,
+            -0.0021816546423732855,
+            0.0021816546423732855,
+            4.759639632758341e-06
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            -7.5e-05,
+            7.5e-05,
+            -0.004,
+            0.9999952403603672,
+            -0.0021816546423732855,
+            0.0021816546423732855,
+            4.759639632758341e-06
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_J03",
+      "archive_sha256": "ad0fbe0dbbdf1eff461c60b4a3ef7c8f57df27955358d147e2661ad1c19ab7ad",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            -7.5e-05,
+            -7.5e-05,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999952403603672,
+            -0.0021816546423732855,
+            -0.0021816546423732855,
+            -4.759639632758341e-06
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            -7.5e-05,
+            -7.5e-05,
+            -0.004,
+            0.9999952403603672,
+            -0.0021816546423732855,
+            -0.0021816546423732855,
+            -4.759639632758341e-06
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "init_J04",
+      "archive_sha256": "dcf22f6423cc8ddf90f9aacff3d1a9f3d418dc9cf1c41edecb4794970b28c610",
+      "assessment": {
+        "audit_passed": true,
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            7.5e-05,
+            -7.5e-05,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999952403603672,
+            0.0021816546423732855,
+            -0.0021816546423732855,
+            4.759639632758341e-06
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            7.5e-05,
+            -7.5e-05,
+            -0.004,
+            0.9999952403603672,
+            0.0021816546423732855,
+            -0.0021816546423732855,
+            4.759639632758341e-06
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "physical_substeps": 0,
+        "initialization_valid": true
+      }
+    },
+    {
+      "id": "P01_zero",
+      "archive_sha256": "38c98530f446de718a596156c78eae76e67aceb646d5d3978dda333fad865a6f",
+      "assessment": {
+        "audit_passed": true,
+        "outcome": {
+          "simulation_valid": true,
+          "task_outcome": "FULL_SUCCESS",
+          "guard_violations": {
+            "contact": false,
+            "motion": false
+          },
+          "physical_stopped": true,
+          "valid_for_learning": false,
+          "model_scope_qualified": false,
+          "training_admitted": false
+        },
+        "initial_pose": {
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "RUNNING",
+          "position_m": [
+            0.0,
+            0.0,
+            -0.004
+          ],
+          "quaternion_wxyz": [
+            0.9999976201773518,
+            0.0021816598343367697,
+            0.0,
+            -0.0
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "reference_qpos": [
+            0.0,
+            0.0,
+            -0.004,
+            0.9999976201773518,
+            0.0021816598343367697,
+            0.0,
+            -0.0
+          ],
+          "time_s": 0.0,
+          "velocity_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "functional_success": true,
+        "strict_precision_success": true,
+        "failure_penalized_task_time_s": 4.330000000000289,
+        "guard_reasons": [],
+        "script_nonzero_cycles": 0,
+        "axis_command_effect_integral": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis_observed_motion": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "contact_cycles": 0,
+        "contact_effect_cycles": 0,
+        "effect_coverage": "INSUFFICIENT_COVERAGE",
+        "contact_coverage": "INSUFFICIENT_COVERAGE",
+        "recovery_coverage": "INSUFFICIENT_COVERAGE",
+        "observation": {
+          "schema_version": "residual_reference_whitelist_v4",
+          "vectors_verified": 3046,
+          "width": 137,
+          "initial_vector": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "precontact": null,
+          "first_contact": null,
+          "contact_feature_delta": null,
+          "contact_information": "INSUFFICIENT_COVERAGE",
+          "limitation": "Exact recorded feature differences only; significance/observability and causal benefit are not established"
+        },
+        "training_admitted": false,
+        "full_B2_accepted": false,
+        "task_endpoint": {
+          "admittance_velocity": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "commanded_correction": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_count": 0,
+          "contact_wrench_G": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "contact_wrench_M": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "drive_wrench_M": [
+            0.0,
+            0.0,
+            4.370111021252222e-07,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "episode_peak_z_m": 0.00398920000000061,
+          "limited_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "penetration_m": 0.0,
+          "phase": "STOPPING",
+          "policy_phase": "INSERT",
+          "position_m": [
+            0.0,
+            0.0,
+            -8.794423457493899e-06
+          ],
+          "quaternion_wxyz": [
+            0.9999976201773518,
+            0.0021816598343367697,
+            0.0,
+            0.0
+          ],
+          "raw_command_world": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "recovery_state": null,
+          "reference_qpos": [
+            0.0,
+            0.0,
+            -8.799999999390508e-06,
+            0.9999976201773518,
+            0.0021816598343367697,
+            0.0,
+            0.0
+          ],
+          "search_composition": null,
+          "search_count": 0,
+          "search_progress_origin_z_m": null,
+          "spiral_theta_rad": 0.0,
+          "time_s": 4.330000000000289,
+          "velocity_world": [
+            0.0,
+            0.0,
+            -2.2165715726353042e-07,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "peak_loads": {
+          "contact_count": 0,
+          "drive_force_components_N": [
+            0.0,
+            0.0,
+            0.0044721359549995746
+          ],
+          "drive_torque_components_Nm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "force_N": 0.0,
+          "penetration_m": 0.0,
+          "speed_m_s": 0.0010411487000259111,
+          "torque_G_Nm": 0.0
+        }
+      }
+    }
+  ],
+  "original_matrix_route": "NO_SCOPE_QUALIFICATION",
+  "original_dynamic_status": "error",
+  "original_unrun_dynamics": 15,
+  "new_simulation": 0,
+  "new_training": 0,
+  "cumulative_dynamic": 209,
+  "training_admitted": false,
+  "physical_runner_rebound": false,
+  "original_ledger_unchanged": true,
+  "limitation": "Read-only reassessment of existing evidence; no original run status or admission is changed."
+}

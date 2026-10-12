@@ -1,0 +1,5 @@
+Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\ok everything\\.matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+..........................                                               [100%]
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_force_failure_implementation_20260928\green_rules.xml -
+26 passed in 56.73s
+{"exit_code": 0, "tests": 26, "tests_with_failure_or_error": 0, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "a5438bc102f86b64666527944590dc12e1dad781458d34e006e29d543e585938", "runner_sha256": "56fba0245eac9deb4dfdd35c63f696bad7003a6a9b88a99a4eb1fa54e4cda75c"}

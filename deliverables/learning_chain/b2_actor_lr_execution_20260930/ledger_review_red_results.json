@@ -1,0 +1,22 @@
+{
+  "exit_code": 1,
+  "tests": 8,
+  "failures": 6,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "abeaf7bda627a6ebc80aaa39e4a6fe755742b006e4867fa402b4b40ff73f5d5b",
+  "test_ids": [
+    "tests.learning.test_actor_lr_budget::test_b_and_evaluation_cannot_bypass_exact_a_reproduction_gate",
+    "tests.learning.test_actor_lr_budget::test_failed_attempt_remains_charged_and_cannot_retry",
+    "tests.learning.test_actor_lr_budget::test_empty_ledger_cannot_claim_later_phase[A_training]",
+    "tests.learning.test_actor_lr_budget::test_empty_ledger_cannot_claim_later_phase[B_training]",
+    "tests.learning.test_actor_lr_budget::test_empty_ledger_cannot_claim_later_phase[diagnostic]",
+    "tests.learning.test_actor_lr_budget::test_empty_ledger_cannot_claim_later_phase[evaluation]",
+    "tests.learning.test_actor_lr_budget::test_empty_ledger_cannot_claim_later_phase[complete]",
+    "tests.learning.test_actor_lr_budget::test_formal_bulk_row_cannot_replace_500_transactions"
+  ]
+}

@@ -1,0 +1,2 @@
+BEGIN buffer=16832 iterations=35 geom_types=5,7
+HORIZON_OVERFLOW nedges=24 allocated=24 nfaces=99 nverts=31

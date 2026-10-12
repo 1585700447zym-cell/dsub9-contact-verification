@@ -1,0 +1,31 @@
+{
+  "version": "v4_learning_qualification_v2",
+  "purpose": "bounded_physical_pilot",
+  "training_admitted": true,
+  "authorization": "继续推进，如果没发现问题可以直接进入学习链准入和小规模训练",
+  "tests_passed": true,
+  "review_critical": 0,
+  "review_important": 0,
+  "complete_restore_passed": true,
+  "independent_restore_passed": true,
+  "qualification_dynamic_episodes": 0,
+  "formal_gradient_batches": 0,
+  "max_new_episodes": 28,
+  "max_formal_batches": 4000,
+  "control_preflight_sha256": "ae124ffa9d47d2ed2719b64cbf1202241ded4287c5be842b61ea962b13c8e8e5",
+  "prior_cumulative": 145,
+  "cumulative_limit": 173,
+  "evidence_sha256": {
+    "configuration.json": "da6b1d4207aeb2f35a0695fff9a33e5a097329ebdace54dd2c0e1e08b7e8cca5",
+    "model.xml": "dbb662662dffc48d002e4bc26963d5192f13ff3be20764eac821f8fd10e861cf",
+    "verification.txt": "dfc86d5eff93272ddf9e7bc29914c635418fd1132cd8347054ca4648350fc216",
+    "verification.json": "340709b739781df6211fb46b4ce245d0564f2748a3da45b444da9ebc306dc71a",
+    "verification.xml": "e798b67fb76b83978ea179024422cf43321477fccd5c4158c8cb2e21eef1310f",
+    "review.json": "1596bf22efdfbe0bba5527b168ee5d1882449c4a03f615ac9f3720192820a972",
+    "reviewed_source.json": "1141f9fe2b339294cc298c01e431712951edd15c4f75d54c5c4e3b4ef574dc47",
+    "probe_v2/result.json": "ce8f2c18cefb15057d19a1a2b72af70941b59b1992fccdc5e4db0e5620a4e56a",
+    "probe_v2/reader_result.json": "f4851fa8f69fd430a3a991135efef657048161fcb79a41e40c168249c48bc20c"
+  },
+  "created_at": "2026-10-06T21:15:48.839470+08:00",
+  "scope": "rigid_candidate_common_task_only_development_pilot"
+}

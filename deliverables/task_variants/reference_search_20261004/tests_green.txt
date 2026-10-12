@@ -1,0 +1,14 @@
+........................................................................ [ 39%]
+....................................F................................... [ 79%]
+......................................                                   [100%]
+================================== FAILURES ===================================
+____ test_stuck_pose_reference_follows_whole_bounded_search_without_windup ____
+tests\task_variants\test_reference_search.py:36: in test_stuck_pose_reference_follows_whole_bounded_search_without_windup
+    assert c.phase=='WAIT_RECOVERY' and c.events[-1]['reason']=='SEARCH_EXHAUSTED'
+E   AssertionError: assert ('FAILED' == 'WAIT_RECOVERY'
+E     
+E     - WAIT_RECOVERY
+E     + FAILED)
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_reference_search.py::test_stuck_pose_reference_follows_whole_bounded_search_without_windup
+1 failed, 181 passed in 23.08s

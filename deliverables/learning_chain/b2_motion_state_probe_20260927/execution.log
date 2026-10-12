@@ -1,0 +1,12 @@
+progress motion_x_neg cycle= 1000 sim_s= 2.0 phase= SEARCH request_cycles= 0
+progress motion_x_neg cycle= 2000 sim_s= 4.0 phase= SEARCH request_cycles= 100
+progress motion_x_neg cycle= 3000 sim_s= 6.0 phase= INSERT request_cycles= 100
+progress motion_x_neg cycle= 4000 sim_s= 8.0 phase= INSERT request_cycles= 100
+progress motion_x_neg cycle= 5000 sim_s= 10.0 phase= INSERT request_cycles= 100
+motion_x_neg TASK_FAILURE valid_stopped_guard_clear= True cycles= 5486 pulse= {'search_entry_cycle': 763, 'origin_xy_m': [5.144240567460656e-07, -1.5943458492984064e-08], 'trigger_cycle': 1880, 'trigger_time_s': 3.7599999999996188, 'trigger_motion_m': 5.020803052215879e-06, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 214.13
+progress motion_x_pos cycle= 1000 sim_s= 2.0 phase= SEARCH request_cycles= 0
+progress motion_x_pos cycle= 2000 sim_s= 4.0 phase= SEARCH request_cycles= 100
+progress motion_x_pos cycle= 3000 sim_s= 6.0 phase= INSERT request_cycles= 100
+progress motion_x_pos cycle= 4000 sim_s= 8.0 phase= INSERT request_cycles= 100
+progress motion_x_pos cycle= 5000 sim_s= 10.0 phase= INSERT request_cycles= 100
+motion_x_pos TASK_FAILURE valid_stopped_guard_clear= True cycles= 5471 pulse= {'search_entry_cycle': 763, 'origin_xy_m': [5.144240567460656e-07, -1.5943458492984064e-08], 'trigger_cycle': 1880, 'trigger_time_s': 3.7599999999996188, 'trigger_motion_m': 5.020803052215879e-06, 'request_cycles': 100, 'requested_duration_s': 0.2, 'end_reason': 'duration_completed'} wall_s= 215.22

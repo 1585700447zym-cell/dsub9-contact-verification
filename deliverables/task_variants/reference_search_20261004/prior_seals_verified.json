@@ -1,0 +1,26 @@
+{
+  "clearance120_20261003": {
+    "files": 210,
+    "manifest_sha256": "9a30d508298a81384e1d7a96f779e1ef9fc8856c6b37d98e908f744cf33b42b3"
+  },
+  "functional_b2_20261003": {
+    "files": 216,
+    "manifest_sha256": "bce6ff81e3a68681e0c15d6f7a2d1470fe89a6adc29adf06a66cbe2fbce689a0"
+  },
+  "search_load_20261004": {
+    "files": 218,
+    "manifest_sha256": "8b91de9dc101aa2af2d2f35277d44c6fe0f32894e4cb64086bfb0c32735cf90f"
+  },
+  "admittance_rebase_20261004": {
+    "files": 227,
+    "manifest_sha256": "cb010377707ba49a60405f067faeee1e238cdc460d09d55deffa7551a0fef57e"
+  },
+  "compliant_search_20261004": {
+    "files": 242,
+    "manifest_sha256": "0a32a668f220a8b19a52766a823614e8552448a347e9d66bb66081d4a9afe36b"
+  },
+  "axis_search_20261004": {
+    "files": 237,
+    "manifest_sha256": "e23b4e3ce25a316e98124e137f7bfd3725c697be033d131b596b04670f574551"
+  }
+}

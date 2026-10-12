@@ -1,0 +1,14 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_class_body_import_and_conditional_import_are_conservative (test_import_graph.ImportGraphTests.test_class_body_import_and_conditional_import_are_conservative) ... ok
+test_deferred_backend_import_is_recorded_without_being_executed (test_import_graph.ImportGraphTests.test_deferred_backend_import_is_recorded_without_being_executed) ... ok
+test_literal_dynamic_eager_backend_import_is_rejected (test_import_graph.ImportGraphTests.test_literal_dynamic_eager_backend_import_is_rejected) ... ok
+test_missing_repository_module_is_an_error (test_import_graph.ImportGraphTests.test_missing_repository_module_is_an_error) ... ok
+test_real_entry_graph_includes_actual_failure_chain (test_import_graph.ImportGraphTests.test_real_entry_graph_includes_actual_failure_chain) ... ok
+test_relative_from_imports_and_parent_initializer_are_included (test_import_graph.ImportGraphTests.test_relative_from_imports_and_parent_initializer_are_included) ... ok
+test_required_pure_helper_is_allowed_but_neighbors_are_denied (test_import_graph.ImportGraphTests.test_required_pure_helper_is_allowed_but_neighbors_are_denied) ... ok
+test_unknown_dynamic_eager_import_fails_closed (test_import_graph.ImportGraphTests.test_unknown_dynamic_eager_import_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.223s
+
+OK

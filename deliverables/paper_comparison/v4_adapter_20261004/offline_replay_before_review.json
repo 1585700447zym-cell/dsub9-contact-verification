@@ -1,0 +1,10 @@
+{
+  "search_rows": 16563,
+  "counterfactual_actions": 132504,
+  "filtered_actions": 6,
+  "max_zero_command_error": 0.0,
+  "max_predicted_radius_m": 0.000120000001,
+  "new_physical_steps": 0,
+  "scope": "command_only_not_new_physics_or_learning",
+  "all_filtered_predictions_pass": true
+}

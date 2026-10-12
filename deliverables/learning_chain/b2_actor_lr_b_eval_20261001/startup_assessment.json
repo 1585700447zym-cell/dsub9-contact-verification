@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-10-01T13:36:05+08:00",
+  "status": "healthy",
+  "physical_starts": 1,
+  "active": 0,
+  "protocol_tests": 149,
+  "complete_B_restoration_verified": true,
+  "new_training_batches": 0,
+  "binding_sha256": "0484c3e6afdc8a6f1230efa4e2ff1b8780b58e544daaa07bc5dc7d2f0bbf4450",
+  "authorization_sha256": "642b379e5a5cc1185fa20defce5d386024d5294c7f5aace6dee6c10213b41f0f",
+  "automatic_tracking": "PAUSED",
+  "b2_complete": false
+}

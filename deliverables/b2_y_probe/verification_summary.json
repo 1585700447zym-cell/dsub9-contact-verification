@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-22",
+  "subtask": "B2-5.4 Y -100 um, same frozen treatment as X",
+  "new_dynamics_runs": 1,
+  "trial_status": "COMPLETE",
+  "source_snapshot_files": 12,
+  "identical_prefix_samples": 5024,
+  "identical_through_s": 10.046000000003264,
+  "checked_probe_commands": 3668,
+  "probe_execution": {
+    "triggered": true,
+    "zero_gain_command_duration_s": 1.002,
+    "resume_ramp_command_duration_s": 0.098,
+    "resume_ramp_executed": true,
+    "full_search_restored": true,
+    "ended_by_parent": null
+  },
+  "candidate_metrics": {
+    "case": "y_offset_neg_100um",
+    "policy": "B2",
+    "advance_mm": 0.20245469381868125,
+    "z_error_um": 3797.5453061813187,
+    "xy_error_um": 162.39765368876036,
+    "angle_deg": 1.128897492407561,
+    "peak_force_mN": 24.500692193138438,
+    "peak_torque_mNm": 0.3941595097394471,
+    "peak_penetration_um": 12.74065630774243,
+    "termination": "SEARCH_BUDGET_EXHAUSTED",
+    "success": false,
+    "stop_time_s": 17.381999999986167,
+    "success_time_s": null,
+    "searches": 2,
+    "recoveries": 1,
+    "unmet": [
+      "Z 未到位",
+      "XY 精度",
+      "姿态精度"
+    ]
+  },
+  "audit_matches_saved": true,
+  "report_manifest_entries": 8,
+  "gif_frames_and_trace_mappings": 101,
+  "markdown_links_checked": 21,
+  "visual_qa": "Monthly 4-panel figure, dynamics/gain figure, final pose PNG visually checked by primary and independent reviewer.",
+  "review": "No blocking findings; command replay and metrics independently recalculated.",
+  "test_evidence": "test_status.json and focused_tests.txt; 22 relevant tests pass; broad suite 382 pass/23 SDK build-access failures.",
+  "existing_ui_difference_preserved": {
+    ".vscode/settings.json": "e8a18f2fbbb734665a9860cd81eb5cea40ce0d15f03395dc90ed45fbf4924691"
+  },
+  "limitations": [
+    "Single Y development trial, no parameter scan",
+    "X and Y both fail full assembly criteria; do not promote candidate",
+    "Resume ramp actually exercised in Y; this does not prove general robustness",
+    "No SAC or real robot experiment",
+    "Full repository tests not all passing due SDF build environment access"
+  ],
+  "next_subtask": "Offline diagnosis of X/Y contact and pose differences using saved trajectories; not performed this turn."
+}

@@ -1,0 +1,133 @@
+{
+  "searches": [
+    {
+      "search_number": 1,
+      "samples": 3812,
+      "max_target_radius_um": 119.97994825751485,
+      "max_reference_radius_um": 119.99584405078849,
+      "max_reference_target_error_um": 1.4141603095297168,
+      "max_reference_actual_lead_um": 143.68884891878014,
+      "max_reference_integration_error_um": 2.710505431213761e-13,
+      "peak_reference_example": {
+        "time_s": 9.150000000005353,
+        "target_xy_um": [
+          119.95986297938298,
+          -149.77071623902413
+        ],
+        "actual_xy_um": [
+          40.911081408918236,
+          -147.4806917387388
+        ],
+        "reference_xy_um": [
+          119.97632834783828,
+          -149.4711486583865
+        ],
+        "target_radius_um": 119.97994825751485,
+        "reference_radius_um": 119.99584405078849,
+        "actual_radius_um": 40.97521075905121,
+        "reference_target_error_um": 0.30001973889634115,
+        "reference_actual_lead_um": 79.09029771256003,
+        "integration_error_um": 5.421010862427522e-14,
+        "lateral_force_mN": 7.7526136170332975,
+        "total_force_mN": 11.08338877189437,
+        "raw_xy_mm_s": [
+          0.008232684227814204,
+          0.1497837903185727
+        ]
+      },
+      "end_example": {
+        "time_s": 9.150000000005353,
+        "target_xy_um": [
+          119.95986297938298,
+          -149.77071623902413
+        ],
+        "actual_xy_um": [
+          40.911081408918236,
+          -147.4806917387388
+        ],
+        "reference_xy_um": [
+          119.97632834783828,
+          -149.4711486583865
+        ],
+        "target_radius_um": 119.97994825751485,
+        "reference_radius_um": 119.99584405078849,
+        "actual_radius_um": 40.97521075905121,
+        "reference_target_error_um": 0.30001973889634115,
+        "reference_actual_lead_um": 79.09029771256003,
+        "integration_error_um": 5.421010862427522e-14,
+        "lateral_force_mN": 7.7526136170332975,
+        "total_force_mN": 11.08338877189437,
+        "raw_xy_mm_s": [
+          0.008232684227814204,
+          0.1497837903185727
+        ]
+      }
+    },
+    {
+      "search_number": 2,
+      "samples": 3572,
+      "max_target_radius_um": 116.1022113759318,
+      "max_reference_radius_um": 116.11863651234576,
+      "max_reference_target_error_um": 1.374683017997808,
+      "max_reference_actual_lead_um": 147.9364475920163,
+      "max_reference_integration_error_um": 6.053236254258132e-11,
+      "peak_reference_example": {
+        "time_s": 16.885999999987323,
+        "target_xy_um": [
+          136.92031475290878,
+          -213.66327189162595
+        ],
+        "actual_xy_um": [
+          38.13355577148712,
+          -119.93215845238099
+        ],
+        "reference_xy_um": [
+          137.10562183479553,
+          -213.4273186549997
+        ],
+        "target_radius_um": 116.1022113759318,
+        "reference_radius_um": 116.11863651234576,
+        "actual_radius_um": 27.267251733627763,
+        "reference_target_error_um": 0.3000210733794881,
+        "reference_actual_lead_um": 136.1499718771665,
+        "integration_error_um": 8.131516293641283e-14,
+        "lateral_force_mN": 13.399123519233935,
+        "total_force_mN": 14.942211126002936,
+        "raw_xy_mm_s": [
+          0.09265354094353015,
+          0.11797661831321743
+        ]
+      },
+      "end_example": {
+        "time_s": 16.885999999987323,
+        "target_xy_um": [
+          136.92031475290878,
+          -213.66327189162595
+        ],
+        "actual_xy_um": [
+          38.13355577148712,
+          -119.93215845238099
+        ],
+        "reference_xy_um": [
+          137.10562183479553,
+          -213.4273186549997
+        ],
+        "target_radius_um": 116.1022113759318,
+        "reference_radius_um": 116.11863651234576,
+        "actual_radius_um": 27.267251733627763,
+        "reference_target_error_um": 0.3000210733794881,
+        "reference_actual_lead_um": 136.1499718771665,
+        "integration_error_um": 8.131516293641283e-14,
+        "lateral_force_mN": 13.399123519233935,
+        "total_force_mN": 14.942211126002936,
+        "raw_xy_mm_s": [
+          0.09265354094353015,
+          0.11797661831321743
+        ]
+      }
+    }
+  ],
+  "mechanism": "Search now tracks its own drive reference. This report measures residual tracking error and actual motion separately.",
+  "implication": "Interpret task outcome and loads separately; a bounded reference alone does not establish insertion success.",
+  "limitations": "This is archived trajectory evidence, not a general success or causality guarantee. No friction/geometry tuning or extra physics executed."
+}

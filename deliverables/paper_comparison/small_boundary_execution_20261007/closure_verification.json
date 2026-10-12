@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "preseal_static_checks": 53,
+  "pure_tests": 53,
+  "old_files_unchanged": 730,
+  "shared_inputs_unchanged": 1057,
+  "independent_review": {
+    "critical_found": 0,
+    "important_found": 3,
+    "minor_found": 0,
+    "important_author_fixed": 3,
+    "verified_by": "author RED/GREEN + associated pure suite; no second independent review"
+  },
+  "actual_new_compute": 0,
+  "cumulative_dynamic": 208,
+  "automatic_tracking": "PAUSED",
+  "training_admitted": false,
+  "execution_authorized": false,
+  "incomplete_gates": [
+    "actual tensor serialization/restore",
+    "numerical zero-origin",
+    "physical backend",
+    "new compute authorization"
+  ]
+}

@@ -1,0 +1,182 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+______________ test_warm_stream_restore_proves_next_held_action _______________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-416/test_warm_stream_restore_prove0')
+
+    def test_warm_stream_restore_proves_next_held_action(tmp_path):
+        from tools.learning.v4_pilot_chain import V4Chain
+        c=V4Chain(learning_config('F50'),output=tmp_path/'c',binding=synthetic_binding('F50'))
+        c.begin('warmup',0);c.publish(raw_episode(c,'warmup',0));assert c.warm_draws==2
+>       pin=api().save_checkpoint(c,tmp_path/'checkpoint')
+
+tests\learning\test_v4_checkpoint.py:131: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\v4_checkpoint.py:101: in save_checkpoint
+    state=capture(chain);validate_state(state,expected_binding=chain.binding,admission=chain.admission)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+state = {'archives': {'warmup_F50_y_neg_150': b'\x1f\x8b\x08\x00\x00\x00\x00\x00\x02\xff\xed\xd6K\x8f\xdbd\x00\x86\xd1\xbf\x82...learning_rate': 0.0003, 'batch_size': 256, 'critic_boundary_rows': 16, 'device': 'cpu', ...}, 'mode': 'F50', ...}, ...}
+
+    def validate_state(state,*,expected_binding,admission=None):
+        if state.get('version')!='v4_pilot_checkpoint_v1' or canonical(state.get('binding'))!=canonical(expected_binding):
+            raise ValueError('Checkpoint version or mode/qualification binding differs')
+        config=state['config'];validate_config(config)
+        if (config['mode']!=expected_binding['mode'] or hashlib.sha256(canonical(config).encode()).hexdigest()!=expected_binding['config_sha256']):raise ValueError('Config binding differs')
+        formal=expected_binding['purpose']=='bounded_physical_pilot'
+        if formal and (admission is None or admission.verify(config['mode'])!=expected_binding):raise ValueError('Physical restore is not admitted')
+        if expected_binding['purpose'] not in ('bounded_physical_pilot','synthetic_qualification'):raise ValueError('Unknown capability')
+        replay=V4Replay(mode=config['mode'],capacity=config['learning']['replay_capacity']);boundary=V4BoundaryIndex(config['mode'])
+        updater=V4Updater(config)
+        if state['origin']!=updater.fingerprints():raise ValueError('Origin is not registered zero-update network')
+        attempts=state['attempts'];history=state['history'];canonical(history)
+        if len(attempts)>8 or len({r['episode_id'] for r in attempts})!=len(attempts) or set(state['archives'])!={r['episode_id'] for r in attempts}:raise ValueError('Attempt/archive ledger mismatch')
+        wr,rr,br=streams();draws=0;held=[0.]*4;expected_stop=None
+        for j,r in enumerate(attempts):
+            key=r['episode_id'];stage,index=('warmup',j) if j<4 else ('online',j-4)
+            if expected_stop or not re.fullmatch('[A-Za-z0-9][A-Za-z0-9_-]{0,79}',key):raise ValueError('Post-stop or unsafe episode')
+            data=state['archives'][key]
+            if not isinstance(data,bytes) or hashlib.sha256(data).hexdigest()!=r['archive_sha256']:raise ValueError('Archive digest differs')
+            raw=json.loads(gzip.decompress(data));out=audit_raw(raw,config,expected_binding)
+            steps=_integer(raw['optimizer_steps'],0,2000)
+            if (raw['stage'],raw['case_index'])!=(stage,index) or steps!=sum(h['audited_episodes']<=j for h in history):raise ValueError('Raw chronological update history differs')
+            if formal and steps!=(0 if stage=='warmup' else 500*index):raise ValueError('Physical update schedule changed')
+            actor=state['origin']['actor'] if steps==0 else history[steps-1]['actor_after']
+            if raw['policy_sha256']!=actor:raise ValueError('Raw policy fingerprint differs')
+            if stage=='warmup' and formal:
+                for i,row in enumerate(raw['transitions']):
+                    if i%50==0:held=wr.uniform(-1.,1.,4).tolist();draws+=1
+                    if row.get('sampling_request')!=held:raise ValueError('Warmup stream/hold differs')
+                    request=held if row['action_active'] else [0.]*4
+                    if row['action_log']['raw_action']!=request:raise ValueError('Warmup permission differs')
+                if raw['warmup_draws']!=draws:raise ValueError('Warmup draw ledger differs')
+            result=replay.publish(key,raw['transitions'],outcome=out,training_admitted=True)
+            if not result['committed']:raise ValueError('Ineligible checkpoint source')
+            expected=dict(episode_id=key,stage=stage,case_index=index,archive_sha256=r['archive_sha256'],steps=len(raw['transitions']),
+                optimizer_steps=steps,policy_sha256=raw['policy_sha256'],outcome=out,**result)
+            if not _same(r,expected):raise ValueError('Publication receipt differs')
+            boundary.add(raw)
+            if out['task_outcome'] in ('CONTACT_GUARD','MOTION_VIOLATION'):expected_stop=out['task_outcome']
+        if not _same(_replay_state(replay),state['replay']):raise ValueError('Replay differs from audited raw archives')
+        if state['stop_reason']!=expected_stop:raise ValueError('Guard stop state differs')
+        saved=state['updater'];reference=updater._snapshot();counts=saved['counts']
+        if saved.keys()!=reference.keys() or set(counts)!={'critic','actor','temperature','target'}:raise ValueError('Incomplete updater state')
+        for v in counts.values():_integer(v,0,2000)
+        completed=_integer(state['update_attempts'],0,2000)
+        if completed!=counts['critic'] or completed!=len(history) or counts['target']!=completed or counts['actor']!=counts['temperature'] or counts['actor']!=sum(h['active_rows']>0 for h in history):raise ValueError('Update/Adam/history counters differ')
+        if completed>min(2000,500*max(len(attempts)-4,0)):raise ValueError('Unearned optimizer credit')
+        previous=0;actor=state['origin']['actor']
+        for i,h in enumerate(history,1):
+            total=_integer(h['audited_episodes'],5,len(attempts));credit=min(2000,500*(total-4))
+            if total<previous or h['critic_batches']!=i or h['batch_rows']!=256 or h['credit_remaining']!=credit-i or credit-i<0 or h['actor_before']!=actor:raise ValueError('Update history/credit changed')
+            subset=replay._state.episodes[:total];keys=[k for k,_ in subset];ends=np.cumsum([len(a['rewards']) for _,a in subset]);starts=np.r_[0,ends[:-1]]
+            if h['replay_rows']!=int(ends[-1]):raise ValueError('History replay size differs')
+            uniform=rr.integers(0,int(ends[-1]),256);owners=np.searchsorted(ends,uniform,side='right')
+            base=[(keys[o],int(t-starts[o])) for o,t in zip(owners,uniform)]
+            candidates=[(k,boundary.entries[k][2]) for k in keys if boundary.entries[k][2] is not None]
+            selected=base[:240]+[candidates[int(t)] for t in br.integers(0,len(candidates),16)]
+            if h['indices']!=[list(p) for p in selected] or h['active_rows']!=sum(bool(dict(subset)[k]['action_active'][t,0]) for k,t in base):raise ValueError('Sampler or actor mask history differs')
+            actor=h['actor_after'];previous=total
+        if saved['policy'].keys()!=reference['policy'].keys():raise ValueError('Incomplete policy')
+        for k,v in reference['policy'].items():_tensor(saved['policy'][k],v)
+        _tensor(saved['alpha'],reference['alpha']);_tensor(saved['rng'],reference['rng']);torch.Generator().set_state(saved['rng'])
+        for k,opt in zip(('critic','actor','temperature'),updater._optimizers()):_optimizer(saved[k],opt,counts[k])
+        updater._restore(deepcopy(saved));updater._finite_state()
+        if updater.fingerprints()['actor']!=actor:raise ValueError('Final actor differs from history')
+        expected_rng=dict(warm=wr.bit_generator.state,replay=rr.bit_generator.state,boundary=br.bit_generator.state)
+>       if state['rng']!=expected_rng or state['warm']!=dict(draws=draws,held=held):raise ValueError('RNG/draw state differs from ledger')
+E       ValueError: RNG/draw state differs from ledger
+
+tools\learning\v4_checkpoint.py:95: ValueError
+__________ test_successful_truncation_is_rejected_before_publication __________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-416/test_successful_truncation_is_0')
+
+    def test_successful_truncation_is_rejected_before_publication(tmp_path):
+        c=populated(tmp_path/'c');c.begin('online',1);raw=raw_episode(c,'online',1)
+        raw['transitions'][-1].update(terminated=False,truncated=True)
+>       with pytest.raises(ValueError):c.publish(raw)
+E       Failed: DID NOT RAISE <class 'ValueError'>
+
+tests\learning\test_v4_checkpoint.py:140: Failed
+__________ test_mid_chunk_failure_preserves_completed_batch_journal ___________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-416/test_mid_chunk_failure_preserv0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000210A29155B0>
+
+    def test_mid_chunk_failure_preserves_completed_batch_journal(tmp_path,monkeypatch):
+        c=populated(tmp_path/'c');original=c.updater.update;calls=0
+        def fail_second(*args,**kwargs):
+            nonlocal calls;calls+=1
+            if calls==2:raise RuntimeError('injected second batch failure')
+            return original(*args,**kwargs)
+        monkeypatch.setattr(c.updater,'update',fail_second)
+        with pytest.raises(RuntimeError):c.update(3)
+>       journal=[json.loads(line) for line in (c.output/'update_journal.jsonl').read_text(encoding='utf8').splitlines()]
+
+tests\learning\test_v4_checkpoint.py:151: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+D:\KEYANRUJIAN\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-416/test_mid_chunk_failure_preserv0/c/update_journal.jsonl')
+mode = 'r', buffering = -1, encoding = 'utf8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-416\\test_mid_chunk_failure_preserv0\\c\\update_journal.jsonl'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError
+________ test_completion_write_failure_retains_actual_optimizer_count _________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-416/test_completion_write_failure_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000210A272EFD0>
+
+    def test_completion_write_failure_retains_actual_optimizer_count(tmp_path,monkeypatch):
+        c=populated(tmp_path/'c')
+        original=getattr(c,'_append_event',lambda *a,**k:None)
+        def fail(event,**data):
+            if event=='complete':raise OSError('injected completion fsync error')
+            return original(event,**data)
+        monkeypatch.setattr(c,'_append_event',fail,raising=False)
+>       with pytest.raises(OSError):c.update(1)
+E       Failed: DID NOT RAISE <class 'OSError'>
+
+tests\learning\test_v4_checkpoint.py:164: Failed
+_________________ test_learning_runtime_mismatch_fails_closed _________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000210F4227E30>
+
+    def test_learning_runtime_mismatch_fails_closed(monkeypatch):
+        m=api();monkeypatch.setattr(m,'learning_runtime_proof',lambda:{'torch':'changed'},raising=False)
+>       with pytest.raises(ValueError):m.verify_learning_runtime({'torch':'qualified'})
+E       AttributeError: module 'tools.validation.run_v4_learning_pilot' has no attribute 'verify_learning_runtime'
+
+tests\task_variants\test_v4_learning_pilot.py:51: AttributeError
+_________ test_old_test_or_review_source_cannot_qualify_changed_code __________
+
+    def test_old_test_or_review_source_cannot_qualify_changed_code():
+        m=api();old={'tools/learning/v4_sac.py':'a'*64};new={'tools/learning/v4_sac.py':'b'*64}
+        v=dict(passed=True,source_sha256=old);r=dict(reviewed_source_sha256=old,validated_source_sha256=old,fix_delta={})
+>       m.verify_qualification_sources(dict(input_sha256=old),v,r)
+E       AttributeError: module 'tools.validation.run_v4_learning_pilot' has no attribute 'verify_qualification_sources'
+
+tests\task_variants\test_v4_learning_pilot.py:56: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/learning/test_v4_checkpoint.py::test_warm_stream_restore_proves_next_held_action
+FAILED tests/learning/test_v4_checkpoint.py::test_successful_truncation_is_rejected_before_publication
+FAILED tests/learning/test_v4_checkpoint.py::test_mid_chunk_failure_preserves_completed_batch_journal
+FAILED tests/learning/test_v4_checkpoint.py::test_completion_write_failure_retains_actual_optimizer_count
+FAILED tests/task_variants/test_v4_learning_pilot.py::test_learning_runtime_mismatch_fails_closed
+FAILED tests/task_variants/test_v4_learning_pilot.py::test_old_test_or_review_source_cannot_qualify_changed_code
+6 failed in 7.84s

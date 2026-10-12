@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "figures": {
+    "frozen_development.png": {
+      "sha256": "114e74185a1699e9ff9a5d86fbb808abb7431bf8ae8eeea141a665f528973316",
+      "bytes": 67219
+    },
+    "actual_learning_curves.png": {
+      "sha256": "75e289fe8f1c317a729c1fcfe4a4e6909fe02e39c1446fd355595cea75990d06",
+      "bytes": 214166
+    }
+  },
+  "checks": [
+    "Rendered and visually inspected both figures; labels, legends and axes readable; no clipping",
+    "10 frozen attempts plotted from audited task times; restore repeats excluded",
+    "Actual 2000 updates per branch, 50-batch averages; entropy weighted and sample populations identified"
+  ],
+  "review_scope": "visual layout and data labels; no scientific advantage certification"
+}

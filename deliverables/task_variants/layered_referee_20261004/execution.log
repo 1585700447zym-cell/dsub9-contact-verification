@@ -1,0 +1,76 @@
+{"case": "y_neg_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "y_neg_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "y_neg_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "y_neg_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "y_neg_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "y_neg_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "y_neg_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "y_neg_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "y_neg_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "y_neg_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"case": "y_neg_150", "cycles": 5500, "time_s": 11.000000000001041}
+{"case": "y_neg_150", "cycles": 6000, "time_s": 11.99999999999871}
+{"case": "y_neg_150", "cycles": 6500, "time_s": 12.99999999999638}
+{"case": "y_neg_150", "cycles": 7000, "time_s": 13.99999999999405}
+{"case": "y_neg_150", "cycles": 7500, "time_s": 14.999999999991719}
+{"case": "y_neg_150", "cycles": 8000, "time_s": 15.999999999989388}
+{"case": "y_neg_150", "cycles": 8500, "time_s": 16.999999999987057}
+{"case": "y_neg_150", "cycles": 9000, "time_s": 17.999999999984727}
+{"case": "y_neg_150", "cycles": 9500, "time_s": 18.999999999982396}
+{"case": "y_neg_150", "cycles": 10000, "time_s": 19.999999999980066}
+{"case": "y_neg_150", "cycles": 10500, "time_s": 20.999999999977735}
+{"case": "y_neg_150", "cycles": 11000, "time_s": 21.999999999975405}
+{"id": "y_neg_150", "status": "finished", "started_at": "2026-10-04T19:56:41.840378+08:00", "control_cycles": 11270, "physical_substeps": 112700, "simulated_time_s": 21.999999999975405, "updated_at": "2026-10-04T20:03:42.163287+08:00", "ended_at": "2026-10-04T20:03:53.379057+08:00", "outcome": {"simulation_valid": true, "task_outcome": "FULL_SUCCESS", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.007323737775633605, "checked_substeps": 112700}}, "reason": "GEOMETRIC_SUCCESS", "wall_seconds": 431.5373538999993, "xy_um": 97.60747132374003, "z_um": -9.1161852567936, "pin_clearance_um": 0.007450513432876067, "legacy_pin_clearance_um": -1.4293528886850189, "peaks": {"force_N": 0.024474139103047843, "torque_G_Nm": 0.00025797003248999523, "penetration_m": 7.106486275531079e-06, "speed_m_s": 0.0013342605510384554, "drive_force_components_N": [0.012487272015023539, 0.01353967913412075, 0.02447555455653372], "drive_torque_components_Nm": [4.198871357969457e-05, 4.788403262109566e-05, 2.888253449139219e-05], "contact_count": 2189.0}, "contact_cycles": 8109, "search_cycles": 7384, "stop_time": 20.539999999978807, "task_end_time": 20.779999999978248, "end_time": 22.539999999974146, "archive_sha256": "604437ff1ef4d3e936849272376b8003286972bd527c9a3d69fbf60bfe3973bd"}
+{"case": "y_pos_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "y_pos_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "y_pos_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "y_pos_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "y_pos_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "y_pos_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "y_pos_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "y_pos_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "y_pos_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "y_pos_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"case": "y_pos_150", "cycles": 5500, "time_s": 11.000000000001041}
+{"case": "y_pos_150", "cycles": 6000, "time_s": 11.99999999999871}
+{"case": "y_pos_150", "cycles": 6500, "time_s": 12.99999999999638}
+{"case": "y_pos_150", "cycles": 7000, "time_s": 13.99999999999405}
+{"case": "y_pos_150", "cycles": 7500, "time_s": 14.999999999991719}
+{"id": "y_pos_150", "status": "finished", "started_at": "2026-10-04T20:03:55.629934+08:00", "control_cycles": 7962, "physical_substeps": 79620, "simulated_time_s": 14.999999999991719, "updated_at": "2026-10-04T20:07:15.023558+08:00", "ended_at": "2026-10-04T20:07:32.275591+08:00", "outcome": {"simulation_valid": true, "task_outcome": "FULL_SUCCESS", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.033480579348940075, "checked_substeps": 79620}}, "reason": "GEOMETRIC_SUCCESS", "wall_seconds": 216.6010333000013, "xy_um": 76.92079899054933, "z_um": -9.746684010127925, "pin_clearance_um": 0.013205585401771837, "legacy_pin_clearance_um": -0.121527165375542, "peaks": {"force_N": 0.02431135669404151, "torque_G_Nm": 0.0001254947213021583, "penetration_m": 3.236216729140447e-06, "speed_m_s": 0.001720185094584959, "drive_force_components_N": [0.005384094807307499, 0.006361095242669679, 0.02429418136020459], "drive_torque_components_Nm": [9.853912778036776e-05, 5.026401051188929e-05, 1.764666719394692e-05], "contact_count": 74.0}, "contact_cycles": 5077, "search_cycles": 3021, "stop_time": 13.923999999994226, "task_end_time": 14.163999999993667, "end_time": 15.923999999989565, "archive_sha256": "0adccfc5021a8664fe21133fc83e68142297d617717f4bb5277a022fdecb5b6f"}
+{"case": "x_pos_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "x_pos_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "x_pos_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "x_pos_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "x_pos_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "x_pos_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "x_pos_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "x_pos_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "x_pos_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "x_pos_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"case": "x_pos_150", "cycles": 5500, "time_s": 11.000000000001041}
+{"case": "x_pos_150", "cycles": 6000, "time_s": 11.99999999999871}
+{"case": "x_pos_150", "cycles": 6500, "time_s": 12.99999999999638}
+{"id": "x_pos_150", "status": "finished", "started_at": "2026-10-04T20:07:33.581024+08:00", "control_cycles": 6550, "physical_substeps": 65500, "simulated_time_s": 12.99999999999638, "updated_at": "2026-10-04T20:10:17.780452+08:00", "ended_at": "2026-10-04T20:10:20.099688+08:00", "outcome": {"simulation_valid": true, "task_outcome": "FULL_SUCCESS", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.021340177698300815, "checked_substeps": 65500}}, "reason": "GEOMETRIC_SUCCESS", "wall_seconds": 166.4895639000024, "xy_um": 29.910402568712804, "z_um": -9.144207206116908, "pin_clearance_um": 46.91634427882868, "legacy_pin_clearance_um": 46.830623105841, "peaks": {"force_N": 0.02460243170623439, "torque_G_Nm": 0.00016301614761786898, "penetration_m": 1.9279597175470027e-05, "speed_m_s": 0.0016137579633379703, "drive_force_components_N": [0.0066502655827237874, 0.008276726325617207, 0.02453435458801638], "drive_torque_components_Nm": [3.871140000879329e-05, 0.0001734236495054118, 2.1255990819416472e-05], "contact_count": 69.0}, "contact_cycles": 3617, "search_cycles": 2683, "stop_time": 11.100000000000808, "task_end_time": 11.340000000000249, "end_time": 13.099999999996147, "archive_sha256": "b5b9e4e602d746cea6990fac51af190cbe76feccee6fb20db1bf2e94d61767df"}
+{"case": "x_neg_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "x_neg_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "x_neg_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "x_neg_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "x_neg_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "x_neg_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "x_neg_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "x_neg_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "x_neg_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "x_neg_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"case": "x_neg_150", "cycles": 5500, "time_s": 11.000000000001041}
+{"case": "x_neg_150", "cycles": 6000, "time_s": 11.99999999999871}
+{"case": "x_neg_150", "cycles": 6500, "time_s": 12.99999999999638}
+{"case": "x_neg_150", "cycles": 7000, "time_s": 13.99999999999405}
+{"id": "x_neg_150", "status": "finished", "started_at": "2026-10-04T20:10:21.211188+08:00", "control_cycles": 7338, "physical_substeps": 73380, "simulated_time_s": 13.99999999999405, "updated_at": "2026-10-04T20:13:23.605845+08:00", "ended_at": "2026-10-04T20:13:35.683489+08:00", "outcome": {"simulation_valid": true, "task_outcome": "FULL_SUCCESS", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.021258972291948796, "checked_substeps": 73380}}, "reason": "GEOMETRIC_SUCCESS", "wall_seconds": 194.4484533000068, "xy_um": 91.92144049298524, "z_um": -9.75747282558483, "pin_clearance_um": 9.512014572514243, "legacy_pin_clearance_um": 7.645660197582501, "peaks": {"force_N": 0.02461225485734939, "torque_G_Nm": 0.00021008842629842021, "penetration_m": 1.9274983822399448e-05, "speed_m_s": 0.0017124400469545342, "drive_force_components_N": [0.011465401700009654, 0.008509076581177047, 0.02453684697831117], "drive_torque_components_Nm": [4.166470648233241e-05, 0.0001734598190555662, 3.469655981776053e-05], "contact_count": 71.0}, "contact_cycles": 4436, "search_cycles": 3475, "stop_time": 12.675999999997135, "task_end_time": 12.915999999996576, "end_time": 14.675999999992474, "archive_sha256": "ec9a47d4539f97ab93d4299f6ba7344551faf80f89a664609df63b40268bfd3c"}
+{"case": "aligned", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "aligned", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "aligned", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "aligned", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "aligned", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "aligned", "cycles": 3000, "time_s": 6.000000000003813}
+{"id": "aligned", "status": "finished", "started_at": "2026-10-04T20:13:37.002331+08:00", "control_cycles": 3045, "physical_substeps": 30450, "simulated_time_s": 6.000000000003813, "updated_at": "2026-10-04T20:14:59.605214+08:00", "ended_at": "2026-10-04T20:15:01.319752+08:00", "outcome": {"simulation_valid": true, "task_outcome": "FULL_SUCCESS", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.0, "checked_substeps": 30450}}, "reason": "GEOMETRIC_SUCCESS", "wall_seconds": 84.28643710000324, "xy_um": 0.0, "z_um": -8.799999999390428, "pin_clearance_um": 99.9999999999995, "legacy_pin_clearance_um": 99.99999999999994, "peaks": {"force_N": 0.0, "torque_G_Nm": 0.0, "penetration_m": 0.0, "speed_m_s": 0.0010411487000259111, "drive_force_components_N": [0.0, 0.0, 0.0044721359549995746], "drive_torque_components_Nm": [0.0, 0.0, 0.0], "contact_count": 0}, "contact_cycles": 0, "search_cycles": 0, "stop_time": 4.089999999999782, "task_end_time": 4.330000000000289, "end_time": 6.090000000004003, "archive_sha256": "076a6ecdb9ce478b4ed9a691ce68c2d1dec1f922fb58f754b52b7527180150ef"}
+{"status": "complete", "episodes": 5}

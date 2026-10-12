@@ -1,0 +1,14 @@
+{
+  "verified_dependencies": {
+    "tools/dynamics/cartesian.py": "6fb2fd4d4e38a45dd0aa0fa1501a1aad45fda18ea3be983b22c949e3bb9da786",
+    "tools/model/contact_development.py": "db348846da55935e1886318f53492da3edebd506e7c0663a9fdbc1414ef65bf2",
+    "tools/validation/repair_contact_coverage.py": "32726e92b55d16dd8497c37eaf8ed340b0c40a868904917098ec8067d3a1de39",
+    "tools/validation/validate_training_readiness.py": "12f943d29e608fb4ec86972c34b6e209295fc0d5d53b8d7c99cdd7eb61c6a683"
+  },
+  "evidence_sha256": {
+    "deliverables/dynamic_actuator_v1/ccd_diagnostic.json": "05634c45ebc921d3d1059b2ebe701cd110faa3f6859e14bebc32ae4ccae23f8e",
+    "deliverables/b2_search_recovery/matrix_v1_7cases/results_index.json": "d80fbf8ba4708c95976aa951fcf426def80f968caca361e02a1ac95b007fb98a",
+    "deliverables/baseline_training_readiness/numerical_gate_v1/results_index.json": "b32f52cff7602d22fa44ded433dfa67a95f52df8c54fb9f03e88cf00e5cf2652"
+  },
+  "scope": "Post-review traceability audit against pre-existing records; no historical manifests rewritten"
+}

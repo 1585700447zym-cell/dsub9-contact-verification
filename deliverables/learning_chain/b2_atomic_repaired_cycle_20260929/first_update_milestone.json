@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-09-29T16:48:59.229210+08:00",
+  "milestone": "first_500_updates_checkpoint_saved",
+  "formal_updates_verified": 500,
+  "checkpoint": {
+    "path": "training/checkpoints/train_03",
+    "sha256": "88b9b92a3ca4c2f4df95e1cd36f9eae2fa15cdc6fee91f38129d97b54081e088",
+    "episodes": 4,
+    "updates": 500
+  },
+  "state_sha256": "361a9ccd576b5a93a12f1c08a8f44422ab795c14322c4138991efbeebe33e485",
+  "state_file_hash_verified": true,
+  "restore_test_completed": false,
+  "history_first_500_present": true,
+  "new_dynamic_starts": 9,
+  "cumulative_dynamic_starts": 53,
+  "warning": "atomic_json_replace_recovered: attempts=2; no learning action repeated",
+  "failure_detected": false,
+  "policy_improvement_claimed": false
+}

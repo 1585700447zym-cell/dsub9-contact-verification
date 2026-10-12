@@ -1,0 +1,9 @@
+.....F                                                                   [100%]
+================================== FAILURES ===================================
+_______ test_errors_close_actual_five_case_budget_and_preserve_attempt ________
+tests\task_variants\test_search_load_preflight.py:32: in test_errors_close_actual_five_case_budget_and_preserve_attempt
+    assert saved['unused_closed']==4
+E   assert 8 == 4
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_search_load_preflight.py::test_errors_close_actual_five_case_budget_and_preserve_attempt
+1 failed, 5 passed in 1.69s

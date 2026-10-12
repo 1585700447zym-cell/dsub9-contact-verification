@@ -1,0 +1,10 @@
+{
+  "zip_sha256": "c2f66d736c8b3994dd71adddaa9152b232ccb2bf1a70b78414a0fe9e0c5cec84",
+  "extracted_directory": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\minimal_package_smoke",
+  "exit_code": 0,
+  "stdout": "new_native max_depth_um 223.6022450603231 contacts 2\nold_native max_depth_um 539.8466783709657 contacts 3\nold_mpr max_depth_um 3.5704866221214333 contacts 1\n",
+  "all_result_fields_equal_to_version_3p9": true,
+  "version": "3.9.0",
+  "requires_project_imports": false,
+  "gui_tested": false
+}

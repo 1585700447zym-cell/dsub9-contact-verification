@@ -1,0 +1,9 @@
+{
+  "F50_trace_exact": true,
+  "trace_rows": 5886,
+  "new_data": true,
+  "source": "PC05 development only used for offline comparison; not published",
+  "S50_trace_exact": true,
+  "S50_controller_events_exact": true,
+  "S50_trace_rows": 9241
+}

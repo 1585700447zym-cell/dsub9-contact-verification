@@ -1,0 +1,15 @@
+from pathlib import Path
+OUT=Path(__file__).resolve().parent;OLD=OUT.parent/'deadline25_20261004'
+s=(OLD/'update_documents.py').read_text(encoding='utf-8')
+s=s.replace('deadline25_20261004','layered_referee_20261004').replace('2026-10-04-deadline25-preflight','2026-10-04-layered-referee')
+s=s.replace('deadline25-current','layered-referee-current').replace('reference-search-current','deadline25-current')
+s=s.replace('199','236').replace('25秒共同任务','分层几何裁判').replace('TV-08','TV-09').replace('TV-01～07','TV-01～08')
+s=s.replace('新共同任务总时限20→25秒；驱动参考控制器、会话、功能判据和保护保持，未接入残差学习','新共同任务v4：按实际孔层裁剪圆柱后检查256面；原1nm容差、25秒、控制器和保护保持，未接入残差学习')
+s=s.replace('本轮仅验证共同总时限，控制器不变，未新增残差/约束候选比较','本轮修几何成功裁判，控制器不变，未新增残差/约束候选比较')
+s=s.replace('| 驱动参考一致性最新验证 |','| 25秒共同任务最新验证 |').replace('| 前轮驱动参考一致性验证 |','| 前轮25秒共同任务验证 |')
+s=s.replace('仅将共同任务总动作时限改为25秒；当前控制器、几何、功能判据和保护不变。20秒历史失败保留；未来基线须在相同25秒任务版本公平重评。','将九针裁判改为圆柱与实际宽入口/窄主孔分层相交后的切平面检查；仍使用1nm容差，控制器、几何、深度/稳定/保护与25秒不变。历史裁判和旧失败保留；未来基线须共用新版裁判。')
+s=s.replace('run_deadline25_preflight.py','run_layered_referee_preflight.py')
+s=s.replace("r'^最新参考跟踪：.*$'", "r'^最新25秒任务：.*$'").replace("f'最新25秒任务：", "f'最新分层裁判：")
+s=s.replace('[20秒与25秒同控制器对照]','[新旧裁判对应物理轨迹]')
+s=s.replace('[25秒任务结果]','[分层裁判结果]')
+(OUT/'update_documents.py').write_text(s,encoding='utf-8')

@@ -1,0 +1,444 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_boolean_number_mixing_is_rejected (__main__.ScalarTests.test_boolean_number_mixing_is_rejected) ... ok
+test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) ... 
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float16'>", side='float16') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float16'>", side='int') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float32'>", side='float32') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float32'>", side='int') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float64'>", side='float64') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float64'>", side='int') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int32'>", side='int32') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int32'>", side='int') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int64'>", side='int64') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int64'>", side='int') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.uint64'>", side='uint64') ... FAIL
+  test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.uint64'>", side='int') ... FAIL
+test_existing_tolerance_is_preserved (__main__.ScalarTests.test_existing_tolerance_is_preserved) ... FAIL
+test_keys_shapes_and_text_remain_strict (__main__.ScalarTests.test_keys_shapes_and_text_remain_strict) ... ok
+test_large_integer_low_bits_are_not_discarded (__main__.ScalarTests.test_large_integer_low_bits_are_not_discarded) ... FAIL
+test_nested_command_and_reward_json_roundtrip (__main__.ScalarTests.test_nested_command_and_reward_json_roundtrip) ... FAIL
+test_non_numeric_coercions_and_arrays_are_rejected (__main__.ScalarTests.test_non_numeric_coercions_and_arrays_are_rejected) ... ok
+test_nonfinite_values_are_rejected_even_same_type (__main__.ScalarTests.test_nonfinite_values_are_rejected_even_same_type) ... 
+  test_nonfinite_values_are_rejected_even_same_type (__main__.ScalarTests.test_nonfinite_values_are_rejected_even_same_type) (value=inf, a='float64') ... FAIL
+  test_nonfinite_values_are_rejected_even_same_type (__main__.ScalarTests.test_nonfinite_values_are_rejected_even_same_type) (value=-inf, a='float64') ... FAIL
+test_same_boolean_values_keep_boolean_semantics (__main__.ScalarTests.test_same_boolean_values_keep_boolean_semantics) ... FAIL
+test_real_serialized_archive_passes_complete_audit (__main__.ArchiveTests.test_real_serialized_archive_passes_complete_audit) ... FAIL
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float16'>", side='float16')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float16'>", side='int')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 31, in same
+    raise ValueError(label+' differs/nonfinite')
+ValueError: regression differs/nonfinite
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs/nonfinite')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float32'>", side='float32')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float32'>", side='int')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 31, in same
+    raise ValueError(label+' differs/nonfinite')
+ValueError: regression differs/nonfinite
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs/nonfinite')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float64'>", side='float64')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.float64'>", side='int')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 31, in same
+    raise ValueError(label+' differs/nonfinite')
+ValueError: regression differs/nonfinite
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs/nonfinite')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int32'>", side='int32')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int32'>", side='int')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 31, in same
+    raise ValueError(label+' differs/nonfinite')
+ValueError: regression differs/nonfinite
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs/nonfinite')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int64'>", side='int64')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.int64'>", side='int')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 31, in same
+    raise ValueError(label+' differs/nonfinite')
+ValueError: regression differs/nonfinite
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs/nonfinite')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.uint64'>", side='uint64')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) (dtype="<class 'numpy.uint64'>", side='int')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 31, in same
+    raise ValueError(label+' differs/nonfinite')
+ValueError: regression differs/nonfinite
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 49, in test_equal_finite_numbers_in_both_representations
+    self.accepted(left, right)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs/nonfinite')
+
+======================================================================
+FAIL: test_existing_tolerance_is_preserved (__main__.ScalarTests.test_existing_tolerance_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 70, in test_existing_tolerance_is_preserved
+    self.accepted(np.float64(1 + 5e-13), 1.)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_large_integer_low_bits_are_not_discarded (__main__.ScalarTests.test_large_integer_low_bits_are_not_discarded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 64, in test_large_integer_low_bits_are_not_discarded
+    self.accepted(np.uint64(2**63 + 1), 2**63 + 1)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_nested_command_and_reward_json_roundtrip (__main__.ScalarTests.test_nested_command_and_reward_json_roundtrip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 25, in same
+    for k in left:same(left[k],right[k],label+'.'+k,tolerance)
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 28, in same
+    for a,b in zip(left,right):same(a,b,label,tolerance)
+                               ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression.command differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 55, in test_nested_command_and_reward_json_roundtrip
+    self.accepted(live, saved)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression.command differs')
+
+======================================================================
+FAIL: test_nonfinite_values_are_rejected_even_same_type (__main__.ScalarTests.test_nonfinite_values_are_rejected_even_same_type) (value=inf, a='float64')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 77, in test_nonfinite_values_are_rejected_even_same_type
+    with self.subTest(value=value, a=type(a).__name__), self.assertRaises(ValueError):
+                                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonfinite_values_are_rejected_even_same_type (__main__.ScalarTests.test_nonfinite_values_are_rejected_even_same_type) (value=-inf, a='float64')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 77, in test_nonfinite_values_are_rejected_even_same_type
+    with self.subTest(value=value, a=type(a).__name__), self.assertRaises(ValueError):
+                                                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_same_boolean_values_keep_boolean_semantics (__main__.ScalarTests.test_same_boolean_values_keep_boolean_semantics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 40, in accepted
+    api.same(left, right, 'regression', tolerance)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: regression differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 59, in test_same_boolean_values_keep_boolean_semantics
+    self.accepted(np.bool_(True), True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 42, in accepted
+    self.fail('Equal supported values were rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Equal supported values were rejected: ValueError('regression differs')
+
+======================================================================
+FAIL: test_real_serialized_archive_passes_complete_audit (__main__.ArchiveTests.test_real_serialized_archive_passes_complete_audit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 107, in verified
+    result = api.assess_raw(raw, raw['spec'], self.binding)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 104, in assess_raw
+    for key,value in log.items():same(value,result['action_log'][key],'action log.'+key)
+                                 ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 28, in same
+    for a,b in zip(left,right):same(a,b,label,tolerance)
+                               ~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: action log.unfiltered_stage_limited_total differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 119, in test_real_serialized_archive_passes_complete_audit
+    self.verified(self.raw)
+    ~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 109, in verified
+    self.fail('Preserved valid physical evidence was rejected: ' + repr(exc))
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Preserved valid physical evidence was rejected: ValueError('action log.unfiltered_stage_limited_total differs')
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.474s
+
+FAILED (failures=19)

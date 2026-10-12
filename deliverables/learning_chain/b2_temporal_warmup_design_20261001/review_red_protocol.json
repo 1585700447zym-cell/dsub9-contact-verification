@@ -1,0 +1,10 @@
+{
+  "tests": 17,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 0,
+  "forbidden_imports": [],
+  "new_model_calls": 0,
+  "new_physics": 0,
+  "new_updates": 0
+}

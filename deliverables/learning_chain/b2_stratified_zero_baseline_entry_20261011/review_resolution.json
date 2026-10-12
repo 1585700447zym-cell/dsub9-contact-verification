@@ -1,0 +1,84 @@
+{
+  "author_verification": "6 RED failures ->6 GREEN; final suite46/46",
+  "deferred_minors": [],
+  "findings": [
+    {
+      "change": "reconcile persisted case receipts after package tree exit; incomplete control tail is lower bound",
+      "id": "I1",
+      "severity": "Important",
+      "status": "fixed",
+      "test": "test_outer_kill_reconciles_late_receipt_and_marks_unobserved_control_tail"
+    },
+    {
+      "change": "retain failed-exit or corrupt archive as incomplete/fault evidence; omit from matrix statistics",
+      "id": "I2",
+      "severity": "Important",
+      "status": "fixed",
+      "tests": [
+        "test_finished_archive_with_failed_exit_is_retained_as_fault_without_statistics",
+        "test_corrupt_archive_is_retained_and_does_not_abort_all_attempts"
+      ]
+    },
+    {
+      "change": "reservations distinct from reset attempts; unknown cost evidence retains dynamic interval",
+      "id": "I3",
+      "severity": "Important",
+      "status": "fixed",
+      "tests": [
+        "test_pre_go_reservation_never_increments_actual_dynamic_total",
+        "test_missing_receipt_and_unknown_go_do_not_become_zero_measurement"
+      ]
+    },
+    {
+      "change": "Task4 explicitly requires success quantiles; fixed linear P50/P90",
+      "id": "M1",
+      "original_severity": "Minor",
+      "severity": "Important",
+      "status": "fixed_planned_output",
+      "test": "test_planned_success_quantiles_use_fixed_linear_interpolation"
+    }
+  ],
+  "fresh_review_completed": true,
+  "independent_re_review_performed": false,
+  "new_physics": 0,
+  "new_policy_calls": 0,
+  "new_updates": 0,
+  "original_verdict": "With fixes",
+  "review_model": "gpt-6-astra",
+  "reviewer": "stratified_entry_final_review",
+  "rulings": [
+    {
+      "cost": "manual archive instead of a new commit-range ledger",
+      "decision": "retain existing user worktree, uncommitted artifacts and durable plan ledger; no checkout/commit/delete",
+      "topic": "workspace_and_git"
+    },
+    {
+      "cost": "one historical regression assertion remains failing",
+      "decision": "preserve old time-state assumption and report26/27 rather than delete executed artifacts or rewrite old test",
+      "topic": "historical_failed_test"
+    },
+    {
+      "cost": "standard-library calculation and one of6 new checks; zero science",
+      "decision": "regrade missing Task4 output as implementation incompleteness and implement fixed P50/P90",
+      "topic": "planned_quantiles"
+    },
+    {
+      "cost": "no claim of actual native initialization/dynamics or nested job integration",
+      "decision": "remain pending actual new finite package",
+      "topic": "declined_real_21_and_nested_windows_jobs"
+    },
+    {
+      "cost": "no new nonzero policy, continuous scope or training qualification",
+      "decision": "separate later scope; preserve fullB2/C pending and mainRL",
+      "topic": "declined_nonzero_SAC_and_B2_C"
+    },
+    {
+      "cost": "publication review is weaker than another independent pass",
+      "decision": "author verifies five rolling docs/snapshots/seal, no second independent review",
+      "topic": "declined_publication"
+    }
+  ],
+  "scientific_execution_admitted": false,
+  "training_admitted": false,
+  "unresolved_critical_important": []
+}

@@ -1,0 +1,15 @@
+........................................................................ [ 36%]
+........................F............................................... [ 72%]
+.......................................................                  [100%]
+================================== FAILURES ===================================
+_______ test_new_task_changes_only_total_time_and_preserves_old_default _______
+tests\task_variants\test_deadline25_preflight.py:113: in test_new_task_changes_only_total_time_and_preserves_old_default
+    a=old.make_session(env).controller_factory()
+tools\validation\run_reference_search_preflight.py:76: in make_session
+    return ReferenceSearchSession(environment=env,
+tools\learning\guarded_session.py:11: in __init__
+    raise TypeError('Candidate session requires the explicit candidate environment')
+E   TypeError: Candidate session requires the explicit candidate environment
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_deadline25_preflight.py::test_new_task_changes_only_total_time_and_preserves_old_default
+1 failed, 198 passed in 23.22s

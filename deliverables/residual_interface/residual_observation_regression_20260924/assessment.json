@@ -1,0 +1,3718 @@
+{
+  "passed": true,
+  "source_unchanged": true,
+  "wall_seconds": 613.3396979999961,
+  "runs": [
+    {
+      "case": "aligned",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 2165,
+      "tail_cycles_compared": 880,
+      "source_archive_sha256": {
+        "original.json.gz": "f1b04ade348450cb9c8efb6558ee756cdbee35c8f9403b72b62f12e772818256",
+        "stop_extension.json.gz": "e0ef044e05a34e0fc8aa4d9005de57537c8f108f9d637d3649e658266931cd9b"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.0,
+          "checked_substeps": 30450
+        }
+      },
+      "events": [
+        {
+          "time_s": 4.089999999999782,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 30450,
+      "wall_seconds": 139.70665619999636,
+      "interface": {
+        "observation_version": "residual_whitelist_v1",
+        "schema": [
+          {
+            "name": "wrench_history_M",
+            "start": 0,
+            "width": 24,
+            "scale": [
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005
+            ],
+            "unit": "N,Nm",
+            "source": "simulation_contact_wrench_M_control_samples_newest_first"
+          },
+          {
+            "name": "relative_position_m",
+            "start": 24,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "relative_rotation_world_rad",
+            "start": 27,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "velocity_world",
+            "start": 30,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "proprioception"
+          },
+          {
+            "name": "maximum_advance_m",
+            "start": 36,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "base_command",
+            "start": 37,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_limited_command",
+            "start": 43,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_residual",
+            "start": 49,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "policy_phase",
+            "start": 53,
+            "width": 5,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "physical_phase",
+            "start": 58,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recovery_phase",
+            "start": 62,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "decision",
+            "start": 66,
+            "width": 9,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "pending",
+            "start": 75,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "action_active",
+            "start": 76,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "simulation_valid",
+            "start": 77,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "latched_guards",
+            "start": 78,
+            "width": 7,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "invalid_latched",
+            "start": 85,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "total_budget_remaining_s",
+            "start": 86,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_remaining_s",
+            "start": 87,
+            "width": 1,
+            "scale": [
+              8.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_valid",
+            "start": 88,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "searches_remaining",
+            "start": 89,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recoveries_remaining",
+            "start": 90,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_velocity",
+            "start": 91,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_offset",
+            "start": 95,
+            "width": 4,
+            "scale": [
+              0.004,
+              0.004,
+              0.08,
+              0.08
+            ],
+            "unit": "m,rad",
+            "source": "controller"
+          },
+          {
+            "name": "spiral_theta_rad",
+            "start": 99,
+            "width": 1,
+            "scale": [
+              18.84955592153876
+            ],
+            "unit": "rad",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_m",
+            "start": 100,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_valid",
+            "start": 103,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stall_progress_m",
+            "start": 104,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "stall_span_s",
+            "start": 105,
+            "width": 1,
+            "scale": [
+              0.4
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stall_valid",
+            "start": 106,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "phase_elapsed_s",
+            "start": 107,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_elapsed_s",
+            "start": 108,
+            "width": 1,
+            "scale": [
+              0.1
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_valid",
+            "start": 109,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stop_elapsed_s",
+            "start": 110,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stop_valid",
+            "start": 111,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "wait_elapsed_s",
+            "start": 112,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "wait_valid",
+            "start": 113,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "reference_position_error_m",
+            "start": 114,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "reference_rotation_error_world_rad",
+            "start": 117,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "controller"
+          }
+        ],
+        "reward_total": 14.390113351724022,
+        "terminal_rewards": [
+          10.0
+        ]
+      },
+      "candidate_reference_sha256": "9672420d1ec722068a9f98f2cdef25bba5672ffb41fc4d060814d73358ec3628",
+      "same_guard_match": true
+    },
+    {
+      "case": "combined_a",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 6195,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "52b4a15841db5a6f72b342a3a753ccb8eebf323ef31b8424997d60dadab6b800",
+        "stop_extension.json.gz": "77902acdfb52496f8f4051728a036da0e217bc0f967f8e653bc2f726d397f6cc"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.028934232430889675,
+        "checked_substeps": 66950
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.028934232430889675,
+          "checked_substeps": 66950
+        }
+      },
+      "events": [
+        {
+          "time_s": 11.390000000000132,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 66950,
+      "wall_seconds": 307.00133260001894,
+      "interface": {
+        "observation_version": "residual_whitelist_v1",
+        "schema": [
+          {
+            "name": "wrench_history_M",
+            "start": 0,
+            "width": 24,
+            "scale": [
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005
+            ],
+            "unit": "N,Nm",
+            "source": "simulation_contact_wrench_M_control_samples_newest_first"
+          },
+          {
+            "name": "relative_position_m",
+            "start": 24,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "relative_rotation_world_rad",
+            "start": 27,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "velocity_world",
+            "start": 30,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "proprioception"
+          },
+          {
+            "name": "maximum_advance_m",
+            "start": 36,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "base_command",
+            "start": 37,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_limited_command",
+            "start": 43,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_residual",
+            "start": 49,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "policy_phase",
+            "start": 53,
+            "width": 5,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "physical_phase",
+            "start": 58,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recovery_phase",
+            "start": 62,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "decision",
+            "start": 66,
+            "width": 9,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "pending",
+            "start": 75,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "action_active",
+            "start": 76,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "simulation_valid",
+            "start": 77,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "latched_guards",
+            "start": 78,
+            "width": 7,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "invalid_latched",
+            "start": 85,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "total_budget_remaining_s",
+            "start": 86,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_remaining_s",
+            "start": 87,
+            "width": 1,
+            "scale": [
+              8.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_valid",
+            "start": 88,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "searches_remaining",
+            "start": 89,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recoveries_remaining",
+            "start": 90,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_velocity",
+            "start": 91,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_offset",
+            "start": 95,
+            "width": 4,
+            "scale": [
+              0.004,
+              0.004,
+              0.08,
+              0.08
+            ],
+            "unit": "m,rad",
+            "source": "controller"
+          },
+          {
+            "name": "spiral_theta_rad",
+            "start": 99,
+            "width": 1,
+            "scale": [
+              18.84955592153876
+            ],
+            "unit": "rad",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_m",
+            "start": 100,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_valid",
+            "start": 103,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stall_progress_m",
+            "start": 104,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "stall_span_s",
+            "start": 105,
+            "width": 1,
+            "scale": [
+              0.4
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stall_valid",
+            "start": 106,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "phase_elapsed_s",
+            "start": 107,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_elapsed_s",
+            "start": 108,
+            "width": 1,
+            "scale": [
+              0.1
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_valid",
+            "start": 109,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stop_elapsed_s",
+            "start": 110,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stop_valid",
+            "start": 111,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "wait_elapsed_s",
+            "start": 112,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "wait_valid",
+            "start": 113,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "reference_position_error_m",
+            "start": 114,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "reference_rotation_error_world_rad",
+            "start": 117,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "controller"
+          }
+        ],
+        "reward_total": 1.0641282352057848,
+        "terminal_rewards": [
+          -2.0
+        ]
+      },
+      "candidate_reference_sha256": "ed64cda1ea3f2bc76dfa097f5f0bbca7de8f204e1e30a99a1d08424e5aad5db3",
+      "same_guard_match": true
+    },
+    {
+      "case": "combined_a_scale_0.75",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 5804,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "0af2901617d14e60d9e147555773b6f5348b010286252efad163a4cce8fc480c",
+        "stop_extension.json.gz": "a1c9528dc51312d80cb500b2dd2d838539a2bf8fd9a1ec6532b9920965f51e96"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.021708272024816445,
+        "checked_substeps": 63040
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.021708272024816445,
+          "checked_substeps": 63040
+        }
+      },
+      "events": [
+        {
+          "time_s": 10.608000000001955,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 63040,
+      "wall_seconds": 277.74984000000404,
+      "interface": {
+        "observation_version": "residual_whitelist_v1",
+        "schema": [
+          {
+            "name": "wrench_history_M",
+            "start": 0,
+            "width": 24,
+            "scale": [
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005
+            ],
+            "unit": "N,Nm",
+            "source": "simulation_contact_wrench_M_control_samples_newest_first"
+          },
+          {
+            "name": "relative_position_m",
+            "start": 24,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "relative_rotation_world_rad",
+            "start": 27,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "velocity_world",
+            "start": 30,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "proprioception"
+          },
+          {
+            "name": "maximum_advance_m",
+            "start": 36,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "base_command",
+            "start": 37,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_limited_command",
+            "start": 43,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_residual",
+            "start": 49,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "policy_phase",
+            "start": 53,
+            "width": 5,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "physical_phase",
+            "start": 58,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recovery_phase",
+            "start": 62,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "decision",
+            "start": 66,
+            "width": 9,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "pending",
+            "start": 75,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "action_active",
+            "start": 76,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "simulation_valid",
+            "start": 77,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "latched_guards",
+            "start": 78,
+            "width": 7,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "invalid_latched",
+            "start": 85,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "total_budget_remaining_s",
+            "start": 86,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_remaining_s",
+            "start": 87,
+            "width": 1,
+            "scale": [
+              8.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_valid",
+            "start": 88,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "searches_remaining",
+            "start": 89,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recoveries_remaining",
+            "start": 90,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_velocity",
+            "start": 91,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_offset",
+            "start": 95,
+            "width": 4,
+            "scale": [
+              0.004,
+              0.004,
+              0.08,
+              0.08
+            ],
+            "unit": "m,rad",
+            "source": "controller"
+          },
+          {
+            "name": "spiral_theta_rad",
+            "start": 99,
+            "width": 1,
+            "scale": [
+              18.84955592153876
+            ],
+            "unit": "rad",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_m",
+            "start": 100,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_valid",
+            "start": 103,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stall_progress_m",
+            "start": 104,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "stall_span_s",
+            "start": 105,
+            "width": 1,
+            "scale": [
+              0.4
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stall_valid",
+            "start": 106,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "phase_elapsed_s",
+            "start": 107,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_elapsed_s",
+            "start": 108,
+            "width": 1,
+            "scale": [
+              0.1
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_valid",
+            "start": 109,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stop_elapsed_s",
+            "start": 110,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stop_valid",
+            "start": 111,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "wait_elapsed_s",
+            "start": 112,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "wait_valid",
+            "start": 113,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "reference_position_error_m",
+            "start": 114,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "reference_rotation_error_world_rad",
+            "start": 117,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "controller"
+          }
+        ],
+        "reward_total": 1.2554722744743478,
+        "terminal_rewards": [
+          -2.0
+        ]
+      },
+      "candidate_reference_sha256": "cf41cd9bb32ab9ddec640ba929a0c5159fdf768c29684f6837216d896fbe32ee",
+      "same_guard_match": true
+    },
+    {
+      "case": "combined_b_scale_0.75",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 6902,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "e9bef88a9c84a23ab692d58c2b6dcb1c8f09c98ad5ccb0e5f8507d4fa505b637",
+        "stop_extension.json.gz": "ff1ff0e79fcbfdadc9d74932f323e861950e856fd8763df4c13cdda47f095870"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.02326449921098821,
+        "checked_substeps": 74020
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.02326449921098821,
+          "checked_substeps": 74020
+        }
+      },
+      "events": [
+        {
+          "time_s": 12.803999999996837,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 74020,
+      "wall_seconds": 282.7388286999776,
+      "interface": {
+        "observation_version": "residual_whitelist_v1",
+        "schema": [
+          {
+            "name": "wrench_history_M",
+            "start": 0,
+            "width": 24,
+            "scale": [
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005
+            ],
+            "unit": "N,Nm",
+            "source": "simulation_contact_wrench_M_control_samples_newest_first"
+          },
+          {
+            "name": "relative_position_m",
+            "start": 24,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "relative_rotation_world_rad",
+            "start": 27,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "velocity_world",
+            "start": 30,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "proprioception"
+          },
+          {
+            "name": "maximum_advance_m",
+            "start": 36,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "base_command",
+            "start": 37,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_limited_command",
+            "start": 43,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_residual",
+            "start": 49,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "policy_phase",
+            "start": 53,
+            "width": 5,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "physical_phase",
+            "start": 58,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recovery_phase",
+            "start": 62,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "decision",
+            "start": 66,
+            "width": 9,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "pending",
+            "start": 75,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "action_active",
+            "start": 76,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "simulation_valid",
+            "start": 77,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "latched_guards",
+            "start": 78,
+            "width": 7,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "invalid_latched",
+            "start": 85,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "total_budget_remaining_s",
+            "start": 86,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_remaining_s",
+            "start": 87,
+            "width": 1,
+            "scale": [
+              8.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_valid",
+            "start": 88,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "searches_remaining",
+            "start": 89,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recoveries_remaining",
+            "start": 90,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_velocity",
+            "start": 91,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_offset",
+            "start": 95,
+            "width": 4,
+            "scale": [
+              0.004,
+              0.004,
+              0.08,
+              0.08
+            ],
+            "unit": "m,rad",
+            "source": "controller"
+          },
+          {
+            "name": "spiral_theta_rad",
+            "start": 99,
+            "width": 1,
+            "scale": [
+              18.84955592153876
+            ],
+            "unit": "rad",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_m",
+            "start": 100,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_valid",
+            "start": 103,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stall_progress_m",
+            "start": 104,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "stall_span_s",
+            "start": 105,
+            "width": 1,
+            "scale": [
+              0.4
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stall_valid",
+            "start": 106,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "phase_elapsed_s",
+            "start": 107,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_elapsed_s",
+            "start": 108,
+            "width": 1,
+            "scale": [
+              0.1
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_valid",
+            "start": 109,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stop_elapsed_s",
+            "start": 110,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stop_valid",
+            "start": 111,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "wait_elapsed_s",
+            "start": 112,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "wait_valid",
+            "start": 113,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "reference_position_error_m",
+            "start": 114,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "reference_rotation_error_world_rad",
+            "start": 117,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "controller"
+          }
+        ],
+        "reward_total": 0.8667100436786477,
+        "terminal_rewards": [
+          -2.0
+        ]
+      },
+      "candidate_reference_sha256": "1b603167c9f189cd41d1b8b9361b100ccacbd9dc40ef0881bc457968b32cddc3",
+      "same_guard_match": true
+    },
+    {
+      "case": "roll_pos_1.5deg",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 5274,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "63ce8b4888b7aea328d394683e6b0e6481d4224f0c17cce884843108ace50c76",
+        "stop_extension.json.gz": "6b5854c17c07c8d1c199a0a7bed6f81d25de54fcdb0a86387319796946c5c6b7"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.006014088955130452,
+        "checked_substeps": 57740
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.006014088955130452,
+          "checked_substeps": 57740
+        }
+      },
+      "events": [
+        {
+          "time_s": 9.548000000004425,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 57740,
+      "wall_seconds": 266.2896469999687,
+      "interface": {
+        "observation_version": "residual_whitelist_v1",
+        "schema": [
+          {
+            "name": "wrench_history_M",
+            "start": 0,
+            "width": 24,
+            "scale": [
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005
+            ],
+            "unit": "N,Nm",
+            "source": "simulation_contact_wrench_M_control_samples_newest_first"
+          },
+          {
+            "name": "relative_position_m",
+            "start": 24,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "relative_rotation_world_rad",
+            "start": 27,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "velocity_world",
+            "start": 30,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "proprioception"
+          },
+          {
+            "name": "maximum_advance_m",
+            "start": 36,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "base_command",
+            "start": 37,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_limited_command",
+            "start": 43,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_residual",
+            "start": 49,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "policy_phase",
+            "start": 53,
+            "width": 5,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "physical_phase",
+            "start": 58,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recovery_phase",
+            "start": 62,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "decision",
+            "start": 66,
+            "width": 9,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "pending",
+            "start": 75,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "action_active",
+            "start": 76,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "simulation_valid",
+            "start": 77,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "latched_guards",
+            "start": 78,
+            "width": 7,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "invalid_latched",
+            "start": 85,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "total_budget_remaining_s",
+            "start": 86,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_remaining_s",
+            "start": 87,
+            "width": 1,
+            "scale": [
+              8.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_valid",
+            "start": 88,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "searches_remaining",
+            "start": 89,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recoveries_remaining",
+            "start": 90,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_velocity",
+            "start": 91,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_offset",
+            "start": 95,
+            "width": 4,
+            "scale": [
+              0.004,
+              0.004,
+              0.08,
+              0.08
+            ],
+            "unit": "m,rad",
+            "source": "controller"
+          },
+          {
+            "name": "spiral_theta_rad",
+            "start": 99,
+            "width": 1,
+            "scale": [
+              18.84955592153876
+            ],
+            "unit": "rad",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_m",
+            "start": 100,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_valid",
+            "start": 103,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stall_progress_m",
+            "start": 104,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "stall_span_s",
+            "start": 105,
+            "width": 1,
+            "scale": [
+              0.4
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stall_valid",
+            "start": 106,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "phase_elapsed_s",
+            "start": 107,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_elapsed_s",
+            "start": 108,
+            "width": 1,
+            "scale": [
+              0.1
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_valid",
+            "start": 109,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stop_elapsed_s",
+            "start": 110,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stop_valid",
+            "start": 111,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "wait_elapsed_s",
+            "start": 112,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "wait_valid",
+            "start": 113,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "reference_position_error_m",
+            "start": 114,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "reference_rotation_error_world_rad",
+            "start": 117,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "controller"
+          }
+        ],
+        "reward_total": 1.5762728650311497,
+        "terminal_rewards": [
+          -2.0
+        ]
+      },
+      "candidate_reference_sha256": "7a1aafda8a694ea6a0beb852b954c848044d572cbcf19e69072646088c4ceaab",
+      "same_guard_match": true
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 5394,
+      "tail_cycles_compared": 880,
+      "source_archive_sha256": {
+        "original.json.gz": "a143c2e1beb5d8ee2dd291ff9b5a3343f9ab289f51c14922a7fb7f72d9ccce51",
+        "stop_extension.json.gz": "4a843cbe3725d7e2e6d1e7f0050ed96cc247c1208ce4f31d0b8a69067fa74949"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0016542135102412018,
+        "checked_substeps": 62740
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.0016542135102412018,
+          "checked_substeps": 62740
+        }
+      },
+      "events": [
+        {
+          "time_s": 10.548000000002094,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 62740,
+      "wall_seconds": 320.7339695999981,
+      "interface": {
+        "observation_version": "residual_whitelist_v1",
+        "schema": [
+          {
+            "name": "wrench_history_M",
+            "start": 0,
+            "width": 24,
+            "scale": [
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005
+            ],
+            "unit": "N,Nm",
+            "source": "simulation_contact_wrench_M_control_samples_newest_first"
+          },
+          {
+            "name": "relative_position_m",
+            "start": 24,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "relative_rotation_world_rad",
+            "start": 27,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "velocity_world",
+            "start": 30,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "proprioception"
+          },
+          {
+            "name": "maximum_advance_m",
+            "start": 36,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "base_command",
+            "start": 37,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_limited_command",
+            "start": 43,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_residual",
+            "start": 49,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "policy_phase",
+            "start": 53,
+            "width": 5,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "physical_phase",
+            "start": 58,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recovery_phase",
+            "start": 62,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "decision",
+            "start": 66,
+            "width": 9,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "pending",
+            "start": 75,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "action_active",
+            "start": 76,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "simulation_valid",
+            "start": 77,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "latched_guards",
+            "start": 78,
+            "width": 7,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "invalid_latched",
+            "start": 85,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "total_budget_remaining_s",
+            "start": 86,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_remaining_s",
+            "start": 87,
+            "width": 1,
+            "scale": [
+              8.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_valid",
+            "start": 88,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "searches_remaining",
+            "start": 89,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recoveries_remaining",
+            "start": 90,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_velocity",
+            "start": 91,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_offset",
+            "start": 95,
+            "width": 4,
+            "scale": [
+              0.004,
+              0.004,
+              0.08,
+              0.08
+            ],
+            "unit": "m,rad",
+            "source": "controller"
+          },
+          {
+            "name": "spiral_theta_rad",
+            "start": 99,
+            "width": 1,
+            "scale": [
+              18.84955592153876
+            ],
+            "unit": "rad",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_m",
+            "start": 100,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_valid",
+            "start": 103,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stall_progress_m",
+            "start": 104,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "stall_span_s",
+            "start": 105,
+            "width": 1,
+            "scale": [
+              0.4
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stall_valid",
+            "start": 106,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "phase_elapsed_s",
+            "start": 107,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_elapsed_s",
+            "start": 108,
+            "width": 1,
+            "scale": [
+              0.1
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_valid",
+            "start": 109,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stop_elapsed_s",
+            "start": 110,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stop_valid",
+            "start": 111,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "wait_elapsed_s",
+            "start": 112,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "wait_valid",
+            "start": 113,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "reference_position_error_m",
+            "start": 114,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "reference_rotation_error_world_rad",
+            "start": 117,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "controller"
+          }
+        ],
+        "reward_total": 13.427203452292893,
+        "terminal_rewards": [
+          10.0
+        ]
+      },
+      "candidate_reference_sha256": "1f3956bae58a229e06493ee2a37c655cd41b51e2b18063be87d439469d1f7542",
+      "same_guard_match": true
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 4974,
+      "tail_cycles_compared": 880,
+      "source_archive_sha256": {
+        "original.json.gz": "0620527760612e18ef8e90528512234cda00cf2d3c721ee083fa1bd4a9429ef5",
+        "stop_extension.json.gz": "888b01d2fa0c8b571db185569cd3add6dceaa5256501a49d93a3bb1cbae0466c"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.001701133174356725,
+        "checked_substeps": 58540
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.001701133174356725,
+          "checked_substeps": 58540
+        }
+      },
+      "events": [
+        {
+          "time_s": 9.708000000004052,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 58540,
+      "wall_seconds": 320.8721529999748,
+      "interface": {
+        "observation_version": "residual_whitelist_v1",
+        "schema": [
+          {
+            "name": "wrench_history_M",
+            "start": 0,
+            "width": 24,
+            "scale": [
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005,
+              0.025,
+              0.025,
+              0.025,
+              0.0005,
+              0.0005,
+              0.0005
+            ],
+            "unit": "N,Nm",
+            "source": "simulation_contact_wrench_M_control_samples_newest_first"
+          },
+          {
+            "name": "relative_position_m",
+            "start": 24,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "relative_rotation_world_rad",
+            "start": 27,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "velocity_world",
+            "start": 30,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "proprioception"
+          },
+          {
+            "name": "maximum_advance_m",
+            "start": 36,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "relative_proprioception"
+          },
+          {
+            "name": "base_command",
+            "start": 37,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_limited_command",
+            "start": 43,
+            "width": 6,
+            "scale": [
+              0.001,
+              0.001,
+              0.001,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "previous_residual",
+            "start": 49,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "policy_phase",
+            "start": 53,
+            "width": 5,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "physical_phase",
+            "start": 58,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recovery_phase",
+            "start": 62,
+            "width": 4,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "decision",
+            "start": 66,
+            "width": 9,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "pending",
+            "start": 75,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "action_active",
+            "start": 76,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "simulation_valid",
+            "start": 77,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "latched_guards",
+            "start": 78,
+            "width": 7,
+            "scale": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "invalid_latched",
+            "start": 85,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "total_budget_remaining_s",
+            "start": 86,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_remaining_s",
+            "start": 87,
+            "width": 1,
+            "scale": [
+              8.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "search_budget_valid",
+            "start": 88,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "searches_remaining",
+            "start": 89,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "recoveries_remaining",
+            "start": 90,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_velocity",
+            "start": 91,
+            "width": 4,
+            "scale": [
+              0.001,
+              0.001,
+              0.03,
+              0.03
+            ],
+            "unit": "m/s,rad/s",
+            "source": "controller"
+          },
+          {
+            "name": "admittance_offset",
+            "start": 95,
+            "width": 4,
+            "scale": [
+              0.004,
+              0.004,
+              0.08,
+              0.08
+            ],
+            "unit": "m,rad",
+            "source": "controller"
+          },
+          {
+            "name": "spiral_theta_rad",
+            "start": 99,
+            "width": 1,
+            "scale": [
+              18.84955592153876
+            ],
+            "unit": "rad",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_m",
+            "start": 100,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "search_origin_valid",
+            "start": 103,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stall_progress_m",
+            "start": 104,
+            "width": 1,
+            "scale": [
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "stall_span_s",
+            "start": 105,
+            "width": 1,
+            "scale": [
+              0.4
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stall_valid",
+            "start": 106,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "phase_elapsed_s",
+            "start": 107,
+            "width": 1,
+            "scale": [
+              20.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_elapsed_s",
+            "start": 108,
+            "width": 1,
+            "scale": [
+              0.1
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "hold_valid",
+            "start": 109,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "stop_elapsed_s",
+            "start": 110,
+            "width": 1,
+            "scale": [
+              2.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "stop_valid",
+            "start": 111,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "wait_elapsed_s",
+            "start": 112,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "s",
+            "source": "controller"
+          },
+          {
+            "name": "wait_valid",
+            "start": 113,
+            "width": 1,
+            "scale": [
+              1.0
+            ],
+            "unit": "1",
+            "source": "controller"
+          },
+          {
+            "name": "reference_position_error_m",
+            "start": 114,
+            "width": 3,
+            "scale": [
+              0.004,
+              0.004,
+              0.004
+            ],
+            "unit": "m",
+            "source": "controller"
+          },
+          {
+            "name": "reference_rotation_error_world_rad",
+            "start": 117,
+            "width": 3,
+            "scale": [
+              0.08,
+              0.08,
+              0.08
+            ],
+            "unit": "rad",
+            "source": "controller"
+          }
+        ],
+        "reward_total": 13.557410257739742,
+        "terminal_rewards": [
+          10.0
+        ]
+      },
+      "candidate_reference_sha256": "27f2124c4eb81699a17b95d0f7afaae53bef9dcb7cbc83753a70a97ba9ebc42e",
+      "same_guard_match": true
+    }
+  ],
+  "training_admitted": false
+}

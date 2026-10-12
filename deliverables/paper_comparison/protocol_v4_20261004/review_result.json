@@ -1,0 +1,14 @@
+{
+  "initial_critical": 0,
+  "initial_important": 2,
+  "initial_minor": 0,
+  "fixed_important": 2,
+  "unresolved_critical": 0,
+  "unresolved_important": 0,
+  "deferred_minor": 0,
+  "independent_author": true,
+  "fresh_context": true,
+  "reviewer": "/root/paper_protocol_review",
+  "red_failures": 11,
+  "green_tests": 36
+}

@@ -1,0 +1,28 @@
+{
+  "cases": [
+    "aligned",
+    "combined_a",
+    "combined_a_scale_0.75",
+    "combined_b_scale_0.75",
+    "roll_pos_1.5deg",
+    "x_offset_pos_100um",
+    "y_offset_neg_100um"
+  ],
+  "source_sha256": {
+    "tools/learning/action.py": "9070f0fcf1674e4c814634ab27a578badeb94e8a086043e610a2a654b0fc2aac",
+    "tools/learning/environment.py": "1e248e6b58a958716c5cababf3fd305d77603b1f3c7864816cf59a3b09134822",
+    "tools/learning/episode_buffer.py": "213046ebe930a49f19b32d8702cefdb599691a9f395198368a63ebd34162236e",
+    "tools/learning/guarded_environment.py": "71f9996f00fbfe6abb4b6779f3c9d58342aa8fda3083376f991f8cdc04cf84ef",
+    "tools/learning/guarded_session.py": "643ddc4d11beeade4d8b6092ea15ad49cf2160a007ec75b5a1d08f89f04ed41a",
+    "tools/learning/outcome.py": "2b435ad40052146d5d1093deb79f618e66d6b6eacaf4dd42497ad1540afcbf8f",
+    "tools/learning/reward.py": "511a008eb8261e39f261a707644de742faefbbc9dc670f44ca44e6c59e81ba5b",
+    "tools/learning/runtime.py": "9c9b0492df21ce52352234b1671231aad0dcc6bfb7cb1fa14c70f1031a2520d6",
+    "tools/learning/session.py": "c7a04fa0ea4d5ef3a502326fdb85615b1e4769490c2ec78900c285ac4e17e1cb",
+    "tools/learning/types.py": "94af5d48620e1a779060e2091ff154d3445363cd35d411c10bdefd53ba0442f8",
+    "tools/learning/__init__.py": "2d2b6f4f7e5a9247c7a1332442dd3e555b5b51d418b402910c406547cb01b896",
+    "tools/validation/verify_guard_baseline.py": "c2778bf95053bfd8414210ddd5fad76a11a647325588abc301dfd859298e0dec",
+    "tools/validation/verify_zero_residual_session.py": "5a218c59cff4b3d161d345775f4f293075cb4b0c8439abc45ace10974b359433"
+  },
+  "comparison": "exact_all_archived_fields_no_tolerance",
+  "training_admitted": false
+}

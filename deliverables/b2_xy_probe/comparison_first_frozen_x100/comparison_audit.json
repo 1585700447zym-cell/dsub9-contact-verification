@@ -1,0 +1,164 @@
+{
+  "identical_prefix_samples": 5388,
+  "identical_through_s": 10.774000000001568,
+  "checked_probe_commands": 363,
+  "probe_execution": {
+    "scheduled_pause_s": 1.0,
+    "zero_gain_command_duration_s": 0.726,
+    "resume_ramp_executed": false,
+    "ended_by_parent": {
+      "time_s": 11.499999999999876,
+      "event": "XY_PROBE_ENDED_BY_PARENT",
+      "phase": "INSERT"
+    }
+  },
+  "probe_events": [
+    {
+      "time_s": 10.774000000001568,
+      "event": "XY_PROBE_START",
+      "relative_search_advance_m": 0.00010047786167579828,
+      "episode_advance_m": 8.008795180013736e-05
+    },
+    {
+      "time_s": 11.499999999999876,
+      "event": "XY_PROBE_ENDED_BY_PARENT",
+      "phase": "INSERT"
+    }
+  ],
+  "verified_exit_events": [
+    {
+      "time_s": 11.499999999999876,
+      "phase": "INSERT",
+      "reason": "SEARCH_ADVANCED",
+      "blocked_z_m": 0.0002500129658939321,
+      "exit_evidence": {
+        "blocked_z_m": 0.0002500129658939321,
+        "threshold_z_m": 0.0003500129658939321,
+        "exit_z_m": 0.0003704900901246532,
+        "duration_s": 0.04999999999988347,
+        "advance_m": 1.9999999999989644e-05,
+        "max_observed_force_N": 0.0
+      }
+    }
+  ],
+  "reference_metrics": {
+    "case": "x_offset_pos_100um",
+    "policy": "B2",
+    "advance_mm": 0.24558399969829176,
+    "z_error_um": 3754.416000301708,
+    "xy_error_um": 78.05837233957403,
+    "angle_deg": 0.05062295176978701,
+    "peak_force_mN": 24.4773781682511,
+    "peak_torque_mNm": 0.2965289468386507,
+    "peak_penetration_um": 15.14721501654894,
+    "termination": "SEARCH_BUDGET_EXHAUSTED",
+    "success": false,
+    "stop_time_s": 18.10999999998447,
+    "success_time_s": null,
+    "searches": 2,
+    "recoveries": 1,
+    "unmet": [
+      "Z 未到位",
+      "XY 精度"
+    ]
+  },
+  "candidate_metrics": {
+    "case": "x_offset_pos_100um",
+    "policy": "B2",
+    "advance_mm": 3.9912100901250787,
+    "z_error_um": 8.789909874921836,
+    "xy_error_um": 63.978838240527935,
+    "angle_deg": 0.22636902865890857,
+    "peak_force_mN": 24.4773781682511,
+    "peak_torque_mNm": 0.2965289468386507,
+    "peak_penetration_um": 15.12477199387784,
+    "termination": "TARGET_POSE_NOT_SETTLED",
+    "success": false,
+    "stop_time_s": 15.155999999991355,
+    "success_time_s": null,
+    "searches": 2,
+    "recoveries": 1,
+    "unmet": [
+      "XY 精度"
+    ]
+  },
+  "historical_v1_metrics": {
+    "case": "x_offset_pos_100um",
+    "policy": "B2",
+    "advance_mm": 3.9908100901253145,
+    "z_error_um": 9.18990987468548,
+    "xy_error_um": 63.978838240532504,
+    "angle_deg": 0.22636902865890857,
+    "peak_force_mN": 24.4773781682511,
+    "peak_torque_mNm": 0.2965289468386507,
+    "peak_penetration_um": 15.12477199387784,
+    "termination": "TARGET_POSE_NOT_SETTLED",
+    "success": false,
+    "stop_time_s": 14.719999999992371,
+    "success_time_s": null,
+    "searches": 2,
+    "recoveries": 1,
+    "unmet": [
+      "XY 精度"
+    ]
+  },
+  "windows": {
+    "0.6": {
+      "reference": {
+        "requested_duration_s": 0.6,
+        "available_duration_s": 0.5999999999986017,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "SEARCH"
+        ],
+        "advance_um": 157.40771481663518,
+        "xy_path_um": 72.60657701630835,
+        "observed_advance_um": 157.40771481663518,
+        "observed_xy_path_um": 72.60657701630835
+      },
+      "candidate": {
+        "requested_duration_s": 0.6,
+        "available_duration_s": 0.5999999999986017,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "SEARCH"
+        ],
+        "advance_um": 240.00213832454193,
+        "xy_path_um": 4.5244527665079435,
+        "observed_advance_um": 240.00213832454193,
+        "observed_xy_path_um": 4.5244527665079435
+      }
+    },
+    "1.0": {
+      "reference": {
+        "requested_duration_s": 1.0,
+        "available_duration_s": 0.9999999999976694,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "SEARCH"
+        ],
+        "advance_um": 167.89543970860063,
+        "xy_path_um": 91.36262201087082,
+        "observed_advance_um": 167.89543970860063,
+        "observed_xy_path_um": 91.36262201087082
+      },
+      "candidate": {
+        "requested_duration_s": 1.0,
+        "available_duration_s": 0.9999999999976694,
+        "complete_window": true,
+        "contains_nonrunning": false,
+        "policy_phases": [
+          "INSERT",
+          "SEARCH"
+        ],
+        "advance_um": 529.1024270844143,
+        "xy_path_um": 4.5244527672569115,
+        "observed_advance_um": 529.1024270844143,
+        "observed_xy_path_um": 4.5244527672569115
+      }
+    }
+  }
+}

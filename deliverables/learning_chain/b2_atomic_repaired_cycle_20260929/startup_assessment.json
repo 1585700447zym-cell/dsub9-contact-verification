@@ -1,0 +1,27 @@
+{
+  "status": "initial_evaluation_running",
+  "checked_at": 1790669235.461867,
+  "candidate_sha256": "ab2fefe0ae4eb6850d5aae768dff7a7c952302e3893f68721fb41a4adf3de379",
+  "authorization_sha256": "74602d300a656257becf57d7db56a7c273426bb1dba2ccdcd322e34fef936b4c",
+  "progress": {
+    "stage": "initial",
+    "case": "x_pos_100",
+    "cycles": 3000,
+    "wall_timestamp": 1790669218.8596745
+  },
+  "new_dynamic_starts": 1,
+  "cumulative": {
+    "previous_dynamic_starts": 44,
+    "new_dynamic_starts": 1,
+    "cumulative_dynamic_starts": 45,
+    "new_dynamic_cap": 32,
+    "cumulative_cap": 76,
+    "formal_update_cap": 4500,
+    "automatic_retry": false,
+    "old_remaining_budget_retired": true
+  },
+  "formal_updates": 0,
+  "automation_status": "ACTIVE",
+  "dashboard_url": "http://127.0.0.1:8766/",
+  "b2_complete": false
+}

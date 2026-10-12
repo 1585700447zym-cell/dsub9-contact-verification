@@ -1,0 +1,174 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_actual_tilt_mismatch_rejected_despite_same_case_name (__main__.ContractTests.test_actual_tilt_mismatch_rejected_despite_same_case_name) ... FAIL
+test_duplicate_reordered_case_rejected (__main__.ContractTests.test_duplicate_reordered_case_rejected) ... FAIL
+test_guard_or_unstopped_closes_package (__main__.ContractTests.test_guard_or_unstopped_closes_package) ... FAIL
+test_incomplete_attempt_cannot_be_retried (__main__.ContractTests.test_incomplete_attempt_cannot_be_retried) ... FAIL
+test_invalid_outcome_is_not_reused (__main__.ContractTests.test_invalid_outcome_is_not_reused) ... FAIL
+test_known_development_archive_does_not_upgrade_scope (__main__.ContractTests.test_known_development_archive_does_not_upgrade_scope) ... FAIL
+test_metric_disagrees_with_accepted_score_rejected (__main__.ContractTests.test_metric_disagrees_with_accepted_score_rejected) ... FAIL
+test_old_training_grant_rejected (__main__.ContractTests.test_old_training_grant_rejected) ... FAIL
+test_only_exact_new_zero_learning_limits_allowed (__main__.ContractTests.test_only_exact_new_zero_learning_limits_allowed) ... FAIL
+test_ordinary_failure_consumes_case_and_allows_next (__main__.ContractTests.test_ordinary_failure_consumes_case_and_allows_next) ... FAIL
+test_simulation_case_does_not_match_registered_pose_rejected (__main__.ContractTests.test_simulation_case_does_not_match_registered_pose_rejected) ... FAIL
+test_task_key_mismatch_rejected (__main__.ContractTests.test_task_key_mismatch_rejected) ... FAIL
+test_unapproved_template_rejected (__main__.ContractTests.test_unapproved_template_rejected) ... FAIL
+test_updates_during_frozen_evaluation_rejected (__main__.ContractTests.test_updates_during_frozen_evaluation_rejected) ... FAIL
+
+======================================================================
+FAIL: test_actual_tilt_mismatch_rejected_despite_same_case_name (__main__.ContractTests.test_actual_tilt_mismatch_rejected_despite_same_case_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_duplicate_reordered_case_rejected (__main__.ContractTests.test_duplicate_reordered_case_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_guard_or_unstopped_closes_package (__main__.ContractTests.test_guard_or_unstopped_closes_package)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_incomplete_attempt_cannot_be_retried (__main__.ContractTests.test_incomplete_attempt_cannot_be_retried)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_invalid_outcome_is_not_reused (__main__.ContractTests.test_invalid_outcome_is_not_reused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_known_development_archive_does_not_upgrade_scope (__main__.ContractTests.test_known_development_archive_does_not_upgrade_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_metric_disagrees_with_accepted_score_rejected (__main__.ContractTests.test_metric_disagrees_with_accepted_score_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_old_training_grant_rejected (__main__.ContractTests.test_old_training_grant_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_only_exact_new_zero_learning_limits_allowed (__main__.ContractTests.test_only_exact_new_zero_learning_limits_allowed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_ordinary_failure_consumes_case_and_allows_next (__main__.ContractTests.test_ordinary_failure_consumes_case_and_allows_next)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_simulation_case_does_not_match_registered_pose_rejected (__main__.ContractTests.test_simulation_case_does_not_match_registered_pose_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_task_key_mismatch_rejected (__main__.ContractTests.test_task_key_mismatch_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_unapproved_template_rejected (__main__.ContractTests.test_unapproved_template_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+======================================================================
+FAIL: test_updates_during_frozen_evaluation_rejected (__main__.ContractTests.test_updates_during_frozen_evaluation_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 26, in setUp
+    self.c = load('contract')
+             ~~~~^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pure_baseline_preparation_20261011\test_preparation.py", line 17, in load
+    raise AssertionError('Missing implemented module: ' + name)
+AssertionError: Missing implemented module: contract
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.008s
+
+FAILED (failures=14)

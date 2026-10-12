@@ -1,0 +1,36 @@
+{
+  "version": "frozen_B_evaluation_authorization_v1",
+  "approved": true,
+  "user_confirmation": "继续",
+  "confirmation_context": "用户确认：完成独立入口适配和协议验证后直接执行冻结B最多4个原开发点，训练0，保护后停止余点，故障不重试，并收口。",
+  "authorized_at": "2026-10-01T13:33:53+08:00",
+  "binding_sha256": "0484c3e6afdc8a6f1230efa4e2ff1b8780b58e544daaa07bc5dc7d2f0bbf4450",
+  "scope": {
+    "branch": "B",
+    "checkpoint_manifest_sha256": "4030ec22b8e78bcc9b255fdbade03184068b6cc59befddbf00a7462040fa3a04",
+    "checkpoint_state_sha256": "9bc6f5cfb3eb91da0e23aaa3048612b7a840fa0ba6b6c9e2e3401d1ef0084059",
+    "cases": [
+      "x_pos_100",
+      "x_neg_100",
+      "y_pos_100",
+      "y_neg_100"
+    ],
+    "dynamic_cap": 4,
+    "previous_dynamic": 58,
+    "cumulative_dynamic_cap": 62,
+    "cycles_per_start": 13000,
+    "actor_state_cap": 52000,
+    "training_batches": 0,
+    "synthetic_transactions": 0,
+    "extra_diagnostic_states": 0,
+    "extra_critic_states": 0,
+    "independent_test": 0,
+    "old_unused_dynamic": 19,
+    "old_unused_batches": 2000,
+    "comparison_unused_dynamic": 7,
+    "old_unused_consumed": 0,
+    "stop_on_any_guard": true,
+    "automatic_retry": false,
+    "automatic_tracking": false
+  }
+}

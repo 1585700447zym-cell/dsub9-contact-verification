@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.456" timestamp="2026-09-24T11:28:39.100107+08:00" hostname="laptopzym"><testcase classname="tests.readiness.test_native313_archive" name="test_full_archive_adapter_wiring_without_physics" time="0.429" /></testsuite></testsuites>

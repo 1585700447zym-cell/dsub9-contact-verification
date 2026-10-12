@@ -1,0 +1,139 @@
+{
+  "status": "RAW_DATA_AUDITED_AFTER_ARCHIVE_ERROR",
+  "original_runner_status": "ERROR",
+  "archive_error": "ValueError('Input changed: deliverables/contact_consistency_repair/候选复验协议.md')",
+  "mujoco_version": "3.13.0",
+  "timestep": 0.0002,
+  "passed": true,
+  "physical_tail_pass": true,
+  "data_continuity_pass": true,
+  "finite": true,
+  "original_termination": "GEOMETRIC_SUCCESS",
+  "stop_time_s": 9.708000000004052,
+  "end_time_s": 11.707999999999391,
+  "final": {
+    "time_s": 11.707999999999391,
+    "position_m": [
+      -3.185031897018327e-05,
+      -6.569816197223033e-06,
+      -9.446377084787256e-06
+    ],
+    "quaternion_wxyz": [
+      0.999999875509875,
+      0.0004989692600114085,
+      -3.1483510011264856e-06,
+      2.9552643345102565e-09
+    ],
+    "velocity_world": [
+      9.110235309637112e-62,
+      2.0644853416744336e-18,
+      -1.7803818542880632e-18,
+      6.603988324879434e-21,
+      1.8284245829251903e-29,
+      4.158336080853014e-26
+    ],
+    "contact_wrench_M": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "contact_wrench_G": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "penetration_m": 0.0,
+    "contact_count": 0,
+    "phase": "STOPPING",
+    "reference_qpos": [
+      -3.185031897018327e-05,
+      -6.56981619722294e-06,
+      -9.446377084787336e-06,
+      0.999999875509875,
+      0.0004989692600114085,
+      -3.1483510011264856e-06,
+      2.9552643345102565e-09
+    ],
+    "raw_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "limited_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "drive_wrench_M": [
+      -4.035082151059468e-61,
+      4.776306262080345e-32,
+      4.622231866529366e-32,
+      -2.938735877055719e-39,
+      -8.210733189403225e-48,
+      -2.2420775429197073e-44
+    ]
+  },
+  "events": [
+    {
+      "time_s": 9.708000000004052,
+      "reason": "TARGET_PLANE_REACHED",
+      "phase": "STOPPING"
+    }
+  ],
+  "peaks": {
+    "force_N": 0.024474282843112358,
+    "torque_G_Nm": 0.0001498952221812399,
+    "penetration_m": 7.1389225478462114e-06,
+    "speed_m_s": 0.00186873494768577,
+    "drive_force_components_N": [
+      0.006984177016841089,
+      0.00708359603352351,
+      0.02447582776071345
+    ],
+    "drive_torque_components_Nm": [
+      1.9025171937820076e-05,
+      9.157742871587169e-06,
+      9.207396074581195e-06
+    ],
+    "contact_count": 2238.0
+  },
+  "physical_stop_samples": 10000,
+  "corrected_protected_inputs": {
+    "tools/control/fixed_admittance.py": "a283521de6eec6191e4e7db578426f2999ddc89fd7648476f4d8c165dd7aee67",
+    "tools/validation/run_b1_baseline.py": "2c527aea16353a506137569f90de9d60ccb43a8d5ebd5104ee90e371f297e3cc",
+    "tools/model/contact_development.py": "db348846da55935e1886318f53492da3edebd506e7c0663a9fdbc1414ef65bf2",
+    "tools/dynamics/cartesian.py": "6fb2fd4d4e38a45dd0aa0fa1501a1aad45fda18ea3be983b22c949e3bb9da786",
+    "tools/dynamics/safety.py": "76dc145098f09867cbea9699e53a7f32624a3208f5ae781d5913a3ebac95354f",
+    "tools/control/search_recovery.py": "e757eaf145c05f403c96786f9353eb5a4c2e0eeb06d8f90de8269bc928f63b40",
+    "tools/validation/run_b2_search.py": "a7e87404c3ede4967672da1fd57eecc99a3a11e09ae59afc2a2e80d1b71df415",
+    "tools/dynamics/contact_candidate.py": "861f41ab24a27ddf830473dc654ac834bc63837ac4352feec789e1bb6a9d42f6",
+    "tools/validation/run_contact_candidate_stop.py": "c5336df521e106611c728db2810175658d5e7ae3b7d544c70f6cbac347825a76",
+    "tools/validation/measure_readiness_stop.py": "28ce649d9c48a5d1c3231f277ff92f1e0b4f626c0354b6669add0057ef6069ca",
+    "deliverables/native313_validation/static_gate_v1/results.json": "1dd68ca57b34d1b0b95e2251bb6afedabea3f601d8b0e383f254d01aeaa48d34",
+    "deliverables/b2_search_recovery/matrix_v1_7cases/results_index.json": "d80fbf8ba4708c95976aa951fcf426def80f968caca361e02a1ac95b007fb98a",
+    "deliverables/native313_validation/候选复验协议.md": "8ca5322a06b698e5de8a9f2e6bf1797679b947f9a0693770030f9079321378b0"
+  },
+  "source_sha256": {
+    "deliverables/native313_validation/stop_dt0p2_v1/results_index.json": "8ee7afe83481c8ceead487db24d3ea6ec76df119b4408c07621ae4f6a279c410",
+    "deliverables/native313_validation/stop_dt0p2_v1_runtime.json": "01b2084429626912b37eed89cf7f51fa8c2d92f3445c3eabb0caf2706dd5dd19",
+    "deliverables/native313_validation/stop_dt0p2_v1/original_duration.json.gz": "4ba6d7cd4aac4a36d27f750ae3785814cda13946517e387caf0cfa1647ff3164",
+    "deliverables/native313_validation/stop_dt0p2_v1/stop_extension.json.gz": "888b01d2fa0c8b571db185569cd3add6dceaa5256501a49d93a3bb1cbae0466c",
+    "deliverables/native313_validation/stop_dt0p2_v1/partial.json.gz": "1ec22ec9d7da07e2124ec54ed5a503d471f2795621358bb601c961da70cfe652",
+    "deliverables/native313_validation/时间步判读补充.md": "9d32b3837dcc44a5abbff8b78b35f31bdc14dc3453d7782313c3520361fb38b9",
+    "tools/validation/audit_native313_results.py": "6b9028dcdf2a6daefca8d7bd596d4b330c41eec5ca6e7bb8f36582c4a81437bd",
+    "tools/validation/run_native313_stop.py": "18cf36ae2a487789dd5c60f614ea56e2ddbafeaab8d0179ca6028d2add5ff347",
+    "tools/validation/audit_contact_candidate.py": "0f3dfbe87d92cddd540e95edfd1a057ca80bc6df6f86a7a24fc183e9d2352553"
+  }
+}

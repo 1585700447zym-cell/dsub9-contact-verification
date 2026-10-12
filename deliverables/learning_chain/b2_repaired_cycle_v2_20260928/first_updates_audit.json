@@ -1,0 +1,12 @@
+{
+  "as_of": "2026-09-28 16:27 +08:00",
+  "verified_update_records": 1000,
+  "completed_training_episodes": 5,
+  "audited_transitions_at_update_1000": 25822,
+  "boundary_quota_each_batch": 16,
+  "all_numeric_update_metrics_finite": true,
+  "checkpoint_manifest_sha256": "435cf67d155c2ae35cbdb3013f76682ea3a3a52c392ab747a9c11656337e1b19",
+  "scope": "persisted update receipts and checkpoint manifest; full final state audit pending",
+  "additional_physical_starts": 0,
+  "additional_optimizer_calls": 0
+}

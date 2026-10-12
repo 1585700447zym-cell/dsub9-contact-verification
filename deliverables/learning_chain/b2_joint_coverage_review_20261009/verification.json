@@ -1,0 +1,19 @@
+{
+  "automatic_tracking": "PAUSED",
+  "checks": 395,
+  "cumulative_dynamic": 237,
+  "fast_endpoint_effect_cycles": 115,
+  "full_B2_accepted": false,
+  "new_physics": 0,
+  "new_training": 0,
+  "old_per_profile_gaps": 3,
+  "preserved_sealed_members": 1795,
+  "proposed_per_case_gaps": 0,
+  "raw_action_archives": 8,
+  "recommended_extra_coverage_episodes": 0,
+  "route": "PREPARE_LIMITED_JOINT_SAC_PILOT_NO_COVERAGE_RERUN",
+  "slow_endpoint_effect_cycles": 8046,
+  "stage_id": "B2-SCOPE-11",
+  "status": "VERIFIED_OFFLINE_DEVELOPMENT_REVIEW",
+  "training_admitted": false
+}

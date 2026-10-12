@@ -1,0 +1,60 @@
+{
+  "scope": "navigation_hash_references_only_historical_data_unchanged",
+  "changes": [
+    {
+      "manifest": "deliverables/reproduction_guide/说明与导出清单.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f",
+          "after": "a2f649950fd796aafa1dbd6929deac9d98727c924a4647b0a3ab95c4e228b7b6"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/b2_exit_gate_v2/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "deliverables/reproduction_guide/说明与导出清单.json",
+          "before": "12ec840631ee1df8433f9cb562c4a9fb0e490485f01d9f97ba7405e9270c991c",
+          "after": "dc7d703170e5b53328a9b685677d657ab0dea0d861a313f549a4dbb6aa1a2534"
+        },
+        {
+          "path": "报告总索引.md",
+          "before": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f",
+          "after": "a2f649950fd796aafa1dbd6929deac9d98727c924a4647b0a3ab95c4e228b7b6"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/baseline_training_readiness/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f",
+          "after": "a2f649950fd796aafa1dbd6929deac9d98727c924a4647b0a3ab95c4e228b7b6"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/stop_reliability/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f",
+          "after": "a2f649950fd796aafa1dbd6929deac9d98727c924a4647b0a3ab95c4e228b7b6"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/contact_consistency_repair/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "73aab09b807aeabd6ac2c7a777efc1027a20407d98696664f1ed0293a6b6ed2f",
+          "after": "a2f649950fd796aafa1dbd6929deac9d98727c924a4647b0a3ab95c4e228b7b6"
+        }
+      ]
+    }
+  ]
+}

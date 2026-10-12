@@ -1,0 +1,20 @@
+{
+  "comparison_key": "9999465ecb081fadc56e126f3b83fa8ea9a7cdd271687bda8be4a25a933e3e85",
+  "attempts": 5,
+  "planned_cases": 5,
+  "missing_cases": [],
+  "successes": 5,
+  "success_rate": 1.0,
+  "strict_precision_successes": 1,
+  "guarded_attempts": 0,
+  "invalid_attempts": 0,
+  "unstopped_attempts": 0,
+  "unassessed_attempts": 0,
+  "comparison_eligible": true,
+  "failure_penalty_s": 26.0,
+  "mean_penalized_time_s": 12.705999999993805,
+  "mean_success_time_s": 12.705999999993805,
+  "mean_peak_force_N": 0.019600036472134628,
+  "mean_peak_torque_Nm": 0.00015131386554168854,
+  "mean_sampled_force_integral_N_s": 0.10016190527830043
+}

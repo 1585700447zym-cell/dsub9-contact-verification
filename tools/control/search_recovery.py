@@ -100,24 +100,33 @@ class SearchRecovery:
         if self.phase=='SEARCH':
             delta=p-self.search_origin
             if np.linalg.norm(delta[:2])>c.search_actual_xy_limit_m:return self._fail(obs,'SEARCH_EXCURSION_LIMIT')
-            if delta[2]>=c.search_exit_advance_m:
+            if self._search_advanced(obs):
                 self.history.clear();self._transition('INSERT',obs,'SEARCH_ADVANCED')
                 return self.admittance.command(w,dt)
             b=c.spiral_pitch_m/(2*math.pi);radius=b*self.theta
             if radius>=c.spiral_radius_m-1e-12 or obs.time_s-self.phase_start>=c.search_time_s:
                 if self.search_count>=c.max_searches:return self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
                 self._transition('WAIT_RECOVERY',obs,'SEARCH_EXHAUSTED');return np.zeros(6)
-            base=self.admittance.command(w,dt)
-            theta_rate=c.spiral_speed_m_s/math.hypot(radius,b)
-            tangent=np.array([b*math.cos(self.theta)-radius*math.sin(self.theta),
-                              b*math.sin(self.theta)+radius*math.cos(self.theta)])*theta_rate
-            target=radius*np.array([math.cos(self.theta),math.sin(self.theta)])
-            base[:2]=np.clip(base[:2]+tangent+c.search_tracking_gain_s*(target-delta[:2]),
-                             -c.search_xy_component_speed_m_s,c.search_xy_component_speed_m_s)
-            base[2]=np.clip(c.axial_gain_m_s_N*(c.search_force_N+w[2]),-c.unload_speed_m_s,c.search_forward_speed_m_s)
-            self.theta=min(c.spiral_radius_m/b,self.theta+theta_rate*dt)
-            return base
+            return self._search_command(obs,dt)
         raise RuntimeError('Unknown search state')
+
+    def _search_advanced(self,obs):
+        return np.asarray(obs.displacement_m)[2]-self.search_origin[2]>=self.config.search_exit_advance_m
+
+    def _search_command(self,obs,dt):
+        """Normal SEARCH only; all phase, excursion and budget gates ran first."""
+        c=self.config;w=np.asarray(obs.wrench_M);delta=np.asarray(obs.displacement_m)-self.search_origin
+        b=c.spiral_pitch_m/(2*math.pi);radius=b*self.theta
+        base=self.admittance.command(w,dt)
+        theta_rate=c.spiral_speed_m_s/math.hypot(radius,b)
+        tangent=np.array([b*math.cos(self.theta)-radius*math.sin(self.theta),
+                          b*math.sin(self.theta)+radius*math.cos(self.theta)])*theta_rate
+        target=radius*np.array([math.cos(self.theta),math.sin(self.theta)])
+        base[:2]=np.clip(base[:2]+tangent+c.search_tracking_gain_s*(target-delta[:2]),
+                         -c.search_xy_component_speed_m_s,c.search_xy_component_speed_m_s)
+        base[2]=np.clip(c.axial_gain_m_s_N*(c.search_force_N+w[2]),-c.unload_speed_m_s,c.search_forward_speed_m_s)
+        self.theta=min(c.spiral_radius_m/b,self.theta+theta_rate*dt)
+        return base
 
     def metadata(self):
         return {'name':'B2_bounded_search_recovery','config':asdict(self.config),

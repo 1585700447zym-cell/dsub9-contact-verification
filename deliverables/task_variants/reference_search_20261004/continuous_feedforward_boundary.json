@@ -1,0 +1,36 @@
+{
+  "old": {
+    "phase": "WAIT_RECOVERY",
+    "cycles": 3813,
+    "event": {
+      "time_s": 7.626,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED"
+    },
+    "max_reference_radius_um": 319.3644367405832,
+    "max_target_error_um": 310.95709877364203
+  },
+  "new": {
+    "phase": "FAILED",
+    "cycles": 3810,
+    "event": {
+      "time_s": 7.62,
+      "phase": "FAILED",
+      "reason": "SEARCH_REFERENCE_LIMIT",
+      "reference_xy_m": [
+        0.00011999664385520467,
+        -6.905306735195791e-07
+      ],
+      "predicted_reference_xy_m": [
+        0.0001200138881309594,
+        -3.9091573277997503e-07
+      ],
+      "radius_limit_m": 0.00012
+    },
+    "max_reference_radius_um": 119.99863069687045,
+    "max_target_error_um": 1.324586341937287
+  },
+  "physics_steps": 0,
+  "training_updates": 0,
+  "scope": "Fixed blocked pose; arithmetic drive-reference integration only, not task success evidence"
+}

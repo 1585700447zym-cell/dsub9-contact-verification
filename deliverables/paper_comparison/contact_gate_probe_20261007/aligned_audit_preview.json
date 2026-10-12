@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "provisional_stage_subset": true,
+  "new_dynamics": 0,
+  "archives": 4,
+  "rows": [
+    {
+      "outcome": "FULL_SUCCESS",
+      "strict_precision_success": true,
+      "final_xy_um": 0.0,
+      "network_calls": 0,
+      "below_5mN_insert_active_cycles": 2045,
+      "insert_force_gate_switches": 0
+    },
+    {
+      "outcome": "FULL_SUCCESS",
+      "strict_precision_success": false,
+      "final_xy_um": 100.2098431263247,
+      "network_calls": 2050,
+      "below_5mN_insert_active_cycles": 2050,
+      "insert_force_gate_switches": 0
+    },
+    {
+      "outcome": "FULL_SUCCESS",
+      "strict_precision_success": true,
+      "final_xy_um": 42.09848499883748,
+      "network_calls": 2045,
+      "below_5mN_insert_active_cycles": 2045,
+      "insert_force_gate_switches": 0
+    },
+    {
+      "outcome": "FULL_SUCCESS",
+      "strict_precision_success": true,
+      "final_xy_um": 0.0,
+      "network_calls": 0,
+      "below_5mN_insert_active_cycles": 0,
+      "insert_force_gate_switches": 0
+    }
+  ],
+  "aligned_G_B2_trace_exact": true
+}

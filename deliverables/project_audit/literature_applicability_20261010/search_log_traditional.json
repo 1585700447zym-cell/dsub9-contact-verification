@@ -1,0 +1,43 @@
+{
+  "search_date": "2026-10-10",
+  "scope": "问题/合理传统反例/连接器情形的首轮定向调研；非系统综述",
+  "queries": [
+    "\"Uncertainty-Driven Spiral Trajectory\" peg hole 2022 pdf",
+    "\"Learning-Based Visual Servoing\" \"DB-25\" \"success\"",
+    "\"Friction-aware\" \"peg-in-hole\"",
+    "\"Learning-Based Visual Servoing for High-Precision Peg-in-Hole Assembly\" \"Table\" \"ORB\" (mdpi.com)",
+    "\"Geometry and Force Guided Robotic Assembly With Large Initial Deviations for Electrical Connectors\"",
+    "\"Autonomous Alignment of Peg and Hole\" \"pdf\"",
+    "\"Quasi-Static Assembly of Compliantly Supported Rigid Parts\" pdf"
+  ],
+  "citation_tracing": [
+    "Shen2023相关搜索文献→Kang2022",
+    "Kang2022作者页面与引用列表→Wang2026",
+    "Wang2026 refs2/21/23→geometry-force connectors/Tang2016/Robotica残差导纳（后者转学习文献核查）",
+    "NIST2018§III-B→公平传统搜索选择"
+  ],
+  "exclusions": [
+    {
+      "title": "Quasi-Static Assembly of Compliantly Supported Rigid Parts",
+      "doi": "10.1115/1.3149634",
+      "reason": "理论背景线索；本轮原文访问失败，未据二手摘要写具体机理结论。"
+    },
+    {
+      "title": "Geometry and Force Guided Robotic Assembly With Large Initial Deviations for Electrical Connectors",
+      "doi": "10.1109/TASE.2024.3477918",
+      "url": "https://mse.hust.edu.cn/info/1142/13581.htm",
+      "reason": "作者机构主页确认书目；IEEE仅返回验证页，未取得可靠原文。列后续检索，不据聚合站填结果。"
+    },
+    {
+      "title": "Autonomous alignment of peg and hole by force/torque measurement for robotic assembly",
+      "doi": "10.1109/COASE.2016.7743375",
+      "url": "https://zshi1204.github.io/publications/C2016_CASE_PH.pdf",
+      "reason": "原文PDF链接404；保留三点接触对准检索线索，不采用二手96%数字。"
+    }
+  ],
+  "rules": [
+    "优先出版方、作者、arXiv/NIST原始文献；聚合索引只定位，不作数值证据。",
+    "A=公开原文关键段已核；B=出版方索引关键正文/表；C=摘要/片段，缺项标未知。",
+    "只据读到的内容填参数，跨论文不横排名次；预印本单独标记。"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "archive_sha256": "4a2c57146100aa7cfb2e219d3875c4a65f907c2bd3072c3cd9c4b020ab625643",
+  "full_trace_rows": 11271,
+  "reward_rows": 11270,
+  "full_old_baseline_exact": true,
+  "provisional_only": true,
+  "new_dynamics": 0
+}

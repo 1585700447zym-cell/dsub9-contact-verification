@@ -1,0 +1,18 @@
+{
+  "version": "pc07_frozen_evaluation_qualification_v1",
+  "created_at": "2026-10-07T12:13:32.048238+08:00",
+  "evaluation_admitted": true,
+  "training_admitted": false,
+  "max_new_episodes": 27,
+  "formal_updates": 0,
+  "prior_cumulative": 173,
+  "cumulative_limit": 200,
+  "prior_seal": "fd98d247484e919c3c4e099d03575b1d4d40e977a5da939efc088759c84b9ed5",
+  "evidence_sha256": {
+    "configuration.json": "4f2123408f34acd048032c6498bdd2b4ed0f0efb98694edaef68b467e32f145a",
+    "model.xml": "dbb662662dffc48d002e4bc26963d5192f13ff3be20764eac821f8fd10e861cf",
+    "verification.json": "f3164c850f43c2c8d1bbcd7cf948d35f44207556b60e538a12d0d4e7ae7539d7",
+    "verification.txt": "ff8bf6b1475d07c1e22b22e6c35722f53b45b051230838bc33f00f493a72c204",
+    "review.json": "01290026c611d8b0844ea20c0943164c5b156ebd2a3ff427f36700d080128d46"
+  }
+}

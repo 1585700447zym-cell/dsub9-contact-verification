@@ -1,0 +1,17 @@
+{
+  "y_neg_150": {
+    "scope": "before first coordinated rebase",
+    "before_time_s": 8.4860000000069,
+    "samples": 4244,
+    "old_samples": 6719,
+    "new_samples": 8554,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  }
+}

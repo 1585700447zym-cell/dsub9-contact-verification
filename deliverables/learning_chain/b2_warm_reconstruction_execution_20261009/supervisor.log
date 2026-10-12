@@ -1,0 +1,22 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\ok everything\\.matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\gate_worker.py", line 48, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\gate_worker.py", line 29, in main
+    from numeric_state import NumericState,state_digest,require_equal
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\numeric_state.py", line 7, in <module>
+    from tools.learning.v4_sac import V4Updater
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\v4_sac.py", line 18, in <module>
+    from .audited_replay import ReplayBatch
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\audited_replay.py", line 19, in <module>
+    from .action import normalized_action
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\action.py", line 3, in <module>
+    from tools.dynamics.safety import limit_command
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_warm_reconstruction_preparation_20261009\gate_worker.py", line 13, in find_spec
+    raise PermissionError('Physical backend forbidden in restore gate')
+PermissionError: Physical backend forbidden in restore gate

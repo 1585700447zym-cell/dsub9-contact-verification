@@ -1,0 +1,58 @@
+FFFFFFFF                                                                 [100%]
+================================== FAILURES ===================================
+____ test_complete_state_restore_matches_rng_next_action_draws_and_update _____
+tests\learning\test_v4_checkpoint.py:57: in test_complete_state_restore_matches_rng_next_action_draws_and_update
+    c=populated(tmp_path/'c');c.update(2);pin=api().save_checkpoint(c,tmp_path/'checkpoint')
+tests\learning\test_v4_checkpoint.py:47: in populated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+__ test_zero_admission_blocks_updates_and_invalid_episode_is_wholly_isolated __
+tests\learning\test_v4_checkpoint.py:67: in test_zero_admission_blocks_updates_and_invalid_episode_is_wholly_isolated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+______ test_valid_guard_data_retained_but_branch_cannot_keep_optimizing _______
+tests\learning\test_v4_checkpoint.py:75: in test_valid_guard_data_retained_but_branch_cannot_keep_optimizing
+    c=populated(tmp_path/'c');c.update(1);c.begin('online',1);receipt=c.publish(raw_episode(c,'online',1,guard=True))
+tests\learning\test_v4_checkpoint.py:47: in populated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+____ test_old_width_cross_mode_or_tampered_checkpoint_cannot_create_output ____
+tests\learning\test_v4_checkpoint.py:80: in test_old_width_cross_mode_or_tampered_checkpoint_cannot_create_output
+    c=populated(tmp_path/'c');pin=api().save_checkpoint(c,tmp_path/'checkpoint')
+tests\learning\test_v4_checkpoint.py:47: in populated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+_________ test_capture_refuses_active_or_unrecorded_optimizer_attempt _________
+tests\learning\test_v4_checkpoint.py:89: in test_capture_refuses_active_or_unrecorded_optimizer_attempt
+    c=populated(tmp_path/'c');c.active=True
+tests\learning\test_v4_checkpoint.py:47: in populated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+_______ test_staging_write_failure_never_publishes_loadable_checkpoint ________
+tests\learning\test_v4_checkpoint.py:95: in test_staging_write_failure_never_publishes_loadable_checkpoint
+    c=populated(tmp_path/'c');m=api()
+tests\learning\test_v4_checkpoint.py:47: in populated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+__________ test_checkpoint_revalidates_raw_replay_and_adam_counters ___________
+tests\learning\test_v4_checkpoint.py:102: in test_checkpoint_revalidates_raw_replay_and_adam_counters
+    c=populated(tmp_path/'c');c.update(2);state=api().capture(c)
+tests\learning\test_v4_checkpoint.py:47: in populated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+______ test_wrong_source_scope_cannot_publish_old_preflight_as_training _______
+tests\learning\test_v4_checkpoint.py:109: in test_wrong_source_scope_cannot_publish_old_preflight_as_training
+    c=populated(tmp_path/'c');c.begin('online',1);raw=raw_episode(c,'online',1);raw['scope']='development_preflight_only'
+tests\learning\test_v4_checkpoint.py:47: in populated
+    from tools.learning.v4_pilot_chain import V4Chain
+E   ModuleNotFoundError: No module named 'tools.learning.v4_pilot_chain'
+=========================== short test summary info ===========================
+FAILED tests/learning/test_v4_checkpoint.py::test_complete_state_restore_matches_rng_next_action_draws_and_update
+FAILED tests/learning/test_v4_checkpoint.py::test_zero_admission_blocks_updates_and_invalid_episode_is_wholly_isolated
+FAILED tests/learning/test_v4_checkpoint.py::test_valid_guard_data_retained_but_branch_cannot_keep_optimizing
+FAILED tests/learning/test_v4_checkpoint.py::test_old_width_cross_mode_or_tampered_checkpoint_cannot_create_output
+FAILED tests/learning/test_v4_checkpoint.py::test_capture_refuses_active_or_unrecorded_optimizer_attempt
+FAILED tests/learning/test_v4_checkpoint.py::test_staging_write_failure_never_publishes_loadable_checkpoint
+FAILED tests/learning/test_v4_checkpoint.py::test_checkpoint_revalidates_raw_replay_and_adam_counters
+FAILED tests/learning/test_v4_checkpoint.py::test_wrong_source_scope_cannot_publish_old_preflight_as_training
+8 failed in 2.25s

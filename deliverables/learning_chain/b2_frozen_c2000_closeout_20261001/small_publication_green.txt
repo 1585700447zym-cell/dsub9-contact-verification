@@ -1,0 +1,6 @@
+test_small_nonzero_action_publishes_through_actual_collector (test_protocol.ReviewRegressions.test_small_nonzero_action_publishes_through_actual_collector) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 10.178s
+
+OK

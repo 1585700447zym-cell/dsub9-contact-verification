@@ -1,0 +1,344 @@
+{
+  "passed": true,
+  "source_unchanged": true,
+  "runs": [
+    {
+      "case": "aligned",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 2165,
+      "tail_cycles_compared": 880,
+      "source_archive_sha256": {
+        "original.json.gz": "f1b04ade348450cb9c8efb6558ee756cdbee35c8f9403b72b62f12e772818256",
+        "stop_extension.json.gz": "e0ef044e05a34e0fc8aa4d9005de57537c8f108f9d637d3649e658266931cd9b"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0,
+        "checked_substeps": 30450
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.0,
+          "checked_substeps": 30450
+        }
+      },
+      "events": [
+        {
+          "time_s": 4.089999999999782,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 30450,
+      "wall_seconds": 134.2686296000029
+    },
+    {
+      "case": "combined_a",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 6195,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "52b4a15841db5a6f72b342a3a753ccb8eebf323ef31b8424997d60dadab6b800",
+        "stop_extension.json.gz": "77902acdfb52496f8f4051728a036da0e217bc0f967f8e653bc2f726d397f6cc"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.028934232430889675,
+        "checked_substeps": 66950
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.028934232430889675,
+          "checked_substeps": 66950
+        }
+      },
+      "events": [
+        {
+          "time_s": 11.390000000000132,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 66950,
+      "wall_seconds": 272.1482100999565
+    },
+    {
+      "case": "combined_a_scale_0.75",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 5804,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "0af2901617d14e60d9e147555773b6f5348b010286252efad163a4cce8fc480c",
+        "stop_extension.json.gz": "a1c9528dc51312d80cb500b2dd2d838539a2bf8fd9a1ec6532b9920965f51e96"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.021708272024816445,
+        "checked_substeps": 63040
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.021708272024816445,
+          "checked_substeps": 63040
+        }
+      },
+      "events": [
+        {
+          "time_s": 10.608000000001955,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 63040,
+      "wall_seconds": 239.47945289994823
+    },
+    {
+      "case": "combined_b_scale_0.75",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 6902,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "e9bef88a9c84a23ab692d58c2b6dcb1c8f09c98ad5ccb0e5f8507d4fa505b637",
+        "stop_extension.json.gz": "ff1ff0e79fcbfdadc9d74932f323e861950e856fd8763df4c13cdda47f095870"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.02326449921098821,
+        "checked_substeps": 74020
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.02326449921098821,
+          "checked_substeps": 74020
+        }
+      },
+      "events": [
+        {
+          "time_s": 12.803999999996837,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 74020,
+      "wall_seconds": 236.86399490002077
+    },
+    {
+      "case": "roll_pos_1.5deg",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 5274,
+      "tail_cycles_compared": 500,
+      "source_archive_sha256": {
+        "original.json.gz": "63ce8b4888b7aea328d394683e6b0e6481d4224f0c17cce884843108ace50c76",
+        "stop_extension.json.gz": "6b5854c17c07c8d1c199a0a7bed6f81d25de54fcdb0a86387319796946c5c6b7"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.006014088955130452,
+        "checked_substeps": 57740
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.006014088955130452,
+          "checked_substeps": 57740
+        }
+      },
+      "events": [
+        {
+          "time_s": 9.548000000004425,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 57740,
+      "wall_seconds": 246.30629979999503
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 5394,
+      "tail_cycles_compared": 880,
+      "source_archive_sha256": {
+        "original.json.gz": "a143c2e1beb5d8ee2dd291ff9b5a3343f9ab289f51c14922a7fb7f72d9ccce51",
+        "stop_extension.json.gz": "4a843cbe3725d7e2e6d1e7f0050ed96cc247c1208ce4f31d0b8a69067fa74949"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.0016542135102412018,
+        "checked_substeps": 62740
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.0016542135102412018,
+          "checked_substeps": 62740
+        }
+      },
+      "events": [
+        {
+          "time_s": 10.548000000002094,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 62740,
+      "wall_seconds": 313.46536390000256
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "exact_history_match": true,
+      "training_admitted": false,
+      "task_cycles_compared": 4974,
+      "tail_cycles_compared": 880,
+      "source_archive_sha256": {
+        "original.json.gz": "0620527760612e18ef8e90528512234cda00cf2d3c721ee083fa1bd4a9429ef5",
+        "stop_extension.json.gz": "888b01d2fa0c8b571db185569cd3add6dceaa5256501a49d93a3bb1cbae0466c"
+      },
+      "guard_facts": {
+        "simulation_valid": true,
+        "invalid_reasons": [],
+        "contact_reasons": [],
+        "motion_reasons": [],
+        "max_rotation_from_start_rad": 0.001701133174356725,
+        "checked_substeps": 58540
+      },
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": false,
+        "model_scope_qualified": false,
+        "training_admitted": false,
+        "guard_facts": {
+          "simulation_valid": true,
+          "invalid_reasons": [],
+          "contact_reasons": [],
+          "motion_reasons": [],
+          "max_rotation_from_start_rad": 0.001701133174356725,
+          "checked_substeps": 58540
+        }
+      },
+      "events": [
+        {
+          "time_s": 9.708000000004052,
+          "reason": "TARGET_PLANE_REACHED",
+          "phase": "STOPPING"
+        }
+      ],
+      "physical_steps": 58540,
+      "wall_seconds": 285.34313100000145
+    }
+  ],
+  "training_admitted": false,
+  "wall_seconds": 668.8264559999807
+}

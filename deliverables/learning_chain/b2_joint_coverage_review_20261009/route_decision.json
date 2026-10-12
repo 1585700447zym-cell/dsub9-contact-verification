@@ -1,0 +1,36 @@
+{
+  "C_accepted": false,
+  "adopted_recommendation": "per_joint_case_endpoint_coverage_v2",
+  "automatic_tracking": "PAUSED",
+  "cumulative_dynamic": 237,
+  "development_driven_post_hoc_revision": true,
+  "full_B2_accepted": false,
+  "gate_status": "DEVELOPMENT_RECOMMENDATION_NOT_RUNTIME_ADMISSION",
+  "limits": [
+    "Representative engineering evidence only, not a safety proof for arbitrary actions",
+    "No learned policy, statistical success rate or independent test conclusion",
+    "A new learning execution must bind this recommendation explicitly; no old grant or qualification is reopened"
+  ],
+  "new_physical_attempts": 0,
+  "new_training": 0,
+  "next_task": "准备四个离散J点上的普通F50残差SAC小规模训练与共同参照：接入既有学习／检查点代码，冻结数据用途、训练与评价顺序、具体次数／更新／墙钟上限和停止规则，完成离线接线检查后交付一次具体执行申请。覆盖专项补验建议0；运行来源或接口改变时重新判断受影响检查。",
+  "old_gate_regraded": false,
+  "old_route": "INSUFFICIENT_COVERAGE_NO_EXTRA_ATTEMPTS",
+  "recommended_extra_coverage_episodes": 0,
+  "retained": [
+    "共同模型、几何、成功和保护阈值、2ms控制周期、F50动作范围及137维观测",
+    "每个J点均有接触中的四轴正负有效命令；快速和长保持两种时序仍都要有证据",
+    "全部原始回合的有效性、物理停稳、保护与峰值审核，以及4项真实回撤／恢复证据",
+    "逐项A/B覆盖统计、全部失败、旧判据结论与独立评价边界"
+  ],
+  "revised": [
+    "只把时序覆盖汇总层级从“每个J点的每种A/B测试各自满足”改为“每个J点合并A/B满足”",
+    "周期末接触判据保持；周期内部峰值单列用于诊断，不拿瞬时峰值替代全部覆盖",
+    "允许复用已经审核并绑定来源的开发证据，取消为填满测试类型×时序表而默认追加物理回合"
+  ],
+  "route": "PREPARE_LIMITED_JOINT_SAC_PILOT_NO_COVERAGE_RERUN",
+  "scope": "Only the four fixed J01-J04 initial poses at XY±75um and roll/pitch±0.25deg; no interpolation or original±1.5deg qualification",
+  "stage_id": "B2-SCOPE-11",
+  "status": "OFFLINE_REVIEW_COMPLETE",
+  "training_admitted": false
+}

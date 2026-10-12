@@ -1,0 +1,6 @@
+test_real_permit_constructs_with_registered_deployment_config (test_protocol.FrozenRunnerProtocol.test_real_permit_constructs_with_registered_deployment_config) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 4.660s
+
+OK

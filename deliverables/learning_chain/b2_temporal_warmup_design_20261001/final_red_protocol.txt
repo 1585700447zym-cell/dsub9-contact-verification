@@ -1,0 +1,32 @@
+test_bad_rng_output_poisoned_and_not_retried (test_warmup_hold.HoldTests.test_bad_rng_output_poisoned_and_not_retried) ... ok
+test_context_rejects_repeated_skipped_and_invalid_cycles_before_draw (test_warmup_hold.HoldTests.test_context_rejects_repeated_skipped_and_invalid_cycles_before_draw) ... ok
+test_equal_context_opposite_hidden_case_cannot_change_output (test_warmup_hold.HoldTests.test_equal_context_opposite_hidden_case_cannot_change_output) ... ok
+test_exact_100ms_holds_and_redraws (test_warmup_hold.HoldTests.test_exact_100ms_holds_and_redraws) ... ok
+test_insert_search_transition_starts_new_block (test_warmup_hold.HoldTests.test_insert_search_transition_starts_new_block) ... ok
+test_invalid_permission_or_phase_refused_without_draw (test_warmup_hold.HoldTests.test_invalid_permission_or_phase_refused_without_draw) ... ok
+test_no_draw_in_inactive_cycles_and_immediate_zero (test_warmup_hold.HoldTests.test_no_draw_in_inactive_cycles_and_immediate_zero) ... ok
+test_reentry_redraws_instead_of_reusing_stale_action (test_warmup_hold.HoldTests.test_reentry_redraws_instead_of_reusing_stale_action) ... ok
+test_restore_cannot_shorten_first_held_block (test_warmup_hold.HoldTests.test_restore_cannot_shorten_first_held_block) ... ok
+test_restore_rejects_draw_before_only_inactive_cycle (test_warmup_hold.HoldTests.test_restore_rejects_draw_before_only_inactive_cycle) ... ok
+test_restore_rejects_too_few_draws_before_current_block (test_warmup_hold.HoldTests.test_restore_rejects_too_few_draws_before_current_block) ... FAIL
+test_returned_action_cannot_mutate_held_value (test_warmup_hold.HoldTests.test_returned_action_cannot_mutate_held_value) ... ok
+test_rng_exception_poisoned_and_not_retried (test_warmup_hold.HoldTests.test_rng_exception_poisoned_and_not_retried) ... ok
+test_snapshot_and_external_rng_restore_agree (test_warmup_hold.HoldTests.test_snapshot_and_external_rng_restore_agree) ... ok
+test_snapshot_tamper_and_cross_config_refused (test_warmup_hold.HoldTests.test_snapshot_tamper_and_cross_config_refused) ... ok
+test_two_ms_control_matches_each_supplied_draw (test_warmup_hold.HoldTests.test_two_ms_control_matches_each_supplied_draw) ... ok
+test_unregistered_hold_duration_refused (test_warmup_hold.HoldTests.test_unregistered_hold_duration_refused) ... ok
+test_whole_episode_13000_cycle_cap (test_warmup_hold.HoldTests.test_whole_episode_13000_cycle_cap) ... ok
+
+======================================================================
+FAIL: test_restore_rejects_too_few_draws_before_current_block (test_warmup_hold.HoldTests.test_restore_rejects_too_few_draws_before_current_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_warmup_design_20261001\test_warmup_hold.py", line 87, in test_restore_rejects_too_few_draws_before_current_block
+    with self.assertRaises(ValueError):module.WarmupHold.restore(Draws(),s,expected_hold_cycles=50)
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.010s
+
+FAILED (failures=1)

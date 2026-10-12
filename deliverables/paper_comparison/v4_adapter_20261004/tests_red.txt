@@ -1,0 +1,88 @@
+FFFFFFFFFFFFFF                                                           [100%]
+================================== FAILURES ===================================
+__ test_all_six_archived_counterexamples_are_filtered_without_breaking_slew ___
+tests\task_variants\test_v4_adapter.py:17: in test_all_six_archived_counterexamples_are_filtered_without_breaking_slew
+    from tools.learning.v4_action import compose_reference_command
+E   ModuleNotFoundError: No module named 'tools.learning.v4_action'
+_______ test_zero_and_interior_action_preserve_existing_command_and_log _______
+tests\task_variants\test_v4_adapter.py:29: in test_zero_and_interior_action_preserve_existing_command_and_log
+    from tools.learning.v4_action import compose_reference_command,SCALE
+E   ModuleNotFoundError: No module named 'tools.learning.v4_action'
+__________ test_infeasible_baseline_and_nonfinite_reference_rejected __________
+tests\task_variants\test_v4_adapter.py:40: in test_infeasible_baseline_and_nonfinite_reference_rejected
+    from tools.learning.v4_action import compose_reference_command,ReferenceEnvelopeInfeasible
+E   ModuleNotFoundError: No module named 'tools.learning.v4_action'
+______ test_random_boundary_interpolation_remains_in_disk_and_driver_box ______
+tests\task_variants\test_v4_adapter.py:48: in test_random_boundary_interpolation_remains_in_disk_and_driver_box
+    from tools.learning.v4_action import compose_reference_command
+E   ModuleNotFoundError: No module named 'tools.learning.v4_action'
+___________ test_session_preserves_release_rebase_and_masks_actions ___________
+tests\task_variants\test_v4_adapter.py:73: in test_session_preserves_release_rebase_and_masks_actions
+    s=fake_session();c=s.controller;c.phase='UNLOAD';c.search_count=1;c.reference_release_requested=True
+tests\task_variants\test_v4_adapter.py:59: in fake_session
+    from tools.learning.v4_session import V4ResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_session'
+___________________ test_stage_permission[F50-INSERT-True] ____________________
+tests\task_variants\test_v4_adapter.py:87: in test_stage_permission
+    s=fake_session(mode)
+tests\task_variants\test_v4_adapter.py:59: in fake_session
+    from tools.learning.v4_session import V4ResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_session'
+___________________ test_stage_permission[F50-SEARCH-True] ____________________
+tests\task_variants\test_v4_adapter.py:87: in test_stage_permission
+    s=fake_session(mode)
+tests\task_variants\test_v4_adapter.py:59: in fake_session
+    from tools.learning.v4_session import V4ResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_session'
+___________________ test_stage_permission[S50-INSERT-False] ___________________
+tests\task_variants\test_v4_adapter.py:87: in test_stage_permission
+    s=fake_session(mode)
+tests\task_variants\test_v4_adapter.py:59: in fake_session
+    from tools.learning.v4_session import V4ResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_session'
+___________________ test_stage_permission[S50-SEARCH-True] ____________________
+tests\task_variants\test_v4_adapter.py:87: in test_stage_permission
+    s=fake_session(mode)
+tests\task_variants\test_v4_adapter.py:59: in fake_session
+    from tools.learning.v4_session import V4ResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_session'
+___________________ test_stage_permission[S50-UNLOAD-False] ___________________
+tests\task_variants\test_v4_adapter.py:87: in test_stage_permission
+    s=fake_session(mode)
+tests\task_variants\test_v4_adapter.py:59: in fake_session
+    from tools.learning.v4_session import V4ResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_session'
+_______ test_new_session_retains_layered_and_reference_observation_mro ________
+tests\task_variants\test_v4_adapter.py:94: in test_new_session_retains_layered_and_reference_observation_mro
+    s=fake_session()
+tests\task_variants\test_v4_adapter.py:59: in fake_session
+    from tools.learning.v4_session import V4ResidualSession
+E   ModuleNotFoundError: No module named 'tools.learning.v4_session'
+____________ test_b1_is_exact_fixed_admittance_and_never_searches _____________
+tests\task_variants\test_v4_adapter.py:100: in test_b1_is_exact_fixed_admittance_and_never_searches
+    from tools.control.v4_b1 import V4FixedAdmittance
+E   ModuleNotFoundError: No module named 'tools.control.v4_b1'
+_ test_v4_observation_is_relative_versioned_idempotent_and_tracks_live_state __
+tests\task_variants\test_v4_adapter.py:124: in test_v4_observation_is_relative_versioned_idempotent_and_tracks_live_state
+    from tools.learning.v4_observation import V4ObservationBuilder
+E   ModuleNotFoundError: No module named 'tools.learning.v4_observation'
+_______________ test_v4_observation_rejects_nonfinite_new_state _______________
+tests\task_variants\test_v4_adapter.py:142: in test_v4_observation_rejects_nonfinite_new_state
+    from tools.learning.v4_observation import V4ObservationBuilder
+E   ModuleNotFoundError: No module named 'tools.learning.v4_observation'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_v4_adapter.py::test_all_six_archived_counterexamples_are_filtered_without_breaking_slew
+FAILED tests/task_variants/test_v4_adapter.py::test_zero_and_interior_action_preserve_existing_command_and_log
+FAILED tests/task_variants/test_v4_adapter.py::test_infeasible_baseline_and_nonfinite_reference_rejected
+FAILED tests/task_variants/test_v4_adapter.py::test_random_boundary_interpolation_remains_in_disk_and_driver_box
+FAILED tests/task_variants/test_v4_adapter.py::test_session_preserves_release_rebase_and_masks_actions
+FAILED tests/task_variants/test_v4_adapter.py::test_stage_permission[F50-INSERT-True]
+FAILED tests/task_variants/test_v4_adapter.py::test_stage_permission[F50-SEARCH-True]
+FAILED tests/task_variants/test_v4_adapter.py::test_stage_permission[S50-INSERT-False]
+FAILED tests/task_variants/test_v4_adapter.py::test_stage_permission[S50-SEARCH-True]
+FAILED tests/task_variants/test_v4_adapter.py::test_stage_permission[S50-UNLOAD-False]
+FAILED tests/task_variants/test_v4_adapter.py::test_new_session_retains_layered_and_reference_observation_mro
+FAILED tests/task_variants/test_v4_adapter.py::test_b1_is_exact_fixed_admittance_and_never_searches
+FAILED tests/task_variants/test_v4_adapter.py::test_v4_observation_is_relative_versioned_idempotent_and_tracks_live_state
+FAILED tests/task_variants/test_v4_adapter.py::test_v4_observation_rejects_nonfinite_new_state
+14 failed in 0.89s

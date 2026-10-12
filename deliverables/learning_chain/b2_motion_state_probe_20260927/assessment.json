@@ -1,0 +1,427 @@
+{
+  "version": "b2_09_assessment_v1",
+  "started_attempts": 2,
+  "archived_attempts": 2,
+  "unexecuted": [],
+  "batch_error": null,
+  "blocked_by": null,
+  "all_valid_stopped_guard_clear": true,
+  "all_complete_windows": true,
+  "representative_preflight_candidate_supported": true,
+  "metrics": [
+    {
+      "id": "motion_x_neg",
+      "axis": 0,
+      "sign": -1,
+      "passed": true,
+      "outcome": "TASK_FAILURE",
+      "error": null,
+      "cycles": 5486,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "pulse": {
+        "search_entry_cycle": 763,
+        "origin_xy_m": [
+          5.144240567460656e-07,
+          -1.5943458492984064e-08
+        ],
+        "trigger_cycle": 1880,
+        "trigger_time_s": 3.7599999999996188,
+        "trigger_motion_m": 5.020803052215879e-06,
+        "request_cycles": 100,
+        "requested_duration_s": 0.2,
+        "end_reason": "duration_completed"
+      },
+      "wall_seconds": 214.1293834000826,
+      "final_xy_error_um": 59.55131700515435,
+      "metrics_available": true,
+      "active_cycles": 4096,
+      "contact_cycles": 2421,
+      "force_peak_N": 0.02447401028819452,
+      "torque_peak_Nm": 0.00014896366087386044,
+      "sampled_penetration_peak_m": 7.103997594667282e-06,
+      "final_position_m": [
+        -2.679311158164609e-05,
+        5.318353625720885e-05,
+        -9.25707533008645e-06
+      ],
+      "final_quaternion_wxyz": [
+        0.9999999997484164,
+        -2.2411546308210163e-05,
+        -9.441784255763063e-07,
+        -1.883811184124383e-09
+      ],
+      "max_rotation_deg": 0.04311560322279389,
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.30200000000234
+        }
+      ],
+      "return_sum": 1.6636930996385966,
+      "guard_clear": true
+    },
+    {
+      "id": "motion_x_pos",
+      "axis": 0,
+      "sign": 1,
+      "passed": true,
+      "outcome": "TASK_FAILURE",
+      "error": null,
+      "cycles": 5471,
+      "physical_stopped": true,
+      "simulation_valid": true,
+      "pulse": {
+        "search_entry_cycle": 763,
+        "origin_xy_m": [
+          5.144240567460656e-07,
+          -1.5943458492984064e-08
+        ],
+        "trigger_cycle": 1880,
+        "trigger_time_s": 3.7599999999996188,
+        "trigger_motion_m": 5.020803052215879e-06,
+        "request_cycles": 100,
+        "requested_duration_s": 0.2,
+        "end_reason": "duration_completed"
+      },
+      "wall_seconds": 215.2225942000514,
+      "final_xy_error_um": 54.65913054436756,
+      "metrics_available": true,
+      "active_cycles": 4081,
+      "contact_cycles": 2403,
+      "force_peak_N": 0.02447401028819452,
+      "torque_peak_Nm": 0.00014760949124025685,
+      "sampled_penetration_peak_m": 7.103997594667282e-06,
+      "final_position_m": [
+        -2.4343126262916257e-05,
+        4.893907187119441e-05,
+        -9.885951625413122e-06
+      ],
+      "final_quaternion_wxyz": [
+        0.9999999973807822,
+        -7.237244867625013e-05,
+        8.156774027505327e-07,
+        -1.8776668321126403e-09
+      ],
+      "max_rotation_deg": 0.047738858214494174,
+      "phase_changes": [
+        {
+          "phase": "INSERT",
+          "time_s": 0.0
+        },
+        {
+          "phase": "UNLOAD",
+          "time_s": 0.7459999999999505
+        },
+        {
+          "phase": "SEARCH",
+          "time_s": 1.5259999999998646
+        },
+        {
+          "phase": "INSERT",
+          "time_s": 5.272000000002277
+        }
+      ],
+      "return_sum": 1.6666587833074156,
+      "guard_clear": true
+    }
+  ],
+  "local_effects": [
+    {
+      "id": "motion_x_neg",
+      "triggered": true,
+      "window_available": true,
+      "baseline_prefix": {
+        "matched": true,
+        "cycles": 1880
+      },
+      "window_start_s": 3.7599999999996188,
+      "window_end_s": 3.9599999999995967,
+      "window_phases": [
+        "SEARCH"
+      ],
+      "max_position_difference_m": 1.9839898948445486e-06,
+      "max_rotation_difference_rad": 6.991563284964074e-05,
+      "max_abs_position_difference_xyz_m": [
+        1.3085206512759395e-06,
+        1.5224757786258763e-06,
+        3.449254328924227e-07
+      ],
+      "max_abs_rotation_difference_xyz_rad": [
+        3.3894925352456875e-05,
+        6.474931025161747e-05,
+        2.4944917558262433e-05
+      ],
+      "end_position_difference_m": [
+        -1.3085206512759395e-06,
+        -1.4791142876348383e-06,
+        5.715454629018346e-08
+      ],
+      "end_rotation_difference_rad": [
+        3.3894925352456875e-05,
+        -8.268541692180841e-08,
+        -1.97198944094046e-05
+      ],
+      "translation_detectable": true,
+      "rotation_detectable": true,
+      "translation_engineering": true,
+      "rotation_engineering": false,
+      "max_sampled_force_vector_difference_N": 0.009849704925108841,
+      "max_sampled_torque_vector_difference_Nm": 2.6597643918298984e-05,
+      "end_reference_position_difference_m": [
+        -4.172899457234429e-06,
+        8.972883553040595e-08,
+        -1.3343878090595757e-07
+      ],
+      "end_reference_rotation_difference_rad": [
+        7.3325188776476485e-06,
+        -3.1513237934249946e-06,
+        2.458378987419349e-10
+      ],
+      "requested_integral_6d": [
+        -7.4999999999991676e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limiter_counterfactual_integral_6d": [
+        -1.8929760094290095e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "paired_end_command_integral_6d": [
+        -4.172899457231965e-06,
+        8.972883553019018e-08,
+        -1.334387809030599e-07,
+        7.332518877629356e-06,
+        -3.1513238020096125e-06,
+        0.0
+      ],
+      "complete": true,
+      "requested_sign": -1,
+      "x_endpoint_m": -1.3085206512759395e-06,
+      "x_sign_aligned": true
+    },
+    {
+      "id": "motion_x_pos",
+      "triggered": true,
+      "window_available": true,
+      "baseline_prefix": {
+        "matched": true,
+        "cycles": 1880
+      },
+      "window_start_s": 3.7599999999996188,
+      "window_end_s": 3.9599999999995967,
+      "window_phases": [
+        "SEARCH"
+      ],
+      "max_position_difference_m": 1.6657195962446237e-06,
+      "max_rotation_difference_rad": 7.236659273933829e-05,
+      "max_abs_position_difference_xyz_m": [
+        1.1230774464929808e-06,
+        1.3002347752650124e-06,
+        2.7457710117910483e-07
+      ],
+      "max_abs_rotation_difference_xyz_rad": [
+        2.5272506267162078e-05,
+        5.8937309780046655e-05,
+        4.425874122230145e-05
+      ],
+      "end_position_difference_m": [
+        1.1230774464929808e-06,
+        1.2194507056595474e-06,
+        -3.9175941476520676e-08
+      ],
+      "end_rotation_difference_rad": [
+        -2.5272506267162078e-05,
+        -8.286643166465888e-08,
+        2.989755464894908e-05
+      ],
+      "translation_detectable": true,
+      "rotation_detectable": true,
+      "translation_engineering": true,
+      "rotation_engineering": false,
+      "max_sampled_force_vector_difference_N": 0.009736332509368895,
+      "max_sampled_torque_vector_difference_Nm": 2.2273979614726944e-05,
+      "end_reference_position_difference_m": [
+        4.486234835059328e-06,
+        1.8846374802762193e-07,
+        3.35992945792174e-08
+      ],
+      "end_reference_rotation_difference_rad": [
+        -6.130804410569682e-06,
+        -1.0594042936762556e-06,
+        4.16527254785288e-11
+      ],
+      "requested_integral_6d": [
+        7.4999999999991676e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limiter_counterfactual_integral_6d": [
+        2.120885337319232e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "paired_end_command_integral_6d": [
+        4.486234835060369e-06,
+        1.8846374802740572e-07,
+        3.359929456754704e-08,
+        -6.13080441054024e-06,
+        -1.059404294353862e-06,
+        0.0
+      ],
+      "complete": true,
+      "requested_sign": 1,
+      "x_endpoint_m": 1.1230774464929808e-06,
+      "x_sign_aligned": true
+    }
+  ],
+  "command_decomposition": [
+    {
+      "id": "motion_x_neg",
+      "requested_integral": [
+        -7.4999999999991676e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "base_feedback_difference": [
+        3.288686192939575e-06,
+        1.5573214720790385e-07,
+        -8.847557419960926e-07,
+        7.332518877629356e-06,
+        -3.1513238020096125e-06,
+        0.0
+      ],
+      "stage_clipping_difference": [
+        9.351243737686446e-22,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limiter_difference": [
+        3.8414349827634355e-08,
+        -6.600331167771371e-08,
+        7.513169610930327e-07,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "paired_command_integral": [
+        -4.172899457231965e-06,
+        8.972883553019018e-08,
+        -1.334387809030599e-07,
+        7.332518877629356e-06,
+        -3.1513238020096125e-06,
+        0.0
+      ],
+      "force_delta_balance": {
+        "drive_rms": 0.00028602748860638864,
+        "contact_rms": 0.001030595875329954,
+        "residual_rms": 0.0010084902659004374,
+        "relative_rms_residual": 3.525850857251879
+      },
+      "torque_delta_balance": {
+        "drive_rms": 3.022969727489762e-06,
+        "contact_rms": 8.559754579597246e-06,
+        "residual_rms": 8.558327740329655e-06,
+        "relative_rms_residual": 2.8310993863098948
+      },
+      "controller_cycles_replayed": 4486
+    },
+    {
+      "id": "motion_x_pos",
+      "requested_integral": [
+        7.4999999999991676e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "base_feedback_difference": [
+        -2.8439284990801024e-06,
+        2.5446705970511935e-07,
+        -7.130092480856815e-07,
+        -6.13080441054024e-06,
+        -1.059404294353862e-06,
+        0.0
+      ],
+      "stage_clipping_difference": [
+        -1.3552527156067313e-21,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "limiter_difference": [
+        -1.6983666585869872e-07,
+        -6.600331167771371e-08,
+        7.466085426532283e-07,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "paired_command_integral": [
+        4.486234835060369e-06,
+        1.8846374802740572e-07,
+        3.359929456754704e-08,
+        -6.13080441054024e-06,
+        -1.059404294353862e-06,
+        0.0
+      ],
+      "force_delta_balance": {
+        "drive_rms": 0.0002987870375648376,
+        "contact_rms": 0.0010189045241537212,
+        "residual_rms": 0.0009812391119659067,
+        "relative_rms_residual": 3.2840752395524357
+      },
+      "torque_delta_balance": {
+        "drive_rms": 1.8270874619185882e-06,
+        "contact_rms": 3.617935297003714e-06,
+        "residual_rms": 3.884995362254117e-06,
+        "relative_rms_residual": 2.1263324516356543
+      },
+      "controller_cycles_replayed": 4471
+    }
+  ],
+  "baseline": {
+    "id": "zero_x_neg_100",
+    "final_xy_error_um": 61.09917993189201,
+    "outcome": "TASK_FAILURE"
+  },
+  "wall_seconds": 436.3369438999798,
+  "source_unchanged": true,
+  "training_admitted": false,
+  "optimizer_updates": 0,
+  "independent_test_used": false
+}

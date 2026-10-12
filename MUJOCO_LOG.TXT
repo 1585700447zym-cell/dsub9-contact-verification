@@ -1,0 +1,11 @@
+Tue Sep 22 22:25:59 2026
+WARNING: Could not open file 'D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\contact_minimal_reproducer\minimal_v1\new_native.mjb'
+
+Tue Sep 22 22:26:00 2026
+WARNING: Could not open file 'D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\contact_minimal_reproducer\minimal_v1\old_native.mjb'
+
+Tue Sep 22 22:26:03 2026
+WARNING: Could not open file 'D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\contact_minimal_reproducer\minimal_v1\old_mpr.mjb'
+
+WARNING Mon Sep 28 10:07:14 2026: Could not save model to 'D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_native_crash_20260928\capture_02\model.mjb'
+

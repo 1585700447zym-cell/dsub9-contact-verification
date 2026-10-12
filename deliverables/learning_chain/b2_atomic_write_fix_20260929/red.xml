@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="12" time="1.625" timestamp="2026-09-29T15:26:14.676204+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_atomic_json" name="test_transient_windows_denial_replaces_same_staged_bytes[5]" time="0.016"><failure message="PermissionError: [WinError 5] fixture replacement denial">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A4044D2520&gt;
+code = 5
+
+    @pytest.mark.parametrize('code',[5,32,33])
+    def test_transient_windows_denial_replaces_same_staged_bytes(tmp_path,monkeypatch,code):
+        m=api();path=tmp_path/'budget.json';m._write_json(path,{'completed':0})
+        real=m.os.replace;attempts=[]
+        def replace(source,target):
+            attempts.append(Path(source).read_bytes())
+            assert json.loads(path.read_text())=={'completed':0}
+            if len(attempts)&lt;=2:raise denied(code)
+            return real(source,target)
+        monkeypatch.setattr(m.os,'replace',replace)
+&gt;       m._write_json(path,{'completed':1})
+
+tests\learning\test_atomic_json.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\admitted_collection.py:56: in _write_json
+    os.replace(temporary, path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+source = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_0/budget.json.tmp')
+target = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_0/budget.json')
+
+    def replace(source,target):
+        attempts.append(Path(source).read_bytes())
+        assert json.loads(path.read_text())=={'completed':0}
+&gt;       if len(attempts)&lt;=2:raise denied(code)
+E       PermissionError: [WinError 5] fixture replacement denial
+
+tests\learning\test_atomic_json.py:25: PermissionError</failure></testcase><testcase classname="tests.learning.test_atomic_json" name="test_transient_windows_denial_replaces_same_staged_bytes[32]" time="0.006"><failure message="PermissionError: [WinError 32] fixture replacement denial">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A4044D36F0&gt;
+code = 32
+
+    @pytest.mark.parametrize('code',[5,32,33])
+    def test_transient_windows_denial_replaces_same_staged_bytes(tmp_path,monkeypatch,code):
+        m=api();path=tmp_path/'budget.json';m._write_json(path,{'completed':0})
+        real=m.os.replace;attempts=[]
+        def replace(source,target):
+            attempts.append(Path(source).read_bytes())
+            assert json.loads(path.read_text())=={'completed':0}
+            if len(attempts)&lt;=2:raise denied(code)
+            return real(source,target)
+        monkeypatch.setattr(m.os,'replace',replace)
+&gt;       m._write_json(path,{'completed':1})
+
+tests\learning\test_atomic_json.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\admitted_collection.py:56: in _write_json
+    os.replace(temporary, path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+source = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_1/budget.json.tmp')
+target = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_1/budget.json')
+
+    def replace(source,target):
+        attempts.append(Path(source).read_bytes())
+        assert json.loads(path.read_text())=={'completed':0}
+&gt;       if len(attempts)&lt;=2:raise denied(code)
+E       PermissionError: [WinError 32] fixture replacement denial
+
+tests\learning\test_atomic_json.py:25: PermissionError</failure></testcase><testcase classname="tests.learning.test_atomic_json" name="test_transient_windows_denial_replaces_same_staged_bytes[33]" time="0.006"><failure message="PermissionError: [WinError 33] fixture replacement denial">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A4045D0290&gt;
+code = 33
+
+    @pytest.mark.parametrize('code',[5,32,33])
+    def test_transient_windows_denial_replaces_same_staged_bytes(tmp_path,monkeypatch,code):
+        m=api();path=tmp_path/'budget.json';m._write_json(path,{'completed':0})
+        real=m.os.replace;attempts=[]
+        def replace(source,target):
+            attempts.append(Path(source).read_bytes())
+            assert json.loads(path.read_text())=={'completed':0}
+            if len(attempts)&lt;=2:raise denied(code)
+            return real(source,target)
+        monkeypatch.setattr(m.os,'replace',replace)
+&gt;       m._write_json(path,{'completed':1})
+
+tests\learning\test_atomic_json.py:28: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\admitted_collection.py:56: in _write_json
+    os.replace(temporary, path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+source = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_2/budget.json.tmp')
+target = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_transient_windows_denial_2/budget.json')
+
+    def replace(source,target):
+        attempts.append(Path(source).read_bytes())
+        assert json.loads(path.read_text())=={'completed':0}
+&gt;       if len(attempts)&lt;=2:raise denied(code)
+E       PermissionError: [WinError 33] fixture replacement denial
+
+tests\learning\test_atomic_json.py:25: PermissionError</failure></testcase><testcase classname="tests.learning.test_atomic_json" name="test_real_read_handle_release_recovers_without_rewriting" time="0.007"><failure message="PermissionError: [WinError 5] 拒绝访问。: 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_atomic_write_fix_20260929\\red_work\\test_real_read_handle_release_0\\actual.json.tmp' -&gt; 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_atomic_write_fix_20260929\\red_work\\test_real_read_handle_release_0\\actual.json'">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_real_read_handle_release_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A40463C270&gt;
+
+    def test_real_read_handle_release_recovers_without_rewriting(tmp_path,monkeypatch):
+        import threading
+        m=api();path=tmp_path/'actual.json';m._write_json(path,{'generation':0})
+        held=path.open('rb');real=m.os.replace;attempts=[]
+        release=threading.Event()
+        def close_reader():
+            assert release.wait(3)
+            # Let the first failed replacement prove the actual OS conflict.
+            held.close()
+        thread=threading.Thread(target=close_reader);thread.start()
+        def replace(source,target):
+            try:return real(source,target)
+            except PermissionError as exc:
+                attempts.append(exc.winerror);release.set();raise
+        monkeypatch.setattr(m.os,'replace',replace)
+&gt;       try:m._write_json(path,{'generation':1})
+
+tests\learning\test_atomic_json.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\admitted_collection.py:56: in _write_json
+    os.replace(temporary, path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+source = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_real_read_handle_release_0/actual.json.tmp')
+target = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_real_read_handle_release_0/actual.json')
+
+    def replace(source,target):
+&gt;       try:return real(source,target)
+E       PermissionError: [WinError 5] 拒绝访问。: 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_atomic_write_fix_20260929\\red_work\\test_real_read_handle_release_0\\actual.json.tmp' -&gt; 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_atomic_write_fix_20260929\\red_work\\test_real_read_handle_release_0\\actual.json'
+
+tests\learning\test_atomic_json.py:44: PermissionError</failure></testcase><testcase classname="tests.learning.test_atomic_json" name="test_persistent_real_lock_stops_with_old_and_staged_data" time="0.003"><failure message="AttributeError: module 'tools.learning.admitted_collection' has no attribute 'time'">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_persistent_real_lock_stop0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A40440B350&gt;
+
+    def test_persistent_real_lock_stops_with_old_and_staged_data(tmp_path,monkeypatch):
+        m=api();path=tmp_path/'persistent.json';m._write_json(path,{'generation':0})
+        # Use the actual lock, but omit wall-clock sleeps for the permanent-error test.
+&gt;       waits=[];monkeypatch.setattr(m.time,'sleep',lambda delay:waits.append(delay))
+E       AttributeError: module 'tools.learning.admitted_collection' has no attribute 'time'
+
+tests\learning\test_atomic_json.py:58: AttributeError</failure></testcase><testcase classname="tests.learning.test_atomic_json" name="test_nontransient_replace_errors_are_not_retried[ordinary_permission]" time="0.010" /><testcase classname="tests.learning.test_atomic_json" name="test_nontransient_replace_errors_are_not_retried[disk_full]" time="0.005" /><testcase classname="tests.learning.test_atomic_json" name="test_nontransient_replace_errors_are_not_retried[missing_directory]" time="0.004" /><testcase classname="tests.learning.test_atomic_json" name="test_flush_failure_never_replaces_destination" time="0.004" /><testcase classname="tests.learning.test_atomic_json" name="test_budget_write_retry_never_repeats_optimizer_or_hides_failure[before]" time="1.303"><failure message="PermissionError: [WinError 5] fixture replacement denial">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_budget_write_retry_never_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A4045309F0&gt;
+boundary = 'before'
+
+    @pytest.mark.parametrize('boundary',['before','after','persistent_after'])
+    def test_budget_write_retry_never_repeats_optimizer_or_hides_failure(tmp_path,monkeypatch,boundary):
+        import numpy as np
+        from tests.learning.test_bounded_checkpoint import SyntheticPermit
+        from tests.learning.test_bounded_contact import receipt
+        from tools.learning.bounded_contact import BoundedCollection
+        m=api();chain=BoundedCollection(admission=SyntheticPermit(),output=tmp_path/'episodes')
+        for i in range(4):chain.budget.record(receipt(i))
+        sample=SimpleNamespace(actor=None,critic=None,targets=None,mask=np.zeros(32,dtype=bool),indices=[('fixture',0)]*32)
+        monkeypatch.setattr(chain.index,'sample',lambda *a,**kw:sample)
+        updates=[]
+        def fake_update(*args,**kwargs):
+            updates.append(1)
+            for key in chain.updater.counts:chain.updater.counts[key]+=1
+            return dict(critic_batches=len(updates))
+        monkeypatch.setattr(chain.updater,'update',fake_update)
+        real=m.os.replace;rejections=[]
+        def replace(source,target):
+            if Path(target).name=='update_budget.json':
+                record=json.loads(Path(source).read_text())
+                at_boundary=record['completed']==(0 if boundary=='before' else 1)
+                if at_boundary and (not rejections or boundary=='persistent_after'):
+                    rejections.append(record);raise denied()
+            return real(source,target)
+        monkeypatch.setattr(m.os,'replace',replace)
+        if boundary=='persistent_after':
+            monkeypatch.setattr(m.time,'sleep',lambda delay:None)
+            with pytest.raises(PermissionError):chain.update(1)
+            assert chain.failed
+            with pytest.raises(RuntimeError):chain.update(1)
+            evidence=json.loads((tmp_path/'episodes/failure.json').read_text())
+            assert evidence['updates']['critic']==1 and len(evidence['history'])==1
+        else:
+&gt;           chain.update(1)
+
+tests\learning\test_atomic_json.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\bounded_contact.py:229: in update
+    self.record_update_budget()  # durable before any optimizer can step
+tools\learning\bounded_contact.py:192: in record_update_budget
+    _write_json(self.collector.output/'update_budget.json',dict(attempted=self.update_attempts,
+tools\learning\admitted_collection.py:56: in _write_json
+    os.replace(temporary, path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+source = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_budget_write_retry_never_0/episodes/update_budget.json.tmp')
+target = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_budget_write_retry_never_0/episodes/update_budget.json')
+
+    def replace(source,target):
+        if Path(target).name=='update_budget.json':
+            record=json.loads(Path(source).read_text())
+            at_boundary=record['completed']==(0 if boundary=='before' else 1)
+            if at_boundary and (not rejections or boundary=='persistent_after'):
+&gt;               rejections.append(record);raise denied()
+E               PermissionError: [WinError 5] fixture replacement denial
+
+tests\learning\test_atomic_json.py:108: PermissionError</failure></testcase><testcase classname="tests.learning.test_atomic_json" name="test_budget_write_retry_never_repeats_optimizer_or_hides_failure[after]" time="0.028"><failure message="PermissionError: [WinError 5] fixture replacement denial">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_budget_write_retry_never_1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A408E10C90&gt;
+boundary = 'after'
+
+    @pytest.mark.parametrize('boundary',['before','after','persistent_after'])
+    def test_budget_write_retry_never_repeats_optimizer_or_hides_failure(tmp_path,monkeypatch,boundary):
+        import numpy as np
+        from tests.learning.test_bounded_checkpoint import SyntheticPermit
+        from tests.learning.test_bounded_contact import receipt
+        from tools.learning.bounded_contact import BoundedCollection
+        m=api();chain=BoundedCollection(admission=SyntheticPermit(),output=tmp_path/'episodes')
+        for i in range(4):chain.budget.record(receipt(i))
+        sample=SimpleNamespace(actor=None,critic=None,targets=None,mask=np.zeros(32,dtype=bool),indices=[('fixture',0)]*32)
+        monkeypatch.setattr(chain.index,'sample',lambda *a,**kw:sample)
+        updates=[]
+        def fake_update(*args,**kwargs):
+            updates.append(1)
+            for key in chain.updater.counts:chain.updater.counts[key]+=1
+            return dict(critic_batches=len(updates))
+        monkeypatch.setattr(chain.updater,'update',fake_update)
+        real=m.os.replace;rejections=[]
+        def replace(source,target):
+            if Path(target).name=='update_budget.json':
+                record=json.loads(Path(source).read_text())
+                at_boundary=record['completed']==(0 if boundary=='before' else 1)
+                if at_boundary and (not rejections or boundary=='persistent_after'):
+                    rejections.append(record);raise denied()
+            return real(source,target)
+        monkeypatch.setattr(m.os,'replace',replace)
+        if boundary=='persistent_after':
+            monkeypatch.setattr(m.time,'sleep',lambda delay:None)
+            with pytest.raises(PermissionError):chain.update(1)
+            assert chain.failed
+            with pytest.raises(RuntimeError):chain.update(1)
+            evidence=json.loads((tmp_path/'episodes/failure.json').read_text())
+            assert evidence['updates']['critic']==1 and len(evidence['history'])==1
+        else:
+&gt;           chain.update(1)
+
+tests\learning\test_atomic_json.py:119: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\learning\bounded_contact.py:236: in update
+    self.record_update_budget()
+tools\learning\bounded_contact.py:192: in record_update_budget
+    _write_json(self.collector.output/'update_budget.json',dict(attempted=self.update_attempts,
+tools\learning\admitted_collection.py:56: in _write_json
+    os.replace(temporary, path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+source = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_budget_write_retry_never_1/episodes/update_budget.json.tmp')
+target = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_budget_write_retry_never_1/episodes/update_budget.json')
+
+    def replace(source,target):
+        if Path(target).name=='update_budget.json':
+            record=json.loads(Path(source).read_text())
+            at_boundary=record['completed']==(0 if boundary=='before' else 1)
+            if at_boundary and (not rejections or boundary=='persistent_after'):
+&gt;               rejections.append(record);raise denied()
+E               PermissionError: [WinError 5] fixture replacement denial
+
+tests\learning\test_atomic_json.py:108: PermissionError</failure></testcase><testcase classname="tests.learning.test_atomic_json" name="test_budget_write_retry_never_repeats_optimizer_or_hides_failure[persistent_after]" time="0.012"><failure message="AttributeError: module 'tools.learning.admitted_collection' has no attribute 'time'">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_atomic_write_fix_20260929/red_work/test_budget_write_retry_never_2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A408BE8E20&gt;
+boundary = 'persistent_after'
+
+    @pytest.mark.parametrize('boundary',['before','after','persistent_after'])
+    def test_budget_write_retry_never_repeats_optimizer_or_hides_failure(tmp_path,monkeypatch,boundary):
+        import numpy as np
+        from tests.learning.test_bounded_checkpoint import SyntheticPermit
+        from tests.learning.test_bounded_contact import receipt
+        from tools.learning.bounded_contact import BoundedCollection
+        m=api();chain=BoundedCollection(admission=SyntheticPermit(),output=tmp_path/'episodes')
+        for i in range(4):chain.budget.record(receipt(i))
+        sample=SimpleNamespace(actor=None,critic=None,targets=None,mask=np.zeros(32,dtype=bool),indices=[('fixture',0)]*32)
+        monkeypatch.setattr(chain.index,'sample',lambda *a,**kw:sample)
+        updates=[]
+        def fake_update(*args,**kwargs):
+            updates.append(1)
+            for key in chain.updater.counts:chain.updater.counts[key]+=1
+            return dict(critic_batches=len(updates))
+        monkeypatch.setattr(chain.updater,'update',fake_update)
+        real=m.os.replace;rejections=[]
+        def replace(source,target):
+            if Path(target).name=='update_budget.json':
+                record=json.loads(Path(source).read_text())
+                at_boundary=record['completed']==(0 if boundary=='before' else 1)
+                if at_boundary and (not rejections or boundary=='persistent_after'):
+                    rejections.append(record);raise denied()
+            return real(source,target)
+        monkeypatch.setattr(m.os,'replace',replace)
+        if boundary=='persistent_after':
+&gt;           monkeypatch.setattr(m.time,'sleep',lambda delay:None)
+E           AttributeError: module 'tools.learning.admitted_collection' has no attribute 'time'
+
+tests\learning\test_atomic_json.py:112: AttributeError</failure></testcase></testsuite></testsuites>

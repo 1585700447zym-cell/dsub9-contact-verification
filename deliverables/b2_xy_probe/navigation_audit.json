@@ -1,0 +1,16 @@
+{
+  "verified_historical_manifest_entries": {
+    "deliverables/b2_search_recovery/delivery_manifest.json": 148,
+    "deliverables/b2_exit_gate_v2/delivery_manifest.json": 66,
+    "deliverables/reproduction_guide/说明与导出清单.json": 9,
+    "deliverables/b2_switch_diagnosis/delivery_manifest.json": 15
+  },
+  "changed_v2_manifest_entries": [
+    "报告总索引.md",
+    "deliverables/reproduction_guide/说明与导出清单.json"
+  ],
+  "preexisting_ui_difference_preserved": {
+    ".vscode/settings.json": "e8a18f2fbbb734665a9860cd81eb5cea40ce0d15f03395dc90ed45fbf4924691"
+  },
+  "no_old_experiment_output_changed": true
+}

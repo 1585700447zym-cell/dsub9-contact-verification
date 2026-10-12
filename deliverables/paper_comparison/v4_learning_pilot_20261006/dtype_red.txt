@@ -1,0 +1,9 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+______ test_boolean_observations_cannot_be_coerced_into_training_vectors ______
+tests\learning\test_v4_learning.py:121: in test_boolean_observations_cannot_be_coerced_into_training_vectors
+    with pytest.raises(ValueError):V4Replay(mode='F50',capacity=20)._prepare(data)
+E   Failed: DID NOT RAISE <class 'ValueError'>
+=========================== short test summary info ===========================
+FAILED tests/learning/test_v4_learning.py::test_boolean_observations_cannot_be_coerced_into_training_vectors
+1 failed in 3.43s

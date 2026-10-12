@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-10-04T19:19:24.533697+08:00",
+  "tests_passed": 184,
+  "tests_command": "python -X utf8 -B -m pytest tests/task_variants tests/control/test_fixed_admittance.py tests/learning/test_action.py tests/learning/test_reward.py -q --tb=short",
+  "full_project_suite": false,
+  "review": {
+    "critical": 0,
+    "important": 1,
+    "important_fixed": "Fresh live actuator observation after recovery reference reset; two regression checks",
+    "minor": 0,
+    "deferred_minors": []
+  },
+  "prior_sealed_files_verified": {
+    "clearance120_20261003": 210,
+    "functional_b2_20261003": 216,
+    "search_load_20261004": 218,
+    "admittance_rebase_20261004": 227,
+    "compliant_search_20261004": 242,
+    "axis_search_20261004": 237
+  },
+  "execution_input_hashes_verified": 887,
+  "source_snapshots": 191,
+  "document_snapshots": 6,
+  "input_sources_unchanged_during_execution": true,
+  "live_changes_since_execution": [
+    "docs/superpowers/plans/2026-10-04-reference-search.md"
+  ],
+  "live_plan_change_scope": "Closeout checkboxes/status only; execution original in source_snapshot",
+  "configuration_and_model_bindings_verified": true,
+  "archive_hash_verified": true,
+  "stop_independently_rechecked": true,
+  "figures_visually_checked": [
+    "results.png",
+    "search_diagnosis.png",
+    "reference_diagnosis.png"
+  ],
+  "new_links_checked": 52,
+  "real_search_commands_reconstructed": 7384,
+  "max_command_error_m_s": 3.0251951117776787e-16,
+  "max_actual_reference_radius_um": 119.99584405078849,
+  "max_reference_prediction_error_um": 6.052916631669441e-11,
+  "full_recovery_dynamically_exercised": true,
+  "net_progress_search_exit_events": 1,
+  "nominal_blocked_pose_reference_bounded": true,
+  "implementation_complete": true,
+  "bounded_verification_complete": true,
+  "development_matrix_all_success": false,
+  "repair_performance_accepted": false,
+  "stage_B2_complete": false,
+  "training_admitted": false,
+  "episodes": 1,
+  "functional_success": 0,
+  "unused_closed": 4,
+  "cumulative_episodes": 124,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "automatic_tracking": "PAUSED"
+}

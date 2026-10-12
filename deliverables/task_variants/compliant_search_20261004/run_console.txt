@@ -1,0 +1,14 @@
+{"case": "y_neg_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "y_neg_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "y_neg_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "y_neg_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "y_neg_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "y_neg_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "y_neg_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "y_neg_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "y_neg_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "y_neg_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"case": "y_neg_150", "cycles": 5500, "time_s": 11.000000000001041}
+{"case": "y_neg_150", "cycles": 6000, "time_s": 11.99999999999871}
+{"id": "y_neg_150", "status": "finished", "started_at": "2026-10-04T18:16:15.416867+08:00", "control_cycles": 6321, "physical_substeps": 63210, "simulated_time_s": 11.99999999999871, "updated_at": "2026-10-04T18:21:19.212712+08:00", "ended_at": "2026-10-04T18:21:27.661903+08:00", "outcome": {"simulation_valid": true, "task_outcome": "TASK_FAILURE", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.00047894103950591, "checked_substeps": 63210}}, "reason": "SEARCH_BUDGET_EXHAUSTED", "wall_seconds": 312.24366540000483, "xy_um": 150.3180809520839, "z_um": -3750.0013277949506, "pin_clearance_um": -51.148662030443475, "peaks": {"force_N": 0.024474802397817005, "torque_G_Nm": 5.857284073800823e-05, "penetration_m": 7.420965424641291e-06, "speed_m_s": 0.0010868478532910393, "drive_force_components_N": [0.004001559987209165, 0.003908606110426015, 0.02447604256959806], "drive_torque_components_Nm": [1.3097372675589993e-05, 1.5825238430743345e-05, 7.1150882482503825e-06], "contact_count": 2132.0}, "contact_cycles": 5719, "search_cycles": 3975, "stop_time": 10.642000000001875, "task_end_time": 11.641999999999545, "end_time": 12.641999999997214, "archive_sha256": "ee50ddfb23e449b570ae81e7137b91f4ee27ae3ec79b25506dc5702cefb976ea"}
+{"status": "controlled_stop", "episodes": 1}

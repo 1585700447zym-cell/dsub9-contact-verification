@@ -1,0 +1,15 @@
+test_I4_outer_timeout_closes_only_this_launch_claim (test_review_regressions.ReviewRegressions.test_I4_outer_timeout_closes_only_this_launch_claim) ... ERROR
+
+======================================================================
+ERROR: test_I4_outer_timeout_closes_only_this_launch_claim (test_review_regressions.ReviewRegressions.test_I4_outer_timeout_closes_only_this_launch_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables/learning_chain/b2_pose_scope_preflight_20261008\test_review_regressions.py", line 102, in test_I4_outer_timeout_closes_only_this_launch_claim
+    runner.close_interrupted(folder,'a'*64,gate,TimeoutError('inert audit stalled'))
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'run_preflight' has no attribute 'close_interrupted'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.027s
+
+FAILED (errors=1)

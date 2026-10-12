@@ -1,0 +1,2 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+{"status": "VERIFIED_OFFLINE_AUDITOR_REPAIR", "assertions": 341, "sealed_files": 42, "manifest_sha256": "745c3948b1b7f2876a8bb1b0ab9c556a9a797082c85ca55f5b5b99cd7e3deb56", "regression_tests": 20, "existing_archives": 10, "new_simulation": 0, "new_training": 0, "cumulative_dynamic": 209, "physical_runner_rebound": false}

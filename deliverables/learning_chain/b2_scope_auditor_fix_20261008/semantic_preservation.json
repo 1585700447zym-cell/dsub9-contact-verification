@@ -1,0 +1,17 @@
+{
+  "unchanged_functions": [
+    "read_archive",
+    "assess_raw",
+    "information_comparison",
+    "choose_route",
+    "assess",
+    "main"
+  ],
+  "changed_functions": [
+    "same"
+  ],
+  "new_functions": [
+    "python_scalar"
+  ],
+  "controller_reward_threshold_stop_logic_unchanged": true
+}

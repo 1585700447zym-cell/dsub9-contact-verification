@@ -1,0 +1,23 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_____ test_observation_uses_live_reference_and_command_despite_cached_row _____
+tests\task_variants\test_reference_search.py:115: in test_observation_uses_live_reference_and_command_despite_cached_row
+    assert o.reference_displacement_m==(0.,0.,0.) and o.previous_command_xy_m_s==(0.,0.)
+E   assert ((np.float64(5....float64(0.0)) == (0.0, 0.0, 0.0)
+E     
+E     At index 0 diff: np.float64(5e-05) != 0.0
+E     Use -v to get more diff)
+------------------------------ Captured log call ------------------------------
+WARNING  matplotlib.font_manager:font_manager.py:1180 Could not save font_manager cache [Errno 13] Permission denied: 'C:\\Users\\ok everything\\.matplotlib\\fontlist-v3.11.0.json.matplotlib-lock'
+____ test_recovery_first_command_observes_reset_reference_without_physics _____
+tests\task_variants\test_reference_search.py:137: in test_recovery_first_command_observes_reset_reference_without_physics
+    before=p.copy();snap=s.prepare_cycle();composition=s.controller.search_composition
+tools\learning\session.py:101: in prepare_cycle
+    row = e.observe()
+tools\learning\guarded_environment.py:89: in observe
+    if not self._observation_ready:
+E   AttributeError: 'LearningEnvironment' object has no attribute '_observation_ready'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_reference_search.py::test_observation_uses_live_reference_and_command_despite_cached_row
+FAILED tests/task_variants/test_reference_search.py::test_recovery_first_command_observes_reset_reference_without_physics
+2 failed, 18 deselected in 1.90s

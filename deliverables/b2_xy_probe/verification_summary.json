@@ -1,0 +1,48 @@
+{
+  "date": "2026-09-22",
+  "scope": "B2-5.3 X +100 um one new dynamics run",
+  "new_dynamics_runs": 1,
+  "candidate_and_report_tests": {
+    "command": "python -X utf8 -B -m pytest tests/b2/test_search_probe.py tests/b2/test_probe_report.py -q -p no:cacheprovider",
+    "passed": 14,
+    "latest_duration_s": 0.52
+  },
+  "earlier_regression": {
+    "command": "python -X utf8 -B -m pytest tests/b2 tests/control tests/dynamics -q -p no:cacheprovider",
+    "passed": 114,
+    "duration_s": 49.62,
+    "note": "Before adding 2 report edge-case tests; 12 controller tests are included in both runs."
+  },
+  "audited_trajectory_matches_saved_report": true,
+  "identical_prefix_samples": 5388,
+  "checked_probe_commands": 363,
+  "probe_execution": {
+    "scheduled_pause_s": 1.0,
+    "zero_gain_command_duration_s": 0.726,
+    "resume_ramp_executed": false,
+    "ended_by_parent": {
+      "time_s": 11.499999999999876,
+      "event": "XY_PROBE_ENDED_BY_PARENT",
+      "phase": "INSERT"
+    }
+  },
+  "verified_manifest_counts": {
+    "deliverables/b2_search_recovery/delivery_manifest.json": 148,
+    "deliverables/b2_exit_gate_v2/delivery_manifest.json": 66,
+    "deliverables/reproduction_guide/说明与导出清单.json": 9,
+    "deliverables/b2_switch_diagnosis/delivery_manifest.json": 15,
+    "deliverables/b2_xy_probe/comparison_first_frozen_x100/delivery_manifest.json": 8
+  },
+  "checked_markdown_links": 19,
+  "gif_frames_and_trace_mappings": 101,
+  "visual_qa": "Monthly comparison, final pose and full control figure inspected; labels and layout legible.",
+  "preserved_ui_settings_difference": {
+    ".vscode/settings.json": "e8a18f2fbbb734665a9860cd81eb5cea40ce0d15f03395dc90ed45fbf4924691"
+  },
+  "limitations": [
+    "Single fixed development case, not a success-rate estimate",
+    "TARGET_POSE_NOT_SETTLED: XY 63.979 um exceeds 50 um",
+    "Resume ramp covered by unit tests, not executed in this dynamics trial",
+    "No Y case, SAC training, real hardware validation, commit, push or merge performed"
+  ]
+}

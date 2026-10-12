@@ -1,0 +1,1 @@
+{"current_reference_radius_um":119.97936698003271,"explanation":"有限一零步检查预测正确，但下一状态的零残差基线再下一步已不可行；滤波归零仍返回该基线，随后控制器按预测触发SEARCH_REFERENCE_LIMIT。不是本例预测计算偏差，也不是训练后失效。","predicted_excess_nm":12.974565480805209,"predicted_reference_radius_um":120.0129745654808,"prediction_error_m":4.0657581468206416e-20}

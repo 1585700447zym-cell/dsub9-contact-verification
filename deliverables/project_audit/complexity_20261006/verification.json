@@ -1,0 +1,31 @@
+{
+  "scope": "code/archive and reference-only audit; no production change or dynamics/RL execution",
+  "source_files_unchanged": 15,
+  "archive_sha_checks": 3,
+  "previous_sealed_deliveries": [
+    {
+      "manifest": "deliverables/paper_comparison/v4_continuation_20261006/delivery_manifest.json",
+      "sha256": "536a599cd5b8baaab8fbb8951f8b1557a6eb40bc2d215f12603103d0a07a4673",
+      "checked_files": 239,
+      "mismatches": []
+    },
+    {
+      "manifest": "deliverables/paper_comparison/v4_learning_pilot_20261006/delivery_manifest_v2.json",
+      "sha256": "f740dd75a922b5962c293da16213bdc2818fef6bca6ec885a7b28a1d3f3c80a9",
+      "checked_files": 1204,
+      "mismatches": []
+    }
+  ],
+  "new_local_links_checked": 51,
+  "link_failures": [],
+  "rolling_document_snapshots_equal": 5,
+  "worktree": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "current_dirty_entries": 210,
+  "new_dynamics": 0,
+  "new_policy_calls": 0,
+  "new_optimizer_batches": 0,
+  "B2_complete": false,
+  "implementation_fix_complete": false,
+  "audit_findings_confirmed": true
+}

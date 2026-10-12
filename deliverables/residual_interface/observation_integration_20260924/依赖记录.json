@@ -1,0 +1,26 @@
+{
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "executable": "D:\\KEYANRUJIAN\\python.exe",
+  "versions": {
+    "numpy": "2.1.3",
+    "pytest": "8.3.4",
+    "gymnasium": "1.2.3",
+    "torch": "2.12.1",
+    "stable-baselines3": "2.8.0"
+  },
+  "runtime": {
+    "version": "3.13.0",
+    "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+    "dll_verified": true,
+    "dll_sha256": {
+      "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+    },
+    "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+  },
+  "torch_import": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import torch; print(torch.__version__)\n    ^^^^^^^^^^^^\n  File \"C:\\Users\\ok everything\\AppData\\Roaming\\Python\\Python313\\site-packages\\torch\\__init__.py\", line 287, in <module>\n    _load_dll_libraries()\n    ~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\ok everything\\AppData\\Roaming\\Python\\Python313\\site-packages\\torch\\__init__.py\", line 283, in _load_dll_libraries\n    raise err\nOSError: [WinError 126] 找不到指定的模块。 Error loading \"C:\\Users\\ok everything\\AppData\\Roaming\\Python\\Python313\\site-packages\\torch\\lib\\caffe2_nvrtc.dll\" or one of its dependencies.\n"
+  },
+  "training_admitted": false
+}

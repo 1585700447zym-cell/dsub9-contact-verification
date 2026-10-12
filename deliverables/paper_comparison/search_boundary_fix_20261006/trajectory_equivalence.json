@@ -1,0 +1,18 @@
+[
+  {
+    "id": "B2_y_neg_150",
+    "new_sha256": "72adf1e1516c2314529584680c68eb2c4262bb18cc640b93d9a63d06e91a4a7c",
+    "old_archive": "deliverables/task_variants/layered_referee_20261004/run/y_neg_150.json.gz",
+    "old_sha256": "604437ff1ef4d3e936849272376b8003286972bd527c9a3d69fbf60bfe3973bd",
+    "rows": 11271,
+    "all_trace_fields_exact": true
+  },
+  {
+    "id": "F50_y_neg_150",
+    "new_sha256": "4ed0b8c71358c69a40e42babfe867be81efa94a3d7b858f01f489a4467ffd752",
+    "old_archive": "deliverables/paper_comparison/v4_learning_pilot_20261006/run/warmup_F50_y_neg_150.json.gz",
+    "old_sha256": "b8687e1de3569427ee7939ed71c266ec012b487694bdc921dd699c78218e213a",
+    "rows": 5886,
+    "all_trace_fields_exact": true
+  }
+]

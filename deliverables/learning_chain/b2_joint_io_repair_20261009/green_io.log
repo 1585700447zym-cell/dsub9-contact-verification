@@ -1,0 +1,16 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_concurrent_replacement_yields_only_complete_json (__main__.IOTests.test_concurrent_replacement_yields_only_complete_json) ... ok
+test_default_permanent_denial_is_bounded (__main__.IOTests.test_default_permanent_denial_is_bounded) ... ok
+test_delayed_success_is_not_accepted_after_deadline (__main__.IOTests.test_delayed_success_is_not_accepted_after_deadline) ... ok
+test_expired_write_does_not_modify_destination (__main__.IOTests.test_expired_write_does_not_modify_destination) ... ok
+test_failed_replace_keeps_old_value_and_staged_new_value (__main__.IOTests.test_failed_replace_keeps_old_value_and_staged_new_value) ... ok
+test_invalid_json_and_non_permission_errors_fail_immediately (__main__.IOTests.test_invalid_json_and_non_permission_errors_fail_immediately) ... ok
+test_nonfinite_or_invalid_deadline_rejected (__main__.IOTests.test_nonfinite_or_invalid_deadline_rejected) ... ok
+test_persistent_lock_obeys_external_deadline (__main__.IOTests.test_persistent_lock_obeys_external_deadline) ... ok
+test_read_recovers_after_temporary_windows_lock (__main__.IOTests.test_read_recovers_after_temporary_windows_lock) ... ok
+test_replace_recovers_after_temporary_windows_lock (__main__.IOTests.test_replace_recovers_after_temporary_windows_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.229s
+
+OK

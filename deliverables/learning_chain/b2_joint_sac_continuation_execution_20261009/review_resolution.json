@@ -1,0 +1,25 @@
+{
+  "stage_id": "B2-SCOPE-20",
+  "review_date": "2026-10-10",
+  "status": "RESOLVED",
+  "reviewer": "/root/b2_continuation_execution_review",
+  "open_critical": 0,
+  "open_important": 0,
+  "open_minor": 0,
+  "issues": [
+    {"severity": "Minor", "reason": "reserved operations labelled actual_operations", "resolution": "reserved_or_attempted_operations; measured cycles/substeps/calls separately verified", "status": "RESOLVED", "independently_rechecked": true},
+    {"severity": "Minor", "reason": "consumed SCOPE19 candidate labelled current", "resolution": "historical frozen candidate label; template and proposal pins synchronized; first proposal retained", "status": "RESOLVED", "independently_rechecked": true}
+  ],
+  "reviewed_document_proposal_sha256": "1cd9c1078e09d2e3b34078a629a2bd555133477dd0669b7725b4a1a677853361",
+  "reviewed_report_sha256": "9f83478be080ec6f7a657002b642a8dd5bc58ca987504fe67eb91599b0691172",
+  "reviewed_publisher_sha256": "1a690641fc4ba5c9740c6370062335405c2f7b14b52d0a9fdcfaacd111a4fea5",
+  "scientific_operations_during_review": 0,
+  "actual_results_reviewed": true,
+  "development_continue": false,
+  "independent_tests": 0,
+  "full_B2_accepted": false,
+  "C_accepted": false,
+  "next_gradient_update_equivalence_tested": false,
+  "actual_document_publication_and_seal_verified_by_reviewer": false,
+  "final_document_and_seal_verification_required": true
+}

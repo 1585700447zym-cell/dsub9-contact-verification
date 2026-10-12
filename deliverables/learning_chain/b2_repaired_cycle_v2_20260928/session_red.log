@@ -1,0 +1,13 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+_______ test_session_construction_uses_selected_runtime_without_physics _______
+tests\learning\test_repaired_runtime.py:77: in test_session_construction_uses_selected_runtime_without_physics
+    session=module.EpisodeSession(environment=object(),controller_factory=lambda:None)
+tools\learning\session.py:16: in __init__
+    verify_runtime(ROOT / 'tmp/mujoco_3_13_probe')
+tests\learning\test_repaired_runtime.py:74: in verify
+    if Path(path).resolve()!=selected:raise RuntimeError('session used stale default package')
+E   RuntimeError: session used stale default package
+=========================== short test summary info ===========================
+FAILED tests/learning/test_repaired_runtime.py::test_session_construction_uses_selected_runtime_without_physics
+1 failed, 7 deselected in 0.23s

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "option_differences": {
+    "sleep_tolerance": [
+      0.0001,
+      0.001
+    ]
+  },
+  "sleep_enabled": false,
+  "sleep_enable_bit": 16,
+  "identical_array_count": 19,
+  "identical_dynamic_config": true,
+  "source_sha256": {
+    "deliverables/native313_validation/compatibility_3.9.0.json": "fc639908aa57185f4af3ce5593cd290a6e9de9c90b3cc250bac1b51dd51bfe5d",
+    "deliverables/native313_validation/compatibility_3.13.0.json": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+  },
+  "interpretation": "Only sleep_tolerance differs; sleep enable bit is off in both models. Other serialized public options and inspected arrays match. Engine implementation equivalence is not asserted.",
+  "official_reference": "https://mujoco.readthedocs.io/en/latest/XMLreference.html#option-flag-sleep"
+}

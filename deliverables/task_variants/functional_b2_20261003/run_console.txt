@@ -1,0 +1,28 @@
+{"case": "y_pos_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "y_pos_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "y_pos_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "y_pos_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "y_pos_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "y_pos_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "y_pos_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "y_pos_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "y_pos_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "y_pos_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"case": "y_pos_150", "cycles": 5500, "time_s": 11.000000000001041}
+{"case": "y_pos_150", "cycles": 6000, "time_s": 11.99999999999871}
+{"case": "y_pos_150", "cycles": 6500, "time_s": 12.99999999999638}
+{"case": "y_pos_150", "cycles": 7000, "time_s": 13.99999999999405}
+{"case": "y_pos_150", "cycles": 7500, "time_s": 14.999999999991719}
+{"id": "y_pos_150", "status": "finished", "started_at": "2026-10-03T23:50:28.475111+08:00", "control_cycles": 7917, "physical_substeps": 79170, "simulated_time_s": 14.999999999991719, "updated_at": "2026-10-03T23:53:39.855793+08:00", "ended_at": "2026-10-03T23:53:54.914796+08:00", "outcome": {"simulation_valid": true, "task_outcome": "FULL_SUCCESS", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.033640507269222256, "checked_substeps": 79170}}, "reason": "GEOMETRIC_SUCCESS", "wall_seconds": 206.3431372999985, "xy_um": 78.30453174757822, "z_um": -8.87692984823147, "pin_clearance_um": 5.990950905877032, "peaks": {"force_N": 0.02431135669404151, "torque_G_Nm": 0.0001173767004227185, "penetration_m": 3.272192588680445e-06, "speed_m_s": 0.001662319149234457, "drive_force_components_N": [0.005389147167003201, 0.006293303007463297, 0.02429418136020459], "drive_torque_components_Nm": [9.853912778036776e-05, 5.3321157595985754e-05, 1.761111021366671e-05], "contact_count": 74.0}, "contact_cycles": 5020, "search_cycles": 2973, "stop_time": 13.833999999994436, "task_end_time": 14.073999999993877, "end_time": 15.833999999989775, "archive_sha256": "9fb4405572cec1662a484b7cbf64c9374efe1eb0223d116869bb324886669ee5"}
+{"case": "y_neg_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "y_neg_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "y_neg_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "y_neg_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "y_neg_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "y_neg_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "y_neg_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "y_neg_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "y_neg_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "y_neg_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"id": "y_neg_150", "status": "finished", "started_at": "2026-10-03T23:53:55.942087+08:00", "control_cycles": 5305, "physical_substeps": 53050, "simulated_time_s": 10.000000000003372, "updated_at": "2026-10-03T23:57:28.929860+08:00", "ended_at": "2026-10-03T23:57:35.765867+08:00", "outcome": {"simulation_valid": true, "task_outcome": "CONTACT_GUARD", "guard_violations": {"contact": true, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": ["FORCE_LIMIT"], "motion_reasons": [], "max_rotation_from_start_rad": 0.005370002185899364, "checked_substeps": 53050}}, "reason": "CONTACT_GUARD", "wall_seconds": 219.78974110000127, "xy_um": 171.27934577397806, "z_um": -3763.495451689931, "pin_clearance_um": -73.67296178442336, "peaks": {"force_N": 0.025000156277660297, "torque_G_Nm": 0.0003870680815020685, "penetration_m": 7.106486275531079e-06, "speed_m_s": 0.0010743669301466314, "drive_force_components_N": [0.015763003636865152, 0.01748924304512863, 0.02447555455653372], "drive_torque_components_Nm": [4.7751280761352234e-05, 1.5825238430743345e-05, 1.538911925768508e-05], "contact_count": 2144.0}, "contact_cycles": 5171, "search_cycles": 4542, "stop_time": 8.610000000006611, "task_end_time": 9.61000000000428, "end_time": 10.61000000000195, "archive_sha256": "07200907d28b2e707fcda4913501ffeb0fe63b620f87747adefa87be3a61d703"}
+{"status": "controlled_stop", "episodes": 2}

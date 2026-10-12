@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "proof": {
+    "sealed_files": {
+      "v4_learning_requalification_20261006": 457,
+      "frozen_comparison_20261007": 96,
+      "residual_effect_diagnosis_20261007": 27,
+      "contact_gate_probe_20261007": 78,
+      "search_path_comparison_20261007": 46
+    },
+    "production_inputs_unchanged": 1057
+  },
+  "inherited_evaluations": 25,
+  "common_key_same": true,
+  "F_S_nonmode_settings_same": true,
+  "recorded_zero_fingerprints_same": true,
+  "metadata_only": true,
+  "new_checkpoint_loads": 0,
+  "new_policy_predictions": 0,
+  "declaration": "metadata/source verification is not numerical admission or training authorization"
+}

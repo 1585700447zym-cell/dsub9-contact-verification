@@ -1,0 +1,4 @@
+Formal MuJoCo 3.9.0: tests/readiness, 33 passed in 16.01s (before archive adapter test added).
+Isolated MuJoCo 3.13.0: tests/dynamics tests/control tests/readiness/test_contact_candidate.py tests/readiness/test_candidate_stop_gate.py tests/readiness/test_native313_gate.py tests/readiness/test_native313_archive.py: 77 passed in 59.54s.
+Archive adapter + native313 gate targeted tests: 2 passed in 0.03s.
+These are recorded summaries of tool output, not full raw console transcripts.

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_fixed_rotation_cycle.py", line 110, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_fixed_rotation_cycle.py", line 87, in main
+    worker(permit,restore=args.restore);return 0
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_fixed_rotation_cycle.py", line 51, in worker
+    final=train(chain,ledger=ledger,output=RUN/'training');write(RUN/'frozen.json',final)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_cycle.py", line 135, in train
+    chain.collect(500)
+    ~~~~~~~~~~~~~^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_contact.py", line 184, in collect
+    if receipt['status']!='published' or c._blocked: raise RuntimeError('Physical audit failed')
+                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Physical audit failed

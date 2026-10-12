@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-09-29T14:55:21.414245+08:00",
+  "milestone": "initial_evaluation_complete",
+  "successes": 4,
+  "total": 4,
+  "training_state_unchanged": true,
+  "formal_updates": 0,
+  "progress": {
+    "stage": "training",
+    "episode": 1,
+    "cycles": 3000,
+    "updates": 0,
+    "wall_timestamp": 1790664913.6670735
+  },
+  "new_dynamic_starts": 5,
+  "cumulative_dynamic_starts": 41,
+  "fault_log_empty": true,
+  "learning_gain_established": false,
+  "evidence_sha256": {
+    "run/initial/results.json": "4dd66bdb23d9081e093a0c8dafc851f64dd86ceb71e3288aa4e40d6adacb8c8d",
+    "run/initial/verification.json": "e4aeafd96fd38df53a1c10be9b50c265830aed7343f83a0f34c7b6fce0166933"
+  }
+}

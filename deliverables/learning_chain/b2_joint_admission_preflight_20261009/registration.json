@@ -1,0 +1,26 @@
+{
+  "stage_id": "B2-SCOPE-09",
+  "before_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "项目当前入口.md": "6492fb9cc2312fa6e257afe17fd2f0dd03d3d9a583382f8af0a20160c170927f",
+    "项目进度跟踪.md": "be3ebef4aa06cda532042900e8661f2d2ee8433349f9161e20ba91789967b35b",
+    "项目交付总览.md": "3f96ce6097ce90fb0505ef0af576b4dd6a286fcf1e846f45c6ed374ae846ed26",
+    "研究推进计划_当前版.md": "5a3e0c4891a1d820c4a3707cc21cc00e2db2aa1f8699f57e464d34654418e449",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "3fdbbcc6af5ef9d214ac16bf2a64b9678f97784a09134b37e8fd81cd3c446448"
+  },
+  "design_manifest_sha256": "392b1730219968f1bee649aa4cc3077d963c2216c49ca8d5e849c2acebf6c33e",
+  "design_proposal_sha256": "cd33e038630459e59a2b44a32a5927dd7d7595255cf708a5bb1d33a0011deaf0",
+  "inherited_sources": {
+    "execution_contract.py": "a9fda108657d362e64f00466c8ace51e80e94fe4f0e30f76216d0f33582f2833",
+    "run_preflight.py": "2ccf6c9c50c5511281692fe67bab6717ebe85aae3d4378d0589cf98ebb6138f5",
+    "physical_worker.py": "d2318904dc108dbbf973e1c1952701125616129ebe5063329a1820c412595928",
+    "assess.py": "83106312d2dbac9c4b92cb8ac228d005d6ae74cfe895e7046906a3f5a0bb8639",
+    "offline_math.py": "dee0b419a10100d9a3c2e37318d41ca04dc769ecdb1db9a3addddf1c1d75f04f",
+    "evidence_checks.py": "fd848bdc539dcca6b21b897cc3ccd74d19df276bcb36a6e293e6115759168289",
+    "windows_job.py": "12a0abeb90badea16ee5c26d17c53427c68ca185da691783168b96ff20b3383f",
+    "deadline_guard.py": "4116f162ea4436d322bcac1b98266f4144ed9f65d35168400dc527d3d74f502d"
+  },
+  "proposal_sha256": "1cde8986b548efb82ad971f3e47ad1c416b7ab5cd661f6fb7ee0881cbd10a986",
+  "physical_authorized": false,
+  "training_admitted": false
+}

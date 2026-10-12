@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_resumed_force_cycle.py", line 30, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_resumed_force_cycle.py", line 27, in main
+    with bound_runner() as bound:return bound.main(argv)
+                                        ~~~~~~~~~~^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_force_failure_cycle.py", line 247, in main
+    try:worker(permit,restore=args.restore)
+        ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\validation\run_force_failure_cycle.py", line 201, in worker
+    frozen=train(chain,ledger=ledger,output=run/'training');write(run/'frozen.json',frozen)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_cycle.py", line 149, in train
+    if chain.budget.available:chain.update(500)
+                              ~~~~~~~~~~~~^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_contact.py", line 236, in update
+    self.record_update_budget()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\bounded_contact.py", line 192, in record_update_budget
+    _write_json(self.collector.output/'update_budget.json',dict(attempted=self.update_attempts,
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        completed=self.budget.completed,failed_or_invalidated=self.update_attempts-self.budget.completed,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        remaining=4500-self.update_attempts))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\admitted_collection.py", line 56, in _write_json
+    os.replace(temporary, path)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] 拒绝访问。: 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_force_failure_resumed_20260929\\run\\training_episodes\\update_budget.json.tmp' -> 'D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\learning_chain\\b2_force_failure_resumed_20260929\\run\\training_episodes\\update_budget.json'

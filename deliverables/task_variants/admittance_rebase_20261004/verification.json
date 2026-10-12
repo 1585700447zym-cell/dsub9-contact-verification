@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-10-04T17:47:31.981482+08:00",
+  "tests_passed": 94,
+  "tests_command": "python -X utf8 -B -m pytest tests/task_variants tests/learning/test_action.py tests/learning/test_reward.py -q --tb=short",
+  "full_project_suite": false,
+  "review": {
+    "critical": 0,
+    "important": 1,
+    "important_fixed": true,
+    "fix": "Configuration/model digest binding, three RED-to-GREEN counterexamples",
+    "minor": 1,
+    "minor_resolved": "Comment correction already made before final review return",
+    "deferred_minors": []
+  },
+  "prior_sealed_files_verified": {
+    "clearance120_20261003": 210,
+    "functional_b2_20261003": 216,
+    "search_load_20261004": 218
+  },
+  "execution_input_hashes_verified": 878,
+  "source_snapshots": 188,
+  "document_snapshots": 6,
+  "input_sources_unchanged_during_execution": true,
+  "live_changes_since_execution": [
+    "docs/superpowers/plans/2026-10-04-admittance-rebase.md"
+  ],
+  "live_plan_change_scope": "Closeout checkbox/status only; execution original preserved in source_snapshot",
+  "configuration_and_model_bindings_verified": true,
+  "archive_hash_verified": true,
+  "stop_independently_rechecked": true,
+  "figures_visually_checked": true,
+  "new_links_checked": 41,
+  "composition_commands_reconstructed": 3266,
+  "composition_max_abs_error_m_s": 0.0,
+  "implementation_complete": true,
+  "bounded_verification_complete": true,
+  "repair_performance_accepted": false,
+  "stage_B2_complete": false,
+  "training_admitted": false,
+  "episodes": 1,
+  "unused_closed": 4,
+  "cumulative_episodes": 121,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "automatic_tracking": "PAUSED"
+}

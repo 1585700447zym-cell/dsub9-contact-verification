@@ -1,0 +1,50 @@
+[
+  {
+    "id": "I1",
+    "requirement": "common controller/source/model/guards",
+    "disposition": "inherit exact pinned current sources and model; new worker binding still required",
+    "evidence": "SCOPE-05 source binding + SCOPE-06/07 seals"
+  },
+  {
+    "id": "I2",
+    "requirement": "joint initialization and zero functional baseline",
+    "disposition": "inherit J01-J04 zero/script archive checks; check initial state on each new reset, no separate duplicate static batch",
+    "evidence": "SCOPE-06 static9/dynamic16"
+  },
+  {
+    "id": "I3",
+    "requirement": "stall timer saturation semantics",
+    "disposition": "closed for current controller branch interpretation; no observation change required by this finding",
+    "evidence": "8 SEARCH histories frozen, 8 return histories cleared, active INSERT <=0.402s; not a full Markov proof"
+  },
+  {
+    "id": "I4",
+    "requirement": "normal physical recovery lifecycle",
+    "disposition": "inherit same-common-source natural zero-tilt recovery as mechanism evidence only",
+    "evidence": "PC-09 G50: actual boundary displacement 254.143um, 297 masked cycles, initial tilt0, nonzero masked requests0"
+  },
+  {
+    "id": "I5",
+    "requirement": "recovery rejects/timeout/guard/masking",
+    "disposition": "current PC-06 22 recorded related tests and historical B1 9 tests retained separately; new F50 fixture must pass targeted offline integration checks",
+    "evidence": "historical XML entries; older B1 is not automatic current or joint physical qualification"
+  },
+  {
+    "id": "I6",
+    "requirement": "full-scale and time-varying joint action response",
+    "disposition": "missing: proposed A/B 8 attempts",
+    "evidence": "old script .1 amplitude, 50 contact cycles each; all peak-cycle actions zero"
+  },
+  {
+    "id": "I7",
+    "requirement": "joint real retraction and nonzero-request masking",
+    "disposition": "missing: proposed R 4 engineered attempts",
+    "evidence": "old joint recovery0; engineering trigger does not estimate natural recovery probability"
+  },
+  {
+    "id": "I8",
+    "requirement": "learning and independent evaluation",
+    "disposition": "not included; only after preparation, fresh authorization and admission",
+    "evidence": "ordinary SAC joint-pose matching, freeze/evaluate still outstanding"
+  }
+]

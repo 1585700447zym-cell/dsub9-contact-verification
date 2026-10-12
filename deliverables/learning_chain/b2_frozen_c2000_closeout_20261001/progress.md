@@ -1,0 +1,15 @@
+# SDD ledger — plan: docs/superpowers/plans/2026-10-01-frozen-c2000-night-closeout.md
+
+Ruling: user delegated plan and implementation while resting; design/plan/execution handoffs completed autonomously within stated candidate scope — no new approval interruption. Cost if wrong: bounded diagnostic computation, never new training or changed protection.
+Ruling: preserve source seals, uncommitted work and all plan evidence, no commits/cleanup/worktree — explicit user preference overrides skill defaults. Cost if wrong: more retained files only.
+Ruling: small-scale candidate is frozen deployment screening, not a retrained fair small-bound SAC — avoids silently mixing changed action mapping with old learning data. Cost if wrong: cannot establish optimally tuned baseline tonight.
+Pre-flight: source checkpoint -> restore must use exact C2000 and full updater; fresh evaluation ledger -> simulation must reserve before reset and keep stop tail within cap; baseline audit -> conditional scaled launch must reject operational faults and mismatched restore, preserve all costs.
+Task 1 in progress: test-first contract and frozen evaluation.
+
+2026-10-02: Task 1 implementation complete. One independent source review returned four Important findings. Implementer reproduced and fixed all four in one pass; permit constructor, five exclusive Collector directories, scale-bound publication, and confirmed-exit accounting/report completeness regressions pass. Failed test setup and actual RED/GREEN logs retained. No dynamic start or new learning yet. Task 2: run final full suite, bind exact source/delegated scope, then actual baseline and conditional single small deployment.
+
+2026-10-02: final_protocol.txt passed 24 tests; exact authority/source bound before execution. Base completed four deterministic points: 0/4 success, all ordinary valid/stopped failures, no guard. A genuinely new worker reloaded full C2000 and reproduced the entire first physical trace exactly. Base offline audit passed with model/optimizer/physics calls all 0; 5 new starts, 28,771 actor states, 287,710 module calls and physical substeps. Conditional small gate pinned the base assessment and admitted only the preregistered XY50 frozen deployment; no learning. Small execution now in progress.
+
+2026-10-02: Task 2 complete. Small completed four points, 0/4 success, all ordinary valid/stopped failures; a genuinely independent worker exactly reproduced the first complete trace. Offline audit passed, model/optimizer/physics calls 0. Small 5 starts / 29,059 actor states / 290,590 module calls and physical substeps. Total 10/10 starts, cumulative90, 57,830 actor states, 578,300 module calls and physical substeps, training0, critic0, independent test0. All processes confirmed exited; no retries, no guards or operational faults. Shrinking deployment XY150→50 did not solve the task failures. Task 3: reconcile rolling docs, snapshot and seal results. SEARCH-only residual design is a next-stage draft, not implemented or newly trained.
+
+Task 3 complete: original archives audited, plots exported, rolling docs reconciled/snapshotted; bounded phase terminal, no B.2 completion.

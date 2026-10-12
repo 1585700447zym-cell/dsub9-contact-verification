@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-01",
+  "as_of": "2026-10-01T12:22:57+08:00",
+  "candidate_sha256": "79a9bd0084f871e2ab6c6b24ff96ac69a772aa0e9e53003205866a31c11d2fba",
+  "authorization_sha256": "3b2fc9f34643df5385158dc498f996535497afa93ed50082b8a9da94c40d6a1f",
+  "real_validation_passed": true,
+  "synthetic_transactions": 4,
+  "test_forward_states": 8,
+  "first_actor_delta_norm_ratio": 0.09999992117354829,
+  "phase": "B_training",
+  "status": "healthy",
+  "formal_attempts": {
+    "A": 500,
+    "B": 341
+  },
+  "physical_starts": 0,
+  "old_unused_consumed": 0,
+  "automatic_tracking": "PAUSED",
+  "b2_complete": false
+}

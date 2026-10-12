@@ -1,0 +1,10 @@
+test_confirmed_dead_worker_finalizes_reserved_attempt_without_refund (test_protocol.ReviewRegressions.test_confirmed_dead_worker_finalizes_reserved_attempt_without_refund) ... ok
+test_five_actual_collector_constructors_have_exclusive_directories (test_protocol.ReviewRegressions.test_five_actual_collector_constructors_have_exclusive_directories) ... ok
+test_report_refuses_started_candidate_missing_assessment (test_protocol.ReviewRegressions.test_report_refuses_started_candidate_missing_assessment) ... ok
+test_small_nonzero_action_publishes_through_actual_collector (test_protocol.ReviewRegressions.test_small_nonzero_action_publishes_through_actual_collector) ... ok
+test_unconfirmed_worker_cannot_finalize_or_refund (test_protocol.ReviewRegressions.test_unconfirmed_worker_cannot_finalize_or_refund) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 10.200s
+
+OK

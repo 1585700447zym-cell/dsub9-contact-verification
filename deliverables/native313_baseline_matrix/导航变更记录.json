@@ -1,0 +1,80 @@
+{
+  "scope": "navigation_hash_references_only_historical_experiments_unchanged",
+  "changes": [
+    {
+      "manifest": "deliverables/reproduction_guide/说明与导出清单.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "2f229240ae28c58f9f8aeef03a9333401577712e05d1204313e5dbb1cec73d2a",
+          "after": "0293f8c771fed88c13d74af76bd689c61c63d76caade127e31b0452fd89637a4"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/b2_exit_gate_v2/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "deliverables/reproduction_guide/说明与导出清单.json",
+          "before": "8f39b0862c3d757180ca952795c072848a353f6d750c09adb599e3251a229835",
+          "after": "af7c1f1bc1b3e3866ef2434a7bdfd5b07ba541df7a6f7a281137fcaab2d34950"
+        },
+        {
+          "path": "报告总索引.md",
+          "before": "2f229240ae28c58f9f8aeef03a9333401577712e05d1204313e5dbb1cec73d2a",
+          "after": "0293f8c771fed88c13d74af76bd689c61c63d76caade127e31b0452fd89637a4"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/baseline_training_readiness/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "2f229240ae28c58f9f8aeef03a9333401577712e05d1204313e5dbb1cec73d2a",
+          "after": "0293f8c771fed88c13d74af76bd689c61c63d76caade127e31b0452fd89637a4"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/stop_reliability/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "2f229240ae28c58f9f8aeef03a9333401577712e05d1204313e5dbb1cec73d2a",
+          "after": "0293f8c771fed88c13d74af76bd689c61c63d76caade127e31b0452fd89637a4"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/contact_consistency_repair/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "2f229240ae28c58f9f8aeef03a9333401577712e05d1204313e5dbb1cec73d2a",
+          "after": "0293f8c771fed88c13d74af76bd689c61c63d76caade127e31b0452fd89637a4"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/contact_minimal_reproducer/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "2f229240ae28c58f9f8aeef03a9333401577712e05d1204313e5dbb1cec73d2a",
+          "after": "0293f8c771fed88c13d74af76bd689c61c63d76caade127e31b0452fd89637a4"
+        }
+      ]
+    },
+    {
+      "manifest": "deliverables/native313_validation/delivery_manifest.json",
+      "entries": [
+        {
+          "path": "报告总索引.md",
+          "before": "2f229240ae28c58f9f8aeef03a9333401577712e05d1204313e5dbb1cec73d2a",
+          "after": "0293f8c771fed88c13d74af76bd689c61c63d76caade127e31b0452fd89637a4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "exit_code": 0,
+  "tests": 25,
+  "failures": 0,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  }
+}

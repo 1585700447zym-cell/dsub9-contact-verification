@@ -1,0 +1,263 @@
+{
+  "date": "2026-09-23",
+  "scope": "partial_B1_not_training_admission",
+  "training_admitted": false,
+  "files": [
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/独立审查与修正.md",
+      "sha256": "f3422965758a13f39059090cc44b8eb2158279ec24eb446041b642ed41981ed4"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/训练准入状态.json",
+      "sha256": "d2643da45f3289285519c90f24e753298a3103a4ba81c39d1964221ab9473882"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/月报素材.md",
+      "sha256": "6bb7fc0951d60d80ae37d091e125af41a2d5d6f218692d518df90a6324ca1e23"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/运行环境与复现边界.md",
+      "sha256": "7b8258ebc702eaad4b81824807148954747d4ec3848374fa28e33711be6ff64b"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/执行记录.md",
+      "sha256": "c0c3fe409fea02abf3e265256cd06727f608f30e5204b97e316fd86be5920855"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/learning_tests_final.xml",
+      "sha256": "a4d1c2c61dbf1f58c3e2876b4a4e80f7aa803642371fb5fad68fcf9c800cfe6a"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/learning_tests_initial.xml",
+      "sha256": "07d100c5e6e3dc1c9f697efcc804d1f26e8157e76c7e9591a7503627cef03d4e"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/learning_tests_pre_review.xml",
+      "sha256": "bb555ebecc86da432908e44839da56a32c26d09c7971c3b93de7346cfe4f9d7a"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/orientation_envelope.json",
+      "sha256": "a3c9b2f15219c181b1ff52cb5d143d18a0df0d40a7382097381cd639cf395683"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/original_suite.xml",
+      "sha256": "8ff7e22ad41489b4e06c7b9cb3e49ac997089e119f5a5f642068f847bac24c9f"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/README.md",
+      "sha256": "6f53648d517c83adf1158eb3afcf41bb250487bf9d50db629b29289ee4607317"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/conftest.py",
+      "sha256": "007f8affbf6032310d5071df04927d4b11c943266ea40cf76530951acdc37cb9"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_action.py",
+      "sha256": "dfb00468f4d31a63dfd12ce4dc7eb2bd69fd450c12504253aafb0d51504cf187"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_cycle_statistics.py",
+      "sha256": "f139a80f30377725f0422acf10ad4d026a7f76a75c117984ff77f484db2944af"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_episode_buffer.py",
+      "sha256": "24b3b587800f2d76c6b0de2f251489dc5469fb6656b6614529ffc424dd9bc4a1"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_orientation_evidence.py",
+      "sha256": "5b42f58cffe9fe4a9b526f840e72ea2674ab2f14c2d9e250b71e1557a2b5c074"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_outcome.py",
+      "sha256": "1c83c3470376b9c19cd5434dfb3e1738782f3fce050c434c46d99d1c1d789516"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_recovery.py",
+      "sha256": "6a871d745850efb4e4993f688795969939606dda842fddcda97ed3187812f26e"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_reward.py",
+      "sha256": "3ecb9a28c10ea485d4a66b491ba618acdf318f1584c62906bea2812860502ebb"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_runtime.py",
+      "sha256": "b270f2ad48c3f5f3014665d05673deaf8538371d47d0b7faf88c2b507fcf04d7"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_session.py",
+      "sha256": "2398e3afde17029db9f6032029d15ea8f3fde5527723fec41a8559437053656b"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tests/learning/test_zero_residual.py",
+      "sha256": "815f9299e492d7fac81dc5e97347531ab1cea497a9656002d7652848d124b9cd"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/__init__.py",
+      "sha256": "2d2b6f4f7e5a9247c7a1332442dd3e555b5b51d418b402910c406547cb01b896"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/action.py",
+      "sha256": "9070f0fcf1674e4c814634ab27a578badeb94e8a086043e610a2a654b0fc2aac"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/environment.py",
+      "sha256": "1e248e6b58a958716c5cababf3fd305d77603b1f3c7864816cf59a3b09134822"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/episode_buffer.py",
+      "sha256": "213046ebe930a49f19b32d8702cefdb599691a9f395198368a63ebd34162236e"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/outcome.py",
+      "sha256": "2b435ad40052146d5d1093deb79f618e66d6b6eacaf4dd42497ad1540afcbf8f"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/reward.py",
+      "sha256": "511a008eb8261e39f261a707644de742faefbbc9dc670f44ca44e6c59e81ba5b"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/runtime.py",
+      "sha256": "9c9b0492df21ce52352234b1671231aad0dcc6bfb7cb1fa14c70f1031a2520d6"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/session.py",
+      "sha256": "c7a04fa0ea4d5ef3a502326fdb85615b1e4769490c2ec78900c285ac4e17e1cb"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/learning/types.py",
+      "sha256": "94af5d48620e1a779060e2091ff154d3445363cd35d411c10bdefd53ba0442f8"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/validation/analyze_residual_orientation.py",
+      "sha256": "db9a0f82ae7140f15d5336f47733751378cb63e266209b4c1540b882f6f099ad"
+    },
+    {
+      "path": "deliverables/residual_interface/implementation_20260923/source_snapshot/tools/validation/verify_zero_residual_session.py",
+      "sha256": "5a218c59cff4b3d161d345775f4f293075cb4b0c8439abc45ace10974b359433"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/aligned.json",
+      "sha256": "2183c38d38e8e47d0c5c579475b769632bad806f93592650fbbdf3017a60b02b"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/assessment.json",
+      "sha256": "0172ca7d85bb8c345dd5280e0d059bec1eb15c84a95e69f1ab926e99160d2e36"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/combined_a_scale_0.75.json",
+      "sha256": "81f6129e7e690a03439cedad41ab5475e7948751908e9e887ad31e9de2411090"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/combined_a.json",
+      "sha256": "8451e6c0316e23b485b303b6acb9f8296c8983bc7781523e0714007d3a3038cc"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/combined_b_scale_0.75.json",
+      "sha256": "8bbacb4e46e4077a35fb166be7e1e1a52ad6b9a8f9a7b34ab93860e2ff9ab784"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/roll_pos_1.5deg.json",
+      "sha256": "0b92f383f78623a714d57b62676c0c12cd170868f3e544e471cfb28781d18f78"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/source_sha256.json",
+      "sha256": "897523ba6723832ab40b55e0f20828f1520227d32cc65a3c0f6b1f6ea1636706"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/x_offset_pos_100um.json",
+      "sha256": "db1d03ef6eb52770cb1d7ec7507105e5b9840514cb49e240d69cb8c36667966f"
+    },
+    {
+      "path": "deliverables/residual_interface/zero_compatibility_v2_review_fixes/y_offset_neg_100um.json",
+      "sha256": "328d8650a0442c3658347cdcead4f096ef503d5636349c67ae7e09a0a8702318"
+    },
+    {
+      "path": "tests/learning/conftest.py",
+      "sha256": "007f8affbf6032310d5071df04927d4b11c943266ea40cf76530951acdc37cb9"
+    },
+    {
+      "path": "tests/learning/test_action.py",
+      "sha256": "dfb00468f4d31a63dfd12ce4dc7eb2bd69fd450c12504253aafb0d51504cf187"
+    },
+    {
+      "path": "tests/learning/test_cycle_statistics.py",
+      "sha256": "f139a80f30377725f0422acf10ad4d026a7f76a75c117984ff77f484db2944af"
+    },
+    {
+      "path": "tests/learning/test_episode_buffer.py",
+      "sha256": "24b3b587800f2d76c6b0de2f251489dc5469fb6656b6614529ffc424dd9bc4a1"
+    },
+    {
+      "path": "tests/learning/test_orientation_evidence.py",
+      "sha256": "5b42f58cffe9fe4a9b526f840e72ea2674ab2f14c2d9e250b71e1557a2b5c074"
+    },
+    {
+      "path": "tests/learning/test_outcome.py",
+      "sha256": "1c83c3470376b9c19cd5434dfb3e1738782f3fce050c434c46d99d1c1d789516"
+    },
+    {
+      "path": "tests/learning/test_recovery.py",
+      "sha256": "6a871d745850efb4e4993f688795969939606dda842fddcda97ed3187812f26e"
+    },
+    {
+      "path": "tests/learning/test_reward.py",
+      "sha256": "3ecb9a28c10ea485d4a66b491ba618acdf318f1584c62906bea2812860502ebb"
+    },
+    {
+      "path": "tests/learning/test_runtime.py",
+      "sha256": "b270f2ad48c3f5f3014665d05673deaf8538371d47d0b7faf88c2b507fcf04d7"
+    },
+    {
+      "path": "tests/learning/test_session.py",
+      "sha256": "2398e3afde17029db9f6032029d15ea8f3fde5527723fec41a8559437053656b"
+    },
+    {
+      "path": "tests/learning/test_zero_residual.py",
+      "sha256": "815f9299e492d7fac81dc5e97347531ab1cea497a9656002d7652848d124b9cd"
+    },
+    {
+      "path": "tools/learning/__init__.py",
+      "sha256": "2d2b6f4f7e5a9247c7a1332442dd3e555b5b51d418b402910c406547cb01b896"
+    },
+    {
+      "path": "tools/learning/action.py",
+      "sha256": "9070f0fcf1674e4c814634ab27a578badeb94e8a086043e610a2a654b0fc2aac"
+    },
+    {
+      "path": "tools/learning/environment.py",
+      "sha256": "1e248e6b58a958716c5cababf3fd305d77603b1f3c7864816cf59a3b09134822"
+    },
+    {
+      "path": "tools/learning/episode_buffer.py",
+      "sha256": "213046ebe930a49f19b32d8702cefdb599691a9f395198368a63ebd34162236e"
+    },
+    {
+      "path": "tools/learning/outcome.py",
+      "sha256": "2b435ad40052146d5d1093deb79f618e66d6b6eacaf4dd42497ad1540afcbf8f"
+    },
+    {
+      "path": "tools/learning/reward.py",
+      "sha256": "511a008eb8261e39f261a707644de742faefbbc9dc670f44ca44e6c59e81ba5b"
+    },
+    {
+      "path": "tools/learning/runtime.py",
+      "sha256": "9c9b0492df21ce52352234b1671231aad0dcc6bfb7cb1fa14c70f1031a2520d6"
+    },
+    {
+      "path": "tools/learning/session.py",
+      "sha256": "c7a04fa0ea4d5ef3a502326fdb85615b1e4769490c2ec78900c285ac4e17e1cb"
+    },
+    {
+      "path": "tools/learning/types.py",
+      "sha256": "94af5d48620e1a779060e2091ff154d3445363cd35d411c10bdefd53ba0442f8"
+    },
+    {
+      "path": "tools/validation/analyze_residual_orientation.py",
+      "sha256": "db9a0f82ae7140f15d5336f47733751378cb63e266209b4c1540b882f6f099ad"
+    },
+    {
+      "path": "tools/validation/verify_zero_residual_session.py",
+      "sha256": "5a218c59cff4b3d161d345775f4f293075cb4b0c8439abc45ace10974b359433"
+    }
+  ]
+}

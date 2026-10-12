@@ -1,0 +1,278 @@
+FFFFFFFFFF                                                               [100%]
+================================== FAILURES ===================================
+____________ test_config_has_only_version_and_rotation_difference _____________
+
+    def test_config_has_only_version_and_rotation_difference():
+        from tools.learning.bounded_contact import bounded_config
+>       old=bounded_config();new=api().fixed_config()
+
+tests\learning\test_fixed_rotation_cycle.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+____________ test_unapproved_configuration_changes_rejected[scale] ____________
+
+field = 'scale'
+
+    @pytest.mark.parametrize('field',['scale','seed','reward','batches'])
+    def test_unapproved_configuration_changes_rejected(field):
+>       c=api().fixed_config()
+
+tests\learning\test_fixed_rotation_cycle.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+____________ test_unapproved_configuration_changes_rejected[seed] _____________
+
+field = 'seed'
+
+    @pytest.mark.parametrize('field',['scale','seed','reward','batches'])
+    def test_unapproved_configuration_changes_rejected(field):
+>       c=api().fixed_config()
+
+tests\learning\test_fixed_rotation_cycle.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+___________ test_unapproved_configuration_changes_rejected[reward] ____________
+
+field = 'reward'
+
+    @pytest.mark.parametrize('field',['scale','seed','reward','batches'])
+    def test_unapproved_configuration_changes_rejected(field):
+>       c=api().fixed_config()
+
+tests\learning\test_fixed_rotation_cycle.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+___________ test_unapproved_configuration_changes_rejected[batches] ___________
+
+field = 'batches'
+
+    @pytest.mark.parametrize('field',['scale','seed','reward','batches'])
+    def test_unapproved_configuration_changes_rejected(field):
+>       c=api().fixed_config()
+
+tests\learning\test_fixed_rotation_cycle.py:21: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+_________________ test_32_starts_and_59_lineage_cap_in_order __________________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-329/test_32_starts_and_59_lineage_0')
+
+    def test_32_starts_and_59_lineage_cap_in_order(tmp_path):
+>       m=api();ledger=m.FixedLedger(tmp_path/'ledger.json')
+
+tests\learning\test_fixed_rotation_cycle.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+__________ test_failed_start_consumes_budget_and_prevents_reopening ___________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-329/test_failed_start_consumes_bud0')
+
+    def test_failed_start_consumes_budget_and_prevents_reopening(tmp_path):
+>       path=tmp_path/'ledger.json';m=api();ledger=m.FixedLedger(path)
+
+tests\learning\test_fixed_rotation_cycle.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+_________ test_changed_parent_source_is_not_accepted_as_new_evidence __________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-329/test_changed_parent_source_is_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000028012D835C0>
+
+    def test_changed_parent_source_is_not_accepted_as_new_evidence(tmp_path,monkeypatch):
+>       m=api();monkeypatch.setattr(m,'ROOT',tmp_path)
+
+tests\learning\test_fixed_rotation_cycle.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+___________ test_qualification_rejects_wrong_capability_and_profile ___________
+
+    def test_qualification_rejects_wrong_capability_and_profile():
+>       m=api();r=dict(capability='fixed_rotation_cycle_v1',synthetic_only=False,
+            collection_admitted=True,update_admitted=True,restore_admitted=True,config=m.fixed_config(),parent_admission_sha256=m.PARENT_PIN)
+
+tests\learning\test_fixed_rotation_cycle.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_fixed_rotation_cycle.py:7: in api
+    def api():return importlib.import_module('tools.learning.fixed_rotation_cycle')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.learning.fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+_____________ test_one_shot_claim_does_not_allow_automatic_retry ______________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-329/test_one_shot_claim_does_not_a0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000028012D82FD0>
+
+    def test_one_shot_claim_does_not_allow_automatic_retry(tmp_path,monkeypatch):
+>       m=importlib.import_module('tools.validation.run_fixed_rotation_cycle')
+
+tests\learning\test_fixed_rotation_cycle.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<frozen importlib._bootstrap>:1387: in _gcd_import
+    ???
+<frozen importlib._bootstrap>:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.validation.run_fixed_rotation_cycle'
+import_ = <function _gcd_import at 0x00000280655604A0>
+
+>   ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_fixed_rotation_cycle'
+
+<frozen importlib._bootstrap>:1324: ModuleNotFoundError
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_fixed_rotation_cycle_20260928\red.xml -
+=========================== short test summary info ===========================
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_config_has_only_version_and_rotation_difference
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_unapproved_configuration_changes_rejected[scale]
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_unapproved_configuration_changes_rejected[seed]
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_unapproved_configuration_changes_rejected[reward]
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_unapproved_configuration_changes_rejected[batches]
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_32_starts_and_59_lineage_cap_in_order
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_failed_start_consumes_budget_and_prevents_reopening
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_changed_parent_source_is_not_accepted_as_new_evidence
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_qualification_rejects_wrong_capability_and_profile
+FAILED tests/learning/test_fixed_rotation_cycle.py::test_one_shot_claim_does_not_allow_automatic_retry
+10 failed in 0.21s
+Forbidden call counts: {'optimizer': 0, 'physics': 0}

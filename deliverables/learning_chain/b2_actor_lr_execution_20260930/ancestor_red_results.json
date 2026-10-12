@@ -1,0 +1,16 @@
+{
+  "exit_code": 1,
+  "tests": 2,
+  "failures": 2,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "8240e09ef45e9f1a28b68a1316cac5ba4767709b529e03d0c05db292ac0aacbf",
+  "test_ids": [
+    "tests.learning.test_actor_lr_runner::test_root_stop_request_blocks_descendant_before_parent_probe",
+    "tests.learning.test_actor_lr_runner::test_missing_exit_receipt_with_stop_request_remains_unconfirmed"
+  ]
+}

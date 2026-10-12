@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "related_tests": 57,
+  "new_tests": 21,
+  "green_log_sha256": "10c0b4395acc1405345a33a5f3563f9d3efc85792e6ddf07b4784b56c3e0ec19",
+  "initial_red": 17,
+  "limiter_definition_red": 2,
+  "recovery_difference_red": 2,
+  "actual_offline_archives": 37,
+  "actual_control_rows": 245221,
+  "new_physics": 0,
+  "new_gradients": 0,
+  "new_policy_calls": 0,
+  "scope": "related offline checks, not whole legacy repository suite"
+}

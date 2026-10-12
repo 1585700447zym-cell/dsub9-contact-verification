@@ -1,0 +1,151 @@
+{
+  "automatic_tracking": "PAUSED",
+  "correction": "3处快速块按原登记判据均缺少“周期末有接触且动作有效”的记录；其中J03_A_AXIS有3个、J04_A_AXIS有2个快速周期记录到周期内接触峰值，J02_B_CORNERS未记录到此类峰值。因此不能把这3处统称为“完全没有接触”，也不能据此推断改时序后的结果。",
+  "cumulative_dynamic": 237,
+  "episodes": [
+    {
+      "archive_sha256": "c6920defe68418245f550fdacb411bdb5dace6476bfb39bff18b9880a052f7bc",
+      "endpoint_contact_cycles": 0,
+      "fast_cycles": 56,
+      "id": "J03_A_AXIS",
+      "internal_peak_cycles": 3,
+      "internal_peak_records": [
+        {
+          "cycle_id": 401,
+          "cycle_peaks": {
+            "force_N": 0.0032455425349241025,
+            "penetration_m": 5.498591635315223e-10,
+            "samples": 10,
+            "torque_G_Nm": 5.129012171127029e-05
+          },
+          "effective_command_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_s": 0.8039999999999441,
+          "endpoint_contact_count": 0,
+          "residual_enabled": true,
+          "start_s": 0.8019999999999443
+        },
+        {
+          "cycle_id": 407,
+          "cycle_peaks": {
+            "force_N": 0.003256853203068819,
+            "penetration_m": 9.982395729552541e-10,
+            "samples": 10,
+            "torque_G_Nm": 5.146772766529619e-05
+          },
+          "effective_command_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -8.927051125845649e-05,
+            0.0
+          ],
+          "end_s": 0.8159999999999428,
+          "endpoint_contact_count": 0,
+          "residual_enabled": true,
+          "start_s": 0.813999999999943
+        },
+        {
+          "cycle_id": 809,
+          "cycle_peaks": {
+            "force_N": 0.0031528197834640717,
+            "penetration_m": 2.4661472465904494e-10,
+            "samples": 10,
+            "torque_G_Nm": 4.76289384464776e-05
+          },
+          "effective_command_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_s": 1.6199999999998542,
+          "endpoint_contact_count": 0,
+          "residual_enabled": true,
+          "start_s": 1.6179999999998544
+        }
+      ],
+      "registered_covered_cycles": 0
+    },
+    {
+      "archive_sha256": "204ba11cdd7f986a48345f28d5ac8575bb5f858a01b407a1a0ab67dd3b2cddda",
+      "endpoint_contact_cycles": 0,
+      "fast_cycles": 56,
+      "id": "J04_A_AXIS",
+      "internal_peak_cycles": 2,
+      "internal_peak_records": [
+        {
+          "cycle_id": 403,
+          "cycle_peaks": {
+            "force_N": 0.0034690352763368485,
+            "penetration_m": 1.14033396640526e-09,
+            "samples": 10,
+            "torque_G_Nm": 5.028148159258797e-05
+          },
+          "effective_command_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_s": 0.8079999999999437,
+          "endpoint_contact_count": 0,
+          "residual_enabled": true,
+          "start_s": 0.8059999999999439
+        },
+        {
+          "cycle_id": 407,
+          "cycle_peaks": {
+            "force_N": 0.003636580879849703,
+            "penetration_m": 1.866557854284033e-09,
+            "samples": 10,
+            "torque_G_Nm": 4.904831588756288e-05
+          },
+          "effective_command_delta": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0001012897800753309,
+            0.0
+          ],
+          "end_s": 0.8159999999999428,
+          "endpoint_contact_count": 0,
+          "residual_enabled": true,
+          "start_s": 0.813999999999943
+        }
+      ],
+      "registered_covered_cycles": 0
+    },
+    {
+      "archive_sha256": "a0356540f3ed44654b27fe274a7cdf024ed38269fc772e35eb64ac4331e3f578",
+      "endpoint_contact_cycles": 0,
+      "fast_cycles": 48,
+      "id": "J02_B_CORNERS",
+      "internal_peak_cycles": 0,
+      "internal_peak_records": [],
+      "registered_covered_cycles": 0
+    }
+  ],
+  "full_B2_accepted": false,
+  "kind": "WORDING_AND_EVIDENCE_CLARIFICATION",
+  "new_training": 0,
+  "old_archives_unchanged": true,
+  "original_coverage_rule_unchanged": true,
+  "parent_manifest_sha256": "e24379e1d2ae9553a7bb3e6b245edb281e4089f0a1ff13174e25bcc3ebfa7c6c",
+  "physical_attempts": 0,
+  "stage_id": "B2-SCOPE-10-CORR01",
+  "training_admitted": false,
+  "unchanged_route": "INSUFFICIENT_COVERAGE_NO_EXTRA_ATTEMPTS"
+}

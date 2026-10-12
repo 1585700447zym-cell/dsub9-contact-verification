@@ -1,0 +1,28 @@
+{
+  "old": {
+    "phase": "WAIT_RECOVERY",
+    "cycles": 3813,
+    "event": {
+      "time_s": 7.626,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED"
+    },
+    "max_reference_radius_um": 319.3644367405832,
+    "max_target_error_um": 310.95709877364203
+  },
+  "new": {
+    "phase": "WAIT_RECOVERY",
+    "cycles": 3812,
+    "event": {
+      "time_s": 7.6240000000000006,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED",
+      "reference_boundary_final_segment": true
+    },
+    "max_reference_radius_um": 119.99584405078875,
+    "max_target_error_um": 1.374683017997739
+  },
+  "physics_steps": 0,
+  "training_updates": 0,
+  "scope": "Fixed blocked pose; arithmetic drive-reference integration only, not task success evidence"
+}

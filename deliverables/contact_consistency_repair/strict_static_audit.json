@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "wall_nine_corresponding_pairs": true,
+  "trajectory_total": 501,
+  "trajectory_contact_poses": 80,
+  "historical_poses": 140,
+  "historical_positive_witness_poses": 24,
+  "source_sha256": {
+    "deliverables/contact_consistency_repair/static_gate_v1/results.json": "40b4d5338c3db293ebf1b8a22800255d6800274883b84b1f227f859e14312d71",
+    "tools/validation/audit_contact_candidate.py": "0f3dfbe87d92cddd540e95edfd1a057ca80bc6df6f86a7a24fc183e9d2352553"
+  }
+}

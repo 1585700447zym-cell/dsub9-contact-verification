@@ -1,0 +1,12 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_missing_context_and_bad_reward_command_or_stop_rejected (test_assess.AssessmentTests.test_missing_context_and_bad_reward_command_or_stop_rejected) ... ok
+test_partial_and_missing_attempts_remain_in_denominator (test_assess.AssessmentTests.test_partial_and_missing_attempts_remain_in_denominator) ... ok
+test_success_and_failure_keep_separate_metrics (test_assess.AssessmentTests.test_success_and_failure_keep_separate_metrics) ... ok
+test_I2_guard_contradictions_rejected_for_ordinary_failure (test_review_regressions.ReviewRegressions.test_I2_guard_contradictions_rejected_for_ordinary_failure) ... ok
+test_I3_missing_or_fabricated_observations_rejected (test_review_regressions.ReviewRegressions.test_I3_missing_or_fabricated_observations_rejected) ... ok
+test_I3_missing_information_prevents_training_route (test_review_regressions.ReviewRegressions.test_I3_missing_information_prevents_training_route) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 48.229s
+
+OK

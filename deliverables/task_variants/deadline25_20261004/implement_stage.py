@@ -1,0 +1,17 @@
+from pathlib import Path
+OUT=Path(__file__).resolve().parent;ROOT=OUT.parents[2]
+src=(ROOT/'tools/validation/run_reference_search_preflight.py').read_text(encoding='utf-8')
+src=src.replace('Bounded reference search verification.','Bounded 25-second common task verification.')
+src=src.replace('reference_search_20261004','deadline25_20261004').replace('2026-10-04-reference-search.md','2026-10-04-deadline25-preflight.md')
+src=src.replace('prior_cumulative=123','prior_cumulative=124').replace('cumulative_limit=128','cumulative_limit=129')
+src=src.replace("DELIVERY = ROOT/'deliverables/task_variants/deadline25_20261004'", "DELIVERY = ROOT/'deliverables/task_variants/deadline25_20261004'\nTASK_ID = 'dsub9_clearance120_functional_25s_v3'")
+src=src.replace('asdict(SearchConfig())','asdict(SearchConfig(total_action_time_s=25.))')
+src=src.replace("    return ReferenceSearchSession(environment=env,", "    if config['b2_config'].get('total_action_time_s') != 25.:\n        raise ValueError('Common task requires exactly 25 seconds')\n    return ReferenceSearchSession(environment=env,")
+src=src.replace('    from tools.model.functional_task import TASK_ID\n','')
+src=src.replace("config=dict(task_id=TASK_ID,", "config=dict(task_id=TASK_ID,parent_task_id='dsub9_clearance120_functional_v2',common_task_change='total_action_time_s:20->25; applies equally to all future baselines',")
+src=src.replace('tmp/matplotlib_reference_search','tmp/matplotlib_deadline25')
+(ROOT/'tools/validation/run_deadline25_preflight.py').write_text(src,encoding='utf-8')
+src=(OUT.parent/'reference_search_20261004/prepare_evidence.py').read_text(encoding='utf-8')
+src=src.replace("'axis_search_20261004']", "'axis_search_20261004','reference_search_20261004']")
+src=src.replace("glob('test_reference*.py')", "glob('test_deadline25*.py')")
+(OUT/'prepare_evidence.py').write_text(src,encoding='utf-8')

@@ -1,0 +1,21 @@
+{
+  "execution_complete": false,
+  "controlled_stop": true,
+  "returncode": 20,
+  "retry_allowed": false,
+  "b2_complete": false,
+  "accounting": {
+    "previous_dynamic": 58,
+    "new_dynamic_starts": 2,
+    "cumulative_dynamic": 60,
+    "cumulative_dynamic_cap": 62,
+    "unused_new_dynamic": 2,
+    "actor_states_reserved": 26000,
+    "actor_states_confirmed": 9642,
+    "training_batches": 0,
+    "extra_diagnostic_states": 0,
+    "independent_test": 0,
+    "old_unused_consumed": 0,
+    "status": "stopped"
+  }
+}

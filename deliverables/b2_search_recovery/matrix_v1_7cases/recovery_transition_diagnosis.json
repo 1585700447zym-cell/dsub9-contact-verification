@@ -1,0 +1,42 @@
+[
+  {
+    "case": "x_offset_pos_100um",
+    "time_s": 10.774000000001568,
+    "exit_search_advance_mm": 0.08008795180013736,
+    "previous_stall_advance_mm": 0.25001296589393207,
+    "still_before_previous_stall": true,
+    "termination": "TARGET_POSE_NOT_SETTLED"
+  },
+  {
+    "case": "y_offset_neg_100um",
+    "time_s": 10.046000000003264,
+    "exit_search_advance_mm": 0.07258430022879461,
+    "previous_stall_advance_mm": 0.25001327885191627,
+    "still_before_previous_stall": true,
+    "termination": "SEARCH_BUDGET_EXHAUSTED"
+  },
+  {
+    "case": "roll_pos_1.5deg",
+    "time_s": 10.076000000003194,
+    "exit_search_advance_mm": 0.08156790308972567,
+    "previous_stall_advance_mm": 0.22567044832900096,
+    "still_before_previous_stall": true,
+    "termination": "SEARCH_BUDGET_EXHAUSTED"
+  },
+  {
+    "case": "combined_a_scale_0.75",
+    "time_s": 11.046000000000934,
+    "exit_search_advance_mm": 0.08953397532905812,
+    "previous_stall_advance_mm": 0.23281128666112136,
+    "still_before_previous_stall": true,
+    "termination": "SEARCH_BUDGET_EXHAUSTED"
+  },
+  {
+    "case": "combined_a",
+    "time_s": 11.495999999999885,
+    "exit_search_advance_mm": 0.08349163320091249,
+    "previous_stall_advance_mm": 0.22512334523162392,
+    "still_before_previous_stall": true,
+    "termination": "SEARCH_BUDGET_EXHAUSTED"
+  }
+]

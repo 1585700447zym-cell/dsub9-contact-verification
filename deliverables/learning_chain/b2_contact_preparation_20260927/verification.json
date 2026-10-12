@@ -1,0 +1,77 @@
+{
+  "preparation_sha256": "57471f37ef0506aa2f83bf1065af0e8762f917365dedc622c0abb3d6368cace1",
+  "preparation_verified": true,
+  "training_admitted": false,
+  "tests": {
+    "passed": 98,
+    "modules": [
+      "test_action",
+      "test_contract",
+      "test_observation",
+      "test_preparation"
+    ],
+    "sha256": "7589bbe4e648eabf7d06f74bceaae6a1896c98a74967396027a76142228273bf"
+  },
+  "legacy_source_count": 872,
+  "new_input_count": 7,
+  "historical_files": 345,
+  "next_six_cases": [
+    {
+      "name": "contact_000000",
+      "x_offset_m": 0.0001,
+      "y_offset_m": 0.0,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    {
+      "name": "contact_000001",
+      "x_offset_m": -0.0001,
+      "y_offset_m": 0.0,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    {
+      "name": "contact_000002",
+      "x_offset_m": -0.0001,
+      "y_offset_m": 0.0,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    {
+      "name": "contact_000003",
+      "x_offset_m": -0.0001,
+      "y_offset_m": 0.0,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    {
+      "name": "contact_000004",
+      "x_offset_m": -0.0001,
+      "y_offset_m": 0.0,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    {
+      "name": "contact_000005",
+      "x_offset_m": 0.0,
+      "y_offset_m": -0.0001,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    }
+  ],
+  "physical_episodes": 0,
+  "optimizer_updates": 0,
+  "independent_test_used": false
+}

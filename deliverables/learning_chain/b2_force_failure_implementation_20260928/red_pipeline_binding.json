@@ -1,0 +1,21 @@
+{
+  "exit_code": 0,
+  "tests": 7,
+  "tests_with_failure_or_error": 0,
+  "forbidden_call_counts": {
+    "optimizer": 0,
+    "physics": 0,
+    "prediction": 0
+  },
+  "report_sha256": "d95a84ca5b5bff8d2870b92773b12c9376bfb5103747ebc94607042793fc9f9e",
+  "runner_sha256": "56fba0245eac9deb4dfdd35c63f696bad7003a6a9b88a99a4eb1fa54e4cda75c",
+  "test_ids": [
+    "tests.learning.test_force_failure_pipeline::test_actual_seal_publication_and_index_preserve_force_failure",
+    "tests.learning.test_force_failure_pipeline::test_force_archive_checkpoint_rebuilds_replay_and_rejects_eligibility_tampering",
+    "tests.learning.test_force_failure_pipeline::test_force_evaluation_counts_failure_without_replay_or_learning_changes",
+    "tests.learning.test_force_failure_pipeline::test_frequency_failure_is_archived_but_cannot_update_or_start",
+    "tests.learning.test_force_failure_pipeline::test_fresh_process_reads_synthetic_protocol_checkpoint_without_physics_or_updates",
+    "tests.learning.test_force_failure_pipeline::test_real_seal_rejects_other_guard_and_never_publishes_partial_rows",
+    "tests.learning.test_force_failure_pipeline::test_zero_baseline_scope_gate_stays_strict"
+  ]
+}

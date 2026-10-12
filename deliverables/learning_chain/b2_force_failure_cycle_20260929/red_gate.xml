@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="22" skipped="0" tests="22" time="0.247" timestamp="2026-09-29T10:23:17.317393+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_force_failure_cycle" name="test_config_preserves_learning_and_guard_parameters" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">def test_config_preserves_learning_and_guard_parameters():
+        from tools.learning.force_failure_preparation import force_config
+&gt;       m=api();old=force_config();new=m.cycle_config()
+
+tests\learning\test_force_failure_cycle.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_stage_order_and_32_new_starts_include_all_evaluations" time="0.006"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_stage_order_and_32_new_st0')
+
+    def test_stage_order_and_32_new_starts_include_all_evaluations(tmp_path):
+&gt;       m=api();ledger=m.ForceLedger(tmp_path/'ledger.json')
+
+tests\learning\test_force_failure_cycle.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_budget_rejects_unapproved_expansion[starts]" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">change = 'starts'
+
+    @pytest.mark.parametrize('change',('starts','updates','lineage','frequency','retry','synthetic'))
+    def test_budget_rejects_unapproved_expansion(change):
+&gt;       m=api();b=m.proposed_budget()
+
+tests\learning\test_force_failure_cycle.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_budget_rejects_unapproved_expansion[updates]" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">change = 'updates'
+
+    @pytest.mark.parametrize('change',('starts','updates','lineage','frequency','retry','synthetic'))
+    def test_budget_rejects_unapproved_expansion(change):
+&gt;       m=api();b=m.proposed_budget()
+
+tests\learning\test_force_failure_cycle.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_budget_rejects_unapproved_expansion[lineage]" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">change = 'lineage'
+
+    @pytest.mark.parametrize('change',('starts','updates','lineage','frequency','retry','synthetic'))
+    def test_budget_rejects_unapproved_expansion(change):
+&gt;       m=api();b=m.proposed_budget()
+
+tests\learning\test_force_failure_cycle.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_budget_rejects_unapproved_expansion[frequency]" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">change = 'frequency'
+
+    @pytest.mark.parametrize('change',('starts','updates','lineage','frequency','retry','synthetic'))
+    def test_budget_rejects_unapproved_expansion(change):
+&gt;       m=api();b=m.proposed_budget()
+
+tests\learning\test_force_failure_cycle.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_budget_rejects_unapproved_expansion[retry]" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">change = 'retry'
+
+    @pytest.mark.parametrize('change',('starts','updates','lineage','frequency','retry','synthetic'))
+    def test_budget_rejects_unapproved_expansion(change):
+&gt;       m=api();b=m.proposed_budget()
+
+tests\learning\test_force_failure_cycle.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_budget_rejects_unapproved_expansion[synthetic]" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">change = 'synthetic'
+
+    @pytest.mark.parametrize('change',('starts','updates','lineage','frequency','retry','synthetic'))
+    def test_budget_rejects_unapproved_expansion(change):
+&gt;       m=api();b=m.proposed_budget()
+
+tests\learning\test_force_failure_cycle.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_authorization_requires_exact_candidate_and_complete_budget" time="0.000"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">def test_authorization_requires_exact_candidate_and_complete_budget():
+&gt;       m=api();pin='a'*64
+
+tests\learning\test_force_failure_cycle.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_missing_authorization_refuses_before_candidate_or_runtime" time="0.002"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_missing_authorization_ref0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000178F80D42B0&gt;
+
+    def test_missing_authorization_refuses_before_candidate_or_runtime(tmp_path,monkeypatch):
+&gt;       m=api();monkeypatch.setattr(m,'DELIVERY',tmp_path)
+
+tests\learning\test_force_failure_cycle.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_parent_manifest_allows_additions_but_rejects_changed_existing_bytes" time="0.002"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_parent_manifest_allows_ad0')
+
+    def test_parent_manifest_allows_additions_but_rejects_changed_existing_bytes(tmp_path):
+&gt;       m=api();(tmp_path/'old.py').write_text('original')
+
+tests\learning\test_force_failure_cycle.py:58: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_controlled_stop_remains_closed_after_reopening" time="0.002"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_controlled_stop_remains_c0')
+
+    def test_controlled_stop_remains_closed_after_reopening(tmp_path):
+        from tools.learning.bounded_contact import ForceFailureStop
+&gt;       m=api();p=tmp_path/'ledger.json';ledger=m.ForceLedger(p)
+
+tests\learning\test_force_failure_cycle.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_cycle" name="test_initial_state_comparison_allows_only_binding_and_registered_version" time="0.001"><failure message="AssertionError: New execution gate is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">def test_initial_state_comparison_allows_only_binding_and_registered_version():
+&gt;       m=api()
+
+tests\learning\test_force_failure_cycle.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.learning.force_failure_cycle') is not None,'New execution gate is absent'
+E       AssertionError: New execution gate is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.learning.force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_cycle.py:7: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_one_shot_claim_refuses_second_launch" time="0.003"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_one_shot_claim_refuses_se0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000178F80D4B00&gt;
+
+    def test_one_shot_claim_refuses_second_launch(tmp_path,monkeypatch):
+&gt;       m=api();monkeypatch.setattr(m,'DELIVERY',tmp_path);m.claim('worker')
+
+tests\learning\test_force_failure_runner.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_controlled_exit_preserves_finished_failure_ledger" time="0.002"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_controlled_exit_preserves0')
+
+    def test_controlled_exit_preserves_finished_failure_ledger(tmp_path):
+&gt;       m=api();run=stop_fixture(tmp_path)
+
+tests\learning\test_force_failure_runner.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[0-incomplete_execution]" time="0.002"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_exit_code_alone_never_pro0')
+code = 0, kind = 'incomplete_execution'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+&gt;       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[20-invalid_controlled_stop]" time="0.002"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_exit_code_alone_never_pro1')
+code = 20, kind = 'invalid_controlled_stop'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+&gt;       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[-1073741819-native_crash]" time="0.002"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_exit_code_alone_never_pro2')
+code = -1073741819, kind = 'native_crash'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+&gt;       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_exit_code_alone_never_proves_completion_or_controlled_stop[1-entry_rejection]" time="0.002"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_exit_code_alone_never_pro3')
+code = 1, kind = 'entry_rejection'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+&gt;       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_crash_cannot_be_relabelled_using_stale_controlled_stop" time="0.002"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_crash_cannot_be_relabelle0')
+
+    def test_crash_cannot_be_relabelled_using_stale_controlled_stop(tmp_path):
+&gt;       m=api();run=stop_fixture(tmp_path)
+
+tests\learning\test_force_failure_runner.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_missing_authorization_in_cli_never_calls_supervisor" time="0.002"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-340/test_missing_authorization_in_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x00000178F70D4B90&gt;
+
+    def test_missing_authorization_in_cli_never_calls_supervisor(tmp_path,monkeypatch):
+&gt;       m=api();monkeypatch.setattr(m,'DELIVERY',tmp_path)
+
+tests\learning\test_force_failure_runner.py:50: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase><testcase classname="tests.learning.test_force_failure_runner" name="test_child_commands_preserve_both_external_pins" time="0.001"><failure message="AssertionError: New runner is absent&#10;assert None is not None&#10; +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')&#10; +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec&#10; +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util">def test_child_commands_preserve_both_external_pins():
+&gt;       m=api();cmd=m.child_command('a'*64,'b'*64,restore=True)
+
+tests\learning\test_force_failure_runner.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def api():
+&gt;       assert importlib.util.find_spec('tools.validation.run_force_failure_cycle') is not None,'New runner is absent'
+E       AssertionError: New runner is absent
+E       assert None is not None
+E        +  where None = &lt;function find_spec at 0x00000178CBB5E3E0&gt;('tools.validation.run_force_failure_cycle')
+E        +    where &lt;function find_spec at 0x00000178CBB5E3E0&gt; = &lt;module 'importlib.util' (frozen)&gt;.find_spec
+E        +      where &lt;module 'importlib.util' (frozen)&gt; = importlib.util
+
+tests\learning\test_force_failure_runner.py:6: AssertionError</failure></testcase></testsuite></testsuites>

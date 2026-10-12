@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\run_validation.py", line 280, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\run_validation.py", line 270, in main
+    return worker(a.binding_sha256,a.authorization_sha256,a.restore_worker)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\run_validation.py", line 224, in worker
+    boundary=save_boundary(b,run)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\run_validation.py", line 187, in save_boundary
+    pin=branch.save(Path(run)/name);record=dict(path=name,sha256=pin,batches=n,arm=branch.arm)
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_validation_20261001\learning_runtime.py", line 130, in save
+    _flush_write(staging/'state.pt',lambda f:torch.save(s,f))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\tools\learning\sac_checkpoint.py", line 231, in _flush_write
+    f.write(data); f.flush(); os.fsync(f.fileno())
+    ~~~~~~~^^^^^^
+TypeError: a bytes-like object is required, not 'function'

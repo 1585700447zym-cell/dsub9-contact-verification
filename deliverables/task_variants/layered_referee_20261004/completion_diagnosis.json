@@ -1,0 +1,244 @@
+{
+  "y_neg_150": {
+    "final_components": {
+      "depth": true,
+      "nine_pin_fit": true,
+      "linear_stable": true,
+      "angular_stable": true,
+      "force": true,
+      "torque": true,
+      "penetration": true
+    },
+    "failed_at_final": [],
+    "final_margin_um": 0.007450513432876067,
+    "legacy_margin_um": -1.4293528886850189,
+    "settling_min_margin_um": -0.0006619986365726319,
+    "settling_max_margin_um": 0.018244690274944568,
+    "settling_ready_samples": 432,
+    "settling_samples": 501,
+    "first_depth_ready_s": 20.52999999997883,
+    "final_linear_speed_um_s": 1.602343668859257e-11,
+    "final_force_mN": 0.0,
+    "final_penetration_um": 0.0,
+    "final_advance_mm": 3.990883814743207,
+    "reason": "GEOMETRIC_SUCCESS",
+    "events": [
+      {
+        "time_s": 0.7459999999999505,
+        "phase": "UNLOAD",
+        "reason": "AXIAL_STALL"
+      },
+      {
+        "time_s": 1.5259999999998646,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.0002568198433027663
+      },
+      {
+        "time_s": 9.150000000005353,
+        "phase": "WAIT_RECOVERY",
+        "reason": "SEARCH_EXHAUSTED",
+        "reference_boundary_final_segment": true
+      },
+      {
+        "time_s": 9.742000000003973,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.0002568198433027663
+      },
+      {
+        "time_s": 16.885999999987323,
+        "phase": "INSERT",
+        "reason": "SEARCH_ADVANCED",
+        "progress_origin_z_m": 0.0002568198433027663,
+        "observed_z_m": 0.00035693758537839147,
+        "net_advance_m": 0.00010011774207562517
+      }
+    ]
+  },
+  "y_pos_150": {
+    "final_components": {
+      "depth": true,
+      "nine_pin_fit": true,
+      "linear_stable": true,
+      "angular_stable": true,
+      "force": true,
+      "torque": true,
+      "penetration": true
+    },
+    "failed_at_final": [],
+    "final_margin_um": 0.013205585401771837,
+    "legacy_margin_um": -0.121527165375542,
+    "settling_min_margin_um": 0.013205585401771837,
+    "settling_max_margin_um": 0.013205585401771837,
+    "settling_ready_samples": 432,
+    "settling_samples": 501,
+    "first_depth_ready_s": 13.91399999999425,
+    "final_linear_speed_um_s": 1.7803818542880633e-12,
+    "final_force_mN": 0.0,
+    "final_penetration_um": 0.0,
+    "final_advance_mm": 3.9902533159898725,
+    "reason": "GEOMETRIC_SUCCESS",
+    "events": [
+      {
+        "time_s": 2.439999999999764,
+        "phase": "UNLOAD",
+        "reason": "LOADED_ROTATION_RISK",
+        "relative_rotation_rad": 0.026682897257887278,
+        "axial_force_N": -0.024286531507634827,
+        "risk_since_s": 2.3899999999997696
+      },
+      {
+        "time_s": 3.229999999999677,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.00011666307384349157
+      },
+      {
+        "time_s": 6.230000000004298,
+        "phase": "INSERT",
+        "reason": "SEARCH_ADVANCED",
+        "progress_origin_z_m": 0.00011666307384349157,
+        "observed_z_m": 0.00021668406235631843,
+        "net_advance_m": 0.00010002098851282686
+      },
+      {
+        "time_s": 6.412000000004682,
+        "phase": "UNLOAD",
+        "reason": "LOADED_ROTATION_RISK",
+        "relative_rotation_rad": 0.03133518445008068,
+        "axial_force_N": -0.02025896807304045,
+        "risk_since_s": 6.362000000004577
+      },
+      {
+        "time_s": 7.184000000006312,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.00021941285369821628
+      },
+      {
+        "time_s": 10.226000000002845,
+        "phase": "INSERT",
+        "reason": "SEARCH_ADVANCED",
+        "progress_origin_z_m": 0.00021941285369821628,
+        "observed_z_m": 0.00032023081252419887,
+        "net_advance_m": 0.0001008179588259826
+      }
+    ]
+  },
+  "x_pos_150": {
+    "final_components": {
+      "depth": true,
+      "nine_pin_fit": true,
+      "linear_stable": true,
+      "angular_stable": true,
+      "force": true,
+      "torque": true,
+      "penetration": true
+    },
+    "failed_at_final": [],
+    "final_margin_um": 46.91634427882868,
+    "legacy_margin_um": 46.830623105841,
+    "settling_min_margin_um": 46.91634427882868,
+    "settling_max_margin_um": 46.91634427882879,
+    "settling_ready_samples": 432,
+    "settling_samples": 501,
+    "first_depth_ready_s": 11.090000000000831,
+    "final_linear_speed_um_s": 3.646179232908973e-12,
+    "final_force_mN": 0.0,
+    "final_penetration_um": 0.0,
+    "final_advance_mm": 3.9908557927938832,
+    "reason": "GEOMETRIC_SUCCESS",
+    "events": [
+      {
+        "time_s": 1.1719999999999036,
+        "phase": "UNLOAD",
+        "reason": "AXIAL_STALL"
+      },
+      {
+        "time_s": 1.9699999999998157,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.00015536026926828454
+      },
+      {
+        "time_s": 7.336000000006632,
+        "phase": "INSERT",
+        "reason": "SEARCH_ADVANCED",
+        "progress_origin_z_m": 0.00015536026926828454,
+        "observed_z_m": 0.0002560555686215325,
+        "net_advance_m": 0.00010069529935324796
+      }
+    ]
+  },
+  "x_neg_150": {
+    "final_components": {
+      "depth": true,
+      "nine_pin_fit": true,
+      "linear_stable": true,
+      "angular_stable": true,
+      "force": true,
+      "torque": true,
+      "penetration": true
+    },
+    "failed_at_final": [],
+    "final_margin_um": 9.512014572514243,
+    "legacy_margin_um": 7.645660197582501,
+    "settling_min_margin_um": 9.465593699748819,
+    "settling_max_margin_um": 9.512014572514243,
+    "settling_ready_samples": 432,
+    "settling_samples": 501,
+    "first_depth_ready_s": 12.665999999997158,
+    "final_linear_speed_um_s": 1.780637734466118e-12,
+    "final_force_mN": 0.0,
+    "final_penetration_um": 0.0,
+    "final_advance_mm": 3.990242527174415,
+    "reason": "GEOMETRIC_SUCCESS",
+    "events": [
+      {
+        "time_s": 1.1699999999999038,
+        "phase": "UNLOAD",
+        "reason": "AXIAL_STALL"
+      },
+      {
+        "time_s": 1.967999999999816,
+        "phase": "SEARCH",
+        "reason": "LOW_LOAD_SEARCH",
+        "progress_origin_z_m": 0.00015536397403590396
+      },
+      {
+        "time_s": 8.918000000005893,
+        "phase": "INSERT",
+        "reason": "SEARCH_ADVANCED",
+        "progress_origin_z_m": 0.00015536397403590396,
+        "observed_z_m": 0.00025590524558636793,
+        "net_advance_m": 0.00010054127155046397
+      }
+    ]
+  },
+  "aligned": {
+    "final_components": {
+      "depth": true,
+      "nine_pin_fit": true,
+      "linear_stable": true,
+      "angular_stable": true,
+      "force": true,
+      "torque": true,
+      "penetration": true
+    },
+    "failed_at_final": [],
+    "final_margin_um": 99.9999999999995,
+    "legacy_margin_um": 99.99999999999994,
+    "settling_min_margin_um": 99.9999999999995,
+    "settling_max_margin_um": 99.9999999999995,
+    "settling_ready_samples": 432,
+    "settling_samples": 501,
+    "first_depth_ready_s": 4.079999999999761,
+    "final_linear_speed_um_s": 1.7803818542880633e-12,
+    "final_force_mN": 0.0,
+    "final_penetration_um": 0.0,
+    "final_advance_mm": 3.9912000000006103,
+    "reason": "GEOMETRIC_SUCCESS",
+    "events": []
+  }
+}

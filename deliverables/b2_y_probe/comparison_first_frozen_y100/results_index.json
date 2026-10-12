@@ -1,0 +1,12 @@
+{
+  "method": "one new Y XY probe vs preserved Y V2; frozen X treatment",
+  "input_index": "first_frozen_y100/results_index.json",
+  "input_index_sha256": "41f413ac5163b61dd5901f1e543d202f3ecab9b803b141fe247acaf4066f82e9",
+  "x_trial_index_sha256": "213bc748f26174440a1994ad893d3667f99a5b20d5342179282ebba4da66c6b8",
+  "reference": {
+    "file": "deliverables/b2_exit_gate_v2/verified_frozen_y100/runs/y_offset_neg_100um_b2_v2.json.gz",
+    "sha256": "405ef32977b8f0f8cca26703d16ba487735e8d1d8a2b64beda9513aacc481fa8",
+    "index": "deliverables/b2_exit_gate_v2/verified_frozen_y100/results_index.json",
+    "index_sha256": "b90cd061658e3b98f5318a4feb7f2de63a56ca701b373fe37d43034277c42375"
+  }
+}

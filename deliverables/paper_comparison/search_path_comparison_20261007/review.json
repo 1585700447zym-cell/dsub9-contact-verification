@@ -1,0 +1,18 @@
+{
+  "reviewer": "independent read-only pc10_review agent",
+  "critical": 0,
+  "important": 0,
+  "minor": 0,
+  "raw_archives_verified": 4,
+  "search_segments_verified": 5,
+  "active_commands_verified": 20232,
+  "search_reference_rows_verified": 15626,
+  "max_reference_integration_error_m": 5.787e-18,
+  "hand_tests_run": 6,
+  "rolling_documents_verified": 5,
+  "excluded": ["whole dirty branch", "all historical physics and learning", "prior 21 tests rerun", "full 1057 inputs and 658 seals rehash", "full B.2/C and paper benefit"],
+  "new_physics": 0,
+  "new_policy_inferences": 0,
+  "new_updates": 0,
+  "file_mutations": 0
+}

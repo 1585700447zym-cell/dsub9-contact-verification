@@ -1,0 +1,11 @@
+{
+  "after_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "ae9448a70a9f78d7f1c0f4dea29917e9f99d8efae5bf5d3a9ec92c95d3d6810b",
+    "研究推进计划_当前版.md": "937356f382dadaa5f33934dbec452f990119fa28f8792b8b72667a1f32fbf8ad",
+    "项目交付总览.md": "ab62ebcc70fb0298f7b04341457bfa3f5dfa2147ccb20866f3116eadafc2b4fe",
+    "项目当前入口.md": "f035e0ac712e3550d4280c9dcc3d054f5b5add1389b4d83c7686b9631e572350",
+    "项目进度跟踪.md": "e06699ec72a667f548fbdd821bd9283c16877b54deacbed57884b6aefcac149c"
+  },
+  "rolling_documents_may_advance": true
+}

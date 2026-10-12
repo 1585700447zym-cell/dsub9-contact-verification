@@ -1,0 +1,55 @@
+--- before/admitted_collection.py
++++ after/admitted_collection.py
+@@ -8,10 +8,12 @@
+ import gzip
+ import hashlib
+ import json
++import logging
+ import math
+ import os
+ from pathlib import Path
+ import re
++import time
+ 
+ import numpy as np
+ 
+@@ -47,13 +49,38 @@
+         return case
+ 
+ 
++def _replace_json(temporary, path):
++    # A Windows reader without delete sharing can briefly deny replacement.
++    # Retry only this already-flushed file, never a learning update or rollout.
++    delays = (0., .01, .02, .04, .08, .16, .25, .25, .25)
++    for attempt, delay in enumerate(delays, 1):
++        if delay:
++            time.sleep(delay)
++        try:
++            os.replace(temporary, path)
++        except PermissionError as exc:
++            if os.name != 'nt' or getattr(exc, 'winerror', None) not in (5, 32, 33):
++                raise
++            if attempt == len(delays):
++                exc.add_note(f'Atomic JSON replacement still denied after {attempt} attempts '
++                             f'and {sum(delays):.2f}s scheduled waits; staged data retained at {temporary}; '
++                             'no optimizer or physical action was retried.')
++                raise
++        else:
++            if attempt > 1:
++                logging.getLogger(__name__).warning(
++                    'atomic_json_replace_recovered: path=%s attempts=%d; no learning action repeated',
++                    path, attempt)
++            return
++
++
+ def _write_json(path, value):
+     path = Path(path)
+     temporary = path.with_suffix(path.suffix + '.tmp')
+     content = json.dumps(_safe_error_archive(value), ensure_ascii=False, indent=2, allow_nan=False)
+     with temporary.open('w', encoding='utf-8') as stream:
+         stream.write(content); stream.flush(); os.fsync(stream.fileno())
+-    os.replace(temporary, path)
++    _replace_json(temporary, path)
+ 
+ 
+ def _write_archive(path, value):

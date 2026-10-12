@@ -1,0 +1,43 @@
+{
+  "stage_id": "B2-SCOPE-17",
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "before_documents": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "项目当前入口.md": "0363af60f905ce2f11bc8615ea10517f804b1b22cb56613f0c8636b56c7681ba",
+    "项目进度跟踪.md": "4aac2ec82e282d6a306ab15df5e1d4772ff91c6b8406da73bd9dad5c32f06306",
+    "研究推进计划_当前版.md": "5903b2de43bcf7dfafb49c8f732f386f42cc9d6c0adb9af51baa466f161a5fb8",
+    "项目交付总览.md": "87ff032abdb1078f9b8bd507747d3bc48b4b471198c41956aebec2895c2491cd",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "2bf1bfa81041f598bdeddbf3b960fe5c641c6f2c25cfb8a91ed948d75bd11595"
+  },
+  "copies": {
+    "bounded_io.py": "83174f30a5d380ab432c8cb21cf224596ab1133a1697762b68fee58531959c81",
+    "phase_deadline.py": "609d36435aea4037ab557d7f712ab67f8bf0f84e655bfd9691aabb1da6d31c8e",
+    "supervised.py": "7c71c91f8fd8bcc104607ac986ff5efa3022d2af59aae4ec105fcdf1480b3334",
+    "windows_job.py": "4929fe110b9558510d99fdfbdaa3ce77b48e0dfd353932216e4d6fa87de11c08",
+    "joint_contract.py": "8443f9b8607b0495717795b2f4d201a59940b703f57d5282b30dca2ee8f1b4aa",
+    "recovery_audit.py": "35f2015172a8cdcc0988a326b533d7a08ffda0fc64d539f36f99ec7ee3d4df73",
+    "gate_contract.py": "080c00b0701b735707999f69ca201afc9151577efd4a6cf8c545153ce02e47f7",
+    "numeric_state.py": "38aa33e2243ef04396f324fae5b749c2eda3902313f4901600d93a61be79b4c2",
+    "gate_worker.py": "19e56ed65b26477097a0b8ddd6fb9884150d451a81820b19d33df3ed618827dc",
+    "run_gate.py": "4b381cdbe787bdd1c17098d282dcb49e64c5e9d1d43caad2f459ff56751f9722",
+    "prepare_candidate.py": "d657c9f181d8369c80b1490fc91bd60e05813769993a642b7dd06f5ea150ed85",
+    "input_spec.json": "2b6fb37dbf84dc4a05d3bbfe8b456f116f6e7e1684ae525a6907df1a8836f6b6",
+    "run_suite.py": "185812389c4ce1f35fe447934a245585abf708459184915511ab3e879cea0950",
+    "fixture_worker.py": "b267a4dbb165913475447c6fc2644f13b6c8a87d32524b631585a50e657ccbd1",
+    "fixture_orphan_lock.py": "e4b230522cee856e368b36cf70795025b2636ac81e9fbfdb86bc2355a7b43e1a",
+    "test_entry.py": "e036b6c54815b5f7551e5ca0065691adb69b2e3e3eb2ac661ca58d04e1015805",
+    "test_failure_closure.py": "6195fef46e949c862b16e1e9396ceb7a813e228d3e09493acc07db1bc2ca17c7",
+    "test_gate_contract.py": "9223612fbf8e2a51bf0fd6ae0eba7f1785fc1df1ac647afec8b0d6dfaa0f400c",
+    "test_io_repair.py": "f56fbf77ccbc91beed2b423baef83814adaee047af6b2d44d6d46459cc8d32ed",
+    "test_recovery_audit.py": "7b2aec36bcd4292955688d7c5429a22ffc1f64d987d63852fa3d04c4a8f7f649",
+    "test_related_contract.py": "902847b6e4abeed8f7c5a5172f239bbd24a9911a95e8e96b3fdf72e0ea3bc214",
+    "test_state_structure.py": "ac18215c1d9e166632110b38c278919b73d9940f088f58845978dc688d358f47",
+    "test_supervisor.py": "e4fd0cc8d14227040723c0f2dbc86d01b5a5f8d73a008c6a1a44de7b6fa081da"
+  },
+  "previous_candidate_seal": "b5fb955e2cb3c92b13a2541528051bad797202fdf62014029bb7e28eca5adc0a",
+  "failure_seal": "9156b91b21c5ba38db83a7c917fe9a8db84d543dccae80a4201066a97a9ffa22",
+  "numeric_authorized": false,
+  "training_admitted": false,
+  "cumulative_dynamic": 245
+}

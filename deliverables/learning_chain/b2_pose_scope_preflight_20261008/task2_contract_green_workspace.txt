@@ -1,0 +1,20 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_angles_reach_contact_case_once (__main__.ContractTests.test_angles_reach_contact_case_once) ... ok
+test_candidate_and_parent_cannot_change (__main__.ContractTests.test_candidate_and_parent_cannot_change) ... ok
+test_fixed_sequence_and_failure_closure (__main__.ContractTests.test_fixed_sequence_and_failure_closure) ... ok
+test_full_sequence_has_no_extra_attempt (__main__.ContractTests.test_full_sequence_has_no_extra_attempt) ... ok
+test_malformed_and_unregistered_cases_rejected (__main__.ContractTests.test_malformed_and_unregistered_cases_rejected) ... ok
+test_pulse_exact_window_and_stop_permissions (__main__.ContractTests.test_pulse_exact_window_and_stop_permissions) ... ok
+test_attempt_durable_before_executor_and_static_abort (__main__.ExecutionTests.test_attempt_durable_before_executor_and_static_abort) ... ok
+test_bound_files_detect_source_and_runtime_change (__main__.ExecutionTests.test_bound_files_detect_source_and_runtime_change) ... ok
+test_existing_output_rejected_before_claim (__main__.ExecutionTests.test_existing_output_rejected_before_claim) ... ok
+test_global_claim_cannot_move_to_another_output (__main__.ExecutionTests.test_global_claim_cannot_move_to_another_output) ... ok
+test_grant_exact_pin_limits_and_explicit_approval (__main__.ExecutionTests.test_grant_exact_pin_limits_and_explicit_approval) ... ok
+test_pose_actual_zero_or_double_conversion_rejected (__main__.ExecutionTests.test_pose_actual_zero_or_double_conversion_rejected) ... ok
+test_protection_closes_and_task_failure_continues (__main__.ExecutionTests.test_protection_closes_and_task_failure_continues) ... ok
+test_stop_before_matrix_never_invokes (__main__.ExecutionTests.test_stop_before_matrix_never_invokes) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.306s
+
+OK

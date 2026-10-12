@@ -1,0 +1,8 @@
+{
+  "pid": 34656,
+  "requested_at": "2026-09-28T20:09:22.0412147+08:00",
+  "qualification": "d6ac62ef7e0114ab5c042b666ed69b29ad11df9663f6c5a1ff92c5a728ec71e2",
+  "new_dynamic_cap": 32,
+  "formal_update_cap": 4500,
+  "automatic_retry": false
+}

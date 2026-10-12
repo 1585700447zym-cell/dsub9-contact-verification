@@ -1,0 +1,101 @@
+{
+  "attempts": [
+    {
+      "id": "sampled_zero",
+      "transitions": 3045,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "FULL_SUCCESS",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 0,
+      "action_active_cycles": 2045,
+      "truncated": false,
+      "end_time_s": 6.090000000004003
+    },
+    {
+      "id": "center_plus_x",
+      "transitions": 3065,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 1863,
+      "action_active_cycles": 2065,
+      "truncated": false,
+      "end_time_s": 6.130000000004087
+    },
+    {
+      "id": "untrained_cut",
+      "transitions": 8,
+      "outcome": {
+        "simulation_valid": true,
+        "task_outcome": "TASK_FAILURE",
+        "guard_violations": {
+          "contact": false,
+          "motion": false
+        },
+        "physical_stopped": true,
+        "valid_for_learning": true
+      },
+      "contact_cycles": 0,
+      "action_active_cycles": 8,
+      "truncated": true,
+      "end_time_s": 2.015999999999811
+    }
+  ],
+  "published_transitions": 6118,
+  "replay_tensor_sampled": 256,
+  "center_plus_x_exact_physical_regression": true,
+  "optimizer_steps": 0,
+  "collection_verified": true,
+  "runnable_trainer": false,
+  "policy_parameters_unchanged": true,
+  "collection_wall_s": 235.89733710000291,
+  "tests": {
+    "passed": 338,
+    "modules": [
+      "test_action",
+      "test_admission",
+      "test_admitted_collection",
+      "test_audited_replay",
+      "test_b2_admission",
+      "test_candidate_collector",
+      "test_cycle_statistics",
+      "test_engineering_domain",
+      "test_episode_buffer",
+      "test_guard_baseline",
+      "test_guard_events",
+      "test_guard_probe",
+      "test_guarded_session",
+      "test_gym_env",
+      "test_learning_masks",
+      "test_observation",
+      "test_orientation_evidence",
+      "test_outcome",
+      "test_recovery",
+      "test_residual_recovery",
+      "test_residual_regression",
+      "test_residual_session",
+      "test_reward",
+      "test_runtime",
+      "test_scheduled_boundary",
+      "test_session",
+      "test_tensor_masks",
+      "test_untrained_policy_runtime",
+      "test_zero_residual"
+    ],
+    "sha256": "7c42cf6092a7059c4ff1d8aa98b842ffc87d4ba8a7f5659272f9a8daaf0c4863"
+  }
+}

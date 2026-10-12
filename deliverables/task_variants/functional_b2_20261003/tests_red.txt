@@ -1,0 +1,64 @@
+FFFFFFFFFFFF                                                             [100%]
+================================== FAILURES ===================================
+_______________ test_functional_fit_is_separate_from_precision ________________
+tests\task_variants\test_functional_b2.py:19: in test_functional_fit_is_separate_from_precision
+    from tools.model.functional_task import functional_finish
+E   ModuleNotFoundError: No module named 'tools.model.functional_task'
+____ test_functional_failure_cannot_be_hidden_by_relaxed_precision[state0] ____
+tests\task_variants\test_functional_b2.py:30: in test_functional_failure_cannot_be_hidden_by_relaxed_precision
+    from tools.model.functional_task import functional_finish
+E   ModuleNotFoundError: No module named 'tools.model.functional_task'
+____ test_functional_failure_cannot_be_hidden_by_relaxed_precision[state1] ____
+tests\task_variants\test_functional_b2.py:30: in test_functional_failure_cannot_be_hidden_by_relaxed_precision
+    from tools.model.functional_task import functional_finish
+E   ModuleNotFoundError: No module named 'tools.model.functional_task'
+____ test_functional_failure_cannot_be_hidden_by_relaxed_precision[state2] ____
+tests\task_variants\test_functional_b2.py:30: in test_functional_failure_cannot_be_hidden_by_relaxed_precision
+    from tools.model.functional_task import functional_finish
+E   ModuleNotFoundError: No module named 'tools.model.functional_task'
+____ test_functional_failure_cannot_be_hidden_by_relaxed_precision[state3] ____
+tests\task_variants\test_functional_b2.py:30: in test_functional_failure_cannot_be_hidden_by_relaxed_precision
+    from tools.model.functional_task import functional_finish
+E   ModuleNotFoundError: No module named 'tools.model.functional_task'
+____ test_functional_failure_cannot_be_hidden_by_relaxed_precision[state4] ____
+tests\task_variants\test_functional_b2.py:30: in test_functional_failure_cannot_be_hidden_by_relaxed_precision
+    from tools.model.functional_task import functional_finish
+E   ModuleNotFoundError: No module named 'tools.model.functional_task'
+____ test_functional_failure_cannot_be_hidden_by_relaxed_precision[state5] ____
+tests\task_variants\test_functional_b2.py:30: in test_functional_failure_cannot_be_hidden_by_relaxed_precision
+    from tools.model.functional_task import functional_finish
+E   ModuleNotFoundError: No module named 'tools.model.functional_task'
+____ test_functional_session_holds_continuously_and_cannot_override_guard _____
+tests\task_variants\test_functional_b2.py:36: in test_functional_session_holds_continuously_and_cannot_override_guard
+    from tools.learning.functional_session import FunctionalCandidateSession
+E   ModuleNotFoundError: No module named 'tools.learning.functional_session'
+____________ test_risk_must_persist_and_then_unloads_before_search ____________
+tests\task_variants\test_functional_b2.py:60: in test_risk_must_persist_and_then_unloads_before_search
+    from tools.control.risk_search import RiskSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.risk_search'
+__ test_cleared_condition_resets_risk_clock_and_search_budget_still_applies ___
+tests\task_variants\test_functional_b2.py:73: in test_cleared_condition_resets_risk_clock_and_search_budget_still_applies
+    from tools.control.risk_search import RiskSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.risk_search'
+_____________ test_invalid_rotation_rejected_without_state_change _____________
+tests\task_variants\test_functional_b2.py:83: in test_invalid_rotation_rejected_without_state_change
+    from tools.control.risk_search import RiskSearchRecovery
+E   ModuleNotFoundError: No module named 'tools.control.risk_search'
+_________ test_new_observation_uses_relative_sensors_not_hole_center __________
+tests\task_variants\test_functional_b2.py:90: in test_new_observation_uses_relative_sensors_not_hole_center
+    from tools.learning.functional_session import FunctionalCandidateSession
+E   ModuleNotFoundError: No module named 'tools.learning.functional_session'
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_functional_b2.py::test_functional_fit_is_separate_from_precision
+FAILED tests/task_variants/test_functional_b2.py::test_functional_failure_cannot_be_hidden_by_relaxed_precision[state0]
+FAILED tests/task_variants/test_functional_b2.py::test_functional_failure_cannot_be_hidden_by_relaxed_precision[state1]
+FAILED tests/task_variants/test_functional_b2.py::test_functional_failure_cannot_be_hidden_by_relaxed_precision[state2]
+FAILED tests/task_variants/test_functional_b2.py::test_functional_failure_cannot_be_hidden_by_relaxed_precision[state3]
+FAILED tests/task_variants/test_functional_b2.py::test_functional_failure_cannot_be_hidden_by_relaxed_precision[state4]
+FAILED tests/task_variants/test_functional_b2.py::test_functional_failure_cannot_be_hidden_by_relaxed_precision[state5]
+FAILED tests/task_variants/test_functional_b2.py::test_functional_session_holds_continuously_and_cannot_override_guard
+FAILED tests/task_variants/test_functional_b2.py::test_risk_must_persist_and_then_unloads_before_search
+FAILED tests/task_variants/test_functional_b2.py::test_cleared_condition_resets_risk_clock_and_search_budget_still_applies
+FAILED tests/task_variants/test_functional_b2.py::test_invalid_rotation_rejected_without_state_change
+FAILED tests/task_variants/test_functional_b2.py::test_new_observation_uses_relative_sensors_not_hole_center
+12 failed in 2.93s

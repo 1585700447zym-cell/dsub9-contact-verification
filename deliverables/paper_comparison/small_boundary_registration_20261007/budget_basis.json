@@ -1,0 +1,30 @@
+{
+  "source_episode_wall_s": 7516.200358500355,
+  "source_whole_wall_s": 11786.059386,
+  "source_overhead_s": 4269.859027499646,
+  "source_control_cycles": 190882,
+  "source_wall_s_per_cycle": 0.03937616097117777,
+  "F50_14_episode_wall_s": 3624.832881300128,
+  "F0_five_point_wall_s": 1271.6211370999808,
+  "B2_five_point_wall_s": 1335.0033821000834,
+  "proposed_21_episode_reference_s": 7565.384884989965,
+  "proposed_reference_hours": 2.1014958013861014,
+  "formula": "F50 14 episodes + F0 five points + 2*(B2 five-point wall)/5 + PC06 non-episode overhead/2",
+  "planning_window_hours": [
+    2.0,
+    4.0
+  ],
+  "global_execution_wall_limit_s": 21600,
+  "minimum_sum_of_individual_wall_caps_s": 30000,
+  "completion_not_guaranteed": "21 episode caps plus 4 update-block caps already sum to 30000s, reads additionally consume time; 21600s global cap may leave an incomplete matrix, no method-effect conclusion",
+  "interpretation": "engineering extrapolation, not measured F12.5 runtime or confidence interval; excludes implementation and future multiseed/final tests",
+  "nonselected_full_retrain": {
+    "physical_attempts": 59,
+    "formal_batches": 6000,
+    "extra_over_selected": {
+      "physical_attempts": 38,
+      "formal_batches": 4000
+    },
+    "note": "three fresh learning groups with 2 common preflights plus 3*(5 initial+4 warmup+4 online+5 final+1 restore); not authorized fallback"
+  }
+}

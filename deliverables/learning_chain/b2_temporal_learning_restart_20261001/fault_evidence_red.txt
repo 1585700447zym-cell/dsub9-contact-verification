@@ -1,0 +1,15 @@
+test_started_fault_with_archive_is_retained_and_bound_to_checkpoint (test_protocol.FaultEvidenceTests.test_started_fault_with_archive_is_retained_and_bound_to_checkpoint) ... FAIL
+
+======================================================================
+FAIL: test_started_fault_with_archive_is_retained_and_bound_to_checkpoint (test_protocol.FaultEvidenceTests.test_started_fault_with_archive_is_retained_and_bound_to_checkpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_temporal_learning_restart_20261001\test_protocol.py", line 84, in test_started_fault_with_archive_is_retained_and_bound_to_checkpoint
+    self.assertIsNotNone(F,'Missing started-fault evidence audit')
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : Missing started-fault evidence audit
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

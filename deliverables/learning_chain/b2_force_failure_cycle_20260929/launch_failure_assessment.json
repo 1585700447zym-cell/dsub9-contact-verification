@@ -1,0 +1,43 @@
+{
+  "status": "stopped_entry_rejection",
+  "recorded_at": "2026-09-29T11:08:45.224384+08:00",
+  "kind": "entry_rejection",
+  "user_authorized": true,
+  "new_formal_launch_attempts": 1,
+  "new_dynamic_ledger_starts": 0,
+  "new_physical_starts": 0,
+  "new_formal_optimizer_batches": 0,
+  "new_policy_predictions": 0,
+  "previous_dynamic_lineage_starts": 36,
+  "ledger_created": false,
+  "retry_allowed": false,
+  "unexecuted_budget_preserved": true,
+  "automatic_resume_allowed": false,
+  "b2_complete": false,
+  "automation_status": "PAUSED",
+  "root_cause": "Windows venv launcher inserts an intermediate process; require_parent incorrectly assumes the executing worker is the direct child of the registered supervisor.",
+  "verification_gap": "Protocol tests replaced require_parent and did not exercise the real Windows venv process tree.",
+  "process_exit_evidence": {
+    "status": "failed",
+    "returncode": 1,
+    "returncode_hex": "0x1",
+    "wall_timestamp": 1790650922.5660746
+  },
+  "recorded_supervisor_and_launcher_no_longer_running": true,
+  "worker_pid_reused_by_unrelated_process": {
+    "pid": 12032,
+    "name": "RuntimeBroker",
+    "action": "not touched"
+  },
+  "evidence_sha256": {
+    "authorization.json": "b534268bab25b67229ac8f8c0098ba53707611fbc91b33995321da0fb6b894c4",
+    "launch_request.json": "c4641a456ee3dd6464985bd38d4edcdbeb532117bf638802bb7c60ab74cf2674",
+    "launcher.json": "9a56d30d03d654b932e3ce45a7fd19c10b875720a0c76757874fd43ddb5c413c",
+    "started.json": "35162d56a337d90738f0ca52cff7a614a5c9ba4832d345ad3786e8cd4ccc5dc3",
+    "process.json": "c127ef12b2e04250632a3279aeec7c884aa342b0a3c538820a69ab9c0f6e432f",
+    "process_exit.json": "c5b9a1b3996ff2c752111bd7b6e0a6442bfc0e749205624acb576e8ec81b0175",
+    "exit_classification.json": "1ae45628682e19018e24b3d37494e04518764327356c5c994ed969290f7cc5e0",
+    "fault.log": "66a307e7081f390879b97ba38b7a85e3580d392156cddf1951aca9398668b36d",
+    "parentage_probe.json": "94cbb1388c65ec23e0a42033af97eaf6275253407f0e59ad4b799525e1857d29"
+  }
+}

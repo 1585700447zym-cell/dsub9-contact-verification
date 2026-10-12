@@ -1,0 +1,10 @@
+{"case": "y_neg_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "y_neg_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "y_neg_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "y_neg_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "y_neg_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "y_neg_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "y_neg_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "y_neg_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"id": "y_neg_150", "status": "finished", "started_at": "2026-10-04T18:41:25.020208+08:00", "control_cycles": 4483, "physical_substeps": 44830, "simulated_time_s": 8.000000000008033, "updated_at": "2026-10-04T18:44:09.357060+08:00", "ended_at": "2026-10-04T18:44:19.897039+08:00", "outcome": {"simulation_valid": true, "task_outcome": "TASK_FAILURE", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.004809418276435038, "checked_substeps": 44830}}, "reason": "SEARCH_BUDGET_EXHAUSTED", "wall_seconds": 174.87551469999016, "xy_um": 180.50800522481998, "z_um": -3758.5251526673746, "pin_clearance_um": -87.35511853741514, "peaks": {"force_N": 0.024474139103047843, "torque_G_Nm": 0.0003573849685464039, "penetration_m": 7.106486275531079e-06, "speed_m_s": 0.0010743669301466314, "drive_force_components_N": [0.009921173358317567, 0.020767016225489317, 0.02447555455653372], "drive_torque_components_Nm": [5.325089548336254e-05, 1.5825238430743345e-05, 3.5355801681507985e-05], "contact_count": 2156.0}, "contact_cycles": 4334, "search_cycles": 2675, "stop_time": 6.9660000000058515, "task_end_time": 7.966000000007962, "end_time": 8.966000000005781, "archive_sha256": "07c913744a9f99c5d842c17a34851fd3b28758f8bac130e5289ac6425bae1aa9"}
+{"status": "controlled_stop", "episodes": 1}

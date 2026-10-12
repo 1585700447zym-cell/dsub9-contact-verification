@@ -1,0 +1,90 @@
+{
+  "delivery_id": "B1-05",
+  "date": "2026-09-24",
+  "status": "PASS_LIMITED_INCREMENT",
+  "scope": "Candidate collection, audited episode replay and tensor sampling; positive publication uses synthetic fixtures only",
+  "training_admitted": false,
+  "sac_updates": 0,
+  "trained_weights": false,
+  "independent_test_used": false,
+  "candidate_data_admitted": false,
+  "complete_trainer_delivered": false,
+  "tests": {
+    "focused": {
+      "passed": 40,
+      "failed": 0
+    },
+    "learning_final": {
+      "passed": 205,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 400.234
+    },
+    "legacy_noncompile": {
+      "passed": 429,
+      "skipped": 1,
+      "seconds": 181.597
+    },
+    "isolated_skipped_case_recheck": {
+      "passed": 1
+    },
+    "plugin_compile": {
+      "executed": false,
+      "count_excluded": 23,
+      "reason": "Would overwrite frozen DLL"
+    }
+  },
+  "native_probe": {
+    "policy": "UNTRAINED SACPolicy",
+    "development_case": "aligned",
+    "policy_control_cycles": 8,
+    "batches": [
+      4,
+      4
+    ],
+    "external_cut": true,
+    "physical_stop_audited": true,
+    "candidate_rows_discarded": 8,
+    "replay_size": 0,
+    "policy_parameters_unchanged": true,
+    "optimizer_states_empty": true,
+    "complete_assembly_evaluation": false
+  },
+  "review": {
+    "reviewer": "Ptolemy",
+    "critical": 0,
+    "important": 2,
+    "minor": 1,
+    "additional_counterexamples_red": 7,
+    "all_findings_addressed": true,
+    "resolution": "Block and retain audit before copy; retry exact audit without physics; explicit bounds prevent integer abs overflow; separate emergency interaction counters",
+    "postfix_second_review": false
+  },
+  "history": {
+    "baseline_files_checked": 112,
+    "baseline_archives_checked": 14,
+    "observation_manifest_files": 50,
+    "tensor_manifest_files": 25,
+    "unchanged_dynamic_inputs": 809,
+    "unchanged_historical_documents": 838,
+    "complete_seven_case_matrix_rerun": false
+  },
+  "runtime": {
+    "reference": "deliverables/residual_interface/learning_tensor_20260924/environment.json",
+    "unchanged_pinned_distributions": 37,
+    "unchanged_torch_dlls": 9,
+    "pip_check": "PASS",
+    "user_site_enabled": false,
+    "mujoco_version": "3.13.0",
+    "native_dll_sha256": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48",
+    "new_installs": 0
+  },
+  "remaining": [
+    "Engineering-domain and bounded nonzero-action dynamic qualification",
+    "Pose range qualification and parameter freeze; 2.5deg remains candidate",
+    "Formal admission/config/source-fingerprint binding for production collection",
+    "Complete learner and trainer-state recovery",
+    "Formal configuration and sampling/compute cost; no physical-experience learning before admission"
+  ],
+  "evidence": "checks/*.xml; source_snapshot; document_snapshot; manifest.json"
+}

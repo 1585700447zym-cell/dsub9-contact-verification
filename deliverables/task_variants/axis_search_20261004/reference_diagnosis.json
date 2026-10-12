@@ -1,0 +1,133 @@
+{
+  "searches": [
+    {
+      "search_number": 1,
+      "samples": 1332,
+      "max_target_radius_um": 70.30578975905864,
+      "max_reference_radius_um": 192.99601594235105,
+      "max_reference_target_error_um": 122.80630449136413,
+      "max_reference_actual_lead_um": 195.5728658686021,
+      "max_reference_integration_error_um": 2.1684043449710089e-13,
+      "peak_reference_example": {
+        "time_s": 4.189999999999993,
+        "target_xy_um": [
+          3.356233553779377,
+          -219.6175141007112
+        ],
+        "actual_xy_um": [
+          -59.67148994532422,
+          -162.08149630047757
+        ],
+        "reference_xy_um": [
+          18.069510245723354,
+          -341.53924272941765
+        ],
+        "target_radius_um": 70.30578975905864,
+        "reference_radius_um": 192.99601594235105,
+        "actual_radius_um": 60.986586645729155,
+        "reference_target_error_um": 122.80630449136413,
+        "reference_actual_lead_um": 195.5728658686021,
+        "integration_error_um": 5.421010862427522e-14,
+        "lateral_force_mN": 21.091052124304483,
+        "total_force_mN": 22.65785116123038,
+        "raw_xy_mm_s": [
+          0.3,
+          -0.2944175828199318
+        ]
+      },
+      "end_example": {
+        "time_s": 4.189999999999993,
+        "target_xy_um": [
+          3.356233553779377,
+          -219.6175141007112
+        ],
+        "actual_xy_um": [
+          -59.67148994532422,
+          -162.08149630047757
+        ],
+        "reference_xy_um": [
+          18.069510245723354,
+          -341.53924272941765
+        ],
+        "target_radius_um": 70.30578975905864,
+        "reference_radius_um": 192.99601594235105,
+        "actual_radius_um": 60.986586645729155,
+        "reference_target_error_um": 122.80630449136413,
+        "reference_actual_lead_um": 195.5728658686021,
+        "integration_error_um": 5.421010862427522e-14,
+        "lateral_force_mN": 21.091052124304483,
+        "total_force_mN": 22.65785116123038,
+        "raw_xy_mm_s": [
+          0.3,
+          -0.2944175828199318
+        ]
+      }
+    },
+    {
+      "search_number": 2,
+      "samples": 1343,
+      "max_target_radius_um": 70.60282181169721,
+      "max_reference_radius_um": 209.28648666564794,
+      "max_reference_target_error_um": 146.5011465394498,
+      "max_reference_actual_lead_um": 198.72419598965638,
+      "max_reference_integration_error_um": 2.710505431213761e-13,
+      "peak_reference_example": {
+        "time_s": 6.9660000000058515,
+        "target_xy_um": [
+          -53.32958791904538,
+          -226.10589787039652
+        ],
+        "actual_xy_um": [
+          -88.39224115213743,
+          -159.9760800777766
+        ],
+        "reference_xy_um": [
+          -121.09829584785808,
+          -355.990416436054
+        ],
+        "target_radius_um": 70.60282181169721,
+        "reference_radius_um": 209.28648666564794,
+        "actual_radius_um": 28.689903842847226,
+        "reference_target_error_um": 146.5011465394498,
+        "reference_actual_lead_um": 198.72419598965638,
+        "integration_error_um": 2.1684043449710089e-13,
+        "lateral_force_mN": 20.858081874777113,
+        "total_force_mN": 22.43747147293573,
+        "raw_xy_mm_s": [
+          0.3,
+          -0.3
+        ]
+      },
+      "end_example": {
+        "time_s": 6.9660000000058515,
+        "target_xy_um": [
+          -53.32958791904538,
+          -226.10589787039652
+        ],
+        "actual_xy_um": [
+          -88.39224115213743,
+          -159.9760800777766
+        ],
+        "reference_xy_um": [
+          -121.09829584785808,
+          -355.990416436054
+        ],
+        "target_radius_um": 70.60282181169721,
+        "reference_radius_um": 209.28648666564794,
+        "actual_radius_um": 28.689903842847226,
+        "reference_target_error_um": 146.5011465394498,
+        "reference_actual_lead_um": 198.72419598965638,
+        "integration_error_um": 2.1684043449710089e-13,
+        "lateral_force_mN": 20.858081874777113,
+        "total_force_mN": 22.43747147293573,
+        "raw_xy_mm_s": [
+          0.3,
+          -0.3
+        ]
+      }
+    }
+  ],
+  "mechanism": "Search commands tangent + K*(target - actual). Cartesian drive integrates limited velocity into a separate reference. Under contact, persistent actual tracking error accumulates in that reference; the 120um target disk does not constrain the drive reference.",
+  "implication": "Reference-aware trajectory tracking with an explicit per-search XY reference bound is the next narrow candidate; unchanged physics/guards and separate bounded validation required.",
+  "limitations": "This proves reference drift, not its isolated causal sufficiency for failure or that the next candidate will succeed. No friction/geometry tuning or extra physics executed."
+}

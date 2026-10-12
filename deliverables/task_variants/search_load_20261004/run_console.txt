@@ -1,0 +1,15 @@
+{"case": "y_neg_150", "cycles": 500, "time_s": 0.9999999999999225}
+{"case": "y_neg_150", "cycles": 1000, "time_s": 1.9999999999998124}
+{"case": "y_neg_150", "cycles": 1500, "time_s": 2.9999999999997025}
+{"case": "y_neg_150", "cycles": 2000, "time_s": 3.9999999999995923}
+{"case": "y_neg_150", "cycles": 2500, "time_s": 5.000000000001703}
+{"case": "y_neg_150", "cycles": 3000, "time_s": 6.000000000003813}
+{"case": "y_neg_150", "cycles": 3500, "time_s": 7.000000000005923}
+{"case": "y_neg_150", "cycles": 4000, "time_s": 8.000000000008033}
+{"case": "y_neg_150", "cycles": 4500, "time_s": 9.000000000005702}
+{"case": "y_neg_150", "cycles": 5000, "time_s": 10.000000000003372}
+{"case": "y_neg_150", "cycles": 5500, "time_s": 11.000000000001041}
+{"case": "y_neg_150", "cycles": 6000, "time_s": 11.99999999999871}
+{"case": "y_neg_150", "cycles": 6500, "time_s": 12.99999999999638}
+{"id": "y_neg_150", "status": "finished", "started_at": "2026-10-04T00:43:44.174045+08:00", "control_cycles": 6718, "physical_substeps": 67180, "simulated_time_s": 12.99999999999638, "updated_at": "2026-10-04T00:48:17.328690+08:00", "ended_at": "2026-10-04T00:48:22.834665+08:00", "outcome": {"simulation_valid": true, "task_outcome": "TASK_FAILURE", "guard_violations": {"contact": false, "motion": false}, "physical_stopped": true, "valid_for_learning": false, "model_scope_qualified": false, "training_admitted": false, "guard_facts": {"simulation_valid": true, "invalid_reasons": [], "contact_reasons": [], "motion_reasons": [], "max_rotation_from_start_rad": 0.005336812102822622, "checked_substeps": 67180}}, "reason": "SEARCH_BUDGET_EXHAUSTED", "wall_seconds": 278.65939389999403, "xy_um": 173.91429586339146, "z_um": -3760.2450769684206, "pin_clearance_um": -76.07641284816918, "peaks": {"force_N": 0.024474139103047843, "torque_G_Nm": 0.0003539866350078553, "penetration_m": 7.106486275531079e-06, "speed_m_s": 0.0010743669301466314, "drive_force_components_N": [0.013687982502387274, 0.02046128656144267, 0.02447555455653372], "drive_torque_components_Nm": [5.263394380503162e-05, 1.5825238430743345e-05, 1.538911925768508e-05], "contact_count": 2144.0}, "contact_cycles": 6584, "search_cycles": 4913, "stop_time": 11.436000000000025, "task_end_time": 12.435999999997694, "end_time": 13.435999999995364, "archive_sha256": "c716523e6e7c6842a80c026fab59f0fa3a8bc26229a271765f9dfe401293e953"}
+{"status": "controlled_stop", "episodes": 1}

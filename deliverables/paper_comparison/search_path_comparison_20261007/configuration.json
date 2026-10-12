@@ -1,0 +1,56 @@
+{
+  "seals": {
+    "contact_gate_probe_20261007": "c123f8f1f445c856e04222156f519e7b39e5cb8097e00bd646720f95858d3038",
+    "residual_effect_diagnosis_20261007": "1500e169da44e364c33dc01e84b30538b3de2abedb37c9486055d6fe4687a76f",
+    "frozen_comparison_20261007": "8c64d623247c31e217f71e90cbb473c3d21a05c49360f10872dab4eddd36596c",
+    "v4_learning_requalification_20261006": "fd98d247484e919c3c4e099d03575b1d4d40e977a5da939efc088759c84b9ed5"
+  },
+  "archives": {
+    "F50": [
+      "contact_gate_probe_20261007/run/probe_F50_y_neg_150.json.gz",
+      "534392e109e661d0c165bbeb1165a6c9f29b454c5d8e7690e0dd88f21ea15877"
+    ],
+    "F12.5": [
+      "contact_gate_probe_20261007/run/probe_F12p5_y_neg_150.json.gz",
+      "05672e155e7b5e8875bf73c6e6f6f5ff6857f833978131ec7649676a9f4e58b2"
+    ],
+    "G50": [
+      "contact_gate_probe_20261007/run/probe_G50_y_neg_150.json.gz",
+      "a8d47576247bfc635dce783413e641aca00e6bc4f1758b9547791ccf27bb3563"
+    ],
+    "S50": [
+      "v4_learning_requalification_20261006/run/final_S50_y_neg_150.json.gz",
+      "e043f85a4c37869e996aaba0777783027130dec03b63b0b3b4b4a4ce0dcce3d6"
+    ]
+  },
+  "common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+  "scope": "four existing negative-Y development archives, descriptive offline comparison only",
+  "costs": {
+    "new_dynamics": 0,
+    "new_physical_substeps": 0,
+    "new_policy_inferences": 0,
+    "new_optimizer_updates": 0,
+    "new_published_transitions": 0,
+    "cumulative_dynamic": 208
+  },
+  "analysis_input_sha256": {
+    "analyze.py": "3f715ffd086cd7e7262b03c633d41df68b40881a88a0255a229912336f1d3d70",
+    "test_analysis.py": "81b5bdb295657c362094714ce6b9709450c8ec8282ae9059bd94819bfe59f7fa",
+    "build_report.py": "6409ed44097d4dc917c79235dbe532e8c73dbc74a91e7bb4ec50098ccab492b6",
+    "verify.py": "bea16df12a4bdab8ee427b0fdeedf780e8c43414403a3671e751920c78b7a0cc",
+    "update_documents.py": "5c24b9936c5eb06d6d2a3be2b07544c5e57a75a0bb8ee615cfd94278c1127f0d",
+    "finish.py": "a6fb4e5994876301cc435cc705ada6212c4cb79c43845f3ad1be92d64d9c4df9",
+    "plan_snapshot.md": "68d28b543e32e4ed368c2e85a52c4b545507eb3feac153fe12bd9fcff440d2ad"
+  },
+  "source_proof": {
+    "sealed_file_counts": {
+      "contact_gate_probe_20261007": 78,
+      "residual_effect_diagnosis_20261007": 27,
+      "frozen_comparison_20261007": 96,
+      "v4_learning_requalification_20261006": 457
+    },
+    "production_inputs_unchanged": 1057
+  },
+  "training_admission": false,
+  "automatic_tracking": "PAUSED"
+}

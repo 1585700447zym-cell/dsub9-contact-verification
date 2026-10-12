@@ -1,0 +1,53 @@
+{
+  "case": "x_offset_pos_100um",
+  "status": "PASS",
+  "training_admitted": false,
+  "runtime": {
+    "version": "3.13.0",
+    "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+    "dll_verified": true,
+    "dll_sha256": {
+      "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+    },
+    "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+  },
+  "comparison": "exact_python_value_equality_no_tolerance",
+  "source_archive_sha256": {
+    "deliverables\\native313_baseline_matrix\\b2_v1\\x_offset_pos_100um\\original.json.gz": "a143c2e1beb5d8ee2dd291ff9b5a3343f9ab289f51c14922a7fb7f72d9ccce51",
+    "deliverables\\native313_baseline_matrix\\b2_v1\\x_offset_pos_100um\\stop_extension.json.gz": "4a843cbe3725d7e2e6d1e7f0050ed96cc247c1208ce4f31d0b8a69067fa74949"
+  },
+  "task_cycles_compared": 5394,
+  "tail_cycles_compared": 880,
+  "termination": "GEOMETRIC_SUCCESS",
+  "task_end_time_s": 10.788000000001535,
+  "end_time_s": 12.547999999997433,
+  "physical_stopped": true,
+  "physical_steps": 62740,
+  "config": {
+    "stall_window_s": 0.4,
+    "stall_earliest_s": 0.6,
+    "stall_advance_m": 5e-06,
+    "stall_axial_force_N": 0.005,
+    "unload_speed_m_s": 0.00025,
+    "unload_time_s": 1.0,
+    "unload_axial_force_N": 0.005,
+    "unload_total_force_N": 0.01,
+    "search_force_N": 0.008,
+    "axial_gain_m_s_N": 0.05,
+    "search_forward_speed_m_s": 0.0005,
+    "spiral_pitch_m": 4e-05,
+    "spiral_radius_m": 0.00012,
+    "spiral_speed_m_s": 0.00015,
+    "search_tracking_gain_s": 5.0,
+    "search_xy_component_speed_m_s": 0.0003,
+    "search_time_s": 8.0,
+    "search_exit_advance_m": 0.0001,
+    "max_searches": 2,
+    "search_actual_xy_limit_m": 0.0002,
+    "wait_stable_s": 1.0,
+    "recovery_min_actual_m": 0.0002,
+    "total_action_time_s": 20.0,
+    "settle_time_s": 1.0
+  },
+  "wall_seconds": 316.4383358999621
+}

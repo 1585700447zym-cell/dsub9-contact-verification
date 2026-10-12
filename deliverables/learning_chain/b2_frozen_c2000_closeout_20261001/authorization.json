@@ -1,0 +1,31 @@
+{
+  "version": "frozen_c2000_night_authority_v1",
+  "approved": true,
+  "binding_sha256": "18e5f923101ab7be5dcec8a54745b26ba7b4a401baf9b1931eaa218c3ea72259",
+  "scope": {
+    "previous_dynamic": 80,
+    "dynamic_cap": 10,
+    "variant_dynamic_cap": 5,
+    "cumulative_dynamic_cap": 90,
+    "cycles_per_start": 13000,
+    "actor_state_cap": 130000,
+    "module_call_cap": 4160000,
+    "physical_substep_cap": 1300000,
+    "training_batches": 0,
+    "critic_diagnostic_states": 0,
+    "independent_test": 0,
+    "old_unused_consumed": 0,
+    "stop_on_any_guard_per_variant": true,
+    "automatic_retry": false,
+    "automatic_tracking": false,
+    "checkpoint_manifest_sha256": "3f7a9097e191eb0a0a016141916ee31e8b1c551188d61b8157e0530960819aa6",
+    "parent_delivery_sha256": "1f86e9ece11d5244401470cf1c684a689a7e590169b3b22073dc2ade1a77fb59",
+    "variants": [
+      "base",
+      "small"
+    ],
+    "small_xy_scale": 5e-05
+  },
+  "user_confirmation": "接下来我要去休息了，由你制定计划并实施推进计划进行长途作业，直到这一阶段完成或者遇到难以解决的问题再停止，明早我会再进行审核结果和验收，你明白我的意思吗",
+  "interpretation": "Delegated bounded current phase: frozen C2000 evaluation and conditional single smaller XY deployment screen; no new training; user reviews completed evidence in morning."
+}

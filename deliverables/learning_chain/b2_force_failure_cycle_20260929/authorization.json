@@ -1,0 +1,34 @@
+{
+  "version": "force_cycle_user_authorization_v1",
+  "approved": true,
+  "candidate_sha256": "1f892778e9b5b9c15d982c96a687321b26c018170d23f4f86068cb3a38277083",
+  "user_confirmation": "开始执行",
+  "approval_context": "User explicitly starts the reviewed 32 dynamic starts / 4500 formal batches plan; prior 36 retained, cumulative cap 68, no retries.",
+  "budget": {
+    "previous_dynamic_starts": 36,
+    "new_dynamic_cap": 32,
+    "cumulative_dynamic_cap": 68,
+    "formal_optimizer_batches": 4500,
+    "new_synthetic_updates": 0,
+    "new_separate_static_initializations": 0,
+    "extra_diagnostic_physics": 0,
+    "stages": {
+      "initial": 4,
+      "training": 12,
+      "final": 4,
+      "restored": 4,
+      "holdout_b2": 4,
+      "holdout_sac": 4
+    },
+    "force_failure_stop": {
+      "consecutive": 2,
+      "total": 3
+    },
+    "automatic_retry": false,
+    "old_remaining_budget_retired": true,
+    "initial_state": "same_empty_state",
+    "final_checkpoint": "fixed_episode_12",
+    "baseline_reused": true
+  },
+  "approved_at": "2026-09-29T11:01:17.956712+08:00"
+}

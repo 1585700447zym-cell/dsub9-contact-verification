@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-10",
+  "scope": "Original-plan evaluation and supplemental connector literature; research recommendation only, no scientific execution",
+  "files": {
+    "before_state.json": {
+      "bytes": 24852,
+      "sha256": "91c6813bd4f0b7ef71d32c3786f403002243b821ce0ed5667ef3b02c896297f8"
+    },
+    "git_status_after.bin": {
+      "bytes": 9952,
+      "sha256": "9eff2a41b7c93cf108bf4a38ca5109e27d35865332b54aefa51de0fc2b671c51"
+    },
+    "git_status_before.bin": {
+      "bytes": 9952,
+      "sha256": "9eff2a41b7c93cf108bf4a38ca5109e27d35865332b54aefa51de0fc2b671c51"
+    },
+    "learning_mechanism_literature.md": {
+      "bytes": 22653,
+      "sha256": "df0491ec95f8de2a7768364156349bb224b275bb9c7da476c83a93b2a3dcd7c6"
+    },
+    "pose_baseline_literature.md": {
+      "bytes": 14065,
+      "sha256": "28fb211336749feb847d56b4ff3c49e6453499573f3aa7908c8510bc4b210543"
+    },
+    "pose_sources.json": {
+      "bytes": 5825,
+      "sha256": "4a358fbf61664dba962248e1d71056ddac281a1364342a56555902a680f0f459"
+    },
+    "snapshots_after/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "snapshots_after/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 236700,
+      "sha256": "aac776259918fac6253de89eddd2089b0a1021dba95d328dd489caf48556f7b3"
+    },
+    "snapshots_after/研究推进计划_当前版.md": {
+      "bytes": 65242,
+      "sha256": "8c40914e6d8e83468b16cc3eb02912f0a029cdadaf2d5f3cffd1f81405a52043"
+    },
+    "snapshots_after/项目交付总览.md": {
+      "bytes": 209484,
+      "sha256": "38f260235bb56c31a0c48f95b24f143856a6e5dcfcaf095bc55247b9bd5ffa5f"
+    },
+    "snapshots_after/项目当前入口.md": {
+      "bytes": 40870,
+      "sha256": "02e58dc2142e0e6eb2f65c45a58c34c06d03b575812955a994b1cdedbe52a147"
+    },
+    "snapshots_after/项目进度跟踪.md": {
+      "bytes": 255898,
+      "sha256": "76df33ca22c3ce24437d34ed793f05d0175949dab3a9256ed4c571d0b3dc1912"
+    },
+    "snapshots_before/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "snapshots_before/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 235349,
+      "sha256": "38290dd26987dce548ea3559577504e81bb6f6428c0cec154a0535a3fa6c8ce3"
+    },
+    "snapshots_before/研究推进计划_当前版.md": {
+      "bytes": 64131,
+      "sha256": "378e7a1b99ef34c6d2b5ddae442be039ce08f6d89ce8701c86a780e4856bc7fa"
+    },
+    "snapshots_before/项目交付总览.md": {
+      "bytes": 206972,
+      "sha256": "b600d5f78434af8745ed29447e185db0814291a3a11325a3ce609446815843ac"
+    },
+    "snapshots_before/项目当前入口.md": {
+      "bytes": 40472,
+      "sha256": "1d5cd4713041b499b364569f0d7244480ad0c16cbe7b890e416ffd4982f2ec74"
+    },
+    "snapshots_before/项目进度跟踪.md": {
+      "bytes": 253130,
+      "sha256": "f19c34f53342bf512789234bd5207285ffef3760c1745e5bbd1467655b682406"
+    },
+    "verification.json": {
+      "bytes": 9524,
+      "sha256": "56f2f280a6576a606aa1bf601a5cd6a768a01b5a7e74d199dd8fae9c91161889"
+    },
+    "原规划文本摘录.txt": {
+      "bytes": 10189,
+      "sha256": "ab29ae6e43e5f779b399f69884049c17c593ff647201fb9b98fec55d4358915c"
+    },
+    "原规划评估与研究建议.md": {
+      "bytes": 12000,
+      "sha256": "4a80f2fb67bc112c1370a0019bd832488ff99315422099c255ff83e7aed1ff4f"
+    },
+    "补充来源与检索记录.md": {
+      "bytes": 5273,
+      "sha256": "7287c2196c85cdf4754280c6562ff73ed36595aedbe75e95f88534f95155667c"
+    }
+  }
+}

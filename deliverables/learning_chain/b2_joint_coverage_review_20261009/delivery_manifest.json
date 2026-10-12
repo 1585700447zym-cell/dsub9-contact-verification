@@ -1,0 +1,114 @@
+{
+  "files": {
+    "analyze.py": {
+      "bytes": 8997,
+      "sha256": "e8867a4c6d642785eae61a5dc1b215750e8b45b35c4f7a37668aa38a0117ca95"
+    },
+    "before_documents/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "before_documents/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 161812,
+      "sha256": "56757eb432faa666a61c5a766c2accd6a756535baf9d0cc8e54049a8a445460c"
+    },
+    "before_documents/研究推进计划_当前版.md": {
+      "bytes": 62467,
+      "sha256": "a301ba4ac35d712da33aeb5b968bcd225cff8c43d95d53a7bb9350dd0bcfda0a"
+    },
+    "before_documents/项目交付总览.md": {
+      "bytes": 178796,
+      "sha256": "d2dae9276f62193a214c166874191416f2f76c6db1b2047995bf493162580851"
+    },
+    "before_documents/项目当前入口.md": {
+      "bytes": 41264,
+      "sha256": "ab74f68f64c5b630f4e98a780a439c6dd21cb2294ae1181e56dab8e35823c37f"
+    },
+    "before_documents/项目进度跟踪.md": {
+      "bytes": 214756,
+      "sha256": "158934715b3e79ff7aaf138cfbeb1fce427e13931507f931c1888c354870cad1"
+    },
+    "coverage_comparison.json": {
+      "bytes": 225375,
+      "sha256": "d97249887ebaf8778e253f11e232140b4ad3ac38df790b6ef307117931ab416d"
+    },
+    "document_snapshots/AGENTS.md": {
+      "bytes": 4004,
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954"
+    },
+    "document_snapshots/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "bytes": 167285,
+      "sha256": "ae9448a70a9f78d7f1c0f4dea29917e9f99d8efae5bf5d3a9ec92c95d3d6810b"
+    },
+    "document_snapshots/研究推进计划_当前版.md": {
+      "bytes": 62067,
+      "sha256": "937356f382dadaa5f33934dbec452f990119fa28f8792b8b72667a1f32fbf8ad"
+    },
+    "document_snapshots/项目交付总览.md": {
+      "bytes": 180815,
+      "sha256": "ab62ebcc70fb0298f7b04341457bfa3f5dfa2147ccb20866f3116eadafc2b4fe"
+    },
+    "document_snapshots/项目当前入口.md": {
+      "bytes": 40916,
+      "sha256": "f035e0ac712e3550d4280c9dcc3d054f5b5add1389b4d83c7686b9631e572350"
+    },
+    "document_snapshots/项目进度跟踪.md": {
+      "bytes": 216601,
+      "sha256": "e06699ec72a667f548fbdd821bd9283c16877b54deacbed57884b6aefcac149c"
+    },
+    "document_update.json": {
+      "bytes": 702,
+      "sha256": "377e7ee2a351e018e1dcc477046f3a8cfbefebb580f1698daea464e10c9870b4"
+    },
+    "git_status_after.txt": {
+      "bytes": 11720,
+      "sha256": "2b68741259492ac5a56ab89324dd18e6f461aa62d97fd8caa68c9c40e5e9e35e"
+    },
+    "git_status_before.txt": {
+      "bytes": 11720,
+      "sha256": "2b68741259492ac5a56ab89324dd18e6f461aa62d97fd8caa68c9c40e5e9e35e"
+    },
+    "pilot_preparation_scope.json": {
+      "bytes": 4509,
+      "sha256": "312c5fed9a63ef0c6d49c2b325cca3237fddd45e492290ea4669cee3d1c21d88"
+    },
+    "progress.md": {
+      "bytes": 1276,
+      "sha256": "d6f2e7d54f7084268dd6cd7c7f55cc3126afa0ca9e7f87a9df87f6d9b82fabb0"
+    },
+    "publish.py": {
+      "bytes": 11805,
+      "sha256": "2cd9ddbee373f7edd4eccd6e7972c319a174e3e7218b78c7df705152a253f7a6"
+    },
+    "recommended_gate_v2.json": {
+      "bytes": 1662,
+      "sha256": "737f4cb92293a1c53e810107b11cd46b2cdaeebed887ea16703d11bd76558570"
+    },
+    "registration.json": {
+      "bytes": 2197,
+      "sha256": "ceba315e9fdd50e91a9bc5a3c963ecc3378ac2cdb7628ea243b3d79f6b830dc0"
+    },
+    "route_decision.json": {
+      "bytes": 2338,
+      "sha256": "e3623687fb840062c9f73364eafb229216c14efdd8eef7297c2826da093994f9"
+    },
+    "update_documents.py": {
+      "bytes": 7455,
+      "sha256": "c8a02d7a417ad4bc07513db992dda65176177473c018ae4cc772d94aa8b4a57f"
+    },
+    "verification.json": {
+      "bytes": 591,
+      "sha256": "01783d98625cb5581d48d1b99bcf41a677d00968546fd4860120011859d3a3f8"
+    },
+    "verify_delivery.py": {
+      "bytes": 9384,
+      "sha256": "190951f4dd9066913023220904deb2ac4900cb2d4cc6c32bd8b94d324288c0e7"
+    },
+    "结果说明.md": {
+      "bytes": 6369,
+      "sha256": "4bf2f015af79bc504a3b62e29f961041c000b5d0ee77890465b962d232f54e9e"
+    }
+  },
+  "rolling_documents_may_advance": true,
+  "stage_id": "B2-SCOPE-11"
+}

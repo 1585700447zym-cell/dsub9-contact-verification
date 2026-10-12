@@ -1,0 +1,31 @@
+{
+  "C_accepted": false,
+  "additional_precision_successes": {
+    "F0": 4,
+    "F2000": 0
+  },
+  "archive_count": 8,
+  "archive_cycles": 42171,
+  "automatic_tracking": "PAUSED",
+  "bound_inputs_preserved": 2655,
+  "checks": 96966,
+  "costs": {
+    "new_dynamic_episodes": 0,
+    "new_model_constructions": 0,
+    "new_optimizer_updates": 0,
+    "new_physical_substeps": 0,
+    "new_policy_inferences": 0,
+    "new_published_transitions": 0,
+    "new_tensor_loads": 0
+  },
+  "cumulative_dynamic": 254,
+  "dirty_entries_preserved": 224,
+  "full_B2_accepted": false,
+  "independent_tests": 0,
+  "old_sealed_members_preserved": 3685,
+  "relative_improvement": 0.027677969908286304,
+  "source_code_pins": 12,
+  "stage_id": "B2-SCOPE-21",
+  "status": "VERIFIED_OFFLINE_DIAGNOSIS",
+  "training_admitted": false
+}

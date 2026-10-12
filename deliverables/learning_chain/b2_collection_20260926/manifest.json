@@ -1,0 +1,29 @@
+{
+  "version": "b2_collection_delivery_v1",
+  "files": {
+    "deliverables/learning_chain/b2_collection_20260926/admission.json": "dfa711bdca3ff8c4e5c09c53f1221979206ca6b0e4a7c012bc27ea34743bb40d",
+    "deliverables/learning_chain/b2_collection_20260926/assessment.json": "84ee25b1946cdadf61bbf590634a506214aaf548dcc2d39ee787874e26b05058",
+    "deliverables/learning_chain/b2_collection_20260926/attempts.json": "8dc8a7a2a0299c3fd3528b84b073cdc6b5ea04f768e1bd472b496403a3ca0300",
+    "deliverables/learning_chain/b2_collection_20260926/documentation_checks.json": "03aeb815611cea0b08f2f905a2bb2d4edfd695300530d6b3271744f4223c6eb3",
+    "deliverables/learning_chain/b2_collection_20260926/episodes/center_plus_x/episode.json.gz": "c703672f384cebca8efa438f4bd7012601760455ed20612cf4283db1468fbec4",
+    "deliverables/learning_chain/b2_collection_20260926/episodes/center_plus_x/status.json": "9b37121bcd4e3031f9847ea22e633ec3988adc730de359c381073112dbf64894",
+    "deliverables/learning_chain/b2_collection_20260926/episodes/sampled_zero/episode.json.gz": "9de431d04608fcfc8a7176aea6163624cd1da2c758ba3cc275956de807fcb305",
+    "deliverables/learning_chain/b2_collection_20260926/episodes/sampled_zero/status.json": "56d7ca55b705ac3c42a8780ef4fa1ee63372a3c53cfedebf7855f61895dd721d",
+    "deliverables/learning_chain/b2_collection_20260926/episodes/untrained_cut/episode.json.gz": "2678dafe4a4902e79ff2e406afca8ee2be5875471c176b1d38742a35bb91dd95",
+    "deliverables/learning_chain/b2_collection_20260926/episodes/untrained_cut/status.json": "29ba98943275becfe503defbe7d80970a01523aae5cc015ef38f4c6886ed6baa",
+    "deliverables/learning_chain/b2_collection_20260926/learning_tests.log": "fa74ada467290d411ce884d1eb5bd81e5e86d59f92ae1bdbb7af79a9d9dbcfc7",
+    "deliverables/learning_chain/b2_collection_20260926/learning_tests.xml": "7c42cf6092a7059c4ff1d8aa98b842ffc87d4ba8a7f5659272f9a8daaf0c4863",
+    "deliverables/learning_chain/b2_collection_20260926/protocol.json": "499d0fdcbd384af56c9d6b398301737debcb72483076bf22410ba25c26952a41",
+    "deliverables/learning_chain/b2_collection_20260926/README.md": "1efea46df74d4180adc2685056531d27ba32fff95d7ab213104ead2c7d2613d5",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/docs/deliverables/monthly_progress/2026-09/月报素材_2026-09.md": "070ccb3b7374b7a5634442d9a1b0dc7cb0f7e4889ae05bf66249fa794d227372",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/docs/docs/superpowers/plans/2026-09-26-b2-admitted-collection.md": "7ff4a59b3e7799fa2cac97166d8c0018cefe16a35173c64da34245c216d10eaa",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/docs/项目交付总览.md": "26f7522a7aed921272ea5398f281a77f298e62a97c20e4b16e737cbb420db0b9",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/docs/项目进度跟踪.md": "3eb48a91185b4cb45cd1cb5013a58b68d4f40cac9bf6f401e2ea417f917d0e6c",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/sources/tests/learning/test_admitted_collection.py": "3b4e19e6f6a2893f7cfc26fa3980501c7cb309e99a4fe55be9474d9eb43041bf",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/sources/tests/learning/test_b2_admission.py": "9ecb9329d0a3b271e501047f6d261895a42222e5c2a5a4fdeeb26e5647c1cc91",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/sources/tools/learning/admitted_collection.py": "1120f0ec31e8e15f5bd17eaf079a115d0739a1fe9645d619a90cd77872483749",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/sources/tools/learning/b2_admission.py": "7367f87b6775a225df7e66f0d0509f42bca4eb200aea184113a6f68bb61a291c",
+    "deliverables/learning_chain/b2_collection_20260926/snapshots/sources/tools/validation/verify_admitted_collection.py": "c86438aff8c31ba64cbf8008fdd219f81fe299a73a52909362650a1cd7f96d44",
+    "deliverables/learning_chain/b2_collection_20260926/核验说明.md": "71182ab48e0105591b9ac96ecf2a29d0817bf5d412e772b4c7cbb2d6c282471f"
+  }
+}

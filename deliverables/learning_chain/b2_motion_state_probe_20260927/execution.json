@@ -1,0 +1,14 @@
+{
+  "completed": true,
+  "blocked_by": null,
+  "batch_error": null,
+  "last_stage": "final_inputs",
+  "started": 2,
+  "recorded": 2,
+  "unexecuted": [],
+  "wall_seconds": 436.3369438999798,
+  "source_unchanged": true,
+  "training_admitted": false,
+  "optimizer_updates": 0,
+  "independent_test_used": false
+}

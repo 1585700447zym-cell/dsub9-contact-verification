@@ -1,0 +1,42 @@
+{
+  "full_suite": {
+    "command": "python -X utf8 -B -m pytest -q -p no:cacheprovider",
+    "passed": 382,
+    "failed": 23,
+    "seconds": 145.63,
+    "note": "Run collected tests before the 3 new report tests were added. All failed nodes share Windows SDK build access error.",
+    "failed_nodes": [
+      "tests/sdf/test_plugin_build.py::test_plugin_library_exists_and_loads",
+      "tests/sdf/test_plugin_build.py::test_plugin_registers_exact_name_and_attributes",
+      "tests/sdf/test_plugin_build.py::test_minimal_mjcf_plugin_instance_loads",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point0]",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point1]",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point2]",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point3]",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point4]",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point5]",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point6]",
+      "tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point7]",
+      "tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values0]",
+      "tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values1]",
+      "tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values2]",
+      "tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values3]",
+      "tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values4]",
+      "tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values5]",
+      "tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes0]",
+      "tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes1]",
+      "tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes2]",
+      "tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes3]",
+      "tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes4]",
+      "tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes5]"
+    ],
+    "error": "MSB4184: ToolLocationHelper::GetLatestSDKTargetPlatformVersion cannot access C:/Users/ok everything/AppData/Local/Microsoft SDKs",
+    "plugin_rebuilt": false
+  },
+  "focused_final": {
+    "command": "pytest tests/b2/test_y_probe_entry.py tests/b2/test_y_probe_report.py tests/b2/test_search_probe.py tests/b2/test_probe_report.py -q -p no:cacheprovider",
+    "exit_code": 0,
+    "passed": 22
+  },
+  "full_suite_not_claimed_green": true
+}

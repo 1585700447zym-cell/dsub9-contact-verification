@@ -1,0 +1,26 @@
+{
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "workdir": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation",
+  "dirty_entries": 211,
+  "stage_source_delta": {
+    "tools/learning/v4_pilot_contract.py": {
+      "before_lines": 85,
+      "after_lines": 85,
+      "added": 3,
+      "removed": 3
+    },
+    "tools/validation/run_v4_learning_pilot.py": {
+      "before_lines": 342,
+      "after_lines": 364,
+      "added": 31,
+      "removed": 9
+    },
+    "tests/task_variants/test_v4_learning_pilot.py": {
+      "before_lines": 61,
+      "after_lines": 95,
+      "added": 36,
+      "removed": 2
+    }
+  },
+  "policy": "all existing changes retained; no reset, new checkout, commit or cleaning"
+}

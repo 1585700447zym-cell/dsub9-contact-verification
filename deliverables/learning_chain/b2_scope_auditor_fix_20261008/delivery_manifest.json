@@ -1,0 +1,178 @@
+{
+  "stage_id": "B2-SCOPE-04",
+  "status": "SEALED_OFFLINE_AUDITOR_REPAIR",
+  "files": {
+    "archive_reassessment.json": {
+      "sha256": "b3f688e5ca9a11608cc67aff4c5e7713987e32f53a0be22edb9ffd7c56e34c97",
+      "bytes": 24533
+    },
+    "archive_reassessment_final.json": {
+      "sha256": "6ec46f1bbc1f3544ec599ef035eba6acff17e650c0e2ccf6ca7add9775ef2773",
+      "bytes": 24533
+    },
+    "audit_existing.py": {
+      "sha256": "04bece06a8ef83c9aa9b0f019348ea794c8afeecae56c8bce40b739e8b256ff5",
+      "bytes": 4192
+    },
+    "before_documents/AGENTS.md": {
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+      "bytes": 4004
+    },
+    "before_documents/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "9e9eb20428e665768821ff8b29fc063616e6eb94d6a907778af9c581b791ac08",
+      "bytes": 134854
+    },
+    "before_documents/研究推进计划_当前版.md": {
+      "sha256": "b9c5fb153a1d34e92a32c750e0afe871169b781247bb239312ddc86eaec7440c",
+      "bytes": 61205
+    },
+    "before_documents/项目交付总览.md": {
+      "sha256": "cd25c48ec85314f16046fa9eefcc26f6d5e13833384edb34ac946085c0b4999e",
+      "bytes": 162063
+    },
+    "before_documents/项目当前入口.md": {
+      "sha256": "28895656f1d0467d134ecf14b5fc87ede919ff6186e7b1a2dd50238c3936a506",
+      "bytes": 40534
+    },
+    "before_documents/项目进度跟踪.md": {
+      "sha256": "88b695c42d1254d3424acbbdb4755a5b0b4f935cfa7dcf91c2571f4f1b607c61",
+      "bytes": 197852
+    },
+    "check_only.json": {
+      "sha256": "566778df3a6fef18912b51cdc6c9b54f93340bcd42a09b0fbca1a1c6960882b3",
+      "bytes": 249
+    },
+    "check_only_final.json": {
+      "sha256": "30a13c7b217ec3a4bbb01fa09cec3f1d77260cb6101a3e623d821075f48a5d28",
+      "bytes": 249
+    },
+    "closeout_documents.py": {
+      "sha256": "157582e4c708c4d47ef2f00ef3308fa666f7857503a0e07dee5a7961ee3e5b5e",
+      "bytes": 10553
+    },
+    "document_snapshots/AGENTS.md": {
+      "sha256": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+      "bytes": 4004
+    },
+    "document_snapshots/deliverables/monthly_progress/2026-10/月报素材_2026-10.md": {
+      "sha256": "19adf4de1856bc13ff22516576f457463288178572f2f637769e504504102a41",
+      "bytes": 135632
+    },
+    "document_snapshots/研究推进计划_当前版.md": {
+      "sha256": "f60b4b38ad78eb93e7853d1c57d6853c5b6e77d403d0f1a67f9608912267ef6e",
+      "bytes": 60898
+    },
+    "document_snapshots/项目交付总览.md": {
+      "sha256": "fb8123774b275225144a8f4fa8073381c230bad77c59229f7dc1d41bb4c5685d",
+      "bytes": 163389
+    },
+    "document_snapshots/项目当前入口.md": {
+      "sha256": "34dfabfd847bff74287119807744ff1e0d4d4b14bb41ebc06caecb80762c2cb3",
+      "bytes": 40238
+    },
+    "document_snapshots/项目进度跟踪.md": {
+      "sha256": "6389dbeaff71bb24d8ab224883cd7d7fcfda04e8a7b2f70255339d50d0969e57",
+      "bytes": 198801
+    },
+    "execution_preservation.txt": {
+      "sha256": "fd81aecd45dac605aa75e809850ee4a1d7d9c229cb690b8695bc9f5889fb9914",
+      "bytes": 389
+    },
+    "final_tests.txt": {
+      "sha256": "2795821c4ccab657e1209d170dc80cef8a29be3844ce954ede5dfa61f8de2eb9",
+      "bytes": 1950
+    },
+    "git_status_after.txt": {
+      "sha256": "f7d86ba96663e7fdbb787ce1506ca80e91cf7c219f57df6380ccae69a28d1b23",
+      "bytes": 9764
+    },
+    "git_status_before.txt": {
+      "sha256": "f7d86ba96663e7fdbb787ce1506ca80e91cf7c219f57df6380ccae69a28d1b23",
+      "bytes": 9764
+    },
+    "green_final.txt": {
+      "sha256": "b40c3b825eff7c8429557894e594b2ce63142893ab22c78fbfcbfb94d8a72f19",
+      "bytes": 1801
+    },
+    "green_tests.txt": {
+      "sha256": "c12924df905ffee6341bbdd7abcbcc04a88f782b97e1370b82eca793708cf294",
+      "bytes": 2423
+    },
+    "historical_verification.txt": {
+      "sha256": "5b67d93554b7eecba6eeb0755e0ea8e6bf79c47ad7b16636a8273931b642026e",
+      "bytes": 358
+    },
+    "inherited_final.txt": {
+      "sha256": "cb967b745e752bdadbb3d05f968304afa40628c7a5d6215b96de47ca68b7a31c",
+      "bytes": 1087
+    },
+    "inherited_tests.txt": {
+      "sha256": "c0e657d9b399edfc8b60f8977660e2574d578bbb8ae5011aa53fd7f60b27a341",
+      "bytes": 1087
+    },
+    "progress.md": {
+      "sha256": "a66644d4c487a4e3567c1bee88de9690d025becbfbbee1f403096c0fc2c4fb3a",
+      "bytes": 1883
+    },
+    "red_tests.txt": {
+      "sha256": "ba8566a11c06a21a3f01ca5567bb3ea5150393d4b5976814ec763d0693e738a4",
+      "bytes": 37084
+    },
+    "repaired_assess.py": {
+      "sha256": "e891374b608f291edab656ff5c7449fe995466b73addfe94bfed93d9c2094c34",
+      "bytes": 18011
+    },
+    "review.md": {
+      "sha256": "c4658568bd57fceaa42c116d174cd0d00da56e1d3c72386b3e290c3afcab0b21",
+      "bytes": 2898
+    },
+    "review_red.txt": {
+      "sha256": "de5d476f65da541159cb1d5b37337aad7c675d87d24fcc71d037227c4a520b24",
+      "bytes": 4195
+    },
+    "reviewed_repaired_assess.py": {
+      "sha256": "46a8f34ab233908630dc7a5d807b3b0a5c8ed0705f3b799231401234836f7082",
+      "bytes": 17667
+    },
+    "revision_binding.json": {
+      "sha256": "35897d7988d1273227e4baa0f921698ae5082f0a526d7691a9d2e87e68005222",
+      "bytes": 5498
+    },
+    "revision_binding_before_review.json": {
+      "sha256": "2c3e947665d3162dfb532ebef6a34fcf8899537913e34f365058af69f793b9f9",
+      "bytes": 5253
+    },
+    "run_inherited_tests.py": {
+      "sha256": "3a21f4bb1846e0870db53ab5cbd4cd3f053ee7409ce8b26a60a71d3c625a23d0",
+      "bytes": 1590
+    },
+    "semantic_preservation.json": {
+      "sha256": "5fbb7aaa3581410b3e8b2a2b2607782e01138162dcad0619c0c8c933dbbf19c6",
+      "bytes": 312
+    },
+    "source_delta.diff": {
+      "sha256": "10a3f2d8bd433cb0f93cd3c420aca82c3fb130c5112db2960afcb8e08beffa3a",
+      "bytes": 2722
+    },
+    "test_audit_fix.py": {
+      "sha256": "ad886b226315c4a27748b4d6f01a089a17354353c4863998e6739142535d0bcc",
+      "bytes": 7473
+    },
+    "verification.json": {
+      "sha256": "d475040b78ff749e7fa708251984f4caf10329d5bcdd830b6549608441e7a3aa",
+      "bytes": 874
+    },
+    "verify_delivery.py": {
+      "sha256": "6aa66877d8f49ffa566035c7bdcf469fe00353e0dcd3a8a3ae6825745d21c2af",
+      "bytes": 9356
+    },
+    "结果说明.md": {
+      "sha256": "cf70ffe3014aedcfb98930c679f9367878ed2aacbc275c324f9369b8816109d7",
+      "bytes": 4636
+    }
+  },
+  "cumulative_dynamic": 209,
+  "training_admitted": false,
+  "physical_runner_rebound": false,
+  "rolling_documents": "immutable snapshots; roots may advance"
+}

@@ -1,0 +1,240 @@
+{
+  "date": "2026-10-11",
+  "kind": "B2_evaluation_design_and_existing_data_inventory",
+  "passed": true,
+  "checks": {
+    "git_preserved": true,
+    "sources_and_contracts_unchanged": true,
+    "runtime_200_files_unchanged": true,
+    "six_before_snapshots_match": true,
+    "matrix_25_with_correct_categories": true,
+    "joint_full_independent_crossing": true,
+    "old_four_new_twenty_one_explicit": true,
+    "matrix_csv_and_json_agree": true,
+    "eight_old_results_match": true,
+    "four_pending_results_blank": true,
+    "no_execution_admission_or_new_execution": true,
+    "four_B2_only_proposal": true,
+    "RL_and_B2_C_reminder_persisted": true,
+    "current_项目当前入口.md": true,
+    "current_项目进度跟踪.md": true,
+    "current_研究推进计划_当前版.md": true,
+    "current_项目交付总览.md": true,
+    "current_deliverables/monthly_progress/2026-10/月报素材_2026-10.md": true,
+    "all_new_local_links_resolve": true,
+    "six_after_snapshots_match": true
+  },
+  "new_scientific_execution": 0,
+  "matrix_counts": {
+    "aligned": 1,
+    "position_only": 4,
+    "orientation_only": 4,
+    "joint": 16,
+    "total": 25,
+    "existing_joint_points": 4,
+    "new_combinations_pending_qualification": 21
+  },
+  "existing_result_rows": 8,
+  "pending_B2_rows": 4,
+  "prior_dirty_entries": 224,
+  "runtime_files_verified": 200,
+  "local_links_checked": 38,
+  "next_pending": "四点纯B2配对入口和有限准入材料",
+  "limits": [
+    "方案不等于新科学执行资格",
+    "25点不是连续域验收",
+    "B2未验收，C未开始"
+  ],
+  "links": [
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "scenario_matrix.csv",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "已有结果与待补对照.csv",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "evaluation_candidate.json",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "verification.json",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "../../project_audit/connector_problem_method_review_20261010/原规划评估与研究建议.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "../../project_audit/research_plan_20261010/研究问题与证据推进计划表.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "../../../项目进度跟踪.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "../../../docs/stage_b/训练合同_v3.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\learning_chain\\b2_stratified_evaluation_design_20261011\\B2分层工况与普通SAC评价方案.md",
+      "target": "../../../docs/stage_b/论文对照协议_v4.md",
+      "ok": true
+    },
+    {
+      "from": "项目当前入口.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "研究推进计划_当前版.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "项目当前入口.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_joint_sac_continuation_execution_20261009/结果说明.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/paper_comparison/small_boundary_numeric_execution_20261008/结果说明.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/monthly_progress/2026-10/月报素材_2026-10.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/scenario_matrix.csv",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/已有结果与待补对照.csv",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/verification.json",
+      "ok": true
+    },
+    {
+      "from": "项目进度跟踪.md",
+      "target": "deliverables/monthly_progress/2026-10/月报素材_2026-10.md",
+      "ok": true
+    },
+    {
+      "from": "研究推进计划_当前版.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "研究推进计划_当前版.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/scenario_matrix.csv",
+      "ok": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/已有结果与待补对照.csv",
+      "ok": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/evaluation_candidate.json",
+      "ok": true
+    },
+    {
+      "from": "项目交付总览.md",
+      "target": "deliverables/learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../../项目进度跟踪.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../learning_chain/b2_stratified_evaluation_design_20261011/B2分层工况与普通SAC评价方案.md",
+      "ok": true
+    },
+    {
+      "from": "deliverables\\monthly_progress\\2026-10\\月报素材_2026-10.md",
+      "target": "../../learning_chain/b2_stratified_evaluation_design_20261011/verification.json",
+      "ok": true
+    }
+  ]
+}

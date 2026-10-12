@@ -1,0 +1,116 @@
+{
+  "version": "pc12_small_bound_offline_candidate_v1",
+  "status": "OFFLINE_CANDIDATE_NOT_ADMITTED",
+  "training_admitted": false,
+  "execution_authorized": false,
+  "numeric_verified": false,
+  "runtime_backend_implemented": false,
+  "runtime_backend_verified": false,
+  "physical_preflight_verified": false,
+  "automatic_tracking": "PAUSED",
+  "outer_contract": {
+    "version": "pc12_small_bound_outer_contract_v1",
+    "profile": "F12p5",
+    "registration_sha256": "21929639eac7c447467c851c0aec4dec2ba5f9c45e551cc19a8d892797515bc8",
+    "common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+    "physical_scale_SI": [
+      1.25e-05,
+      1.25e-05,
+      0.000125,
+      0.000125
+    ],
+    "normalized_bounds": [
+      -1.0,
+      1.0
+    ],
+    "replay_action": "unscaled four-dimensional normalized request, zero when inactive",
+    "physical_request": "scale12.5 multiplied by normalized action before shared compositing/limits",
+    "engine_mode": "F50",
+    "engine_nominal_scale_role": "numeric configuration identity only",
+    "engine_config_sha256": "f1eadaf4b3c28eefc643bb3fd79a935f8a49f259af4c7cdf1eb1d23851bb178b",
+    "observation_width": 137,
+    "learning": {
+      "learning_rate": 0.0003,
+      "actor_learning_rate": 0.0003,
+      "batch_size": 256,
+      "replay_capacity": 116000,
+      "network": [
+        256,
+        256
+      ],
+      "seed": 2026092716,
+      "torch_threads": 1,
+      "device": "cpu",
+      "entropy_initial": 0.01,
+      "target_entropy": -4.0,
+      "tau": 0.005,
+      "max_gradient_batches": 2000,
+      "critic_boundary_rows": 16,
+      "exact_terminal_tail": true
+    },
+    "warmup": {
+      "episodes": 4,
+      "hold_cycles": 50,
+      "min_active_rows": 256,
+      "min_active_cases": 2
+    },
+    "online": {
+      "episodes": 4,
+      "batches_per_episode": 500
+    },
+    "zero_origin": {
+      "actor": "6cebe494e472f88c725beb6e19b3f1b2e0883be8b8f81487eef0c27d131e6d31",
+      "critic": "bafa2de8d1bb258ffd29da087d2a74377093a44f0570b26a0c5ee262f242c6e5",
+      "target": "bafa2de8d1bb258ffd29da087d2a74377093a44f0570b26a0c5ee262f242c6e5",
+      "alpha": "1cc1b9c3ff04c5a91f604011a647e885e9652a30a69cb23fe32c2d5a63680383"
+    },
+    "reference_filter": "residual_reference_continuation_v2"
+  },
+  "profile_sha256": "b96ba75cd5f1ab0345714625ea5873a764e9cb98f273deec3c4494d93df79a01",
+  "registration_sha256": "21929639eac7c447467c851c0aec4dec2ba5f9c45e551cc19a8d892797515bc8",
+  "common_key": "199f0f49c535cb6d941c21344f5c81976e949bb444611bd9eddaab35f66527b5",
+  "source_bindings_sha256": "8187021c67f2b2b7014f80425f759deb275ba698c5f0b7268900ff9244444e3a",
+  "execution_code_sha256": {
+    "deliverables/paper_comparison/small_boundary_execution_20261007/small_bound_profile.py": "2d5f8945df8cf948a41f634f29a413c414f23b4efa68f2537bc55e55d43968a1",
+    "deliverables/paper_comparison/small_boundary_execution_20261007/small_bound_session.py": "47c0711492f94c5ca706bf102c1e4cd974987118aa548e9d441a1bcf3f920557",
+    "deliverables/paper_comparison/small_boundary_execution_20261007/small_bound_learning.py": "c42aa81b64540d02de1fdb149ac5d26eb899c96f5e13aaf3f87f5bba5236e336",
+    "deliverables/paper_comparison/small_boundary_execution_20261007/run_small_bound_pilot.py": "41939e0416a7c3e34118a0e098cedddc330874ee387217d95a8d9fda92642582"
+  },
+  "limits": {
+    "numeric_qualification": {
+      "max_synthetic_update_batches": 4,
+      "max_test_state_forward_evaluations": 32
+    },
+    "physical_attempts": 21,
+    "preflight_attempts": 2,
+    "learning_and_evaluation_attempts": 19,
+    "formal_batches": 2000,
+    "prior_dynamic": 208,
+    "cumulative_dynamic_limit": 229,
+    "max_control_cycles_per_attempt": 14500,
+    "max_total_control_cycles": 304500,
+    "max_total_physical_substeps": 3045000,
+    "max_control_policy_call_attempts": 217500,
+    "max_warmup_draws": 1160,
+    "per_episode_wall_limit_s": 1200,
+    "checkpoint_read_wall_limit_s": 300,
+    "update_block_wall_limit_s": 1200,
+    "whole_execution_wall_limit_s": 21600
+  },
+  "actual": {
+    "new_dynamics": 0,
+    "new_physical_substeps": 0,
+    "new_network_predictions": 0,
+    "new_optimizer_batches": 0,
+    "new_published_transitions": 0,
+    "new_learner_constructions": 0,
+    "cumulative_dynamic": 208
+  },
+  "next_gate": "Complete numerical integration harness and separately authorize <=4 synthetic update transactions / <=32 test-state forwards; no dynamics or formal training in that gate",
+  "non_claims": [
+    "No actual full checkpoint saved/read/restored",
+    "No runnable physical backend yet",
+    "No numeric zero-origin fingerprints remeasured",
+    "No training or B.2/C acceptance"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "y_neg_150": {
+    "scope": "before first search with new composition",
+    "before_time_s": 1.5259999999998646,
+    "samples": 764,
+    "old_samples": 8554,
+    "new_samples": 6322,
+    "fields_equal": {
+      "position_m": true,
+      "quaternion_wxyz": true,
+      "velocity_world": true,
+      "contact_wrench_M": true,
+      "limited_command_world": true,
+      "reference_qpos": true
+    }
+  }
+}

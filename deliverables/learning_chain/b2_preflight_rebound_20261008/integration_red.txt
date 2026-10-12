@@ -1,0 +1,87 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_actual_worker_audit_step_replays_live_typed_archive (__main__.IntegrationTests.test_actual_worker_audit_step_replays_live_typed_archive) ... FAIL
+test_current_count_and_stop_rules_are_durable (__main__.IntegrationTests.test_current_count_and_stop_rules_are_durable) ... FAIL
+test_fresh_proposal_has_current_cumulative_and_no_training (__main__.IntegrationTests.test_fresh_proposal_has_current_cumulative_and_no_training) ... FAIL
+test_old_consumed_grant_cannot_authorize_new_scope (__main__.IntegrationTests.test_old_consumed_grant_cannot_authorize_new_scope) ... FAIL
+test_registered_modules_use_new_directory (__main__.IntegrationTests.test_registered_modules_use_new_directory) ... FAIL
+test_revised_numeric_comparison_is_used (__main__.IntegrationTests.test_revised_numeric_comparison_is_used) ... FAIL
+test_worker_bridge_rejects_old_producer_identity (__main__.IntegrationTests.test_worker_bridge_rejects_old_producer_identity) ... FAIL
+
+======================================================================
+FAIL: test_actual_worker_audit_step_replays_live_typed_archive (__main__.IntegrationTests.test_actual_worker_audit_step_replays_live_typed_archive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 56, in test_actual_worker_audit_step_replays_live_typed_archive
+    self.assertTrue(callable(audit),'Worker audit bridge not yet implemented')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Worker audit bridge not yet implemented
+
+======================================================================
+FAIL: test_current_count_and_stop_rules_are_durable (__main__.IntegrationTests.test_current_count_and_stop_rules_are_durable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 89, in test_current_count_and_stop_rules_are_durable
+    self.assertEqual(ledger['cumulative_before'],209)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 208 != 209
+
+======================================================================
+FAIL: test_fresh_proposal_has_current_cumulative_and_no_training (__main__.IntegrationTests.test_fresh_proposal_has_current_cumulative_and_no_training)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 30, in test_fresh_proposal_has_current_cumulative_and_no_training
+    self.assertEqual(c['cumulative_dynamic'],209)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 208 != 209
+
+======================================================================
+FAIL: test_old_consumed_grant_cannot_authorize_new_scope (__main__.IntegrationTests.test_old_consumed_grant_cannot_authorize_new_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 37, in test_old_consumed_grant_cannot_authorize_new_scope
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_registered_modules_use_new_directory (__main__.IntegrationTests.test_registered_modules_use_new_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 41, in test_registered_modules_use_new_directory
+    self.assertEqual(runner.REGISTERED_OUT,NEW)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Windo[75 chars]/deliverables/learning_chain/b2_pose_scope_preflight_20261008') != Windo[75 chars]/deliverables/learning_chain/b2_preflight_rebound_20261008')
+
+======================================================================
+FAIL: test_revised_numeric_comparison_is_used (__main__.IntegrationTests.test_revised_numeric_comparison_is_used)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 48, in test_revised_numeric_comparison_is_used
+    assess.same(np.float64(.125),.125,'integrated scalar')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\assess.py", line 32, in same
+    elif left!=right or type(left)!=type(right):raise ValueError(label+' differs')
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: integrated scalar differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 50, in test_revised_numeric_comparison_is_used
+    except ValueError as exc:self.fail('Integrated auditor still rejects equal numeric types: '+repr(exc))
+                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Integrated auditor still rejects equal numeric types: ValueError('integrated scalar differs')
+
+======================================================================
+FAIL: test_worker_bridge_rejects_old_producer_identity (__main__.IntegrationTests.test_worker_bridge_rejects_old_producer_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_preflight_rebound_20261008\test_integration.py", line 78, in test_worker_bridge_rejects_old_producer_identity
+    self.assertTrue(callable(audit),'Worker audit bridge not yet implemented')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Worker audit bridge not yet implemented
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.150s
+
+FAILED (failures=7)

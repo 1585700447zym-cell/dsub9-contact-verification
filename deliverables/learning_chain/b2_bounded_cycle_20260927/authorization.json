@@ -1,0 +1,10 @@
+{
+  "user_message": "先按这个计划推进，如果最终结果最终没达到要求要及时通知我。",
+  "approved_plan_sha256": "0b986e62b07b3ea95dd3da22074ead090bd41a3bdbb484b4f2b2424d06272483",
+  "dynamic_starts": 32,
+  "static_initializations": 4,
+  "formal_update_batches": 4500,
+  "synthetic_update_batches": 3,
+  "notify_on_failed_requirements": true,
+  "automatic_extra_budget": false
+}

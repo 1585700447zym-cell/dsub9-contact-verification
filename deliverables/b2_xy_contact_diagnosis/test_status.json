@@ -1,0 +1,31 @@
+{
+  "command": "python -X utf8 -B -m pytest -q -p no:cacheprovider --tb=short",
+  "exit_code": 1,
+  "wall_seconds": 140.37534609995782,
+  "failed_nodes": [
+    "FAILED tests/sdf/test_plugin_build.py::test_plugin_library_exists_and_loads",
+    "FAILED tests/sdf/test_plugin_build.py::test_plugin_registers_exact_name_and_attributes",
+    "FAILED tests/sdf/test_plugin_build.py::test_minimal_mjcf_plugin_instance_loads",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point0]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point1]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point2]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point3]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point4]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point5]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point6]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_distance_and_gradient_match_python_reference[point7]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values0]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values1]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values2]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values3]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values4]",
+    "FAILED tests/sdf/test_plugin_build.py::test_cpp_rejects_invalid_parameters[values5]",
+    "FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes0]",
+    "FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes1]",
+    "FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes2]",
+    "FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes3]",
+    "FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes4]",
+    "FAILED tests/sdf/test_plugin_build.py::test_mujoco_instance_rejects_invalid_plugin_config[changes5]"
+  ],
+  "last_summary": "23 failed, 389 passed in 138.87s (0:02:18)"
+}

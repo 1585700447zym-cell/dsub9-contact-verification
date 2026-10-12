@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.111" timestamp="2026-09-30T17:13:09.477933+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_lr_runner" name="test_root_stop_request_blocks_descendant_before_parent_probe" time="0.020"><failure message="Failed: descendant work after root stop">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ancestor_red_work/test_root_stop_request_blocks_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002DDC4C78E90&gt;
+
+    def test_root_stop_request_blocks_descendant_before_parent_probe(tmp_path,monkeypatch):
+        import json
+        m=importlib.import_module('tools.validation.run_actor_lr_comparison');monkeypatch.setattr(m,'DELIVERY',tmp_path)
+        (tmp_path/'started.json').write_text(json.dumps(dict(supervisor_pid=1,wall_timestamp=1.)),encoding='utf-8')
+        child=tmp_path/'run/eval_process_A';child.mkdir(parents=True)
+        (child/'started.json').write_text(json.dumps(dict(supervisor_pid=2,wall_timestamp=2.)),encoding='utf-8')
+        (tmp_path/'stop_requested.json').write_text('{}',encoding='utf-8')
+        from tools.validation import process_parent
+        monkeypatch.setattr(process_parent,'require_registered_parent',lambda *a:pytest.fail('descendant work after root stop'))
+&gt;       with pytest.raises(RuntimeError,match='requested stop'):m.execution_guard(child)()
+
+tests\learning\test_actor_lr_runner.py:60: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\validation\run_actor_lr_comparison.py:20: in check
+    require_registered_parent(record['supervisor_pid'],record['wall_timestamp'])
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = (2, 2.0)
+
+&gt;   monkeypatch.setattr(process_parent,'require_registered_parent',lambda *a:pytest.fail('descendant work after root stop'))
+E   Failed: descendant work after root stop
+
+tests\learning\test_actor_lr_runner.py:59: Failed</failure></testcase><testcase classname="tests.learning.test_actor_lr_runner" name="test_missing_exit_receipt_with_stop_request_remains_unconfirmed" time="0.023"><failure message="ValueError: Budget authorization differs">tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ancestor_red_work/test_missing_exit_receipt_with0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002DDC4C796E0&gt;
+
+    def test_missing_exit_receipt_with_stop_request_remains_unconfirmed(tmp_path,monkeypatch):
+        m=importlib.import_module('tools.validation.run_actor_lr_comparison');monkeypatch.setattr(m,'DELIVERY',tmp_path)
+        (tmp_path/'run').mkdir();raw='{"untrusted_test_ledger":true}'
+        (tmp_path/'run/ledger.json').write_text(raw,encoding='utf-8');(tmp_path/'stop_requested.json').write_text('{}',encoding='utf-8')
+&gt;       m.finalize_failure('a'*64,'b'*64,'UnconfirmedWorkerStop')
+
+tests\learning\test_actor_lr_runner.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\validation\run_actor_lr_comparison.py:79: in finalize_failure
+    ledger=ComparisonLedger.load(run/'ledger.json',candidate_pin,authorization_pin)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+cls = &lt;class 'tools.learning.actor_lr_budget.ComparisonLedger'&gt;
+path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/deliverables/learning_chain/b2_actor_lr_execution_20260930/ancestor_red_work/test_missing_exit_receipt_with0/run/ledger.json')
+candidate_pin = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+authorization_pin = 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
+
+    @classmethod
+    def load(cls,path,candidate_pin,authorization_pin):
+        valid_pin(candidate_pin);valid_pin(authorization_pin)
+        state=json.loads(Path(path).read_text(encoding='utf-8'))
+        result=cls(Path(path),state)
+        if state.get('candidate_sha256')!=candidate_pin or state.get('authorization_sha256')!=authorization_pin:
+&gt;           raise ValueError('Budget authorization differs')
+E           ValueError: Budget authorization differs
+
+tools\learning\actor_lr_budget.py:27: ValueError</failure></testcase></testsuite></testsuites>

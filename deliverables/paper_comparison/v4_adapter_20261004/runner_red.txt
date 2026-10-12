@@ -1,0 +1,34 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+________ test_schedule_exact_and_zero_mismatch_closes_following_budget ________
+tests\task_variants\test_v4_adapter_preflight.py:8: in test_schedule_exact_and_zero_mismatch_closes_following_budget
+    from tools.validation.run_v4_adapter_preflight import case_specs,next_case
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_adapter_preflight'
+________ test_b1_qualified_guard_is_retained_but_residual_guard_stops _________
+tests\task_variants\test_v4_adapter_preflight.py:16: in test_b1_qualified_guard_is_retained_but_residual_guard_stops
+    from tools.validation.run_v4_adapter_preflight import case_specs,next_case
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_adapter_preflight'
+_______________________ test_claim_once_and_new_budget ________________________
+tests\task_variants\test_v4_adapter_preflight.py:25: in test_claim_once_and_new_budget
+    from tools.validation.run_v4_adapter_preflight import claim_run
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_adapter_preflight'
+___ test_bad_preparation_closes_all_budget_without_constructing_environment ___
+tests\task_variants\test_v4_adapter_preflight.py:31: in test_bad_preparation_closes_all_budget_without_constructing_environment
+    from tools.validation.run_v4_adapter_preflight import execute
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_adapter_preflight'
+__________________ test_script_has_fixed_times_and_zero_mode __________________
+tests\task_variants\test_v4_adapter_preflight.py:39: in test_script_has_fixed_times_and_zero_mode
+    from tools.validation.run_v4_adapter_preflight import script_action
+E   ModuleNotFoundError: No module named 'tools.validation.run_v4_adapter_preflight'
+____________ test_postflight_source_change_closes_remaining_budget ____________
+tests\task_variants\test_v4_adapter_preflight.py:48: in test_postflight_source_change_closes_remaining_budget
+    from tools.validation import run_v4_adapter_preflight as runner
+E   ImportError: cannot import name 'run_v4_adapter_preflight' from 'tools.validation' (unknown location)
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_schedule_exact_and_zero_mismatch_closes_following_budget
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_b1_qualified_guard_is_retained_but_residual_guard_stops
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_claim_once_and_new_budget
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_bad_preparation_closes_all_budget_without_constructing_environment
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_script_has_fixed_times_and_zero_mode
+FAILED tests/task_variants/test_v4_adapter_preflight.py::test_postflight_source_change_closes_remaining_budget
+6 failed in 0.07s

@@ -1,0 +1,17 @@
+{
+  "analysed_at": "2026-10-11T12:17:05.661442+08:00",
+  "inherited_inputs_verified": 2254,
+  "prior_sealed_members_verified": 77,
+  "prohibited_imports_loaded": [],
+  "status": "PASS_OFFLINE_SCREEN_LIMITED",
+  "stdlib_only": true,
+  "summary": {
+    "maximum_pin_top_bound_um": 33.37773066833974,
+    "minimum_entry_margin_lower_bound_um": 44.18552124443994,
+    "minimum_main_gap_lower_bound_um": 216.62226933166028,
+    "new": 21,
+    "old": 4,
+    "passed": 25,
+    "total": 25
+  }
+}

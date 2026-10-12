@@ -1,0 +1,380 @@
+{
+  "passed": true,
+  "source_unchanged": true,
+  "runs": [
+    {
+      "case": "aligned",
+      "status": "PASS",
+      "training_admitted": false,
+      "runtime": {
+        "version": "3.13.0",
+        "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+        "dll_verified": true,
+        "dll_sha256": {
+          "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+        },
+        "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+      },
+      "comparison": "exact_python_value_equality_no_tolerance",
+      "source_archive_sha256": {
+        "deliverables\\native313_baseline_matrix\\b2_v1\\aligned\\original.json.gz": "f1b04ade348450cb9c8efb6558ee756cdbee35c8f9403b72b62f12e772818256",
+        "deliverables\\native313_baseline_matrix\\b2_v1\\aligned\\stop_extension.json.gz": "e0ef044e05a34e0fc8aa4d9005de57537c8f108f9d637d3649e658266931cd9b"
+      },
+      "task_cycles_compared": 2165,
+      "tail_cycles_compared": 880,
+      "termination": "GEOMETRIC_SUCCESS",
+      "task_end_time_s": 4.330000000000289,
+      "end_time_s": 6.090000000004003,
+      "physical_stopped": true,
+      "physical_steps": 30450,
+      "config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.005,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.005,
+        "unload_total_force_N": 0.01,
+        "search_force_N": 0.008,
+        "axial_gain_m_s_N": 0.05,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 4e-05,
+        "spiral_radius_m": 0.00012,
+        "spiral_speed_m_s": 0.00015,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0003,
+        "search_time_s": 8.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0002,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.0002,
+        "total_action_time_s": 20.0,
+        "settle_time_s": 1.0
+      },
+      "wall_seconds": 130.15549279999686
+    },
+    {
+      "case": "combined_a_scale_0.75",
+      "status": "PASS",
+      "training_admitted": false,
+      "runtime": {
+        "version": "3.13.0",
+        "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+        "dll_verified": true,
+        "dll_sha256": {
+          "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+        },
+        "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+      },
+      "comparison": "exact_python_value_equality_no_tolerance",
+      "source_archive_sha256": {
+        "deliverables\\native313_baseline_matrix\\b2_v1\\combined_a_scale_0.75\\original.json.gz": "0af2901617d14e60d9e147555773b6f5348b010286252efad163a4cce8fc480c",
+        "deliverables\\native313_baseline_matrix\\b2_v1\\combined_a_scale_0.75\\stop_extension.json.gz": "a1c9528dc51312d80cb500b2dd2d838539a2bf8fd9a1ec6532b9920965f51e96"
+      },
+      "task_cycles_compared": 5804,
+      "tail_cycles_compared": 500,
+      "termination": "TARGET_POSE_NOT_SETTLED",
+      "task_end_time_s": 11.607999999999624,
+      "end_time_s": 12.607999999997293,
+      "physical_stopped": true,
+      "physical_steps": 63040,
+      "config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.005,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.005,
+        "unload_total_force_N": 0.01,
+        "search_force_N": 0.008,
+        "axial_gain_m_s_N": 0.05,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 4e-05,
+        "spiral_radius_m": 0.00012,
+        "spiral_speed_m_s": 0.00015,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0003,
+        "search_time_s": 8.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0002,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.0002,
+        "total_action_time_s": 20.0,
+        "settle_time_s": 1.0
+      },
+      "wall_seconds": 261.26757800002815
+    },
+    {
+      "case": "combined_b_scale_0.75",
+      "status": "PASS",
+      "training_admitted": false,
+      "runtime": {
+        "version": "3.13.0",
+        "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+        "dll_verified": true,
+        "dll_sha256": {
+          "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+        },
+        "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+      },
+      "comparison": "exact_python_value_equality_no_tolerance",
+      "source_archive_sha256": {
+        "deliverables\\native313_baseline_matrix\\b2_v1\\combined_b_scale_0.75\\original.json.gz": "e9bef88a9c84a23ab692d58c2b6dcb1c8f09c98ad5ccb0e5f8507d4fa505b637",
+        "deliverables\\native313_baseline_matrix\\b2_v1\\combined_b_scale_0.75\\stop_extension.json.gz": "ff1ff0e79fcbfdadc9d74932f323e861950e856fd8763df4c13cdda47f095870"
+      },
+      "task_cycles_compared": 6902,
+      "tail_cycles_compared": 500,
+      "termination": "TARGET_POSE_NOT_SETTLED",
+      "task_end_time_s": 13.803999999994506,
+      "end_time_s": 14.803999999992175,
+      "physical_stopped": true,
+      "physical_steps": 74020,
+      "config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.005,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.005,
+        "unload_total_force_N": 0.01,
+        "search_force_N": 0.008,
+        "axial_gain_m_s_N": 0.05,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 4e-05,
+        "spiral_radius_m": 0.00012,
+        "spiral_speed_m_s": 0.00015,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0003,
+        "search_time_s": 8.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0002,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.0002,
+        "total_action_time_s": 20.0,
+        "settle_time_s": 1.0
+      },
+      "wall_seconds": 263.44567539996933
+    },
+    {
+      "case": "combined_a",
+      "status": "PASS",
+      "training_admitted": false,
+      "runtime": {
+        "version": "3.13.0",
+        "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+        "dll_verified": true,
+        "dll_sha256": {
+          "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+        },
+        "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+      },
+      "comparison": "exact_python_value_equality_no_tolerance",
+      "source_archive_sha256": {
+        "deliverables\\native313_baseline_matrix\\b2_v1\\combined_a\\original.json.gz": "52b4a15841db5a6f72b342a3a753ccb8eebf323ef31b8424997d60dadab6b800",
+        "deliverables\\native313_baseline_matrix\\b2_v1\\combined_a\\stop_extension.json.gz": "77902acdfb52496f8f4051728a036da0e217bc0f967f8e653bc2f726d397f6cc"
+      },
+      "task_cycles_compared": 6195,
+      "tail_cycles_compared": 500,
+      "termination": "TARGET_POSE_NOT_SETTLED",
+      "task_end_time_s": 12.389999999997801,
+      "end_time_s": 13.38999999999547,
+      "physical_stopped": true,
+      "physical_steps": 66950,
+      "config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.005,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.005,
+        "unload_total_force_N": 0.01,
+        "search_force_N": 0.008,
+        "axial_gain_m_s_N": 0.05,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 4e-05,
+        "spiral_radius_m": 0.00012,
+        "spiral_speed_m_s": 0.00015,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0003,
+        "search_time_s": 8.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0002,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.0002,
+        "total_action_time_s": 20.0,
+        "settle_time_s": 1.0
+      },
+      "wall_seconds": 292.71703659999184
+    },
+    {
+      "case": "roll_pos_1.5deg",
+      "status": "PASS",
+      "training_admitted": false,
+      "runtime": {
+        "version": "3.13.0",
+        "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+        "dll_verified": true,
+        "dll_sha256": {
+          "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+        },
+        "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+      },
+      "comparison": "exact_python_value_equality_no_tolerance",
+      "source_archive_sha256": {
+        "deliverables\\native313_baseline_matrix\\b2_v1\\roll_pos_1.5deg\\original.json.gz": "63ce8b4888b7aea328d394683e6b0e6481d4224f0c17cce884843108ace50c76",
+        "deliverables\\native313_baseline_matrix\\b2_v1\\roll_pos_1.5deg\\stop_extension.json.gz": "6b5854c17c07c8d1c199a0a7bed6f81d25de54fcdb0a86387319796946c5c6b7"
+      },
+      "task_cycles_compared": 5274,
+      "tail_cycles_compared": 500,
+      "termination": "TARGET_POSE_NOT_SETTLED",
+      "task_end_time_s": 10.548000000002094,
+      "end_time_s": 11.547999999999764,
+      "physical_stopped": true,
+      "physical_steps": 57740,
+      "config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.005,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.005,
+        "unload_total_force_N": 0.01,
+        "search_force_N": 0.008,
+        "axial_gain_m_s_N": 0.05,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 4e-05,
+        "spiral_radius_m": 0.00012,
+        "spiral_speed_m_s": 0.00015,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0003,
+        "search_time_s": 8.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0002,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.0002,
+        "total_action_time_s": 20.0,
+        "settle_time_s": 1.0
+      },
+      "wall_seconds": 255.76617249997798
+    },
+    {
+      "case": "x_offset_pos_100um",
+      "status": "PASS",
+      "training_admitted": false,
+      "runtime": {
+        "version": "3.13.0",
+        "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+        "dll_verified": true,
+        "dll_sha256": {
+          "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+        },
+        "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+      },
+      "comparison": "exact_python_value_equality_no_tolerance",
+      "source_archive_sha256": {
+        "deliverables\\native313_baseline_matrix\\b2_v1\\x_offset_pos_100um\\original.json.gz": "a143c2e1beb5d8ee2dd291ff9b5a3343f9ab289f51c14922a7fb7f72d9ccce51",
+        "deliverables\\native313_baseline_matrix\\b2_v1\\x_offset_pos_100um\\stop_extension.json.gz": "4a843cbe3725d7e2e6d1e7f0050ed96cc247c1208ce4f31d0b8a69067fa74949"
+      },
+      "task_cycles_compared": 5394,
+      "tail_cycles_compared": 880,
+      "termination": "GEOMETRIC_SUCCESS",
+      "task_end_time_s": 10.788000000001535,
+      "end_time_s": 12.547999999997433,
+      "physical_stopped": true,
+      "physical_steps": 62740,
+      "config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.005,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.005,
+        "unload_total_force_N": 0.01,
+        "search_force_N": 0.008,
+        "axial_gain_m_s_N": 0.05,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 4e-05,
+        "spiral_radius_m": 0.00012,
+        "spiral_speed_m_s": 0.00015,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0003,
+        "search_time_s": 8.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0002,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.0002,
+        "total_action_time_s": 20.0,
+        "settle_time_s": 1.0
+      },
+      "wall_seconds": 316.4383358999621
+    },
+    {
+      "case": "y_offset_neg_100um",
+      "status": "PASS",
+      "training_admitted": false,
+      "runtime": {
+        "version": "3.13.0",
+        "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\__init__.py",
+        "dll_verified": true,
+        "dll_sha256": {
+          "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_probe\\mujoco\\mujoco.dll": "5a4bcda24e9ada75e6f787e810e163fb25739ec1c5e62083af96286d26cfcb48"
+        },
+        "compatibility_record_sha256": "99bfb1b83e5b70759ade925f2d1417cd54a1aaeacfa6143712bb19f2ac36f47a"
+      },
+      "comparison": "exact_python_value_equality_no_tolerance",
+      "source_archive_sha256": {
+        "deliverables\\native313_baseline_matrix\\b2_v1\\y_offset_neg_100um\\original.json.gz": "0620527760612e18ef8e90528512234cda00cf2d3c721ee083fa1bd4a9429ef5",
+        "deliverables\\native313_baseline_matrix\\b2_v1\\y_offset_neg_100um\\stop_extension.json.gz": "888b01d2fa0c8b571db185569cd3add6dceaa5256501a49d93a3bb1cbae0466c"
+      },
+      "task_cycles_compared": 4974,
+      "tail_cycles_compared": 880,
+      "termination": "GEOMETRIC_SUCCESS",
+      "task_end_time_s": 9.948000000003493,
+      "end_time_s": 11.707999999999391,
+      "physical_stopped": true,
+      "physical_steps": 58540,
+      "config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.005,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.005,
+        "unload_total_force_N": 0.01,
+        "search_force_N": 0.008,
+        "axial_gain_m_s_N": 0.05,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 4e-05,
+        "spiral_radius_m": 0.00012,
+        "spiral_speed_m_s": 0.00015,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0003,
+        "search_time_s": 8.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0002,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.0002,
+        "total_action_time_s": 20.0,
+        "settle_time_s": 1.0
+      },
+      "wall_seconds": 318.32323490001727
+    }
+  ],
+  "wall_seconds": 582.975906800013,
+  "training_admitted": false,
+  "scope": "compatibility_wrapper_development_only"
+}

@@ -1,0 +1,16 @@
+{
+  "exit_code": 1,
+  "tests": 2,
+  "tests_with_failure_or_error": 2,
+  "forbidden_call_counts": {
+    "optimizer": 0,
+    "physics": 0,
+    "prediction": 0
+  },
+  "report_sha256": "f4e44cd4b13d357e8b514f9450a4540d70fa8880bf2aacd70cb777cc006f8abb",
+  "runner_sha256": "56fba0245eac9deb4dfdd35c63f696bad7003a6a9b88a99a4eb1fa54e4cda75c",
+  "test_ids": [
+    "tests.learning.test_force_failure_regressions::test_preparation_config_names_only_unqualified_contact_as_a_hard_stop",
+    "tests.learning.test_force_failure_regressions::test_strict_overlength_rejection_preserves_old_guard_clear_flag"
+  ]
+}

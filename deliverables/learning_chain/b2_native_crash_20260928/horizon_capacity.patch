@@ -1,0 +1,27 @@
+--- a/src/engine/engine_collision_gjk.c
++++ b/src/engine/engine_collision_gjk.c
+@@ -2351,12 +2351,13 @@
+ 
+ 
+ // return size in bytes of the buffer needed for mjc_ccd for a given number of iterations
++// Each of at most 6*N triangular faces contributes at most 3 horizon edges.
+ size_t mjc_ccdSize(int npolygonmax, int nmeshdegmax, int iterations) {
+   size_t epa_size = align8(sizeof(Vertex) * (5 + iterations))   // vertices in polytope
+                   + align8(sizeof(Face) * 6 * iterations)       // faces in polytope
+                   + align8(sizeof(Face*) * 6 * iterations)      // map in polytope
+-                  + align8(sizeof(int) * 24)                    // horizon indices
+-                  + align8(sizeof(int) * 24);                   // horizon edges
++                  + align8(sizeof(int) * 18 * iterations)                    // horizon indices
++                  + align8(sizeof(int) * 18 * iterations);                   // horizon edges
+ 
+   // allocate room for primitive geoms (multicontact is hardwired for primitive collisions)
+   npolygonmax = npolygonmax < 16 ? 16 : npolygonmax;
+@@ -2473,7 +2474,7 @@
+     pt.map = (Face**)buffer;
+     buffer += align8(sizeof(Face*) * (6 * N));
+     pt.horizon.indices = (int*)buffer;
+-    buffer += align8(sizeof(int) * 24);
++    buffer += align8(sizeof(int) * 18 * N);
+     pt.horizon.edges = (int*)buffer;
+ 
+     int ret;

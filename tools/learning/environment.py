@@ -4,9 +4,9 @@ This compatibility class does not implement the new v3 motion guard and must
 not be used to claim training admission.
 """
 import numpy as np
-from .runtime import ROOT, verify_runtime
+from .runtime import ROOT, verify_runtime, active_package
 
-verify_runtime(ROOT / 'tmp/mujoco_3_13_probe')
+verify_runtime(active_package())
 from tools.dynamics.contact_candidate import NativeTightCandidate
 
 

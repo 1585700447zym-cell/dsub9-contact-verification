@@ -1,0 +1,165 @@
+FFFFFFFFFFFFFFFFFFFFFFF                                                  [100%]
+================================== FAILURES ===================================
+_________ test_aligned_and_real_interference_and_unchanged_tolerance __________
+tests\task_variants\test_layered_task.py:21: in test_aligned_and_real_interference_and_unchanged_tolerance
+    m=api()
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+_ test_archived_wide_entry_counterexample_is_resolved_without_changing_old_referee _
+tests\task_variants\test_layered_task.py:28: in test_archived_wide_entry_counterexample_is_resolved_without_changing_old_referee
+    m=api()
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+________ test_no_main_bore_intersection_is_not_vacuous_success[-0.01] _________
+tests\task_variants\test_layered_task.py:39: in test_no_main_bore_intersection_is_not_vacuous_success
+    m=api();assert not m.layered_pin_fit(row(z=z))
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+_______ test_no_main_bore_intersection_is_not_vacuous_success[-0.0041] ________
+tests\task_variants\test_layered_task.py:39: in test_no_main_bore_intersection_is_not_vacuous_success
+    m=api();assert not m.layered_pin_fit(row(z=z))
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+_________ test_no_main_bore_intersection_is_not_vacuous_success[0.01] _________
+tests\task_variants\test_layered_task.py:39: in test_no_main_bore_intersection_is_not_vacuous_success
+    m=api();assert not m.layered_pin_fit(row(z=z))
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+_____ test_invalid_and_out_of_scope_poses_fail_closed[position_m-value0] ______
+tests\task_variants\test_layered_task.py:46: in test_invalid_and_out_of_scope_poses_fail_closed
+    m=api();r=row();r[field]=value
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+_____ test_invalid_and_out_of_scope_poses_fail_closed[position_m-value1] ______
+tests\task_variants\test_layered_task.py:46: in test_invalid_and_out_of_scope_poses_fail_closed
+    m=api();r=row();r[field]=value
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value2] ___
+tests\task_variants\test_layered_task.py:46: in test_invalid_and_out_of_scope_poses_fail_closed
+    m=api();r=row();r[field]=value
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value3] ___
+tests\task_variants\test_layered_task.py:46: in test_invalid_and_out_of_scope_poses_fail_closed
+    m=api();r=row();r[field]=value
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value4] ___
+tests\task_variants\test_layered_task.py:46: in test_invalid_and_out_of_scope_poses_fail_closed
+    m=api();r=row();r[field]=value
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value5] ___
+tests\task_variants\test_layered_task.py:46: in test_invalid_and_out_of_scope_poses_fail_closed
+    m=api();r=row();r[field]=value
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+____________ test_quaternion_scale_and_sign_do_not_change_geometry ____________
+tests\task_variants\test_layered_task.py:50: in test_quaternion_scale_and_sign_do_not_change_geometry
+    m=api();r=final_row();expected=m.layered_pin_clearance_m(r)
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+_____ test_other_functional_conditions_remain_required[position_m-value0] _____
+tests\task_variants\test_layered_task.py:61: in test_other_functional_conditions_remain_required
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_other_functional_conditions_remain_required[velocity_world-value1] ___
+tests\task_variants\test_layered_task.py:61: in test_other_functional_conditions_remain_required
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_other_functional_conditions_remain_required[velocity_world-value2] ___
+tests\task_variants\test_layered_task.py:61: in test_other_functional_conditions_remain_required
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+__ test_other_functional_conditions_remain_required[contact_wrench_G-value3] __
+tests\task_variants\test_layered_task.py:61: in test_other_functional_conditions_remain_required
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+__ test_other_functional_conditions_remain_required[contact_wrench_G-value4] __
+tests\task_variants\test_layered_task.py:61: in test_other_functional_conditions_remain_required
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_other_functional_conditions_remain_required[penetration_m-3.1e-05] ___
+tests\task_variants\test_layered_task.py:61: in test_other_functional_conditions_remain_required
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+___ test_other_functional_conditions_remain_required[velocity_world-value6] ___
+tests\task_variants\test_layered_task.py:61: in test_other_functional_conditions_remain_required
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+__________ test_pin_only_checker_does_not_replace_depth_or_stability __________
+tests\task_variants\test_layered_task.py:66: in test_pin_only_checker_does_not_replace_depth_or_stability
+    m=api();from tools.model.clearance_task import finish_criteria
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+________________ test_layer_clipping_and_zero_tilt_boundaries _________________
+tests\task_variants\test_layered_task.py:71: in test_layer_clipping_and_zero_tilt_boundaries
+    m=api();R=np.eye(3)
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+______ test_archived_near_wall_case_rejects_a_small_outward_translation _______
+tests\task_variants\test_layered_task.py:79: in test_archived_near_wall_case_rejects_a_small_outward_translation
+    m=api();r=final_row();p=np.array(r['position_m']);p[:2]+=p[:2]/np.linalg.norm(p[:2])*1e-6;r['position_m']=p.tolist()
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+______ test_new_session_uses_layered_finish_but_same_policy_observation _______
+tests\task_variants\test_layered_task.py:83: in test_new_session_uses_layered_finish_but_same_policy_observation
+    m=api();from tools.learning.layered_session import LayeredReferenceSession
+tests\task_variants\test_layered_task.py:9: in api
+    from tools.model import layered_task
+E   ImportError: cannot import name 'layered_task' from 'tools.model' (unknown location)
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_layered_task.py::test_aligned_and_real_interference_and_unchanged_tolerance
+FAILED tests/task_variants/test_layered_task.py::test_archived_wide_entry_counterexample_is_resolved_without_changing_old_referee
+FAILED tests/task_variants/test_layered_task.py::test_no_main_bore_intersection_is_not_vacuous_success[-0.01]
+FAILED tests/task_variants/test_layered_task.py::test_no_main_bore_intersection_is_not_vacuous_success[-0.0041]
+FAILED tests/task_variants/test_layered_task.py::test_no_main_bore_intersection_is_not_vacuous_success[0.01]
+FAILED tests/task_variants/test_layered_task.py::test_invalid_and_out_of_scope_poses_fail_closed[position_m-value0]
+FAILED tests/task_variants/test_layered_task.py::test_invalid_and_out_of_scope_poses_fail_closed[position_m-value1]
+FAILED tests/task_variants/test_layered_task.py::test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value2]
+FAILED tests/task_variants/test_layered_task.py::test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value3]
+FAILED tests/task_variants/test_layered_task.py::test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value4]
+FAILED tests/task_variants/test_layered_task.py::test_invalid_and_out_of_scope_poses_fail_closed[quaternion_wxyz-value5]
+FAILED tests/task_variants/test_layered_task.py::test_quaternion_scale_and_sign_do_not_change_geometry
+FAILED tests/task_variants/test_layered_task.py::test_other_functional_conditions_remain_required[position_m-value0]
+FAILED tests/task_variants/test_layered_task.py::test_other_functional_conditions_remain_required[velocity_world-value1]
+FAILED tests/task_variants/test_layered_task.py::test_other_functional_conditions_remain_required[velocity_world-value2]
+FAILED tests/task_variants/test_layered_task.py::test_other_functional_conditions_remain_required[contact_wrench_G-value3]
+FAILED tests/task_variants/test_layered_task.py::test_other_functional_conditions_remain_required[contact_wrench_G-value4]
+FAILED tests/task_variants/test_layered_task.py::test_other_functional_conditions_remain_required[penetration_m-3.1e-05]
+FAILED tests/task_variants/test_layered_task.py::test_other_functional_conditions_remain_required[velocity_world-value6]
+FAILED tests/task_variants/test_layered_task.py::test_pin_only_checker_does_not_replace_depth_or_stability
+FAILED tests/task_variants/test_layered_task.py::test_layer_clipping_and_zero_tilt_boundaries
+FAILED tests/task_variants/test_layered_task.py::test_archived_near_wall_case_rejects_a_small_outward_translation
+FAILED tests/task_variants/test_layered_task.py::test_new_session_uses_layered_finish_but_same_policy_observation
+23 failed in 7.74s

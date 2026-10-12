@@ -1,0 +1,37 @@
+{
+  "archive_recount_passed": true,
+  "counts": {
+    "attempts_recorded": 243,
+    "passed_count": 243,
+    "positive_witness_poses": 241,
+    "positive_witness_pairs": 1969,
+    "missing_pairs": 0,
+    "contact_poses": 241,
+    "warning_poses": 0
+  },
+  "metrics": {
+    "max_coverage_penetration_m": 0.00017443625972325737,
+    "max_static_force_N": 0.01440906804392049,
+    "above_stop_penetration_30um": 240,
+    "above_invalid_penetration_80um": 156,
+    "above_stop_force": 0
+  },
+  "unchanged_production_inputs": 813,
+  "bound_evidence_files": 9,
+  "geometry_tests": {
+    "passed": 14,
+    "deselected_legacy_sdf": 2,
+    "seconds": 7.313
+  },
+  "parameter_frozen": false,
+  "model_scope_qualified": false,
+  "training_admitted": false,
+  "review_conclusion": "PARAMETER_NOT_FROZEN_REQUIRES_TARGETED_DYNAMIC_EVIDENCE",
+  "review": {
+    "critical": 0,
+    "important": 0,
+    "minor_deferred": 1,
+    "minor": "Nonfinite diagnostic JSON serialization can abort future extended runs; current243 records complete and finite; archived executed script is not modified."
+  },
+  "scope": "Scientific static/archival review only; no new production behavior, dynamic episodes or SAC updates."
+}

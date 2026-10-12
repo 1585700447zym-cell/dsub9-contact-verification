@@ -1,0 +1,19 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+___________ test_new_baseline_required_before_initial_and_training ____________
+tests\learning\test_repaired_cycle.py:17: in test_new_baseline_required_before_initial_and_training
+    assert api().accounting(ledger.state)['cumulative_dynamic_starts']==14
+E   assert 13 == 14
+________________ test_36_starts_count_failures_and_refuse_37th ________________
+tests\learning\test_repaired_cycle.py:26: in test_36_starts_count_failures_and_refuse_37th
+    assert api().accounting(ledger.state)['cumulative_dynamic_starts']==45
+E   assert 44 == 45
+_______________ test_failed_run_cannot_continue_after_reopening _______________
+tests\learning\test_repaired_cycle.py:34: in test_failed_run_cannot_continue_after_reopening
+    assert api().accounting(ledger.state)['cumulative_dynamic_starts']==10
+E   assert 9 == 10
+=========================== short test summary info ===========================
+FAILED tests/learning/test_repaired_cycle.py::test_new_baseline_required_before_initial_and_training
+FAILED tests/learning/test_repaired_cycle.py::test_36_starts_count_failures_and_refuse_37th
+FAILED tests/learning/test_repaired_cycle.py::test_failed_run_cannot_continue_after_reopening
+3 failed, 12 deselected in 2.03s

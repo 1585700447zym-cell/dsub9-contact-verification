@@ -1,0 +1,11 @@
+{
+  "ready": true,
+  "critical": [],
+  "important": [],
+  "minor_deferred": [],
+  "independent_review": "resume_execution_review / gpt-6-astra high",
+  "initial_verdict": "with_fixes: 0 critical, 2 important, 0 minor",
+  "fix_verification": "109 related offline checks passed in 55.76s; real Windows reader process-tree cleanup and correct/wrong launcher chains covered",
+  "execution_claim": "ready for bounded actual gate and run; no method-effectiveness claim",
+  "sandbox_external_required": "Windows taskkill process-tree cleanup was access-denied in sandbox and passed after escalation"
+}

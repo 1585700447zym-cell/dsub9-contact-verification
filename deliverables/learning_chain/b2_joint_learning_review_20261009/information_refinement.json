@@ -1,0 +1,328 @@
+{
+  "episodes": [
+    {
+      "id": "J01_zero",
+      "vectors_checked": 4841,
+      "clipped_fields": {
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 8.822000000006117,
+          "last_time_s": 9.680000000004117,
+          "max_abs_unclipped_normalized": 18.599999999964634,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 430
+    },
+    {
+      "id": "J01_script",
+      "vectors_checked": 4835,
+      "clipped_fields": {
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 8.810000000006145,
+          "last_time_s": 9.668000000004145,
+          "max_abs_unclipped_normalized": 18.599999999965167,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 430
+    },
+    {
+      "id": "J02_zero",
+      "vectors_checked": 5099,
+      "clipped_fields": {
+        "stall_span_s[0]": {
+          "occurrences": 14,
+          "permitted": 14,
+          "contact": 0,
+          "first_time_s": 4.496000000000639,
+          "last_time_s": 4.522000000000694,
+          "max_abs_unclipped_normalized": 10.065000000001788,
+          "phases": {
+            "SEARCH/RUNNING": 14
+          }
+        },
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 9.338000000004914,
+          "last_time_s": 10.196000000002915,
+          "max_abs_unclipped_normalized": 18.59999999995665,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 444
+    },
+    {
+      "id": "J02_script",
+      "vectors_checked": 5097,
+      "clipped_fields": {
+        "stall_span_s[0]": {
+          "occurrences": 12,
+          "permitted": 12,
+          "contact": 0,
+          "first_time_s": 4.496000000000639,
+          "last_time_s": 4.5180000000006855,
+          "max_abs_unclipped_normalized": 10.055000000001767,
+          "phases": {
+            "SEARCH/RUNNING": 12
+          }
+        },
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 9.334000000004924,
+          "last_time_s": 10.192000000002924,
+          "max_abs_unclipped_normalized": 18.59999999995665,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 442
+    },
+    {
+      "id": "J03_zero",
+      "vectors_checked": 5502,
+      "clipped_fields": {
+        "stall_span_s[0]": {
+          "occurrences": 399,
+          "permitted": 399,
+          "contact": 347,
+          "first_time_s": 4.534000000000719,
+          "last_time_s": 5.330000000002399,
+          "max_abs_unclipped_normalized": 11.990000000006061,
+          "phases": {
+            "SEARCH/RUNNING": 399
+          }
+        },
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 10.144000000003036,
+          "last_time_s": 11.002000000001036,
+          "max_abs_unclipped_normalized": 18.59999999995665,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 829
+    },
+    {
+      "id": "J03_script",
+      "vectors_checked": 5529,
+      "clipped_fields": {
+        "stall_span_s[0]": {
+          "occurrences": 426,
+          "permitted": 426,
+          "contact": 368,
+          "first_time_s": 4.534000000000719,
+          "last_time_s": 5.384000000002513,
+          "max_abs_unclipped_normalized": 12.125000000006347,
+          "phases": {
+            "SEARCH/RUNNING": 426
+          }
+        },
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 10.19800000000291,
+          "last_time_s": 11.05600000000091,
+          "max_abs_unclipped_normalized": 18.59999999995665,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 856
+    },
+    {
+      "id": "J04_zero",
+      "vectors_checked": 5886,
+      "clipped_fields": {
+        "stall_span_s[0]": {
+          "occurrences": 814,
+          "permitted": 814,
+          "contact": 752,
+          "first_time_s": 4.470000000000584,
+          "last_time_s": 6.0960000000040155,
+          "max_abs_unclipped_normalized": 14.065000000010086,
+          "phases": {
+            "SEARCH/RUNNING": 814
+          }
+        },
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 10.912000000001246,
+          "last_time_s": 11.769999999999246,
+          "max_abs_unclipped_normalized": 18.59999999995665,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 1244
+    },
+    {
+      "id": "J04_script",
+      "vectors_checked": 5875,
+      "clipped_fields": {
+        "stall_span_s[0]": {
+          "occurrences": 803,
+          "permitted": 803,
+          "contact": 747,
+          "first_time_s": 4.470000000000584,
+          "last_time_s": 6.074000000003969,
+          "max_abs_unclipped_normalized": 14.010000000009969,
+          "phases": {
+            "SEARCH/RUNNING": 803
+          }
+        },
+        "hold_elapsed_s[0]": {
+          "occurrences": 430,
+          "permitted": 0,
+          "contact": 0,
+          "first_time_s": 10.890000000001297,
+          "last_time_s": 11.747999999999298,
+          "max_abs_unclipped_normalized": 18.59999999995665,
+          "phases": {
+            "INSERT/STOPPING": 430
+          }
+        }
+      },
+      "clipped_occurrences": 1233
+    }
+  ],
+  "same_time_zero_pairs": [
+    {
+      "left": "J01_zero",
+      "right": "J03_zero",
+      "same_time_s": 0.32399999999999696,
+      "both_contact": true,
+      "both_enabled": true,
+      "same_time_normalized_feature_difference": [
+        0.011664144229143858,
+        -0.008331338874995708,
+        -0.011694207787513733,
+        -0.03405843302607536,
+        -0.08724485710263252,
+        0.0005988043267279863,
+        1.893828266474884e-05,
+        -8.356689249922056e-06,
+        -0.0003825277090072632,
+        -8.673928095959127e-05,
+        -0.000256220722803846,
+        2.388885832260712e-06
+      ],
+      "left_features": [
+        0.005430052522569895,
+        -0.0049849264323711395,
+        -0.20362265408039093,
+        -0.01723053678870201,
+        -0.05138012021780014,
+        0.0006779151153750718,
+        1.893828266474884e-05,
+        -8.356689249922056e-06,
+        0.05590193718671799,
+        -8.673928095959127e-05,
+        -0.000256220722803846,
+        2.388885832260712e-06
+      ],
+      "right_features": [
+        -0.006234091706573963,
+        0.003346412442624569,
+        -0.1919284462928772,
+        0.016827896237373352,
+        0.03586473688483238,
+        7.911078864708543e-05,
+        0.0,
+        0.0,
+        0.05628446489572525,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "precontact_common_vectors": 159,
+      "precontact_max_vector_difference": 1.1014573151597254e-18,
+      "exact_initial_equality": true,
+      "sensor_noise_or_identifiability_test": false
+    },
+    {
+      "left": "J02_zero",
+      "right": "J04_zero",
+      "same_time_s": 0.32399999999999696,
+      "both_contact": true,
+      "both_enabled": true,
+      "same_time_normalized_feature_difference": [
+        0.027728945948183537,
+        -0.004133850918151438,
+        0.011339187622070312,
+        0.02225664723664522,
+        -0.09805648028850555,
+        -0.0015856488898862153,
+        2.4212096832343377e-05,
+        3.1284153010346927e-06,
+        0.00037734583020210266,
+        5.2527386287692934e-05,
+        -0.0002854222257155925,
+        -2.3967409106262494e-06
+      ],
+      "left_features": [
+        0.007877499796450138,
+        0.0016413572011515498,
+        -0.1903657764196396,
+        0.010450712405145168,
+        -0.041802745312452316,
+        7.229830953292549e-05,
+        0.0,
+        0.0,
+        0.05628446489572525,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_features": [
+        -0.0198514461517334,
+        0.005775208119302988,
+        -0.2017049640417099,
+        -0.011805934831500053,
+        0.05625373497605324,
+        0.0016579471994191408,
+        -2.4212096832343377e-05,
+        -3.1284153010346927e-06,
+        0.05590711906552315,
+        -5.2527386287692934e-05,
+        0.0002854222257155925,
+        2.3967409106262494e-06
+      ],
+      "precontact_common_vectors": 159,
+      "precontact_max_vector_difference": 1.1014573151597254e-18,
+      "exact_initial_equality": true,
+      "sensor_noise_or_identifiability_test": false
+    }
+  ],
+  "all_eight_initial_vectors_identical": true,
+  "total_vectors_checked": 42664,
+  "new_physics": 0,
+  "new_policy_forwards": 0,
+  "new_updates": 0,
+  "note": "Clipping uses raw/scale > 10, including final observation. No noise threshold fitted."
+}

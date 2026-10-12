@@ -1,0 +1,22 @@
+{
+  "all_attempts_require": "audited, simulation_valid, physically_stopped, no hard guard violation; task failures trigger separate route review",
+  "each_joint_case_require": [
+    "across A/B, original permission + endpoint contact_count>0 + any abs(effective_command_delta)>1e-15 in each hold duration 50 and 1",
+    "a nonzero newest wrench in the subsequent recorded policy observation for at least one such cycle per hold duration",
+    "each of X,Y,roll,pitch has both effective command signs during endpoint contact across A/B",
+    "existing recorded observation differences, with no claim of full observability"
+  ],
+  "input_episodes": "All fixed SCOPE10 episodes; no deletion or cherry-picking",
+  "old_gate_unchanged": true,
+  "original_endpoint_rule_preserved": true,
+  "per_episode_require": "original maximum-force overlap; torque and penetration overlap reported separately",
+  "purpose": "Evidence for preparing a bounded ordinary-SAC pilot",
+  "recovery_require": "each J engineered recovery audit covered, actual retraction>=200um, masks/reanchor/net-origin/resume effect/stop retained",
+  "removed_requirement": "both hold durations in every individual A/B profile, regardless of coverage in the other profile for the same J case",
+  "runtime_implementation_changed": false,
+  "scope": "Only the four fixed J01-J04 initial poses at XY±75um and roll/pitch±0.25deg; no interpolation or original±1.5deg qualification",
+  "status": "DEVELOPMENT_RECOMMENDATION_NOT_RUNTIME_ADMISSION",
+  "substep_peak_rule_used_for_qualification": false,
+  "training_admitted": false,
+  "version": "per_joint_case_endpoint_coverage_v2"
+}

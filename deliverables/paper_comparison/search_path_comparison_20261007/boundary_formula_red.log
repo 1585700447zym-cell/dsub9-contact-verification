@@ -1,0 +1,15 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+....E.
+======================================================================
+ERROR: test_reference_direction_uses_secant_tracking_and_slew (__main__.ArchiveTests.test_reference_direction_uses_secant_tracking_and_slew)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9��Ŀ�ƻ�\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\paper_comparison\search_path_comparison_20261007\test_analysis.py", line 73, in test_reference_direction_uses_secant_tracking_and_slew
+    result=module().reference_next(0.,[0.,0.],[0.,0.],.002)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pc10_archive_analysis' has no attribute 'reference_next'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.131s
+
+FAILED (errors=1)

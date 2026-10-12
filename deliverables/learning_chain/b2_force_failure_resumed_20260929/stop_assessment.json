@@ -1,0 +1,123 @@
+{
+  "status": "stopped_execution_failure",
+  "recorded_at": "2026-09-29T15:18:09.969794+08:00",
+  "stopped_at": "2026-09-29T15:13:08.703102+08:00",
+  "kind": "execution_failure",
+  "native_crash": false,
+  "force_frequency_stop": false,
+  "entry_rejection": false,
+  "returncode": 1,
+  "confirmed_failure_site": "os.replace(update_budget.json.tmp, update_budget.json) after completed SAC update",
+  "error": "PermissionError / WinError 5",
+  "underlying_windows_denial_cause": "unconfirmed; no lock-owner or ACL evidence captured",
+  "new_dynamic_starts": 8,
+  "cumulative_dynamic_starts": 44,
+  "unused_dynamic_starts": 24,
+  "completed_formal_batches": 144,
+  "unused_formal_batches": 4356,
+  "initial_successes": 4,
+  "initial_cases": 4,
+  "warmup_successes": 1,
+  "warmup_cases": 4,
+  "audited_published_transitions": 22766,
+  "physical_audits": [
+    {
+      "stage": "initial",
+      "episode": "x_pos_100",
+      "success": true,
+      "physical_audit_passed": true,
+      "cycles": 6295
+    },
+    {
+      "stage": "initial",
+      "episode": "x_neg_100",
+      "success": true,
+      "physical_audit_passed": true,
+      "cycles": 5475
+    },
+    {
+      "stage": "initial",
+      "episode": "y_pos_100",
+      "success": true,
+      "physical_audit_passed": true,
+      "cycles": 6763
+    },
+    {
+      "stage": "initial",
+      "episode": "y_neg_100",
+      "success": true,
+      "physical_audit_passed": true,
+      "cycles": 5897
+    },
+    {
+      "stage": "training",
+      "episode": "train_00",
+      "success": true,
+      "physical_audit_passed": true,
+      "cycles": 6288
+    },
+    {
+      "stage": "training",
+      "episode": "train_01",
+      "success": false,
+      "physical_audit_passed": true,
+      "cycles": 5475
+    },
+    {
+      "stage": "training",
+      "episode": "train_02",
+      "success": false,
+      "physical_audit_passed": true,
+      "cycles": 5124
+    },
+    {
+      "stage": "training",
+      "episode": "train_03",
+      "success": false,
+      "physical_audit_passed": true,
+      "cycles": 5879
+    }
+  ],
+  "last_durable_checkpoint_episodes": 3,
+  "last_durable_checkpoint_updates": 0,
+  "updated_policy_checkpoint_available": false,
+  "final_development_available": false,
+  "restoration_available": false,
+  "independent_evaluation_available": false,
+  "automatic_retry": false,
+  "automation_status": "PAUSED",
+  "b2_complete": false,
+  "learning_gain_established": false,
+  "forbidden_call_counts": {
+    "physics": 0,
+    "optimizer": 0,
+    "prediction": 0
+  },
+  "evidence_sha256": {
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/x_pos_100/episode.json.gz": "c5b4914fe87aca5b0cddd330dcbc90f2a2686f69fdfdae7a1eeb24cefb7a3e1f",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/x_pos_100/status.json": "2d93906f95ae0ebf0ec95094666d2d91aa1c3de521e786c40459d86b2c4ac028",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/x_neg_100/episode.json.gz": "1ca2b9686d6aee58948939f757cb4005d77d79d49f091654031c7f884de43a9e",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/x_neg_100/status.json": "676e6f7cf65c8d50e5bff253fa66e5d10eee126f8c33f850977a898517a7f4a1",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/y_pos_100/episode.json.gz": "d6785c972ed405d36992d6c2b36d8753d5a14fc6b1e9995b24dcf3fe148dc822",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/y_pos_100/status.json": "8c82d2fc2d1f07e11f9cb2a8f701aa498a53fc34af7a46fdb8b59170f99a9f42",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/y_neg_100/episode.json.gz": "86ab3375fb744e128928b450a5d388738bb9295ae9bb1b000d1bd31a127b30d9",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/episodes/y_neg_100/status.json": "35e9734ac59ed7cd1425a10e31e30fd2c7ab822d9eeb95bd7ff63c6a8f6b7e93",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_00/episode.json.gz": "1c40bed3043663bcd929071b31b6b885cfd76af46dac43a8bcd6aad65d7c36b5",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_00/status.json": "6996ac20dff40703e8fc63f9ed86929c4fbe23fcaf0f316e7444a6b87e9ad201",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_01/episode.json.gz": "69e22e0ea483ceeb1352fb0389a4dda739ce057562f428a174824a3c44edfddf",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_01/status.json": "2d768a1865770decc982d273911801da05e9ec127f863124f3f4f3410b29e01e",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_02/episode.json.gz": "108982259a65a0cc505a349d67cf1bd2233e1d238ba61141836d5b514dd4dd7d",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_02/status.json": "3813afeedc0b2d4a055a0172f7745910b8ab3eb9c81d1cace5c21a0d1b58e957",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_03/episode.json.gz": "04193524975a58f66ba08275b0e8449fd396e7a5fa9c373def7d6f6fa7a717cf",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/train_03/status.json": "fcdd9dad32d1b608d65a9286fb22096379ba5d47518fb53b517512ec9c85a244",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/process_exit.json": "42a7dfa23e0fe7b0bff06f3f3fb46ca0554b077c3758144f97158ecc650aef9b",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/exit_classification.json": "c77d8a22c28094f69dee51d7a0fcdb35c8d82138aeadfa6f8b5a052905e3f241",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/fault.log": "5ea911e68d34f9da1218fc5466d4fec81bed3104839cb3004a84d0bb216f093c",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/ledger.json": "4076024d6c46437a43dee6306a19d0e267f58bdcc8f710317dc4e73630193cad",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/cumulative_budget.json": "7161908695c7f586ea296314e59494501750bad5f95e99bc9139e204a8d07caf",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/failure.json": "e321ec64b06472817980cc2f9d88600adbfdf1977927563e6fc86f783b739d18",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training_episodes/update_budget.json": "8e3703f62976887c7763912fb172c2cc8281fa42e77a213bdea4a837495fcb2c",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/training/checkpoints.json": "194ccb7b0f5e7ef31a73441fcfd722087ab182f2bea5da53cdd025cc76f14e36",
+    "deliverables/learning_chain/b2_force_failure_resumed_20260929/run/initial/verification.json": "e4aeafd96fd38df53a1c10be9b50c265830aed7343f83a0f34c7b6fce0166933"
+  }
+}

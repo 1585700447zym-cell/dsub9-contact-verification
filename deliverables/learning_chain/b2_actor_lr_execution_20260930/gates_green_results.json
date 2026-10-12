@@ -1,0 +1,43 @@
+{
+  "exit_code": 0,
+  "tests": 29,
+  "failures": 0,
+  "errors": 0,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "c11e29ae683d03d469e5fa9e644e2b8bd1dc09e43c85ae6502a052d0b9414e52",
+  "test_ids": [
+    "tests.learning.test_actor_lr_execution_gates::test_a_learning_mismatch_stops_before_b_or_checkpoint",
+    "tests.learning.test_actor_lr_execution_gates::test_bound_validation_receipt_checked_before_formal",
+    "tests.learning.test_actor_lr_execution_gates::test_pinned_validation_receipt_cannot_be_replaced",
+    "tests.learning.test_actor_lr_execution_gates::test_allow_active_only_accepts_physical_publication",
+    "tests.learning.test_actor_lr_execution_gates::test_child_parent_rejection_precedes_execution_import_or_claim",
+    "tests.learning.test_actor_lr_execution_gates::test_evaluation_admission_rejects_holdout_and_training_points",
+    "tests.learning.test_actor_lr_execution_contract::test_single_variable_execution_configs_and_exact_scope",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_config_changes_rejected[actor_learning_rate-3e-06]",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_config_changes_rejected[learning_rate-3e-05]",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_config_changes_rejected[batch_size-128]",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_config_changes_rejected[max_gradient_batches-501]",
+    "tests.learning.test_actor_lr_execution_contract::test_authorization_requires_exact_new_budget_and_candidate",
+    "tests.learning.test_actor_lr_execution_contract::test_incomplete_or_cross_cycle_authorization_rejected[approved-False]",
+    "tests.learning.test_actor_lr_execution_contract::test_incomplete_or_cross_cycle_authorization_rejected[approved-1]",
+    "tests.learning.test_actor_lr_execution_contract::test_incomplete_or_cross_cycle_authorization_rejected[candidate_sha256-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb]",
+    "tests.learning.test_actor_lr_execution_contract::test_incomplete_or_cross_cycle_authorization_rejected[scope-continue_old_cycle]",
+    "tests.learning.test_actor_lr_execution_contract::test_incomplete_or_cross_cycle_authorization_rejected[user_confirmation-]",
+    "tests.learning.test_actor_lr_execution_contract::test_incomplete_or_cross_cycle_authorization_rejected[version-force_cycle_user_authorization_v1]",
+    "tests.learning.test_actor_lr_execution_contract::test_budget_cannot_extend_or_consume_old_remaining[synthetic-17]",
+    "tests.learning.test_actor_lr_execution_contract::test_budget_cannot_extend_or_consume_old_remaining[test_forward-129]",
+    "tests.learning.test_actor_lr_execution_contract::test_budget_cannot_extend_or_consume_old_remaining[old_unused_consumed-19]",
+    "tests.learning.test_actor_lr_execution_contract::test_budget_cannot_extend_or_consume_old_remaining[automatic_tracking-True]",
+    "tests.learning.test_actor_lr_execution_contract::test_budget_cannot_extend_or_consume_old_remaining[previous_dynamic-0]",
+    "tests.learning.test_actor_lr_execution_contract::test_preparation_configuration_cannot_be_executed",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_execution_branch_rejected[initial]",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_execution_branch_rejected[C]",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_execution_branch_rejected[None]",
+    "tests.learning.test_actor_lr_execution_contract::test_unregistered_execution_branch_rejected[True]",
+    "tests.learning.test_actor_lr_execution_contract::test_candidate_external_a_key_cannot_hold_valid_b_config"
+  ]
+}

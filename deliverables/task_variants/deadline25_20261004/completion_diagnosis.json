@@ -1,0 +1,51 @@
+{
+  "y_neg_150": {
+    "reason": "TARGET_POSE_NOT_SETTLED",
+    "stop_time_s": 20.539999999978807,
+    "task_end_time_s": 21.539999999976477,
+    "first_depth_ready_s": 20.52999999997883,
+    "final_components": {
+      "depth": true,
+      "nine_pin_fit": false,
+      "linear_stable": true,
+      "angular_stable": true,
+      "force": true,
+      "torque": true,
+      "penetration": true
+    },
+    "failed_at_final": [
+      "nine_pin_fit"
+    ],
+    "settling_samples": 501,
+    "settling_fail_counts": {
+      "depth": 0,
+      "nine_pin_fit": 501,
+      "linear_stable": 69,
+      "angular_stable": 0,
+      "force": 0,
+      "torque": 0,
+      "penetration": 0
+    },
+    "settling_best_pin_margin_um": -1.3778516547851032,
+    "settling_worst_pin_margin_um": -1.4293529033158936,
+    "longest_functional_hold_s": 0.0,
+    "required_hold_s": 0.1,
+    "final_pin_margin_um": -1.4293528886850189,
+    "final_velocity_linear_um_s": 1.602343668859257e-11,
+    "final_velocity_angular_rad_s": 1.0716378821731049e-15,
+    "final_force_mN": 0.0,
+    "final_penetration_um": 0.0,
+    "final_surface_witness": {
+      "pin_index": 4,
+      "margin_um": 0.5080439978877739,
+      "point_world_m": [
+        0.005824660270153587,
+        0.0008924024868260605,
+        0.0003478705932046021
+      ],
+      "ideal_main_bore_radius_m": 0.0006,
+      "scope": "sampled exact cylinder surface point inside main bore, not a contact-solver penetration estimate"
+    },
+    "no_new_physics": true
+  }
+}

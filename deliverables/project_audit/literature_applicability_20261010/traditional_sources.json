@@ -1,0 +1,116 @@
+[
+  {
+    "id": "T01",
+    "authors": "Karl Van Wyk; Mark Culleton; Joe Falco; Kevin Kelly",
+    "year": 2018,
+    "title": "Comparative Peg-in-Hole Testing of a Force-Based Manipulation Controlled Robotic Hand",
+    "venue": "IEEE Transactions on Robotics 34(2), 542–549",
+    "doi": "10.1109/TRO.2018.2791591",
+    "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=922206",
+    "access": "A：NIST公开原文PDF，关键方法及表I–III已核对",
+    "locators": [
+      "II-A/B，p.543",
+      "III-B，p.546",
+      "Tables I–III及IV-A5，p.547"
+    ],
+    "geometry": "单销3D打印插接；无量纲间隙(D-d)/D=0.02；非九针D-sub。",
+    "uncertainty": "XY零均值高斯误差，标准差1或2mm；方法间复用位置误差。",
+    "information_action": "系统2笛卡尔阻抗＋螺旋/随机/Sobol准随机搜索；区域按4σ设定；不使用策略网络。",
+    "comparators_tuning": "三种搜索及带传感机械手系统；给出固定阻抗参数、螺旋圈距按间隙设计；不是各方法穷尽调优。",
+    "samples": "每配置60次插接。",
+    "results": "σ=1/2mm：螺旋均时7.19/37.13s，准随机3.11/8.20s；系统2各变体无观测失败。表中95.2是置信口径，不能写成观测成功率95.2%。",
+    "implication": "支持误差敏感的搜索耗时问题，也提供强传统反例；不能据此称传统插接普遍失败。",
+    "unknown": "未提供适用于本项目多针、刚性外壳及微米范围的最优参数。"
+  },
+  {
+    "id": "T02",
+    "authors": "Yue Shen; Qingxuan Jia; Ruiquan Wang; Zeyuan Huang; Gang Chen",
+    "year": 2023,
+    "title": "Learning-Based Visual Servoing for High-Precision Peg-in-Hole Assembly",
+    "venue": "Actuators 12(4), 144",
+    "doi": "10.3390/act12040144",
+    "url": "https://www.mdpi.com/2076-0825/12/4/144",
+    "access": "B：出版方搜索索引返回关键正文和表2/4；直接HTML/XML/PDF访问失败，未获得完整PDF",
+    "locators": [
+      "§4.1、Table2",
+      "§4.3.2、Table4",
+      "Figure25对应文字"
+    ],
+    "geometry": "真实DB-25；表2最小配合间隙0.32/0.20mm，不能当单针径向间隙。",
+    "uncertainty": "视觉伺服前初始位置在半径100mm圆内、高100mm，姿态±5°；不是接触阶段残余误差范围。",
+    "information_action": "Franka Panda＋腕部D435；视觉对准后同一螺旋搜索与轴向力控制。",
+    "comparators_tuning": "P2HNet对ORB特征匹配视觉伺服；共用搜索，网络训练参数见表3，ORB公平调参细节未核实。",
+    "samples": "方法对照各10次；不混同图像训练集数量。",
+    "results": "表4：ORB/P2HNet成功8/10、10/10，搜索均时8.5/7.8s；正文将ORB误匹配后的较大位姿误差与有限接触面搜索失败联系。",
+    "implication": "直接支持连接器残余定位误差与有限搜索面的应用动机；优势包含视觉改善，不证明无视觉残差控制有效。",
+    "unknown": "本项目九针壳体几何、roll/pitch误差和实际误差分布与该文不等价。"
+  },
+  {
+    "id": "T03",
+    "authors": "Hanwen Kang; Yaohua Zang; Xing Wang; Yaohui Chen",
+    "year": 2022,
+    "title": "Uncertainty-Driven Spiral Trajectory for Robotic Peg-in-Hole Assembly",
+    "venue": "IEEE Robotics and Automation Letters 7(3), 6661–6668",
+    "doi": "10.1109/LRA.2022.3176718",
+    "url": "https://doi.org/10.1109/LRA.2022.3176718",
+    "additional_urls": [
+      "https://yaohua32.github.io/publications/2022-paper-1/",
+      "https://www.researchgate.net/publication/360816724_Uncertainty-Driven_Spiral_Trajectory_for_Robotic_Peg-in-Hole_Assembly"
+    ],
+    "access": "C：作者主页确认书目，作者上传页面可读摘要；IEEE需浏览器验证，PDF下载失败",
+    "locators": [
+      "作者上传页面Abstract"
+    ],
+    "geometry": "光收发模块插接，摘要称间隙0.1mm；具体间隙定义未核。",
+    "uncertainty": "视觉位姿和系统配置不确定性估计；误差分布参数未读到。",
+    "information_action": "由不确定性构造探索分布与搜索路径，结合恢复。",
+    "comparators_tuning": "对照、调参和具体预算未知。",
+    "samples": "未知。",
+    "results": "摘要成功率因缺少样本和实验表核查，不用于本次定量论证。",
+    "implication": "不确定性驱动搜索已有先例，适合作强传统候选检索起点；不能称固定螺旋是唯一合理对照。",
+    "unknown": "需全文后才能确定复现配方与本项目感知条件是否匹配。"
+  },
+  {
+    "id": "T04",
+    "authors": "Zhiwei Liao; Chenwei Gong; Fei Zhao; Xuesong Mei",
+    "year": 2026,
+    "title": "Friction-aware robotic peg-in-hole assembly via contact wrench measurement",
+    "venue": "Measurement 257 Part C, 118781",
+    "doi": "10.1016/j.measurement.2025.118781",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0263224125021402",
+    "access": "C：出版方摘要和分节片段；全文未取得",
+    "locators": [
+      "Abstract",
+      "Methodology/Discussion snippets"
+    ],
+    "geometry": "工业机器人插接；具体工件形状、间隙未核。",
+    "uncertainty": "位置和姿态偏差、摩擦影响；范围数值未核。",
+    "information_action": "F/T与对准面几何/摩擦关系估计角偏差，再搜索、位姿微调和插入。",
+    "comparators_tuning": "具体基线、调参未知。",
+    "samples": "未知。",
+    "results": "出版方宣称实验验证，具体数值不填。",
+    "implication": "存在无需RL的几何/摩擦反馈路线；不能把低载荷或姿态修正自动当学习方法专属贡献。",
+    "unknown": "对准面假设与多针/外壳多接触及净wrench可辨识性须先核。"
+  },
+  {
+    "id": "T05",
+    "authors": "Xianda Wang; Qinghua Lu; Weilin Chen; Shijie Tang; Qinghua Zhang; Lufeng Luo; Mingyou Chen",
+    "year": 2026,
+    "title": "Hole search strategy for robotic peg-in-hole assembly under initial positioning uncertainty",
+    "venue": "Robotica 44(6), 1703–1720；页面在线日期2026-08-11（卷期标June，保留出版方元数据差异）",
+    "doi": "10.1017/S0263574726103695",
+    "url": "https://www.cambridge.org/core/journals/robotica/article/abs/hole-search-strategy-for-robotic-peginhole-assembly-under-initial-positioning-uncertainty/504E73BDCEB27B7A8BFFEB7DFFECCD7C",
+    "access": "C：Cambridge出版方摘要和参考文献；正文需访问权限",
+    "locators": [
+      "Abstract"
+    ],
+    "geometry": "薄壁孔和USB-A插接；间隙未知。",
+    "uncertainty": "初始位置、相机安装偏差及遮挡；数值范围未知。",
+    "information_action": "固定单视角识别离散接触状态，按状态生成/优化搜索轨迹。",
+    "comparators_tuning": "具体基线和调参未知。",
+    "samples": "未知。",
+    "results": "摘要明确有限搜索面中丢失接触的问题，但未读到实验表，不能给出失败率/提升幅度。",
+    "implication": "有限面接触状态搜索仍有近期工作；当前无视觉模型不能直接复现其感知优势。",
+    "unknown": "全文假设、收敛条件和实验对照待核，不将摘要当完整缺陷证据。"
+  }
+]

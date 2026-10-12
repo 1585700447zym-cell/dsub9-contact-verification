@@ -1,0 +1,44 @@
+{
+  "scope": "minimal_static_feasibility_not_dynamic_validation",
+  "all_three_minimal_reproduced": true,
+  "version_comparison": [
+    {
+      "name": "new_native",
+      "same_compiled_geometry": true,
+      "same_pose": true,
+      "old_depth_um": 223.6022450603231,
+      "new_depth_um": 1.0158107187347038e-05,
+      "old_contacts": 2,
+      "new_contacts": 1
+    },
+    {
+      "name": "old_native",
+      "same_compiled_geometry": true,
+      "same_pose": true,
+      "old_depth_um": 539.8466783709657,
+      "new_depth_um": 0.0,
+      "old_contacts": 3,
+      "new_contacts": 0
+    },
+    {
+      "name": "old_mpr",
+      "same_compiled_geometry": true,
+      "same_pose": true,
+      "old_depth_um": 3.5704866221214333,
+      "new_depth_um": 3.5704866221214333,
+      "old_contacts": 1,
+      "new_contacts": 1
+    }
+  ],
+  "production_version": "3.9.0",
+  "next_candidate": "isolated_3.13_native_requires_full_regression",
+  "training_admitted": false,
+  "source_sha256": {
+    "deliverables/contact_minimal_reproducer/minimal_v2/results.json": "f3002b47a928a9642e8e4af6e5b1570a9a98c9f14ff6a136877d0f9487800434",
+    "deliverables/contact_minimal_reproducer/coordinates_v1/results.json": "f3bd3f439bb5e9957bcfafb4572fb1229e33de141ec9feaa9ea315ad82e029b1",
+    "deliverables/contact_minimal_reproducer/version_3p9.json": "5dbf9dc9e205eaaa63ba1868cee72b7783bad00d9c33093c017a27c717606705",
+    "deliverables/contact_minimal_reproducer/version_3p13.json": "25cd935307fbfe29c406e395fd99905677fdb277388287b82e2fe05b461c94e8",
+    "deliverables/contact_minimal_reproducer/reproduce.py": "c4c0083bd8a6ade0e1f74bce7bd6d60a637af06c98e15723e621abe821000a21",
+    "tools/reporting/report_minimal_contact.py": "fc7c0d0dc5d6c1694f09586bcc7aa1dfc560691f1772b1fdf708debf48c7ef33"
+  }
+}

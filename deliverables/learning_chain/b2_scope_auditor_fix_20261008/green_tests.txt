@@ -1,0 +1,30 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+setUpClass (__main__.ArchiveTests) ... ERROR
+test_boolean_number_mixing_is_rejected (__main__.ScalarTests.test_boolean_number_mixing_is_rejected) ... ok
+test_equal_finite_numbers_in_both_representations (__main__.ScalarTests.test_equal_finite_numbers_in_both_representations) ... ok
+test_existing_tolerance_is_preserved (__main__.ScalarTests.test_existing_tolerance_is_preserved) ... ok
+test_keys_shapes_and_text_remain_strict (__main__.ScalarTests.test_keys_shapes_and_text_remain_strict) ... ok
+test_large_integer_low_bits_are_not_discarded (__main__.ScalarTests.test_large_integer_low_bits_are_not_discarded) ... ok
+test_nested_command_and_reward_json_roundtrip (__main__.ScalarTests.test_nested_command_and_reward_json_roundtrip) ... ok
+test_non_numeric_coercions_and_arrays_are_rejected (__main__.ScalarTests.test_non_numeric_coercions_and_arrays_are_rejected) ... ok
+test_nonfinite_values_are_rejected_even_same_type (__main__.ScalarTests.test_nonfinite_values_are_rejected_even_same_type) ... ok
+test_same_boolean_values_keep_boolean_semantics (__main__.ScalarTests.test_same_boolean_values_keep_boolean_semantics) ... ok
+
+======================================================================
+ERROR: setUpClass (__main__.ArchiveTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_scope_auditor_fix_20261008\test_audit_fix.py", line 101, in setUpClass
+    _, b = check_binding()
+           ~~~~~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\run_preflight.py", line 59, in check_binding
+    require_registered_location()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_pose_scope_preflight_20261008\run_preflight.py", line 30, in require_registered_location
+    raise PermissionError('Private execution module loaded from another directory: '+name)
+PermissionError: Private execution module loaded from another directory: assess
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.021s
+
+FAILED (errors=1)

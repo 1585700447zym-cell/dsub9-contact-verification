@@ -1,0 +1,14 @@
+.........F.............................................................. [ 79%]
+...................                                                      [100%]
+================================== FAILURES ===================================
+___________ test_prepare_and_execute_use_same_explicit_new_session ____________
+tests\task_variants\test_admittance_rebase_preflight.py:38: in test_prepare_and_execute_use_same_explicit_new_session
+    s=make_session(object(),config)
+tools\validation\run_admittance_rebase_preflight.py:64: in make_session
+    return RebasedLoadReliefSession(environment=env,
+tools\learning\guarded_session.py:11: in __init__
+    raise TypeError('Candidate session requires the explicit candidate environment')
+E   TypeError: Candidate session requires the explicit candidate environment
+=========================== short test summary info ===========================
+FAILED tests/task_variants/test_admittance_rebase_preflight.py::test_prepare_and_execute_use_same_explicit_new_session
+1 failed, 90 passed in 19.78s

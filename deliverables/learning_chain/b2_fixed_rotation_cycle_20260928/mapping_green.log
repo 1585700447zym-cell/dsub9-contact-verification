@@ -1,0 +1,33 @@
+........F...............                                                 [100%]
+================================== FAILURES ===================================
+___ test_new_session_factory_passes_profile_and_session_owns_immutable_copy ___
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000026E7EFC2190>
+
+    def test_new_session_factory_passes_profile_and_session_owns_immutable_copy(monkeypatch):
+        from tools.learning import admitted_collection as ac
+        from tools.learning import residual_session as rs
+        from tools.learning import guarded_environment as ge
+        monkeypatch.setattr(ge,'LearningEnvironment',lambda **kw:object())
+        monkeypatch.setattr(rs.CandidateEpisodeSession,'__init__',lambda self,**kw:None)
+        config=dict(guard={},action={'scale':list(SMALL)})
+>       session=ac._new_session(config)
+
+tests\learning\test_fixed_rotation.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+config = {'action': {'scale': [0.00015, 0.00015, 0.0005, 0.0005]}, 'guard': {}}
+
+    def _new_session(config):
+        from .guarded_environment import GuardCandidateConfig, LearningEnvironment
+        from .residual_session import ResidualSession
+        return ResidualSession(environment=LearningEnvironment(
+>           guard_config=GuardCandidateConfig(**config['guard'])), action_scale=config['action']['scale'])
+E       TypeError: GuardCandidateConfig.__init__() missing 2 required positional arguments: 'max_rotation_from_start_rad' and 'initial_roll_pitch_limit_rad'
+
+tools\learning\admitted_collection.py:77: TypeError
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_fixed_rotation_cycle_20260928\red.xml -
+=========================== short test summary info ===========================
+FAILED tests/learning/test_fixed_rotation.py::test_new_session_factory_passes_profile_and_session_owns_immutable_copy
+1 failed, 23 passed in 1.58s
+Forbidden call counts: {'optimizer': 0, 'physics': 0}

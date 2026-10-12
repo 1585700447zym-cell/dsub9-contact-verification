@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="16" failures="3" skipped="0" tests="19" time="0.206" timestamp="2026-09-30T16:55:22.971677+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_lr_engine" name="test_pinned_origin_and_draws" time="0.001"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_private_restore_zero_no_forward[A]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_private_restore_zero_no_forward[B]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_restore_tamper_rejected[binding]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_restore_tamper_rejected[replay]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_restore_tamper_rejected[count]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_restore_tamper_rejected[lr]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_restore_tamper_rejected[rng]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_restore_tamper_rejected[history]" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_origin_not_formal_checkpoint" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_reserve_precedes_sampling_or_update" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_sampling_plan_mismatch_stops_before_update" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_first_fixed_input_and_metadata_with_fake_update" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_a_reproduction_ignores_only_walltime" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_a_reproduction_does_not_ignore_losses" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_engine" name="test_noactive_batch_clears_all_action_permissions" time="0.000"><error message="failed on setup with &quot;ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'&quot;">@pytest.fixture(scope='module')
+&gt;   def origin():return module().read_origin()
+
+tests\learning\test_actor_lr_engine.py:12: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_actor_lr_engine.py:8: in module
+    def module():return importlib.import_module('tools.learning.actor_lr_engine')
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.learning.actor_lr_engine'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.learning.actor_lr_engine'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</error></testcase><testcase classname="tests.learning.test_actor_lr_runner" name="test_runner_import_does_not_import_engine" time="0.001"><failure message="ModuleNotFoundError: No module named 'tools.validation.run_actor_lr_comparison'">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002643894E9E0&gt;
+
+    def test_runner_import_does_not_import_engine(monkeypatch):
+        sys.modules.pop('tools.validation.run_actor_lr_comparison',None)
+&gt;       m=importlib.import_module('tools.validation.run_actor_lr_comparison')
+
+tests\learning\test_actor_lr_runner.py:8: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.validation.run_actor_lr_comparison'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_actor_lr_comparison'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</failure></testcase><testcase classname="tests.learning.test_actor_lr_runner" name="test_missing_authorization_rejected_before_runtime_or_model" time="0.001"><failure message="ModuleNotFoundError: No module named 'tools.validation.run_actor_lr_comparison'">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002643894DCD0&gt;
+
+    def test_missing_authorization_rejected_before_runtime_or_model(monkeypatch):
+&gt;       m=importlib.import_module('tools.validation.run_actor_lr_comparison')
+
+tests\learning\test_actor_lr_runner.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.validation.run_actor_lr_comparison'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_actor_lr_comparison'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</failure></testcase><testcase classname="tests.learning.test_actor_lr_runner" name="test_verify_only_is_not_execution_authorization" time="0.001"><failure message="ModuleNotFoundError: No module named 'tools.validation.run_actor_lr_comparison'">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000026438969370&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x00000264389BF8C0&gt;
+
+    def test_verify_only_is_not_execution_authorization(monkeypatch,capsys):
+&gt;       m=importlib.import_module('tools.validation.run_actor_lr_comparison')
+
+tests\learning\test_actor_lr_runner.py:20: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+D:\KEYANRUJIAN\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+&lt;frozen importlib._bootstrap&gt;:1387: in _gcd_import
+    ???
+&lt;frozen importlib._bootstrap&gt;:1360: in _find_and_load
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+name = 'tools.validation.run_actor_lr_comparison'
+import_ = &lt;function _gcd_import at 0x000002640E1904A0&gt;
+
+&gt;   ???
+E   ModuleNotFoundError: No module named 'tools.validation.run_actor_lr_comparison'
+
+&lt;frozen importlib._bootstrap&gt;:1324: ModuleNotFoundError</failure></testcase></testsuite></testsuites>

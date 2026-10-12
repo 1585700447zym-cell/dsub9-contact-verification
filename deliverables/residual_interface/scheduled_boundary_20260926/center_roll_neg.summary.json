@@ -1,0 +1,232 @@
+{
+  "id": "center_roll_neg",
+  "spec": {
+    "id": "center_roll_neg",
+    "family": "center_signed_rotation",
+    "case": {
+      "name": "center_roll_neg",
+      "x_offset_m": 0.0,
+      "y_offset_m": 0.0,
+      "roll_rad": 0.0,
+      "pitch_rad": 0.0,
+      "start_origin_z_m": -0.004,
+      "target_depth_m": 0.004
+    },
+    "schedule": [
+      {
+        "start_cycle": 0,
+        "action": [
+          0,
+          0,
+          -1,
+          0
+        ]
+      },
+      {
+        "start_cycle": 250,
+        "action": [
+          0,
+          -1,
+          -1,
+          0
+        ]
+      },
+      {
+        "start_cycle": 500,
+        "action": [
+          0,
+          1,
+          -1,
+          0
+        ]
+      },
+      {
+        "start_cycle": 1000,
+        "action": [
+          0,
+          0,
+          -1,
+          0
+        ]
+      }
+    ]
+  },
+  "initialization_valid": true,
+  "simulation_valid": true,
+  "physical_stopped": true,
+  "completed": true,
+  "observation_valid": true,
+  "masking_valid": true,
+  "schedule_valid": true,
+  "error": null,
+  "active_cycles": 2048,
+  "masked_cycles": 1000,
+  "contact_cycles": 244,
+  "command_effect_cycles": 2048,
+  "rotation_guard_observations": [],
+  "diagnostic_failures": [],
+  "adjudication_status": "available",
+  "training_admitted": false,
+  "model_scope_qualified": false,
+  "valid_for_learning": false,
+  "initial_state": {
+    "time_s": 0.0,
+    "position_m": [
+      0.0,
+      0.0,
+      -0.004
+    ],
+    "quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "velocity_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "contact_wrench_M": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "contact_wrench_G": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "penetration_m": 0.0,
+    "contact_count": 0,
+    "phase": "RUNNING",
+    "reference_qpos": [
+      0.0,
+      0.0,
+      -0.004,
+      1.0,
+      0.0,
+      0.0,
+      -0.0
+    ],
+    "raw_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "limited_command_world": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "drive_wrench_M": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "outcome": {
+    "simulation_valid": true,
+    "task_outcome": "TASK_FAILURE",
+    "guard_violations": {
+      "contact": false,
+      "motion": false
+    },
+    "physical_stopped": true,
+    "valid_for_learning": false,
+    "model_scope_qualified": false,
+    "training_admitted": false,
+    "guard_facts": {
+      "simulation_valid": true,
+      "invalid_reasons": [],
+      "contact_reasons": [],
+      "motion_reasons": [],
+      "max_rotation_from_start_rad": 0.0196152825977474,
+      "checked_substeps": 30480
+    }
+  },
+  "task_outcome": "TASK_FAILURE",
+  "interface_fault": null,
+  "guard_facts": {
+    "simulation_valid": true,
+    "invalid_reasons": [],
+    "contact_reasons": [],
+    "motion_reasons": [],
+    "max_rotation_from_start_rad": 0.0196152825977474,
+    "checked_substeps": 30480
+  },
+  "events": [
+    {
+      "time_s": 4.095999999999795,
+      "reason": "TARGET_PLANE_REACHED",
+      "phase": "STOPPING"
+    }
+  ],
+  "physical_steps": 30480,
+  "peaks": {
+    "force_N": 0.006317254879380581,
+    "torque_G_Nm": 8.600293881700961e-05,
+    "penetration_m": 2.40756830136306e-07,
+    "speed_m_s": 0.001092046192826181,
+    "drive_force_components_N": [
+      9.887423722032606e-13,
+      0.002503963194973155,
+      0.004408988783013383
+    ],
+    "drive_torque_components_Nm": [
+      1.217157468858037e-05,
+      6.593584388058397e-07,
+      6.62333490603584e-07
+    ],
+    "contact_count": 53.0
+  },
+  "end_time_s": 6.0960000000040155,
+  "final_phase": "STOPPING",
+  "max_rotation_deg": 1.1238729068073359,
+  "boundary_observations": [],
+  "segments": [
+    {
+      "start_cycle": 0,
+      "requested_cycles": 250,
+      "enabled_cycles": 250,
+      "effect_cycles": 250
+    },
+    {
+      "start_cycle": 250,
+      "requested_cycles": 250,
+      "enabled_cycles": 250,
+      "effect_cycles": 250
+    },
+    {
+      "start_cycle": 500,
+      "requested_cycles": 500,
+      "enabled_cycles": 500,
+      "effect_cycles": 500
+    },
+    {
+      "start_cycle": 1000,
+      "requested_cycles": 2048,
+      "enabled_cycles": 1048,
+      "effect_cycles": 1048
+    }
+  ],
+  "wall_seconds": 116.8961368999444
+}

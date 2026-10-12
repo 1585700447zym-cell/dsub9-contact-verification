@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-04T18:49:38.603291+08:00",
+  "tests_passed": 154,
+  "tests_command": "python -X utf8 -B -m pytest tests/task_variants tests/control/test_fixed_admittance.py tests/learning/test_action.py tests/learning/test_reward.py -q --tb=short",
+  "full_project_suite": false,
+  "review": {
+    "critical": 0,
+    "reviewer_important": 0,
+    "reviewer_minor": 1,
+    "regraded_important": 1,
+    "fixed": "Public recovery validation before mutation: 5 RED-to-GREEN cases",
+    "deferred_minors": []
+  },
+  "prior_sealed_files_verified": {
+    "clearance120_20261003": 210,
+    "functional_b2_20261003": 216,
+    "search_load_20261004": 218,
+    "admittance_rebase_20261004": 227,
+    "compliant_search_20261004": 242
+  },
+  "execution_input_hashes_verified": 884,
+  "source_snapshots": 188,
+  "document_snapshots": 6,
+  "input_sources_unchanged_during_execution": true,
+  "live_changes_since_execution": [
+    "docs/superpowers/plans/2026-10-04-axis-search.md"
+  ],
+  "live_plan_change_scope": "Closeout checkboxes/status only; execution original in source_snapshot",
+  "configuration_and_model_bindings_verified": true,
+  "archive_hash_verified": true,
+  "stop_independently_rechecked": true,
+  "figures_visually_checked": [
+    "results.png",
+    "search_diagnosis.png",
+    "reference_diagnosis.png"
+  ],
+  "new_links_checked": 51,
+  "legacy_shared_hook_pure_control_comparisons": 3000,
+  "legacy_commands_states_exact": true,
+  "real_search_commands_reconstructed": 2675,
+  "max_command_error_m_s": 0.0,
+  "xy_admittance_memory_frozen": true,
+  "recovered_return_false_positive_offline_rejected": true,
+  "full_recovery_dynamically_exercised": false,
+  "implementation_complete": true,
+  "bounded_verification_complete": true,
+  "repair_performance_accepted": false,
+  "stage_B2_complete": false,
+  "training_admitted": false,
+  "episodes": 1,
+  "unused_closed": 4,
+  "cumulative_episodes": 123,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "automatic_tracking": "PAUSED"
+}

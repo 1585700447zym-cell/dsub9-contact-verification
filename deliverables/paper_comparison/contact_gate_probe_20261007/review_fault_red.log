@@ -1,0 +1,97 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+FF                                                                       [100%]
+================================== FAILURES ===================================
+__ test_initialization_fault_preserves_original_error_and_attempt[construct] __
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/pytest_pc09_review_real_red/test_initialization_fault_pres0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000028E42048B00>
+failure_at = 'construct'
+
+    @pytest.mark.parametrize('failure_at',['construct','reset'])
+    def test_initialization_fault_preserves_original_error_and_attempt(tmp_path,monkeypatch,failure_at):
+        # Replace only physical setup boundaries: this test must never reset MuJoCo.
+        from types import SimpleNamespace
+        import gzip,json
+        import tools.learning.guarded_environment as environment
+        import tools.validation.run_v4_adapter_preflight as wiring
+        import deployment_profile
+        class BrokenEnvironment:
+            def __init__(self,**kwargs):
+                if failure_at=='construct':raise LookupError('original setup failure')
+                self.physical_steps=0;self.data=SimpleNamespace(time=0.)
+                self.events=[];self.stop_samples=[];self.guard_facts={}
+        class BrokenSession:
+            def __init__(self,**kwargs):pass
+            def reset(self,*args,**kwargs):raise LookupError('original setup failure')
+        monkeypatch.setattr(environment,'LearningEnvironment',BrokenEnvironment)
+        monkeypatch.setattr(wiring,'make_session',lambda *args:SimpleNamespace(controller_factory=None,geometry_checker=None))
+        monkeypatch.setattr(deployment_profile,'ProfileSession',BrokenSession)
+        monkeypatch.setattr(r,'OUT',tmp_path);(tmp_path/'model.xml').write_text('<unused/>')
+        spec=r.attempt_specs(COMMON)[0];entry={'id':spec['id'],'profile':'B2','status':'running','policy_calls':0,'policy_call_attempts':0}
+        ledger={'episodes':[entry]};c=SimpleNamespace(updater=r.ZeroUpdater())
+        with pytest.raises(LookupError,match='original setup failure'):
+            r.rollout({'common':{'guard_config':{'max_rotation_from_start_rad':.2,'initial_roll_pitch_limit_rad':.1},'finish_criteria':{}}},c,spec,entry,ledger)
+>       assert entry['status']=='error' and 'original setup failure' in entry['error']
+E       AssertionError: assert ('running' == 'error'
+E         
+E         - error
+E         + running)
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:77: AssertionError
+____ test_initialization_fault_preserves_original_error_and_attempt[reset] ____
+
+self = <test_execution.test_initialization_fault_preserves_original_error_and_attempt.<locals>.BrokenSession object at 0x0000028E4207CAD0>
+args = (ContactCase(name='aligned', x_offset_m=0.0, y_offset_m=0.0, roll_rad=0, pitch_rad=0, start_origin_z_m=-0.004, target_depth_m=0.004),)
+kwargs = {'seed': 2026092716}
+
+>   def reset(self,*args,**kwargs):raise LookupError('original setup failure')
+E   LookupError: original setup failure
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:68: LookupError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/dsub9项目计划/first_stage_sim/.worktrees/dsub9-v1-contact-validation/tmp/pytest_pc09_review_real_red/test_initialization_fault_pres1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000028E42048C30>
+failure_at = 'reset'
+
+    @pytest.mark.parametrize('failure_at',['construct','reset'])
+    def test_initialization_fault_preserves_original_error_and_attempt(tmp_path,monkeypatch,failure_at):
+        # Replace only physical setup boundaries: this test must never reset MuJoCo.
+        from types import SimpleNamespace
+        import gzip,json
+        import tools.learning.guarded_environment as environment
+        import tools.validation.run_v4_adapter_preflight as wiring
+        import deployment_profile
+        class BrokenEnvironment:
+            def __init__(self,**kwargs):
+                if failure_at=='construct':raise LookupError('original setup failure')
+                self.physical_steps=0;self.data=SimpleNamespace(time=0.)
+                self.events=[];self.stop_samples=[];self.guard_facts={}
+        class BrokenSession:
+            def __init__(self,**kwargs):pass
+            def reset(self,*args,**kwargs):raise LookupError('original setup failure')
+        monkeypatch.setattr(environment,'LearningEnvironment',BrokenEnvironment)
+        monkeypatch.setattr(wiring,'make_session',lambda *args:SimpleNamespace(controller_factory=None,geometry_checker=None))
+        monkeypatch.setattr(deployment_profile,'ProfileSession',BrokenSession)
+        monkeypatch.setattr(r,'OUT',tmp_path);(tmp_path/'model.xml').write_text('<unused/>')
+        spec=r.attempt_specs(COMMON)[0];entry={'id':spec['id'],'profile':'B2','status':'running','policy_calls':0,'policy_call_attempts':0}
+        ledger={'episodes':[entry]};c=SimpleNamespace(updater=r.ZeroUpdater())
+        with pytest.raises(LookupError,match='original setup failure'):
+>           r.rollout({'common':{'guard_config':{'max_rotation_from_start_rad':.2,'initial_roll_pitch_limit_rad':.1},'finish_criteria':{}}},c,spec,entry,ledger)
+
+deliverables\paper_comparison\contact_gate_probe_20261007\test_execution.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+deliverables\paper_comparison\contact_gate_probe_20261007\run_probe.py:192: in rollout
+    costs();entry.update(status='error',error=repr(exc),ended_at=now());reconcile_calls(ledger)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   def costs():entry.update(control_cycles=session.cycle_id,physical_substeps=env.physical_steps,simulated_time_s=float(env.data.time),
+        policy_calls=calls,policy_call_attempts=attempts,wall_seconds=time.monotonic()-started)
+E   AttributeError: 'BrokenSession' object has no attribute 'cycle_id'
+
+deliverables\paper_comparison\contact_gate_probe_20261007\run_probe.py:139: AttributeError
+=========================== short test summary info ===========================
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_initialization_fault_preserves_original_error_and_attempt[construct]
+FAILED deliverables/paper_comparison/contact_gate_probe_20261007/test_execution.py::test_initialization_fault_preserves_original_error_and_attempt[reset]
+2 failed, 36 deselected in 8.26s

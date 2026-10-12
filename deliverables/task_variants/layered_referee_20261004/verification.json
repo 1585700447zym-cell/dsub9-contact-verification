@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-10-04T20:19:42.656251+08:00",
+  "tests_passed": 236,
+  "full_project_suite": false,
+  "review": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0,
+    "independent_author": true,
+    "fresh_context": false,
+    "independent_math_poses": 48
+  },
+  "prior_sealed_files_verified": {
+    "clearance120_20261003": 210,
+    "functional_b2_20261003": 216,
+    "search_load_20261004": 218,
+    "admittance_rebase_20261004": 227,
+    "compliant_search_20261004": 242,
+    "axis_search_20261004": 237,
+    "reference_search_20261004": 249,
+    "deadline25_20261004": 251
+  },
+  "execution_inputs": 891,
+  "source_snapshots": 195,
+  "document_snapshots": 6,
+  "links_checked": 47,
+  "inputs_unchanged_during_execution": true,
+  "live_changes_since_execution": [
+    "docs/superpowers/plans/2026-10-04-layered-referee.md"
+  ],
+  "plan_change": "closeout status only; original in source_snapshot",
+  "archives_verified": true,
+  "stop_independently_rechecked": true,
+  "entire_y_neg_trajectory_exact_samples": 11271,
+  "compared_fields": {
+    "position_m": true,
+    "quaternion_wxyz": true,
+    "velocity_world": true,
+    "contact_wrench_M": true,
+    "limited_command_world": true,
+    "reference_qpos": true
+  },
+  "figures_visually_checked": [
+    "results.png",
+    "search_diagnosis.png",
+    "completion.png"
+  ],
+  "reconstructed_search_commands": 16563,
+  "max_search_command_error_m_s": 3.0251951117776787e-16,
+  "implementation_complete": true,
+  "bounded_verification_complete": true,
+  "development_matrix_all_success": true,
+  "episodes": 5,
+  "functional_success": 5,
+  "strict_precision_success": 1,
+  "unused_closed": 0,
+  "cumulative_episodes": 130,
+  "training_updates": 0,
+  "network_calls": 0,
+  "independent_tests": 0,
+  "stage_B2_complete": false,
+  "training_admitted": false,
+  "automatic_tracking": "PAUSED"
+}

@@ -1,0 +1,106 @@
+{
+  "accessed_on": "2026-10-10",
+  "technical_claim_source_policy": "original author uploads, author institution, or publisher only",
+  "dynamic_execution": 0,
+  "production_source_edits": 0,
+  "sources": [
+    {
+      "id": "P1",
+      "title": "On Efficient and Flexible Autonomous Robotic Insertion Assembly in the Presence of Uncertainty",
+      "authors": ["Shichen Cao", "Jing Xiao"],
+      "venue": "IEEE Robotics and Automation Letters 9(7), 6360-6367 (2024)",
+      "doi": "10.1109/LRA.2024.3404749",
+      "url": "https://www.researchgate.net/publication/380835107_On_Efficient_and_Flexible_Autonomous_Robotic_Insertion_Assembly_in_the_Presence_of_Uncertainty",
+      "provenance": "Public full text uploaded by first author Shichen Cao on 2024-08-18",
+      "access": "A_full_text",
+      "locators": ["III-C", "III-D", "IV-A", "IV-B", "IV-D", "Tables II-IV"]
+    },
+    {
+      "id": "P2",
+      "title": "Robust Peg-in-Hole Assembly under Uncertainties via Compliant and Interactive Contact-Rich Manipulation",
+      "authors": ["Yiting Chen", "Kenneth Kimble", "Howard H. Qian", "Podshara Chanrungmaneekul", "Robert Seney", "Kaiyu Hang"],
+      "venue": "Robotics: Science and Systems 2025; arXiv:2506.22766v1",
+      "url": "https://arxiv.org/html/2506.22766v1",
+      "additional_url": "https://www.roboticsproceedings.org/rss21/p060.pdf",
+      "access": "A_full_text_HTML; conference_PDF_timeout",
+      "locators": ["III-A", "IV-C", "V-A", "V-C", "V-D", "VI", "Figure 8", "Tables I-II"]
+    },
+    {
+      "id": "P3",
+      "title": "Contact Pose Identification for Peg-in-Hole Assembly under Uncertainties",
+      "authors": ["Shiyu Jin", "Xinghao Zhu", "Changhao Wang", "Masayoshi Tomizuka"],
+      "venue": "arXiv:2101.12467v1 (2021)",
+      "url": "https://arxiv.org/html/2101.12467",
+      "access": "A_full_text_HTML",
+      "locators": ["II-A", "II-C", "III-A", "III-D", "IV-A2", "IV-B", "V", "Tables I-II"]
+    },
+    {
+      "id": "P4",
+      "title": "A Strategy for Connector Assembly using Impedance Control for Industrial Robots",
+      "authors": ["Hyun-Cheol Cho", "Young-Loul Kim", "Byeong-Sang Kim", "Jae-Bok Song"],
+      "venue": "ICCAS 2012, 1433-1436",
+      "url": "https://www.researchgate.net/publication/259571868_A_Strategy_for_Connector_Assembly_using_Impedance_Control_for_Industrial_Robots",
+      "provenance": "Public full text uploaded by first author Hyun-Cheol Cho on 2014-01-06",
+      "access": "A_full_text",
+      "locators": ["2", "3.1", "3.2", "4", "5", "Figures 2,5,6,7"]
+    },
+    {
+      "id": "B1",
+      "title": "Autonomous Alignment of Peg and Hole by Force/Torque Measurement for Robotic Assembly",
+      "authors": ["Te Tang", "Hsien-Chung Lin", "Yu Zhao", "Wenjie Chen", "Masayoshi Tomizuka"],
+      "venue": "CASE 2016, 162-167",
+      "doi": "10.1109/COASE.2016.7743375",
+      "url": "https://wjchen84.github.io/publications/C2016_CASE_PH.pdf",
+      "access": "B_original_PDF_search_cache_excerpts; current_url_404",
+      "locators": ["III-C", "III-D", "IV beginning", "Table I", "page 165"],
+      "not_verified": ["final experiment sample counts", "success-rate denominator", "failure causes", "random pose ranges"]
+    },
+    {
+      "id": "D1",
+      "title": "Geometry and Force Guided Robotic Assembly With Large Initial Deviations for Electrical Connectors",
+      "authors": ["Zhenyu Wang", "Xiangfei Li", "Huan Zhao", "Lingjun Shao", "Xiaolong Ma", "Huaiwu Zou", "Han Ding"],
+      "venue": "IEEE Transactions on Automation Science and Engineering 22, 8095-8107 (2025)",
+      "doi": "10.1109/TASE.2024.3477918",
+      "url": "https://ieeexplore.ieee.org/document/10722037",
+      "author_bibliography_url": "https://mse.hust.edu.cn/info/1142/13581.htm",
+      "access": "D_author_bibliography_only; publisher_browser_check; fulltext_unavailable",
+      "locators": ["author bibliography item 10"],
+      "technical_results_used": false
+    },
+    {
+      "id": "C1",
+      "title": "Friction-aware robotic peg-in-hole assembly via contact wrench measurement",
+      "authors": ["Zhiwei Liao", "Chenwei Gong", "Fei Zhao", "Xuesong Mei"],
+      "venue": "Measurement 257 Part C, 118781 (2026)",
+      "doi": "10.1016/j.measurement.2025.118781",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0263224125021402",
+      "access": "C_publisher_abstract_and_section_snippets; fulltext_unavailable",
+      "locators": ["Abstract", "Methodology", "Experiment", "Discussion"],
+      "quantitative_results_used": false
+    },
+    {
+      "id": "D2",
+      "title": "Robotic Multiple Peg-in-Hole Assembly with Deviation Estimation and Fast Insertion Control",
+      "authors": ["Dianxi Li", "Xiangfei Li", "Huan Zhao", "Dongsheng Ge", "Han Ding"],
+      "venue": "IEEE Transactions on Industrial Electronics 72(1), 670-680 (2025)",
+      "doi": "10.1109/TIE.2024.3406860",
+      "url": "https://ieeexplore.ieee.org/document/10574869/",
+      "access": "D_publisher_title_only; fulltext_unavailable",
+      "technical_results_used": false
+    },
+    {
+      "id": "D3",
+      "title": "A Novel Robotic Multiple Peg-in-Hole Assembly Pipeline: Modeling, Strategy, and Control",
+      "doi": "10.1109/TMECH.2023.3337102",
+      "url": "https://ieeexplore.ieee.org/document/10360330/",
+      "access": "D_publisher_title_only; fulltext_unavailable",
+      "technical_results_used": false
+    }
+  ],
+  "unresolved": [
+    "Original fulltext access for TASE3477918, TIE3406860, TMECH3337102, Measurement118781",
+    "Tang CASE2016 final experiment pages; current author PDF no longer available",
+    "Exact identity of references 25 and 26 in Measurement118781 was not resolved from original bibliography",
+    "No matched-information tuned conventional failure boundary has yet been demonstrated on current rigid D-sub9 platform"
+  ]
+}

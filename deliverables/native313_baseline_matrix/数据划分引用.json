@@ -1,0 +1,7 @@
+{
+  "source": "deliverables/baseline_training_readiness/数据划分_v1.json",
+  "sha256": "38e4c6c57044063df068e01cdc93d89d354785047007cbcace9df1ac4e0917da",
+  "executed_validation": false,
+  "executed_independent_test": false,
+  "purpose": "Reuse frozen split; seven current cases remain development only"
+}

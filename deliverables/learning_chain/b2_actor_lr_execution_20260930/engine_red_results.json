@@ -1,0 +1,33 @@
+{
+  "exit_code": 1,
+  "tests": 19,
+  "failures": 3,
+  "errors": 16,
+  "forbidden_call_counts": {
+    "model_forward": 0,
+    "optimizer_step": 0,
+    "physics": 0
+  },
+  "report_sha256": "87f4ad151f2eec1698be91b66cc938c8f1b738e2d3c3ea9896dd76dfb6834482",
+  "test_ids": [
+    "tests.learning.test_actor_lr_engine::test_pinned_origin_and_draws",
+    "tests.learning.test_actor_lr_engine::test_private_restore_zero_no_forward[A]",
+    "tests.learning.test_actor_lr_engine::test_private_restore_zero_no_forward[B]",
+    "tests.learning.test_actor_lr_engine::test_restore_tamper_rejected[binding]",
+    "tests.learning.test_actor_lr_engine::test_restore_tamper_rejected[replay]",
+    "tests.learning.test_actor_lr_engine::test_restore_tamper_rejected[count]",
+    "tests.learning.test_actor_lr_engine::test_restore_tamper_rejected[lr]",
+    "tests.learning.test_actor_lr_engine::test_restore_tamper_rejected[rng]",
+    "tests.learning.test_actor_lr_engine::test_restore_tamper_rejected[history]",
+    "tests.learning.test_actor_lr_engine::test_origin_not_formal_checkpoint",
+    "tests.learning.test_actor_lr_engine::test_reserve_precedes_sampling_or_update",
+    "tests.learning.test_actor_lr_engine::test_sampling_plan_mismatch_stops_before_update",
+    "tests.learning.test_actor_lr_engine::test_first_fixed_input_and_metadata_with_fake_update",
+    "tests.learning.test_actor_lr_engine::test_a_reproduction_ignores_only_walltime",
+    "tests.learning.test_actor_lr_engine::test_a_reproduction_does_not_ignore_losses",
+    "tests.learning.test_actor_lr_engine::test_noactive_batch_clears_all_action_permissions",
+    "tests.learning.test_actor_lr_runner::test_runner_import_does_not_import_engine",
+    "tests.learning.test_actor_lr_runner::test_missing_authorization_rejected_before_runtime_or_model",
+    "tests.learning.test_actor_lr_runner::test_verify_only_is_not_execution_authorization"
+  ]
+}

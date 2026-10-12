@@ -1,0 +1,13 @@
+Failed to find real location of D:\KEYANRUJIAN\python.exe
+test_bad_length_substeps_and_initial_audit_cannot_be_healthy (__main__.WorkerTests.test_bad_length_substeps_and_initial_audit_cannot_be_healthy) ... ok
+test_initial_contact_failure_retains_charged_successful_reset (__main__.WorkerTests.test_initial_contact_failure_retains_charged_successful_reset) ... ok
+test_nonzero_action_and_wrong_matrix_scope_rejected (__main__.WorkerTests.test_nonzero_action_and_wrong_matrix_scope_rejected) ... ok
+test_reset_exception_retains_attempt_without_fabricated_completion (__main__.WorkerTests.test_reset_exception_retains_attempt_without_fabricated_completion) ... ok
+test_reset_is_charged_before_call_and_usable_only_once (__main__.WorkerTests.test_reset_is_charged_before_call_and_usable_only_once) ... ok
+test_valid_ordinary_failure_and_guard_are_distinct (__main__.WorkerTests.test_valid_ordinary_failure_and_guard_are_distinct) ... ok
+test_zero_archive_identity_and_original_negative_qualification_preserved (__main__.WorkerTests.test_zero_archive_identity_and_original_negative_qualification_preserved) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.121s
+
+OK

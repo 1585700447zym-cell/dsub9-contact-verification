@@ -1,0 +1,455 @@
+{
+  "no_new_physics": true,
+  "training": 0,
+  "network": 0,
+  "referee": {
+    "id": "clipped_cylinder_convex256_v1",
+    "tolerance_m": 1e-09,
+    "layers": [
+      {
+        "name": "entry",
+        "radius_m": 0.000675,
+        "z0_m": 0.0,
+        "z1_m": 0.00025
+      },
+      {
+        "name": "main",
+        "radius_m": 0.0006,
+        "z0_m": 0.00025,
+        "z1_m": 0.0045
+      }
+    ],
+    "segments": 256,
+    "minimum_axis_z": 0.99,
+    "requires_all_nine_main_overlaps": true
+  },
+  "dense_checks": [
+    {
+      "roll": 0,
+      "pitch": 0,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "entry",
+      "analytic_m": 8.486205885767666e-05,
+      "dense_m": 8.486205885767666e-05,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0,
+      "pitch": 0,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "main",
+      "analytic_m": 9.862058857676567e-06,
+      "dense_m": 9.862058857676567e-06,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "entry",
+      "analytic_m": 0.00017499999999999992,
+      "dense_m": 0.00017499999999999992,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "main",
+      "analytic_m": null,
+      "dense_m": null,
+      "error_m": null
+    },
+    {
+      "roll": 0,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "entry",
+      "analytic_m": 0.00017499999999999992,
+      "dense_m": 0.00017499999999999992,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "main",
+      "analytic_m": 9.999999999999983e-05,
+      "dense_m": 9.999999999999983e-05,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0.007,
+      "pitch": 0,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "entry",
+      "analytic_m": 8.816997073214932e-05,
+      "dense_m": 8.816997073764362e-05,
+      "error_m": 5.494302929287542e-15
+    },
+    {
+      "roll": 0.007,
+      "pitch": 0,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "main",
+      "analytic_m": 4.2955636064599765e-06,
+      "dense_m": 4.29556363066273e-06,
+      "error_m": 2.4202753516611164e-14
+    },
+    {
+      "roll": 0.007,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "entry",
+      "analytic_m": 0.00016101236428303243,
+      "dense_m": 0.00016101236428303243,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0.007,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "main",
+      "analytic_m": null,
+      "dense_m": null,
+      "error_m": null
+    },
+    {
+      "roll": 0.007,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "entry",
+      "analytic_m": 0.00017358772688277598,
+      "dense_m": 0.00017358772688277598,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0.007,
+      "pitch": 0,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "main",
+      "analytic_m": 8.601236428303234e-05,
+      "dense_m": 8.601236428303234e-05,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0,
+      "pitch": -0.009,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "entry",
+      "analytic_m": 6.774538111052077e-05,
+      "dense_m": 6.774538114216386e-05,
+      "error_m": 3.164309092529294e-14
+    },
+    {
+      "roll": 0,
+      "pitch": -0.009,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "main",
+      "analytic_m": -5.139230382052986e-06,
+      "dense_m": -5.1392303504096785e-06,
+      "error_m": 3.1643307765727435e-14
+    },
+    {
+      "roll": 0,
+      "pitch": -0.009,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "entry",
+      "analytic_m": 0.00015702049286232876,
+      "dense_m": 0.00015702049286232876,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0,
+      "pitch": -0.009,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "main",
+      "analytic_m": null,
+      "dense_m": null,
+      "error_m": null
+    },
+    {
+      "roll": 0,
+      "pitch": -0.009,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "entry",
+      "analytic_m": 0.0001731797007149653,
+      "dense_m": 0.0001731797007149653,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0,
+      "pitch": -0.009,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "main",
+      "analytic_m": 8.202049286232867e-05,
+      "dense_m": 8.202049286232867e-05,
+      "error_m": 0.0
+    },
+    {
+      "roll": 0.023,
+      "pitch": -0.031,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "entry",
+      "analytic_m": 2.744000936140032e-05,
+      "dense_m": 2.7440009411543696e-05,
+      "error_m": 5.014337469549934e-14
+    },
+    {
+      "roll": 0.023,
+      "pitch": -0.031,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "main",
+      "analytic_m": -3.991194553464592e-05,
+      "dense_m": -3.991194543750531e-05,
+      "error_m": 9.714061152688025e-14
+    },
+    {
+      "roll": 0.023,
+      "pitch": -0.031,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "entry",
+      "analytic_m": 9.819493712905189e-05,
+      "dense_m": 9.819493730706011e-05,
+      "error_m": 1.7800821580649107e-13
+    },
+    {
+      "roll": 0.023,
+      "pitch": -0.031,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "main",
+      "analytic_m": null,
+      "dense_m": null,
+      "error_m": null
+    },
+    {
+      "roll": 0.023,
+      "pitch": -0.031,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "entry",
+      "analytic_m": 0.00016690381100388355,
+      "dense_m": 0.0001669038111890873,
+      "error_m": 1.8520374036462561e-13
+    },
+    {
+      "roll": 0.023,
+      "pitch": -0.031,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "main",
+      "analytic_m": 2.3194937129051804e-05,
+      "dense_m": 2.319493730706002e-05,
+      "error_m": 1.7800821580649107e-13
+    },
+    {
+      "roll": -0.044,
+      "pitch": 0.017,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "entry",
+      "analytic_m": 4.674570169618938e-05,
+      "dense_m": 4.6745701718302985e-05,
+      "error_m": 2.2113604350448846e-14
+    },
+    {
+      "roll": -0.044,
+      "pitch": 0.017,
+      "center": [
+        8.5e-05,
+        -3e-05,
+        0.002
+      ],
+      "layer": "main",
+      "analytic_m": -3.203776898183877e-05,
+      "dense_m": -3.2037768772713734e-05,
+      "error_m": 2.0912503499725954e-13
+    },
+    {
+      "roll": -0.044,
+      "pitch": 0.017,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "entry",
+      "analytic_m": 8.125522388143717e-05,
+      "dense_m": 8.125522390526425e-05,
+      "error_m": 2.3827077463844937e-14
+    },
+    {
+      "roll": -0.044,
+      "pitch": 0.017,
+      "center": [
+        0.0,
+        0.0,
+        -0.00185
+      ],
+      "layer": "main",
+      "analytic_m": null,
+      "dense_m": null,
+      "error_m": null
+    },
+    {
+      "roll": -0.044,
+      "pitch": 0.017,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "entry",
+      "analytic_m": 0.00016500269315599737,
+      "dense_m": 0.00016500269317665022,
+      "error_m": 2.0652858763459125e-14
+    },
+    {
+      "roll": -0.044,
+      "pitch": 0.017,
+      "center": [
+        0.0,
+        0.0,
+        0.0002
+      ],
+      "layer": "main",
+      "analytic_m": 6.255223881437085e-06,
+      "dense_m": 6.255223905264162e-06,
+      "error_m": 2.3827077463844937e-14
+    }
+  ],
+  "max_dense_error_m": 2.0912503499725954e-13,
+  "archive_sha256": "8f78d621f00789a0067d4590bf6cda9ec6be0b20c143e585a9d5beb1afc9e15c",
+  "historical_outcome": "TASK_FAILURE",
+  "historical_unchanged": true,
+  "saved_samples": 501,
+  "old_ready_samples": 0,
+  "new_ready_samples": 432,
+  "first_new_100ms_hold_time_s": 20.779999999978248,
+  "longest_new_hold_s": 0.8599999999979957,
+  "sensitivity": [
+    {
+      "outward_shift_nm": 0.0,
+      "margin_um": 0.007450513432876067,
+      "fit": true
+    },
+    {
+      "outward_shift_nm": 1.0,
+      "margin_um": 0.006450527382313893,
+      "fit": true
+    },
+    {
+      "outward_shift_nm": 10.0,
+      "margin_um": -0.002549347073179352,
+      "fit": false
+    },
+    {
+      "outward_shift_nm": 100.0,
+      "margin_um": -0.09254809162876232,
+      "fit": false
+    },
+    {
+      "outward_shift_nm": 1000.0,
+      "margin_um": -0.9925355371841584,
+      "fit": false
+    }
+  ],
+  "scope": "Offline development diagnostic under new version, not a replacement of original recorded outcome"
+}

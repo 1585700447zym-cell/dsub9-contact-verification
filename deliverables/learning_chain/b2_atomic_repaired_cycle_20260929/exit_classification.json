@@ -1,0 +1,9 @@
+{
+  "kind": "force_failure_frequency",
+  "execution_complete": false,
+  "returncode": 20,
+  "returncode_hex": "0x14",
+  "retry_allowed": false,
+  "b2_complete": false,
+  "wall_timestamp": 1790673152.6647909
+}

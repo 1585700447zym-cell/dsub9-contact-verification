@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="13" skipped="0" tests="16" time="3.306" timestamp="2026-09-30T11:20:30.114045+08:00" hostname="laptopzym"><testcase classname="tests.learning.test_actor_learning_rate" name="test_actor_override_leaves_critic_and_temperature_at_original_rate[absent]" time="1.546" /><testcase classname="tests.learning.test_actor_learning_rate" name="test_actor_override_leaves_critic_and_temperature_at_original_rate[0.0003]" time="0.017" /><testcase classname="tests.learning.test_actor_learning_rate" name="test_actor_override_leaves_critic_and_temperature_at_original_rate[3e-05]" time="0.002"><failure message="assert 0.0003 == 3e-05">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BBEDB1D0&gt;
+rate = 3e-05
+
+    @pytest.mark.parametrize('rate', ['absent', 3e-4, 3e-5])
+    def test_actor_override_leaves_critic_and_temperature_at_original_rate(monkeypatch, rate):
+        u = updater(monkeypatch, rate)
+        expected = 3e-4 if rate == 'absent' else rate
+&gt;       assert u.policy.actor.optimizer.param_groups[0]['lr'] == expected
+E       assert 0.0003 == 3e-05
+
+tests\learning\test_actor_learning_rate.py:48: AssertionError</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_invalid_actor_rate_is_refused_before_initialization[0.0]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BC000270&gt;
+rate = 0.0
+
+    @pytest.mark.parametrize('rate', [0., -1., float('nan'), float('inf'), True, '3e-5', None])
+    def test_invalid_actor_rate_is_refused_before_initialization(monkeypatch, rate):
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:56: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_invalid_actor_rate_is_refused_before_initialization[-1.0]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BC000160&gt;
+rate = -1.0
+
+    @pytest.mark.parametrize('rate', [0., -1., float('nan'), float('inf'), True, '3e-5', None])
+    def test_invalid_actor_rate_is_refused_before_initialization(monkeypatch, rate):
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:56: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_invalid_actor_rate_is_refused_before_initialization[nan]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BBEBB650&gt;
+rate = nan
+
+    @pytest.mark.parametrize('rate', [0., -1., float('nan'), float('inf'), True, '3e-5', None])
+    def test_invalid_actor_rate_is_refused_before_initialization(monkeypatch, rate):
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:56: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_invalid_actor_rate_is_refused_before_initialization[inf]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BBEBBC50&gt;
+rate = inf
+
+    @pytest.mark.parametrize('rate', [0., -1., float('nan'), float('inf'), True, '3e-5', None])
+    def test_invalid_actor_rate_is_refused_before_initialization(monkeypatch, rate):
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:56: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_invalid_actor_rate_is_refused_before_initialization[True]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BBEBFD40&gt;
+rate = True
+
+    @pytest.mark.parametrize('rate', [0., -1., float('nan'), float('inf'), True, '3e-5', None])
+    def test_invalid_actor_rate_is_refused_before_initialization(monkeypatch, rate):
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:56: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_invalid_actor_rate_is_refused_before_initialization[3e-5]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BBEBF020&gt;
+rate = '3e-5'
+
+    @pytest.mark.parametrize('rate', [0., -1., float('nan'), float('inf'), True, '3e-5', None])
+    def test_invalid_actor_rate_is_refused_before_initialization(monkeypatch, rate):
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:56: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_invalid_actor_rate_is_refused_before_initialization[None]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BC0152B0&gt;
+rate = None
+
+    @pytest.mark.parametrize('rate', [0., -1., float('nan'), float('inf'), True, '3e-5', None])
+    def test_invalid_actor_rate_is_refused_before_initialization(monkeypatch, rate):
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:56: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_wrong_optimizer_rate_is_refused_before_policy_or_alpha_changes[actor]" time="0.010"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BC017230&gt;
+role = 'actor'
+
+    @pytest.mark.parametrize('role', ['actor', 'critic', 'temperature'])
+    def test_wrong_optimizer_rate_is_refused_before_policy_or_alpha_changes(monkeypatch, role):
+        u = updater(monkeypatch, 3e-5)
+        saved = u._snapshot()
+        saved['policy']['weight'].fill_(99.)
+        saved['alpha'].fill_(99.)
+        saved[role]['param_groups'][0]['lr'] = 1e-4
+        before = u._snapshot()
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:68: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_wrong_optimizer_rate_is_refused_before_policy_or_alpha_changes[critic]" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BC044050&gt;
+role = 'critic'
+
+    @pytest.mark.parametrize('role', ['actor', 'critic', 'temperature'])
+    def test_wrong_optimizer_rate_is_refused_before_policy_or_alpha_changes(monkeypatch, role):
+        u = updater(monkeypatch, 3e-5)
+        saved = u._snapshot()
+        saved['policy']['weight'].fill_(99.)
+        saved['alpha'].fill_(99.)
+        saved[role]['param_groups'][0]['lr'] = 1e-4
+        before = u._snapshot()
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:68: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_wrong_optimizer_rate_is_refused_before_policy_or_alpha_changes[temperature]" time="0.002"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BBEC4890&gt;
+role = 'temperature'
+
+    @pytest.mark.parametrize('role', ['actor', 'critic', 'temperature'])
+    def test_wrong_optimizer_rate_is_refused_before_policy_or_alpha_changes(monkeypatch, role):
+        u = updater(monkeypatch, 3e-5)
+        saved = u._snapshot()
+        saved['policy']['weight'].fill_(99.)
+        saved['alpha'].fill_(99.)
+        saved[role]['param_groups'][0]['lr'] = 1e-4
+        before = u._snapshot()
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:68: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_original_actor_state_cannot_overwrite_candidate_rate" time="0.003"><failure message="Failed: DID NOT RAISE &lt;class 'ValueError'&gt;">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7BBEC5310&gt;
+
+    def test_original_actor_state_cannot_overwrite_candidate_rate(monkeypatch):
+        a, b = updater(monkeypatch, 3e-4), updater(monkeypatch, 3e-5)
+&gt;       with pytest.raises(ValueError, match='learning rate'):
+E       Failed: DID NOT RAISE &lt;class 'ValueError'&gt;
+
+tests\learning\test_actor_learning_rate.py:79: Failed</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_candidate_snapshot_roundtrip_restores_matching_rates_and_state" time="0.004"><failure message="assert 0.0003 == 3e-05">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000002A7B761A0A0&gt;
+
+    def test_candidate_snapshot_roundtrip_restores_matching_rates_and_state(monkeypatch):
+        a = updater(monkeypatch, 3e-5)
+        saved = a._snapshot()
+        saved['policy']['weight'].fill_(7.)
+        a._restore(saved)
+        assert a.policy.weight.item() == 7.
+&gt;       assert a.policy.actor.optimizer.param_groups[0]['lr'] == 3e-5
+E       assert 0.0003 == 3e-05
+
+tests\learning\test_actor_learning_rate.py:90: AssertionError</failure></testcase><testcase classname="tests.learning.test_actor_learning_rate" name="test_legacy_admission_still_refuses_new_candidate_field" time="0.001" /></testsuite></testsuites>

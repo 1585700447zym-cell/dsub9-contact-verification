@@ -1,0 +1,15 @@
+{
+  "branch": "feature/dsub9-dynamic-actuator-v1",
+  "head": "d2e7e4fa4ed0631d9dd1b7b98a121c1e46ea6406",
+  "files": {
+    "AGENTS.md": "20397583d832e4715bf68e6756cea3686425c34739ee0ccbd07fb5b8b0b42954",
+    "项目当前入口.md": "090a100a79bdf62ff5962a5f2cab05a57b756d8c664401392b12800f3e61abb2",
+    "项目进度跟踪.md": "cb199909d2350cdd9f0aa4a4b10bb7217bce1c28390d0aab9408fd2342c8a072",
+    "研究推进计划_当前版.md": "12b56001cbeb83ed69395d4bf1255d79c9292e56c27b869f73532a3db74ad46d",
+    "项目交付总览.md": "6583ef3f50d88aff48a48b498cce2a9ebaed56f397055e147555bfde924ea077",
+    "deliverables/monthly_progress/2026-10/月报素材_2026-10.md": "a02ea105da2e95013bf41070738b984c83599eb2fdda101edcc93710ae0af7ba",
+    "docs/stage_b/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+    "docs/stage_b/论文对照协议_v4.md": "2fba7e838a53a69f885142b56ae24433de06f0d38bd2eaa01ce00c16b02e593a"
+  },
+  "dirty_entries": 224
+}

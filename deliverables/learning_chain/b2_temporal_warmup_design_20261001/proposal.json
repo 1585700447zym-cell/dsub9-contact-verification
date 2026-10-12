@@ -1,0 +1,42 @@
+{
+  "version": "temporal_warmup_preparation_v1",
+  "execution_admitted": false,
+  "training_admitted": false,
+  "control_hold_cycles": 1,
+  "candidate_hold_cycles": 50,
+  "control_period_s": 0.002,
+  "physics_period_s": 0.0002,
+  "policy_period_s": 0.002,
+  "action_scale": [0.00015, 0.00015, 0.0005, 0.0005],
+  "warmup_only": true,
+  "inactive_draws": false,
+  "clear_on_permission_loss_or_policy_phase_change": true,
+  "replay_transition_period_s": 0.002,
+  "coverage_screen": {
+    "window_cycles": 50,
+    "request_mean_positive_threshold": 0.8,
+    "request_mean_negative_threshold": -0.8,
+    "xy_effective_command_mean_abs_threshold_m_s": 0.000001,
+    "contact_window_requires_every_cycle_contact": true,
+    "both_signs_per_axis_required": true,
+    "not_a_policy_success_claim": true
+  },
+  "proposed_preflight": {
+    "dynamic_cap": 8,
+    "case_order": ["x_pos_100", "x_neg_100", "y_pos_100", "y_neg_100"],
+    "arm_order_per_case": ["A_2ms", "C_100ms"],
+    "seed_sequence_per_case": [2026092716, 1, "case_index_0_to_3"],
+    "cycles_per_episode_cap": 13000,
+    "total_control_cycles_cap": 104000,
+    "training_batches": 0,
+    "model_forwards": 0,
+    "stop_on_any_guard": true,
+    "automatic_retry": false
+  },
+  "actual_new_dynamic": 0,
+  "actual_new_model_forwards": 0,
+  "actual_new_training_batches": 0,
+  "old_unused_consumed": 0,
+  "automatic_tracking": "PAUSED",
+  "b2_complete": false
+}

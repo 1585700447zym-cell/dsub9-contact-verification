@@ -1,0 +1,212 @@
+..............FFFFFF..                                                   [100%]
+================================== FAILURES ===================================
+___________ test_controlled_exit_preserves_finished_failure_ledger ____________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_controlled_exit_preserves0')
+
+    def test_controlled_exit_preserves_finished_failure_ledger(tmp_path):
+>       m=api();run=stop_fixture(tmp_path)
+
+tests\learning\test_force_failure_runner.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_force_failure_runner.py:16: in stop_fixture
+    for i in range(4):ledger.start('initial',str(i));ledger.finish({})
+tools\learning\force_failure_cycle.py:127: in start
+    super().start(stage,identity)
+tools\learning\bounded_contact.py:131: in start
+    _write_json(self.path,s)
+tools\learning\admitted_collection.py:54: in _write_json
+    with temporary.open('w', encoding='utf-8') as stream:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_controlled_exit_preserves0/run/ledger.json.tmp')
+mode = 'w', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-341\\test_controlled_exit_preserves0\\run\\ledger.json.tmp'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError
+_ test_exit_code_alone_never_proves_completion_or_controlled_stop[0-incomplete_execution] _
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro0')
+code = 0, kind = 'incomplete_execution'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+>       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\validation\run_force_failure_cycle.py:76: in finalize_exit
+    write(run/'failure.json',result)
+tools\learning\admitted_collection.py:54: in _write_json
+    with temporary.open('w', encoding='utf-8') as stream:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro0/run/failure.json.tmp')
+mode = 'w', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-341\\test_exit_code_alone_never_pro0\\run\\failure.json.tmp'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError
+_ test_exit_code_alone_never_proves_completion_or_controlled_stop[20-invalid_controlled_stop] _
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro1')
+code = 20, kind = 'invalid_controlled_stop'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+>       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\validation\run_force_failure_cycle.py:76: in finalize_exit
+    write(run/'failure.json',result)
+tools\learning\admitted_collection.py:54: in _write_json
+    with temporary.open('w', encoding='utf-8') as stream:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro1/run/failure.json.tmp')
+mode = 'w', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-341\\test_exit_code_alone_never_pro1\\run\\failure.json.tmp'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError
+_ test_exit_code_alone_never_proves_completion_or_controlled_stop[-1073741819-native_crash] _
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro2')
+code = -1073741819, kind = 'native_crash'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+>       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\validation\run_force_failure_cycle.py:76: in finalize_exit
+    write(run/'failure.json',result)
+tools\learning\admitted_collection.py:54: in _write_json
+    with temporary.open('w', encoding='utf-8') as stream:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro2/run/failure.json.tmp')
+mode = 'w', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-341\\test_exit_code_alone_never_pro2\\run\\failure.json.tmp'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError
+_ test_exit_code_alone_never_proves_completion_or_controlled_stop[1-entry_rejection] _
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro3')
+code = 1, kind = 'entry_rejection'
+
+    @pytest.mark.parametrize('code,kind',[(0,'incomplete_execution'),(20,'invalid_controlled_stop'),
+        (-1073741819,'native_crash'),(1,'entry_rejection')])
+    def test_exit_code_alone_never_proves_completion_or_controlled_stop(tmp_path,code,kind):
+>       m=api();result=m.finalize_exit(code,tmp_path)
+
+tests\learning\test_force_failure_runner.py:40: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools\validation\run_force_failure_cycle.py:76: in finalize_exit
+    write(run/'failure.json',result)
+tools\learning\admitted_collection.py:54: in _write_json
+    with temporary.open('w', encoding='utf-8') as stream:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_exit_code_alone_never_pro3/run/failure.json.tmp')
+mode = 'w', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-341\\test_exit_code_alone_never_pro3\\run\\failure.json.tmp'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError
+_________ test_crash_cannot_be_relabelled_using_stale_controlled_stop _________
+
+tmp_path = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_crash_cannot_be_relabelle0')
+
+    def test_crash_cannot_be_relabelled_using_stale_controlled_stop(tmp_path):
+>       m=api();run=stop_fixture(tmp_path)
+
+tests\learning\test_force_failure_runner.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\learning\test_force_failure_runner.py:16: in stop_fixture
+    for i in range(4):ledger.start('initial',str(i));ledger.finish({})
+tools\learning\force_failure_cycle.py:127: in start
+    super().start(stage,identity)
+tools\learning\bounded_contact.py:131: in start
+    _write_json(self.path,s)
+tools\learning\admitted_collection.py:54: in _write_json
+    with temporary.open('w', encoding='utf-8') as stream:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/ok everything/AppData/Local/Temp/pytest-of-ok everything/pytest-341/test_crash_cannot_be_relabelle0/run/ledger.json.tmp')
+mode = 'w', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ok everything\\AppData\\Local\\Temp\\pytest-of-ok everything\\pytest-341\\test_crash_cannot_be_relabelle0\\run\\ledger.json.tmp'
+
+D:\KEYANRUJIAN\Lib\pathlib\_local.py:537: FileNotFoundError
+- generated xml file: D:\dsub9项目计划\first_stage_sim\.worktrees\dsub9-v1-contact-validation\deliverables\learning_chain\b2_force_failure_cycle_20260929\green_gate.xml -
+=========================== short test summary info ===========================
+FAILED tests/learning/test_force_failure_runner.py::test_controlled_exit_preserves_finished_failure_ledger
+FAILED tests/learning/test_force_failure_runner.py::test_exit_code_alone_never_proves_completion_or_controlled_stop[0-incomplete_execution]
+FAILED tests/learning/test_force_failure_runner.py::test_exit_code_alone_never_proves_completion_or_controlled_stop[20-invalid_controlled_stop]
+FAILED tests/learning/test_force_failure_runner.py::test_exit_code_alone_never_proves_completion_or_controlled_stop[-1073741819-native_crash]
+FAILED tests/learning/test_force_failure_runner.py::test_exit_code_alone_never_proves_completion_or_controlled_stop[1-entry_rejection]
+FAILED tests/learning/test_force_failure_runner.py::test_crash_cannot_be_relabelled_using_stale_controlled_stop
+6 failed, 16 passed in 0.71s
+{"exit_code": 1, "tests": 22, "tests_with_failure_or_error": 6, "forbidden_call_counts": {"optimizer": 0, "physics": 0, "prediction": 0}, "report_sha256": "1fad7a2db900fd6a5c9392b5a4ad3d4d84e7a430ef2e73f2bd7241cd57313999", "runner_sha256": "a1968e19ebba60fcaea6615eb991afe5490794caa823d8985a0c7e2479d46605"}

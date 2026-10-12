@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "at": "2026-10-07T00:58:01.048979+08:00",
+  "source_files": 1057,
+  "source_unchanged": true,
+  "zip_members_checked": 1057,
+  "previous_seals": {
+    "paper_comparison/search_boundary_fix_20261006/delivery_manifest.json": {
+      "sha256": "ae124ffa9d47d2ed2719b64cbf1202241ded4287c5be842b61ea962b13c8e8e5",
+      "files": 59,
+      "unchanged": true
+    },
+    "paper_comparison/v4_learning_pilot_20261006/delivery_manifest_v2.json": {
+      "sha256": "f740dd75a922b5962c293da16213bdc2818fef6bca6ec885a7b28a1d3f3c80a9",
+      "files": 1204,
+      "unchanged": true
+    },
+    "paper_comparison/v4_continuation_20261006/delivery_manifest.json": {
+      "sha256": "536a599cd5b8baaab8fbb8951f8b1557a6eb40bc2d215f12603103d0a07a4673",
+      "files": 239,
+      "unchanged": true
+    },
+    "project_audit/complexity_20261006/delivery_manifest.json": {
+      "sha256": "11081e20a423bdefede246a1686db9a58d9723b2d1e962977eed31a86bedfdbc",
+      "files": 15,
+      "unchanged": true
+    }
+  },
+  "independent_archive_reward_rows": 190882,
+  "checkpoint_gates": {
+    "F50": {
+      "complete_read_gates": 9,
+      "counts": {
+        "critic": 2000,
+        "actor": 2000,
+        "temperature": 2000,
+        "target": 2000
+      },
+      "replay_rows": 54776,
+      "history_batches": 2000,
+      "durable_journal_events": 4000
+    },
+    "S50": {
+      "complete_read_gates": 9,
+      "counts": {
+        "critic": 2000,
+        "actor": 2000,
+        "temperature": 2000,
+        "target": 2000
+      },
+      "replay_rows": 62332,
+      "history_batches": 2000,
+      "durable_journal_events": 4000
+    }
+  },
+  "negative_episodes_published": [
+    "warmup_S50_y_neg_150",
+    "online_S50_y_neg_150"
+  ],
+  "restore_exact": 2,
+  "json_replace_recoveries": [
+    "atomic_json_replace_recovered: path=D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\paper_comparison\\v4_learning_requalification_20261006\\run\\ledger.json attempts=2; no learning action repeated",
+    "atomic_json_replace_recovered: path=D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\deliverables\\paper_comparison\\v4_learning_requalification_20261006\\run\\chains\\F50\\update_attempt.json attempts=2; no learning action repeated"
+  ],
+  "optimizer_or_physical_retry": 0,
+  "total_elapsed_seconds": 11786.059386,
+  "scope": "registered finite development pilot; no independent-test or method-superiority claim"
+}
