@@ -1,23 +1,19 @@
-## 2026-11-02迁移补充
+# D-sub9五维残差SAC与新电脑迁移
 
-完整F4000、专用MuJoCo及必要来源引擎已新增到本分支的`migration/`，合计约86.3MiB。见[新电脑使用说明](docs/releases/新电脑使用说明_2026-11-02.md)。安装/恢复/默认检查不会训练；显式仿真或续训才启动。迁移续训沿用原1nm/2ms条件，当前10nm/50ms主体代码保留。
+截至2026-11-02，分支 `snapshot/five-axis-sac-20261102`。完整F4000、专用MuJoCo及必要来源引擎已作为三个压缩包放在`migration/`，合计约86.3MiB；无需重复下载旧12GB完整备份。
 
-以下精简版本说明保留首次主体上传时的范围；其“未附完整保存文件”现由迁移包补齐，仍不包含全部历史实验档案。
-
-# D-sub9 五维残差 SAC 当前主体
-
-截至 2026-11-02，分支 `snapshot/five-axis-sac-20261102`。
-
-- [本版本说明](docs/releases/版本说明_2026-11-02.md)：内容、安装、权重、成功判据及限制。
+- [新电脑使用说明](docs/releases/新电脑使用说明_2026-11-02.md)：安装、恢复、仿真及续训命令。
 - [当前进度](项目进度跟踪.md) · [当前入口](项目当前入口.md) · [当前计划](研究推进计划_当前版.md)。
-- [关键结果与资料范围](docs/releases/当前结果与资料范围_2026-11-02.md)。
-- [F4000 权重](checkpoints/five_axis_F4000/README.md) · [必要配置和模型](configs/five_axis_current/) · [上传清单](publication_manifest.json)。
+- [版本说明与历史边界](docs/releases/版本说明_2026-11-02.md) · [迁移包清单](migration/package.json)。
 
-保留传统搜索/导纳与五维残差 SAC。控制和网络仍 2ms；50ms 仅为最近诊断的探索噪声保持时长。当前 10nm 数值成功判据与旧 1nm 训练/记录明确区分。原四次保存点按新口径为 1/4，不代表已证明的 SAC 增益或泛化成功率；B.2/C 未验收。
+在Windows x64、Python3.13下，进入项目根目录执行：
 
 ```powershell
-python -m pip install -r requirements-core-20261102.txt
-python -B -m tools.publication.five_axis_policy
+powershell -ExecutionPolicy Bypass -File tools\migration\install_windows.ps1
 ```
 
-核对命令只读参数/配置字节，无仿真、推理或训练。旧批次执行器依赖本地冻结资料和指定运行时，不是此精简包的开箱重跑命令。完整轨迹、回放、环境、历史大包未重复上传，本地保留。
+安装脚本联网安装通用依赖、核验/解包、生成本机路径并检查完整状态及模型XML；不启动仿真推进、策略前向或训练。只有以后明确执行指南中的`--run`命令才会启动相应批次。
+
+迁移续训使用F4000原1nm/2ms训练引擎和回放；当前10nm判据及50ms诊断代码保留，不静默混用。完整原始检查点在迁移包内，`checkpoints/five_axis_F4000/`仍是约1.99MiB的精简网络参数副本。
+
+10项小型逻辑检查、中文空格路径恢复、F4000/162274条回放恢复、MuJoCo导入和模型XML编译已通过；未实跑新仿真或训练回合，未在第二台电脑验收，完整B.2/C未验收。其余历史轨迹、中间模型及完整备份不重复上传，本地完整资料保留。

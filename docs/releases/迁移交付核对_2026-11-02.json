@@ -1,0 +1,54 @@
+{
+  "content_commit": "68e9c0d964a14d8e63aed2dcb2a3f4c27215bd0d",
+  "branch": "snapshot/five-axis-sac-20261102",
+  "package_manifest_sha256": "963cd7a1ef9f8911cc27b30dbf23d296537ad9bd3ef3d2cbe73ec407fd2c6b73",
+  "local_checks": {
+    "verified": true,
+    "scope": "Necessary migration checks only",
+    "date": "2026-11-02",
+    "pure_checks": 10,
+    "checks_xml": "necessary_checks_final.xml",
+    "installer_powershell_syntax_verified": true,
+    "relocated_path_contains_chinese_and_spaces": true,
+    "restored_updates": {
+      "critic": 4000,
+      "actor": 4000,
+      "temperature": 4000,
+      "target": 4000
+    },
+    "restored_replay_rows": 162274,
+    "policy_sha256": "570a2eeed59dd068f6167523218e08f594ba76dc00cf3edf6a4e746203f59cfe",
+    "runtime_version": "3.13.0",
+    "native_runtime_imported": true,
+    "model_xml_compiled_without_MjData_or_steps": true,
+    "full_state_restore_passed": true,
+    "prepared_only_entry": "prepare_entry_verification.json",
+    "protocol_used_by_continuation": {
+      "success_tolerance_m": 1e-09,
+      "policy_period_s": 0.002
+    },
+    "current_source_retained": {
+      "success_tolerance_m": 1e-08,
+      "diagnostic_noise_hold_s": 0.05
+    },
+    "scientific_cost": {
+      "initializations": 0,
+      "physical_substeps": 0,
+      "neural_inference": 0,
+      "optimizer_updates": 0
+    },
+    "actual_new_training_or_simulation_run_executed": false,
+    "new_machine_hardware_tested": false,
+    "scientific_cumulative_unchanged": 443,
+    "full_B2_C_accepted": false,
+    "review_fixes": [
+      "prepared registration binding and semantic budget checks",
+      "merge progress/update progress with recorded lower bounds",
+      "always preserve process-exit proof",
+      "preserve early-reset failure archive",
+      "preserve partial audit and attempted-update costs"
+    ]
+  },
+  "physical_training_batch_executed": false,
+  "validation_scope": "Original saved-state restoration, archive integrity, native import/XML compilation and pure helper checks; no new physical episode"
+}

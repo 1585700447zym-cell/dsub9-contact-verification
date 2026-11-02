@@ -2856,8 +2856,8 @@
       "sha256": "8770ee1a7de35e5c240dcf82703a1635f113d698151186c29bd120e0458d5a48"
     },
     "deliverables/monthly_progress/2026-11/月报素材_2026-11.md": {
-      "bytes": 8531,
-      "sha256": "a1fe11dae6d416e5074e56e372bb56fae7bdd0e121aa44c735bcde205bf312fc"
+      "bytes": 9910,
+      "sha256": "faaf7f80a212a5b80d1478d38e662806335de00692edd928381c9a569301ce2a"
     },
     "docs/AI接手说明_2026-10-07.md": {
       "bytes": 13092,
@@ -2922,6 +2922,10 @@
     "docs/releases/版本说明_2026-11-02.md": {
       "bytes": 5797,
       "sha256": "be9a8846fe61c17f0433b88ca1758aa03ac5dbcf51e5fa038a7ad00da5ab26bb"
+    },
+    "docs/releases/迁移交付核对_2026-11-02.json": {
+      "bytes": 2104,
+      "sha256": "1942c18c441b9811e2ff76249c7e2cace3bf0b7662131ef1855495318d9d32ef"
     },
     "docs/stage_b/五维残差SAC执行补充合同_v1.md": {
       "bytes": 8708,
@@ -3176,8 +3180,8 @@
       "sha256": "50d23ea0e82b88e07616f8f57a16108feba33dbc30fe46504d81f25b7c6d322e"
     },
     "docs/superpowers/plans/2026-11-02-migration-bundle.md": {
-      "bytes": 2794,
-      "sha256": "b448e44fdb1fc3998176acdf3f21efb2cb8791be56cb8fc876ed3614397b5131"
+      "bytes": 2825,
+      "sha256": "d67018484ecf4e2b9d6df8fee1d558808f6dfcf5431f32cdf03be94ba139cd3d"
     },
     "docs/superpowers/plans/2026-11-02-publish-current-core.md": {
       "bytes": 2497,
@@ -3264,8 +3268,8 @@
       "sha256": "37db35d1c2f09818447d2cf4873b78287eaaf17cc8b69d417d88a60b41482dfb"
     },
     "README.md": {
-      "bytes": 1837,
-      "sha256": "1eef32e0c2168b52e5505a110fb4018a850edb89f0022bea9c59cd55fa1b6ada"
+      "bytes": 1597,
+      "sha256": "f1ddb3d151accd25222773320d8a0f8785722e5082d2fc9948297b6f7ee68654"
     },
     "requirements-core-20261102.txt": {
       "bytes": 317,
@@ -5012,8 +5016,8 @@
       "sha256": "e4bdfda3ef0d3e7ea445f08d3d57a08fbc28980909e1e94b53bddf5a106816b3"
     },
     "研究推进计划_当前版.md": {
-      "bytes": 169625,
-      "sha256": "38f1c541808c6e3e2a4c1df6b49b94f96813a900add423425211d8b9387a1289"
+      "bytes": 171004,
+      "sha256": "86cb6f4604b453cf7179de4405ec9dfe4580af63ec548a3ee4d90c31f705403c"
     },
     "研究推进计划_能力交付版_2026-09-22.md": {
       "bytes": 9398,
@@ -5032,28 +5036,28 @@
       "sha256": "910b39c87d596bbb3b72da87fdd0ec1334eaad9ab1d1305be304c71f79e9221f"
     },
     "项目交付总览.md": {
-      "bytes": 317789,
-      "sha256": "f127b45b117140f28e2462082c0a451114209cef9acfc2af1596ad315f1bf646"
+      "bytes": 319168,
+      "sha256": "2b6785ca7bf0aa019f8b0f346f1a696da160887d06cafe2d100f1ef7f22f635f"
     },
     "项目复现与使用说明.md": {
       "bytes": 20542,
       "sha256": "f4d25e69ca1a4e1414cf817eeec898a62c7ad6118f1c8feb84b3232b37a24f39"
     },
     "项目当前入口.md": {
-      "bytes": 129553,
-      "sha256": "64271a20719bd9255625aac03ef3c22b49aab4741ee6337ace7f7dce4c42d88f"
+      "bytes": 130932,
+      "sha256": "091a2cb0185c6110a5d62b589e90497959faceaa7143a7b82e70c45e4c2f0772"
     },
     "项目技术导读与学习路线.md": {
       "bytes": 37985,
       "sha256": "04e99bb7c25940d0bd89f05053259b7c6d523db3c8acf085081954b09b9d9565"
     },
     "项目进度跟踪.md": {
-      "bytes": 428858,
-      "sha256": "512c4e5c7334ee2a5f161d8db8753ae2be7dedffe28a9de380cde27b6b5f7db5"
+      "bytes": 430237,
+      "sha256": "3a7fd90755f4a535221bfe1d13bf9fb512b4ce2252de7f6d0a7e2b31655b2cd8"
     }
   },
-  "file_count": 1262,
-  "total_bytes": 101038884,
+  "file_count": 1263,
+  "total_bytes": 101047674,
   "scientific_cost": {
     "initializations": 0,
     "physical_substeps": 0,
