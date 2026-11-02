@@ -17,3 +17,5 @@ deliverables/
 *.npz
 *.jsonl
 *.gz
+.migration/
+experiments/

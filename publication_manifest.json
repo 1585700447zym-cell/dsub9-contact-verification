@@ -1,16 +1,15 @@
 {
-  "version": "current_core_publication_20261102",
+  "version": "core_with_f4000_migration_20261102",
   "branch": "snapshot/five-axis-sac-20261102",
-  "parent_main": "ffb51b2b260f267e1fc736f0e1a1748584848743",
-  "scope": "source_models_configuration_F4000_weights_progress_no_raw_history",
+  "scope": "core_and_complete_F4000_migration_not_full_experimental_archive",
   "files": {
     ".gitattributes": {
       "bytes": 76,
       "sha256": "d89c246d4c19803c5e7124a7d47e058e972968421f7644eda7f88e32ef2a2f05"
     },
     ".gitignore": {
-      "bytes": 198,
-      "sha256": "99c32c33a1c73d1006d01a83470af1dda747b6c4e4ca8a184d54b9f969541dbe"
+      "bytes": 244,
+      "sha256": "efe6feb46f2cfaeb8ce24e942c9466128c88092c23facfd534348560b6631c18"
     },
     "AGENTS.md": {
       "bytes": 4614,
@@ -2916,9 +2915,13 @@
       "bytes": 1238,
       "sha256": "790ee81c2135a36c34bfc9fbc5fe1d4c0fa20e6df6ba2c14c65560ec373764d6"
     },
+    "docs/releases/新电脑使用说明_2026-11-02.md": {
+      "bytes": 7165,
+      "sha256": "8b7ada597b9eb857232e70170173c0dfb91f28ceb2112c019469b206753ddd10"
+    },
     "docs/releases/版本说明_2026-11-02.md": {
-      "bytes": 5229,
-      "sha256": "560a2b04f85e1743f6bfc5016d0bb48a756b4acd7e80e14bdb559141d40c0ca4"
+      "bytes": 5797,
+      "sha256": "be9a8846fe61c17f0433b88ca1758aa03ac5dbcf51e5fa038a7ad00da5ab26bb"
     },
     "docs/stage_b/五维残差SAC执行补充合同_v1.md": {
       "bytes": 8708,
@@ -3172,6 +3175,10 @@
       "bytes": 2197,
       "sha256": "50d23ea0e82b88e07616f8f57a16108feba33dbc30fe46504d81f25b7c6d322e"
     },
+    "docs/superpowers/plans/2026-11-02-migration-bundle.md": {
+      "bytes": 2794,
+      "sha256": "b448e44fdb1fc3998176acdf3f21efb2cb8791be56cb8fc876ed3614397b5131"
+    },
     "docs/superpowers/plans/2026-11-02-publish-current-core.md": {
       "bytes": 2497,
       "sha256": "aac4eb68c336142695f9076b8e024619e0862cdf190402cdbdfdfd35685ff580"
@@ -3203,6 +3210,22 @@
     "docs/superpowers/specs/2026-10-30-noise50-passive-yaw-design.md": {
       "bytes": 2078,
       "sha256": "a599ad57a86a79e2d05b2c9d8a0e417055229319392c81fe26cdf90ddc58e395"
+    },
+    "migration/F4000-source-and-config.zip": {
+      "bytes": 1225474,
+      "sha256": "647c8af2c0b9feb08693e6c9c4c992cf8ab965c282719554e9ecc14d44de4099"
+    },
+    "migration/F4000-training-state.zip": {
+      "bytes": 72505384,
+      "sha256": "0e0de61d836f3391c2954c96d5f62e380c0f994075e1ab60749a32834df053bb"
+    },
+    "migration/mujoco-3.13.0-win64-py313.zip": {
+      "bytes": 16742121,
+      "sha256": "e80cc5c131b41ed84fd1d8631e929d8901d94608a630132d45274e240b53e7a2"
+    },
+    "migration/package.json": {
+      "bytes": 236596,
+      "sha256": "963cd7a1ef9f8911cc27b30dbf23d296537ad9bd3ef3d2cbe73ec407fd2c6b73"
     },
     "models/dsub9_pair.xml": {
       "bytes": 18567,
@@ -3241,12 +3264,16 @@
       "sha256": "37db35d1c2f09818447d2cf4873b78287eaaf17cc8b69d417d88a60b41482dfb"
     },
     "README.md": {
-      "bytes": 1292,
-      "sha256": "c14a0a6c7127cc94cf87b93d421d5366995e3b980fecd0c345576aac1867e52b"
+      "bytes": 1837,
+      "sha256": "1eef32e0c2168b52e5505a110fb4018a850edb89f0022bea9c59cd55fa1b6ada"
     },
     "requirements-core-20261102.txt": {
       "bytes": 317,
       "sha256": "4149e366a91e016260d973e5b5fa34c63c52d111303065616a6ec8da9570031d"
+    },
+    "requirements-migration-20261102.txt": {
+      "bytes": 433,
+      "sha256": "53e50f15436b75add91e05bd801a15ccd007984151401252715d9e269c9d8a5a"
     },
     "tests/b2/test_contact_diagnosis.py": {
       "bytes": 1106,
@@ -3876,6 +3903,10 @@
       "bytes": 10651,
       "sha256": "858db9ef6d1134ea02fb6762ff2bf687dab120781124b9b8490c571e691c72fc"
     },
+    "tests/test_migration_package.py": {
+      "bytes": 7032,
+      "sha256": "c5712466899e8228b7851cc492d00b1e3bfc73b849dc2448b0d512f58438bb77"
+    },
     "tests/test_noise50_passive_yaw.py": {
       "bytes": 2967,
       "sha256": "db7aa9ebf63302927ef466a57678babbe48dee204d53cf0adf9448d680df9e7f"
@@ -4395,6 +4426,22 @@
     "tools/mesh/stl_binary.py": {
       "bytes": 3023,
       "sha256": "a2b2742c8483e74f63cfe15e351145f4500f79cd0bfe66f3dfe4e687260b2f65"
+    },
+    "tools/migration/__init__.py": {
+      "bytes": 83,
+      "sha256": "300c7de0436bb3a82be937a01dd362a82c8c85ec482ff1b87a92342025cd990c"
+    },
+    "tools/migration/install_windows.ps1": {
+      "bytes": 1351,
+      "sha256": "7725d41d7ce09c99ba2bdb8704c792fd110a8798024ccb82bac43f742fcbb3bc"
+    },
+    "tools/migration/package.py": {
+      "bytes": 5647,
+      "sha256": "fddf5071b56ed969f04f0baa222ef91b45e4444daf2e53d6875de0c438cd879e"
+    },
+    "tools/migration/run_f4000.py": {
+      "bytes": 22027,
+      "sha256": "c3547cada55a56cb31dc598a0d484680453da90de8cd954ebb2961dd2288915e"
     },
     "tools/model/clearance_task.py": {
       "bytes": 3191,
@@ -5005,8 +5052,8 @@
       "sha256": "512c4e5c7334ee2a5f161d8db8753ae2be7dedffe28a9de380cde27b6b5f7db5"
     }
   },
-  "file_count": 1250,
-  "total_bytes": 10281618,
+  "file_count": 1262,
+  "total_bytes": 101038884,
   "scientific_cost": {
     "initializations": 0,
     "physical_substeps": 0,
