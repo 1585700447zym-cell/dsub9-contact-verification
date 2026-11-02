@@ -13,7 +13,17 @@ from tools.reporting.generate_manifest import (
 )
 
 
-REVIEW_ROOTS = ("assets", "models", "plugins", "tools", "tests", "reports")
+REVIEW_ROOTS = (
+    "assets",
+    "models",
+    "plugins",
+    "tools",
+    "tests",
+    "reports",
+    "docs",
+    "deliverables",
+)
+HANDOFF = "下一任务交接_中文可视化交付包_A方案.md"
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -24,6 +34,7 @@ def make_project(root: Path) -> None:
     (root / "pyproject.toml").write_text("[project]\n", encoding="utf-8")
     (root / ".gitignore").write_text("build/\n", encoding="utf-8")
     (root / ".gitattributes").write_text("* text=auto eol=lf\n", encoding="utf-8")
+    (root / HANDOFF).write_text("交接范围\n", encoding="utf-8")
 
 
 def manifest_paths(text: str) -> list[str]:
@@ -69,7 +80,13 @@ def test_manifest_excludes_itself(tmp_path: Path) -> None:
 
 def test_manifest_covers_all_reviewed_regular_files(tmp_path: Path) -> None:
     make_project(tmp_path)
-    expected = {".gitattributes", ".gitignore", "README.md", "pyproject.toml"}
+    expected = {
+        ".gitattributes",
+        ".gitignore",
+        "README.md",
+        "pyproject.toml",
+        HANDOFF,
+    }
     for directory in REVIEW_ROOTS:
         path = tmp_path / directory / f"reviewed {directory}.dat"
         path.write_bytes(directory.encode("ascii"))
@@ -78,6 +95,18 @@ def test_manifest_covers_all_reviewed_regular_files(tmp_path: Path) -> None:
     actual = set(manifest_paths(build_manifest(tmp_path)))
 
     assert actual == expected
+
+
+def test_manifest_includes_docs_deliverables_and_tracked_handoff(tmp_path: Path) -> None:
+    make_project(tmp_path)
+    (tmp_path / "docs" / "design.md").write_text("design\n", encoding="utf-8")
+    (tmp_path / "deliverables" / "chart.png").write_bytes(b"png")
+
+    paths = set(manifest_paths(build_manifest(tmp_path)))
+
+    assert "docs/design.md" in paths
+    assert "deliverables/chart.png" in paths
+    assert HANDOFF in paths
 
 
 def test_verify_detects_stale_manifest(tmp_path: Path) -> None:

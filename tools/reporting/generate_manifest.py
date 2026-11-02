@@ -7,12 +7,22 @@ from pathlib import Path
 from typing import Iterable, Sequence
 
 
-REVIEW_DIRECTORIES = ("assets", "models", "plugins", "tools", "tests", "reports")
+REVIEW_DIRECTORIES = (
+    "assets",
+    "models",
+    "plugins",
+    "tools",
+    "tests",
+    "reports",
+    "docs",
+    "deliverables",
+)
 REVIEW_ROOT_FILES = (
     "README.md",
     "pyproject.toml",
     ".gitattributes",
     ".gitignore",
+    "下一任务交接_中文可视化交付包_A方案.md",
 )
 MANIFEST_RELATIVE_PATH = Path("reports/final_file_manifest.txt")
 EXCLUDED_DIRECTORY_NAMES = {"__pycache__", ".pytest_cache"}

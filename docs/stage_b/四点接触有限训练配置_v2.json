@@ -1,0 +1,127 @@
+{
+  "version": "bounded_contact_cycle_v2",
+  "scope": "four_development_contact_points_only",
+  "physics": {
+    "backend": "native",
+    "segments": 256,
+    "ccd_tolerance": 1e-12,
+    "timestep_s": 0.0002,
+    "control_period_s": 0.002,
+    "policy_period_s": 0.002
+  },
+  "guard": {
+    "max_rotation_from_start_rad": 0.04363323129985824,
+    "initial_roll_pitch_limit_rad": 0.026179938779914945
+  },
+  "domain": {
+    "distribution": "balanced_three_rounds",
+    "points_xy_m": [
+      [
+        0.0001,
+        0.0
+      ],
+      [
+        -0.0001,
+        0.0
+      ],
+      [
+        0.0,
+        0.0001
+      ],
+      [
+        0.0,
+        -0.0001
+      ]
+    ],
+    "roll_rad": 0.0,
+    "pitch_rad": 0.0,
+    "start_origin_z_m": -0.004,
+    "target_depth_m": 0.004
+  },
+  "action": {
+    "scale": [
+      0.00015,
+      0.00015,
+      0.005,
+      0.005
+    ],
+    "enabled_stages": [
+      "INSERT",
+      "SEARCH"
+    ]
+  },
+  "sampling": {
+    "stop_at": "twelve_complete_audited_episodes",
+    "watchdog_cycles": 13000,
+    "workers": 1,
+    "seed": 2026092716,
+    "rng": "PCG64",
+    "initial_resampling": false,
+    "max_attempts": 12,
+    "rng_streams": {
+      "warmup": 1,
+      "replay": 2,
+      "boundary": 3
+    },
+    "seed_rule": "PCG64/SeedSequence([seed,stream])",
+    "total_audited_cycles_upper_bound": 156000
+  },
+  "learning": {
+    "learning_rate": 0.0003,
+    "batch_size": 256,
+    "replay_capacity": 156000,
+    "max_gradient_batches": 4500,
+    "discount_time_constant_s": 10.0,
+    "gamma_nominal": 0.9998000199986667,
+    "discount": "exp(-actual_dt_s/10)",
+    "entropy_initial": 0.01,
+    "target_entropy": -4.0,
+    "entropy_learned": true,
+    "tau": 0.005,
+    "network": [
+      256,
+      256
+    ],
+    "activation": "ReLU",
+    "seed": 2026092716,
+    "device": "cpu",
+    "torch_threads": 1,
+    "replay_publish": "whole_episode_after_audit",
+    "permission_masks": "tensor_masks_v3",
+    "reward": "contract_v3_unchanged",
+    "warmup_episodes": 4,
+    "batches_per_boundary": 500,
+    "critic_boundary_rows": 16,
+    "exact_terminal_tail": true
+  },
+  "versions": {
+    "python": "3.13.5",
+    "mujoco": "3.13.0",
+    "torch": "2.12.1+cpu",
+    "numpy": "2.1.3",
+    "gymnasium": "1.2.3",
+    "stable-baselines3": "2.8.0"
+  },
+  "execution": {
+    "fresh_initialization": true,
+    "mode_selected_at_episode_start": true,
+    "freeze_actor_within_episode": true,
+    "stop_on": [
+      "invalid",
+      "unstopped",
+      "contact_guard",
+      "motion_violation",
+      "input_changed",
+      "archive_error",
+      "operator_interrupt"
+    ],
+    "publication": "only_complete_guard_clear_stopped_episode",
+    "updates": "only_after_publication_before_next_episode",
+    "checkpoint": "every_healthy_audited_episode_boundary",
+    "resume": "only_verified_boundary_no_physics_resume",
+    "evaluate": "initial_final_restored_and_frozen_four_holdout",
+    "baseline": "reuse_B2_06_if_common_inputs_unchanged",
+    "independent_test_used": false,
+    "preparation_only": false
+  }
+}

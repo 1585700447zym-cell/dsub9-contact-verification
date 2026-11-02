@@ -1,0 +1,33 @@
+{
+  "version": "engineering_scope_v1",
+  "date": "2026-09-26",
+  "scope": "engineering_chain_only",
+  "parameter_frozen": true,
+  "angle_is_model_trust_bound": false,
+  "continuous_domain_certified": false,
+  "guard": {
+    "max_rotation_from_start_rad": 0.04363323129985824,
+    "initial_roll_pitch_limit_rad": 0.026179938779914945
+  },
+  "domain": {
+    "distribution": "independent_uniform_XY",
+    "x_limit_m": 0.00005,
+    "y_limit_m": 0.00005,
+    "roll_rad": 0,
+    "pitch_rad": 0,
+    "start_origin_z_m": -0.004,
+    "target_depth_m": 0.004
+  },
+  "evidence_sha256": {
+    "deliverables/residual_interface/observation_integration_20260924/manifest.json": "76cf6b9eefecbc34da88d9430ca75c96fc4d5dbae4304cc35a85b44d30d0d2c5",
+    "deliverables/residual_interface/learning_tensor_20260924/manifest.json": "e646a7abea57f97ade07084d51f1295a2fe387ef13cf318105109652cc507cdc",
+    "deliverables/residual_interface/collection_replay_20260924/manifest.json": "b37bb098d5e49ba7edce04f9ba44b7cc8a86a33e139bf6ef2d9c0dbb38000f59",
+    "deliverables/residual_interface/engineering_preflight_20260924/manifest.json": "12d1255eeac6f9dcd363107978cec28d9cf41462871d0af63cf96d2c24467cec",
+    "deliverables/residual_interface/pose_scope_review_20260924/manifest.json": "9cd0aa126783ed4132f591f6782259d0d04b93e14834407166e0b22d0fface98",
+    "deliverables/residual_interface/scheduled_boundary_20260926/manifest.json": "fa0284a460ffdf6ecfb71ba4e17da8c8ff8ba7841b1507747b1d6194fa612150",
+    "docs/stage_b/训练合同_v3.md": "3db4cace1853b2788cd3c55f8faa6b423b16948aea5ad43f31de7a2c425d6a86",
+    "deliverables/residual_interface/implementation_20260923/orientation_envelope.json": "a3c9b2f15219c181b1ff52cb5d143d18a0df0d40a7382097381cd639cf395683",
+    "deliverables/residual_interface/guard_boundary_dynamics_v2_review_fixes/assessment.json": "55f2101672a2a2f78c217d9ce10a696266a961403be56b5cc1f2f40b6229f0aa",
+    "deliverables/residual_interface/guard_b2_regression_v3_review_fixes/assessment.json": "f3007948d835b47593d5bd3900e2f97b2b58a7c45afaa7b7cb1bfcb0b5549bf7"
+  }
+}

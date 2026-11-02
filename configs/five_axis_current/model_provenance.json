@@ -1,0 +1,6 @@
+{
+  "source_path": "deliverables/learning_chain/noise50_passive_yaw_20261030/run/M15_ON/model_used.xml",
+  "source_sha256": "1f9326852d31b4b1fcb484151fd8085f5b17953c46144d2f48a4e34b3c707912",
+  "published_sha256": "b551c750bb4e62aaf6f9761181849472d190edb34ea32f0c51cc8ffb8964256b",
+  "adaptation": "Only include paths and compiler meshdir relocated; physical/geometry attributes unchanged"
+}

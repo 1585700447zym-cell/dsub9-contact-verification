@@ -1,0 +1,84 @@
+{
+  "verified": true,
+  "date": "2026-11-01",
+  "task_id": "dsub9_clearance120_layered_nano10_v5",
+  "geometry_referee": {
+    "id": "clipped_cylinder_convex256_nano10_v2",
+    "tolerance_m": 1e-08,
+    "layers": [
+      {
+        "name": "entry",
+        "radius_m": 0.000675,
+        "z0_m": 0.0,
+        "z1_m": 0.00025
+      },
+      {
+        "name": "main",
+        "radius_m": 0.0006,
+        "z0_m": 0.00025,
+        "z1_m": 0.0045
+      }
+    ],
+    "segments": 256,
+    "minimum_axis_z": 0.99,
+    "requires_all_nine_main_overlaps": true
+  },
+  "only_geometric_acceptance_constant_and_version_metadata_changed": true,
+  "unchanged_other_finish_conditions_and_geometry_ast": true,
+  "checked_unique_cases": 45,
+  "all_current_checks_passed": true,
+  "main_checks": {
+    "passed": 44,
+    "failed_due_to_incomplete_test_double": 1,
+    "errors": 0
+  },
+  "corrected_hold_guard_check": {
+    "passed": 1,
+    "failed": 0,
+    "production_change_for_test_fix": false
+  },
+  "initial_red_temp_directory_errors_resolved_with_workspace_basetemp": true,
+  "saved_hold_verified": true,
+  "historical_bound_artifacts_and_source_before_snapshots_preserved": true,
+  "five_rolling_documents_with_history_and_snapshots_verified": true,
+  "training_checkpoint_contract_changed": false,
+  "new_initializations": 0,
+  "new_physical_substeps": 0,
+  "new_neural_inference": 0,
+  "new_optimizer_updates": 0,
+  "cumulative_initializations_unchanged": 443,
+  "full_B2_C_accepted": false,
+  "full_physical_test_suite_not_run_due_to_requested_scope": true,
+  "code_review": "Independent reviewer found no must-fix issue; no control or other success-condition change; new output path avoids old archive.",
+  "current_code_sha256": {
+    "tools/model/layered_task.py": "53a386c052f6d547c095a88dda63c81dd1a2cf9431fdde882e778aa118dd17e0",
+    "tools/validation/run_layered_referee_preflight.py": "a4762bd58075f64f9b9cb3fbfe7979ed9cc6800d4c8585317100252b85990cd8",
+    "tests/task_variants/test_layered_task.py": "f89a5d49dabe79448868a11021c2de8308cdf74a66ea37edabe65703b8b28243",
+    "tests/task_variants/test_layered_referee_preflight.py": "d00e897d6b5430c9fe65468143d6dc81dc2dc2712f4f3b511df9223b39f6e2d9"
+  },
+  "artifacts_sha256": {
+    "before_binding.json": "55db614810fddb2334cdbbe05b4e2764f8abb90e99efe4bd963f0e746c30c369",
+    "configuration.json": "343f43fa2d14680afaa96f82d715dab3a61e73143aa7b91d768c4245db4d8628",
+    "document_sync.json": "5dbaa56bd950b3e7695da479a07e015f70f79fbcba6149eeb5dd4f8873c57060",
+    "green_checks.xml": "f0f20b4c3ff37a994db94f65355552745ba7b7e487c5babf45c1702c0bd93a93",
+    "hold_guard_checks.xml": "3986034f41db62020dc803319aa407ef54383a685d8ced8351c1f3249e2372e2",
+    "red_checks.xml": "fb2bd1cf725bf2e5f35608db3fb75fbd242321ed281cc69729e3cd5019f6f782",
+    "saved_hold_verification.json": "9c20e747634090f792c2d1ad7c4f639e13c0f423a606fcbd8b57827f6fcf51fd",
+    "verify_saved_hold.py": "73e8b9af5825cfe607e3003fbe29095da4005dfba36616ac17f1278a00ca27ea",
+    "变更说明.md": "35af2af3a26c342114737aa30c165061aaef11e21b8af6f1b3882127f3956451",
+    "document_snapshots\\1_after.md": "347fa52db0b3b89c33db4843c7d9abce064a51a7b4dd0405502837d9b29a9e3c",
+    "document_snapshots\\1_before.md": "fbc9d08a653d9a41796bbe6ef7d781e6b0ae659249c932aa96f2dc49df3c32c9",
+    "document_snapshots\\2_after.md": "ba269627bc3ca72aae5bfb0ab899b638f5ae1c22fcc67bdd4f3d256cfc2bf16b",
+    "document_snapshots\\2_before.md": "7ea731fe127953cb3bd68209ae064137e3aee9b51b8d56c60476025e45ae5b39",
+    "document_snapshots\\3_after.md": "cf8c2722478a1ec94148fade6473afbc5f86064efa166df918f00afa387af004",
+    "document_snapshots\\3_before.md": "5a610cef20d39938b2936a39ba3c14fe2b7138d443173dae7a623baf794a5a46",
+    "document_snapshots\\4_after.md": "1ebc34ed4336883363941aa490d10b1140831bdfa3620f2c3d460ce2b63a9cf0",
+    "document_snapshots\\4_before.md": "932b255fd0047049c73f127ac45e80c71f24d9e9d7b3a0c0c189ac5bdc647f3e",
+    "document_snapshots\\5_after.md": "a575272a1f7b36bdcabf912811c093a511de516fdd150478c322540b59e2b7bc",
+    "document_snapshots\\5_before.md": "c7e6a87da73f8126bb026fa0fbfc661fd3d80575c4959290aefc70d6678a3454",
+    "source_before\\tools\\model\\layered_task.py": "d1d73f139199ebf705d539fa73caddeb42a0b473f5e132fbda3501cc33f3d56b",
+    "source_before\\tools\\validation\\run_layered_referee_preflight.py": "ac9778ae0de2ab275f22e9d285e1a5a5f02f4ecb07c4f42a974fac1d513fb980",
+    "source_before\\tests\\task_variants\\test_layered_referee_preflight.py": "f3cdf9c60aabe92c5401e2219416ce0c43b49b6361fc74d3ca803f08668b5b69",
+    "source_before\\tests\\task_variants\\test_layered_task.py": "e319a83b4e3ca548f6e67fa6c5311f3a79b30d7c561a6a1370c3b26ddac148cc"
+  }
+}

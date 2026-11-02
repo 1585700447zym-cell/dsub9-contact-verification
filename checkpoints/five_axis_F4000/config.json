@@ -1,0 +1,49 @@
+{
+  "version": "consistent_reference_sac_G1_30s_v1",
+  "observation_version": "five_axis_short_history_N2_30s_v1",
+  "width": 140,
+  "action_dim": 5,
+  "action_scale": [
+    0.0005,
+    0.0005,
+    0.0005,
+    0.0005,
+    0.005
+  ],
+  "mode": "F5",
+  "control_period_s": 0.002,
+  "policy_period_s": 0.002,
+  "learning": {
+    "learning_rate": 0.0003,
+    "actor_learning_rate": 0.0003,
+    "batch_size": 256,
+    "replay_capacity": 192000,
+    "network": [
+      256,
+      256
+    ],
+    "seed": 2026092716,
+    "torch_threads": 1,
+    "device": "cpu",
+    "entropy_initial": 0.01,
+    "target_entropy": -5.0,
+    "tau": 0.005,
+    "exact_terminal_tail": false,
+    "critic_boundary_rows": 0
+  },
+  "discount_time_constant_s": 10.0,
+  "execution_contract": {
+    "version": "global_residual_G1_30s_reference_consistent_v1",
+    "observation_version": "five_axis_short_history_N2_30s_v1",
+    "action_scale": [
+      0.0005,
+      0.0005,
+      0.0005,
+      0.0005,
+      0.005
+    ],
+    "task_deadline_s": 30.0,
+    "max_cycles": 16000,
+    "reference_consistency_version": "search_reference_intersection_v1"
+  }
+}

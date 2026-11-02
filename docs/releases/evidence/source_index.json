@@ -1,0 +1,14 @@
+{
+  "consistent_reference_summary.json": {
+    "local_source": "deliverables/learning_chain/consistent_reference_sac_20261029/summary.json",
+    "sha256": "83980dba5f58240914b790a539543a4354fc30c3c43d7ae88899749e946e7dc4"
+  },
+  "noise50_original_summary.json": {
+    "local_source": "deliverables/learning_chain/noise50_passive_yaw_20261030/summary.json",
+    "sha256": "1ad8bd800b6e170e8c7e5559c4c0fc1f728580c9a6cd0e50e864f2602e3e0cfe"
+  },
+  "nano10_verification.json": {
+    "local_source": "deliverables/task_variants/nano_contact_success_20261101/verification.json",
+    "sha256": "59f48852f421968e00d38106668d1587b7309c08d4e2abaeea93dfb97c014cea"
+  }
+}

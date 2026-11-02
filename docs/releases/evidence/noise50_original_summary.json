@@ -1,0 +1,59 @@
+{
+  "episodes": [
+    {
+      "id": "P15_ON",
+      "complete": true,
+      "initializations": 1,
+      "physical_substeps": 141790,
+      "cycles": 14179,
+      "policy_calls": 12581,
+      "audit_neural_policy_calls": 12581,
+      "outcome": "TASK_FAILURE",
+      "reason": "SEARCH_BUDGET_EXHAUSTED"
+    },
+    {
+      "id": "P15_OFF",
+      "complete": true,
+      "initializations": 1,
+      "physical_substeps": 142160,
+      "cycles": 14216,
+      "policy_calls": 12618,
+      "audit_neural_policy_calls": 12618,
+      "outcome": "TASK_FAILURE",
+      "reason": "SEARCH_BUDGET_EXHAUSTED"
+    },
+    {
+      "id": "M15_ON",
+      "complete": true,
+      "initializations": 1,
+      "physical_substeps": 116900,
+      "cycles": 11690,
+      "policy_calls": 10063,
+      "audit_neural_policy_calls": 10063,
+      "outcome": "TASK_FAILURE",
+      "reason": "TARGET_POSE_NOT_SETTLED"
+    },
+    {
+      "id": "M15_OFF",
+      "complete": true,
+      "initializations": 1,
+      "physical_substeps": 101010,
+      "cycles": 10101,
+      "policy_calls": 8501,
+      "audit_neural_policy_calls": 8501,
+      "outcome": "TASK_FAILURE",
+      "reason": "SEARCH_BUDGET_EXHAUSTED"
+    }
+  ],
+  "initialization_attempts": 4,
+  "physical_substeps": 501860,
+  "policy_calls": 43763,
+  "audit_neural_policy_calls": 43763,
+  "training_updates": 0,
+  "completed_episodes": 4,
+  "counts_exact": true,
+  "cumulative_initializations": 443,
+  "status": "COMPLETED",
+  "error": null,
+  "elapsed_wall_s": 1282.5361841000267
+}
