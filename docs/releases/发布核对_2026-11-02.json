@@ -1,0 +1,17 @@
+{
+  "publication": "current_core_20261102",
+  "branch": "snapshot/five-axis-sac-20261102",
+  "content_commit": "38f14947b4700a038634b672ffdd49092109800c",
+  "initial_remote_files_checked": 1250,
+  "initial_remote_mismatches": 0,
+  "original_branches_preserved": true,
+  "raw_historical_experiment_uploads": 0,
+  "exported_policy_sha256": "570a2eeed59dd068f6167523218e08f594ba76dc00cf3edf6a4e746203f59cfe",
+  "weights_not_resumable_training_checkpoint": true,
+  "scientific_initializations": 0,
+  "scientific_substeps": 0,
+  "neural_inference": 0,
+  "optimizer_updates": 0,
+  "evidence_scope": "Selected source/model/configuration/weight publication; not a full experimental archive",
+  "final_remote_verification": "Final commit and complete Git tree will be checked after this metadata commit"
+}
