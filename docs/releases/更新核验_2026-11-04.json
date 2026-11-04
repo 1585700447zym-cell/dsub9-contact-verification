@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-04",
+  "content_commit": "1801d36e146ea49ff9282862bfa9181ec7dd2546",
+  "branch": "snapshot/five-axis-sac-20261102",
+  "content_files_verified": 1313,
+  "pure_checks_passed": 192,
+  "python_files_parsed": 447,
+  "model_resources_checked": 124,
+  "test_scope": "Pure controller/runtime doubles, geometry mathematics and synthetic archive audit",
+  "physical_recovery_dynamically_validated": false,
+  "gru_implemented": false,
+  "archived_migration_and_weights_unchanged": true,
+  "original_git_index_and_sources_unchanged": true,
+  "scientific_cost": {
+    "initializations": 0,
+    "physical_substeps": 0,
+    "neural_inference": 0,
+    "optimizer_updates": 0
+  },
+  "scientific_cumulative": 455,
+  "full_B2_C_accepted": false
+}
