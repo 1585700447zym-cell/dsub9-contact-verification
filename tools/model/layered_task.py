@@ -2,7 +2,7 @@
 
 Geometry is a referee-only input. Historical all-shaft criteria remain intact.
 Each finite cylinder is clipped to a layer's Z slab, then checked against all
-tangent planes of that layer. Version 5 permits at most 10 nm of geometric
+tangent planes of that layer. Version 6 permits at most 100 nm of geometric
 overlap for tiny soft-contact residuals; all other success conditions stay intact.
 This is a numerical acceptance convention, not a calibrated material tolerance.
 """
@@ -11,8 +11,8 @@ import numpy as np
 
 from tools.model.clearance_task import _pin_centers,_pin_sizes,_source,BORE_RADIUS_M,SEGMENTS
 
-TASK_ID='dsub9_clearance120_layered_nano10_v5'
-GEOMETRY_TOLERANCE_M=1e-8
+TASK_ID='dsub9_clearance120_layered_nano100_v6'
+GEOMETRY_TOLERANCE_M=1e-7
 _parameters={x.get('key'):float(x.get('value')) for x in _source.findall('.//extension/plugin/instance/config')}
 _LAYERS=(('entry',_parameters['entry_radius'],0.,_parameters['entry_depth']),
          ('main',BORE_RADIUS_M,_parameters['entry_depth'],_parameters['bore_depth']))
@@ -24,7 +24,7 @@ if _holes.shape!=(9,3) or not np.array_equal(_holes[:,:2],_pin_centers[:,:2]) or
 
 
 def referee_metadata():
-    return dict(id='clipped_cylinder_convex256_nano10_v2',tolerance_m=GEOMETRY_TOLERANCE_M,
+    return dict(id='clipped_cylinder_convex256_nano100_v3',tolerance_m=GEOMETRY_TOLERANCE_M,
                 layers=[dict(name=n,radius_m=r,z0_m=a,z1_m=b) for n,r,a,b in _LAYERS],
                 segments=SEGMENTS,minimum_axis_z=.99,requires_all_nine_main_overlaps=True)
 

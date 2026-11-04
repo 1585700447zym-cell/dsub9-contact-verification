@@ -66,8 +66,12 @@ class SearchRecovery:
         self.search_count+=1;self.search_origin=np.array(obs.displacement_m);self.theta=0.
         self._transition('SEARCH',obs,'LOW_LOAD_SEARCH')
 
+    def search_count_exhausted(self):
+        """Legacy count budget; explicit time-budget controllers may override."""
+        return self.search_count>=self.config.max_searches
+
     def start_recovered_search(self,obs):
-        if self.phase!='WAIT_RECOVERY' or self.search_count>=self.config.max_searches:
+        if self.phase!='WAIT_RECOVERY' or self.search_count_exhausted():
             raise RuntimeError('No recovery retry available')
         self._start_search(obs)
 
@@ -82,7 +86,7 @@ class SearchRecovery:
             old_t,old_z=self.history[0]
             if (obs.time_s>=c.stall_earliest_s and obs.time_s-old_t>=c.stall_window_s-1e-9
                     and p[2]-old_z<c.stall_advance_m and w[2]<-c.stall_axial_force_N):
-                if self.search_count>=c.max_searches:return self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
+                if self.search_count_exhausted():return self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
                 self._transition('UNLOAD',obs,'AXIAL_STALL')
             else:return self.admittance.command(w,dt)
         if self.phase=='UNLOAD':
@@ -105,7 +109,7 @@ class SearchRecovery:
                 return self.admittance.command(w,dt)
             b=c.spiral_pitch_m/(2*math.pi);radius=b*self.theta
             if radius>=c.spiral_radius_m-1e-12 or obs.time_s-self.phase_start>=c.search_time_s:
-                if self.search_count>=c.max_searches:return self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
+                if self.search_count_exhausted():return self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
                 self._transition('WAIT_RECOVERY',obs,'SEARCH_EXHAUSTED');return np.zeros(6)
             return self._search_command(obs,dt)
         raise RuntimeError('Unknown search state')
@@ -134,18 +138,54 @@ class SearchRecovery:
                 'uses_hole_pose_truth':False,'calibrated':False}
 
 
-def resume_after_recovery(env,min_actual_retraction):
+def _completed_recovery_segments(env):
+    """Validate retained normal segments, ending in one unconsumed recovery.
+
+    The last three events identify the current recovery. Earlier four-event
+    segments must each have resumed normally; no safety or unknown stop event
+    can be hidden by selecting only the latest three events.
+    """
+    count=env.recovery_count;events=env.events
+    if type(count) is not int or count<1 or len(events)!=4*count-1:return False
+    sequence=(('B2_SEARCH_EXHAUSTED','STOPPING'),('RECOVERY_ACCEPTED','RETRACT'),
+              ('RECOVERY_DISTANCE_REACHED','STOPPING'),('B2_RECOVERY_RESUMED','RUNNING'))
+    previous=-math.inf
+    for index,event in enumerate(events):
+        if (event.get('reason'),event.get('phase'))!=sequence[index%4]:return False
+        time=event.get('time_s')
+        if (isinstance(time,bool) or not isinstance(time,(int,float)) or
+                not math.isfinite(time) or time<previous or time>env.data.time):return False
+        previous=time
+    accepted=events[-2]['time_s'];started=getattr(env,'recovery_start_time',None)
+    if (isinstance(started,bool) or not isinstance(started,(int,float)) or
+            not math.isfinite(started) or not math.isclose(accepted,started,rel_tol=0,abs_tol=1e-10)):
+        return False
+    facts=getattr(env,'guard_facts',None)
+    if facts is not None and (facts.get('simulation_valid') is not True or
+            any(facts.get(key,[]) for key in ('invalid_reasons','contact_reasons','motion_reasons'))):
+        return False
+    return True
+
+
+def resume_after_recovery(env,min_actual_retraction,*,unlimited_recoveries=False):
     """Resume only a normal, completed B2 recovery; never clear a safety fault.
 
-    The old environment is intentionally untouched. Only its reference/command
-    phase changes; real pose, velocity, elapsed time, peaks and history persist.
+    The default keeps the one-recovery contract. Explicit opt-in accepts repeat
+    normal segments without clearing history or historical safety facts. Only
+    reference/command and phase change; pose, velocity, time and peaks persist.
     """
+    if type(unlimited_recoveries) is not bool:raise ValueError('Explicit recovery-mode Boolean required')
+    if unlimited_recoveries and (isinstance(min_actual_retraction,bool) or
+            not isinstance(min_actual_retraction,(int,float)) or
+            not math.isfinite(min_actual_retraction) or min_actual_retraction<=0):
+        raise ValueError('Positive finite actual retraction required')
     if latched_contact_guard(env):raise RuntimeError('Historical contact limit forbids recovery resume')
     c=env.config;r=env.observe()
     allowed={'B2_SEARCH_EXHAUSTED','RECOVERY_ACCEPTED','RECOVERY_DISTANCE_REACHED'}
-    if (not env._state_valid() or env.phase!='STOPPING' or env.recovery_count!=1
+    history_ok=(_completed_recovery_segments(env) if unlimited_recoveries else
+                env.recovery_count==1 and all(e['reason'] in allowed for e in env.events))
+    if (not env._state_valid() or env.phase!='STOPPING' or not history_ok
             or not env.events or env.events[-1]['reason']!='RECOVERY_DISTANCE_REACHED'
-            or any(e['reason'] not in allowed for e in env.events)
             or env.recovery_start is None or env.recovery_start[2]-env.data.qpos[2]<min_actual_retraction
             or np.linalg.norm(r['velocity_world'][:3])>c.stopped_speed
             or np.linalg.norm(r['velocity_world'][3:])>c.stopped_angular_speed

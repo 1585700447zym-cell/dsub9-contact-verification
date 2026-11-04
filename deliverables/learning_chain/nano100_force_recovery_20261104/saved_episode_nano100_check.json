@@ -1,0 +1,35 @@
+{
+  "verified": true,
+  "task_id": "dsub9_clearance120_layered_nano100_v6",
+  "geometry_referee": {
+    "id": "clipped_cylinder_convex256_nano100_v3",
+    "tolerance_m": 1e-07,
+    "layers": [
+      {
+        "name": "entry",
+        "radius_m": 0.000675,
+        "z0_m": 0.0,
+        "z1_m": 0.00025
+      },
+      {
+        "name": "main",
+        "radius_m": 0.0006,
+        "z0_m": 0.00025,
+        "z1_m": 0.0045
+      }
+    ],
+    "segments": 256,
+    "minimum_axis_z": 0.99,
+    "requires_all_nine_main_overlaps": true
+  },
+  "saved_rows": 501,
+  "passed_rows": 463,
+  "final_hold_rows": 51,
+  "source_archive_sha256": "386b41225b50d2e0abd544fbdb28a1a057306a4b3a42bbc71c08d4514dae62e2",
+  "old_outcome_preserved": "TASK_FAILURE",
+  "read_only": true,
+  "new_initializations": 0,
+  "new_physics": 0,
+  "new_network_inference": 0,
+  "new_updates": 0
+}

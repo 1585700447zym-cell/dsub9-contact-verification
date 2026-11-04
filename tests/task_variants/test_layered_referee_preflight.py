@@ -118,21 +118,29 @@ def test_default_session_changes_only_referee_and_not_controller():
     assert a.controller_factory().metadata()==b.controller_factory().metadata()
     assert a.finish_criteria==b.finish_criteria
     assert b.geometry_checker is layered_pin_fit and a.geometry_checker is not layered_pin_fit
-    assert new.TASK_ID=='dsub9_clearance120_layered_nano10_v5'
-    assert new.DELIVERY.name=='layered_referee_nano10_20261101'
+    assert new.TASK_ID=='dsub9_clearance120_layered_nano100_v6'
+    assert new.DELIVERY.name=='layered_referee_nano100_20261104'
+    from tools.model.layered_task import referee_metadata
+    assert referee_metadata()['id']=='clipped_cylinder_convex256_nano100_v3'
+    assert referee_metadata()['tolerance_m']==1e-7
 
 
-@pytest.mark.parametrize('mode',['missing','wrong_tolerance','legacy_1nm','old_version'])
+@pytest.mark.parametrize('mode',['missing','wrong_tolerance','legacy_1nm','legacy_10nm','old_version'])
 def test_rejects_unbound_or_wrong_referee(mode):
     from tools.validation.run_actor_lr_comparison import select_qualified_runtime
     select_qualified_runtime()
     from tools.validation.run_layered_referee_preflight import make_session
     from tools.model.layered_task import referee_metadata
     from types import SimpleNamespace
-    config=dict(b2_config=dict(total_action_time_s=25.),drive_limits=dict(linear_speed_m_s=.001,linear_acceleration_m_s2=.005),geometry_referee=referee_metadata())
+    from tools.learning.guarded_environment import LearningEnvironment
+    from tools.control.risk_search import RotationRiskConfig
+    from tools.control.load_search import SearchLoadConfig
+    from dataclasses import asdict
+    config=dict(b2_config=dict(total_action_time_s=25.),drive_limits=dict(linear_speed_m_s=.001,linear_acceleration_m_s2=.005),geometry_referee=referee_metadata(),rotation_risk=asdict(RotationRiskConfig()),search_load=asdict(SearchLoadConfig()))
     if mode=='missing':del config['geometry_referee']
     elif mode=='wrong_tolerance':config['geometry_referee']['tolerance_m']=1e-6
     elif mode=='legacy_1nm':config['geometry_referee']['tolerance_m']=1e-9
+    elif mode=='legacy_10nm':config['geometry_referee'].update(id='clipped_cylinder_convex256_nano10_v2',tolerance_m=1e-8)
     else:config['geometry_referee']['id']='old_whole_shaft'
-    env=SimpleNamespace(config=SimpleNamespace(linear_speed=.001,linear_acceleration=.005))
+    env=object.__new__(LearningEnvironment);env.config=SimpleNamespace(linear_speed=.001,linear_acceleration=.005)
     with pytest.raises(ValueError,match='Geometry referee'):make_session(env,config)

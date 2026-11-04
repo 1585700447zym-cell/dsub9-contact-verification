@@ -11,7 +11,7 @@ def make_controller(profile=None):
     return controller
 
 
-def session_class(profile):
+def session_class(profile, *, search_xy_limit_m_s=.00045):
     contract = profile_config(profile)
     from .five_axis_session import session_class as original_class
     Base = original_class()
@@ -39,13 +39,15 @@ def session_class(profile):
             try:
                 command, log = compose_command(base, action, profile=self.profile_id, phase=phase, enabled=snapshot.residual_enabled,
                     previous_limited=self.env.command.copy(), dt=self.env.config.control_period,
-                    reference_xy=reference, radius=self.controller.config.spiral_radius_m)
+                    reference_xy=reference, radius=self.controller.config.spiral_radius_m,
+                    search_xy_limit_m_s=search_xy_limit_m_s)
             except ReferenceEnvelopeInfeasible:
                 reason = 'RESIDUAL_REFERENCE_INFEASIBLE'
                 self.controller._fail(self.policy_observation(self.env.observe()), reason)
                 self._finish(reason)
                 command, log = compose_command([0.] * 6, action, profile=self.profile_id, phase='FAILED', enabled=False,
-                    previous_limited=self.env.command.copy(), dt=self.env.config.control_period)
+                    previous_limited=self.env.command.copy(), dt=self.env.config.control_period,
+                    search_xy_limit_m_s=search_xy_limit_m_s)
                 log['reference_failure'] = reason
             self.last_action_log = log
             self.previous_residual = np.asarray(log['applied_residual'])[[0, 1, 3, 4, 5]].tolist()

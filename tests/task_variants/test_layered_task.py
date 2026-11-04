@@ -23,11 +23,14 @@ def test_aligned_and_real_interference():
     assert not m.layered_pin_fit(row(110e-6))
 
 @pytest.mark.parametrize('overlap_nm,accepted',[
-    (.9,True),(1.1,True),(5.,True),(9.9,True),(10.1,False),(1000.,False)])
-def test_only_nanometre_contact_overlap_is_accepted(overlap_nm,accepted):
+    (.9,True),(1.1,True),(5.,True),(9.9,True),(10.1,True),
+    (50.,True),(99.9,True),(100.1,False),(1000.,False)])
+def test_geometry_overlap_boundary_is_100nm(overlap_nm,accepted):
     m=api();state=row(100e-6+overlap_nm*1e-9)
+    from tools.model.clearance_task import finish_criteria
     assert m.layered_pin_clearance_m(state)==pytest.approx(-overlap_nm*1e-9,abs=1e-14)
     assert m.layered_pin_fit(state) is accepted
+    assert m.functional_finish(state,finish_criteria()) is accepted
 
 def test_archived_wide_entry_counterexample_is_resolved_without_changing_old_referee():
     m=api()
@@ -64,7 +67,7 @@ def test_quaternion_scale_and_sign_do_not_change_geometry():
     ('velocity_world',[float('nan')]*6)])
 def test_other_functional_conditions_remain_required(field,value):
     m=api();from tools.model.clearance_task import finish_criteria
-    r=row(100e-6+5e-9)
+    r=row(100e-6+50e-9)
     assert m.layered_pin_fit(r)
     r[field]=value
     assert not m.functional_finish(r,finish_criteria())
@@ -73,6 +76,17 @@ def test_pin_only_checker_does_not_replace_depth_or_stability():
     m=api();from tools.model.clearance_task import finish_criteria
     r=row(z=-.002)
     assert m.layered_pin_fit(r) and not m.functional_finish(r,finish_criteria())
+
+def test_saved_success_hold_uses_100nm_boundary_for_every_frame():
+    api()
+    from tools.learning.five_axis_preparation import verify_success_hold
+    from tools.model.clearance_task import finish_criteria
+    trace=[dict(row(100e-6+50e-9),time_s=i*.002) for i in range(51)]
+    verify_success_hold(trace,task_end_time_s=.1,period=.002,criteria=finish_criteria())
+    trace[25]['position_m']=[100e-6+100.1e-9,0.,0.]
+    with pytest.raises(ValueError,match='success/hold'):
+        verify_success_hold(trace,task_end_time_s=.1,period=.002,criteria=finish_criteria())
+
 
 def test_layer_clipping_and_zero_tilt_boundaries():
     m=api();R=np.eye(3)
@@ -112,12 +126,12 @@ def test_nano_contact_still_requires_continuous_hold_and_respects_peak_guard():
         s.guard_latched=False;s.task_finished=False
         return s
 
-    def tick(s,t,overlap_nm=5.):
+    def tick(s,t,overlap_nm=50.):
         s.env.data.time=t
         s._post_task_cycle(dict(row(100e-6+overlap_nm*1e-9),time_s=t))
 
     s=session()
-    for t,overlap in [(0.,5.),(.08,10.1),(.1,5.),(.18,5.)]:tick(s,t,overlap)
+    for t,overlap in [(0.,50.),(.08,100.1),(.1,50.),(.18,50.)]:tick(s,t,overlap)
     assert not s.task_finished
     tick(s,.2)
     assert s.task_finished and s.reason=='GEOMETRIC_SUCCESS'

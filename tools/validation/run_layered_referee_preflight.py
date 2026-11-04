@@ -1,4 +1,4 @@
-"""Bounded layered nano10 v5 task verification. No learning."""
+"""Bounded layered nano100 v6 task verification. No learning."""
 import argparse
 from dataclasses import asdict
 from datetime import datetime, timezone, timedelta
@@ -11,8 +11,8 @@ from pathlib import Path
 import time
 
 ROOT = Path(__file__).resolve().parents[2]
-DELIVERY = ROOT/'deliverables/task_variants/layered_referee_nano10_20261101'
-TASK_ID = 'dsub9_clearance120_layered_nano10_v5'
+DELIVERY = ROOT/'deliverables/task_variants/layered_referee_nano100_20261104'
+TASK_ID = 'dsub9_clearance120_layered_nano100_v6'
 
 
 from tools.validation.run_clearance_preflight import write, now, archive_episode, record_error
@@ -115,7 +115,7 @@ def prepare(folder):
     guards=GuardCandidateConfig(math.radians(2.5),math.radians(.5))
     env=LearningEnvironment(guard_config=guards,model_xml=build_task_xml())
     session=make_session(env)
-    config=dict(task_id=TASK_ID,parent_task_id='dsub9_clearance120_layered_25s_v4',geometry_referee=referee_metadata(),common_task_change='Geometry acceptance tolerance only: permits at most 10nm overlap; same layered geometry and other success conditions; common to all baselines',rotation_risk=asdict(RotationRiskConfig()),search_load=asdict(SearchLoadConfig()),controller_id='B2_reference_search_v7',search_composition=session.controller_factory().metadata(),reference_release=dict(mode='XY_reference_and_admittance_offset_velocity',max_rebases=1,per_segment_xy_budget_m=.0005,renews_budget=True),success_mode='functional_layered_geometry_depth_stability',precision_secondary='xy80um_angle0.5deg',finish_criteria=finish_criteria(),guard_config=asdict(guards),
+    config=dict(task_id=TASK_ID,parent_task_id='dsub9_clearance120_layered_nano10_v5',geometry_referee=referee_metadata(),common_task_change='Geometry acceptance tolerance only: permits at most 100nm overlap; same layered geometry and other success conditions; common to all baselines',rotation_risk=asdict(RotationRiskConfig()),search_load=asdict(SearchLoadConfig()),controller_id='B2_reference_search_v7',search_composition=session.controller_factory().metadata(),reference_release=dict(mode='XY_reference_and_admittance_offset_velocity',max_rebases=1,per_segment_xy_budget_m=.0005,renews_budget=True),success_mode='functional_layered_geometry_depth_stability',precision_secondary='xy80um_angle0.5deg',finish_criteria=finish_criteria(),guard_config=asdict(guards),
                 dynamic_config=asdict(env.config),drive_limits=asdict(session.controller_factory().drive_config),b2_config=asdict(session.controller_factory().config),
                 cases=case_specs(),model_sha256=hashlib.sha256(xml.encode()).hexdigest(),
                 display='Actual collision geometry; original narrow-hole female visual hidden',

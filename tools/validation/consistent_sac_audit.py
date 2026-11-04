@@ -146,7 +146,7 @@ def _verify_initial_pose(state, case):
         raise ValueError('Actual initial pose differs from registered case')
 
 
-def audit_archive(folder, reg, job, *, source_trainer=None):
+def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=None, force_recovery_group=None):
     """Read immutable bytes back before any replay publication or update."""
     from tools.learning.consistent_sac import VERSION, execution_contract
     from tools.learning.five_axis_replay import FiveAxisReplay
@@ -157,9 +157,23 @@ def audit_archive(folder, reg, job, *, source_trainer=None):
         raise ValueError('Used XML byte digest differs')
     raw = json.loads(gzip.decompress((folder/'episode.json.gz').read_bytes()))
     contract = execution_contract()
+    learning_version = VERSION
+    if force_recovery_group is not None:
+        if time_budget_group is not None: raise ValueError('Choose one explicit protocol')
+        time_budget_group = force_recovery_group
+    base_time_contract = None
+    if time_budget_group is not None:
+        from tools.learning.time_budget_trial import protocol_config
+        contract = base_time_contract = protocol_config(time_budget_group)
+        learning_version = None  # Frozen diagnostic, never relabel old training.
+    if force_recovery_group is not None:
+        from tools.learning.force_recovery_trial import protocol_config
+        contract = protocol_config(force_recovery_group)
+        if raw.get('force_recovery_protocol') != contract:
+            raise ValueError('Force recovery protocol differs')
     if (reg['execution_contract'] != contract or receipt.get('execution_contract') != contract or
             raw.get('execution_contract') != contract or raw.get('version') != contract['version'] or
-            raw.get('learning_version') != VERSION or raw.get('observation_version') != contract['observation_version'] or
+            raw.get('learning_version') != learning_version or raw.get('observation_version') != contract['observation_version'] or
             raw.get('case') != job['case'] or receipt.get('case') != job['case'] or
             raw.get('seed') != job['seed'] or receipt.get('seed') != job['seed']):
         raise ValueError('Execution/interface/case/seed binding differs')
@@ -183,8 +197,53 @@ def audit_archive(folder, reg, job, *, source_trainer=None):
         raise ValueError('Control-cycle/substep/initialization accounting differs')
     dynamic = receipt['dynamic_config']; period, dt = dynamic['control_period'], dynamic['timestep']
     cfg = receipt['controller_config']
+    if time_budget_group is not None:
+        controller_events = evidence.get('controller_events')
+        if (cfg != contract['controller_config'] or raw.get('time_budget_protocol') != base_time_contract or
+                receipt['final_reason'] in ('SEARCH_BUDGET_EXHAUSTED', 'LOADED_ROTATION_RISK') or
+                not isinstance(controller_events, list) or
+                any(e.get('reason') in ('SEARCH_BUDGET_EXHAUSTED', 'LOADED_ROTATION_RISK')
+                    for e in controller_events)):
+            raise ValueError('Time-only retry/warning protocol differs')
     if (period != .002 or dt != .0002 or cfg['total_action_time_s'] != 30. or cfg['search_time_s'] != 18.):
         raise ValueError('Frozen native/control/30-second task clock differs')
+    recovery_proof = None
+    if force_recovery_group is not None:
+        from tools.validation.force_recovery_audit import verify_recovery_evidence
+        record = raw['force_recovery']
+        if record != evidence.get('force_recovery') or record != receipt.get('force_recovery'):
+            raise ValueError('Recovery record binding differs')
+        cumulative = raw['cumulative_peaks']
+        if cumulative != evidence.get('cumulative_peaks') or cumulative != receipt.get('cumulative_peaks'):
+            raise ValueError('Cumulative peak binding differs')
+        for key in ('force_N','torque_G_Nm','penetration_m'):
+            if abs(cumulative[key]-max(p[key] for p in raw['cycle_peaks']))>1e-9:
+                raise ValueError('Cumulative/native cycle peaks differ')
+        for key,limit,reason in (('torque_G_Nm',.1,'TORQUE_LIMIT'),('penetration_m',.00003,'PENETRATION_LIMIT')):
+            if (cumulative[key]>limit)!=(reason in facts['contact_reasons']):
+                raise ValueError('Cumulative non-force protection fact differs')
+        recovery_proof = verify_recovery_evidence(record,cycle_peaks=raw['cycle_peaks'],facts=facts,
+            end_time_s=trace[-1]['time_s'],timestep=dt,control_period=period,
+            wait_stable_s=cfg['wait_stable_s'],recovery_time_limit_s=dynamic.get('recovery_time_limit_s',1.))
+        for event in record['events']:
+            boundaries=[('FORCE_LIMIT',event['trigger_time_s'])]
+            if event['status']=='COMPLETED':
+                boundaries.extend([('RECOVERY_ACCEPTED',event['retract_start_time_s']),
+                    ('RECOVERY_DISTANCE_REACHED',event['retracted_time_s']),
+                    ('B2_RECOVERY_RESUMED',event['resume_time_s'])])
+            for reason,t in boundaries:
+                if not any(reason in e['reason'].split('+') and abs(e['time_s']-t)<1e-9
+                           for e in evidence['environment_events']):
+                    raise ValueError('Recovery ledger lacks original physical event')
+        by_step={round(s['time_s']/dt):s for s in record['samples']}
+        for state in trace:
+            sample=by_step.get(round(state['time_s']/dt))
+            if sample is not None and (abs(sample['position_z_m']-state['position_m'][2])>1e-9 or
+                    abs(sample['force_N']-np.linalg.norm(state['contact_wrench_M'][:3]))>1e-9 or
+                    abs(sample['linear_m_s']-np.linalg.norm(state['velocity_world'][:3]))>1e-9 or
+                    abs(sample['angular_rad_s']-np.linalg.norm(state['velocity_world'][3:]))>1e-9 or
+                    not np.allclose(sample['command_world'],state['limited_command_world'],rtol=0,atol=1e-12)):
+                raise ValueError('Native recovery samples disagree with control trace')
     spans = field_slices(); schema = raw['observation_schema']
     if len(schema) != len(spans):
         raise ValueError('140-dimensional observation schema differs')
@@ -194,6 +253,11 @@ def audit_archive(folder, reg, job, *, source_trainer=None):
             raise ValueError('Observation schema/order differs')
         if name in ('total_budget_remaining_s', 'phase_elapsed_s') and field['scale'] != [30.]:
             raise ValueError('Observation time scale differs from 30 seconds')
+        if time_budget_group is not None and name in ('searches_remaining', 'recoveries_remaining'):
+            if field['scale'] != [1.] or field.get('source') != 'time_only_retry_permission':
+                raise ValueError('Time-only retry observation schema differs')
+        if force_recovery_group is not None and name=='latched_guards' and field.get('source')!='active_guard_blockers_after_verified_force_recovery':
+            raise ValueError('Force recovery permission semantics differ')
     if schema[0]['scale'] != ([5.]*3+[.1]*3)*4:
         raise ValueError('N2 force/torque history scale differs')
     auditor = _auditor(); auditor._finite(raw)
@@ -216,9 +280,21 @@ def audit_archive(folder, reg, job, *, source_trainer=None):
         auditor._observation(row['observation'][:137], trace, cycle, legacy)
         auditor._observation(row['next_observation'][:137], trace, cycle+1, legacy)
         for observed, index in ((row['observation'], cycle), (row['next_observation'], cycle+1)):
+            if recovery_proof is not None:
+                t=trace[index]['time_s']
+                pending=any(e['trigger_time_s']-1e-9 <= t and
+                    (e['status']!='COMPLETED' or t<e['resume_time_s']-1e-9)
+                    for e in raw['force_recovery']['events'])
+                if pending and permission(observed):
+                    raise ValueError('Policy enabled during unresolved force recovery')
             remaining = max(0., 30.-trace[index]['time_s'])/30.
             if abs(observed[spans['total_budget_remaining_s'].start]-remaining) > 1e-6:
                 raise ValueError('Remaining-time observation differs from task clock')
+            if time_budget_group is not None:
+                allowed = float(trace[index]['time_s'] < 30. - 1e-10)
+                if any(abs(observed[spans[name].start]-allowed) > 1e-6
+                       for name in ('searches_remaining', 'recoveries_remaining')):
+                    raise ValueError('Time-only retry observation differs from task clock')
         scale = np.array([.001]*3+[.03]*3)
         failed = log.get('reference_failure') == 'RESIDUAL_REFERENCE_INFEASIBLE'
         if not failed and (inputs['phase'] != phase or log['enabled'] != active or
@@ -229,9 +305,13 @@ def audit_archive(folder, reg, job, *, source_trainer=None):
         if (not np.allclose(inputs['previous_limited_command'], obs[spans['previous_limited_command']]*scale, rtol=0, atol=2e-9) or
                 abs(inputs['dt']-period) > 1e-10):
             raise ValueError('Previous command/clock binding differs')
-        _, expected = compose_command(inputs['base_command'], log['raw_action'], profile='G1',
-            phase=inputs['phase'], enabled=log['enabled'], previous_limited=inputs['previous_limited_command'],
-            dt=inputs['dt'], reference_xy=log.get('reference_xy_m'), radius=log.get('reference_radius_limit_m', .0004))
+        if time_budget_group is None:
+            _, expected = compose_command(inputs['base_command'], log['raw_action'], profile='G1',
+                phase=inputs['phase'], enabled=log['enabled'], previous_limited=inputs['previous_limited_command'],
+                dt=inputs['dt'], reference_xy=log.get('reference_xy_m'), radius=log.get('reference_radius_limit_m', .0004))
+        else:
+            from tools.learning.global_residual_action import recompose_logged_command
+            _, expected = recompose_logged_command(log, search_xy_limit_m_s=contract['search_xy_limit_m_s'])
         verify_composition_log(log, expected, obs, cfg)
         verify_reference_prediction(log, trace[cycle], cfg, dynamic['reference_lead_m'])
         if inputs['phase'] == 'SEARCH' and log['enabled']:
@@ -247,17 +327,27 @@ def audit_archive(folder, reg, job, *, source_trainer=None):
                 log['actual_end_limited_command'], expected['predicted_limited_command'], rtol=0, atol=1e-12):
             raise ValueError('Ordinary drive differs from reconstructed limit')
     verify_rewards(raw, final_reason=receipt['final_reason'])
-    stop = auditor._stop_math(dict(trace=trace, events=evidence['environment_events'], stop_samples=evidence['stop_samples']),
-        dict(receipt, audit_end_time_s=trace[-1]['time_s'], stop_time_s=evidence['stop_time_s']), dt, period)
+    from tools.validation.native_stop_clock import verify_stopping_interval
+    stop = verify_stopping_interval(dict(trace=trace, events=evidence['environment_events'], stop_samples=evidence['stop_samples']),
+        dict(receipt, audit_end_time_s=trace[-1]['time_s'], stop_time_s=evidence['stop_time_s']), dt, period,
+        recovery_proof=recovery_proof)
     verify_task_clock(stop_time=evidence['stop_time_s'], task_end_time=evidence['task_end_time_s'],
         audit_end_time=trace[-1]['time_s'], settle_time=cfg['settle_time_s'])
     outcome = raw['outcome']
-    classified = 'CONTACT_GUARD' if facts['contact_reasons'] else (
+    unresolved_contact = bool(facts['contact_reasons'])
+    if recovery_proof is not None and recovery_proof['all_force_events_recovered']:
+        unresolved_contact=False
+    classified = 'CONTACT_GUARD' if unresolved_contact else (
         'FULL_SUCCESS' if receipt['final_reason'] == 'GEOMETRIC_SUCCESS' else 'TASK_FAILURE')
     if (outcome['simulation_valid'] is not True or outcome['physical_stopped'] is not True or
             outcome['task_outcome'] != classified or receipt['outcome'] != classified):
         raise ValueError('Task outcome differs from physical facts')
     if classified == 'FULL_SUCCESS':
+        if recovery_proof is not None and not recovery_proof['all_force_events_recovered']:
+            raise ValueError('Success requires all force events fully recovered')
+        if recovery_proof is not None and (raw['cumulative_peaks']['torque_G_Nm']>=receipt['finish_criteria']['torque_Nm'] or
+                raw['cumulative_peaks']['penetration_m']>=receipt['finish_criteria']['penetration_m']):
+            raise ValueError('Historical non-force protection forbids success')
         verify_success_hold(trace, task_end_time_s=evidence['task_end_time_s'], period=period,
                             criteria=receipt['finish_criteria'])
     reference = verify_reference_checks(raw, receipt)
@@ -269,4 +359,12 @@ def audit_archive(folder, reg, job, *, source_trainer=None):
         source_checkpoint_sha256=receipt.get('source_checkpoint_sha256'),
         execution_contract_sha256=hashlib.sha256(canonical(contract).encode('utf-8')).hexdigest(),
         audit_physical_initializations=0, audit_optimizer_updates=0)
+    if time_budget_group is not None:
+        proof.update(time_only_retry_features_verified=True, search_speed_um_s=time_budget_group)
+    if recovery_proof is not None:
+        for key in ('had_force_recovery','force_recovery_count','completed_force_recovery_count','peak_force_N'):
+            if outcome.get(key)!=recovery_proof[key]:raise ValueError('Outcome recovery history differs')
+        if outcome.get('force_recovery_fatal_reasons')!=raw['force_recovery']['fatal_reasons']:
+            raise ValueError('Outcome fatal recovery history differs')
+        proof['force_recovery']=recovery_proof
     return raw, receipt, proof

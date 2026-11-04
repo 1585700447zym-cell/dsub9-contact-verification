@@ -90,9 +90,9 @@ def environment_class():
     return RecordedReferenceEnvironment
 
 
-def session_class():
+def session_class(*, search_xy_limit_m_s=.00045):
     from .consistent_reference import session_class as repaired
-    Base = repaired('G1')
+    Base = repaired('G1', search_xy_limit_m_s=search_xy_limit_m_s)
 
     class RecordedReferenceSession(Base):
         def _command_for_action(self, snapshot, action):

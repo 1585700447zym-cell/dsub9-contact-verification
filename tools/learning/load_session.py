@@ -8,7 +8,7 @@ class LoadReliefSession(FunctionalCandidateSession):
         command=super()._command_for_action(snapshot,action)
         c=self.controller
         if c.reference_release_requested:
-            e=self.env;facts=e.guard_facts
+            e=self.env;facts=self._guard_failure_facts()
             if (e.phase!='RUNNING' or not facts['simulation_valid'] or
                     facts['contact_reasons'] or facts['motion_reasons'] or c.phase!='UNLOAD'):
                 raise RuntimeError('Reference release requires active unguarded load relief')

@@ -154,11 +154,15 @@ class CartesianEnvironment:
                             'velocity_world':self.last_finite['velocity_world']}
         self.events.append({'time_s':float(self.data.time),'reason':reason,'phase':'STOPPING'})
 
+    def recovery_count_exhausted(self):
+        """Legacy single recovery; explicit time-budget adapters may override."""
+        return self.recovery_count>=1
+
     def request_recovery(self):
         if not self._state_valid():
             self._terminate('INVALID_SIMULATION');raise RuntimeError('Live state invalid for recovery')
         c=self.config;row=self.observe()
-        if (self.phase!='STOPPING' or self.recovery_count>=1 or
+        if (self.phase!='STOPPING' or self.recovery_count_exhausted() or
             np.linalg.norm(row['velocity_world'][:3])>c.stopped_speed or
             np.linalg.norm(row['velocity_world'][3:])>c.stopped_angular_speed or
             np.linalg.norm(row['contact_wrench_M'][:3])>c.recovery_force_N or

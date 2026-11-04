@@ -15,9 +15,9 @@ def environment_class():
     return ConsistentReferenceEnvironment
 
 
-def session_class(profile='G1'):
+def session_class(profile='G1', *, search_xy_limit_m_s=.00045):
     from .global_residual_session import session_class as old_session
-    Base = old_session(profile)
+    Base = old_session(profile, search_xy_limit_m_s=search_xy_limit_m_s)
 
     class ConsistentReferenceSession(Base):
         def __init__(self, environment):
@@ -60,7 +60,7 @@ def session_class(profile='G1'):
             if e.reference_failure_pending:
                 e.reference_failure_pending = False
                 obs = self.policy_observation(row)
-                if c.search_count < c.config.max_searches:
+                if not c.search_count_exhausted():
                     c._transition('WAIT_RECOVERY', obs, 'SEARCH_EXHAUSTED')
                     self.recovery_state, self.wait_start = 'WAIT_STOP', row['time_s']
                 else:

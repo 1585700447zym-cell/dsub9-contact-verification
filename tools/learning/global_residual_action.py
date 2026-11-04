@@ -41,25 +41,33 @@ def map_residual(action, *, profile, enabled):
     return result
 
 
-def _stage_limit(command, phase):
+def _search_xy_limit(value):
+    if (type(value) not in (int,float) or not math.isfinite(value)
+            or not 0<value<=.001):
+        raise ValueError('Search XY limit must be positive and within the unchanged 1 mm/s drive limit')
+    return float(value)
+
+
+def _stage_limit(command, phase, *, search_xy_limit_m_s=.00045):
     value = np.asarray(command, dtype=float).copy()
     if value.shape != (6,) or not np.isfinite(value).all():
         raise ValueError('Finite six-axis baseline command required')
     if phase in ('INSERT', 'SEARCH'):
-        value[:2] = np.clip(value[:2], -.0005 if phase == 'INSERT' else -.00045,
-                           .0005 if phase == 'INSERT' else .00045)
+        xy_limit=.0005 if phase=='INSERT' else search_xy_limit_m_s
+        value[:2] = np.clip(value[:2], -xy_limit, xy_limit)
         value[3:] = np.clip(value[3:], -.02, .02)
     return value
 
 
 def compose_command(base, action, *, profile, phase, enabled, previous_limited, dt,
-                    reference_xy=None, radius=.0004):
+                    reference_xy=None, radius=.0004, search_xy_limit_m_s=.00045):
+    search_xy_limit_m_s=_search_xy_limit(search_xy_limit_m_s)
     action = normalized_action(action)
     if enabled and phase not in ('INSERT', 'SEARCH'):
         raise ValueError('Residual forbidden in this stage')
     residual = map_residual(action, profile=profile, enabled=enabled)
-    zero = _stage_limit(base, phase)
-    total = _stage_limit(np.asarray(base) + residual, phase)
+    zero = _stage_limit(base, phase, search_xy_limit_m_s=search_xy_limit_m_s)
+    total = _stage_limit(np.asarray(base) + residual, phase, search_xy_limit_m_s=search_xy_limit_m_s)
     velocity = [.001] * 3 + [.03] * 3
     acceleration = [.005] * 3 + [.3] * 3
     low = limit_command(zero, previous_limited, dt, velocity, acceleration)
@@ -101,8 +109,27 @@ def compose_command(base, action, *, profile, phase, enabled, previous_limited, 
     log.update(stage_limited_total=total.tolist(), predicted_limited_command=high.tolist(),
         zero_residual_limited_command=low.tolist(), effective_command_delta=(high - low).tolist())
     log.update(profile=profile, contract_version=profile_config(profile)['version'],
+        search_xy_limit_m_s=search_xy_limit_m_s,
         pre_stage_total=(np.asarray(base) + residual).tolist(),
         stage_clip_delta=(np.asarray(base) + residual - np.asarray(log['unfiltered_stage_limited_total'])).tolist(),
         drive_clip_delta=(np.asarray(log['unfiltered_stage_limited_total']) -
                           limit_command(log['unfiltered_stage_limited_total'], previous_limited, dt, velocity, acceleration)).tolist())
     return total, log
+
+
+def recompose_logged_command(log, *, search_xy_limit_m_s):
+    """Pure audit entry, bound to an independently registered SEARCH limit.
+
+    Old logs without this field mean 450 um/s. Observation/source/physical
+    binding and comparison of the returned expected log remain auditor duties.
+    """
+    registered=_search_xy_limit(search_xy_limit_m_s)
+    declared=_search_xy_limit(log.get('search_xy_limit_m_s',.00045))
+    if declared!=registered:
+        raise ValueError('Logged search XY limit differs from registered limit')
+    inputs=log['composition_inputs']
+    return compose_command(inputs['base_command'],log['raw_action'],profile=log['profile'],
+        phase=inputs['phase'],enabled=log['enabled'],
+        previous_limited=inputs['previous_limited_command'],dt=inputs['dt'],
+        reference_xy=log.get('reference_xy_m'),radius=log.get('reference_radius_limit_m',.0004),
+        search_xy_limit_m_s=registered)

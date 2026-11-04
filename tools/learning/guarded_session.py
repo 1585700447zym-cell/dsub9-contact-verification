@@ -12,8 +12,15 @@ class CandidateEpisodeSession(EpisodeSession):
         super().__init__(environment=environment, controller_factory=controller_factory,
                          finish_criteria=finish_criteria, geometry_checker=geometry_checker)
 
+    def _guard_failure_facts(self):
+        """Response facts; the default retains every historical guard as fatal."""
+        return self.env.guard_facts
+
+    def _adjudication_facts(self):
+        return self._guard_failure_facts()
+
     def _post_task_cycle(self, row):
-        facts = self.env.guard_facts
+        facts = self._guard_failure_facts()
         if facts['contact_reasons'] or facts['motion_reasons']:
             # Suppress the legacy cumulative-load classifier, not the physical facts.
             self.guard_latched = True
@@ -31,7 +38,7 @@ class CandidateEpisodeSession(EpisodeSession):
         from tools.validation.native313_matrix_audit import actual_stop_pass
         from tools.validation.run_contact_candidate_stop import physical_tail_pass
         e = self.env
-        facts = e.guard_facts
+        facts = self._adjudication_facts()
         stopped = bool(self.done and e.phase == 'STOPPING' and
                        actual_stop_pass(e.stop_samples, e.events, self.stop_time,
                                         e.data.time, e.config.timestep) and
@@ -44,7 +51,7 @@ class CandidateEpisodeSession(EpisodeSession):
         # Candidate tests cannot establish the model-trust premise needed to learn
         # from a finite motion violation. No switch here can bypass that gate.
         outcome.update(valid_for_learning=False, model_scope_qualified=False,
-                       training_admitted=False, guard_facts=facts)
+                       training_admitted=False, guard_facts=e.guard_facts)
         return outcome
 
     def advance_cycle(self, action4):

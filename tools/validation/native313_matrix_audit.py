@@ -10,6 +10,11 @@ def actual_stop_start(events, decision_time):
         if current is None:continue
         if current=='STOPPING':
             if phase!='STOPPING':start=float(e['time_s'])
+            elif (e.get('reason')=='RECOVERY_FINAL_AUDIT_START' and
+                  e.get('physical_stop_preserved') is True and
+                  e.get('recovery_kind') in ('force','normal')):
+                # Explicit final audit epoch; the original physical stop stays logged.
+                start=float(e['time_s'])
         else:start=None
         phase=current
     return start

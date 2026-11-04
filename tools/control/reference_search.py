@@ -75,7 +75,7 @@ class ReferenceSearchRecovery(AxisSearchRecovery):
             # Reuse exhaustion/recovery before issuing an infeasible SEARCH
             # command; the session performs its existing physical stop.
             self.theta=next_theta
-            if self.search_count>=c.max_searches:result=self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
+            if self.search_count_exhausted():result=self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
             else:self._transition('WAIT_RECOVERY',obs,'SEARCH_EXHAUSTED');result=np.zeros(6)
             self.events[-1].update(reference_boundary_end=True,
                 reference_boundary_final_segment=next_theta>=c.spiral_radius_m/b,

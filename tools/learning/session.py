@@ -90,13 +90,32 @@ class EpisodeSession:
         from tools.validation.run_b1_baseline import geometric_finish
         return geometric_finish(row, criteria=self.finish_criteria)
 
+    def _resume_after_recovery(self):
+        from tools.control.search_recovery import resume_after_recovery
+        resume_after_recovery(self.env, self.controller.config.recovery_min_actual_m)
+
+    def _stable_for_recovery(self):
+        from tools.validation.run_b2_search import stable_for_recovery
+        return stable_for_recovery(self.env)
+
+    def _latched_guard_reason(self):
+        from tools.control.search_recovery import latched_contact_guard
+        return latched_contact_guard(self.env)
+
+    def _expected_recovery_stop_reasons(self):
+        return ('B2_SEARCH_EXHAUSTED', 'RECOVERY_DISTANCE_REACHED')
+
+    def _finish_peaks_ok(self, row):
+        e, criteria = self.env, self.finish_criteria
+        return (e.peaks['force_N'] < criteria['force_N'] and
+                e.peaks['torque_G_Nm'] < criteria['torque_Nm'] and
+                e.peaks['penetration_m'] < criteria['penetration_m'])
+
     def prepare_cycle(self):
         if not self._ready:
             raise RuntimeError('A successful reset is required')
         if self._cache is not None:
             return deepcopy(self._cache)
-        from tools.validation.run_b2_search import stable_for_recovery
-        from tools.control.search_recovery import resume_after_recovery
         e, c = self.env, self.controller.config
         row = e.observe()
         obs = self.policy_observation(row)
@@ -109,7 +128,7 @@ class EpisodeSession:
                 self._finish('TIME_LIMIT')
             if self.reason is None:
                 if self.recovery_state == 'WAIT_STOP':
-                    if stable_for_recovery(e):
+                    if self._stable_for_recovery():
                         try:
                             e.request_recovery()
                             self.recovery_state = 'RETRACT'
@@ -118,9 +137,9 @@ class EpisodeSession:
                     elif row['time_s'] - self.wait_start >= c.wait_stable_s:
                         self._finish('RECOVERY_NOT_STABLE')
                 elif self.recovery_state == 'WAIT_RESUME':
-                    if stable_for_recovery(e):
+                    if self._stable_for_recovery():
                         try:
-                            resume_after_recovery(e, c.recovery_min_actual_m)
+                            self._resume_after_recovery()
                             # Recovery resets actuator reference/command; adapters
                             # that expose that state need a fresh observation.
                             obs = self.policy_observation(e.observe())
@@ -156,14 +175,13 @@ class EpisodeSession:
         return deepcopy(self._cache)
 
     def _post_task_cycle(self, row):
-        from tools.control.search_recovery import latched_contact_guard
         FINISH = self.finish_criteria
         e, c = self.env, self.controller.config
         if e.phase == 'TERMINAL':
             self.reason = e.events[-1]['reason']
             self.task_finished = True
             return
-        guard_reason = latched_contact_guard(e)
+        guard_reason = self._latched_guard_reason()
         if guard_reason and not self.guard_latched:
             self.guard_latched = True
             e.events.append(dict(time_s=row['time_s'], reason='B2_LATCHED_' + guard_reason, phase=e.phase))
@@ -172,15 +190,14 @@ class EpisodeSession:
             why = e.events[-1]['reason']
             if self.recovery_state == 'RETRACT' and why == 'RECOVERY_DISTANCE_REACHED':
                 self.recovery_state, self.wait_start = 'WAIT_RESUME', row['time_s']
-            elif self.recovery_state in ('WAIT_STOP', 'WAIT_RESUME') and why in ('B2_SEARCH_EXHAUSTED', 'RECOVERY_DISTANCE_REACHED'):
+            elif self.recovery_state in ('WAIT_STOP', 'WAIT_RESUME') and why in self._expected_recovery_stop_reasons():
                 pass
             else:
                 self._finish(why)
         if self.reason is None and e.phase == 'RUNNING' and row['position_m'][2] >= -10e-6:
             self._finish('TARGET_PLANE_REACHED')
         if self.reason is not None:
-            peaks_ok = (e.peaks['force_N'] < FINISH['force_N'] and e.peaks['torque_G_Nm'] < FINISH['torque_Nm']
-                        and e.peaks['penetration_m'] < FINISH['penetration_m'])
+            peaks_ok = self._finish_peaks_ok(row)
             if (self.reason == 'TARGET_PLANE_REACHED' and self.completion_ready(row) and peaks_ok
                     and (self.geometry_checker is None or self.geometry_checker(row))):
                 if self.hold_start is None:

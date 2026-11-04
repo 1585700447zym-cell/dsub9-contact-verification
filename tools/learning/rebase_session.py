@@ -4,6 +4,10 @@ from tools.learning.load_session import LoadReliefSession
 
 
 class RebasedLoadReliefSession(LoadReliefSession):
+    def _rebase_permitted(self, count):
+        c = self.controller
+        return 0 < c.search_count < c.config.max_searches and count < c.config.max_searches-1
+
     def _command_for_action(self,snapshot,action):
         c=self.controller
         if not c.reference_release_requested:
@@ -11,7 +15,7 @@ class RebasedLoadReliefSession(LoadReliefSession):
         # Validate before the parent changes the drive reference. A reset is
         # permitted only with the original remaining-search entitlement.
         count=sum(e['reason']=='XY_ADMITTANCE_REBASED' for e in c.events)
-        if not 0<c.search_count<c.config.max_searches or count>=c.config.max_searches-1:
+        if not self._rebase_permitted(count):
             raise RuntimeError('No bounded admittance rebase entitlement')
         a=c.admittance
         offset=np.asarray(a.offset,dtype=float);velocity=np.asarray(a.velocity,dtype=float)

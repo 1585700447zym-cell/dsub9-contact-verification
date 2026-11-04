@@ -53,7 +53,7 @@ class LoadSearchRecovery(RiskSearchRecovery):
         else:
             if self.load_since is None:self.load_since=obs.time_s
             if obs.time_s-self.load_since>=c.hold_s-1e-12:
-                if self.search_count>=self.config.max_searches:
+                if self.search_count_exhausted():
                     return self._fail(obs,'SEARCH_BUDGET_EXHAUSTED')
                 self._transition('UNLOAD',obs,'SEARCH_LATERAL_LOAD')
                 self.events[-1].update(lateral_force_N=lateral,total_force_N=total,load_since_s=self.load_since,
