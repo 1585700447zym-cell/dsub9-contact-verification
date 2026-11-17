@@ -98,7 +98,7 @@ def layered_pin_fit(row):
     return layered_pin_clearance_m(row)>=-GEOMETRY_TOLERANCE_M
 
 
-def functional_finish(row,criteria):
+def functional_finish(row,criteria,*,force_warning_only=False):
     try:
         p=np.asarray(row['position_m']);q=np.asarray(row['quaternion_wxyz'])
         v=np.asarray(row['velocity_world']);w=np.asarray(row['contact_wrench_G']);penetration=row['penetration_m']
@@ -106,6 +106,7 @@ def functional_finish(row,criteria):
         if not np.isfinite(np.r_[p,q,v,w,penetration]).all():return False
         return bool(abs(p[2])<=criteria['z_tolerance_m']
             and np.linalg.norm(v[:3])<=criteria['linear_speed_m_s'] and np.linalg.norm(v[3:])<=criteria['angular_speed_rad_s']
-            and np.linalg.norm(w[:3])<criteria['force_N'] and np.linalg.norm(w[3:])<criteria['torque_Nm']
+            and (force_warning_only or np.linalg.norm(w[:3])<criteria['force_N'])
+            and np.linalg.norm(w[3:])<criteria['torque_Nm']
             and penetration<criteria['penetration_m'] and layered_pin_fit(row))
     except (ValueError,TypeError,KeyError):return False

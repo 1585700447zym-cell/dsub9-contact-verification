@@ -1,0 +1,38 @@
+{
+  "status": "DIAGNOSTIC_COMPLETE",
+  "intervention": {
+    "phase": "SEARCH",
+    "axis": "yaw",
+    "passive_output_gain": 0.25
+  },
+  "stage_initializations": 1,
+  "cumulative_initializations": 495,
+  "native_steps": 160000,
+  "optimizer_updates": 0,
+  "replay_publications": 0,
+  "task_outcome": "TASK_FAILURE",
+  "final_reason": "TIME_LIMIT",
+  "first_any_main_axial_overlap_s": 28.567999999960097,
+  "task_main_fit_count": 7,
+  "baseline_archive_sha256": "61d018a060ffe94b0b78a1a56c9a30d73d6b59079f590e8f2f87970a954c0d56",
+  "evidence_sha256": {
+    "registration.json": "1c2604637770c33ce081a2e9b7aa6cec4c3050e703b9386beaa950b82cd78ea0",
+    "launch.claim": "1ec1c586a30a6d6d83d4918447e3678553836411195b0eb5c066606902e63d8c",
+    "run_e01.py": "f9746b321eac342c89056d09a61010431128877f2e993eea37d13f461343c772",
+    "test_diagnostic.py": "cf4ee77ee241f71537f567193aa6d5d2a21624d6f587dd7cda499b6fa0605b1d",
+    "compare_e01.py": "8654c125ce4eaad20b5d45caa2ea92b026ac40afe48c9ab981804542bd012435",
+    "本轮结果.md": "6e60e4508f043567f146fbb9529d0d41c68cdfcc6686a006c3395501c2305927",
+    "run/E01_GRU/audit.json": "7d175e3ff671674f21a6b3c1ff7c76403148d62896146b4b17a7580d1feb5a31",
+    "run/E01_GRU/receipt.json": "8b085fc145078d0c4a812dbec51975892222eed131fa0de0650ce27f24b3906d",
+    "run/E01_GRU/model_used.xml": "1f9326852d31b4b1fcb484151fd8085f5b17953c46144d2f48a4e34b3c707912",
+    "run/E01_GRU/episode.json.gz": "eb455d46d941ab1fd0e4c2206349fe1b0acca234771ca77e224837311670c1ba",
+    "review/comparison.json": "15a3afad9739d57eb79d9aa2060d2c61fdfeea086801ba94151dbad086ae3bd3",
+    "review/comparison.md": "ca01c8a5d54b9837d0fd81849a68026229bbf0da5d875c3658cfb1f5ece1b30b"
+  },
+  "checks": {
+    "targeted_tests": 2,
+    "analysis_self_test": true,
+    "archived_gain_rows": 10914,
+    "frozen_inputs_unchanged": true
+  }
+}

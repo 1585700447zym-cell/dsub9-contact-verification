@@ -50,7 +50,10 @@ def _freeze_evidence(session, raw, started):
         wall_time_s=perf_counter() - started)
 
 
-def collect_episode(session, case, *, policy, seed=None, max_cycles=13500):
+def collect_episode(session, case, *, policy, seed=None, max_cycles=13500, cycle_policy=None):
+    """A cycle_policy may observe disabled cycles but can only request zero there."""
+    if cycle_policy is not None and policy is not None:
+        raise ValueError('Choose a single action source')
     if type(max_cycles) is not int or max_cycles <= 0:
         raise ValueError('Positive control-cycle ceiling required')
     started = perf_counter()
@@ -66,16 +69,23 @@ def collect_episode(session, case, *, policy, seed=None, max_cycles=13500):
         if hasattr(session, 'observations'):
             raw['observation_version'] = session.observations.version
             raw['observation_schema'] = deepcopy(session.observations.schema)
-        for _ in range(max_cycles):
+        for cycle in range(max_cycles):
             before = session.prepare_cycle()
             if permission(before.policy_observation) != before.residual_enabled:
                 raise ValueError('Collector permission mismatch')
             if before.residual_enabled:
                 raw['action_provider_calls'] += 1
+            if cycle_policy is not None:
+                action = normalized_action(cycle_policy(cycle, before.policy_observation,
+                                                        before.residual_enabled)).tolist()
+                if not before.residual_enabled and any(action):
+                    raise ValueError('Inactive cycle requested a nonzero action')
+            elif before.residual_enabled:
                 action = normalized_action(policy(before.policy_observation)).tolist()
-                raw['action_provider_successes'] += 1
             else:
                 action = [0.] * 5
+            if before.residual_enabled:
+                raw['action_provider_successes'] += 1
             result = session.advance_cycle(action)
             next_snapshot = result.next_snapshot
             raw['transitions'].append(dict(observation=list(before.policy_observation),

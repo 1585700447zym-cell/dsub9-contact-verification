@@ -1,0 +1,19 @@
+--- a/src/engine/engine_collision_gjk.c
++++ b/src/engine/engine_collision_gjk.c
+@@ -2266,6 +2266,16 @@
+   }
+   int i = res[0], j = res[1];
+ 
++  // An incident mesh feature may be orthogonal to the EPA separation direction.
++  // Keep the original EPA witness when clipping would use that unrelated face.
++  if (obj1->geom_type == mjGEOM_MESH && obj2->geom_type == mjGEOM_MESH) {
++    const mjtNum* normal = edgecon1 ? n2 + 3*j : n1 + 3*(edgecon2 ? j : i);
++    const mjtNum* epa_normal = edgecon1 ? dir : dir_neg;
++    if (dot3(normal, epa_normal) < mjFACE_TOL * norm3(epa_normal)) {
++      return;
++    }
++  }
++
+   // recover geom1 matching edge or face
+   if (edgecon1) {
+     copy3(face1, v1);

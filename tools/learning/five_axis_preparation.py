@@ -132,11 +132,12 @@ def verify_rewards(raw, *, final_reason):
             raise ValueError('N2 reward accounting differs')
 
 
-def verify_success_hold(trace, *, task_end_time_s, period, criteria):
+def verify_success_hold(trace, *, task_end_time_s, period, criteria, force_warning_only=False):
     from tools.model.layered_task import functional_finish
     end = round(task_end_time_s / period); hold = math.ceil(criteria['hold_s'] / period)
     stable = trace[max(0, end - hold):end + 1]
-    if len(stable) < hold + 1 or not all(functional_finish(row, criteria) for row in stable):
+    if len(stable) < hold + 1 or not all(
+            functional_finish(row, criteria, force_warning_only=force_warning_only) for row in stable):
         raise ValueError('Current nine-pin success/hold differs from task-window evidence')
 
 

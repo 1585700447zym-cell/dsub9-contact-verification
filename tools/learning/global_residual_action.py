@@ -30,8 +30,10 @@ def normalized_action(action):
     return value.copy()
 
 
-def map_residual(action, *, profile, enabled):
+def map_residual(action, *, profile, enabled, xy_residual_m_s=None):
     scale = profile_config(profile)['action_scale']
+    if xy_residual_m_s is not None:
+        scale[:2] = [xy_residual_m_s]*2
     value = normalized_action(action)
     if type(enabled) not in (bool, np.bool_):
         raise ValueError('Boolean permission required')
@@ -60,19 +62,24 @@ def _stage_limit(command, phase, *, search_xy_limit_m_s=.00045):
 
 
 def compose_command(base, action, *, profile, phase, enabled, previous_limited, dt,
-                    reference_xy=None, radius=.0004, search_xy_limit_m_s=.00045):
+                    reference_xy=None, radius=.0004, search_xy_limit_m_s=.00045,
+                    search_xy_residual_m_s=None, search_xy_acceleration_m_s2=.005):
     search_xy_limit_m_s=_search_xy_limit(search_xy_limit_m_s)
     action = normalized_action(action)
     if enabled and phase not in ('INSERT', 'SEARCH'):
         raise ValueError('Residual forbidden in this stage')
-    residual = map_residual(action, profile=profile, enabled=enabled)
+    xy_residual = search_xy_residual_m_s if phase == 'SEARCH' else None
+    residual = map_residual(action, profile=profile, enabled=enabled, xy_residual_m_s=xy_residual)
+    requested = residual if enabled else map_residual(action, profile=profile, enabled=True, xy_residual_m_s=xy_residual)
     zero = _stage_limit(base, phase, search_xy_limit_m_s=search_xy_limit_m_s)
     total = _stage_limit(np.asarray(base) + residual, phase, search_xy_limit_m_s=search_xy_limit_m_s)
     velocity = [.001] * 3 + [.03] * 3
     acceleration = [.005] * 3 + [.3] * 3
+    if phase == 'SEARCH':
+        acceleration[:2] = [search_xy_acceleration_m_s2]*2
     low = limit_command(zero, previous_limited, dt, velocity, acceleration)
     high = limit_command(total, previous_limited, dt, velocity, acceleration)
-    log = dict(raw_action=action.tolist(), requested_residual=map_residual(action, profile=profile, enabled=True).tolist(),
+    log = dict(raw_action=action.tolist(), requested_residual=requested.tolist(),
         enabled=bool(enabled), applied_residual=residual.tolist(),
         experience_action=(action if enabled else np.zeros(5)).tolist(), reference_checked=False,
         reference_filter_fraction=1., unfiltered_stage_limited_total=total.tolist())
@@ -117,7 +124,8 @@ def compose_command(base, action, *, profile, phase, enabled, previous_limited, 
     return total, log
 
 
-def recompose_logged_command(log, *, search_xy_limit_m_s):
+def recompose_logged_command(log, *, search_xy_limit_m_s, search_xy_residual_m_s=None,
+                             search_xy_acceleration_m_s2=.005):
     """Pure audit entry, bound to an independently registered SEARCH limit.
 
     Old logs without this field mean 450 um/s. Observation/source/physical
@@ -132,4 +140,5 @@ def recompose_logged_command(log, *, search_xy_limit_m_s):
         phase=inputs['phase'],enabled=log['enabled'],
         previous_limited=inputs['previous_limited_command'],dt=inputs['dt'],
         reference_xy=log.get('reference_xy_m'),radius=log.get('reference_radius_limit_m',.0004),
-        search_xy_limit_m_s=registered)
+        search_xy_limit_m_s=registered, search_xy_residual_m_s=search_xy_residual_m_s,
+        search_xy_acceleration_m_s2=search_xy_acceleration_m_s2)

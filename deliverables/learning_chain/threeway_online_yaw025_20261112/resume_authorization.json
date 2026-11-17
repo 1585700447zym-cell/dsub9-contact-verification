@@ -1,0 +1,13 @@
+{
+  "version": "authorized_C_replacement_v1",
+  "approved_user_text": "允许补采并完成 C 组",
+  "original_registration_sha256": "e240886577c2ed18d518b83514433191f07c7ade2c28153b5f9d00b5c6310fdc",
+  "resume_script_sha256": "597249173eda2a49dd4771daca6e89361089d72404a24a9405820cb5f2c33a40",
+  "prior_ledger_sha256": "291923356d0c9d8183601ade000b4e69b4c3da1eea21e66f9a638e39baf949ca",
+  "interrupted_receipt_sha256": "eb10cbd8bcd063a965673428584d77d15143c19375ef15de039a1f77ead3337b",
+  "maximum_total_attempts": 19,
+  "additional_replacement_attempts": 1,
+  "remaining_C_attempts": 6,
+  "retained_unknown_cost_attempts": 1,
+  "created_utc": "2026-11-13T01:12:42.647978+00:00"
+}

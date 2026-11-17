@@ -46,7 +46,10 @@ def policy_digest(trainer):
 
 def select(reg):
     from tools.learning.runtime import select_runtime,verify_runtime,active_package
-    select_runtime(RUNTIME,expected_digest=reg['runtime_sha256'])
+    from tools.learning.load_warning_mesh_contact_trial import RUNTIME_RECORD, RUNTIME_SHA256
+    pin = reg['runtime_sha256']
+    path = ROOT/RUNTIME_RECORD if pin == RUNTIME_SHA256 else RUNTIME
+    select_runtime(path,expected_digest=pin)
     return verify_runtime(active_package())
 
 

@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED_T04_CONTACT_FIX",
+  "dynamic_initializations": 1,
+  "cumulative_initializations": 488,
+  "native_steps": 160000,
+  "optimizer_updates": 0,
+  "training_admitted": false,
+  "dynamic_outcome": "TASK_FAILURE",
+  "reason": "TIME_LIMIT",
+  "stop_time_s": 29.99999999995676,
+  "maximum_penetration_um": 3.085269683006199,
+  "penetration_at_original_fault_time_um": 0.029863101405364773,
+  "peak_force_N": 4.310424005881489,
+  "actual_search_resumptions": 4,
+  "prior_evidence_unchanged": true,
+  "evidence_sha256": {
+    "runtime.json": "d586be6e14e338089937c13b8f2db67fbeff48121b320856c68e7b9e7b601102",
+    "mesh_multicontact_normal.patch": "3e822a9c8ef64f56df6ca743f8c2b1a062f0538c75c3094c2f9292cf6d2a16b0",
+    "frozen_before_with_control.json": "1c7b96438a1f205ea9a4dfb5dce6c2e310cb239d39f40ce8e0834c203da5676c",
+    "frozen_after.json": "407676fafb2b606ec7cd8276bf824db16f448e88a789393c7fbc3259db9e6150",
+    "static_recompute/pair_branch_summary.json": "8b4964a27bce8368c0c9112fe02b27ae29541f8e94f567f3beb06bf607f92966",
+    "static_recompute/input_manifest.json": "8ed5d35b11e80d7dfae6bedbc819a808a359813a87947065070a230d9a3bd28d",
+    "t04_repair_request.json": "afb5630c80cb9885831fe584619717816a10cb95422128f21c6d714dc3625401",
+    "T04_contact_fixed/audit.json": "ea7bda5db4a9eb2f14ef4e027d7b105cf093a1f9c7fd33d87f4793c445006fcc",
+    "T04_contact_fixed/receipt.json": "2c1d664e5411639273b7814dbaa80c88abf45944a06d40334ffa825fd0d2d124",
+    "T04_contact_fixed/episode.json.gz": "54e637c6efd091fb34e58ec8cff28eb7fe895dffa6338092e51e4d9adcb7ce98"
+  }
+}

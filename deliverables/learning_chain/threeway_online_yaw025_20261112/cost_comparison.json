@@ -1,0 +1,30 @@
+{
+  "groups": {
+    "A": {
+      "learning_rows": 77568,
+      "admitted_transitions": 55590,
+      "actor_parameters": 53194,
+      "optimizer_updates": 303,
+      "capture_wall_s": 4051.2431427000265
+    },
+    "B": {
+      "learning_rows": 77568,
+      "admitted_transitions": 55592,
+      "actor_parameters": 53194,
+      "optimizer_updates": 303,
+      "capture_wall_s": 3999.401640199998
+    },
+    "C": {
+      "learning_rows": 77568,
+      "admitted_transitions": 56534,
+      "actor_parameters": 104458,
+      "optimizer_updates": 303,
+      "capture_wall_s": 3060.9185644000063
+    }
+  },
+  "pairing": {
+    "same_initial_actor": true,
+    "initial_round_matching_learning_batches": 101,
+    "note": "Only initial zero-update collections can be identical; subsequent own-policy trajectories should be allowed to differ."
+  }
+}

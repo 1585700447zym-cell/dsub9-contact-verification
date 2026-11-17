@@ -48,16 +48,21 @@ def verify_recovery_evidence(record, *, cycle_peaks, facts, end_time_s,
             not _close(samples[-1]['time_s'],end_time_s) or
             any(not _close(b['time_s']-a['time_s'],timestep) for a,b in zip(samples,samples[1:]))):
         raise ValueError('Native force history must continue through final audit')
+    steps_per_cycle = round(control_period / timestep)
+    if steps_per_cycle < 1 or not _close(steps_per_cycle * timestep, control_period):
+        raise ValueError('Control cycle must contain an integer number of native steps')
     native_cycles={}
     for s in samples:
-        i=math.ceil(s['time_s']/control_period-1e-9)-1
+        # Each recorded native endpoint belongs to the interval that just ended.
+        tick = round(s['time_s'] / timestep)
+        i = (tick - 1) // steps_per_cycle
         if not 0 <= i < len(cycle_peaks):raise ValueError('Native sample outside recorded cycles')
         native_cycles.setdefault(i,[]).append(s)
         for key in ('force_N','torque_G_Nm','penetration_m'):
             if key in cycle_peaks[i] and s[key]>cycle_peaks[i][key]+1e-10:
                 raise ValueError('Native sample exceeds its saved cycle peak')
     for i,group in native_cycles.items():
-        if len(group)==round(control_period/timestep):
+        if len(group)==steps_per_cycle:
             for key in ('force_N','torque_G_Nm','penetration_m'):
                 if key in cycle_peaks[i] and not _close(max(s[key] for s in group),cycle_peaks[i][key]):
                     raise ValueError('Complete native cycle peak differs')
@@ -130,7 +135,7 @@ def verify_recovery_evidence(record, *, cycle_peaks, facts, end_time_s,
         # Every original over-force cycle needs its own supporting native sample.
         for i,p in enumerate(cycle_peaks):
             if p['force_N'] <= 5.: continue
-            group=[s for s in samples if i*control_period+1e-9 < s['time_s'] <= (i+1)*control_period+1e-9]
+            group = native_cycles.get(i, [])
             if not group or not _close(max(s['force_N'] for s in group),p['force_N']):
                 raise ValueError('Unaccounted native force peak')
             if any(s['force_N'] > 5. and not any(

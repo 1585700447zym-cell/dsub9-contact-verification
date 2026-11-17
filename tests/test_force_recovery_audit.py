@@ -46,6 +46,28 @@ def test_completed_recovery_requires_native_unload_actual_retraction_and_stable_
     assert verify(evidence())['all_force_events_recovered']
 
 
+def test_drifted_cycle_endpoint_belongs_to_ending_cycle_and_next_native_step_to_next_cycle():
+    record = evidence()
+    # The archived controller interval ending at 9.990 s accumulated ~3.4 ps drift.
+    endpoint = 9.990000000003395
+    shift = endpoint - record['samples'][0]['time_s']
+    for sample in record['samples']:
+        sample['time_s'] += shift
+    event = record['events'][0]
+    for key in ('trigger_time_s', 'last_over_force_time_s', 'unloaded_time_s',
+                'retract_start_time_s', 'retracted_time_s', 'resume_time_s', 'end_time_s'):
+        event[key] += shift
+    peaks = ([dict(force_N=0.) for _ in range(4994)] + [dict(force_N=5.6)]
+             + [dict(force_N=.1) for _ in range(352)])
+    args = dict(cycle_peaks=peaks, end_time_s=record['samples'][-1]['time_s'],
+                facts=dict(simulation_valid=True, invalid_reasons=[], motion_reasons=[],
+                           contact_reasons=['FORCE_LIMIT']))
+    assert api().verify_recovery_evidence(record, **args)['all_force_events_recovered']
+    record['samples'][1]['force_N'] = .2
+    with pytest.raises(ValueError, match='exceeds its saved cycle peak'):
+        api().verify_recovery_evidence(record, **args)
+
+
 @pytest.mark.parametrize('kind', ['missing_samples','peak','distance','unload','settle','second_force', 'torque','late_resume','count','phase','eligible','command','stable_penetration'])
 def test_forged_recovery_is_rejected(kind):
     record = deepcopy(evidence())

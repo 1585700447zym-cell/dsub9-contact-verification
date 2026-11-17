@@ -1,0 +1,33 @@
+{
+  "status": "DIAGNOSTIC_COMPLETE",
+  "intervention": {
+    "phase": "SEARCH",
+    "axis": "yaw",
+    "passive_output_gain": 0.25
+  },
+  "stage_initializations": 1,
+  "cumulative_initializations": 496,
+  "native_steps": 128090,
+  "optimizer_updates": 0,
+  "replay_publications": 0,
+  "task_outcome": "FULL_SUCCESS",
+  "success_time_s": 23.719999999971396,
+  "baseline_success_time_s": 23.745999999971335,
+  "task_main_fit_count": 9,
+  "analysis_self_test": true,
+  "reused_control_and_audit_implementation_identical": true,
+  "baseline_inputs_unchanged": true,
+  "evidence_sha256": {
+    "registration.json": "cff53804e21158a02ce33c8ae33cff95061fff4a453a12affaea80ada1452a39",
+    "launch.claim": "4424da647a089ed635e91dab0f7a0d53e80273a718e576d68e967483ab5bae73",
+    "run_e02.py": "3c18f7085e0801cd82da1b05be79d6f1acb127361ae8cd44cf3cc36155abcce9",
+    "compare_e02.py": "1e98d7bbdaec4c590f9c350b7e535d19cfc38fd0886f71110386d4139f76d7ce",
+    "本轮结果.md": "6c63702282711b77783b956cfff6101566b765228dc53946dc6aafd729a6fa2d",
+    "run/E02_GRU/audit.json": "7d60f85c216c88a76196d6fba34449342072e3a78e681ba36ac3eda66ce62fc7",
+    "run/E02_GRU/receipt.json": "f6161dc045ed71514f6e591e820df360366a7283141d6f964e8d6420ead34773",
+    "run/E02_GRU/episode.json.gz": "469f66ef9392cdf2d477089cbee2986ffbc11f6e2d3f7219c6bcee513b8211dc",
+    "run/E02_GRU/model_used.xml": "1f9326852d31b4b1fcb484151fd8085f5b17953c46144d2f48a4e34b3c707912",
+    "review/comparison.json": "5d8c52f6bb35c3a32b595e841f8c0173575fdfe9b926a37cda3e8f0d98da85ed",
+    "review/comparison.md": "d0bbd91bdef2235d633ffe0b0ab4d7747a4a2003ccb98404ff9ff495bb87749b"
+  }
+}

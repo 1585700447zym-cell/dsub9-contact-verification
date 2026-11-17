@@ -2,7 +2,6 @@
 from copy import deepcopy
 import numpy as np
 from tools.dynamics.reference_envelope import VERSION, ReferenceEnvelopeMixin, ReferenceIntersectionEmpty, constrain_xy
-from tools.dynamics.safety import limit_command
 
 
 def environment_class():
@@ -36,9 +35,8 @@ def session_class(profile='G1', *, search_xy_limit_m_s=.00045):
             e.configure_search_envelope(center, c.config.spiral_radius_m if active else None)
             self.last_action_log.update(reference_consistency_version=VERSION, contract_version=self.contract['version'])
             if active:
-                limited = limit_command(command, e.command, e.config.control_period,
-                    [.001]*3+[.03]*3, [.005]*3+[.3]*3)
-                desired = e.reference[:2]+limited[:2]*e.config.control_period
+                limited_xy = np.asarray(self.last_action_log['predicted_limited_command'][:2])
+                desired = e.reference[:2]+limited_xy*e.config.control_period
                 # This uses the same geometry rule, with actual pose held fixed
                 # for prediction. Live substeps use their own current actual pose.
                 try:

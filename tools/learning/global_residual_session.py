@@ -40,7 +40,7 @@ def session_class(profile, *, search_xy_limit_m_s=.00045):
                 command, log = compose_command(base, action, profile=self.profile_id, phase=phase, enabled=snapshot.residual_enabled,
                     previous_limited=self.env.command.copy(), dt=self.env.config.control_period,
                     reference_xy=reference, radius=self.controller.config.spiral_radius_m,
-                    search_xy_limit_m_s=search_xy_limit_m_s)
+                    search_xy_limit_m_s=search_xy_limit_m_s, **self.contract.get('search_authority', {}))
             except ReferenceEnvelopeInfeasible:
                 reason = 'RESIDUAL_REFERENCE_INFEASIBLE'
                 self.controller._fail(self.policy_observation(self.env.observe()), reason)

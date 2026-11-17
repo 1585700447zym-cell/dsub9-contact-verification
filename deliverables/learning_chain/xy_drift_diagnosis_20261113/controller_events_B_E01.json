@@ -1,0 +1,59 @@
+{
+  "controller_events": [
+    {
+      "time_s": 2.8179999999997225,
+      "phase": "UNLOAD",
+      "reason": "AXIAL_STALL"
+    },
+    {
+      "time_s": 3.4539999999996525,
+      "phase": "SEARCH",
+      "reason": "LOW_LOAD_SEARCH",
+      "progress_origin_z_m": 0.0009888057049292735
+    },
+    {
+      "time_s": 9.076000000005525,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED"
+    },
+    {
+      "time_s": 9.734000000003991,
+      "phase": "SEARCH",
+      "reason": "LOW_LOAD_SEARCH",
+      "progress_origin_z_m": 0.0010028770792121049
+    },
+    {
+      "time_s": 15.355999999990889,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED"
+    },
+    {
+      "time_s": 16.01199999998936,
+      "phase": "SEARCH",
+      "reason": "LOW_LOAD_SEARCH",
+      "progress_origin_z_m": 0.0010028770792121049
+    },
+    {
+      "time_s": 21.633999999976258,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED"
+    },
+    {
+      "time_s": 22.291999999974724,
+      "phase": "SEARCH",
+      "reason": "LOW_LOAD_SEARCH",
+      "progress_origin_z_m": 0.0010028770792121049
+    },
+    {
+      "time_s": 27.91399999996162,
+      "phase": "WAIT_RECOVERY",
+      "reason": "SEARCH_EXHAUSTED"
+    },
+    {
+      "time_s": 28.569999999960093,
+      "phase": "SEARCH",
+      "reason": "LOW_LOAD_SEARCH",
+      "progress_origin_z_m": 0.0010028770792121049
+    }
+  ]
+}

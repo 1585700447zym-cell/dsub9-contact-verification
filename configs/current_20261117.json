@@ -1,0 +1,20 @@
+{
+  "version": "publication_index_20261117",
+  "purpose": "Index only; not a loader or a training admission record",
+  "algorithm_entries": [
+    "tools/learning/five_axis_sac.py",
+    "tools/learning/recurrent_sac.py",
+    "tools/learning/threeway_online.py"
+  ],
+  "experiment": "deliverables/learning_chain/threeway_online_yaw025_20261112/registration.json",
+  "runtime_record": "deliverables/contact_invalid_t04_20261110/runtime.json",
+  "runtime_binary_included": false,
+  "checkpoints_included": false,
+  "search_passive_yaw_scale": 0.25,
+  "search_xy_residual_limit_um_s": 750,
+  "search_xy_acceleration_m_s2": 0.02,
+  "search_speed_parameter_um_s": 900,
+  "decision_dt_s": 0.002,
+  "geometry_tolerance_m": 1e-07,
+  "full_B2_C_accepted": false
+}

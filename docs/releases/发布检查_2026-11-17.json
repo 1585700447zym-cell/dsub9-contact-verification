@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-17",
+  "source_files_unchanged": true,
+  "original_head_and_index_unchanged": true,
+  "python_files_parsed": 503,
+  "model_resources_checked": 124,
+  "standalone_core_tests": {
+    "passed": 19,
+    "failed": 0,
+    "errors": 0,
+    "files": [
+      "tests/test_threeway_online.py",
+      "tests/test_recurrent_sac.py",
+      "tests/test_recurrent_replay.py"
+    ]
+  },
+  "initial_packaging_attempt": {
+    "passed": 13,
+    "failed": 6,
+    "errors": 5,
+    "corrected": "Added byte-identical search_450/search_900 frozen config files",
+    "remaining_scope_limit": "Five geometry reward tests require historical runtime/admission records excluded from this source snapshot; not claimed passing"
+  },
+  "full_suite_passed": false,
+  "new_scientific_training": 0,
+  "new_physical_trajectories": 0,
+  "synthetic_test_optimizer_updates": true,
+  "full_B2_C_accepted": false
+}

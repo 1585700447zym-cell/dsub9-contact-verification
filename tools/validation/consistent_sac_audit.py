@@ -146,16 +146,20 @@ def _verify_initial_pose(state, case):
         raise ValueError('Actual initial pose differs from registered case')
 
 
-def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=None, force_recovery_group=None):
-    """Read immutable bytes back before any replay publication or update."""
-    from tools.learning.consistent_sac import VERSION, execution_contract
-    from tools.learning.five_axis_replay import FiveAxisReplay
+def _read_archive(folder):
     folder = Path(folder); receipt = read(folder/'receipt.json')
-    if sha(folder/'episode.json.gz') != receipt['archive_sha256']:
+    archive = (folder/'episode.json.gz').read_bytes()
+    if hashlib.sha256(archive).hexdigest() != receipt['archive_sha256']:
         raise ValueError('Raw archive byte digest differs')
     if sha(folder/'model_used.xml') != receipt['model_xml_sha256']:
         raise ValueError('Used XML byte digest differs')
-    raw = json.loads(gzip.decompress((folder/'episode.json.gz').read_bytes()))
+    return json.loads(gzip.decompress(archive)), receipt
+
+
+def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=None, force_recovery_group=None):
+    """Read immutable bytes back before any replay publication or update."""
+    from tools.learning.consistent_sac import VERSION, execution_contract
+    raw, receipt = _read_archive(folder)
     contract = execution_contract()
     learning_version = VERSION
     if force_recovery_group is not None:
@@ -171,9 +175,24 @@ def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=No
         contract = protocol_config(force_recovery_group)
         if raw.get('force_recovery_protocol') != contract:
             raise ValueError('Force recovery protocol differs')
-    if (reg['execution_contract'] != contract or receipt.get('execution_contract') != contract or
+    if (reg.get('execution_contract') != contract or receipt.get('execution_contract') != contract or
             raw.get('execution_contract') != contract or raw.get('version') != contract['version'] or
-            raw.get('learning_version') != learning_version or raw.get('observation_version') != contract['observation_version'] or
+            raw.get('learning_version') != learning_version):
+        raise ValueError('Execution/interface/case/seed binding differs')
+    proof = _audit_physical(raw, receipt, reg, job, contract=contract, base_time_contract=base_time_contract,
+                            time_budget_group=time_budget_group, force_recovery_group=force_recovery_group)
+    source = verify_action_source(raw, receipt, job, source_trainer=source_trainer)
+    proof.update(verified=True, source_replay_verified=True, action_source=source,
+                 source_checkpoint_sha256=receipt.get('source_checkpoint_sha256'),
+                 execution_contract_sha256=hashlib.sha256(canonical(contract).encode('utf-8')).hexdigest())
+    return raw, receipt, proof
+
+
+def _audit_physical(raw, receipt, reg, job, *, contract, base_time_contract, time_budget_group,
+                    force_recovery_group, load_warning_only=False, load_warning_proof=None):
+    """Audit physics, stopping and outcome under a separately verified protocol."""
+    from tools.learning.five_axis_replay import FiveAxisReplay
+    if (raw.get('observation_version') != contract['observation_version'] or
             raw.get('case') != job['case'] or receipt.get('case') != job['case'] or
             raw.get('seed') != job['seed'] or receipt.get('seed') != job['seed']):
         raise ValueError('Execution/interface/case/seed binding differs')
@@ -184,9 +203,20 @@ def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=No
         if canonical(receipt[key]) != canonical(reg['common'][key]):
             raise ValueError('Common physical/runtime domain changed: ' + key)
     evidence = raw['evidence']; facts = evidence['guard_facts']
+    if load_warning_only:
+        from tools.learning.load_warning_trial import VERSION as WARNING_VERSION, blocking_facts
+        from tools.learning.load_warning_search_authority import VERSION as SEARCH_AUTHORITY_VERSION
+        from tools.learning.load_warning_mesh_contact_trial import VERSION as MESH_CONTACT_VERSION
+        if (contract['version'] not in (WARNING_VERSION, SEARCH_AUTHORITY_VERSION, MESH_CONTACT_VERSION)
+                or force_recovery_group is not None
+                or not isinstance(load_warning_proof, dict) or load_warning_proof.get('verified') is not True):
+            raise ValueError('Explicit load-warning protocol required')
+        if canonical(facts) != canonical(receipt['guard_facts']):
+            raise ValueError('Recorded warning facts differ')
+        facts = blocking_facts(facts)
     if (not facts['simulation_valid'] or facts['invalid_reasons'] or facts['motion_reasons'] or
             evidence['interface_fault'] is not None or evidence['diagnostic_errors'] or
-            canonical(facts) != canonical(receipt['guard_facts'])):
+            (not load_warning_only and canonical(facts) != canonical(receipt['guard_facts']))):
         raise ValueError('Invalid, unqualified-motion or incomplete evidence')
     rows, trace = raw['transitions'], raw['trace']; count = len(rows)
     if (not 0 < count <= MAX_CYCLES or len(trace) != count+1 or len(raw['cycle_peaks']) != count or
@@ -311,7 +341,8 @@ def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=No
                 dt=inputs['dt'], reference_xy=log.get('reference_xy_m'), radius=log.get('reference_radius_limit_m', .0004))
         else:
             from tools.learning.global_residual_action import recompose_logged_command
-            _, expected = recompose_logged_command(log, search_xy_limit_m_s=contract['search_xy_limit_m_s'])
+            _, expected = recompose_logged_command(log, search_xy_limit_m_s=contract['search_xy_limit_m_s'],
+                                                   **contract.get('search_authority', {}))
         verify_composition_log(log, expected, obs, cfg)
         verify_reference_prediction(log, trace[cycle], cfg, dynamic['reference_lead_m'])
         if inputs['phase'] == 'SEARCH' and log['enabled']:
@@ -330,7 +361,7 @@ def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=No
     from tools.validation.native_stop_clock import verify_stopping_interval
     stop = verify_stopping_interval(dict(trace=trace, events=evidence['environment_events'], stop_samples=evidence['stop_samples']),
         dict(receipt, audit_end_time_s=trace[-1]['time_s'], stop_time_s=evidence['stop_time_s']), dt, period,
-        recovery_proof=recovery_proof)
+        recovery_proof=load_warning_proof if load_warning_only else recovery_proof)
     verify_task_clock(stop_time=evidence['stop_time_s'], task_end_time=evidence['task_end_time_s'],
         audit_end_time=trace[-1]['time_s'], settle_time=cfg['settle_time_s'])
     outcome = raw['outcome']
@@ -345,19 +376,16 @@ def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=No
     if classified == 'FULL_SUCCESS':
         if recovery_proof is not None and not recovery_proof['all_force_events_recovered']:
             raise ValueError('Success requires all force events fully recovered')
-        if recovery_proof is not None and (raw['cumulative_peaks']['torque_G_Nm']>=receipt['finish_criteria']['torque_Nm'] or
+        if (recovery_proof is not None or load_warning_only) and (raw['cumulative_peaks']['torque_G_Nm']>=receipt['finish_criteria']['torque_Nm'] or
                 raw['cumulative_peaks']['penetration_m']>=receipt['finish_criteria']['penetration_m']):
             raise ValueError('Historical non-force protection forbids success')
         verify_success_hold(trace, task_end_time_s=evidence['task_end_time_s'], period=period,
-                            criteria=receipt['finish_criteria'])
+                            criteria=receipt['finish_criteria'], force_warning_only=load_warning_only)
     reference = verify_reference_checks(raw, receipt)
-    source = verify_action_source(raw, receipt, job, source_trainer=source_trainer)
-    proof = dict(verified=True, archive_sha256=receipt['archive_sha256'], rows=count,
-        active_rows=int(prepared['action_active'].sum()), source_replay_verified=True,
+    proof = dict(archive_sha256=receipt['archive_sha256'], rows=count,
+        active_rows=int(prepared['action_active'].sum()),
         reference_verified=True, native_reference_verified=True, reference_checks=reference,
-        action_source=source, stop=stop, task_outcome=classified,
-        source_checkpoint_sha256=receipt.get('source_checkpoint_sha256'),
-        execution_contract_sha256=hashlib.sha256(canonical(contract).encode('utf-8')).hexdigest(),
+        stop=stop, task_outcome=classified,
         audit_physical_initializations=0, audit_optimizer_updates=0)
     if time_budget_group is not None:
         proof.update(time_only_retry_features_verified=True, search_speed_um_s=time_budget_group)
@@ -367,4 +395,4 @@ def audit_archive(folder, reg, job, *, source_trainer=None, time_budget_group=No
         if outcome.get('force_recovery_fatal_reasons')!=raw['force_recovery']['fatal_reasons']:
             raise ValueError('Outcome fatal recovery history differs')
         proof['force_recovery']=recovery_proof
-    return raw, receipt, proof
+    return proof

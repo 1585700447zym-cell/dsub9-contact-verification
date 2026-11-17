@@ -1,0 +1,4186 @@
+{
+  "version": "e02_search_passive_yaw_gain_diagnostic_v1",
+  "diagnostic_only": true,
+  "max_initializations": 1,
+  "intervention": {
+    "phase": "SEARCH",
+    "axis": "yaw",
+    "passive_output_gain": 0.25
+  },
+  "job": {
+    "episode_id": "E02_GRU",
+    "policy_mode": "gru",
+    "pair_id": "E02",
+    "case": {
+      "name": "DEV_E02",
+      "x_offset_m": 0.00032,
+      "y_offset_m": 0.00028,
+      "roll_rad": -0.017453292519943295,
+      "pitch_rad": 0.017453292519943295,
+      "yaw_rad": 0.026179938779914945,
+      "start_origin_z_m": -0.005,
+      "target_depth_m": 0.005
+    },
+    "seed": 2026110862,
+    "exploration_seed": 2026110882,
+    "deterministic": true,
+    "split": "dev_eval",
+    "method": "gru"
+  },
+  "source": {
+    "updates": [
+      {
+        "critic_loss": 0.0014755991287529469,
+        "actor_loss": -0.045230790972709656,
+        "temperature_loss": -38.46241760253906,
+        "critic_grad_norm": 0.051383890211582184,
+        "actor_grad_norm": 0.03402649983763695,
+        "temperature_grad_norm": 8.352006912231445,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00999700091779232,
+        "critic_batches": 1,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          13818,
+          13805
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13907,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 1,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0017222275491803885,
+        "actor_loss": -0.05949395149946213,
+        "temperature_loss": -38.51380920410156,
+        "critic_grad_norm": 0.05195023864507675,
+        "actor_grad_norm": 0.028964120894670486,
+        "temperature_grad_norm": 8.36262321472168,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009994002059102058,
+        "critic_batches": 2,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          8526,
+          13862
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13912,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 2,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0012493939138948917,
+        "actor_loss": -0.042890410870313644,
+        "temperature_loss": -38.48540115356445,
+        "critic_grad_norm": 0.042213406413793564,
+        "actor_grad_norm": 0.032201651483774185,
+        "temperature_grad_norm": 8.355910301208496,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009991005063056946,
+        "critic_batches": 3,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12353,
+          11507
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 3,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0009806053712964058,
+        "actor_loss": -0.06127089634537697,
+        "temperature_loss": -38.524681091308594,
+        "critic_grad_norm": 0.035366952419281006,
+        "actor_grad_norm": 0.020111531019210815,
+        "temperature_grad_norm": 8.363892555236816,
+        "active_rows": 242,
+        "batch_rows": 256,
+        "alpha_after": 0.009988008998334408,
+        "critic_batches": 4,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          1511,
+          11519
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 4,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0017091527115553617,
+        "actor_loss": -0.055820900946855545,
+        "temperature_loss": -38.292606353759766,
+        "critic_grad_norm": 0.05943809449672699,
+        "actor_grad_norm": 0.01763654686510563,
+        "temperature_grad_norm": 8.312969207763672,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009985013864934444,
+        "critic_batches": 5,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3605,
+          13850
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13909,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 5,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0009119326714426279,
+        "actor_loss": -0.053596895188093185,
+        "temperature_loss": -38.560340881347656,
+        "critic_grad_norm": 0.02813102863729,
+        "actor_grad_norm": 0.0162174254655838,
+        "temperature_grad_norm": 8.370545387268066,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009982019662857056,
+        "critic_batches": 6,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10811,
+          12351
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 6,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0014657953288406134,
+        "actor_loss": -0.0460902564227581,
+        "temperature_loss": -38.454017639160156,
+        "critic_grad_norm": 0.05918179824948311,
+        "actor_grad_norm": 0.03437107056379318,
+        "temperature_grad_norm": 8.346921920776367,
+        "active_rows": 153,
+        "batch_rows": 256,
+        "alpha_after": 0.009979026392102242,
+        "critic_batches": 7,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12714,
+          14189
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 14210,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 7,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0011176061816513538,
+        "actor_loss": -0.05408312380313873,
+        "temperature_loss": -38.50130081176758,
+        "critic_grad_norm": 0.05316285789012909,
+        "actor_grad_norm": 0.01730632595717907,
+        "temperature_grad_norm": 8.356640815734863,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009976034052670002,
+        "critic_batches": 8,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10869,
+          13823
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13909,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 8,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0008064550347626209,
+        "actor_loss": -0.0529506541788578,
+        "temperature_loss": -38.684913635253906,
+        "critic_grad_norm": 0.03325337916612625,
+        "actor_grad_norm": 0.022034207358956337,
+        "temperature_grad_norm": 8.395947456359863,
+        "active_rows": 194,
+        "batch_rows": 256,
+        "alpha_after": 0.009973041713237762,
+        "critic_batches": 9,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          2325,
+          14148
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 14194,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 9,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0008420489029958844,
+        "actor_loss": -0.042537230998277664,
+        "temperature_loss": -38.608070373535156,
+        "critic_grad_norm": 0.04274122416973114,
+        "actor_grad_norm": 0.0152604840695858,
+        "temperature_grad_norm": 8.378725051879883,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009970051236450672,
+        "critic_batches": 10,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12797,
+          11498
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 10,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0008018572116270661,
+        "actor_loss": -0.050720684230327606,
+        "temperature_loss": -38.58931350708008,
+        "critic_grad_norm": 0.04385662078857422,
+        "actor_grad_norm": 0.016698479652404785,
+        "temperature_grad_norm": 8.374109268188477,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009967061690986156,
+        "critic_batches": 11,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          14768,
+          13840
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13912,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 11,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.000663219834677875,
+        "actor_loss": -0.049245186150074005,
+        "temperature_loss": -38.51736831665039,
+        "critic_grad_norm": 0.014025119133293629,
+        "actor_grad_norm": 0.01299069169908762,
+        "temperature_grad_norm": 8.357954025268555,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00996407214552164,
+        "critic_batches": 12,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10814,
+          12341
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 12,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0006816590903326869,
+        "actor_loss": -0.053702618926763535,
+        "temperature_loss": -38.54810333251953,
+        "critic_grad_norm": 0.03529677540063858,
+        "actor_grad_norm": 0.01399566512554884,
+        "temperature_grad_norm": 8.364076614379883,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009961084462702274,
+        "critic_batches": 13,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          1872,
+          13922
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13939,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 13,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0010246329475194216,
+        "actor_loss": -0.04058143496513367,
+        "temperature_loss": -38.70988082885742,
+        "critic_grad_norm": 0.06241097301244736,
+        "actor_grad_norm": 0.011309059336781502,
+        "temperature_grad_norm": 8.39863395690918,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009958096779882908,
+        "critic_batches": 14,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          7616,
+          11514
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 14,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0008226695936173201,
+        "actor_loss": -0.04165392741560936,
+        "temperature_loss": -38.56826400756836,
+        "critic_grad_norm": 0.049727924168109894,
+        "actor_grad_norm": 0.020206086337566376,
+        "temperature_grad_norm": 8.367362976074219,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00995511095970869,
+        "critic_batches": 15,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          9122,
+          11455
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 15,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0007000679615885019,
+        "actor_loss": -0.05112588405609131,
+        "temperature_loss": -38.60662841796875,
+        "critic_grad_norm": 0.035416919738054276,
+        "actor_grad_norm": 0.015465592965483665,
+        "temperature_grad_norm": 8.375141143798828,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009952125139534473,
+        "critic_batches": 16,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          13603,
+          11492
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 16,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0005161105073057115,
+        "actor_loss": -0.06113866716623306,
+        "temperature_loss": -38.78852081298828,
+        "critic_grad_norm": 0.019701259210705757,
+        "actor_grad_norm": 0.020051278173923492,
+        "temperature_grad_norm": 8.414051055908203,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009949136525392532,
+        "critic_batches": 17,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          8689,
+          12288
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 17,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004620171384885907,
+        "actor_loss": -0.06461780518293381,
+        "temperature_loss": -38.650814056396484,
+        "critic_grad_norm": 0.014295845292508602,
+        "actor_grad_norm": 0.020149532705545425,
+        "temperature_grad_norm": 8.383633613586426,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009946147911250591,
+        "critic_batches": 18,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          6011,
+          12326
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 18,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0005832245806232095,
+        "actor_loss": -0.0642353817820549,
+        "temperature_loss": -38.87010192871094,
+        "critic_grad_norm": 0.04686768352985382,
+        "actor_grad_norm": 0.022074392065405846,
+        "temperature_grad_norm": 8.430649757385254,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.009943160228431225,
+        "critic_batches": 19,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10112,
+          12295
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 19,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0006147852982394397,
+        "actor_loss": -0.06193998083472252,
+        "temperature_loss": -38.75159454345703,
+        "critic_grad_norm": 0.024563292041420937,
+        "actor_grad_norm": 0.02029869705438614,
+        "temperature_grad_norm": 8.404397964477539,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009940173476934433,
+        "critic_batches": 20,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          6154,
+          13808
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13896,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 20,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004852262500207871,
+        "actor_loss": -0.06134393811225891,
+        "temperature_loss": -38.416133880615234,
+        "critic_grad_norm": 0.014876997098326683,
+        "actor_grad_norm": 0.013744104653596878,
+        "temperature_grad_norm": 8.331101417541504,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00993718858808279,
+        "critic_batches": 21,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3096,
+          12778
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12902,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 21,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004494970489758998,
+        "actor_loss": -0.06806259602308273,
+        "temperature_loss": -38.60361862182617,
+        "critic_grad_norm": 0.007457582745701075,
+        "actor_grad_norm": 0.012853884138166904,
+        "temperature_grad_norm": 8.371213912963867,
+        "active_rows": 219,
+        "batch_rows": 256,
+        "alpha_after": 0.009934203699231148,
+        "critic_batches": 22,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          1488,
+          13820
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13903,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 22,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0008078533574007452,
+        "actor_loss": -0.05497552081942558,
+        "temperature_loss": -38.48262023925781,
+        "critic_grad_norm": 0.049121081829071045,
+        "actor_grad_norm": 0.023669270798563957,
+        "temperature_grad_norm": 8.344432830810547,
+        "active_rows": 190,
+        "batch_rows": 256,
+        "alpha_after": 0.009931224398314953,
+        "critic_batches": 23,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10916,
+          12122
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12238,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 23,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0005294554284773767,
+        "actor_loss": -0.055888596922159195,
+        "temperature_loss": -38.491180419921875,
+        "critic_grad_norm": 0.023626752197742462,
+        "actor_grad_norm": 0.012234971858561039,
+        "temperature_grad_norm": 8.345746040344238,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009928246028721333,
+        "critic_batches": 24,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          5877,
+          11509
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 24,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00033449771581217647,
+        "actor_loss": -0.054319366812705994,
+        "temperature_loss": -38.35487365722656,
+        "critic_grad_norm": 0.005955982953310013,
+        "actor_grad_norm": 0.014108133502304554,
+        "temperature_grad_norm": 8.315651893615723,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009925268590450287,
+        "critic_batches": 25,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          5911,
+          13904
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13945,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 25,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0005522295832633972,
+        "actor_loss": -0.05146671086549759,
+        "temperature_loss": -38.57797622680664,
+        "critic_grad_norm": 0.020780760794878006,
+        "actor_grad_norm": 0.011924867518246174,
+        "temperature_grad_norm": 8.363479614257812,
+        "active_rows": 212,
+        "batch_rows": 256,
+        "alpha_after": 0.009922292083501816,
+        "critic_batches": 26,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12233,
+          14130
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 14210,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 26,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0005052471533417702,
+        "actor_loss": -0.05486106500029564,
+        "temperature_loss": -38.19565200805664,
+        "critic_grad_norm": 0.02195478416979313,
+        "actor_grad_norm": 0.015090210363268852,
+        "temperature_grad_norm": 8.280054092407227,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00991931650787592,
+        "critic_batches": 27,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12371,
+          13849
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13945,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 27,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0005642049945890903,
+        "actor_loss": -0.05493620038032532,
+        "temperature_loss": -38.04983901977539,
+        "critic_grad_norm": 0.024179652333259583,
+        "actor_grad_norm": 0.019332893192768097,
+        "temperature_grad_norm": 8.247908592224121,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00991634652018547,
+        "critic_batches": 28,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10106,
+          11473
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 28,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003311486798338592,
+        "actor_loss": -0.06557328999042511,
+        "temperature_loss": -38.3575325012207,
+        "critic_grad_norm": 0.01491425558924675,
+        "actor_grad_norm": 0.015845242887735367,
+        "temperature_grad_norm": 8.314066886901855,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009913377463817596,
+        "critic_batches": 29,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          186,
+          13898
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13948,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 29,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003986543451901525,
+        "actor_loss": -0.05883101373910904,
+        "temperature_loss": -38.388397216796875,
+        "critic_grad_norm": 0.010950099676847458,
+        "actor_grad_norm": 0.022507276386022568,
+        "temperature_grad_norm": 8.320216178894043,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009910409338772297,
+        "critic_batches": 30,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10414,
+          12279
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 30,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00033580645686015487,
+        "actor_loss": -0.06038130447268486,
+        "temperature_loss": -37.98725891113281,
+        "critic_grad_norm": 0.028778601437807083,
+        "actor_grad_norm": 0.02362111397087574,
+        "temperature_grad_norm": 8.232739448547363,
+        "active_rows": 139,
+        "batch_rows": 256,
+        "alpha_after": 0.009907446801662445,
+        "critic_batches": 31,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          11329,
+          14119
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 14207,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 31,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003972307895310223,
+        "actor_loss": -0.060540854930877686,
+        "temperature_loss": -38.370208740234375,
+        "critic_grad_norm": 0.015971101820468903,
+        "actor_grad_norm": 0.01266448199748993,
+        "temperature_grad_norm": 8.315195083618164,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009904485195875168,
+        "critic_batches": 32,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          14763,
+          12267
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 32,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0002798984060063958,
+        "actor_loss": -0.07394511252641678,
+        "temperature_loss": -38.50193786621094,
+        "critic_grad_norm": 0.008947599679231644,
+        "actor_grad_norm": 0.00859718769788742,
+        "temperature_grad_norm": 8.343202590942383,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009901524521410465,
+        "critic_batches": 33,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12581,
+          12355
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 33,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00036719057243317366,
+        "actor_loss": -0.07171833515167236,
+        "temperature_loss": -38.47914505004883,
+        "critic_grad_norm": 0.009011811576783657,
+        "actor_grad_norm": 0.009076491929590702,
+        "temperature_grad_norm": 8.337722778320312,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009898560121655464,
+        "critic_batches": 34,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          1995,
+          13844
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13898,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 34,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003733525809366256,
+        "actor_loss": -0.06793620437383652,
+        "temperature_loss": -38.55491256713867,
+        "critic_grad_norm": 0.012497924268245697,
+        "actor_grad_norm": 0.012376760132610798,
+        "temperature_grad_norm": 8.353597640991211,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009895596653223038,
+        "critic_batches": 35,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          2471,
+          12381
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 35,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00032725301571190357,
+        "actor_loss": -0.06281639635562897,
+        "temperature_loss": -38.493465423583984,
+        "critic_grad_norm": 0.010873011313378811,
+        "actor_grad_norm": 0.012083925306797028,
+        "temperature_grad_norm": 8.339743614196777,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009892633184790611,
+        "critic_batches": 36,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10117,
+          13808
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13919,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 36,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003573721623979509,
+        "actor_loss": -0.06107153370976448,
+        "temperature_loss": -38.495967864990234,
+        "critic_grad_norm": 0.01011781208217144,
+        "actor_grad_norm": 0.013873259536921978,
+        "temperature_grad_norm": 8.339743614196777,
+        "active_rows": 246,
+        "batch_rows": 256,
+        "alpha_after": 0.009889671579003334,
+        "critic_batches": 37,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10232,
+          12365
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 37,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004640666302293539,
+        "actor_loss": -0.06300715357065201,
+        "temperature_loss": -38.765438079833984,
+        "critic_grad_norm": 0.0171766709536314,
+        "actor_grad_norm": 0.009751604869961739,
+        "temperature_grad_norm": 8.397577285766602,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009886710904538631,
+        "critic_batches": 38,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          2589,
+          13878
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13891,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 38,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00044409133261069655,
+        "actor_loss": -0.06183210760354996,
+        "temperature_loss": -38.544578552246094,
+        "critic_grad_norm": 0.019753217697143555,
+        "actor_grad_norm": 0.012667601928114891,
+        "temperature_grad_norm": 8.34919261932373,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009883750230073929,
+        "critic_batches": 39,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          6783,
+          11504
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 39,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003138729662168771,
+        "actor_loss": -0.06195852532982826,
+        "temperature_loss": -38.504493713378906,
+        "critic_grad_norm": 0.013399843126535416,
+        "actor_grad_norm": 0.009704784490168095,
+        "temperature_grad_norm": 8.33996868133545,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009880791418254375,
+        "critic_batches": 40,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          8304,
+          12886
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12902,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 40,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00038915808545425534,
+        "actor_loss": -0.06103314086794853,
+        "temperature_loss": -38.5899772644043,
+        "critic_grad_norm": 0.0072833769954741,
+        "actor_grad_norm": 0.012359811924397945,
+        "temperature_grad_norm": 8.357940673828125,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009877832606434822,
+        "critic_batches": 41,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          5102,
+          11528
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 41,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003771239425987005,
+        "actor_loss": -0.061003170907497406,
+        "temperature_loss": -38.413822174072266,
+        "critic_grad_norm": 0.009719489142298698,
+        "actor_grad_norm": 0.018230844289064407,
+        "temperature_grad_norm": 8.319250106811523,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009874874725937843,
+        "critic_batches": 42,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3161,
+          13922
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13939,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 42,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004919945495203137,
+        "actor_loss": -0.060505159199237823,
+        "temperature_loss": -38.65501403808594,
+        "critic_grad_norm": 0.010795473121106625,
+        "actor_grad_norm": 0.012259193696081638,
+        "temperature_grad_norm": 8.370942115783691,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00987191405147314,
+        "critic_batches": 43,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          7917,
+          11447
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 43,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00035654858220368624,
+        "actor_loss": -0.07111206650733948,
+        "temperature_loss": -38.68928909301758,
+        "critic_grad_norm": 0.008875181898474693,
+        "actor_grad_norm": 0.009706424549221992,
+        "temperature_grad_norm": 8.377819061279297,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009868953377008438,
+        "critic_batches": 44,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          887,
+          12333
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 44,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00041682462324388325,
+        "actor_loss": -0.06328907608985901,
+        "temperature_loss": -38.67879867553711,
+        "critic_grad_norm": 0.012070958502590656,
+        "actor_grad_norm": 0.011535649187862873,
+        "temperature_grad_norm": 8.375004768371582,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00986599363386631,
+        "critic_batches": 45,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          8438,
+          13041
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13046,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 45,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00036619300954043865,
+        "actor_loss": -0.06141861528158188,
+        "temperature_loss": -38.79423522949219,
+        "critic_grad_norm": 0.013108182698488235,
+        "actor_grad_norm": 0.010153013281524181,
+        "temperature_grad_norm": 8.399452209472656,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009863034822046757,
+        "critic_batches": 46,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10318,
+          11451
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 46,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003929232188966125,
+        "actor_loss": -0.06583958864212036,
+        "temperature_loss": -38.71989440917969,
+        "critic_grad_norm": 0.013977250084280968,
+        "actor_grad_norm": 0.008388468995690346,
+        "temperature_grad_norm": 8.382813453674316,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009860076941549778,
+        "critic_batches": 47,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          4704,
+          12323
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 47,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00037893158150836825,
+        "actor_loss": -0.07183568179607391,
+        "temperature_loss": -38.77159118652344,
+        "critic_grad_norm": 0.012749675661325455,
+        "actor_grad_norm": 0.011029990389943123,
+        "temperature_grad_norm": 8.393462181091309,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.0098571153357625,
+        "critic_batches": 48,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          1850,
+          12797
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12902,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 48,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003882985038217157,
+        "actor_loss": -0.0648362785577774,
+        "temperature_loss": -38.688133239746094,
+        "critic_grad_norm": 0.011446663178503513,
+        "actor_grad_norm": 0.007913473062217236,
+        "temperature_grad_norm": 8.374849319458008,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009854154661297798,
+        "critic_batches": 49,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          14600,
+          13872
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13893,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 49,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003634197055362165,
+        "actor_loss": -0.0634361281991005,
+        "temperature_loss": -38.7651252746582,
+        "critic_grad_norm": 0.010130777023732662,
+        "actor_grad_norm": 0.011327272281050682,
+        "temperature_grad_norm": 8.390970230102539,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00985119491815567,
+        "critic_batches": 50,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3299,
+          13889
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13915,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 50,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003071111277677119,
+        "actor_loss": -0.06374845653772354,
+        "temperature_loss": -38.643089294433594,
+        "critic_grad_norm": 0.011178623884916306,
+        "actor_grad_norm": 0.005489918403327465,
+        "temperature_grad_norm": 8.364009857177734,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009848236106336117,
+        "critic_batches": 51,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          4216,
+          13839
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13919,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 51,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00035297038266435266,
+        "actor_loss": -0.0732586607336998,
+        "temperature_loss": -38.68220901489258,
+        "critic_grad_norm": 0.019148053601384163,
+        "actor_grad_norm": 0.006308212876319885,
+        "temperature_grad_norm": 8.37193489074707,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.009845278225839138,
+        "critic_batches": 52,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          1355,
+          12853
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12902,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 52,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004313334065955132,
+        "actor_loss": -0.06191032752394676,
+        "temperature_loss": -38.642974853515625,
+        "critic_grad_norm": 0.007077175658196211,
+        "actor_grad_norm": 0.008103895001113415,
+        "temperature_grad_norm": 8.362897872924805,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009842321276664734,
+        "critic_batches": 53,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10193,
+          11426
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 53,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00017274021229241043,
+        "actor_loss": -0.070390984416008,
+        "temperature_loss": -38.53838348388672,
+        "critic_grad_norm": 0.016039667651057243,
+        "actor_grad_norm": 0.01252972986549139,
+        "temperature_grad_norm": 8.3397216796875,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.009839365258812904,
+        "critic_batches": 54,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          7615,
+          12718
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12816,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 54,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003921107854694128,
+        "actor_loss": -0.06626351177692413,
+        "temperature_loss": -38.96802520751953,
+        "critic_grad_norm": 0.0278475359082222,
+        "actor_grad_norm": 0.0061332471668720245,
+        "temperature_grad_norm": 8.432147979736328,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009836409240961075,
+        "critic_batches": 55,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3363,
+          12661
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12700,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 55,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004430428962223232,
+        "actor_loss": -0.06623002141714096,
+        "temperature_loss": -38.825584411621094,
+        "critic_grad_norm": 0.014540819451212883,
+        "actor_grad_norm": 0.007214639335870743,
+        "temperature_grad_norm": 8.400779724121094,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009833455085754395,
+        "critic_batches": 56,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          11268,
+          12810
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12902,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 56,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00030703848460689187,
+        "actor_loss": -0.06556332856416702,
+        "temperature_loss": -38.81610107421875,
+        "critic_grad_norm": 0.007518045138567686,
+        "actor_grad_norm": 0.007428835146129131,
+        "temperature_grad_norm": 8.39818286895752,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009830500930547714,
+        "critic_batches": 57,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3851,
+          11486
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 57,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00030175186111591756,
+        "actor_loss": -0.0701216459274292,
+        "temperature_loss": -38.97114562988281,
+        "critic_grad_norm": 0.005025794729590416,
+        "actor_grad_norm": 0.008374396711587906,
+        "temperature_grad_norm": 8.43117904663086,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00982754398137331,
+        "critic_batches": 58,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3573,
+          13823
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13907,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 58,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0004113356408197433,
+        "actor_loss": -0.06642628461122513,
+        "temperature_loss": -38.897151947021484,
+        "critic_grad_norm": 0.013339218683540821,
+        "actor_grad_norm": 0.005191616714000702,
+        "temperature_grad_norm": 8.414623260498047,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009824587032198906,
+        "critic_batches": 59,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          11159,
+          11410
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 59,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003266652929596603,
+        "actor_loss": -0.07512196898460388,
+        "temperature_loss": -38.8311767578125,
+        "critic_grad_norm": 0.010858521796762943,
+        "actor_grad_norm": 0.006915711797773838,
+        "temperature_grad_norm": 8.399803161621094,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009821631945669651,
+        "critic_batches": 60,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          6681,
+          12379
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 60,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00029000433278270066,
+        "actor_loss": -0.07792441546916962,
+        "temperature_loss": -38.547115325927734,
+        "critic_grad_norm": 0.033223628997802734,
+        "actor_grad_norm": 0.014283408410847187,
+        "temperature_grad_norm": 8.337814331054688,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.009818676859140396,
+        "critic_batches": 61,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          14317,
+          13898
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13926,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 61,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003389094490557909,
+        "actor_loss": -0.07004867494106293,
+        "temperature_loss": -38.752662658691406,
+        "critic_grad_norm": 0.014512830413877964,
+        "actor_grad_norm": 0.010203063488006592,
+        "temperature_grad_norm": 8.381729125976562,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00981572363525629,
+        "critic_batches": 62,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          6433,
+          13821
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13909,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 62,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003539189347065985,
+        "actor_loss": -0.06627608835697174,
+        "temperature_loss": -38.79429626464844,
+        "critic_grad_norm": 0.008372565731406212,
+        "actor_grad_norm": 0.0072702812030911446,
+        "temperature_grad_norm": 8.390188217163086,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009812770411372185,
+        "critic_batches": 63,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          6732,
+          12581
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12700,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 63,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00033031817292794585,
+        "actor_loss": -0.060581475496292114,
+        "temperature_loss": -38.630821228027344,
+        "critic_grad_norm": 0.004942440893501043,
+        "actor_grad_norm": 0.00944598764181137,
+        "temperature_grad_norm": 8.354288101196289,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009809822775423527,
+        "critic_batches": 64,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          9292,
+          13878
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13945,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 64,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00030892970971763134,
+        "actor_loss": -0.06591445952653885,
+        "temperature_loss": -38.952030181884766,
+        "critic_grad_norm": 0.023544875904917717,
+        "actor_grad_norm": 0.008818679489195347,
+        "temperature_grad_norm": 8.423205375671387,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00980687141418457,
+        "critic_batches": 65,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          9986,
+          12669
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12700,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 65,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003070394159294665,
+        "actor_loss": -0.06956642866134644,
+        "temperature_loss": -38.798667907714844,
+        "critic_grad_norm": 0.02329576388001442,
+        "actor_grad_norm": 0.00916482787579298,
+        "temperature_grad_norm": 8.389496803283691,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009803921915590763,
+        "critic_batches": 66,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          2411,
+          13854
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13939,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 66,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003103691851720214,
+        "actor_loss": -0.0629168376326561,
+        "temperature_loss": -38.85661315917969,
+        "critic_grad_norm": 0.013915632851421833,
+        "actor_grad_norm": 0.008311344310641289,
+        "temperature_grad_norm": 8.401479721069336,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009800972416996956,
+        "critic_batches": 67,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          5847,
+          11479
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 67,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003510083770379424,
+        "actor_loss": -0.0666583925485611,
+        "temperature_loss": -38.90846633911133,
+        "critic_grad_norm": 0.01060381717979908,
+        "actor_grad_norm": 0.012692352756857872,
+        "temperature_grad_norm": 8.41214370727539,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009798023849725723,
+        "critic_batches": 68,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          7322,
+          12221
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12238,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 68,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00029483402613550425,
+        "actor_loss": -0.07721790671348572,
+        "temperature_loss": -38.94184112548828,
+        "critic_grad_norm": 0.016559654846787453,
+        "actor_grad_norm": 0.008467341773211956,
+        "temperature_grad_norm": 8.41881275177002,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009795076213777065,
+        "critic_batches": 69,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          707,
+          13885
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13891,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 69,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00029846851248294115,
+        "actor_loss": -0.06965107470750809,
+        "temperature_loss": -38.963191986083984,
+        "critic_grad_norm": 0.010646899230778217,
+        "actor_grad_norm": 0.007623740471899509,
+        "temperature_grad_norm": 8.422880172729492,
+        "active_rows": 217,
+        "batch_rows": 256,
+        "alpha_after": 0.009792129509150982,
+        "critic_batches": 70,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          7805,
+          11479
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 70,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00022742163855582476,
+        "actor_loss": -0.07273148000240326,
+        "temperature_loss": -38.884010314941406,
+        "critic_grad_norm": 0.008916513994336128,
+        "actor_grad_norm": 0.007867461070418358,
+        "temperature_grad_norm": 8.405216217041016,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009789183735847473,
+        "critic_batches": 71,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10472,
+          13797
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13907,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 71,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00026860155048780143,
+        "actor_loss": -0.0728248879313469,
+        "temperature_loss": -38.726802825927734,
+        "critic_grad_norm": 0.013398328796029091,
+        "actor_grad_norm": 0.01004467997699976,
+        "temperature_grad_norm": 8.370689392089844,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009786237962543964,
+        "critic_batches": 72,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          13889,
+          13879
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13939,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 72,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00031989545095711946,
+        "actor_loss": -0.07353967428207397,
+        "temperature_loss": -38.65186309814453,
+        "critic_grad_norm": 0.01075719017535448,
+        "actor_grad_norm": 0.007937910035252571,
+        "temperature_grad_norm": 8.353948593139648,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009783294051885605,
+        "critic_batches": 73,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          5228,
+          12310
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 73,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.000288584444206208,
+        "actor_loss": -0.07491534948348999,
+        "temperature_loss": -38.6502799987793,
+        "critic_grad_norm": 0.013445809483528137,
+        "actor_grad_norm": 0.006777627393603325,
+        "temperature_grad_norm": 8.353062629699707,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00978035107254982,
+        "critic_batches": 74,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3814,
+          13912
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13915,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 74,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003094263665843755,
+        "actor_loss": -0.07393404841423035,
+        "temperature_loss": -38.682861328125,
+        "critic_grad_norm": 0.008715502917766571,
+        "actor_grad_norm": 0.009370982646942139,
+        "temperature_grad_norm": 8.3595609664917,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009777413681149483,
+        "critic_batches": 75,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3444,
+          13848
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13893,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 75,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00023063193657435477,
+        "actor_loss": -0.08136428147554398,
+        "temperature_loss": -38.743900299072266,
+        "critic_grad_norm": 0.015371367335319519,
+        "actor_grad_norm": 0.005525277927517891,
+        "temperature_grad_norm": 8.372206687927246,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009774476289749146,
+        "critic_batches": 76,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12517,
+          13842
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13945,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 76,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0002986217150464654,
+        "actor_loss": -0.07153867185115814,
+        "temperature_loss": -38.87357711791992,
+        "critic_grad_norm": 0.007380853872746229,
+        "actor_grad_norm": 0.007113555446267128,
+        "temperature_grad_norm": 8.399683952331543,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009771540760993958,
+        "critic_batches": 77,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          5048,
+          12350
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 77,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00022940273629501462,
+        "actor_loss": -0.06378328055143356,
+        "temperature_loss": -38.708030700683594,
+        "critic_grad_norm": 0.00786494929343462,
+        "actor_grad_norm": 0.008454167284071445,
+        "temperature_grad_norm": 8.363370895385742,
+        "active_rows": 206,
+        "batch_rows": 256,
+        "alpha_after": 0.009768606163561344,
+        "critic_batches": 78,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3996,
+          14136
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 14210,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 78,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00024751422461122274,
+        "actor_loss": -0.07272080332040787,
+        "temperature_loss": -38.69404602050781,
+        "critic_grad_norm": 0.026177916675806046,
+        "actor_grad_norm": 0.00816743727773428,
+        "temperature_grad_norm": 8.359807014465332,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.00976567156612873,
+        "critic_batches": 79,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          15618,
+          12296
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 79,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00023575291561428457,
+        "actor_loss": -0.06494931131601334,
+        "temperature_loss": -38.81623077392578,
+        "critic_grad_norm": 0.00536742340773344,
+        "actor_grad_norm": 0.007094637490808964,
+        "temperature_grad_norm": 8.385660171508789,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009762738831341267,
+        "critic_batches": 80,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          9072,
+          13894
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13926,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 80,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00016120114014483988,
+        "actor_loss": -0.0695546418428421,
+        "temperature_loss": -39.0203742980957,
+        "critic_grad_norm": 0.013146163895726204,
+        "actor_grad_norm": 0.00578294275328517,
+        "temperature_grad_norm": 8.429214477539062,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.009759806096553802,
+        "critic_batches": 81,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          15279,
+          12265
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 81,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.000502081704325974,
+        "actor_loss": -0.053721874952316284,
+        "temperature_loss": -38.88591003417969,
+        "critic_grad_norm": 0.03703390806913376,
+        "actor_grad_norm": 0.009025597013533115,
+        "temperature_grad_norm": 8.39962387084961,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009756874293088913,
+        "critic_batches": 82,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3305,
+          11407
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 82,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003625803510658443,
+        "actor_loss": -0.06500274688005447,
+        "temperature_loss": -38.97125244140625,
+        "critic_grad_norm": 0.020321393385529518,
+        "actor_grad_norm": 0.007583648432046175,
+        "temperature_grad_norm": 8.417510986328125,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.0097539396956563,
+        "critic_batches": 83,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3213,
+          11476
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 83,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00011812027514679357,
+        "actor_loss": -0.07220687717199326,
+        "temperature_loss": -38.95877456665039,
+        "critic_grad_norm": 0.008030299097299576,
+        "actor_grad_norm": 0.01210052240639925,
+        "temperature_grad_norm": 8.41426944732666,
+        "active_rows": 87,
+        "batch_rows": 256,
+        "alpha_after": 0.009751005098223686,
+        "critic_batches": 84,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          4092,
+          12147
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12238,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 84,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00034731702180579305,
+        "actor_loss": -0.06802021712064743,
+        "temperature_loss": -38.99695587158203,
+        "critic_grad_norm": 0.01170035544782877,
+        "actor_grad_norm": 0.005642885807901621,
+        "temperature_grad_norm": 8.421968460083008,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009748071432113647,
+        "critic_batches": 85,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          14601,
+          11516
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 85,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003187138063367456,
+        "actor_loss": -0.06877002865076065,
+        "temperature_loss": -38.8389892578125,
+        "critic_grad_norm": 0.028877129778265953,
+        "actor_grad_norm": 0.008998225443065166,
+        "temperature_grad_norm": 8.387307167053223,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009745138697326183,
+        "critic_batches": 86,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          14632,
+          13786
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13893,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 86,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0002322872169315815,
+        "actor_loss": -0.07708613574504852,
+        "temperature_loss": -38.85415267944336,
+        "critic_grad_norm": 0.010750667192041874,
+        "actor_grad_norm": 0.007562007289379835,
+        "temperature_grad_norm": 8.390037536621094,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009742206893861294,
+        "critic_batches": 87,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T02_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          3801,
+          13857
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13915,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 87,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00026396304019726813,
+        "actor_loss": -0.07547079026699066,
+        "temperature_loss": -38.97951126098633,
+        "critic_grad_norm": 0.01254315860569477,
+        "actor_grad_norm": 0.009074096567928791,
+        "temperature_grad_norm": 8.416560173034668,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009739276021718979,
+        "critic_batches": 88,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          14027,
+          12350
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 88,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0002588820061646402,
+        "actor_loss": -0.0796407014131546,
+        "temperature_loss": -38.917388916015625,
+        "critic_grad_norm": 0.016407597810029984,
+        "actor_grad_norm": 0.008755417540669441,
+        "temperature_grad_norm": 8.40260124206543,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009736346080899239,
+        "critic_batches": 89,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          8735,
+          12644
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12700,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 89,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003907393547706306,
+        "actor_loss": -0.07634949684143066,
+        "temperature_loss": -38.91448211669922,
+        "critic_grad_norm": 0.027993956580758095,
+        "actor_grad_norm": 0.009889832697808743,
+        "temperature_grad_norm": 8.401427268981934,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009733417071402073,
+        "critic_batches": 90,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12192,
+          13910
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13948,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 90,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0003629100392572582,
+        "actor_loss": -0.07236700505018234,
+        "temperature_loss": -38.925662994384766,
+        "critic_grad_norm": 0.031080055981874466,
+        "actor_grad_norm": 0.007429440971463919,
+        "temperature_grad_norm": 8.403295516967773,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009730488993227482,
+        "critic_batches": 91,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T01_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12998,
+          11475
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 91,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00011903663107659668,
+        "actor_loss": -0.0776662528514862,
+        "temperature_loss": -39.1016960144043,
+        "critic_grad_norm": 0.014292913489043713,
+        "actor_grad_norm": 0.011047626845538616,
+        "temperature_grad_norm": 8.440749168395996,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.009727561846375465,
+        "critic_batches": 92,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          15563,
+          13863
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13945,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 92,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00022430214448831975,
+        "actor_loss": -0.06974273920059204,
+        "temperature_loss": -38.908447265625,
+        "critic_grad_norm": 0.00958227552473545,
+        "actor_grad_norm": 0.009711085818707943,
+        "temperature_grad_norm": 8.398487091064453,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009724635630846024,
+        "critic_batches": 93,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          5623,
+          13789
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13905,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 93,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0002569308562669903,
+        "actor_loss": -0.06412506103515625,
+        "temperature_loss": -38.895225524902344,
+        "critic_grad_norm": 0.007862048223614693,
+        "actor_grad_norm": 0.00681293522939086,
+        "temperature_grad_norm": 8.395089149475098,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009721709415316582,
+        "critic_batches": 94,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          12602,
+          11524
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 94,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00023292520199902356,
+        "actor_loss": -0.07029859721660614,
+        "temperature_loss": -38.757999420166016,
+        "critic_grad_norm": 0.01240376103669405,
+        "actor_grad_norm": 0.008957434445619583,
+        "temperature_grad_norm": 8.364927291870117,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009718785062432289,
+        "critic_batches": 95,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          9073,
+          12787
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12816,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 95,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00014671498502139002,
+        "actor_loss": -0.0715935081243515,
+        "temperature_loss": -38.90106201171875,
+        "critic_grad_norm": 0.002868887037038803,
+        "actor_grad_norm": 0.008341747336089611,
+        "temperature_grad_norm": 8.395257949829102,
+        "active_rows": 156,
+        "batch_rows": 256,
+        "alpha_after": 0.009715861640870571,
+        "critic_batches": 96,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          10142,
+          11501
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 96,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0001687761105131358,
+        "actor_loss": -0.06998109072446823,
+        "temperature_loss": -38.68456268310547,
+        "critic_grad_norm": 0.0120340995490551,
+        "actor_grad_norm": 0.010380719788372517,
+        "temperature_grad_norm": 8.347990989685059,
+        "active_rows": 154,
+        "batch_rows": 256,
+        "alpha_after": 0.009712938219308853,
+        "critic_batches": 97,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          13027,
+          13820
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13912,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 97,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00024953403044492006,
+        "actor_loss": -0.06811816990375519,
+        "temperature_loss": -38.98820495605469,
+        "critic_grad_norm": 0.016034729778766632,
+        "actor_grad_norm": 0.005706408992409706,
+        "temperature_grad_norm": 8.412972450256348,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009710016660392284,
+        "critic_batches": 98,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "main_fit",
+        "episode_ids": [
+          "T03_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          11939,
+          13866
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 13912,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 98,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.0002115584211423993,
+        "actor_loss": -0.07440832257270813,
+        "temperature_loss": -38.95956039428711,
+        "critic_grad_norm": 0.016298852860927582,
+        "actor_grad_norm": 0.005213964730501175,
+        "temperature_grad_norm": 8.406245231628418,
+        "active_rows": 128,
+        "batch_rows": 256,
+        "alpha_after": 0.009707095101475716,
+        "critic_batches": 99,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          1341,
+          12266
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 99,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00028032303089275956,
+        "actor_loss": -0.06912577152252197,
+        "temperature_loss": -38.954742431640625,
+        "critic_grad_norm": 0.018163107335567474,
+        "actor_grad_norm": 0.0044463747180998325,
+        "temperature_grad_norm": 8.40466022491455,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.009704175405204296,
+        "critic_batches": 100,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          7176,
+          11461
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 11533,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 100,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      },
+      {
+        "critic_loss": 0.00026177801191806793,
+        "actor_loss": -0.06839622557163239,
+        "temperature_loss": -38.66939163208008,
+        "critic_grad_norm": 0.016490621492266655,
+        "actor_grad_norm": 0.007087273057550192,
+        "temperature_grad_norm": 8.34255313873291,
+        "active_rows": 256,
+        "batch_rows": 256,
+        "alpha_after": 0.00970126036554575,
+        "critic_batches": 101,
+        "version": "search_entry_event_half_v1",
+        "focused_sequences": 1,
+        "uniform_sequences": 1,
+        "focus_fallback": 0,
+        "focus_kind": "search_advanced",
+        "episode_ids": [
+          "T04_GRU",
+          "T02_GRU"
+        ],
+        "start_cycles": [
+          11712,
+          12371
+        ],
+        "anchor_episode_id": "T02_GRU",
+        "anchor_cycle": 12381,
+        "admitted_episodes": 4,
+        "admitted_transitions": 63214,
+        "optimizer_updates": 101,
+        "replay_episode_ids": [
+          "T03_GRU",
+          "T01_GRU",
+          "T02_GRU",
+          "T04_GRU"
+        ]
+      }
+    ],
+    "checkpoint_sha256": "e25ce26710015c63a0fa3a0b0017c32f411cac18d5154cbda30f1ef8d1c228f8",
+    "admitted_episodes": 4,
+    "admitted_transitions": 63214,
+    "optimizer_updates": 101,
+    "path": "checkpoints/trained"
+  },
+  "config": {
+    "version": "five_axis_load_warning_mesh_contact_policy_v3",
+    "policy_mode": "gru",
+    "search_speed_um_s": 900,
+    "physical_protocol": {
+      "version": "nano100_yaw_on_load_warning_900_mesh_contact_v3",
+      "group": "search_900",
+      "observation_version": "five_axis_N2_30s_load_warning_permission_v1",
+      "observation_width": 140,
+      "retry_policy": "time_only",
+      "effective_max_searches": null,
+      "effective_max_recoveries": null,
+      "rotation_risk_policy": "warning_only",
+      "passive_yaw_enabled": true,
+      "task_deadline_s": 30.0,
+      "max_cycles": 16000,
+      "control_period_s": 0.002,
+      "noise_hold_cycles": 25,
+      "search_xy_limit_m_s": 0.0009,
+      "controller_config": {
+        "stall_window_s": 0.4,
+        "stall_earliest_s": 0.6,
+        "stall_advance_m": 5e-06,
+        "stall_axial_force_N": 0.5,
+        "unload_speed_m_s": 0.00025,
+        "unload_time_s": 1.0,
+        "unload_axial_force_N": 0.3,
+        "unload_total_force_N": 0.5,
+        "search_force_N": 2.0,
+        "axial_gain_m_s_N": 0.00025,
+        "search_forward_speed_m_s": 0.0005,
+        "spiral_pitch_m": 0.0001,
+        "spiral_radius_m": 0.0004,
+        "spiral_speed_m_s": 0.0009,
+        "search_tracking_gain_s": 5.0,
+        "search_xy_component_speed_m_s": 0.0009,
+        "search_time_s": 18.0,
+        "search_exit_advance_m": 0.0001,
+        "max_searches": 2,
+        "search_actual_xy_limit_m": 0.0006,
+        "wait_stable_s": 1.0,
+        "recovery_min_actual_m": 0.000249,
+        "total_action_time_s": 30.0,
+        "settle_time_s": 1.0,
+        "force_guard_N": 5.0
+      },
+      "rotation_risk_config": {
+        "angle_rad": 0.026179938779914945,
+        "axial_force_N": 1.5,
+        "hold_s": 0.05,
+        "force_guard_N": 5.0
+      },
+      "search_load_config": {
+        "lateral_force_N": 2.0,
+        "total_force_N": 4.4,
+        "hold_s": 0.02,
+        "force_guard_N": 5.0
+      },
+      "search_drive_config": {
+        "linear_speed_m_s": 0.001,
+        "linear_acceleration_m_s2": 0.02
+      },
+      "action_scale": [
+        0.0005,
+        0.0005,
+        0.0005,
+        0.0005,
+        0.005
+      ],
+      "retry_observation_semantics": "slots searches_remaining/recoveries_remaining are 0/1 time-only permission; real counts retained in controller/environment evidence",
+      "task_referee": "dsub9_clearance120_layered_nano100_v6",
+      "guard_observation_semantics": "active_hard_guards_excluding_native_force_and_rotation_warnings",
+      "load_warning": {
+        "version": "native_load_warnings_v1",
+        "force_warning_N": [
+          5.0,
+          6.0
+        ],
+        "rotation_warning_rad": 0.04363323129985824,
+        "force_success_gate": false,
+        "recovery_reference_target_m": 0.0003,
+        "recovery_min_actual_m": 0.00025,
+        "recovery_distance_tolerance_m": 1e-06,
+        "recovery_effective_min_actual_m": 0.000249,
+        "duration_method": "native samples times timestep",
+        "angular_reference": "rotation from episode start"
+      },
+      "search_authority": {
+        "search_xy_residual_m_s": 0.00075,
+        "search_xy_acceleration_m_s2": 0.02
+      },
+      "collision_runtime_sha256": "d586be6e14e338089937c13b8f2db67fbeff48121b320856c68e7b9e7b601102"
+    },
+    "geometry_tolerance_m": 1e-07,
+    "learning": {
+      "learning_rate": 0.0003,
+      "actor_learning_rate": 0.0003,
+      "batch_size": 256,
+      "replay_capacity": 116000,
+      "network": [
+        256,
+        256
+      ],
+      "seed": 2026110801,
+      "torch_threads": 1,
+      "device": "cpu",
+      "entropy_initial": 0.01,
+      "target_entropy": -5.0,
+      "tau": 0.005,
+      "exact_terminal_tail": false,
+      "critic_boundary_rows": 0
+    },
+    "timing": {
+      "burn_in": 256,
+      "learn_steps": 128,
+      "sequences": 2
+    },
+    "gru_hidden": 64,
+    "gradient_norm_limit": 10.0,
+    "task_budget_s": 30.0,
+    "replay_focus": "search_entry_event_half_v1"
+  },
+  "common": {
+    "dynamic_config": {
+      "collision_backend": "native",
+      "timestep": 0.0002,
+      "control_period": 0.002,
+      "linear_speed": 0.001,
+      "angular_speed": 0.03,
+      "linear_acceleration": 0.005,
+      "angular_acceleration": 0.3,
+      "translational_stiffness": 20000.0,
+      "rotational_stiffness": 2.0,
+      "force_limit_N": 8.0,
+      "torque_limit_Nm": 0.2,
+      "reference_lead_m": 0.00012,
+      "reference_lead_rad": 0.01,
+      "stop_force_N": 5.0,
+      "stop_torque_Nm": 0.1,
+      "stop_penetration_m": 3e-05,
+      "invalid_penetration_m": 8e-05,
+      "actual_speed_limit": 0.02,
+      "actual_angular_speed_limit": 0.5,
+      "travel_limit_m": 0.006,
+      "recovery_distance_m": 0.0003,
+      "recovery_speed": 0.0005,
+      "recovery_time_limit_s": 1.0,
+      "recovery_force_N": 0.5,
+      "stopped_speed": 1e-05,
+      "stopped_angular_speed": 0.001
+    },
+    "effective_kd": [
+      316.2277660168379,
+      316.2277660168379,
+      316.2277660168379,
+      0.1517893276880822,
+      0.1517893276880822,
+      0.1517893276880822
+    ],
+    "model_xml_sha256": "1f9326852d31b4b1fcb484151fd8085f5b17953c46144d2f48a4e34b3c707912",
+    "actual_model": {
+      "male_mass_kg": 0.05,
+      "male_inertia_kg_m2": [
+        2e-05,
+        2e-05,
+        2e-05
+      ],
+      "timestep_s": 0.0002,
+      "ccd_tolerance": 1e-12,
+      "solref_min": [
+        0.001,
+        1.0
+      ],
+      "solref_max": [
+        0.02,
+        1.0
+      ]
+    },
+    "runtime": {
+      "version": "3.13.0",
+      "module_file": "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\__init__.py",
+      "dll_verified": true,
+      "dll_sha256": {
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_callbacks.cp313-win_amd64.pyd": "9903814e839f07f99f2053830699a40573c62b9c1429e81be91d8d1c2f3d8217",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_constants.cp313-win_amd64.pyd": "3a93dea3d55f540c86557b8e54ceaef8fc761abaff0a756813f2cd760a845aa2",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_enums.cp313-win_amd64.pyd": "8e3e4b81a9ea59a04a708cf5f70c5efaa17da295d90108000f038ba276572c40",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_errors.cp313-win_amd64.pyd": "5211406c1b31400f9fd57eb9795504b02c8b855095fa518be1ff00e5897d720d",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_functions.cp313-win_amd64.pyd": "e8f273677d2d931fe7975ec32ecffeabbaf56052ebd9bf138c06e03990489dc6",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_render.cp313-win_amd64.pyd": "3ca7f0342fe7a98553b66a1a91f9d9687cfcf673c52452bae4c2f0ddba20c43e",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_rollout.cp313-win_amd64.pyd": "47c21d676202fb4ccc8dd40e1f6799ac5472867f9b53ba14e9e67f8df01c6ba5",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_simulate.cp313-win_amd64.pyd": "be832d86fa07e6ce3708d04cab6cba6ef113286d199247b2d6160ceec7329cad",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_specs.cp313-win_amd64.pyd": "1292780fdb503992d234a07641e9bac9e1b830077f5c5d5730876083fb0836ad",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\_structs.cp313-win_amd64.pyd": "41fe3b3446ebf58d12a7a1917f122a0482ccd175d3d50d7ed3c798b445d2c486",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\experimental\\dear_imgui\\dear_imgui.cp313-win_amd64.pyd": "c4926716baafc7ebdee597e8c6587c6eb1c8d9f0042f4de0fdb7b8e1089392e3",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\experimental\\implot\\implot.cp313-win_amd64.pyd": "a99bb9ac7fa9e0885967620272507c23913cf834702d274d1620a74d8fd643a7",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\experimental\\studio\\native_viewer_cc.cp313-win_amd64.pyd": "c2e77bf46c3285315d74866673aa92d815c1e83070508ee86081128f7ee92efc",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\experimental\\studio\\renderer.cp313-win_amd64.pyd": "4cbbe79ff1fe56de301ae58e25106e43f590d531940638988582f7996ae3d1c0",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\experimental\\studio\\sim.cp313-win_amd64.pyd": "870af7c8c1d5e372e154b3cd666e3ed02774e35d215090a1c17f121922dbe92f",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\experimental\\studio\\ux.cp313-win_amd64.pyd": "79048ed9f67d1f0c10bb81a62e60c4d35ad17e66a787c7e92581e191dde02de2",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\mujoco.dll": "7b2a71f823f93533c62744810b3930373a72f95504589123d66ca2ba684b4b7d",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\plugin\\actuator.dll": "cf35af11c5168dab5407238a2bba373029f8fd6bdc84a0bc158a5962ada4d72f",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\plugin\\elasticity.dll": "38c08600753ad59326b04b6dfc22e9320735c337f7b69c1a28cce7af1a7d20a4",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\plugin\\sdf_plugin.dll": "7a6ef60709120a3c6f797932d64ce0fb9279bcf39966b0609f7b5f1e3f0181f9",
+        "D:\\dsub9项目计划\\first_stage_sim\\.worktrees\\dsub9-v1-contact-validation\\tmp\\mujoco_3_13_mesh_contact_runtime_20261110\\mujoco\\plugin\\sensor.dll": "f7c3d6a24747076e7af2aed43bb07a31e9889d27ff52870d23b6656f921e129e"
+      },
+      "compatibility_record_sha256": "d586be6e14e338089937c13b8f2db67fbeff48121b320856c68e7b9e7b601102",
+      "package_files_verified": 251
+    }
+  },
+  "evidence_sha256": {
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/registration.json": "5ed2cce78c95d9b3f9e0972214980c1c1962d7f172dc0a567e35602b0a228eaa",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/ledger.json": "d009e93abb8a24af7ccb2e8d24dd7789c4ecb4931309c5d6b261ef2d218c274a",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/run/E02_GRU/episode.json.gz": "76a2817fd9520f9ee6159e0b6f3237c28685dd4d98f41be4f388f27d0c375f67",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/run/E02_GRU/receipt.json": "ae10b1a575fb76bb62736da69591774078e5c8a413ec7ae4bfc66177bce70f1d",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/run/E02_GRU/audit.json": "4d2b7ee1f92bd74176f67ebde01ce8672b0521c41d98029f421381a8f0511424",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/run/E02_GRU/model_used.xml": "1f9326852d31b4b1fcb484151fd8085f5b17953c46144d2f48a4e34b3c707912",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/checkpoints/trained/manifest.json": "e25ce26710015c63a0fa3a0b0017c32f411cac18d5154cbda30f1ef8d1c228f8",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/checkpoints/trained/state.pt": "4dc0c0dd5e273d4f3fb187386bf8640f1a2b7cd1aa79494c465e9cdf99524a1b",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/requests/E02_GRU.capture.json": "4fd6730d62a32383630df3e6ba6ab9ee38a73ab930ad1278cfba30ac316e05a2",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/verification.json": "36c067ae8e6f026c81ccc6a7241d7a8035c61c4281d918af5595935f0cf96ab9",
+    "deliverables/learning_chain/load_warning_mesh_contact_e02_search_yaw025_20261111/run_e02.py": "3c18f7085e0801cd82da1b05be79d6f1acb127361ae8cd44cf3cc36155abcce9",
+    "deliverables/learning_chain/load_warning_mesh_contact_e01_search_yaw025_20261110/verification.json": "5ed24d1ec837cb68ac618a0e328cebd578964ea64aaae08b0f623cd09f701d21",
+    "tools/control/axis_search.py": "0a4bc90a12e24f980dc4e6411ada4c3b13b69b9852b333ce4144872d82984201",
+    "tools/control/compliant_search.py": "661b5bfab94099bb31bbed910b6dcd14c447a40e75836cf0ddfc7b20d7e116ea",
+    "tools/control/fixed_admittance.py": "a283521de6eec6191e4e7db578426f2999ddc89fd7648476f4d8c165dd7aee67",
+    "tools/control/load_search.py": "4c77cc2f2198874386f992e75a857ac59b33643d9f10781664de617c1dcc6adf",
+    "tools/control/reference_search.py": "1a5f48ba64acf53b336ab76ef80a4d5065ce9e2bb1306715797e24baef0c63f5",
+    "tools/control/risk_search.py": "5e5f289411df7dffb9b652e732cf53c6c420d5b35d872a27abf3fa8772f95ff2",
+    "tools/control/search_exit_v2.py": "731b6513ea4bf7cd54051d4e1ff097d336cdcfbded02af114870c8691c9d651c",
+    "tools/control/search_probe.py": "6d8e54fa7bcdcbd07fb49cf535ec5a4494d6e79bccbd55a03be635e393d24bfb",
+    "tools/control/search_recovery.py": "029e88b7a0f7f0e8496ed38b4738cccbf5c68e7a6945bd5cd2af16a33f4d4354",
+    "tools/control/v4_b1.py": "5a9e8212be4cf245d6a13c88e8ecc0db8b06596219a832c7d0bdfee2c342ed3c",
+    "tools/control/yaw_admittance.py": "deadee2ca6ed31500cc78d1a8e7d85f151e41092cd1b76de7f0f6cf7080b40fb",
+    "tools/dynamics/cartesian.py": "51eb457ded9d2c0598fd530c60bb0166c3a6a8fd214f608db38c91a0757158b6",
+    "tools/dynamics/contact_candidate.py": "e9785a9ec75557a535472bf78dbf500f8cac05b3fa486fef708654c2dcd9e906",
+    "tools/dynamics/reference_envelope.py": "1af60bc9a4dba142ed3d66017e10ef7980d0d21caa6ef48006a207fe184ea990",
+    "tools/dynamics/safety.py": "76dc145098f09867cbea9699e53a7f32624a3208f5ae781d5913a3ebac95354f",
+    "tools/evaluation/paper_comparison.py": "5a211e5fd81abd62ac5041deef526059bdb164cfe1f99b025d323727fafd9d17",
+    "tools/learning/action.py": "a635df5e9231aed6f77b7684c47d6ce3a219b53034db9ddf067431a906c577af",
+    "tools/learning/actor_lr_budget.py": "b0dd2a07731aad2178fcc14eeb667526c950b20db5690e8043794beaa04dbd54",
+    "tools/learning/actor_lr_contract.py": "76e12ff0831b68cd59e7ff94e9fb8d96acd8e319aa65a8c66e7e5913e6438dfb",
+    "tools/learning/actor_lr_engine.py": "d1ef337e18c61fc34f25ec9c18b365fd6fd913df3b0c48ecb968ad9d3f486db7",
+    "tools/learning/actor_lr_execution.py": "17199801dbb2aaaa57dcde6bd7bc734ce10e9513b2206ec3d0f28121a8bac41d",
+    "tools/learning/actor_lr_origin.py": "4eb8d51a1e91f392125a30c7cb3648af73cdc89f8237fc69bd79d04f74e37e21",
+    "tools/learning/actor_lr_preparation.py": "6c95d2f93f04998c974c2d084276465f21908d4efea8dadfb1b34d428f811567",
+    "tools/learning/admission.py": "3b42596db9e94195dc34184d60973361d0f7f3cf586d4156e523ab3f0de50ee5",
+    "tools/learning/admitted_collection.py": "a28143c704d3335265f4a80466b23a7c2af4d6e0f34ed37b8b0c3ac69a00c171",
+    "tools/learning/atomic_repaired_cycle.py": "f9fdafba3df395548841b9ee2cf86cfd37c31fa7456179c45f3da21303380857",
+    "tools/learning/audited_replay.py": "c77136a07b74a097fab5cd7ab0bef6e3a9d9b811757a6e7d6d74ce14c8bc927c",
+    "tools/learning/axis_session.py": "0430df880cf77b840a384eb38b5db8dd0cc01cc753af67e5a346e55b051087a5",
+    "tools/learning/b2_admission.py": "7367f87b6775a225df7e66f0d0509f42bca4eb200aea184113a6f68bb61a291c",
+    "tools/learning/b2_checkpoint_admission.py": "37b86a34f86218f6ac5b02f8ea599aa5663675717513f6ed9d0beb6207d83ddf",
+    "tools/learning/b2_sac_admission.py": "e233e47459c1586b61877a2f173b17d7d2566c775aeb836f622bf33606a5429e",
+    "tools/learning/b2_training_admission.py": "4d9a5ab58ed0523e6869747efa26b86ed10281ca16ac60c13392fb224ba97fb8",
+    "tools/learning/boundary_targets.py": "a990a1a20f1efed70e267a35cfb16b331f2126b02a3603fcf2fcbf3fc2d8721a",
+    "tools/learning/bounded_checkpoint.py": "d702217ac57851a04ebb28b6a3b307a1ddea0bf764d7631a664859009268a28a",
+    "tools/learning/bounded_contact.py": "ae7c62e8095107d796df0f65c404ebd7444446f613162ba117a817613f0637de",
+    "tools/learning/bounded_cycle.py": "52a973ee3302419b7c834b7f583a3de5509f7b1378cee55f5fff4e7aefd42079",
+    "tools/learning/candidate_collector.py": "31cea80f18643eac01a480f9e15e952df03c6b9220ef586a4409acc3b97a1898",
+    "tools/learning/compliant_session.py": "64e27f4dd309a27241e586de41a04c9ca5aa0359104ac775367989316036e880",
+    "tools/learning/consistent_reference.py": "8d0673f760f28cd48ea7851a0be6fb5c1989fe87082d690aa592fe445736695f",
+    "tools/learning/consistent_sac.py": "0c6d99070000ba480798f2c3c93b80913548f0c68ab2f71192799df034a3c599",
+    "tools/learning/consistent_sac_trial.py": "c136483e867106c17562a52da3b2a77ccb43a4aa4ebd71f2888803a73c0b6d44",
+    "tools/learning/contact_admission.py": "44fbcc423ef4842b304c9669604b1f4d7b05017c9a83facdebab62322358de96",
+    "tools/learning/contact_contract.py": "1355c4afb27ebf1d538ce8aa6adb166626557c375cc5a2436578e54c57d0983f",
+    "tools/learning/contact_evaluation.py": "009f4412d8a024d1e11e1be11f8f4c14f6dc96fd97ae0c5b77975d92f181cd41",
+    "tools/learning/contact_execution.py": "96e90021a5e49faf911e8a18b5fef6b54d1a42899338062e0007b5c509501799",
+    "tools/learning/contact_training.py": "96deca5b4cfe71adf3f0b24e2f1820f10601d1b4932fbf69392509e377e1a15d",
+    "tools/learning/diagnostic_archive.py": "d3968c430106eb2a98c51cad35f1081c46190ff9cdd6654b7759ec5e2cd3c30f",
+    "tools/learning/engineering_evaluation.py": "7bc481ffc64b8d71ba3c85b4dcb1d6f5ea25a2ffa338d6b5904c6d41a113be53",
+    "tools/learning/engineering_training.py": "399a56c9fd3686df9ec6bddc24c6bbbcce15386739c2431d7d26e1d0b534a459",
+    "tools/learning/env.py": "53cad8abf9d3b48247d50aa02bf7d20cb06ccf1c61b09677dc16f1375a8602f5",
+    "tools/learning/environment.py": "65ce2ec4428df7e01618408fbff1601fca750d5e4526b896d56695ed1c054090",
+    "tools/learning/episode_buffer.py": "213046ebe930a49f19b32d8702cefdb599691a9f395198368a63ebd34162236e",
+    "tools/learning/episode_rules.py": "9e28cd47abc5a515e46b404d6e4265c017b9f75d123fb9a9b1b1d808a43be235",
+    "tools/learning/exploration_execution.py": "112ed36687142c2fff54024d5efd3e880df398dcea728514df13ba179f2070e4",
+    "tools/learning/five_axis_action.py": "1db5669c5ee8fbe7136a5136fc0660d286d09761ce3119a7e1840e5e4739bf26",
+    "tools/learning/five_axis_checkpoint.py": "a46e9ce757b75f7b6c521e9c882b0fb066cc73187e9ad26caf8910828872128e",
+    "tools/learning/five_axis_collection.py": "2d6ba3cdbb9096fc5dbcd074cb8a69c6d54d5b4ef675bbd7e1727f1b927b8009",
+    "tools/learning/five_axis_contract.py": "72deaf04694172218aa4299ab7e8b4c3ea818532ffadb37eff2e152043eaa9c4",
+    "tools/learning/five_axis_observation.py": "9615a1d161d9d93c50db681c747b67199a85ec10bec2d39cd58021e7bc4c877e",
+    "tools/learning/five_axis_preparation.py": "c0190086c6e643c8015ab935b000101b3e5760769eb8eebc23a28e36b06a47b3",
+    "tools/learning/five_axis_replay.py": "8a915df7bf6b1c753a106133e6b3bd271ebf226cc19a1f25c3adf199c9bbb7a9",
+    "tools/learning/five_axis_sac.py": "4eeae5fe13380f93829d7aa9ea26044815d98d2c22260d13e1f061291e452c21",
+    "tools/learning/five_axis_session.py": "36aad73c8af6f8d756fbb08807cbdbffb47e834ea9fe9612eb9ab67c892199a8",
+    "tools/learning/five_axis_training.py": "ededbb812916628efd500b4c5a7b22cdaebeced94ed6fe997e2de57871fe5cbb",
+    "tools/learning/fixed_rotation_cycle.py": "5e5f4206c83aa091218c654225b94c8273d77ef41900237c92cc8b4336320fe2",
+    "tools/learning/force_failure_cycle.py": "ebee7069aeb9fc503c1f0cabd3cc44c52ea9f011a117d37fca8068bcdc231e5b",
+    "tools/learning/force_failure_preparation.py": "ab18fb5a37ee052d858abe159d41175f5504e8051c697d6dcddf7610c28d40ba",
+    "tools/learning/force_recovery.py": "5ac90994b4c7ccabd16c0e1df5fd5b21837f5292b0d09f38323ce12337e6b3d7",
+    "tools/learning/force_recovery_trial.py": "e15ac39893d0321a6fe57f11e88b5c1d150af64d050d8f5a798aff584496a57c",
+    "tools/learning/functional_session.py": "90124a983260c7e65e5641d6b07cd676b69104f68641ca6c8902d7f130912a70",
+    "tools/learning/global_residual_action.py": "2b60386f22f62e71c0db9b9209be950d208c3c28974691fa33eef36ce1824573",
+    "tools/learning/global_residual_session.py": "ceda123ca8eaaadbd23fa0fef308ce6b222115ad55365e45f67b2fd2f39fd688",
+    "tools/learning/guarded_environment.py": "676210e03f0bfa917de0f9850aa19fb949ed95c61d6695949d1bf43864fcfd98",
+    "tools/learning/guarded_session.py": "7cff83fa29292ef83af247ef7d7973bf743389f02b8e101757f74f547c06d711",
+    "tools/learning/layered_session.py": "e4a8e822380829fc9c88a5296d1d8a2312012620d006d018cb76fd612a0d6517",
+    "tools/learning/learning_masks.py": "73bd8bd095a961698eb03b7f0637b9bec0528730428e7c3ed5e4d340015ecdcd",
+    "tools/learning/learning_rates.py": "0154f4735b0e7a01638bfc037b8c837da54f61e4d58e809a6cfcb572c2a0ae51",
+    "tools/learning/load_session.py": "49f5cc04bef57cd109435267242ee59ef3096aabab69431eaab0109c7b5afe05",
+    "tools/learning/load_warning_mesh_contact_trial.py": "83eaf4ef8cd49e8a6483545cc715d91a2d6e91a60b57b9f3fc83b0c64b2bbd45",
+    "tools/learning/load_warning_pilot_update.py": "3b16a504e7ff4cda0251abee3fada768efbfef7e4bb7d188d0a2eef4a37a46b6",
+    "tools/learning/load_warning_search_authority.py": "400e4e10fecb059eaa5e3330ef0fc48b4a72c429118c5e9c1b7594e5ff75ded3",
+    "tools/learning/load_warning_trial.py": "40c2f92a61ea2f468f2a722ca3551fed2de2c693af27e3668a8c926ad8943313",
+    "tools/learning/newton_damping.py": "f1c5957cca35a56d0491c65fb545ba6276e6ac0f7b274386b2e2321ec5e62a2e",
+    "tools/learning/newton_profile.py": "db6afb6c46fa3941cc1d5f9ce0f7768a2fbd78a92705f2b7bea093266c7402db",
+    "tools/learning/noise50_trial.py": "1077132ef513ac2ebae2dde3060d763b13649252e73850dc7a40b534edefff39",
+    "tools/learning/observation.py": "73c75f047e315e52fed255167890674ea88dea0522ecb3236bedcd6b94300ae7",
+    "tools/learning/outcome.py": "2b435ad40052146d5d1093deb79f618e66d6b6eacaf4dd42497ad1540afcbf8f",
+    "tools/learning/paired_entropy_trial.py": "4995d7b370216a9832ff3d8cc847036bcc323500bbf88ab8d8a16ce6d7eb67b5",
+    "tools/learning/persistent_exploration.py": "0edaba79c60b6773017e58a175e8eb5d5df2073c177ace02f54f364dcb9f3fa9",
+    "tools/learning/policy_distribution_diagnostics.py": "16ec211461f97af955c1d1acd44be4b06757bc1cbe11468349f5f4288b79d6be",
+    "tools/learning/rebase_session.py": "3ddb3485ecf53f85e4bffd7672f45decf32441647ff40b5da58c48f517b580a9",
+    "tools/learning/recovery_learning_contract.py": "443c45649ca373cf3aa78c4fc379dc6b23e50a157b48b637e3fe5fef0551ea2a",
+    "tools/learning/recurrent_collection.py": "3cacd7b207d4754b6f8dc38a8481e484138e3721ef47c4881531042b3a8da15f",
+    "tools/learning/recurrent_replay.py": "1f5fd2a421845ad7365180e571350885460b397a82186bc98be92139371e07e8",
+    "tools/learning/recurrent_sac.py": "edf76eface6a11bafa77776692186a9958023ecbaf8c61d9baaa88177fc4239b",
+    "tools/learning/reference_session.py": "aae3cbff1fb195623af1a83a2690c95434757e3791067e336afcae9e7d66d2f6",
+    "tools/learning/repaired_cycle.py": "4bc03bb88122ac192d48bc7968e8cf7025d05dfbca8d93f667920e87af799e8f",
+    "tools/learning/residual_session.py": "5b676120a8bb93a588cfeacebe75655ce95a2c8ba3ee12a607bd7cb4ccff452a",
+    "tools/learning/resumed_force_cycle.py": "1d4b411fab7b38190693e344dba7ff7137844dc3ec06c2e0f2f2e853a6080ec8",
+    "tools/learning/reward.py": "511a008eb8261e39f261a707644de742faefbbc9dc670f44ca44e6c59e81ba5b",
+    "tools/learning/runtime.py": "685692b517d15fce2dd60f66f93f2ad39ffab36bb38daf258b490a17188555fc",
+    "tools/learning/sac_checkpoint.py": "f4139087b3c71e4f0ef61b08abeae26f0918bc34e373e47edae4a147715d082c",
+    "tools/learning/sac_collection.py": "ac911054300f7c27f88e924cad43dd48fb8c317f5c16432eaef5d3c02c0ab7e7",
+    "tools/learning/sac_update.py": "4e5f7c452b478d8671ef5483240514738d5ee6d4fad1b7ff0b64d3ad73a3d4d3",
+    "tools/learning/search_entry_replay.py": "d36fd624728882b139194aa2b59c088632cdd9fe4fd61d6b2cedf951076f324c",
+    "tools/learning/session.py": "3c9e3129b35c5b425be90c6baaf1d948a081d4773b738bc25cc10be74c646ed3",
+    "tools/learning/switchable_capture.py": "6d7d85287d9c5ae0e0dc5d41eebc2a71b9424e80d3261b238a715cdd5ed2c8a7",
+    "tools/learning/switchable_sac.py": "9dc7763b8b0ba6a2d983e607952fee1bc95327b9a7185cbda2cd28a0fce32cf7",
+    "tools/learning/tensor_masks.py": "f0cd803819d0c1c2ead2af607b7577f8d6fd212d50afd485ac01fd620f04a83c",
+    "tools/learning/time_budget_trial.py": "aa8667ad70615494e910fd66e5e033cbdda5191e9389d52cc685dd153ec79f73",
+    "tools/learning/types.py": "1de8e2a030c84eeddb099ca376a1454251c2fb695b1352cb380448b527f3d42d",
+    "tools/learning/v4_action.py": "884efe5c5c15e0bf84aa750b1d525299dbb95627d04d5d449ad79461e2fc8f48",
+    "tools/learning/v4_checkpoint.py": "1e2550d3e80c90d2030ad9d07bf6ee8ce0fd6ea7407754a15a8487f01bbf7dd8",
+    "tools/learning/v4_continuation.py": "89370fed0b94e54846f5a28b954d20dcc261c5f15fa8abc404ecdb4f87ef0219",
+    "tools/learning/v4_observation.py": "e0df350b87bc7d27b018c85316bfc31d9adad28b669d836afe19aaabc7d8e55f",
+    "tools/learning/v4_pilot_chain.py": "393aa86d7fa661ae87e15d8758920212ccfddcdecd6f298d3505e2872833e2de",
+    "tools/learning/v4_pilot_contract.py": "996609d84e2758fcd6c7316720f0c923629b5fb7775910ef2654acce5bd357a9",
+    "tools/learning/v4_replay.py": "df93983969cdf05e2f315da8145a61b3c2c85dcc6b12437e4a26b213a70f209b",
+    "tools/learning/v4_sac.py": "e1319d45e6694a38879d31ebee952eba2fae916d2c3d8124573db8d9a356970e",
+    "tools/learning/v4_session.py": "082b6d89d1384b37db81c0b120cacc9f207d6342f8b5af2ed6cd1eba6b800974",
+    "tools/learning/__init__.py": "2d2b6f4f7e5a9247c7a1332442dd3e555b5b51d418b402910c406547cb01b896",
+    "tools/mesh/audit_geometry.py": "8dec18d9e7bca0f888154e0a1b858b3c92f66edcfe3d10678ed1f910d6659ec6",
+    "tools/mesh/generate_collision_assets.py": "2e6573e402d67dd9b073decb234d907b64d6185c5c36f6545dc5ff42dc945bc9",
+    "tools/mesh/normalize_visual_meshes.py": "1ba875bf8db8f29696890eaab728aebecef7ce5003d1c4395af758bd23643e48",
+    "tools/mesh/primitives.py": "557d8096eccfe5f816e283f84cbfa235f8f8d49a272b320766c9cf2b7fd117de",
+    "tools/mesh/section.py": "c73bb3f73f71b7368438bf210c119ad5c151d3aa037f4fc25a6dc2e3de746846",
+    "tools/mesh/stl_binary.py": "a2b2742c8483e74f63cfe15e351145f4500f79cd0bfe66f3dfe4e687260b2f65",
+    "tools/mesh/__init__.py": "5103db34fe2758568fdc633316cde7d19caadce5b6152509cb8b6937d335c56c",
+    "tools/migration/package.py": "fddf5071b56ed969f04f0baa222ef91b45e4444daf2e53d6875de0c438cd879e",
+    "tools/migration/run_f4000.py": "c3547cada55a56cb31dc598a0d484680453da90de8cd954ebb2961dd2288915e",
+    "tools/migration/__init__.py": "300c7de0436bb3a82be937a01dd362a82c8c85ec482ff1b87a92342025cd990c",
+    "tools/model/clearance_task.py": "3c7b06746b1a0edfeedecc3151a8062fcb73b26bd6fbf6fa030e1a6316d3aa4c",
+    "tools/model/contact_development.py": "db348846da55935e1886318f53492da3edebd506e7c0663a9fdbc1414ef65bf2",
+    "tools/model/functional_task.py": "5486544c71156638fffd152d9218e54ce01451f1fe7ec9f72369da67adef33fb",
+    "tools/model/generate_mjcf.py": "0e62890f2e8347a4ec8450e648d4dc569ad790e4919ca8ad1e593d3ab32a0cf7",
+    "tools/model/layered_task.py": "2b74d91ba1286d9529cc890840a8645ef7b2148ae4a64c8380688b72bba9b127",
+    "tools/publication/five_axis_policy.py": "73ef65591af6bb57ebfbd9d3378b91e83d46f4e206dd5109d27fab27641e43e1",
+    "tools/publication/__init__.py": "584bb416860fba568176312900295d6e8ac309001efc2088b3ace770fbf8d005",
+    "tools/reporting/export_native313_matrix_delivery.py": "3e3ff6a15125b5282b5fd665e50f177f56f2430e07aad15d9f36f492e90fc1ba",
+    "tools/reporting/generate_manifest.py": "07e9ffa80a2eb40edd808d8454547cadace60a7a3ad7b3c92269ea7c0e6be6fa",
+    "tools/reporting/generate_v1_contact_report.py": "813a4c00f5563fda39c1ccb64caa848683b3bb8952325eb35bfab195915be9bc",
+    "tools/reporting/render_b2_flow.py": "a223e10e67817e6f51704c74ab49903c2e84804124f50a616ece56ed06b391b9",
+    "tools/reporting/report_b1.py": "cb9f59bcaf95e43cb1bad2d9ff0300f065c4c66d8559702dab391891e1f2c9ff",
+    "tools/reporting/report_b2.py": "70dc1841eb86dd4b5e2e90ee78b1d1cb6269b753b89c43db5790e4a58ccdb309",
+    "tools/reporting/report_b2_exit_gate.py": "c53e411ba4f7372e1dc03f5fbf2a6bf11967b9a12b5e76045841742a552ea40b",
+    "tools/reporting/report_b2_matrix.py": "afa39fcbd3ec5bc03698caf5b7a5adda418c8f9d74a32bf8afcabc9eba60130c",
+    "tools/reporting/report_b2_xy_probe.py": "ca1d9a663463cdd969cdb3c7007ef0eb0179e4ef8818d38a7d9a466a0d453562",
+    "tools/reporting/report_b2_y_probe.py": "716059384b9e8ddf3b10cc70929642b2904ad484d911925ecb0122952e3f1acc",
+    "tools/reporting/report_contact_candidate.py": "7fdcbe02abfb5f7f4d7da560da927f42d43e1b1ebe55f02fc36a6cdbee99e146",
+    "tools/reporting/report_contact_coverage_repair.py": "6bc72b27718114852b744a86bb0443b7c22ef9fada4978dbb2ff069d0be8be93",
+    "tools/reporting/report_dynamic_actuator.py": "94df200067dccf5ab73288645bf44eae0023e496718d81c084b7e0d20445ebe7",
+    "tools/reporting/report_minimal_contact.py": "fc7c0d0dc5d6c1694f09586bcc7aa1dfc560691f1772b1fdf708debf48c7ef33",
+    "tools/reporting/report_native313_matrix.py": "472ac82e9aa6bccdfc605239a501fcf8705831a19fa878b57cad727746ad871a",
+    "tools/reporting/report_native313_validation.py": "a0e39896ecd9207aa9af4207f7a9ef7d7ae1ba2ae4f9d4778c0327638ec79d74",
+    "tools/reporting/report_readiness_stop.py": "032f38d4c3d244c745cb356687003009cae083177603a35650f819572a26937e",
+    "tools/reporting/report_stop_reliability.py": "bbaae6e56667e4139ceb6b762b7c5407625ea188a9ae6095791122d6e3de58d8",
+    "tools/reporting/report_training_readiness.py": "339eba52dcf991f67c92b796a71c3fba19490348f2fd02fb99dd3ad9cbd428fc",
+    "tools/reporting/report_v1_applicability.py": "e6ebc62521d61c5f85baa2be978fdd96d6d9e92a9e6c93d87865b96dfac5fd4d",
+    "tools/sdf/hole_reference.py": "50f0584f7e25744f65b8852458a064a743754734ac06db73757a77b08b4018cd",
+    "tools/usage/export_b1_model.py": "43f4e60a951089681f26a23ca8994fc4302bce4764ff470235c187315aebbd43",
+    "tools/usage/report_demo.py": "ab9d5721f3faf217d47f2dffa49733347b20dc270f2ece7b1af23f2945fba47a",
+    "tools/usage/report_demo_core.py": "c17dce2e0609295203f2dbf3cf389283924422d516392f3b896e1e4e7cb016f7",
+    "tools/usage/visual_sim.py": "db22e5105146fdc084d7fc18bdabfc575eb4d54264464a2d4036fee23ee385fa",
+    "tools/validation/analyze_exploration_motion.py": "09a20d654a67140664b608717f271948031d3e4a617e013a283da9fbb512975d",
+    "tools/validation/analyze_g1_recovery.py": "c35c3acf43a3c179a1cac46a28b61dc2e9fa26953768d609477eb7f5d5ea79b4",
+    "tools/validation/analyze_global_residual_authority.py": "5076c3223dc2f065fa2eeffda7738ca35362913264ffde4db8ef3667888afbef",
+    "tools/validation/analyze_load_warning_pilot.py": "36a353ebcfb5619e04b0406963fb439e6637d483cb470c8f9a083ee13815f1c8",
+    "tools/validation/analyze_load_warning_retest.py": "0f4bf5c74aa01340b4c57989e8d3885f94e32b1f993add087f88846f17dd6bbf",
+    "tools/validation/analyze_paired_entropy_failure.py": "896289544bc6e253ee87db772c5f506cb981e9a84bd5e42b3292c1e7e8c3fd84",
+    "tools/validation/analyze_paired_search_coverage.py": "246e3d9c97e9af56fc591bb5704d4a1cc4bbbc52a10055507e1ba0c246ac7e27",
+    "tools/validation/analyze_residual_orientation.py": "db9a0f82ae7140f15d5336f47733751378cb63e266209b4c1540b882f6f099ad",
+    "tools/validation/analyze_threeway_search_cap.py": "3260cdf8a3e1e66aee86dc42de750bdb8b65e1f737e2fb22b2a30cdb3bd61c07",
+    "tools/validation/analyze_yaw_pilot.py": "2b341e02fb87e38dd60edf106773535487b04e868c85e2ba0bda6753ea847d06",
+    "tools/validation/audit_contact_candidate.py": "0f3dfbe87d92cddd540e95edfd1a057ca80bc6df6f86a7a24fc183e9d2352553",
+    "tools/validation/audit_native313_results.py": "6b9028dcdf2a6daefca8d7bd596d4b330c41eec5ca6e7bb8f36582c4a81437bd",
+    "tools/validation/check_stop_contact_geometry.py": "9912d27807525d40e7c1c550006a2177e246f8dc7a764cd31c05172f02b02967",
+    "tools/validation/close_paired_entropy_training.py": "db958cc5e28e473aaeb054b3acdf947b54a25974954f31d1acebd274f6f48e73",
+    "tools/validation/consistent_sac_audit.py": "bfaed04d59f01b4b4aedfaadde0dd5019b5e3e1da746c8225f16def201961fdb",
+    "tools/validation/diagnose_b2_contacts.py": "c166151e85640b4979cc679473c10e140063d30144e44d91f442fb742588392e",
+    "tools/validation/diagnose_b2_switch.py": "306361549bd988f2872e4862eddf53dfa9c26bf0139b866b871ad98d4da2e5b7",
+    "tools/validation/diagnose_b2_xy_contacts.py": "6b6e706d89474f960ab8e9c479eb616cc69e501937d493bf2d201b5c2cc5b17e",
+    "tools/validation/diagnose_dynamic_ccd.py": "7f60510e1dfef3cf029c862416f34aa1500ef90cb77cac13c22f41046c79801f",
+    "tools/validation/diagnose_exploration_contact.py": "d88a5a73ad65d12d241e8a670d67a32fc56d5c6c65f632ee673a414487f57637",
+    "tools/validation/diagnose_stop_reliability.py": "9f9e9775601901d2c8a1c57606b53222b68f698795dee926143ea6375fe70621",
+    "tools/validation/diagnose_v1_applicability.py": "f0dee7a93853d06e0482d63f3fec0e76b1f4409354d6db913f17cb14f97d85f4",
+    "tools/validation/force_recovery_audit.py": "c8fcf784dab870e9c65ce7faa19b6938b214655abe84bac013edc8db954028c4",
+    "tools/validation/guard_evidence.py": "8995a44a21fa9f5bef55b12204517ba02ac25c48ca128030686950f64fc95738",
+    "tools/validation/load_warning_audit.py": "393d8fe9d348a34c7ad08d6ae7d285289cb4a4703e1837c8492e6a32e1fb1e9c",
+    "tools/validation/load_warning_mesh_contact_qualification.py": "04b0c2cf571a5111a9d819aa75a9e60e7cf942da1e9ce4ed8122310ba449f498",
+    "tools/validation/load_warning_search_qualification.py": "6dabc12dfd48d532e53fc8a2000d8b1cfdf9b78da6d7d7652886590e60aa5a09",
+    "tools/validation/load_warning_training_admission.py": "ca12594873fe18c298bee175d91454d15b48344c19885b49e70c092fe13957bb",
+    "tools/validation/measure_readiness_stop.py": "28ce649d9c48a5d1c3231f277ff92f1e0b4f626c0354b6669add0057ef6069ca",
+    "tools/validation/measure_residual_cost.py": "fe68b5fb7c0da4b74f6cfcfb427d29dde45b086d7d0db19ba58b4d974a9cb43a",
+    "tools/validation/minimize_contact_failure.py": "3ad487c2fb7c56522958ab88adbaed49cd1265f9e6c232d950c134e7abfbdce0",
+    "tools/validation/native313_matrix_audit.py": "00cbb8fee451bb318e455f39d8966a8b05c6c238134ffa96371a480f4cb78294",
+    "tools/validation/native_stop_clock.py": "4abd0e7af3662122898a57a5b083f3aea949ec91c64a1a688394b6a34ef4735e",
+    "tools/validation/plot_global_residual_authority.py": "42dffbf74248e346fb54893f9aeef691e8da49928ea35a2a86447a818f9a91c7",
+    "tools/validation/plot_paired_entropy_postmortem.py": "729bc1ff6fecc1433f39ec6dc4fa522275459365bf2e40918d21b6711e010bf7",
+    "tools/validation/probe_contact_backends.py": "6a6f400c986cb137a54fd1e20f3ed30cdc786f70d54f55cee992bc4fcd6d7ed3",
+    "tools/validation/probe_minimal_coordinates.py": "220a23c17881c77b44f3efd7acfa41cc05e27f634decc62c154769d982762ca0",
+    "tools/validation/process_parent.py": "b19e3d6eb7b4bbcaca1ba922fc6b96d6fab2439e790f5c93b2a6ca5d4eb13b5e",
+    "tools/validation/progress_dashboard.py": "e47c032509d1cc9878893be43c90c6552435fed25eb960bfd068a52f497ce5d2",
+    "tools/validation/qualify_b1_configuration.py": "9c8b1606e9a9f2d7d8bd6c6a6a5726ac78796256761c3e9e85ee535a3e0930e4",
+    "tools/validation/recovery_learning_audit.py": "85473bfb3a9007052c000e6fdbe9084b8dc5187246a08f77246c4c16775bd08e",
+    "tools/validation/recurrent_source_audit.py": "d81abb2595d5dca9c380b7878f64a1018bc9515d0c014ccf8ee4204908bd271c",
+    "tools/validation/repair_contact_coverage.py": "32726e92b55d16dd8497c37eaf8ed340b0c40a868904917098ec8067d3a1de39",
+    "tools/validation/run_actor_lr_comparison.py": "43cfe79fdb5715747ffb979b3c672b91e46992302865f98ea618e9f9cfbb4483",
+    "tools/validation/run_admittance_rebase_preflight.py": "b0ae473e4b8602c7f57e2d20893906f95a8e99aa369a7ea31892aa801972337d",
+    "tools/validation/run_atomic_repaired_cycle.py": "8c826db6ed40f86b9b9bc5c20403a9b207b5b934dda5952ad19c6d985156bebf",
+    "tools/validation/run_axis_search_preflight.py": "f2cda1f26d16e1184c2ecbaa3af8178642347c011d69a82171da37aac0a8a21b",
+    "tools/validation/run_b1_baseline.py": "6e9c7d83db0af1e28b0cf80b58aa1d36d835cc8c4812791cc240441ab68370d4",
+    "tools/validation/run_b2_exit_gate.py": "4b8d57e7d9d72f1af124fc10aef8f0fe42d1c95198edcde4601f959eb0e81645",
+    "tools/validation/run_b2_search.py": "a7e87404c3ede4967672da1fd57eecc99a3a11e09ae59afc2a2e80d1b71df415",
+    "tools/validation/run_b2_xy_probe.py": "a24b4c917c040774e8363cdcb6d0d277b7a1a357d188d3c15ba00b5bcb49a839",
+    "tools/validation/run_b2_y_probe.py": "ae13f0a94d2459fd4d4d619e74a7316db92f4bb5d57782483a2ae71860324a4a",
+    "tools/validation/run_bounded_contact_cycle.py": "fb11d63d61a1e2eb3faa56e04a07f1a2477dc13076b15e553dbebcce5add05b4",
+    "tools/validation/run_clearance_preflight.py": "7952dd6491165b123d9efc140386b391978827b96a19f967f52308c5caa2e082",
+    "tools/validation/run_compliant_search_preflight.py": "67021b2f03fdae9046e81d18903495ff12116442e8501efced94451a2c379e0b",
+    "tools/validation/run_consistent_sac.py": "973b823df0177ed7acf2a15897e8aedc354dc0cc17e414dc3f246039dc1e5cd9",
+    "tools/validation/run_contact_candidate_stop.py": "c5336df521e106611c728db2810175658d5e7ae3b7d544c70f6cbac347825a76",
+    "tools/validation/run_contact_cases.py": "b1878d9bed69598f61bfbbff94be350eed73079d17b1164a3b40ee51d451dd99",
+    "tools/validation/run_contact_training.py": "458869058a204cfeec257e6a8afe8e399104d993ecd5ebecbbfa0699bfcd3927",
+    "tools/validation/run_deadline25_preflight.py": "b4c138daad9998341a5738326f86d6dffe991d3b9f0b22f3c50a2739f1684d9f",
+    "tools/validation/run_engineering_short_train.py": "91a00e4164d6e86ad1a3437290f99bd47f27830c23a25d7fe66379969a8581af",
+    "tools/validation/run_exploration_execution.py": "a216b0ce1976a970664a26529792a4cf3564cd4767c7aa919761375fc70a17ce",
+    "tools/validation/run_five_axis_entropy_screen.py": "af842bebb2ce5c2ca0e6bb3f664f0f8d921cc9c32adb32efd3d8ff4f868255ac",
+    "tools/validation/run_five_axis_preparation.py": "e3f120d20a0338511e278702defa58909549e130f283defb9adc2d19fac42477",
+    "tools/validation/run_five_axis_sac.py": "203bae493d07226a0aa6a5444934089d3e17c6f21594ce771993acb32a185cff",
+    "tools/validation/run_five_axis_training.py": "2f2a8b434e363162994dc6bcf6671744328605a01a65e4f416bb3669e2c41c20",
+    "tools/validation/run_fixed_rotation_cycle.py": "6ee1afee8260f47fb436675cfafc58eddb31dbc858e49f90cbadc379eca715c1",
+    "tools/validation/run_force_failure_cycle.py": "0c673c7da6f153788bb573e745657c79047ba4cd7c2907f016df406a957d55ad",
+    "tools/validation/run_functional_preflight.py": "e607b9a313d1ef6922d8a7a897e6f938801901854b1fe3bdc9192447e6801b5c",
+    "tools/validation/run_g1_dynamic_900.py": "f2c5c23692bace46e09583f6dc349c43c6ed4e369c35502a3e20c162fbcb89ff",
+    "tools/validation/run_global_residual_authority.py": "52fad13c424ade24d6328e01c0865c185f85ee2619c826f3f266e76339736865",
+    "tools/validation/run_layered_referee_preflight.py": "aafc812ca041f2b01dbc3555dc80ca88ad000253e199ef211992715685ddcaba",
+    "tools/validation/run_native313_matrix.py": "d720d0a525f76ef365b723f9cb56bf9eda1eaa9a49c10caf5a0c28c579dbd42b",
+    "tools/validation/run_native313_matrix_v2.py": "b96682abfe693b064ded5bf10f5d37dfb934c05c59c6d489a7a8a6d8474dd60c",
+    "tools/validation/run_native313_stop.py": "18cf36ae2a487789dd5c60f614ea56e2ddbafeaab8d0179ca6028d2add5ff347",
+    "tools/validation/run_native313_validation.py": "4b0a1a12894e56666b6422aada221c4a4685419352dfda18202bf2c21ff31889",
+    "tools/validation/run_noise50_yaw.py": "86a44ac78b422e1589aff35a8f5876474d45e4568c8a9b7060f75ef522624c3c",
+    "tools/validation/run_noise50_yaw_repeat.py": "1bad24f0da8c7998bc48d75208c8c3ab70740d511719a8ef0300da76e7ee99c2",
+    "tools/validation/run_paired_entropy_training.py": "9aa7a789f82ecbee04db1fc7db8f6c9065adbc14c599fe14ad9150a4ea9f063e",
+    "tools/validation/run_readiness_candidate.py": "92358024a8f915cd5027b4b179424a862756c4e7013e8f1bc64b926f9c1efe53",
+    "tools/validation/run_reference_search_preflight.py": "8bd61a75cc47cb37171d2e62dba88f3bcc88ec0c9949972d4ef7c320f89a2ce2",
+    "tools/validation/run_repaired_contact_cycle.py": "f5a91e71695a3f5095a794e0d394293dad0b5799075059ccd8d0230affb9167d",
+    "tools/validation/run_resumed_force_cycle.py": "4bb1c25344bcac849a8e5dcf006516c6573e771910309411b597a7f9e388c676",
+    "tools/validation/run_search_load_preflight.py": "0e0711176228ca926f48090ec39984d85148c354ca7383a921e48587de9773db",
+    "tools/validation/run_time_budget_search_batch.py": "2bf70aab6d6b299f68737ae73de1de5300960905aff2866a113afa3d1dabf1af",
+    "tools/validation/run_time_budget_search_remaining.py": "4ea0303f6a6f78ee49dad70ad0f4f05050869e80a4ccdc6b190b05618991c372",
+    "tools/validation/run_v1_contact_validation.py": "905ac10684269ec73daf4acc2985dad70e4efd85a377589fd9055d8a20e3d236",
+    "tools/validation/run_v4_adapter_preflight.py": "762af4b6bb5e212d65efd08a57865908d777a0a55d74de40cef3e91c93f8babe",
+    "tools/validation/run_v4_continuation_preflight.py": "d3dbef40c1b4e5b97ee9dd4128c3b51d187f2180192650ef32be41ea7d28a66f",
+    "tools/validation/run_v4_learning_pilot.py": "871e42d75dd8af194ec77a0f08ed58c9ba0d8e2644bb3f531b21741fab551319",
+    "tools/validation/run_yaw_pilot.py": "84f19000f34d1530d11ba934cce4c360a965cf73f7705f1ad31fb0f373df87b2",
+    "tools/validation/summarize_exploration_execution.py": "e0551270e2eea515189f4677f944dc3ef6eadd500b7e42d5a1059e871a3a8866",
+    "tools/validation/v1_convergence.py": "bbfdffdc46038daab51890baf4f2e5ea07551a3142570101f3692c5efde3bcad",
+    "tools/validation/validate_contact_candidate.py": "4562fff7e2ecf3684dbcb21e298275c55261fe753f602dc60ae5db3c179e6b3e",
+    "tools/validation/validate_dynamic_actuator.py": "72be97c71fd2e1b7a135f77821c1a487afccb89cdbece6456a81083bfb9b7896",
+    "tools/validation/validate_training_readiness.py": "12f943d29e608fb4ec86972c34b6e209295fc0d5d53b8d7c99cdd7eb61c6a683",
+    "tools/validation/verify_admitted_collection.py": "c86438aff8c31ba64cbf8008fdd219f81fe299a73a52909362650a1cd7f96d44",
+    "tools/validation/verify_contact_candidate_delivery.py": "032c53995d097e7c5ddbfa3e68a8024fe1d3b428c95293a057eca4b56a60fc2f",
+    "tools/validation/verify_engineering_domain.py": "fa568fb8067eba55983e91770f9b1cfafcd7b1ec329813fee415a6d866f80143",
+    "tools/validation/verify_guard_baseline.py": "7f640f2909148dc964a48b2946ba0ee7e9743ffe02d5abe18e5dfdff2aa1ac81",
+    "tools/validation/verify_guard_candidate.py": "591099e91289bd1c3f5f7f43ad9007ac18a89b8ee678cf5c5e1d1d10c66e4ce0",
+    "tools/validation/verify_native313_delivery.py": "6d114359423c350d5e32e163bae9c6c26ad15241315e431a9f222b47da112302",
+    "tools/validation/verify_native313_matrix_delivery.py": "8dc9354ebfd966967cba2da7b97ed8ad0907df68c2f04bd704b57242ce2bb4e7",
+    "tools/validation/verify_residual_interface.py": "5a177b672aa5962cce5e93a60efa7a87a77fc317b0f1187d13df6ea8cdb755da",
+    "tools/validation/verify_residual_observation.py": "be243826ed5e9f3e879c89afece371410c13c5d090121e8599f3e50f1bc6145e",
+    "tools/validation/verify_sac_checkpoint.py": "55db7f93c471ee690f0b2e6816f2c2aa71ed4da4717cde9ec34fea7215c4cae1",
+    "tools/validation/verify_sac_update.py": "7cfde7457f80f2e849a4bee626b4f13a05f9d1b64a9c01edd00333ce13b6000b",
+    "tools/validation/verify_scheduled_boundary.py": "856adb02a9561861c524354879e4baae31c263de168b81635bd31a1d4fddfaab",
+    "tools/validation/verify_stop_delivery.py": "588336abf9cf5b1eba1596be84102d624a21db6b0252c0858356ee93b06de735",
+    "tools/validation/verify_zero_residual_session.py": "5a218c59cff4b3d161d345775f4f293075cb4b0c8439abc45ace10974b359433",
+    "tools/validation/yaw_pilot.py": "0c244caece071aee22e5a95b8b409ef35203607aed57926cbbb44cb551d699b5",
+    "tools/visualization/font_support.py": "909b36d61eee81ae9bbd2be119eeaf2cbb3d1b45090175350df2f52a08c8edea",
+    "tools/visualization/launch_viewer.py": "e4448c32fa426adb9904015606e01285212eba5f951ab6203b43e77a003c4d33",
+    "tools/visualization/make_pose_sweep_animation.py": "6d94687abfd47b37b0552c2b7d1375ae0222e16b821024b01d93cc91f0e2d907",
+    "tools/visualization/plot_contact_results.py": "4ac3126d40075c6f024b5a83c3dcb27fbf866839069b90daf9b7e7d6b2b2b4be",
+    "tools/visualization/plot_v1_contact_validation.py": "7c7e16c1043a59a561412d6df22c3d52ffcaecfe110bc55839fcb605e671f16b",
+    "tools/visualization/render_scenes.py": "517987d8978bdfa1d2c0b0f6d2cff955b9da2b78ab97e0c8f1c8e19c9f8bccd7",
+    "tools/visualization/replay_b1.py": "63a445c1446af6cd3863b46ea000470534266a204b08a9e90fa2d2528c27f715",
+    "tools/visualization/runtime.py": "1305dcb0de9179ac4bd978446f009029ee3694167cd6b4d83bf4ad27444c964f",
+    "tools/visualization/__init__.py": "365190f0fdba69cb19ec64f859390bdd72e06b686224041406750851379e5ba5",
+    "models/dsub9_pair.xml": "8022bf0d5902a66bfb7896a89089007ef2768a65d85dac26742fa5f954121447",
+    "models/includes/dsub9_collision.xml": "f58dcb2decc04d28f96bb5353f7feec112ad148105059ad963ac5b4c49374132",
+    "models/includes/dsub9_visual.xml": "fcde31ea0192f5ce7333707990a94f1248a729f97f619bb52c37c3da2eb159b8",
+    "deliverables/learning_chain/load_warning_mesh_contact_gru_short_20261110/run_short.py": "5ce01ea7fe1f187a76f462c0e355247ce2fbb5901e6b1658d9f08a3fdec90966"
+  },
+  "previous_initializations": 495
+}
